@@ -1764,5 +1764,148 @@ export const targetXrefs: Record<string, TargetXref> = {
         locus: "8p12"
       }
     ]
+  },
+  cyp17a1: {
+    genes: [
+      {
+        symbol: "CYP17A1",
+        name: "cytochrome P450 family 17 subfamily A member 1",
+        hgnc: "HGNC:2593",
+        ensembl: "ENSG00000148795",
+        uniprot: "P05093",
+        entrez: "1586",
+        locus: "10q24.32"
+      }
+    ]
+  },
+  aromatase: {
+    genes: [
+      {
+        symbol: "CYP19A1",
+        name: "cytochrome P450 family 19 subfamily A member 1",
+        hgnc: "HGNC:2594",
+        ensembl: "ENSG00000137869",
+        uniprot: "P11511",
+        entrez: "1588",
+        locus: "15q21.2"
+      }
+    ]
+  },
+  proteasome: {
+    genes: [
+      {
+        symbol: "PSMB5",
+        name: "proteasome 20S subunit beta 5",
+        hgnc: "HGNC:9542",
+        ensembl: "ENSG00000100804",
+        uniprot: "P28074",
+        entrez: "5693",
+        locus: "14q11.2"
+      }
+    ]
+  },
+  cereblon: {
+    genes: [
+      {
+        symbol: "CRBN",
+        name: "cereblon",
+        hgnc: "HGNC:30185",
+        ensembl: "ENSG00000113851",
+        uniprot: "Q96SW2",
+        entrez: "51185",
+        locus: "3p26.2"
+      }
+    ]
+  },
+  top1: {
+    genes: [
+      {
+        symbol: "TOP1",
+        name: "DNA topoisomerase I",
+        hgnc: "HGNC:11986",
+        ensembl: "ENSG00000198900",
+        uniprot: "P11387",
+        entrez: "7150",
+        locus: "20q12"
+      }
+    ]
+  },
+  top2a: {
+    genes: [
+      {
+        symbol: "TOP2A",
+        name: "DNA topoisomerase II alpha",
+        hgnc: "HGNC:11989",
+        ensembl: "ENSG00000131747",
+        uniprot: "P11388",
+        entrez: "7153",
+        locus: "17q21.2"
+      }
+    ]
+  },
+  tyms: {
+    genes: [
+      {
+        symbol: "TYMS",
+        name: "thymidylate synthetase",
+        hgnc: "HGNC:12441",
+        ensembl: "ENSG00000176890",
+        uniprot: "P04818",
+        entrez: "7298",
+        locus: "18p11.32"
+      }
+    ]
+  },
+  dhfr: {
+    genes: [
+      {
+        symbol: "DHFR",
+        name: "dihydrofolate reductase",
+        hgnc: "HGNC:2861",
+        ensembl: "ENSG00000228716",
+        uniprot: "P00374",
+        entrez: "1719",
+        locus: "5q14.1"
+      }
+    ]
+  },
+  gnrhr: {
+    genes: [
+      {
+        symbol: "GNRHR",
+        name: "gonadotropin releasing hormone receptor",
+        hgnc: "HGNC:4421",
+        ensembl: "ENSG00000109163",
+        uniprot: "P30968",
+        entrez: "2798",
+        locus: "4q13.2"
+      }
+    ]
+  },
+  xpo1: {
+    genes: [
+      {
+        symbol: "XPO1",
+        name: "exportin 1",
+        hgnc: "HGNC:12825",
+        ensembl: "ENSG00000082898",
+        uniprot: "O14980",
+        entrez: "7514",
+        locus: "2p15"
+      }
+    ]
+  },
+  slamf7: {
+    genes: [
+      {
+        symbol: "SLAMF7",
+        name: "SLAM family member 7",
+        hgnc: "HGNC:21394",
+        ensembl: "ENSG00000026751",
+        uniprot: "Q9NQ25",
+        entrez: "57823",
+        locus: "1q23.3"
+      }
+    ]
   }
 };
