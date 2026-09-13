@@ -2089,5 +2089,57 @@ export const targetXrefs: Record<string, TargetXref> = {
         locus: "19q13.2"
       }
     ]
+  },
+  "glucocorticoid-receptor": {
+    genes: [
+      {
+        symbol: "NR3C1",
+        name: "nuclear receptor subfamily 3 group C member 1",
+        hgnc: "HGNC:7978",
+        ensembl: "ENSG00000113580",
+        uniprot: "P04150",
+        entrez: "2908",
+        locus: "5q31.3"
+      }
+    ]
+  },
+  "gamma-secretase": {
+    genes: [
+      {
+        symbol: "PSEN1",
+        name: "presenilin 1",
+        hgnc: "HGNC:9508",
+        ensembl: "ENSG00000080815",
+        uniprot: "P49768",
+        entrez: "5663",
+        locus: "14q24.2"
+      }
+    ]
+  },
+  fgfr1: {
+    genes: [
+      {
+        symbol: "FGFR1",
+        name: "fibroblast growth factor receptor 1",
+        hgnc: "HGNC:3688",
+        ensembl: "ENSG00000077782",
+        uniprot: "P11362",
+        entrez: "2260",
+        locus: "8p11.23"
+      }
+    ]
+  },
+  erbb4: {
+    genes: [
+      {
+        symbol: "ERBB4",
+        name: "erb-b2 receptor tyrosine kinase 4",
+        hgnc: "HGNC:3432",
+        ensembl: "ENSG00000178568",
+        uniprot: "Q15303",
+        entrez: "2066",
+        locus: "2q34"
+      }
+    ]
   }
 };
