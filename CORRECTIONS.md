@@ -2,6 +2,17 @@
 
 Every factual correction to the OnCo corpus, newest first. Format: date · entity · what was wrong · how it was found · fix.
 
+## 2026-09-13
+
+| Date | Entity | What was wrong | How found | Fix |
+|---|---|---|---|---|
+| 2026-09-13 | [nct05208047](/trials/nct05208047/) | `status` was "recruiting"; the registry says RECRUITING; primary completion 2025-09-30. | Weekly registry fact check ([source](https://clinicaltrials.gov/study/NCT05208047)) | set to "active" via apply-factcheck |
+| 2026-09-13 | [alphabreak](/trials/alphabreak/) | `status` was "recruiting"; the registry says ACTIVE_NOT_RECRUITING. | Weekly registry fact check ([source](https://clinicaltrials.gov/study/NCT06402331)) | set to "active" via apply-factcheck |
+| 2026-09-13 | [alphabreak](/trials/alphabreak/) | `phase` was "3"; the registry says PHASE2. | Weekly registry fact check ([source](https://clinicaltrials.gov/study/NCT06402331)) | set to "2" via apply-factcheck |
+| 2026-09-13 | [cambria](/trials/cambria/) | `status` was "recruiting"; the registry says ACTIVE_NOT_RECRUITING. | Weekly registry fact check ([source](https://clinicaltrials.gov/study/NCT05952557)) | set to "active" via apply-factcheck |
+| 2026-09-13 | [mountaineer](/trials/mountaineer/) | `status` was "recruiting"; the registry says COMPLETED. | Weekly registry fact check ([source](https://clinicaltrials.gov/study/NCT03043313)) | set to "completed" via apply-factcheck |
+| 2026-09-13 | [mountaineer](/trials/mountaineer/) | `phase` was "3"; the registry says PHASE2. | Weekly registry fact check ([source](https://clinicaltrials.gov/study/NCT03043313)) | set to "2" via apply-factcheck |
+
 ## 2026-09-11
 
 | Date | Entity | What was wrong | How found | Fix |

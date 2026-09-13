@@ -108,7 +108,7 @@ const trials: TrialInput[] = [
     replication: "Replicated by PRIME (panitumumab + FOLFOX) and PARADIGM.",
     drugs: ["cetuximab", "bevacizumab", "folfiri"], cancers: ["colorectal"], targets: ["egfr", "kras"], terms: ["sidedness"],
     links: [{ label: "CRYSTAL, NEJM 2009", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa0805019" }], people: ["volker-heinemann", "eric-van-cutsem"] }),
-  t({ id: "mountaineer", name: "MOUNTAINEER & MOUNTAINEER-03", nct: "NCT03043313", phase: "3", status: "recruiting", yearReported: 2022, sponsor: "Pfizer (Seagen)",
+  t({ id: "mountaineer", name: "MOUNTAINEER & MOUNTAINEER-03", nct: "NCT03043313", phase: "2", status: "completed", yearReported: 2022, sponsor: "Pfizer (Seagen)",
     setting: "HER2-positive RAS wild-type metastatic colorectal cancer: tucatinib + trastuzumab (phase 2, pretreated); tucatinib + trastuzumab + mFOLFOX6 vs standard first line (phase 3)",
     tldr: "A HER2 pill plus antibody gave durable responses in the 3-5% of bowel cancers driven by HER2, and is now being tested as first-line treatment.",
     summary: "MOUNTAINEER phase 2: confirmed ORR 38.1%, median duration of response 12.4 months; FDA accelerated approval January 2023 (first HER2-directed regimen in CRC). MOUNTAINEER-03 (NCT05253651, ~400 patients) randomises first-line tucatinib + trastuzumab + mFOLFOX6 vs mFOLFOX6 ± bevacizumab or cetuximab; enrolling.",
