@@ -43,6 +43,14 @@ export const GLOBOCAN_MAP: Record<string, GlobocanMapping> = {
   dlbcl: { codes: [34], label: "Non-Hodgkin lymphoma (all subtypes)", shared: true, note: "GLOBOCAN reports NHL as one site; DLBCL is roughly 30-40% of cases." },
   "hodgkin-lymphoma": { codes: [33], label: "Hodgkin lymphoma" },
   "multiple-myeloma": { codes: [35], label: "Multiple myeloma" },
+  gallbladder: { codes: [12], label: "Gallbladder" },
+  "kaposi-sarcoma": { codes: [19], label: "Kaposi sarcoma" },
+  vulvar: { codes: [21], label: "Vulva" },
+  vaginal: { codes: [22], label: "Vagina" },
+  penile: { codes: [26], label: "Penis" },
+  testicular: { codes: [28], label: "Testis" },
+  "basal-cell-carcinoma": { codes: [17], label: "Non-melanoma skin cancer", shared: true, note: "GLOBOCAN counts all non-melanoma skin cancers together and many registries under-record them; basal cell and cutaneous squamous cell carcinoma share this total." },
+  "cutaneous-scc": { codes: [17], label: "Non-melanoma skin cancer", shared: true, note: "GLOBOCAN counts all non-melanoma skin cancers together and many registries under-record them; basal cell and cutaneous squamous cell carcinoma share this total." },
 };
 
 /** The special "all cancers excluding non-melanoma skin cancer" code. */
