@@ -827,6 +827,33 @@ const baseDrugs: DrugInput[] = [
     approvals: [{ region: "US", year: 1992, indication: "Ovarian cancer (now broad)" }],
     technologies: ["cytotoxic-chemotherapy"], cancers: ["tnbc", "breast-hr-positive", "nsclc", "ovarian", "pancreatic"], companies: ["cspc"], related: ["acupuncture-chemotherapy-neuropathy"],
   },
+  {
+    id: "omidubicel", kind: "drug", name: "Omidubicel", brand: "Omisirge", modality: "Nicotinamide-expanded allogeneic cord blood cell therapy", asOf, status: "approved",
+    tldr: "An expanded umbilical cord blood graft that shortens the dangerous wait for neutrophils to return after a transplant for blood cancer, the first cell therapy approved to speed engraftment.",
+    summary: "Omidubicel takes a single umbilical cord blood unit and expands its stem and progenitor cells for three weeks with nicotinamide, so that patients with blood cancers who need a cord blood transplant but lack a matched donor receive a larger graft. In its phase 3 trial against standard cord blood transplantation, neutrophil recovery came sooner and serious bacterial and fungal infections were fewer. The FDA approved it in April 2023 for adults and children aged 12 and over with haematologic malignancies planned for cord blood transplantation after myeloablative conditioning. It is manufactured for each patient from a matched cord blood unit.",
+    mechanism: "Ex vivo nicotinamide-based expansion of CD34-positive cord blood cells preserves stemness while multiplying the graft, so engraftment after myeloablative conditioning is faster.",
+    approvals: [{ region: "US", year: 2023, indication: "Adults and children aged 12 and over with haematologic malignancies undergoing umbilical cord blood transplantation after myeloablative conditioning, to reduce time to neutrophil recovery and infection" }],
+    cancers: ["aml", "all-leukemia", "mds"], companies: ["gamida-cell"], sections: ["cell-therapy"], technologies: ["allogeneic-hsct"],
+    links: [{ label: "FDA approval announcement (April 2023)", url: "https://www.fda.gov/news-events/press-announcements/fda-approves-cell-therapy-patients-blood-cancers-reduce-risk-infection-following-stem-cell" }],
+  },
+  {
+    id: "remestemcel-l", kind: "drug", name: "Remestemcel-L", brand: "Ryoncil", modality: "Allogeneic bone marrow-derived mesenchymal stromal cell therapy", asOf, status: "approved",
+    tldr: "Donor bone marrow stromal cells given to children whose acute graft-versus-host disease no longer responds to steroids, the first mesenchymal stromal cell therapy approved in the United States.",
+    summary: "Remestemcel-L is a suspension of culture-expanded mesenchymal stromal cells from the bone marrow of healthy adult donors. The cells dampen the T-cell attack on skin, gut and liver that defines acute graft-versus-host disease after an allogeneic stem cell transplant. The FDA approved it in December 2024 for steroid-refractory acute graft-versus-host disease in children aged two months and older, on a single-arm trial in which most children responded within a month. It is given intravenously twice a week for four weeks and is the first mesenchymal stromal cell product approved in the United States.",
+    mechanism: "Mesenchymal stromal cells secrete anti-inflammatory factors and suppress activated T cells, reducing tissue damage in acute graft-versus-host disease.",
+    approvals: [{ region: "US", year: 2024, indication: "Steroid-refractory acute graft-versus-host disease in children aged two months and older" }],
+    cancers: [], companies: ["mesoblast"], sections: ["cell-therapy", "supportive-care"], terms: ["gvhd"],
+    links: [{ label: "FDA approval announcement (December 2024)", url: "https://www.fda.gov/news-events/press-announcements/fda-approves-first-mesenchymal-stromal-cell-therapy-treat-steroid-refractory-acute-graft-versus-host" }],
+  },
+  {
+    id: "hepzato", kind: "drug", name: "Melphalan hepatic delivery system", brand: "Hepzato Kit", modality: "Liver-directed chemotherapy with percutaneous hepatic perfusion", asOf, status: "approved",
+    tldr: "High-dose melphalan pumped through the liver's own blood supply while the blood leaving the liver is filtered, the first approved treatment for uveal melanoma that has spread to the liver.",
+    summary: "The Hepzato Kit combines melphalan with a percutaneous hepatic perfusion system: catheters isolate the liver's circulation, deliver a high dose of melphalan into the hepatic artery, and filter the drug out of the blood leaving the liver before it returns to the body. In the FOCUS trial in uveal melanoma with liver metastases, a cancer with few effective options, about a third of patients responded. The FDA approved it in August 2023 for adults with uveal melanoma whose unresectable liver metastases affect less than half the liver and who have no disease outside the liver, or only limited disease amenable to surgery or radiation. Bone marrow suppression, bleeding and the risks of a major procedure under general anaesthesia are the main hazards.",
+    mechanism: "Regional perfusion exposes liver metastases to melphalan concentrations far above what systemic dosing allows, while extracorporeal filtration limits marrow toxicity.",
+    approvals: [{ region: "US", year: 2023, indication: "Uveal melanoma with unresectable hepatic metastases affecting less than half the liver and no or limited extrahepatic disease" }],
+    cancers: ["uveal-melanoma"], companies: ["delcath"], sections: ["surgery", "chemotherapy"],
+    links: [{ label: "FDA approval (August 2023): melphalan as a liver-directed treatment for uveal melanoma", url: "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-melphalan-liver-directed-treatment-uveal-melanoma" }],
+  },
 ];
 
 /** Core records merged with dosing, toxicity, access, regulatory events, and mechanism steps from drug-depth.ts. */
