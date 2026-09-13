@@ -171,7 +171,7 @@ export const cancers: CancerInput[] = [
 
   // ======================= GI =======================
   c({
-    id: "colorectal", name: "Colorectal cancer", group: "gastrointestinal", wikipedia: W("Colorectal_cancer"),
+    id: "colorectal", aka: ["Rectal Cancer"], name: "Colorectal cancer", group: "gastrointestinal", wikipedia: W("Colorectal_cancer"),
     burden: "~1.9 million cases and 900,000 deaths per year; rising in adults under 50.",
     tldr: "The cancer where screening works best and where immunotherapy can make some tumours disappear entirely, yet most metastatic disease still depends on chemotherapy.",
     summary: "Colonoscopy, FIT, and now blood tests (Shield) screen; ctDNA (DYNAMIC) guides adjuvant chemotherapy. Metastatic: FOLFOX/FOLFIRI + anti-EGFR (RAS/BRAF-wild-type left-sided) or bevacizumab; encorafenib + cetuximab (+FOLFOX, BREAKWATER, 2026 full approval) for BRAF V600E; KRAS G12C inhibitor + anti-EGFR; HER2-directed therapy (tucatinib-trastuzumab, T-DXd). dMMR/MSI-high (~5%): pembrolizumab or nivolumab-ipilimumab first line; neoadjuvant immunotherapy achieves near-universal complete response (NICHE-2, dostarlimab rectal). Exercise improves survival (CHALLENGE 2025).",
@@ -260,7 +260,7 @@ export const cancers: CancerInput[] = [
     tags: ["gi"], trials: ["rationale-302", "symbiotic-gi-16", "nct07463573", "nct06194734", "nct04415853"], terms: ["escc-vs-eac", "barretts-esophagus", "siewert-classification", "clinical-complete-response", "cps", "neoadjuvant-adjuvant", "pcr", "endoscopic-resection-term", "flot-term"], keyPapers: ["paper-spotlight-lancet-2023", "paper-alcohol-cancer-burden-lancet-oncol-2021"], journals: ["esophagus-journal"], institutions: ["jiangsu-cancer-hospital"],
   }),
   c({
-    id: "hcc", companies: ["nanjing-leads-biolabs", "catalym", "bioinvent-international", "ascentawits-pharmaceuticals", "shanghai-abelzeta"], trials: ["nct06109272", "nct05317819", "nct07490262"], name: "Hepatocellular carcinoma", group: "gastrointestinal", wikipedia: W("Hepatocellular_carcinoma"),
+    id: "hcc", aka: ["Liver Cancer"], companies: ["nanjing-leads-biolabs", "catalym", "bioinvent-international", "ascentawits-pharmaceuticals", "shanghai-abelzeta"], trials: ["nct06109272", "nct05317819", "nct07490262"], name: "Hepatocellular carcinoma", group: "gastrointestinal", wikipedia: W("Hepatocellular_carcinoma"),
     burden: "~900,000 liver cancer cases per year; largely preventable via HBV vaccination and HCV cure.",
     tldr: "Liver cancer, usually arising in a damaged liver. Immunotherapy combinations replaced sorafenib, and GPC3 is an emerging cell-therapy target.",
     summary: "Surveillance ultrasound/AFP in cirrhosis. Curative: resection, ablation, transplant. Intermediate: TACE/TARE (Y-90), increasingly combined with systemic therapy (EMERALD-1, LEAP-012). Advanced: atezolizumab-bevacizumab (IMbrave150) or durvalumab-tremelimumab (HIMALAYA); nivolumab-ipilimumab first line (CheckMate 9DW, 2025). Adjuvant atezolizumab-bevacizumab (IMbrave050) lost its early signal. Histotripsy approved for liver tumours.",
@@ -278,7 +278,7 @@ export const cancers: CancerInput[] = [
     tags: ["gi"], people: ["audre-lorde"], terms: ["afp", "child-pugh-albi", "bclc-staging", "hbv-hcv", "dosimetry", "tace-term"], keyPapers: ["paper-alcohol-cancer-burden-lancet-oncol-2021"], links: [{ label: "Wikipedia", url: W("Hepatocellular_carcinoma") }], journals: ["journal-of-gastrointestinal-cancer"],
   }),
   c({
-    id: "cholangiocarcinoma", companies: ["shenzhen-ionova-life-sciences", "hangzhou-hanx-biopharmaceuticals", "tiumbio"], trials: ["nct07229625", "nct05065957", "nct06622057", "nct05987358", "nct04353375", "companion-002"], name: "Biliary tract cancer (cholangiocarcinoma)", group: "gastrointestinal", wikipedia: W("Cholangiocarcinoma"),
+    id: "cholangiocarcinoma", aka: ["Bile Duct Cancer"], companies: ["shenzhen-ionova-life-sciences", "hangzhou-hanx-biopharmaceuticals", "tiumbio"], trials: ["nct07229625", "nct05065957", "nct06622057", "nct05987358", "nct04353375", "companion-002"], name: "Biliary tract cancer (cholangiocarcinoma)", group: "gastrointestinal", wikipedia: W("Cholangiocarcinoma"),
     burden: "Rare (~200,000 per year) but rising; intrahepatic and extrahepatic forms.",
     tldr: "A rare bile-duct cancer that turned out to be rich in targetable mutations: FGFR2 fusions, IDH1, HER2, and NRG1.",
     summary: "Gemcitabine-cisplatin + durvalumab (TOPAZ-1) or pembrolizumab (KEYNOTE-966) first line. Targeted: pemigatinib/futibatinib (FGFR2 fusions), ivosidenib (IDH1), zanidatamab (HER2, 2024), zenocutuzumab (NRG1, 2026), T-DXd (HER2 IHC3+). Adjuvant capecitabine (BILCAP).",
@@ -322,7 +322,7 @@ export const cancers: CancerInput[] = [
     tags: ["gu"], people: ["chris-hoy"], drugs: ["paige-prostate", "mitoxantrone", "nilutamide", "triptorelin", "prednisone", "padeliporfin", "samarium-153-lexidronam"], terms: ["psa", "gleason-grade-group", "castration-resistance", "biochemical-recurrence", "psa50", "ar-v7", "theranostics", "oligometastatic", "crossover"], related: ["radiopharma-roadmap", "psma-pet-to-rlt", "beta-then-alpha", "parp-plus-arpi", "ai-pathology-to-adt", "src-urotoday"], links: [{ label: "Wikipedia", url: W("Prostate_cancer") }], journals: ["clinical-genitourinary-cancer", "prostate-cancer-and-prostatic-diseases", "urologic-oncology"], companies: ["halda-therapeutics", "orion-orion-pharma", "shenzhen-ionova-life-sciences", "futurechem", "hinova-pharmaceuticals", "mbrace-therapeutics", "spectracure"],
   }),
   c({
-    id: "urothelial", companies: ["mabwell-shanghai-bioscience", "molecular-partners", "suzhou-forlong-biotechnology"], trials: ["nct04658862", "hr-nmibc", "nct07424287", "nct07726992", "nct05754853", "nct07480356", "nct06331299", "nct06919965", "nct04165317", "companion-002", "nct07218380", "nct06774131"], name: "Bladder & urothelial cancer", group: "genitourinary", wikipedia: W("Bladder_cancer"),
+    id: "urothelial", aka: ["Transitional Cell Cancer of the Renal Pelvis and Ureter"], companies: ["mabwell-shanghai-bioscience", "molecular-partners", "suzhou-forlong-biotechnology"], trials: ["nct04658862", "hr-nmibc", "nct07424287", "nct07726992", "nct05754853", "nct07480356", "nct06331299", "nct06919965", "nct04165317", "companion-002", "nct07218380", "nct06774131"], name: "Bladder & urothelial cancer", group: "genitourinary", wikipedia: W("Bladder_cancer"),
     burden: "~600,000 cases per year.",
     tldr: "Bladder cancer went from 40 years of cisplatin to an ADC-immunotherapy combination that nearly doubled survival, and in 2026 the first blood-test-guided drug approval.",
     summary: "Non-muscle-invasive: BCG (shortages), nadofaragene, nogapendekin alfa (Anktiva), TAR-200, durvalumab + BCG (2026). Muscle-invasive: perioperative durvalumab (NIAGARA), adjuvant nivolumab, or atezolizumab if ctDNA-positive (IMvigor011, 2026). Metastatic: enfortumab vedotin + pembrolizumab (EV-302, OS 31.5 months). Erdafitinib for FGFR3 alterations. Disitamab vedotin + toripalimab positive for HER2-expressing disease.",
@@ -359,7 +359,7 @@ export const cancers: CancerInput[] = [
 
   // ======================= Gyn =======================
   c({
-    id: "ovarian", companies: ["nanjing-leads-biolabs", "bioinvent-international", "haihe-biopharma", "shenzhen-ionova-life-sciences", "scancell"], trials: ["nct04498117", "nct06394492", "nct06834672", "nct06855069", "nct07214779", "nct07546500", "nct05281471", "nct04169997", "nct07218809", "nct07213804", "nct04921527"], name: "Ovarian cancer", group: "gynaecologic", wikipedia: W("Ovarian_cancer"),
+    id: "ovarian", aka: ["Fallopian Tube Cancer", "Primary Peritoneal Cancer"], companies: ["nanjing-leads-biolabs", "bioinvent-international", "haihe-biopharma", "shenzhen-ionova-life-sciences", "scancell"], trials: ["nct04498117", "nct06394492", "nct06834672", "nct06855069", "nct07214779", "nct07546500", "nct05281471", "nct04169997", "nct07218809", "nct07213804", "nct04921527"], name: "Ovarian cancer", group: "gynaecologic", wikipedia: W("Ovarian_cancer"),
     burden: "~320,000 cases per year; most diagnosed at stage III-IV.",
     tldr: "Usually found late. PARP inhibitors transformed maintenance therapy, and ADCs against folate receptor and CDH6 are arriving for platinum-resistant disease.",
     summary: "Debulking surgery + carboplatin-paclitaxel ± bevacizumab; HIPEC at interval surgery; PARP inhibitor maintenance (olaparib for BRCA/HRD, niraparib). Platinum-resistant: mirvetuximab (FRα-high), relacorilant + nab-paclitaxel (2026), pembrolizumab for PD-L1+ (2026), trabectedin, chemotherapy. Pipeline: R-DXd (CDH6), next-gen FRα ADCs (ZW191, Rina-S), WEE1/ATR inhibitors, MCED for detection.",
@@ -475,7 +475,7 @@ export const cancers: CancerInput[] = [
 
   // ======================= Rare solid =======================
   c({
-    id: "sarcoma", companies: ["philogen-s-p-a", "haihe-biopharma", "epicentrx", "qbiotics", "ranok-therapeutics-hangzhou"], trials: ["invincible-3", "nct07174427"], name: "Sarcomas (soft tissue, bone, GIST)", group: "sarcoma", wikipedia: W("Sarcoma"),
+    id: "sarcoma", aka: ["Soft Tissue Sarcoma"], companies: ["philogen-s-p-a", "haihe-biopharma", "epicentrx", "qbiotics", "ranok-therapeutics-hangzhou"], trials: ["invincible-3", "nct07174427"], name: "Sarcomas (soft tissue, bone, GIST)", group: "sarcoma", wikipedia: W("Sarcoma"),
     burden: "~1% of adult cancers, >70 subtypes.",
     tldr: "Sarcomas are dozens of rare cancers of bone and connective tissue. GIST was the first solid tumour cured-in-practice by a targeted pill; synovial sarcoma got the first TCR-T therapy.",
     summary: "Surgery ± radiation for localised soft-tissue sarcoma; doxorubicin-based chemotherapy for advanced. Subtype-specific therapy: imatinib (GIST), tazemetostat (epithelioid), afamitresgene autoleucel (synovial sarcoma, MAGE-A4), larotrectinib (NTRK), pexidartinib (TGCT), nirogacestat (desmoid). Carbon-ion and proton therapy for unresectable bone sarcomas. Hyperthermia with chemotherapy improves survival (EORTC 62961).",
@@ -509,7 +509,7 @@ export const cancers: CancerInput[] = [
     tags: ["endocrine"], drugs: ["radioactive-iodine", "vandetanib", "selpercatinib", "pralsetinib", "dabrafenib-trametinib", "afirma", "thyrotropin-alfa"], links: [{ label: "Wikipedia", url: W("Thyroid_cancer") }], journals: ["endocrine-related-cancer", "european-thyroid-journal"],
   }),
   c({
-    id: "neuroendocrine", companies: ["crinetics-pharmaceuticals", "molecular-partners", "sinotau-pharmaceutical", "vyriad"], trials: ["nct06943755"], name: "Neuroendocrine tumours", group: "endocrine", wikipedia: W("Neuroendocrine_tumor"),
+    id: "neuroendocrine", aka: ["Gastrointestinal Neuroendocrine Tumors", "Pancreatic Neuroendocrine Tumors (Islet Cell Tumors)"], companies: ["crinetics-pharmaceuticals", "molecular-partners", "sinotau-pharmaceutical", "vyriad"], trials: ["nct06943755"], name: "Neuroendocrine tumours", group: "endocrine", wikipedia: W("Neuroendocrine_tumor"),
     burden: "Rare (~7 per 100,000/year) but rising with better detection.",
     tldr: "Slow-growing hormone-producing tumours that pioneered modern radioligand therapy with Lutathera.",
     summary: "Somatostatin analogues (octreotide, lanreotide) control symptoms and growth; 177Lu-DOTATATE (NETTER-1, NETTER-2 first line for grade 2-3); everolimus, sunitinib, cabozantinib (CABINET); capecitabine-temozolomide. Alpha emitters (RYZ101, 212Pb-DOTAMTATE) for post-Lutathera disease. 68Ga-DOTATATE PET is standard imaging.",
