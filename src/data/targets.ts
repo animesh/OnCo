@@ -643,7 +643,7 @@ export const targets: TargetInput[] = [
     ], links: [{ label: "Wikipedia", url: W("Cyclin-dependent_kinase_4") }],
   },
   {
-    id: "parp", drugs: ["saruparib", "palacaparib"], kind: "target", name: "PARP", symbol: "PARP1", targetClass: "enzyme", asOf, wikipedia: W("PARP_inhibitor"),
+    id: "parp", aka: ["PARP1/2", "Poly [ADP-ribose] polymerase 2"], drugs: ["saruparib", "palacaparib"], kind: "target", name: "PARP", symbol: "PARP1", targetClass: "enzyme", asOf, wikipedia: W("PARP_inhibitor"),
     tldr: "PARP is a DNA repair enzyme. Cancers that have already lost one repair system (BRCA) die when this second one is blocked; healthy cells survive.",
     summary: "PARP inhibitors (olaparib, niraparib, rucaparib, talazoparib) exploit synthetic lethality with BRCA1/2 mutations and homologous recombination deficiency in ovarian, breast, prostate, and pancreatic cancer. Olaparib is approved in adjuvant germline-BRCA breast cancer (OlympiA). PARP1-selective inhibitors (saruparib) and PARP PET tracers are the next step.",
     biology: "Poly(ADP-ribose) polymerase 1 senses single-strand breaks; trapping on DNA is the key cytotoxic mechanism.",
