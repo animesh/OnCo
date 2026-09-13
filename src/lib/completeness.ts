@@ -11,6 +11,7 @@
 import { graph, type Graph } from "./graph";
 import { UNIVERSE, UNIVERSE_LISTS, type Denominator } from "@/data/universe";
 import { GLOBOCAN_MAP } from "@/data/globocan-map";
+import { regimens } from "@/data/regimens";
 import type { Kind } from "./schema";
 
 export type MissingItem = { name: string; url?: string; detail?: string };
@@ -62,7 +63,7 @@ export function drugKeys(d: { name: string; aka: string[]; brand?: string; code?
 function keysFrom(raw: string[]): Set<string> {
   const keys = new Set<string>();
   for (const r of raw) {
-    const n = norm(r.replace(/^fam-|^ado-/i, "").replace(/-[a-z]{4}$/i, ""));
+    const n = norm(r.replace(/^fam-|^ado-/i, "").replace(/-[a-z]{4}$/, ""));
     if (n.length < 3 || /^(generic|and|the)$/.test(n)) continue;
     keys.add(n);
     const loose = n.replace(SALTS, " ").replace(/\s+/g, " ").trim();
@@ -240,6 +241,8 @@ function countOnly(count: (g: Graph) => number): Resolver {
 function drugsNci(g: Graph): Result {
   const keys = new Set<string>();
   for (const d of g.kind("drug")) for (const k of drugKeys(d)) keys.add(k);
+  // NCI lists combination regimens (ABVD, R-CHOP, FOLFIRI-cetuximab) alongside single agents; OnCo covers those as regimen pages.
+  for (const r of regimens) for (const k of keysFrom([r.name, ...(r.aka ?? [])].flatMap(nameParts))) keys.add(k);
   let ours = 0;
   const missing: MissingItem[] = [];
   for (const it of UNIVERSE_LISTS["nci-cancer-drugs"].items) {
