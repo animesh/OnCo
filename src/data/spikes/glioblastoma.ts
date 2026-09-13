@@ -32,13 +32,13 @@ const entities: EntityInput[] = [
     targets: ["vegf"], technologies: ["antiangiogenic", "monoclonal-antibody"], companies: ["roche-genentech"], cancers: ["glioblastoma"], pathways: ["vegf-angiogenesis"], terms: ["recist"],
   },
   {
-    id: "dordaviprone", kind: "drug", name: "Dordaviprone", brand: "Modeyso", code: "ONC201", modality: "Small-molecule imipridone (ClpP agonist / DRD2 antagonist)", asOf, status: "approved",
+    id: "dordaviprone", trials: ["action-dmg"], kind: "drug", name: "Dordaviprone", brand: "Modeyso", code: "ONC201", modality: "Small-molecule imipridone (ClpP agonist / DRD2 antagonist)", asOf, status: "approved",
     tldr: "Dordaviprone is the first drug ever approved for a lethal childhood and young-adult brain tumour, diffuse midline glioma with the H3 K27M mutation (August 2025).",
     summary: "FDA accelerated approval 6 August 2025 for patients ≥1 year with H3 K27M-mutant diffuse midline glioma progressing after prior therapy, based on an integrated analysis of 50 patients across five trials: ORR 22%, median duration of response 10.3 months. Brain-penetrant oral agent from Oncoceutics → Chimerix → Jazz Pharmaceuticals (2025). Confirmatory phase 3 ACTION trial (newly diagnosed, after radiotherapy) ongoing. Debate continues on the strength of single-arm evidence.",
     mechanism: "Hyperactivates the mitochondrial protease ClpP and antagonises dopamine receptor D2, triggering integrated stress response and apoptosis in H3 K27M-altered cells.",
     approvals: [{ region: "US", year: 2025, indication: "Recurrent H3 K27M-mutant diffuse midline glioma, age ≥1 (accelerated)" }],
     companies: ["jazz"], cancers: ["glioblastoma"], terms: ["h3k27m", "blood-brain-barrier", "accelerated-approval"],
-    links: [{ label: "FDA approval notice", url: "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-dordaviprone-diffuse-midline-glioma" }, { label: "OncLive", url: "https://www.onclive.com/view/fda-approves-dordaviprone-for-diffuse-midline-glioma" }],
+    links: [{ label: "FDA approval notice", url: "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-dordaviprone-diffuse-midline-glioma" }, { label: "OncLive", url: "https://www.onclive.com/view/fda-approves-dordaviprone-for-diffuse-midline-glioma" }, { label: "Arrillaga-Romany et al., ONC201 (dordaviprone) in recurrent H3 K27M-mutant diffuse midline glioma: pooled analysis behind the accelerated approval (Journal of Clinical Oncology 2024)", url: "https://doi.org/10.1200/JCO.23.01134" }],
   },
   {
     id: "tovorafenib", kind: "drug", name: "Tovorafenib", brand: "Ojemda", modality: "Small-molecule type II RAF inhibitor", asOf, status: "approved",
