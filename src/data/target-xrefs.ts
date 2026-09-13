@@ -1907,5 +1907,187 @@ export const targetXrefs: Record<string, TargetXref> = {
         locus: "1q23.3"
       }
     ]
+  },
+  tubulin: {
+    genes: [
+      {
+        symbol: "TUBB",
+        name: "tubulin beta class I",
+        hgnc: "HGNC:20778",
+        ensembl: "ENSG00000196230",
+        uniprot: "P07437",
+        entrez: "203068",
+        locus: "6p21.33"
+      }
+    ]
+  },
+  dnmt1: {
+    genes: [
+      {
+        symbol: "DNMT1",
+        name: "DNA methyltransferase 1",
+        hgnc: "HGNC:2976",
+        ensembl: "ENSG00000130816",
+        uniprot: "P26358",
+        entrez: "1786",
+        locus: "19p13.2"
+      }
+    ]
+  },
+  rrm1: {
+    genes: [
+      {
+        symbol: "RRM1",
+        name: "ribonucleotide reductase catalytic subunit M1",
+        hgnc: "HGNC:10451",
+        ensembl: "ENSG00000167325",
+        uniprot: "P23921",
+        entrez: "6240",
+        locus: "11p15.4"
+      }
+    ]
+  },
+  pik3cd: {
+    genes: [
+      {
+        symbol: "PIK3CD",
+        name: "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit delta",
+        hgnc: "HGNC:8977",
+        ensembl: "ENSG00000171608",
+        uniprot: "O00329",
+        entrez: "5293",
+        locus: "1p36.22"
+      }
+    ]
+  },
+  rara: {
+    genes: [
+      {
+        symbol: "RARA",
+        name: "retinoic acid receptor alpha",
+        hgnc: "HGNC:9864",
+        ensembl: "ENSG00000131759",
+        uniprot: "P10276",
+        entrez: "5914",
+        locus: "17q21.2"
+      }
+    ]
+  },
+  "fgfr3-receptor": {
+    genes: [
+      {
+        symbol: "FGFR3",
+        name: "fibroblast growth factor receptor 3",
+        hgnc: "HGNC:3690",
+        ensembl: "ENSG00000068078",
+        uniprot: "P22607",
+        entrez: "2261",
+        locus: "4p16.3"
+      }
+    ]
+  },
+  pdgfrb: {
+    genes: [
+      {
+        symbol: "PDGFRB",
+        name: "platelet derived growth factor receptor beta",
+        hgnc: "HGNC:8804",
+        ensembl: "ENSG00000113721",
+        uniprot: "P09619",
+        entrez: "5159",
+        locus: "5q32"
+      }
+    ]
+  },
+  src: {
+    genes: [
+      {
+        symbol: "SRC",
+        name: "SRC proto-oncogene, non-receptor tyrosine kinase",
+        hgnc: "HGNC:11283",
+        ensembl: "ENSG00000197122",
+        uniprot: "P12931",
+        entrez: "6714",
+        locus: "20q11.23"
+      }
+    ]
+  },
+  ifnar1: {
+    genes: [
+      {
+        symbol: "IFNAR1",
+        name: "interferon alpha and beta receptor subunit 1",
+        hgnc: "HGNC:5432",
+        ensembl: "ENSG00000142166",
+        uniprot: "P17181",
+        entrez: "3454",
+        locus: "21q22.11"
+      }
+    ]
+  },
+  csf3r: {
+    genes: [
+      {
+        symbol: "CSF3R",
+        name: "colony stimulating factor 3 receptor",
+        hgnc: "HGNC:2439",
+        ensembl: "ENSG00000119535",
+        uniprot: "Q99062",
+        entrez: "1441",
+        locus: "1p34.3"
+      }
+    ]
+  },
+  htr3a: {
+    genes: [
+      {
+        symbol: "HTR3A",
+        name: "5-hydroxytryptamine receptor 3A",
+        hgnc: "HGNC:5297",
+        ensembl: "ENSG00000166736",
+        uniprot: "P46098",
+        entrez: "3359",
+        locus: "11q23.2"
+      }
+    ]
+  },
+  tacr1: {
+    genes: [
+      {
+        symbol: "TACR1",
+        name: "tachykinin receptor 1",
+        hgnc: "HGNC:11526",
+        ensembl: "ENSG00000115353",
+        uniprot: "P25103",
+        entrez: "6869",
+        locus: "2p12"
+      }
+    ]
+  },
+  epor: {
+    genes: [
+      {
+        symbol: "EPOR",
+        name: "erythropoietin receptor",
+        hgnc: "HGNC:3416",
+        ensembl: "ENSG00000187266",
+        uniprot: "P19235",
+        entrez: "2057",
+        locus: "19p13.2"
+      }
+    ]
+  },
+  axl: {
+    genes: [
+      {
+        symbol: "AXL",
+        name: "AXL receptor tyrosine kinase",
+        hgnc: "HGNC:905",
+        ensembl: "ENSG00000167601",
+        uniprot: "P30530",
+        entrez: "558",
+        locus: "19q13.2"
+      }
+    ]
   }
 };
