@@ -227,17 +227,8 @@ export function Wireframe3D({ mesh: given, height = "h-64 sm:h-72", speed = 0.3,
         ctx.fillStyle = rgba(pal.base, al);
         ctx.fillText(l.text, p[0] + 15, p[1] - 10.5);
       }
-      // Caption for animated process phases. Compact mode: a small phase label (information, not decoration).
-      if (caption && compact) {
-        ctx.font = `600 10px ${font}`;
-        let text = caption;
-        while (text.length > 4 && ctx.measureText(text).width > W - 22) text = text.slice(0, -2).trimEnd() + "…";
-        const w = ctx.measureText(text).width;
-        ctx.fillStyle = rgba(pal.card, 0.85);
-        ctx.fillRect(6, H - 20, w + 10, 15);
-        ctx.fillStyle = rgba(pal.base, 0.9);
-        ctx.fillText(text, 11, H - 12.5);
-      } else if (caption) {
+      // Caption for animated process phases; thumbnails (compact) draw none, since a truncated caption reads as cycling numbers.
+      if (caption && !compact) {
         ctx.font = `600 12px ${font}`;
         let text = caption;
         while (text.length > 4 && ctx.measureText(text).width > W - 36) text = text.slice(0, -2).trimEnd() + "…";
