@@ -279,10 +279,9 @@ export function PaletteTrigger({ className = "" }: { className?: string }) {
   const { t } = useT();
   useEffect(() => { const id = requestAnimationFrame(() => setMac(/Mac|iPhone|iPad/.test(navigator.platform))); return () => cancelAnimationFrame(id); }, []);
   return (
-    <button type="button" onClick={() => window.dispatchEvent(new Event("onco:open-palette"))} className={`flex items-center gap-2 rounded-lg border border-border bg-card px-3 py-1.5 text-sm text-muted hover:bg-foreground/5 min-w-0 overflow-hidden whitespace-nowrap ${className}`} aria-label={t("header.openSearch")}>
-      <span aria-hidden>⌕</span>
-      <span className="hidden sm:inline">{t("header.search")}</span>
-      <kbd className="hidden sm:inline-block xl:hidden 2xl:inline-block ms-auto text-[10px] border border-border rounded px-1.5 py-0.5">{mac ? "⌘" : "Ctrl"} K</kbd>
+    <button type="button" onClick={() => window.dispatchEvent(new Event("onco:open-palette"))} className={`flex items-center justify-center rounded-lg border border-border bg-card px-3 py-1.5 text-sm text-muted hover:bg-foreground/5 min-w-0 overflow-hidden whitespace-nowrap ${className}`} aria-label={t("header.openSearch")}>
+      <span aria-hidden className="text-base leading-none">⌕</span>
+      <span className="sr-only">{t("header.search")} ({mac ? "⌘" : "Ctrl"} K)</span>
     </button>
   );
 }

@@ -11,6 +11,12 @@ import { Tip } from "@/components/Tip";
 export const metadata: Metadata = pageMeta({ title: "Pathway-to-drug matrix", description: "For every signalling pathway, which nodes have a drug in the corpus, at what phase, and which druggable nodes have none: the inverse of the pathway diagrams.", path: "/pathway-drugs/" });
 
 const ORDER = ["approved", "standard-of-care", "phase-3", "positive", "phase-2", "phase-1", "preclinical", "concept"];
+/** Deep link into the treatments table filtered to these targets (any of) and, optionally, one phase or status. */
+const short = (s: string) => s.replace(/ \(.*\)$/, "");
+const drugsFor = (targetNames: string[], status?: string) => {
+  const q = new URLSearchParams(); for (const t of targetNames) q.append("targets", short(t)); if (status) q.set("status", status);
+  return `/drugs/?${q.toString()}`;
+};
 const best = (ps: PathwayProduct[]) => ps.map((p) => ORDER.indexOf(p.status ?? "")).filter((i) => i >= 0).sort((a, b) => a - b)[0];
 
 export default function PathwayDrugsPage() {
@@ -38,13 +44,13 @@ export default function PathwayDrugsPage() {
             <tbody>
               {views.map(({ p, v, druggable, drugged, undrugged, approvedNodes }) => (
                 <tr key={p.id}>
-                  <td><a href={`#${p.id}`} className="font-medium hover:underline">{p.name}</a></td>
-                  <td className="text-right tabular-nums">{v.nodes.length}</td>
-                  <td className="text-right tabular-nums">{druggable.length}</td>
-                  <td className="text-right tabular-nums">{drugged.length}</td>
-                  <td className="text-right tabular-nums">{approvedNodes.length}</td>
-                  <td className={`text-right tabular-nums font-semibold ${undrugged.length ? "text-rose-700 dark:text-rose-300" : "text-muted"}`}>{undrugged.length}</td>
-                  <td className="hidden md:table-cell text-xs text-muted">{undrugged.map((n) => n.label).join(", ")}</td>
+                  <td><Link href={routeFor(p)} className="font-medium hover:underline">{p.name}</Link> <a href={`#${p.id}`} className="text-xs text-muted hover:text-accent ml-1" title="Jump to this pathway's node table">table ↓</a></td>
+                  <td className="text-right tabular-nums"><Link href={routeFor(p)} className="hover:underline" title="Pathway page with the diagram">{v.nodes.length}</Link></td>
+                  <td className="text-right tabular-nums"><a href={`#${p.id}`} className="hover:underline" title="Nodes with a target, in the table below">{druggable.length}</a></td>
+                  <td className="text-right tabular-nums">{drugged.length ? <Link href={drugsFor(druggable.map((n) => n.targetName ?? n.label))} className="hover:underline text-accent" title="Open the treatments table filtered to this pathway's targets">{drugged.length}</Link> : <span className="text-muted">0</span>}</td>
+                  <td className="text-right tabular-nums">{approvedNodes.length ? <Link href={drugsFor(approvedNodes.map((n) => n.targetName ?? n.label), "approved")} className="hover:underline text-accent" title="Approved treatments hitting this pathway">{approvedNodes.length}</Link> : <span className="text-muted">0</span>}</td>
+                  <td className={`text-right tabular-nums font-semibold ${undrugged.length ? "text-rose-700 dark:text-rose-300" : "text-muted"}`}><a href={`#${p.id}`} className="hover:underline">{undrugged.length}</a></td>
+                  <td className="hidden md:table-cell text-xs text-muted">{undrugged.map((n, i) => <span key={n.id}>{i > 0 && ", "}{n.href ? <Link href={n.href} className="hover:underline hover:text-accent">{n.label}</Link> : n.label}</span>)}</td>
                 </tr>
               ))}
             </tbody>
@@ -53,9 +59,9 @@ export default function PathwayDrugsPage() {
 
         <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-muted mb-6">
           <span className="kicker">Legend</span>
-          {["approved", "phase-3", "phase-2", "phase-1", "preclinical"].map((s) => <span key={s} className={`chip ${statusClass(s)}`}>{STATUS_LABEL[s]}</span>)}
-          <span className="chip border border-dashed border-rose-400 text-rose-700 dark:text-rose-300">Druggable node, no drug</span>
-          <span className="chip bg-foreground/5">No target in corpus</span>
+          {["approved", "phase-3", "phase-2", "phase-1", "preclinical"].map((s) => <Link key={s} href={`/drugs/?status=${s}`} className={`chip ${statusClass(s)} hover:ring-2 hover:ring-accent/30`} title={`All treatments at ${STATUS_LABEL[s]}`}>{STATUS_LABEL[s]}</Link>)}
+          <Link href="/gaps/" className="chip border border-dashed border-rose-400 text-rose-700 dark:text-rose-300 hover:ring-2 hover:ring-accent/30" title="Gaps page: what is missing across the corpus">Druggable node, no drug</Link>
+          <Link href="/targets/" className="chip bg-foreground/5 hover:ring-2 hover:ring-accent/30" title="All targets in the corpus">No target in corpus</Link>
         </div>
 
         <div className="space-y-10">
@@ -64,6 +70,10 @@ export default function PathwayDrugsPage() {
               <header className="mb-3">
                 <h2 className="text-xl font-semibold tracking-tight"><Link href={routeFor(p)} className="hover:underline">{p.name}</Link></h2>
                 <p className="text-sm text-muted mt-1 max-w-3xl">{p.tldr}</p>
+                {v.nodes.some((n) => n.targetId) && <p className="text-xs mt-1.5 flex flex-wrap gap-x-3 gap-y-1">
+                  <Link href={drugsFor(v.nodes.filter((n) => n.targetId).map((n) => n.targetName ?? n.label))} className="underline text-accent">Treatments hitting this pathway, as a filterable table</Link>
+                  <Link href={routeFor(p)} className="underline text-muted hover:text-accent">Pathway page and diagram</Link>
+                </p>}
               </header>
               <div className="card overflow-x-auto">
                 <table className="onco">
@@ -75,14 +85,14 @@ export default function PathwayDrugsPage() {
                       const b = best(ps);
                       return (
                         <tr key={n.id} className={gap ? "bg-rose-500/[0.04]" : undefined}>
-                          <td className="font-medium whitespace-nowrap">{n.label}</td>
-                          <td className="whitespace-nowrap">{n.href ? <Link href={n.href} className="hover:underline">{n.targetName}</Link> : <span className="chip bg-foreground/5 text-xs">no target in corpus</span>}</td>
+                          <td className="font-medium whitespace-nowrap">{n.href ? <Link href={n.href} className="hover:underline">{n.label}</Link> : n.label}</td>
+                          <td className="whitespace-nowrap">{n.href ? <Link href={n.href} className="hover:underline">{n.targetName}</Link> : <Link href="/targets/" className="chip bg-foreground/5 text-xs hover:ring-2 hover:ring-accent/30" title="No target record yet; browse all targets">no target in corpus</Link>}</td>
                           <td className="min-w-[260px]">
-                            {gap ? <span className="chip border border-dashed border-rose-400 text-rose-700 dark:text-rose-300 text-xs">Druggable node, no drug in corpus</span>
+                            {gap ? <Link href={n.href ?? "/gaps/"} className="chip border border-dashed border-rose-400 text-rose-700 dark:text-rose-300 text-xs hover:ring-2 hover:ring-accent/30" title="Open the target page; no treatment in the corpus names it yet">Druggable node, no drug in corpus</Link>
                               : ps.length ? <div className="flex flex-wrap gap-1.5">{ps.map((x) => <Tip key={x.id} title={x.name} text={`${x.modality} · ${STATUS_LABEL[x.status ?? ""] ?? x.status ?? "status unknown"}`} href={x.route}><Link href={x.route} className={`chip ${statusClass(x.status)}`}>{x.name}</Link></Tip>)}</div>
                               : <span className="text-muted/50">-</span>}
                           </td>
-                          <td className="hidden lg:table-cell text-muted text-xs">{b !== undefined ? STATUS_LABEL[ORDER[b]] : gap ? "none" : ""}</td>
+                          <td className="hidden lg:table-cell text-xs">{b !== undefined ? <Link href={drugsFor([n.targetName ?? n.label], ORDER[b])} className={`chip ${statusClass(ORDER[b])} hover:ring-2 hover:ring-accent/30`} title={`Treatments for this target at ${STATUS_LABEL[ORDER[b]]}`}>{STATUS_LABEL[ORDER[b]]}</Link> : gap ? <span className="text-muted">none</span> : ""}</td>
                         </tr>
                       );
                     })}
