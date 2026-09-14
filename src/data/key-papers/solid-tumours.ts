@@ -1494,4 +1494,15 @@ export const papersSolidTumours: PaperInput[] = [
     changedPractice: true, participants: 823,
     links: [{ label: "Full text (DOI)", url: "https://doi.org/10.1056/NEJMoa040694" }],
     cancers: ["colorectal"], drugs: ["fluorouracil"], terms: ["chemoradiation", "neoadjuvant-adjuvant", "total-neoadjuvant-therapy", "organ-preservation"], related: [] }),
+
+  p({ id: "paper-burris-gemcitabine-pancreatic-jco-1997", name: "Burris 1997: gemcitabine becomes the first standard treatment for advanced pancreatic cancer",
+    tldr: "A small trial that made gemcitabine the standard chemotherapy for pancreatic cancer for the next fifteen years, on the strength of more patients feeling better on treatment and a modest gain in survival over fluorouracil.",
+    summary: "Burris and colleagues randomised 126 patients with advanced, symptomatic pancreatic cancer to weekly gemcitabine or weekly bolus fluorouracil. The primary endpoint was clinical benefit response, a composite of pain, performance status and weight, which gemcitabine improved in about a quarter of patients compared with a few percent on fluorouracil. Median survival was modestly longer and more patients were alive at one year. The trial led to gemcitabine's approval and defined the comparator arm for every pancreatic cancer trial until FOLFIRINOX and nab-paclitaxel.",
+    journal: "Journal of Clinical Oncology", year: 1997, doi: "10.1200/JCO.1997.15.6.2403", authors: "Burris HA 3rd, Moore MJ, Andersen J, et al.", paperType: "rct",
+    findings: ["126 patients with advanced pancreatic cancer; gemcitabine vs fluorouracil.", "Clinical benefit response 23.8% vs 4.8%.", "Median survival 5.65 vs 4.41 months; survival at 12 months 18% vs 2%."],
+    whatItMeans: "This trial introduced a patient-centred composite endpoint and a drug that remained the backbone of pancreatic cancer treatment for a generation. Its small survival gain also shows how low the bar was, which is the context for the FOLFIRINOX and MPACT trials that followed.",
+    caveats: ["Small trial with a novel primary endpoint that regulators accepted once and rarely since.", "The survival advantage was modest and the comparator, bolus fluorouracil, is no longer used this way."],
+    changedPractice: true, participants: 126,
+    links: [{ label: "Full text (DOI)", url: "https://doi.org/10.1200/JCO.1997.15.6.2403" }],
+    cancers: ["pancreatic"], drugs: ["gemcitabine", "fluorouracil"], terms: ["os", "quality-of-life"], related: ["paper-conroy-folfirinox-pancreatic-nejm-2011", "paper-mpact-nab-paclitaxel-gemcitabine-nejm-2013"] }),
 ];

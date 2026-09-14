@@ -628,4 +628,15 @@ export const papersBloodImmuneCell: PaperInput[] = [
     changedPractice: false, participants: 46,
     links: [{ label: "Full text (DOI)", url: "https://doi.org/10.1038/nature13954" }],
     cancers: ["melanoma"], drugs: ["pembrolizumab"], targets: ["pd1", "pdl1"], terms: ["tils", "immune-checkpoint"], people: ["antoni-ribas"], institutions: ["ucla-jonsson"], related: ["paper-rizvi-mutational-landscape-pd1-science-2015"] }),
+
+  p({ id: "paper-thorsson-immune-landscape-of-cancer-immunity-2018", name: "Thorsson 2018: the immune landscape of cancer across 10,000 tumours",
+    tldr: "An analysis of more than 10,000 tumours from 33 cancer types in The Cancer Genome Atlas that sorted cancers into six immune subtypes, showing that the immune environment of a tumour cuts across its tissue of origin and affects prognosis.",
+    summary: "As part of the TCGA PanCancer Atlas, Thorsson and colleagues integrated gene expression, immune cell estimates, neoantigen predictions, T and B cell receptor repertoires and other data for over 10,000 tumours across 33 cancer types. They defined six immune subtypes, named wound healing, interferon-gamma dominant, inflammatory, lymphocyte depleted, immunologically quiet and TGF-beta dominant, each found in many cancer types and associated with different outcomes. They also linked immune features to tumour genetics, such as copy number changes and specific driver mutations.",
+    journal: "Immunity", year: 2018, doi: "10.1016/j.immuni.2018.03.023", authors: "Thorsson V, Gibbs DL, Brown SD, et al.", paperType: "translational",
+    findings: ["Immunogenomic analysis of more than 10,000 TCGA tumours across 33 cancer types.", "Six immune subtypes spanning tumour types: wound healing, IFN-gamma dominant, inflammatory, lymphocyte depleted, immunologically quiet and TGF-beta dominant.", "Immune subtype was associated with prognosis, and immune features correlated with tumour genomic features such as copy number burden."],
+    whatItMeans: "This atlas is the reference for how immune the different cancers are and is widely used to choose which tumours to test immunotherapies in and to interpret immune gene signatures. It shows why immunotherapy responses depend on the tumour's immune context as much as on its tissue.",
+    caveats: ["Bulk tumour data; cell types are inferred computationally rather than observed.", "TCGA samples are mostly untreated primary tumours, not the metastatic disease treated with immunotherapy."],
+    changedPractice: false,
+    links: [{ label: "Full text (DOI)", url: "https://doi.org/10.1016/j.immuni.2018.03.023" }],
+    terms: ["immune-system", "tils", "neoantigen"], technologies: ["checkpoint-inhibitor"], related: ["paper-galon-immune-contexture-colorectal-science-2006", "paper-schreiber-cancer-immunoediting-science-2011"] }),
 ];
