@@ -1421,4 +1421,15 @@ export const papersSolidTumours: PaperInput[] = [
     changedPractice: true, participants: 582,
     links: [{ label: "Full text (DOI)", url: "https://doi.org/10.1056/NEJMoa1507643" }, { label: "ClinicalTrials.gov NCT01673867", url: "https://clinicaltrials.gov/study/NCT01673867" }],
     cancers: ["nsclc"], drugs: ["nivolumab", "docetaxel"], targets: ["pd1", "pdl1"], companies: ["bms"], terms: ["os", "orr"], related: ["paper-keynote-024-nejm-2016"] }),
+
+  p({ id: "paper-checkmate-017-nejm-2015", name: "CheckMate 017: nivolumab beats docetaxel in squamous lung cancer after chemotherapy",
+    tldr: "In squamous non-small-cell lung cancer that had progressed after platinum chemotherapy, the PD-1 antibody nivolumab prolonged life compared with docetaxel with far fewer severe side effects, regardless of PD-L1 status.",
+    summary: "CheckMate 017 randomised 272 patients with advanced squamous non-small-cell lung cancer that had progressed during or after first-line platinum chemotherapy to nivolumab or docetaxel. Nivolumab improved overall survival, the primary endpoint, as well as response rate and progression-free survival, with a fraction of the grade 3 or 4 toxicity of docetaxel. Unlike its non-squamous companion trial CheckMate 057, the benefit did not depend on PD-L1 expression, which led to nivolumab's approval in squamous disease without a biomarker requirement.",
+    journal: "New England Journal of Medicine", year: 2015, doi: "10.1056/NEJMoa1504627", authors: "Brahmer J, Reckamp KL, Baas P, et al.", paperType: "rct",
+    findings: ["272 patients with previously treated squamous NSCLC; nivolumab vs docetaxel.", "Median overall survival 9.2 vs 6.0 months, hazard ratio 0.59; one-year survival 42% vs 24%.", "Response rate 20% vs 9%; median progression-free survival 3.5 vs 2.8 months, hazard ratio 0.62.", "Grade 3 or 4 treatment-related adverse events 7% vs 55%; benefit was independent of PD-L1 expression."],
+    whatItMeans: "With CheckMate 057 this trial ended docetaxel's role as the default second-line treatment in lung cancer and gave the first phase 3 proof that PD-1 blockade extends life in a common carcinoma. Its PD-L1-independent benefit in squamous disease still shapes how the biomarker is used.",
+    caveats: ["Open-label design.", "Second-line setting; first-line immunotherapy has since changed who reaches this point.", "Squamous histology only."],
+    changedPractice: true, participants: 272,
+    links: [{ label: "Full text (DOI)", url: "https://doi.org/10.1056/NEJMoa1504627" }, { label: "ClinicalTrials.gov NCT01642004", url: "https://clinicaltrials.gov/study/NCT01642004" }],
+    cancers: ["nsclc"], drugs: ["nivolumab", "docetaxel"], targets: ["pd1", "pdl1"], people: ["julie-brahmer"], companies: ["bms"], terms: ["os", "orr"], related: ["paper-checkmate-057-nejm-2015"] }),
 ];

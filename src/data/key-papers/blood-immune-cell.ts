@@ -575,4 +575,15 @@ export const papersBloodImmuneCell: PaperInput[] = [
     changedPractice: true,
     links: [pubmed("Management of Immune-Related Adverse Events ASCO Guideline Update Schneider JCO 2021"), { label: "ASCO guidelines", url: "https://www.asco.org/guidelines" }],
     cancers: ["melanoma", "nsclc"], drugs: ["nivolumab", "ipilimumab", "pembrolizumab", "atezolizumab"], targets: ["pd1", "ctla4"], technologies: ["checkpoint-inhibitor"], terms: ["irae", "crs", "icans"], institutions: ["asco"], related: ["paper-checkmate-067-ten-year-nejm-2025", "paper-hodi-ipilimumab-melanoma-nejm-2010", "cardio-oncology"], bottlenecks: ["b-toxicity-qol", "b-knowledge-diffusion", "b-care-fragmentation"], journals: ["jco"] }),
+
+  p({ id: "paper-pardoll-immune-checkpoint-blockade-nrc-2012", name: "Pardoll 2012: the blockade of immune checkpoints in cancer immunotherapy",
+    tldr: "The review that named and organised the field of checkpoint blockade: tumours switch off attacking T cells through brakes such as CTLA-4 and PD-1, and antibodies that release those brakes can produce lasting responses.",
+    summary: "Written as the first PD-1 antibody results appeared, Pardoll's review explained how immune checkpoints, receptors that normally protect tissues from autoimmunity, are exploited by tumours, and why blocking them is a fundamentally different approach from vaccines or cytokines. It contrasted CTLA-4, which acts early in lymph nodes, with PD-1 and its ligand PD-L1, which act in the tumour itself, catalogued further checkpoints such as LAG-3 and TIM-3, and set out the questions that have shaped the decade since: biomarkers, combinations, and the autoimmune side effects that come with releasing the brakes.",
+    journal: "Nature Reviews Cancer", year: 2012, doi: "10.1038/nrc3239", authors: "Pardoll DM.", paperType: "review",
+    findings: ["Immune checkpoints are inhibitory receptors on T cells that tumours co-opt; CTLA-4 acts mainly during T cell priming and PD-1 during the effector phase in tissues.", "PD-L1 expression by tumour cells offers a mechanism-based biomarker and a rationale for anti-PD-1 and anti-PD-L1 antibodies.", "Multiple additional checkpoints (LAG-3, TIM-3, BTLA, adenosine and others) offer combination targets."],
+    whatItMeans: "This is the most cited map of the immunotherapy revolution and a good first read before the trials. Its predictions largely held: PD-1 pathway antibodies became the most widely used cancer drugs, PD-L1 testing entered practice, and LAG-3 blockade was approved in melanoma a decade later.",
+    caveats: ["A review written before most phase 3 evidence existed.", "Biomarkers for checkpoint blockade remain imperfect despite the mechanistic case for PD-L1."],
+    changedPractice: false,
+    links: [{ label: "Full text (DOI)", url: "https://doi.org/10.1038/nrc3239" }],
+    targets: ["ctla4", "pd1", "pdl1", "lag3", "tim3"], technologies: ["checkpoint-inhibitor"], terms: ["immune-checkpoint", "irae"], people: ["drew-pardoll"], institutions: ["johns-hopkins"], related: ["paper-hodi-ipilimumab-melanoma-nejm-2010", "paper-topalian-anti-pd1-nejm-2012"] }),
 ];
