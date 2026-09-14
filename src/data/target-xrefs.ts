@@ -2141,5 +2141,11 @@ export const targetXrefs: Record<string, TargetXref> = {
         locus: "2q34"
       }
     ]
-  }
+  },
+  ada: {
+    genes: [{ symbol: "ADA", name: "adenosine deaminase", hgnc: "HGNC:186", ensembl: "ENSG00000196839", uniprot: "P00813", entrez: "100", locus: "20q13.12" }],
+  },
+  pgr: {
+    genes: [{ symbol: "PGR", name: "progesterone receptor", hgnc: "HGNC:8910", ensembl: "ENSG00000082175", uniprot: "P06401", entrez: "5241", locus: "11q22.1" }],
+  },
 };

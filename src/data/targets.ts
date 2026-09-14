@@ -1109,4 +1109,23 @@ export const targets: TargetInput[] = [
     drugs: ["afatinib","dacomitinib","neratinib"], cancers: ["nsclc","breast-her2-positive"],
     links: [{ label: "UniProt Q15303: ERBB4", url: "https://www.uniprot.org/uniprotkb/Q15303/entry" }],
   },
+
+  {
+    id: "ada", kind: "target", name: "Adenosine deaminase (ADA)", symbol: "ADA", targetClass: "enzyme", asOf, wikipedia: W("Adenosine_deaminase"),
+    tldr: "Adenosine deaminase is an enzyme that breaks down adenosine and deoxyadenosine; blocking it with pentostatin poisons lymphocytes, which is why the drug works in hairy cell leukaemia and some T-cell cancers.",
+    summary: "Adenosine deaminase (ADA) converts adenosine to inosine and deoxyadenosine to deoxyinosine in the purine salvage pathway. Lymphocytes depend on it: children born without ADA have severe combined immunodeficiency because deoxyadenosine metabolites accumulate and kill developing lymphocytes. Pentostatin (deoxycoformycin) is a tight-binding ADA inhibitor that reproduces this toxicity on purpose in lymphoid cancers, producing durable remissions in hairy cell leukaemia; it is also used in T-cell leukaemias and lymphomas and in graft-versus-host disease.",
+    biology: "ADA is a zinc-dependent hydrolase expressed in most tissues and at high levels in lymphoid cells. Inhibiting it raises intracellular deoxyadenosine triphosphate, which blocks ribonucleotide reductase and DNA synthesis and triggers apoptosis, an effect most marked in lymphocytes with high deoxynucleoside kinase activity. Pentostatin binds the enzyme almost irreversibly; cladribine, the other purine analogue used in hairy cell leukaemia, is instead a substrate-resistant deoxyadenosine analogue.",
+    whereFound: ["Lymphocytes and lymphoid tissue (high)", "Widely expressed in other tissues at lower levels", "Also present in plasma as extracellular ADA"],
+    drugs: ["pentostatin"], cancers: ["hairy-cell-leukemia", "cll"], terms: ["apoptosis"],
+    links: [{ label: "UniProt P00813: ADA", url: "https://www.uniprot.org/uniprotkb/P00813/entry" }, { label: "HGNC:186 ADA", url: "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:186" }],
+  },
+  {
+    id: "pgr", kind: "target", name: "Progesterone receptor (PGR)", symbol: "PGR", targetClass: "nuclear-receptor", asOf, wikipedia: W("Progesterone_receptor"),
+    tldr: "The progesterone receptor is the hormone receptor that, alongside the oestrogen receptor, marks breast cancers likely to respond to hormone therapy, and it is the target of the progestins megestrol and medroxyprogesterone used in endometrial and breast cancer.",
+    summary: "The progesterone receptor (PR, gene PGR) is a nuclear receptor whose expression is switched on by oestrogen signalling, so PR positivity in a breast cancer indicates an intact, functioning oestrogen receptor pathway and a better response to endocrine therapy; it is reported with ER and HER2 on every breast cancer pathology report. Progestins such as megestrol acetate and medroxyprogesterone act through the receptor and are used as hormonal treatment for advanced endometrial cancer and as later-line therapy in hormone receptor-positive breast cancer, and progestin-containing intrauterine systems are used for fertility-sparing treatment of early endometrial cancer.",
+    biology: "PGR encodes two isoforms, PR-A and PR-B, from alternative promoters; the receptor binds progesterone, dimerises and regulates transcription at progesterone response elements, and it cross-talks with the oestrogen receptor at shared chromatin sites. In breast cancer PR expression is a marker of ER activity and of luminal A biology; loss of PR in an ER-positive tumour predicts a poorer response to endocrine therapy. In the endometrium progesterone opposes oestrogen-driven proliferation, which is why unopposed oestrogen causes endometrial cancer and progestins treat it.",
+    whereFound: ["Breast epithelium and most ER-positive breast cancers", "Endometrium and endometrial cancers", "Ovary, uterus and brain"],
+    drugs: ["megestrol", "megestrol-progestins"], cancers: ["breast-hr-positive", "endometrial"], related: ["estrogen-receptor"], terms: ["ihc"],
+    links: [{ label: "UniProt P06401: PGR", url: "https://www.uniprot.org/uniprotkb/P06401/entry" }, { label: "HGNC:8910 PGR", url: "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:8910" }],
+  },
 ];
