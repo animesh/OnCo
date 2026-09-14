@@ -86,7 +86,7 @@ export default function Report2026() {
 
         <Section title="Open problems by cancer">
           <ul className="card divide-y divide-border text-sm">
-            {problems.map(({ c, p }, i) => <li key={i} className="p-3"><Link href={routeFor(c)} className="font-medium hover:underline">{c.name.replace(/ \(.*\)$/, "")}</Link><span className="text-muted"> — {p}</span></li>)}
+            {problems.map(({ c, p }, i) => <li key={i} className="p-3"><Link href={routeFor(c)} className="font-medium hover:underline">{c.name.replace(/ \(.*\)$/, "")}</Link><span className="text-muted">: {p}</span></li>)}
           </ul>
         </Section>
 
