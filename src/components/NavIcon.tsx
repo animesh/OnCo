@@ -2,6 +2,7 @@ import { KIND_META, KINDS, type Kind } from "@/lib/schema";
 const ROUTE_TO_KIND: Record<string, Kind> = Object.fromEntries(KINDS.map((k) => [KIND_META[k].route.replace(/\//g, ""), k]));
 import { KindIcon } from "./KindIcon";
 import { FrontIcon } from "./FrontIcon";
+import { hasRouteIcon, RouteIcon } from "./RouteIcon";
 import type { ReactNode } from "react";
 
 /**
@@ -113,6 +114,7 @@ const ICONS: Record<string, Icon> = {
 export function NavItemIcon({ href, label, className = "h-4 w-4" }: { href: string; label: string; className?: string }) {
   const seg = href.replace(/^\/|\/$/g, "").split("/");
   const kind = ROUTE_TO_KIND[seg[0]];
+  if (!(kind && seg.length === 1) && hasRouteIcon(href)) return <RouteIcon href={href} className={className} />;
   if (kind && seg.length === 1) return <KindIcon kind={kind} className={className} />;
   if (seg[0] === "fronts" && seg[1]) return <FrontIcon id={seg[1]} className={className} />;
   const l = (label + " " + href).toLowerCase();

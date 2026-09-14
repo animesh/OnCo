@@ -8,6 +8,7 @@ import { ThemeToggle, ThemeScript } from "@/components/ThemeToggle";
 import { SkipLink } from "@/components/SkipLink";
 import { LayerToggle, LayerScript } from "@/components/LayerToggle";
 import { LangStrip } from "@/components/LangStrip";
+import { SectionSiblings } from "@/components/SectionSiblings";
 import { RegionProvider } from "@/lib/region";
 import { RegionToggle } from "@/components/RegionToggle";
 import { GitHubStars } from "@/components/GitHubStars";
@@ -94,7 +95,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <LangStrip />
         <CommandPalette />
         <RegisterSW />
-        <main id="main" className="flex-1">{children}</main>
+        <main id="main" className="flex-1">{children}<SectionSiblings /></main>
         <footer className="garden-footer relative border-t border-border mt-28">
           {/* A low grass line grows up from the footer's top edge into the gap above it. */}
           <GardenBackdrop variant="footer" />
