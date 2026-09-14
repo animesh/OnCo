@@ -54,7 +54,8 @@ const OVERRIDE_IDS: Record<string, string> = {
 };
 
 /** Societies, funders and regulators that publish little themselves; skipped, as in fetch-openalex.ts. */
-const SKIP = new Set(["asco", "esmo", "aacr", "iarc", "cruk", "curie-nki-eortc"]);
+// Skipped: charities, societies and consortia with no research output of their own, plus CRUK centres and satellite campuses that ROR resolves to the parent organisation, whose output is not theirs.
+const SKIP = new Set(["asco", "esmo", "aacr", "iarc", "cruk", "curie-nki-eortc", "bowelbabe-fund", "cruk-cambridge-centre", "cruk-city-of-london-centre", "cruk-convergence-science-centre", "city-of-hope-orange-county"]);
 const ALLOWED_TYPES = new Set(["education", "healthcare", "facility", "government", "nonprofit", "other"]);
 
 const args = process.argv.slice(2);
