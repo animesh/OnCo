@@ -158,6 +158,13 @@ Everything below shipped through the gated chain in half-hourly ticks and was ve
 - Logos: a full fetch run resolved one record (Roswell Park favicon). Wikidata holds no logo image for any of the 30 most-linked records still missing one (Tata Memorial, Hengrui, UCSF Helen Diller, NCC Japan, NRG, Innovent, ESTRO, JCOG and others); those need owner-supplied files or a licensed source.
 - People with papers: 265 people still lack entries. OpenAlex author search is rate-limited on the free key (HTTP 429 after the daily research fetch) and Crossref author search is too noisy to trust; every author of the new key papers already had entries. This gauge needs an OPENALEX_API_KEY or hand curation.
 
+### Later on 14 Sept (continuous run at the owner's request)
+
+- Interface: colour-coded pills with glyphs on every index table (maturity, who acts, cost, company and institution type, target class, cancer group, paper type, stage); molecule gallery cards link to product pages; "See it in action" on every product with a structure (drug docking into its target from the solved complex, class schematic, numbered steps); chemistry panel on any wireframe click (formula, weight, atoms, rings, source); star badge links to the repository; schematic thumbnails no longer draw the cycling phase caption.
+- Accounts: magic-link sign-in that syncs the watchlist across devices via Supabase REST, off until the two keys are set (section above).
+- Data: OECI centres 113 to 165 of 193 and representatives 54 to 103 of 186 (names from the OECI list, titles not yet verified); phase 3 industry sponsors 338 to 376 of 936 (26 companies plus acquisition aliases); 15 classic regimens (CHOP, CVP, ICE, DA-EPOCH-R, hyper-CVAD, escalated BEACOPP, MOPP, FEC, CMF, TAC, VIP, VeIP, XELIRI, GEMOX, LV5FU2); targets ADA and PGR with cross-references; pentostatin.
+- Tests: the wave 8 schematic test now has a 180 second budget after timing out at 60 seconds under load.
+
 ## Accounts for watchlist sync (built 14 Sept, needs two keys to switch on)
 
 The site now carries an optional sign-in so readers keep their watched pages across devices. It uses Supabase's REST endpoints with plain fetch (no dependency added) and a magic link by email. Nothing shows on the live site until two public build-time variables exist in Vercel:
