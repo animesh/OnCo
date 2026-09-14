@@ -586,4 +586,15 @@ export const papersBloodImmuneCell: PaperInput[] = [
     changedPractice: false,
     links: [{ label: "Full text (DOI)", url: "https://doi.org/10.1038/nrc3239" }],
     targets: ["ctla4", "pd1", "pdl1", "lag3", "tim3"], technologies: ["checkpoint-inhibitor"], terms: ["immune-checkpoint", "irae"], people: ["drew-pardoll"], institutions: ["johns-hopkins"], related: ["paper-hodi-ipilimumab-melanoma-nejm-2010", "paper-topalian-anti-pd1-nejm-2012"] }),
+
+  p({ id: "paper-rizvi-mutational-landscape-pd1-science-2015", name: "Rizvi 2015: the mutational landscape determines who responds to PD-1 blockade in lung cancer",
+    tldr: "Lung cancers with more mutations, typically those caused by smoking, were more likely to respond to pembrolizumab, the study that established tumour mutational burden as a biomarker for immunotherapy.",
+    summary: "Rizvi, Hellmann, Snyder and colleagues at Memorial Sloan Kettering sequenced the exomes of non-small-cell lung cancers from patients treated with pembrolizumab in a discovery cohort of 16 and a validation cohort of 18. A higher number of nonsynonymous mutations was associated with a higher response rate, more durable clinical benefit and longer progression-free survival. A molecular smoking signature, a higher predicted neoantigen burden and mutations in DNA repair genes also tracked with benefit, and in one responder the team detected T cells recognising a specific neoantigen.",
+    journal: "Science", year: 2015, doi: "10.1126/science.aaa1348", authors: "Rizvi NA, Hellmann MD, Snyder A, et al.", paperType: "translational",
+    findings: ["Whole-exome sequencing of NSCLC from 16 patients (discovery) and 18 (validation) treated with pembrolizumab.", "Higher nonsynonymous mutation burden was associated with durable clinical benefit (73% vs 13% in the discovery cohort) and longer progression-free survival.", "A transversion-high smoking signature, predicted neoantigen burden and DNA repair pathway mutations were also associated with benefit.", "Neoantigen-specific T cells were detected in a responding patient."],
+    whatItMeans: "This paper turned a hypothesis into a biomarker: tumour mutational burden is now measured by commercial panels and underpins the tissue-agnostic approval of pembrolizumab for TMB-high tumours. It also explains why smokers' lung cancers, long the hardest to treat, respond better to immunotherapy than never-smokers' cancers.",
+    caveats: ["Small cohorts; the mutation burden cut-off was set within the study.", "TMB has proved a weaker and less consistent predictor in later, larger trials, and panel-based estimates differ between assays."],
+    changedPractice: true, participants: 34,
+    links: [{ label: "Full text (DOI)", url: "https://doi.org/10.1126/science.aaa1348" }],
+    cancers: ["nsclc"], drugs: ["pembrolizumab"], targets: ["pd1"], terms: ["tmb", "neoantigen"], institutions: ["mskcc"], technologies: ["checkpoint-inhibitor"], related: ["paper-pardoll-immune-checkpoint-blockade-nrc-2012"] }),
 ];

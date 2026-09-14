@@ -1432,4 +1432,15 @@ export const papersSolidTumours: PaperInput[] = [
     changedPractice: true, participants: 272,
     links: [{ label: "Full text (DOI)", url: "https://doi.org/10.1056/NEJMoa1504627" }, { label: "ClinicalTrials.gov NCT01642004", url: "https://clinicaltrials.gov/study/NCT01642004" }],
     cancers: ["nsclc"], drugs: ["nivolumab", "docetaxel"], targets: ["pd1", "pdl1"], people: ["julie-brahmer"], companies: ["bms"], terms: ["os", "orr"], related: ["paper-checkmate-057-nejm-2015"] }),
+
+  p({ id: "paper-conroy-folfirinox-pancreatic-nejm-2011", name: "Conroy 2011: FOLFIRINOX versus gemcitabine for metastatic pancreatic cancer (PRODIGE 4/ACCORD 11)",
+    tldr: "A four-drug chemotherapy combination gave fit patients with metastatic pancreatic cancer clearly longer survival than the standard gemcitabine, the first real improvement in the disease in over a decade, at the cost of more side effects.",
+    summary: "This French phase 2-3 trial randomised 342 patients with metastatic pancreatic adenocarcinoma and good performance status to FOLFIRINOX (oxaliplatin, irinotecan, leucovorin and fluorouracil) or gemcitabine. FOLFIRINOX improved overall survival, progression-free survival and response rate, and delayed the decline in quality of life despite more grade 3 and 4 toxicity, particularly neutropenia, febrile neutropenia, diarrhoea and sensory neuropathy. It made FOLFIRINOX a first-line standard for fit patients and the backbone later moved into the adjuvant setting.",
+    journal: "New England Journal of Medicine", year: 2011, doi: "10.1056/NEJMoa1011923", authors: "Conroy T, Desseigne F, Ychou M, et al.", paperType: "rct",
+    findings: ["342 patients with metastatic pancreatic cancer and ECOG performance status 0 or 1; FOLFIRINOX vs gemcitabine.", "Median overall survival 11.1 vs 6.8 months, hazard ratio 0.57.", "Median progression-free survival 6.4 vs 3.3 months, hazard ratio 0.47; response rate 31.6% vs 9.4%.", "Grade 3 or 4 neutropenia 45.7% vs 21.0%, febrile neutropenia 5.4% vs 1.2%, sensory neuropathy 9.0% vs 0%."],
+    whatItMeans: "FOLFIRINOX and, soon after, gemcitabine plus nab-paclitaxel ended the era of single-agent gemcitabine for metastatic pancreatic cancer. The regimen's modified form later improved survival after surgery in PRODIGE 24, and its toxicity is why fitness, not just stage, decides which treatment a patient is offered.",
+    caveats: ["Restricted to fit patients under 76 with good performance status; most patients with pancreatic cancer are not eligible.", "Toxicity is substantial and needs experienced supportive care.", "Open-label design."],
+    changedPractice: true, participants: 342,
+    links: [{ label: "Full text (DOI)", url: "https://doi.org/10.1056/NEJMoa1011923" }, { label: "ClinicalTrials.gov NCT00112658", url: "https://clinicaltrials.gov/study/NCT00112658" }],
+    cancers: ["pancreatic"], drugs: ["oxaliplatin", "irinotecan", "fluorouracil", "gemcitabine"], trials: ["prodige-24"], people: ["thierry-conroy"], terms: ["os", "pfs", "febrile-neutropenia"], related: [] }),
 ];
