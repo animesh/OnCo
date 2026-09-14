@@ -2,6 +2,8 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
+import { valueTone } from "@/lib/valueTone";
+import { ValueIcon } from "@/components/ValueIcon";
 import { Tip } from "@/components/Tip";
 import { MoleculeSlot } from "./MoleculeSlot";
 import { ApprovalChip } from "./ApprovalChip";
@@ -262,12 +264,13 @@ export function EntityBrowser({ rows, facets, columns, noun, defaultSort, hideSt
     const on = (sel[f.facet] ?? []).includes(f.value);
     const action = on ? t("table.filteringBy", { facet: fl, value: label }) : t("table.filterBy", { facet: fl, value: label });
     const tip = [f.tip, extraTip, action].filter(Boolean).join(" ");
-    const look = className ? `${className} ${on ? "ring-2 ring-accent/50" : ""}` : on ? "bg-accent-soft text-accent border-accent" : "bg-foreground/5 hover:bg-accent-soft hover:text-accent";
+    const tone = valueTone(f.facet, label);
+    const look = className ? `${className} ${on ? "ring-2 ring-accent/50" : ""}` : tone ? `${tone} ${on ? "ring-2 ring-accent/50" : "hover:ring-2 hover:ring-accent/30"}` : on ? "bg-accent-soft text-accent border-accent" : "bg-foreground/5 hover:bg-accent-soft hover:text-accent";
     return (
       <Tip title={label} text={tip}>
         <button type="button" onClick={() => clickFacet(f)} aria-label={t("table.filterBy", { facet: fl, value: label })} aria-pressed={on}
-          className={`chip cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/40 ${look}`}>
-          {label}
+          className={`chip cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/40 inline-flex items-center gap-1 ${look}`}>
+          <ValueIcon facet={f.facet} value={label} />{label}
         </button>
       </Tip>
     );
@@ -313,7 +316,7 @@ export function EntityBrowser({ rows, facets, columns, noun, defaultSort, hideSt
             : <span key={`f:${l.facet}:${l.value}`}>{i > 0 && !allChips && ", "}{facetChip(l, c.valueTips?.[itemLabel(l)])}</span>)}</span>;
         }
         const vt = c.valueTips?.[String(v)];
-        const cell = c.chip ? <span className="chip bg-foreground/5">{v}</span> : <span className={`text-muted ${c.numeric ? "tabular-nums" : ""}`}>{v}</span>;
+        const cell = c.chip ? <span className={`chip inline-flex items-center gap-1 ${valueTone(c.key, String(v)) ?? "bg-foreground/5"}`}><ValueIcon facet={c.key} value={String(v)} />{v}</span> : <span className={`text-muted ${c.numeric ? "tabular-nums" : ""}`}>{v}</span>;
         return vt ? <Tip title={String(v)} text={vt}><span className="cursor-help">{cell}</span></Tip> : cell;
       },
     })),
