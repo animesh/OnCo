@@ -139,5 +139,6 @@ export const navDe: NavDict = {
   "/completeness/": ["Vollständigkeit", "Wie viel von dem, was es gibt, in OnCo steht: jede Art gegen eine belegte Weltzahl, mit den fehlenden Einträgen beim Namen genannt."],
   "/open-tools/": ["Offene Werkzeuge", "Open-Source-Viewer, Planungssoftware, Pipelines und Hardware zum Nutzen oder Weiterbauen, nach Front, aus dem Open Medical Registry."],
   "/startups/": ["Start-ups", "Y-Combinator- und wagniskapitalfinanzierte Unternehmen gegen Krebs, nach Phase, Modalität, Krebsart, Jahrgang, Investor und Land."],
+  "/startup-requests/": ["Gesuchte Start-ups", "Probleme, an denen kein Unternehmen arbeitet: Ideen, die jemand bauen muss, behandelbare Zielstrukturen ohne Produkt, Engpässe ohne Markteintritt."],
   "/investors/": ["Investoren", "Die Wagniskapitalfonds, Corporate-Venture-Einheiten und Patientenstiftungen, die Onkologie-Unternehmen finanzieren, jeweils mit ihrem Portfolio."],
 };

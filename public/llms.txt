@@ -153,6 +153,7 @@
 - [Heroes and heroines](https://onco.cc/heroes/): The patients, families, advocates and pioneers whose lives and cases changed cancer.
 - [Companies](https://onco.cc/companies/): Pharma, biotech, diagnostics, devices, AI.
 - [Startups](https://onco.cc/startups/): Y Combinator and venture-backed companies attacking cancer, by stage, modality, cancer, batch, investor and country.
+- [Requests for startups](https://onco.cc/startup-requests/): Problems with no company on them: ideas that need a builder, druggable targets with no product, bottlenecks with no market entrant.
 - [Investors](https://onco.cc/investors/): The venture funds, corporate venture arms and disease foundations that back oncology companies, each with its portfolio.
 - [Company scorecards](https://onco.cc/scorecards/): Every company ranked by one disclosed formula, with financial snapshots from annual reports.
 - [Trial sponsors](https://onco.cc/sponsors/): Who runs the most phase 2 and 3 trials, by cancer, from the registry and the corpus.

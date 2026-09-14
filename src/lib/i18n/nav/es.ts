@@ -139,5 +139,6 @@ export const navEs: NavDict = {
   "/completeness/": ["Completitud", "Cuánto de lo que existe está en OnCo: cada tipo frente a un recuento del mundo con fuente, con los elementos que faltan nombrados."],
   "/open-tools/": ["Herramientas abiertas", "Visores, planificadores, flujos y hardware de código abierto que puedes usar o sobre los que construir, por frente, del Open Medical Registry."],
   "/startups/": ["Startups", "Empresas de Y Combinator y respaldadas por capital riesgo que atacan el cáncer, por fase, modalidad, cáncer, promoción, inversor y país."],
+  "/startup-requests/": ["Peticiones de startups", "Problemas sin ninguna empresa detrás: ideas que necesitan quien las construya, dianas farmacológicas sin producto y cuellos de botella sin entrante en el mercado."],
   "/investors/": ["Inversores", "Los fondos de capital riesgo, brazos corporativos y fundaciones de pacientes que respaldan empresas oncológicas, cada uno con su cartera."],
 };

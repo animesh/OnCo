@@ -81,6 +81,7 @@ const P: Record<string, string> = {
   "/leadership/": "M12 3v6M8 9h8v4H8zM5 13h14v3H5zM4 21h16v-2H4z",
   "/heroes/": "M12 3l2.7 5.5 6 .9-4.3 4.2 1 6L12 16.8 6.6 19.6l1-6L3.3 9.4l6-.9L12 3Z",
   "/startups/": "M12 3c3 2 5 6 5 10l-2 2h-6l-2-2c0-4 2-8 5-10Zm0 8a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM9 15l-3 4h4m5-4 3 4h-4M11 19h2v2h-2z",
+  "/startup-requests/": "M12 3c3 2 5 6 5 10l-2 2h-6l-2-2c0-4 2-8 5-10Zm0 8a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM9 15l-3 4h4m5-4 3 4h-4M19 3v4m-2-2h4",
   "/investors/": "M8 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm8-3a4 4 0 1 0 0 8 4 4 0 0 0 0-8ZM4 20h16",
   "/scorecards/": "M8 3h8v6a4 4 0 0 1-8 0V3ZM5 5h3v3a3 3 0 0 1-3-3Zm14 0h-3v3a3 3 0 0 0 3-3ZM12 13v4m-4 4h8",
   "/sponsors/": "M12 3l8 3v5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-3Zm-3 9 2 2 4-4",
