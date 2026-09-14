@@ -408,7 +408,15 @@ export const EN = {
   "l.Stage": "Stage",
   "l.Tag": "Tag",
   "l.Who acts": "Who acts",
-} as const;
+  "account.signIn": "Sign in",
+  "account.signOut": "Sign out",
+  "account.title": "Sign in to keep your watchlist",
+  "account.why": "Your watched pages live in this browser. Sign in with an email link and OnCo keeps the same list on every device you use. Only your email address and your watchlist are stored.",
+  "account.email": "Email address",
+  "account.send": "Send me a sign-in link",
+  "account.sent": "Check your email for the sign-in link. It works on any device.",
+  "account.synced": "Watchlist synced",
+  "account.error": "The link could not be sent. Try again in a minute.",} as const;
 
 export type UiKey = keyof typeof EN;
 export type UiDict = Record<UiKey, string>;

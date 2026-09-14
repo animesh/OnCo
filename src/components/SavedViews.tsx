@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { describeQuery, loadViews, removeView, renameView, saveView, useSavedViews } from "@/lib/saved-views";
 import { changedSince, fetchEntityDates, loadWatchlist, markSeen, unwatch, useWatchlist, watch, type WatchItem } from "@/lib/watchlist";
+import { AccountMenu } from "./AccountMenu";
 import { download } from "@/lib/csv";
 import { KIND_META, type Kind } from "@/lib/schema";
 import { KIND_COLOR } from "@/lib/text";
@@ -72,6 +73,7 @@ export function SavedViews() {
 
   return (
     <div className="space-y-12">
+      <AccountMenu inline className="mb-6" />
       <section aria-labelledby="h-watch">
         <div className="flex flex-wrap items-baseline justify-between gap-3 mb-3">
           <h2 id="h-watch" className="text-lg font-semibold tracking-tight">Watchlist {ready && watching.length > 0 && <span className="text-sm text-muted font-normal tabular-nums">{watching.length}</span>}</h2>

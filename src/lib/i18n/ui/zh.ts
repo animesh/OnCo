@@ -371,4 +371,12 @@ export const zh: UiDict = {
   "l.Stage": "分期",
   "l.Tag": "标签",
   "l.Who acts": "行动方",
-};
+  "account.signIn": "登录",
+  "account.signOut": "退出登录",
+  "account.title": "登录以保存你的关注列表",
+  "account.why": "你关注的页面保存在此浏览器中。通过邮件链接登录后，OnCo 会在你的所有设备上保持同一份列表。仅存储你的邮箱地址和关注列表。",
+  "account.email": "邮箱地址",
+  "account.send": "发送登录链接",
+  "account.sent": "请查收邮件中的登录链接，它可在任何设备上使用。",
+  "account.synced": "关注列表已同步",
+  "account.error": "链接发送失败，请一分钟后重试。",};

@@ -371,4 +371,12 @@ export const ja: UiDict = {
   "l.Stage": "病期",
   "l.Tag": "タグ",
   "l.Who acts": "行動する主体",
-};
+  "account.signIn": "ログイン",
+  "account.signOut": "ログアウト",
+  "account.title": "ログインしてウォッチリストを保存",
+  "account.why": "ウォッチ中のページはこのブラウザに保存されています。メールのリンクでログインすると、OnCo はすべての端末で同じリストを保持します。保存されるのはメールアドレスとリストだけです。",
+  "account.email": "メールアドレス",
+  "account.send": "ログインリンクを送る",
+  "account.sent": "メールのログインリンクを確認してください。どの端末でも使えます。",
+  "account.synced": "ウォッチリストを同期しました",
+  "account.error": "リンクを送信できませんでした。1分後にもう一度お試しください。",};

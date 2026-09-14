@@ -371,4 +371,12 @@ export const de: UiDict = {
   "l.Stage": "Stadium",
   "l.Tag": "Schlagwort",
   "l.Who acts": "Wer handelt",
-};
+  "account.signIn": "Anmelden",
+  "account.signOut": "Abmelden",
+  "account.title": "Anmelden, um die Beobachtungsliste zu behalten",
+  "account.why": "Beobachtete Seiten liegen in diesem Browser. Melden Sie sich per E-Mail-Link an, und OnCo hält dieselbe Liste auf allen Ihren Geräten. Gespeichert werden nur Ihre E-Mail-Adresse und die Liste.",
+  "account.email": "E-Mail-Adresse",
+  "account.send": "Anmeldelink schicken",
+  "account.sent": "Prüfen Sie Ihre E-Mail: der Anmeldelink funktioniert auf jedem Gerät.",
+  "account.synced": "Liste synchronisiert",
+  "account.error": "Der Link konnte nicht gesendet werden. Versuchen Sie es in einer Minute erneut.",};

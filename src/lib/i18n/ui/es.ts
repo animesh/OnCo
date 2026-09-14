@@ -371,4 +371,12 @@ export const es: UiDict = {
   "l.Stage": "Estadio",
   "l.Tag": "Etiqueta",
   "l.Who acts": "Quién actúa",
-};
+  "account.signIn": "Iniciar sesión",
+  "account.signOut": "Cerrar sesión",
+  "account.title": "Inicia sesión para conservar tu lista de seguimiento",
+  "account.why": "Las páginas que sigues se guardan en este navegador. Inicia sesión con un enlace por correo y OnCo mantiene la misma lista en todos tus dispositivos. Solo se guardan tu correo y tu lista.",
+  "account.email": "Correo electrónico",
+  "account.send": "Enviarme un enlace de acceso",
+  "account.sent": "Revisa tu correo: el enlace de acceso funciona en cualquier dispositivo.",
+  "account.synced": "Lista sincronizada",
+  "account.error": "No se pudo enviar el enlace. Inténtalo de nuevo en un minuto.",};

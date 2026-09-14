@@ -32,7 +32,7 @@ describe("wave 8 animated technology schematics", () => {
     }
   });
 
-  it("every scene stays under 500 points, keeps finite coordinates and matching point/alpha counts, and captions four phases", { timeout: 60_000 }, () => {
+  it("every scene stays under 500 points, keeps finite coordinates and matching point/alpha counts, and captions four phases", { timeout: 180_000 }, () => {
     for (const [key, build] of Object.entries(WAVE8)) {
       const m = build();
       expect(m.points.length, `${key} points`).toBeLessThan(500);

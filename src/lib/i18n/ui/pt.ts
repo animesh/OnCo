@@ -371,4 +371,12 @@ export const pt: UiDict = {
   "l.Stage": "Estádio",
   "l.Tag": "Etiqueta",
   "l.Who acts": "Quem age",
-};
+  "account.signIn": "Iniciar sessão",
+  "account.signOut": "Terminar sessão",
+  "account.title": "Inicie sessão para guardar a sua lista de acompanhamento",
+  "account.why": "As páginas que acompanha ficam neste navegador. Inicie sessão com uma ligação por email e o OnCo mantém a mesma lista em todos os seus dispositivos. Só guardamos o seu email e a sua lista.",
+  "account.email": "Endereço de email",
+  "account.send": "Enviar-me uma ligação de acesso",
+  "account.sent": "Verifique o seu email: a ligação de acesso funciona em qualquer dispositivo.",
+  "account.synced": "Lista sincronizada",
+  "account.error": "Não foi possível enviar a ligação. Tente novamente daqui a um minuto.",};

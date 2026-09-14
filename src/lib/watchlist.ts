@@ -44,6 +44,9 @@ function persist(list: WatchItem[]) {
 
 export const isWatched = (id: string) => loadWatchlist().some((w) => w.id === id);
 
+/** Replace the whole list (used when merging an account's list into this browser). */
+export function replaceWatchlist(list: WatchItem[]) { persist(list.filter((w) => w && typeof w.id === "string")); }
+
 export function watch(item: Omit<WatchItem, "addedOn" | "seen"> & { asOf?: string; edited?: string }) {
   const today = new Date().toISOString().slice(0, 10);
   const list = loadWatchlist().filter((w) => w.id !== item.id);

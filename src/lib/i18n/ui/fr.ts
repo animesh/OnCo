@@ -371,4 +371,12 @@ export const fr: UiDict = {
   "l.Stage": "Stade",
   "l.Tag": "Étiquette",
   "l.Who acts": "Qui agit",
-};
+  "account.signIn": "Se connecter",
+  "account.signOut": "Se déconnecter",
+  "account.title": "Connectez-vous pour conserver votre liste de suivi",
+  "account.why": "Les pages que vous suivez restent dans ce navigateur. Connectez-vous par un lien envoyé par courriel et OnCo garde la même liste sur tous vos appareils. Seuls votre adresse et votre liste sont enregistrés.",
+  "account.email": "Adresse courriel",
+  "account.send": "M'envoyer un lien de connexion",
+  "account.sent": "Consultez votre courriel : le lien de connexion fonctionne sur tout appareil.",
+  "account.synced": "Liste synchronisée",
+  "account.error": "Le lien n'a pas pu être envoyé. Réessayez dans une minute.",};

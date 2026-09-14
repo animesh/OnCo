@@ -158,6 +158,16 @@ Everything below shipped through the gated chain in half-hourly ticks and was ve
 - Logos: a full fetch run resolved one record (Roswell Park favicon). Wikidata holds no logo image for any of the 30 most-linked records still missing one (Tata Memorial, Hengrui, UCSF Helen Diller, NCC Japan, NRG, Innovent, ESTRO, JCOG and others); those need owner-supplied files or a licensed source.
 - People with papers: 265 people still lack entries. OpenAlex author search is rate-limited on the free key (HTTP 429 after the daily research fetch) and Crossref author search is too noisy to trust; every author of the new key papers already had entries. This gauge needs an OPENALEX_API_KEY or hand curation.
 
+## Accounts for watchlist sync (built 14 Sept, needs two keys to switch on)
+
+The site now carries an optional sign-in so readers keep their watched pages across devices. It uses Supabase's REST endpoints with plain fetch (no dependency added) and a magic link by email. Nothing shows on the live site until two public build-time variables exist in Vercel:
+
+1. Create a free Supabase project. In Authentication, turn on the Email provider (magic link), set Site URL to https://onco.cc and add https://onco.cc/** to Redirect URLs.
+2. In the SQL editor run:
+   `create table public.watchlists (user_id uuid primary key references auth.users(id) on delete cascade, items jsonb not null default '[]'::jsonb, updated_at timestamptz not null default now()); alter table public.watchlists enable row level security; create policy "own row" on public.watchlists for all to authenticated using (auth.uid() = user_id) with check (auth.uid() = user_id);`
+3. In Vercel project settings add NEXT_PUBLIC_SUPABASE_URL (the project URL) and NEXT_PUBLIC_SUPABASE_ANON_KEY (the anon public key), then redeploy. The anon key is meant to be public; the row policy is what protects data.
+4. What is stored: the email address (by Supabase Auth) and the watchlist JSON. Add a line to the privacy notice on /about/ when switching it on.
+
 ## Review and polish phase (started 10 Sept, late)
 - [x] UK coverage: all 56 "NICE position not yet researched" rows resolved from NICE guidance pages and the MHRA register on 10 Sept (29 funded, 2 Cancer Drugs Fund, 5 in appraisal with dates, 13 refused or terminated, 6 not UK-licensed, 1 never appraised); five earlier notes corrected. Not checked: the Scottish Medicines Consortium (client-rendered site); relacorilant and cetuximab sarotalocan confirmed on no UK or EU register.
 - [x] Launch review agent: 13,976 pages crawled; 5 broken link targets fixed (new /coverage/ index); dashes, "as of" and "spike" removed from component copy; /hub/ canonical to /roadmap/; newsletter descriptions; 2 heading jumps; 9 tables wrapped for mobile. Merged 10 Sept.
