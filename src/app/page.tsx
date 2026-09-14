@@ -25,7 +25,7 @@ const AUDIENCES: Array<{ id: string; title: string; lede: string; links: Array<{
   {
     id: "patient", title: "Patient or family", lede: "Start from your diagnosis. Plain English first, the technical layer one click away.",
     links: [
-      { href: "/for-me/", label: "Pick my cancer type", blurb: "What works today and what could work next" },
+      { href: "/for-me/", label: "Research my cancer type", blurb: "What works today and what could work next" },
       { href: "/body/", label: "Body map", blurb: "Find the cancer by where it is" },
       { href: "/cancers/", label: "Cancers", blurb: "Standard of care, history, pipeline" },
       { href: "/trials/", label: "Trials", blurb: "Landmark and current, with results in plain terms" },
@@ -99,7 +99,7 @@ export default function Home() {
             </p>
             <div className="mt-8 max-w-2xl"><SearchBox large autoFocus={false} /></div>
             <div className="mt-5 flex flex-wrap gap-2">
-              <Link href="/for-me/" className="btn btn-primary">Pick my cancer type <span aria-hidden>→</span></Link>
+              <Link href="/for-me/" className="btn btn-primary">Research my cancer type <span aria-hidden>→</span></Link>
               <Link href={routeFor(tnbc)} className="btn">Example: triple-negative breast cancer</Link>
               <Link href="/roadmaps/trop2-adc-roadmap/" className="btn">TROP2 ADC roadmap</Link>
             </div>

@@ -11,7 +11,7 @@ export const navEs: NavDict = {
   "/explore/": ["Explorar", "Elige un cáncer, cambia de tipo de objeto y obtén una lista ordenada y clasificable."],
   "/search/": ["Buscar", "Búsqueda por palabras y por conceptos, lado a lado; cada resultado explica por qué coincidió."],
   "/path/": ["Buscador de rutas", "Cómo se relacionan dos objetos cualesquiera: las rutas más cortas con cada relación nombrada."],
-  "/for-me/": ["Para mí", "Elige tu(s) tipo(s) de cáncer y mira qué funciona y qué podría funcionar."],
+  "/for-me/": ["Para mí", "Investiga tu(s) tipo(s) de cáncer y mira qué funciona y qué podría funcionar."],
   "/navigator/": ["Navegador", "Tratamiento estándar para tu estadio, lo que has probado, precauciones, siguientes opciones y ensayos cerca de ti."],
   "/biomarker-matrix/": ["Matriz de biomarcadores", "Cada biomarcador frente a cada cáncer: productos aprobados en tu región frente a ensayos, en una sola cuadrícula."],
   "/calculators/": ["Calculadoras", "Superficie corporal, Calvert, aclaramiento de creatinina, RAN, calcio corregido, RECIST 1.1, dosis de antraciclinas, dosis por bandas."],

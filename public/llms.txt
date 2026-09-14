@@ -166,7 +166,7 @@
 
 ## Living with cancer
 
-- [For me](https://onco.cc/for-me/): Pick your cancer type and see what works and what could work.
+- [For me](https://onco.cc/for-me/): Research your cancer type and see what works and what could work.
 - [Appointment prep pack](https://onco.cc/prep/): Tick the questions to ask for your cancer, add your own, and print or download one page for the appointment.
 - [Side effects](https://onco.cc/side-effects/): Start from the symptom: which treatments cause it, how often, and when to call.
 - [Symptom to test](https://onco.cc/symptoms/): Start from a worrying symptom: what it can mean, which test comes first, and the referral thresholds guidelines state.

@@ -11,7 +11,7 @@ export const navPt: NavDict = {
   "/explore/": ["Explorar", "Escolha um cancro, mude o tipo de objeto e obtenha uma lista ordenada e classificável."],
   "/search/": ["Pesquisar", "Pesquisa por palavras e por conceitos lado a lado; cada resultado explica porque correspondeu."],
   "/path/": ["Localizador de caminhos", "Como dois objetos quaisquer se relacionam: os caminhos mais curtos com cada relação nomeada."],
-  "/for-me/": ["Para mim", "Escolha o(s) seu(s) tipo(s) de cancro e veja o que funciona e o que poderá funcionar."],
+  "/for-me/": ["Para mim", "Pesquise o(s) seu(s) tipo(s) de cancro e veja o que funciona e o que poderá funcionar."],
   "/navigator/": ["Navegador", "Tratamento padrão para o seu estádio, o que já tentou, precauções, próximas opções e ensaios perto de si."],
   "/biomarker-matrix/": ["Matriz de biomarcadores", "Cada biomarcador contra cada cancro: produtos aprovados na sua região versus ensaios, numa só grelha."],
   "/calculators/": ["Calculadoras", "Superfície corporal, Calvert, clearance de creatinina, CAN, cálcio corrigido, RECIST 1.1, dose de antraciclinas, doses por bandas."],

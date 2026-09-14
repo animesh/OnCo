@@ -11,7 +11,7 @@ export const navDe: NavDict = {
   "/explore/": ["Erkunden", "Krebsart wählen, Objekttyp wechseln, eine gereihte und sortierbare Liste erhalten."],
   "/search/": ["Suche", "Wort- und Konzeptsuche nebeneinander; jedes Ergebnis erklärt, warum es passt."],
   "/path/": ["Pfadfinder", "Wie zwei beliebige Objekte zusammenhängen: kürzeste Wege mit jeder benannten Beziehung."],
-  "/for-me/": ["Für mich", "Wählen Sie Ihre Krebsart(en) und sehen Sie, was wirkt und was wirken könnte."],
+  "/for-me/": ["Für mich", "Informieren Sie sich über Ihre Krebsart(en) und sehen Sie, was wirkt und was wirken könnte."],
   "/navigator/": ["Navigator", "Therapiestandard für Ihr Stadium, was Sie versucht haben, Vorsicht, nächste Optionen, Studien in Ihrer Nähe."],
   "/biomarker-matrix/": ["Biomarker-Matrix", "Jeder Biomarker gegen jede Krebsart: zugelassene Produkte in Ihrer Region gegenüber Studien, in einem Raster."],
   "/calculators/": ["Rechner", "Körperoberfläche, Calvert, Kreatinin-Clearance, ANC, korrigiertes Kalzium, RECIST 1.1, Anthrazyklin-Dosis, Dosisbänder."],
