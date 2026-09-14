@@ -1505,4 +1505,15 @@ export const papersSolidTumours: PaperInput[] = [
     changedPractice: true, participants: 126,
     links: [{ label: "Full text (DOI)", url: "https://doi.org/10.1200/JCO.1997.15.6.2403" }],
     cancers: ["pancreatic"], drugs: ["gemcitabine", "fluorouracil"], terms: ["os", "quality-of-life"], related: ["paper-conroy-folfirinox-pancreatic-nejm-2011", "paper-mpact-nab-paclitaxel-gemcitabine-nejm-2013"] }),
+
+  p({ id: "paper-toga-trastuzumab-gastric-lancet-2010", name: "ToGA (Bang 2010): trastuzumab with chemotherapy for HER2-positive advanced gastric cancer",
+    tldr: "The trial that brought HER2 testing and trastuzumab to stomach cancer: adding the antibody to chemotherapy prolonged survival in patients whose gastric or junction cancers overexpressed HER2, about a fifth of those screened.",
+    summary: "ToGA screened 3,665 patients with advanced gastric or gastro-oesophageal junction cancer and found HER2 positivity in 22.1%. It randomised 594 HER2-positive patients to trastuzumab plus cisplatin and a fluoropyrimidine or to chemotherapy alone. Trastuzumab improved overall survival, progression-free survival and response rate, with the largest benefit in tumours with high HER2 expression (immunohistochemistry 3+ or 2+ with amplification), which became the definition of HER2 positivity used for gastric cancer.",
+    journal: "The Lancet", year: 2010, doi: "10.1016/S0140-6736(10)61121-X", authors: "Bang YJ, Van Cutsem E, Feyereislova A, et al.", paperType: "rct",
+    findings: ["HER2 positivity in 22.1% of 3,665 screened patients; 594 randomised to trastuzumab plus chemotherapy or chemotherapy alone.", "Median overall survival 13.8 vs 11.1 months, hazard ratio 0.74.", "In tumours with IHC 3+ or IHC 2+ and FISH-positive HER2: median overall survival 16.0 vs 11.8 months.", "Response rate 47% vs 35%; no increase in cardiac events of note."],
+    whatItMeans: "ToGA made gastric cancer the second disease treated by HER2 status and introduced gastric-specific HER2 scoring. It is the base on which trastuzumab deruxtecan and pembrolizumab combinations in HER2-positive gastric cancer have built.",
+    caveats: ["Open-label design.", "Benefit was concentrated in high HER2 expressers; IHC 2+ FISH-negative and IHC 0 or 1+ FISH-positive tumours gained little.", "Chemotherapy backbone was cisplatin with capecitabine or fluorouracil."],
+    changedPractice: true, participants: 594,
+    links: [{ label: "Full text (DOI)", url: "https://doi.org/10.1016/S0140-6736(10)61121-X" }, { label: "ClinicalTrials.gov NCT01041404", url: "https://clinicaltrials.gov/study/NCT01041404" }],
+    cancers: ["gastric"], drugs: ["trastuzumab", "cisplatin", "capecitabine", "fluorouracil"], targets: ["her2"], trials: ["toga"], people: ["bang-yung-jue"], companies: ["roche-genentech"], terms: ["her2-positive", "ihc", "os"], related: ["paper-slamon-trastuzumab-nejm-2001"] }),
 ];
