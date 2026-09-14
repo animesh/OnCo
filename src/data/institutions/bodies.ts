@@ -235,7 +235,7 @@ export const institutionsBodies: InstitutionInput[] = [
     summary: "Founded in 1963, the Irish Cancer Society is Ireland's largest voluntary funder of cancer research, supporting fellowships, research scholarships and collaborative centres, and contributing to Cancer Trials Ireland, the national academic trials organisation. Its services include the Support Line, Daffodil Centres in public hospitals, free night nursing for people dying at home, and travel and financial support. Daffodil Day is its national fundraising day. The Society advocates on the National Cancer Strategy, tobacco control, alcohol labelling and access to new medicines.",
     programs: ["Research fellowships and scholarships", "Support for Cancer Trials Ireland", "Daffodil Centres and night nursing", "Daffodil Day"],
     links: [{ label: "Irish Cancer Society", url: "https://www.cancer.ie" }],
-    sections: ["supportive-care", "prevention"], bottlenecks: ["b-palliative", "b-trial-enrolment"], institutions: ["cruk", "macmillan-cancer-support"], people: ["nikki-gallagher"] }),
+    sections: ["supportive-care", "prevention"], bottlenecks: ["b-palliative", "b-trial-enrolment"], institutions: ["cruk", "macmillan-cancer-support"], people: ["nikki-gallagher", "emma-browne"] }),
 
   b({ id: "worldwide-cancer-research", name: "Worldwide Cancer Research", aka: ["Association for International Cancer Research", "AICR"], institutionType: "consortium", city: "Edinburgh", country: "GB", lat: 55.953, lng: -3.188, website: "https://www.worldwidecancerresearch.org",
     tldr: "A Scottish charity that funds early-stage discovery research on cancer anywhere in the world, rather than only in the UK.",
