@@ -105,6 +105,8 @@ async function getBytes(url: string): Promise<{ buf: Buffer; type: string } | nu
   } catch { return null; }
 }
 
+// Acquired companies whose recorded website now redirects to the acquirer; a match there would show the acquirer's logo.
+const NO_LOGO_IDS = new Set(["emergence-therapeutics", "mablink-bioscience", "point-biopharma"]);
 const NOT_OWN_HOST = /(^|\.)(archive\.org|sec\.gov|ycombinator\.com|biorxiv\.org|medrxiv\.org|linkedin\.com|crunchbase\.com|clinicaltrials\.gov|wikipedia\.org|github\.com)$/;
 const domainOf = (u?: string) => { try { if (!u) return ""; const h = new URL(u).hostname.replace(/^www\./, "").toLowerCase(); return NOT_OWN_HOST.test(h) ? "" : h; } catch { return ""; } };
 const sameDomain = (a: string, b: string) => !!a && !!b && (a === b || a.endsWith("." + b) || b.endsWith("." + a));
@@ -209,6 +211,7 @@ async function main() {
   const counts = { wikidata: 0, clearbit: 0, favicon: 0, none: 0, kept: 0 };
   for (const t of targets) {
     if (only && t.id !== only) continue;
+    if (NO_LOGO_IDS.has(t.id)) { counts.none++; continue; }
     if (!force && index[t.id] && existsSync(join(OUT, index[t.id].file))) { counts.kept++; continue; }
     let entry: Entry | null = null;
     try { entry = await wikidataLogo(t.id, t.name, t.website ?? ""); } catch (e) { console.warn(`wikidata failed for ${t.id}: ${String(e).slice(0, 80)}`); }
