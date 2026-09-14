@@ -34,12 +34,14 @@ import { SuggestEdit } from "./SuggestEdit";
 import { sourceLocation } from "@/lib/source-location";
 import { ProvenanceLine } from "./ProvenanceLine";
 import { ConfidenceChip, ConfidenceLegend } from "./ConfidenceChip";
-import { ProcessSchematic } from "./ProcessSchematic";
+import { ProcessSchematic, processSchematicKey } from "./ProcessSchematic";
 import { DosingCard } from "./DosingCard";
 import { ToxicityTable } from "./ToxicityTable";
 import { AccessTable } from "./AccessTable";
 import { RegulatoryTimeline } from "./RegulatoryTimeline";
 import { MechanismCard } from "./MechanismCard";
+import { SeeItInAction } from "./SeeItInAction";
+import { modalityGroup } from "@/lib/modality-group";
 import { TldrText } from "./TldrText";
 import { FrontSchematic } from "./FrontSchematic";
 import { TermSchematic } from "./TermSchematic";
@@ -277,8 +279,7 @@ function kindTabs(e: Entity): Tab[] {
       return [
         overview(<>
           {STRUCTURES[e.id] ? <div className="mt-8"><MoleculeViewer entries={STRUCTURES[e.id]} /></div> : <DrugSchematic technologies={e.technologies} modality={e.modality} />}
-          <div className="mt-6"><ProcessSchematic entity={e} /></div>
-          {e.mechanismSteps.length > 0 && <div className="mt-6"><MechanismCard steps={e.mechanismSteps} /></div>}
+          <div className="mt-6"><SeeItInAction drug={e.name} group={modalityGroup(e.modality)} mechanism={e.mechanism} steps={e.mechanismSteps} complex={STRUCTURES[e.id]?.find((s) => s.source === "pdb" && /bound to/i.test(s.label))} molecule={STRUCTURES[e.id]?.find((s) => s.source === "pubchem")} targets={e.targets.map((id) => graph().get(id)).filter((t): t is NonNullable<typeof t> => !!t).map((t) => ({ id: t.id, name: t.name, route: routeFor(t) }))} schematic={processSchematicKey(e) ? <ProcessSchematic entity={e} bare height="h-64 sm:h-72" /> : undefined} /></div>
           {/resist|escape|progress/i.test(e.summary) && <div className="mt-6"><WhatIsBeingDone topic="resistance" compact /></div>}
           <div className="grid gap-6 sm:grid-cols-2 mt-8">
             <Field label="Modality">{e.modality}</Field>

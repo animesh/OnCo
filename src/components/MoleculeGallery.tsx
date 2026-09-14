@@ -67,14 +67,20 @@ export function MoleculeGallery({ drugs, missing }: { drugs: GalleryDrug[]; miss
         <ul className="grid gap-3 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
           {shown.map((d) => (
             <li key={d.id}>
-              <button type="button" onClick={() => setOpen(d)} className="card w-full text-left overflow-hidden hover:shadow-md transition group" aria-label={`Open ${d.name} in the viewer`}>
-                <div className="bg-gradient-to-b from-foreground/[0.03] to-transparent"><MoleculeThumb drugId={d.id} className="h-28" /></div>
-                <div className="p-2.5">
-                  <div className="font-medium text-sm leading-snug truncate" title={d.name}>{d.name}</div>
-                  <div className="text-[11px] text-muted truncate" title={d.modality}>{d.modality}</div>
-                  <div className="text-[11px] text-muted truncate mt-0.5">{d.entries[0].label}</div>
+              <div className="card overflow-hidden hover:shadow-md transition group">
+                <Link href={d.route} className="block" aria-label={`${d.name}: open the product page`}>
+                  <div className="bg-gradient-to-b from-foreground/[0.03] to-transparent"><MoleculeThumb drugId={d.id} className="h-28" /></div>
+                  <div className="p-2.5 pb-1">
+                    <div className="font-medium text-sm leading-snug truncate group-hover:underline" title={d.name}>{d.name}</div>
+                    <div className="text-[11px] text-muted truncate" title={d.modality}>{d.modality}</div>
+                    <div className="text-[11px] text-muted truncate mt-0.5">{d.entries[0].label}</div>
+                  </div>
+                </Link>
+                <div className="px-2.5 pb-2 flex items-center justify-between gap-2 text-[11px]">
+                  <Link href={d.route} className="text-muted hover:text-accent underline-offset-2 hover:underline">Product page</Link>
+                  <button type="button" onClick={() => setOpen(d)} className="chip border border-border bg-card hover:bg-foreground/5" aria-label={`Open ${d.name} in the 3D viewer`}>3D viewer</button>
                 </div>
-              </button>
+              </div>
             </li>
           ))}
         </ul>

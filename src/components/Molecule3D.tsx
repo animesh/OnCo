@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { Wireframe3D } from "./Wireframe3D";
 import { chainColour, elementColour, elementName, type Mol } from "@/lib/molecule-render";
 import { buildScene, createRenderer, LIGAND_CARBON, toMesh, type Scene, type SpriteCanvas } from "@/lib/molecule-draw";
+import { moleculeStats, proteinStats } from "@/lib/molecule-stats";
 
 export type StructureEntry = { label: string; file: string; note?: string; dim: 2 | 3; source: string; ref: string };
 type Style = "solid" | "wire";
@@ -22,6 +23,7 @@ export function Molecule3D({ entry, compact = false, height = "h-64 sm:h-80", cl
   const [style, setStyle] = useState<Style>("solid");
   const [showH, setShowH] = useState(false);
   const [playing, setPlaying] = useState(true);
+  const [chem, setChem] = useState(false);
   const isProtein = entry.source === "pdb";
   const mol = loaded?.file === entry.file ? loaded.mol : null;
   const err = loaded?.file === entry.file ? loaded.err : false;
@@ -38,7 +40,7 @@ export function Molecule3D({ entry, compact = false, height = "h-64 sm:h-80", cl
 
   const canvasEl = style === "wire" && mesh
     ? <Wireframe3D mesh={mesh} height={compact ? className : height} compact={compact} speed={0.3} />
-    : <SolidCanvas scene={scene} compact={compact} className={compact ? `block w-full ${className}` : `block w-full ${height}`} showH={showH} playing={playing} label={entry.label} />;
+    : <SolidCanvas scene={scene} compact={compact} className={compact ? `block w-full ${className}` : `block w-full ${height}`} showH={showH} playing={playing} label={entry.label} onTap={() => setChem((c) => !c)} />;
 
   if (compact) return canvasEl;
 
@@ -61,14 +63,46 @@ export function Molecule3D({ entry, compact = false, height = "h-64 sm:h-80", cl
         </span>
         {!isProtein && scene?.hasH && <button type="button" onClick={() => setShowH((h) => !h)} aria-pressed={showH} className={`chip border ${showH ? "bg-foreground text-background border-foreground" : "bg-card border-border hover:bg-foreground/5"}`}>Hydrogens</button>}
         {style === "solid" && <button type="button" onClick={() => setPlaying((p) => !p)} aria-pressed={!playing} className="chip border border-border bg-card hover:bg-foreground/5">{playing ? "Pause" : "Play"}</button>}
-        {style === "solid" && <span className="text-muted hidden sm:inline">Drag to rotate</span>}
+        {mol && <button type="button" onClick={() => setChem((c) => !c)} aria-pressed={chem} aria-controls="chemistry-panel" className={`chip border ${chem ? "bg-foreground text-background border-foreground" : "bg-card border-border hover:bg-foreground/5"}`}>Chemistry</button>}
+        {style === "solid" && <span className="text-muted hidden sm:inline">Drag to rotate, click for the chemistry</span>}
         {scene && <Legend scene={scene} showH={showH} />}
       </div>
       <p className="px-3 pb-2 text-xs text-muted">
         {what} {from}. <a className="underline" href={entry.ref} rel="noopener">{isProtein ? `RCSB PDB ${pdbId}` : "PubChem record"}</a>
         {isProtein && style === "solid" && ". The ribbon widens where the chain is folded into a regular pattern and narrows where it is a loose loop."}
       </p>
+      {chem && mol && <ChemistryPanel mol={mol} isProtein={isProtein} entry={entry} pdbId={pdbId} />}
     </div>
+  );
+}
+
+/** The chemistry behind the picture: formula, weight, atom and ring counts for a molecule; chains, residues and bound ligands for a protein. */
+function ChemistryPanel({ mol, isProtein, entry, pdbId }: { mol: Mol; isProtein: boolean; entry: StructureEntry; pdbId: string }) {
+  if (isProtein) {
+    const p = proteinStats(mol);
+    return (
+      <dl id="chemistry-panel" className="px-3 pb-3 grid grid-cols-2 sm:grid-cols-4 gap-x-4 gap-y-1.5 text-xs border-t border-border pt-2">
+        <div><dt className="text-muted">Chains</dt><dd className="font-medium">{p.chains.length} ({p.chains.join(", ")})</dd></div>
+        <div><dt className="text-muted">Residues traced</dt><dd className="font-medium tabular-nums">{p.residues.toLocaleString()}</dd></div>
+        <div><dt className="text-muted">Bound ligands</dt><dd className="font-medium">{p.ligands.length ? p.ligands.join(", ") : "none in this snapshot"}</dd></div>
+        <div><dt className="text-muted">Source</dt><dd><a className="underline" href={entry.ref} rel="noopener">RCSB PDB {pdbId}</a></dd></div>
+        <p className="col-span-full text-muted">Alpha-carbon backbone only; side chains are not in the snapshot, so no formula or weight is computed for proteins.</p>
+      </dl>
+    );
+  }
+  const s = moleculeStats(mol);
+  return (
+    <dl id="chemistry-panel" className="px-3 pb-3 grid grid-cols-2 sm:grid-cols-4 gap-x-4 gap-y-1.5 text-xs border-t border-border pt-2">
+      <div><dt className="text-muted">Formula{s.hasH ? "" : " (heavy atoms)"}</dt><dd className="font-medium">{s.formula}</dd></div>
+      <div><dt className="text-muted">Molecular weight</dt><dd className="font-medium tabular-nums">{s.weight === null ? "not computed" : `${s.weight.toLocaleString()} g/mol${s.hasH ? "" : " without hydrogens"}`}</dd></div>
+      <div><dt className="text-muted">Atoms</dt><dd className="font-medium tabular-nums">{s.heavyAtoms} heavy{s.hasH ? `, ${s.hydrogens} hydrogen` : ""}</dd></div>
+      <div><dt className="text-muted">Bonds and rings</dt><dd className="font-medium tabular-nums">{s.bonds} bonds, {s.rings} ring{s.rings === 1 ? "" : "s"}</dd></div>
+      <div><dt className="text-muted">Halogens</dt><dd className="font-medium tabular-nums">{s.halogens}</dd></div>
+      <div><dt className="text-muted">Metals</dt><dd className="font-medium">{s.metals.length ? s.metals.join(", ") : "none"}</dd></div>
+      <div><dt className="text-muted">Elements</dt><dd className="font-medium">{s.elements.map((e) => `${e.el} ${e.n}`).join(", ")}</dd></div>
+      <div><dt className="text-muted">Source</dt><dd><a className="underline" href={entry.ref} rel="noopener">PubChem record</a></dd></div>
+      <p className="col-span-full text-muted">Counted from the {entry.dim === 2 ? "2D" : "3D"} record served by this site{s.hasH ? "" : ", which omits hydrogens, so formula and weight cover heavy atoms only"}. Ring count is the cycle rank of the bond graph.</p>
+    </dl>
   );
 }
 
@@ -104,9 +138,11 @@ function makeSpriteCanvas(sizePx: number): SpriteCanvas {
   return { width: sizePx, height: sizePx, ctx: c.getContext("2d")!, image: c };
 }
 
-function SolidCanvas({ scene, compact, className, showH, playing, label }: { scene: Scene | null; compact: boolean; className: string; showH: boolean; playing: boolean; label: string }) {
+function SolidCanvas({ scene, compact, className, showH, playing, label, onTap }: { scene: Scene | null; compact: boolean; className: string; showH: boolean; playing: boolean; label: string; onTap?: () => void }) {
+  const tapRef = useRef(onTap);
+  useEffect(() => { tapRef.current = onTap; }, [onTap]);
   const ref = useRef<HTMLCanvasElement>(null);
-  const st = useRef({ showH, playing, yaw: 0, seeded: false, pitchOff: 0, dragging: false, lastX: 0, lastY: 0, resumeAt: 0, lastTime: 0 });
+  const st = useRef({ showH, playing, yaw: 0, seeded: false, pitchOff: 0, dragging: false, lastX: 0, lastY: 0, downX: 0, downY: 0, resumeAt: 0, lastTime: 0 });
   const redraw = useRef<(() => void) | null>(null);
   useEffect(() => { st.current.showH = showH; st.current.playing = playing; redraw.current?.(); }, [showH, playing]);
 
@@ -141,7 +177,7 @@ function SolidCanvas({ scene, compact, className, showH, playing, label }: { sce
     redraw.current = () => draw(performance.now());
 
     // Drag to rotate (full mode only; thumbnails sit inside links and buttons). Auto-rotation resumes after 2.5 s.
-    const onDown = (e: PointerEvent) => { if (compact) return; s0.dragging = true; s0.lastX = e.clientX; s0.lastY = e.clientY; canvas.setPointerCapture(e.pointerId); };
+    const onDown = (e: PointerEvent) => { if (compact) return; s0.dragging = true; s0.lastX = e.clientX; s0.lastY = e.clientY; s0.downX = e.clientX; s0.downY = e.clientY; canvas.setPointerCapture(e.pointerId); };
     const onMove = (e: PointerEvent) => {
       if (!s0.dragging) return;
       s0.yaw += (e.clientX - s0.lastX) * 0.01;
@@ -149,7 +185,7 @@ function SolidCanvas({ scene, compact, className, showH, playing, label }: { sce
       s0.lastX = e.clientX; s0.lastY = e.clientY; s0.resumeAt = performance.now() + 2500;
       if (reduced) draw(performance.now());
     };
-    const onUp = (e: PointerEvent) => { if (!s0.dragging) return; s0.dragging = false; s0.resumeAt = performance.now() + 2500; try { canvas.releasePointerCapture(e.pointerId); } catch { /* already released */ } };
+    const onUp = (e: PointerEvent) => { if (!s0.dragging) return; s0.dragging = false; if (Math.hypot(e.clientX - s0.downX, e.clientY - s0.downY) < 5) tapRef.current?.(); s0.resumeAt = performance.now() + 2500; try { canvas.releasePointerCapture(e.pointerId); } catch { /* already released */ } };
     canvas.addEventListener("pointerdown", onDown); canvas.addEventListener("pointermove", onMove); canvas.addEventListener("pointerup", onUp); canvas.addEventListener("pointercancel", onUp);
 
     let raf = 0, visible = true, last = 0;

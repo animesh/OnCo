@@ -34,7 +34,7 @@ function markerFor(key: string): Mesh | undefined {
  * Animated process schematic for a technology or product. Every product resolves to something
  * (see processSchematicKey), so this only renders nothing for kinds without a mechanism to draw.
  */
-export function ProcessSchematic({ entity, height }: { entity: Entity; height?: string }) {
+export function ProcessSchematic({ entity, height, bare = false }: { entity: Entity; height?: string; bare?: boolean }) {
   const g = graph();
   const key = processSchematicKey(entity);
   if (!key) return null;
@@ -45,7 +45,7 @@ export function ProcessSchematic({ entity, height }: { entity: Entity; height?: 
   const byModality = entity.kind === "drug" && !entity.technologies.includes(key) && key !== entity.id;
   const title = isFront ? `How ${linked?.name?.toLowerCase() ?? "this front"} works, step by step` : "How it works, step by step";
   return (
-    <div className="card overflow-hidden">
+    <div className={bare ? "overflow-hidden" : "card overflow-hidden"}>
       <Wireframe3D mesh={mesh} height={height ?? "h-64 sm:h-80"} speed={0.18} />
       <div className="px-4 py-3 border-t border-border text-sm flex flex-wrap items-baseline justify-between gap-2">
         <div><span className="font-medium">{title}</span><span className="text-muted"> · animated schematic, not to scale{byModality && entity.kind === "drug" ? `; chosen from the modality "${entity.modality}"` : ""}</span></div>
