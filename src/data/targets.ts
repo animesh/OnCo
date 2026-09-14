@@ -937,7 +937,7 @@ export const targets: TargetInput[] = [
     links: [{ label: "UniProt O14980: XPO1", url: "https://www.uniprot.org/uniprotkb/O14980/entry" }],
   },
   {
-    id: "slamf7", kind: "target", name: "SLAMF7 (CS1)", symbol: "SLAMF7", targetClass: "surface-antigen", asOf, wikipedia: W("SLAMF7"),
+    id: "slamf7", prevalence: [{ cancerId: "multiple-myeloma", pct: "over 95", measure: "CS1 (SLAMF7) expression on myeloma cells", source: "https://doi.org/10.1158/1078-0432.CCR-07-4246" }], kind: "target", name: "SLAMF7 (CS1)", symbol: "SLAMF7", targetClass: "surface-antigen", asOf, wikipedia: W("SLAMF7"),
     tldr: "A surface protein found on myeloma cells and on natural killer cells. Elotuzumab tags myeloma cells with it while also switching on the natural killer cells that carry it.",
     summary: "SLAMF7, also known as CS1 or CD319, is a signalling lymphocyte activation molecule family receptor expressed at high levels on malignant plasma cells and on natural killer cells, with little expression on other normal tissues. Elotuzumab, a humanised antibody against SLAMF7, marks myeloma cells for antibody-dependent cellular cytotoxicity and directly activates natural killer cells through the same receptor. It has no single-agent activity but improves outcomes with lenalidomide or pomalidomide plus dexamethasone, the basis of its 2015 and 2018 approvals.",
     biology: "SLAM family receptor signalling through EAT-2 in natural killer cells; highly expressed on plasma cells and myeloma cells.",
@@ -982,7 +982,7 @@ export const targets: TargetInput[] = [
     links: [{ label: "UniProt O00329: PIK3CD", url: "https://www.uniprot.org/uniprotkb/O00329/entry" }],
   },
   {
-    id: "rara", kind: "target", name: "Retinoic acid receptor alpha (RARA)", symbol: "RARA", targetClass: "nuclear-receptor", asOf, wikipedia: W("Retinoic_acid_receptor_alpha"),
+    id: "rara", prevalence: [{ cancerId: "aml", pct: "about 10", measure: "PML::RARA fusion (acute promyelocytic leukaemia subtype)", source: "https://doi.org/10.1038/nrc2943", note: "PML::RARA is present in nearly all cases of acute promyelocytic leukaemia" }], kind: "target", name: "Retinoic acid receptor alpha (RARA)", symbol: "RARA", targetClass: "nuclear-receptor", asOf, wikipedia: W("Retinoic_acid_receptor_alpha"),
     tldr: "The retinoic acid receptor that, fused to PML in acute promyelocytic leukaemia, blocks white blood cells from maturing. All-trans retinoic acid releases the block and arsenic trioxide destroys the fusion protein, turning a once rapidly fatal leukaemia into one of the most curable.",
     summary: "RARA is a nuclear receptor that switches on genes of myeloid differentiation when bound by retinoic acid. In acute promyelocytic leukaemia the t(15;17) translocation fuses PML to RARA, and the fusion protein recruits co-repressors that lock promyelocytes in an immature state. Pharmacological doses of all-trans retinoic acid (tretinoin) release the co-repressors and force differentiation, while arsenic trioxide binds the PML moiety and triggers degradation of the fusion protein. Given together, without chemotherapy in standard-risk disease, they cure most patients; differentiation syndrome is the characteristic early complication.",
     biology: "Ligand-activated nuclear receptor of myeloid differentiation; the PML::RARA fusion in APL is the drug target of tretinoin and arsenic trioxide.",
