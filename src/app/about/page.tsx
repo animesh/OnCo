@@ -6,6 +6,7 @@ import { KIND_META, KINDS } from "@/lib/schema";
 import { Container, GroupKicker, PageHeader } from "@/components/ui";
 import { completeness, headline } from "@/lib/completeness";
 import { CompletenessTable } from "@/components/CompletenessTable";
+import { DatasetJsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = pageMeta({ title: "About & methodology", description: "What OnCo is, how it is built, its rules for facts, and how to contribute.", path: "/about/" });
 
@@ -15,6 +16,7 @@ export default function About() {
   const h = headline(cov);
   return (
     <>
+      <DatasetJsonLd />
       <PageHeader kicker={<GroupKicker id="learn" />} title="About OnCo" lede="A public, cited, editable map of oncology. Built so that a patient, a scientist, an investor, or a policymaker can walk in and see the current state of the art, the history, and what is coming, for any cancer, and follow the links between them." />
       <Container className="pb-16 prose-onco text-[15px] leading-relaxed max-w-3xl space-y-8">
         <section>

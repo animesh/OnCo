@@ -51,7 +51,7 @@ export function pageMeta({ title, description, path, absoluteTitle, noindex }: {
     alternates: { canonical: url, types: FEED_TYPES },
     openGraph: { title: fullTitle, description: desc, url, siteName: SITE_NAME, type: "website", locale: "en_GB", images: [{ url: `${SITE}/og.png`, width: 1200, height: 630, alt: SITE_NAME }] },
     twitter: { card: "summary_large_image", title: fullTitle, description: desc, images: [`${SITE}/og.png`] },
-    robots: noindex ? { index: false, follow: true } : { index: true, follow: true },
+    robots: noindex ? { index: false, follow: true } : { index: true, follow: true, "max-snippet": -1, "max-image-preview": "large", "max-video-preview": -1 },
   };
 }
 
@@ -60,7 +60,10 @@ export const entityTitle = (e: Entity) => `${e.name} · ${KIND_META[e.kind].labe
 
 /** Metadata for an entity page. */
 export function entityMeta(e: Entity): Metadata {
-  return pageMeta({ title: entityTitle(e), description: e.tldr, path: routeFor(e) });
+  const m = pageMeta({ title: entityTitle(e), description: e.tldr, path: routeFor(e) });
+  // Machine-readable twins of the page, so agents and crawlers find the Markdown context and the JSON record from the HTML.
+  const types = { ...FEED_TYPES, "text/markdown": [{ url: `/api/v1/context/${e.id}.md`, title: `${e.name}: Markdown context for language models` }], "application/json": [{ url: `/api/v1/entities/${e.id}.json`, title: `${e.name}: JSON record` }] };
+  return { ...m, alternates: { ...m.alternates, types } };
 }
 
 export type Crumb = { label: string; href: string };

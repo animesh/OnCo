@@ -24,7 +24,7 @@ suite("pageMeta", () => {
   it("sets canonical, social copies and index/follow", () => {
     const m = pageMeta({ title: "Cancers", description: "One page per disease.", path: "/cancers/" });
     expect(m.alternates?.canonical).toBe("https://onco.cc/cancers/");
-    expect(m.robots).toEqual({ index: true, follow: true });
+    expect(m.robots).toEqual({ index: true, follow: true, "max-snippet": -1, "max-image-preview": "large", "max-video-preview": -1 });
     expect((m.openGraph as { url?: string }).url).toBe("https://onco.cc/cancers/");
     expect((m.twitter as { title?: string }).title).toBe("Cancers · OnCo");
   });

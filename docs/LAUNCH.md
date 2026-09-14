@@ -167,6 +167,14 @@ Everything below shipped through the gated chain in half-hourly ticks and was ve
 - Later still: umbrella cancer pages for non-Hodgkin lymphoma, skin cancer, brain and spinal cord tumours and childhood cancers (the NCI A to Z gaps; only "Metastatic cancer" and "Extragonadal germ cell tumour" remain), so a reader told only "lymphoma" or "skin cancer" lands on a map of the subtypes; industry sponsors 338 to 418 of 936 across five batches (every company record cites its official site and its ClinicalTrials.gov sponsor search; acquired sponsors became aliases on the acquirer); OECI centres now list their representatives and same-country peers, which restored the backlinks gauge after the new records dipped it.
 - Worth a look: the OECI representatives carry the role "Representative ... to the Organisation of European Cancer Institutes" taken from the OECI list; their actual titles (director, CEO, head of oncology) were not verified and several are well-known figures (for example the Christie's Rob Bristow) whose records deserve a proper biography.
 
+## Search and agent surface (checked 14 Sept)
+
+What was already in place: canonical URLs, Open Graph and Twitter cards, JSON-LD (Drug, MedicalCondition, MedicalTrial, Organization, Person, Periodical, MedicalScholarlyArticle, BreadcrumbList, WebSite with SearchAction), noindex on /embed/, a dated sitemap of every indexable page, robots.txt, IndexNow, llms.txt and llms-full.txt, per-record Markdown under /api/v1/context/, per-record JSON under /api/v1/entities/, OpenAPI 3.1, JSON Schema, RDF triples, Atom feeds, the CLI and MCP packages.
+
+Added: every entity page now links its Markdown and JSON twins with rel="alternate" so agents and crawlers reach them from the HTML; every JSON-LD node carries dateModified, the CC BY-NC licence and isPartOf the dataset; a schema.org Dataset node on /api/ and /about/ lists every distribution with its licence and citation; indexable pages ask for full snippets and large image previews; robots.txt names the AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended and others) and lets them read the JSON API, while search engines still skip the raw JSON duplicates.
+
+Still yours: Google Search Console verification (TXT token), Bing Webmaster Tools, submitting the Dataset to Google Dataset Search (it reads the JSON-LD once indexed), a Zenodo DOI to put in CITATION.cff and the Dataset node, and a decision on separate-language URLs (hreflang) if the eight interface languages should ever be indexed separately.
+
 ## Accounts for watchlist sync (built 14 Sept, needs two keys to switch on)
 
 The site now carries an optional sign-in so readers keep their watched pages across devices. It uses Supabase's REST endpoints with plain fetch (no dependency added) and a magic link by email. Nothing shows on the live site until two public build-time variables exist in Vercel:

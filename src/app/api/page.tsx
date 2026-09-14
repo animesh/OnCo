@@ -4,6 +4,7 @@ import { pageMeta } from "@/lib/seo";
 import { KIND_META, KINDS } from "@/lib/schema";
 import { graph } from "@/lib/graph";
 import { Container, GroupKicker, PageHeader } from "@/components/ui";
+import { DatasetJsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = pageMeta({ title: "Open API", description: "The OnCo corpus as static JSON, NDJSON and CSV with a JSON Schema, Atom feeds for what changes, and tagged releases for citation.", path: "/api/" });
 
@@ -19,6 +20,7 @@ export default function ApiDocs() {
   const mono = "underline font-mono text-sm";
   return (
     <>
+      <DatasetJsonLd />
       <PageHeader kicker={<GroupKicker id="learn" />} title="Open API" lede="The whole corpus is published as static files under /api/v1/ with permissive CORS: JSON per entity and per kind, one-line-per-record NDJSON, CSV for spreadsheets, and a JSON Schema. No key, no rate limit beyond the CDN. Licence CC BY-NC 4.0." />
       <Container className="pb-16 max-w-3xl">
         <div className="card p-4 mb-6 text-sm border-accent/30 bg-accent-soft/40">
