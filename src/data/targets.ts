@@ -898,6 +898,9 @@ export const targets: TargetInput[] = [
     biology: "Type IIA topoisomerase, proliferation-associated isoform; poisoned by etoposide and anthracyclines into a stable cleavage complex.",
     whereFound: ["Proliferating tumour cells; TOP2A amplification in a subset of HER2-positive breast cancers"],
     drugs: ["etoposide","doxorubicin"], cancers: ["sclc","testicular","dlbcl"],
+    prevalence: [
+      { cancerId: "breast-her2-positive", pct: "about 35", measure: "TOP2A co-amplification with HER2, FISH, 4,943 breast cancers analysed", source: "https://doi.org/10.1200/JCO.2009.27.5644", note: "Co-amplified tumours gained most from anthracycline-containing chemotherapy" },
+    ],
     links: [{ label: "UniProt P11388: TOP2A", url: "https://www.uniprot.org/uniprotkb/P11388/entry" }],
   },
   {
@@ -1037,6 +1040,9 @@ export const targets: TargetInput[] = [
     biology: "Cytokine receptor on neutrophil progenitors signalling through JAK2 and STAT3; agonised by recombinant G-CSF.",
     whereFound: ["Supportive care after chemotherapy (all cancers)","Chronic neutrophilic leukaemia (activating mutations)"],
     drugs: ["filgrastim","pegfilgrastim"], cancers: [],
+    prevalence: [
+      { cancerId: "myeloproliferative-neoplasms", pct: 59, measure: "Activating CSF3R mutation in chronic neutrophilic leukaemia or atypical BCR-ABL1-negative CML, 16 of 27 patients", source: "https://doi.org/10.1056/NEJMoa1214514", note: "Two mutation regions with different kinase dependencies (SRC family or JAK); ruxolitinib response reported in a JAK-type case" },
+    ],
     links: [{ label: "UniProt Q99062: CSF3R", url: "https://www.uniprot.org/uniprotkb/Q99062/entry" }],
   },
   {
@@ -1110,6 +1116,9 @@ export const targets: TargetInput[] = [
     biology: "Neuregulin receptor of the HER family; inhibited by pan-HER covalent inhibitors rather than by a dedicated drug.",
     whereFound: ["EGFR-mutant non-small-cell lung cancer (as a pan-HER target)","HER2-positive breast cancer (as a pan-HER target)"],
     drugs: ["afatinib","dacomitinib","neratinib"], cancers: ["nsclc","breast-her2-positive"],
+    prevalence: [
+      { cancerId: "melanoma", pct: 19, measure: "Somatic ERBB4 mutation, sequencing of 79 cutaneous metastatic melanomas", source: "https://doi.org/10.1038/ng.438", note: "Mutations increased kinase activity; mutant cells were sensitive to the ERBB inhibitor lapatinib" },
+    ],
     links: [{ label: "UniProt Q15303: ERBB4", url: "https://www.uniprot.org/uniprotkb/Q15303/entry" }],
   },
 
