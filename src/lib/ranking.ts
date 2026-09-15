@@ -31,8 +31,11 @@ export function rankInstitutions(): RankedInstitution[] {
     const nciPoints = inst.nci === "comprehensive" ? 15 : inst.nci ? 8 : 0;
     const neighbours = g.neighbours(inst.id);
     // People are excluded: how many staff we happen to have listed reflects our coverage, not the institution's output.
+    // For networks, societies and government bodies, links from other institutions are also excluded: those are
+    // memberships pointing at the body (188 centres list the OECI), not evidence about its own work.
+    const network = inst.institutionType === "consortium" || inst.institutionType === "government";
     let links = 0;
-    for (const [kind, list] of neighbours) if (kind !== "person") links += list.length;
+    for (const [kind, list] of neighbours) { if (kind === "person") continue; if (network && kind === "institution") continue; links += list.length; }
     const linkPoints = 2 * links;
     return { institution: inst, newsweekPoints, nciPoints, links, linkPoints, score: newsweekPoints + nciPoints + linkPoints, rank: 0 };
   });
