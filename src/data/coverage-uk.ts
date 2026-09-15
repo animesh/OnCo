@@ -167,6 +167,8 @@ const list: UkCoverage[] = [
   inDev("inavolisib", "inavolisib"),
   opt("elacestrant", "elacestrant", 1036, 2025, "ER-positive HER2-negative advanced breast cancer with an activating ESR1 mutation after at least 12 months of endocrine treatment plus a CDK4/6 inhibitor", { note: "Published 5 February 2025 with a commercial arrangement; the 12-month prior-treatment condition narrows the licence. The combination with everolimus (ID6753) is awaiting development." }),
   inDev("camizestrant", "camizestrant"),
+  rec("tepotinib", "tepotinib", 789, 2022, "Advanced NSCLC with MET exon 14 skipping alterations", { note: "Published 18 May 2022, within the licence with a commercial arrangement; the only MET inhibitor routinely funded in England." }),
+  term("capmatinib", "capmatinib", 884, 2023, "Advanced NSCLC with MET exon 14 skipping", { note: "Terminated appraisal published 3 May 2023: NICE stopped the appraisal, so capmatinib is not routinely funded in England. FDA accelerated approval (Tabrecta) since 2020." }),
   term("imlunestrant", "imlunestrant", 1168, 2026, "ER-positive HER2-negative advanced breast cancer after endocrine therapy", { note: "Terminated evaluation published 18 June 2026: NICE stopped the appraisal, so imlunestrant is not routinely funded in England." }),
   inDev("vepdegestrant", "vepdegestrant"),
   notUk("gedatolisib", "gedatolisib"),
