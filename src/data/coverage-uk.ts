@@ -155,7 +155,7 @@ const list: UkCoverage[] = [
   rec("talimogene-laherparepvec", "talimogene laherparepvec", 410, 2016, "Unresectable regionally or distantly metastatic melanoma (stage IIIB-IVM1a) when systemically administered immunotherapy is not suitable", { smc: "accepted (restricted)" }),
   notRec("sipuleucel-t", "sipuleucel-T", 332, 2015, "Asymptomatic or minimally symptomatic metastatic hormone-relapsed prostate cancer", { note: "Never marketed in the UK; EU licence withdrawn 2015." }),
   notUk("nadofaragene-firadenovec", "nadofaragene firadenovec"),
-  notUk("nogapendekin-alfa", "nogapendekin alfa inbakicept"),
+  term("nogapendekin-alfa-inbakicept", "nogapendekin alfa inbakicept", 1163, 2026, "With BCG for BCG-unresponsive non-muscle-invasive bladder cancer with carcinoma in situ", { note: "Terminated evaluation published 4 June 2026: NICE stopped the appraisal, so the medicine is not routinely funded in England. FDA-approved (Anktiva) since April 2024." }),
   notUk("vusolimogene-oderparepvec", "vusolimogene oderparepvec"),
 
   // ================= Breast =================
