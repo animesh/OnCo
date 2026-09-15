@@ -55,7 +55,7 @@ const OVERRIDE_IDS: Record<string, string> = {
 
 /** Societies, funders and regulators that publish little themselves; skipped, as in fetch-openalex.ts. */
 // Skipped: charities, societies and consortia with no research output of their own, plus CRUK centres and satellite campuses that ROR resolves to the parent organisation, whose output is not theirs.
-const SKIP = new Set(["asco", "esmo", "aacr", "iarc", "cruk", "curie-nki-eortc", "bowelbabe-fund", "cruk-cambridge-centre", "cruk-city-of-london-centre", "cruk-convergence-science-centre", "city-of-hope-orange-county"]);
+const SKIP = new Set(["asco", "esmo", "aacr", "iarc", "cruk", "curie-nki-eortc", "bowelbabe-fund", "cruk-cambridge-centre", "cruk-city-of-london-centre", "cruk-convergence-science-centre", "city-of-hope-orange-county", "dokuz-eylul-institute-of-oncology", "emory-winship", "galway-university-hospital-cancer-centre", "gunma-heavy-ion-medical-center", "hacettepe-cancer-institute", "hawaii-cancer-center", "huntsman", "intermountain-cancer", "iowa-holden", "istanbul-oncology-institute", "iuc-aphp-sorbonne", "kauno-klinikos", "kentucky-markey", "klaipeda-university-hospital", "essen-wtz", "imperial-cancer-centre", "eha", "espen", "esso", "gates-foundation", "emerson-collective", "fondation-arc", "g-ba-iqwig", "health-canada", "ema", "histiocyte-society", "iaslc", "isoqol", "irish-cancer-society", "jsmo"]);
 const ALLOWED_TYPES = new Set(["education", "healthcare", "facility", "government", "nonprofit", "other"]);
 
 const args = process.argv.slice(2);
