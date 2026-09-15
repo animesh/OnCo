@@ -534,7 +534,7 @@ export function hasAnimation(techId: string): boolean { return techId in ANIMATE
 function marker(key: string): Mesh {
   return build(`anim:${key}`, () => { const m = ALL_ANIMATED[key](); return { points: m.points, segments: m.segments, labels: m.labels, anim: key }; });
 }
-export function animatedFor(techId: string): Mesh | undefined { return ANIMATED[techId] ? marker(techId) : undefined; }
+export function animatedFor(techId: string): Mesh | undefined { const base = SCHEMATIC_ALIAS[techId] ?? techId; return ANIMATED[base] ? marker(base) : undefined; }
 
 /** Animated schematic for a front (section id). Every front has one. */
 export function hasFrontAnimation(sectionId: string): boolean { return `front:${sectionId}` in ALL_ANIMATED; }
@@ -553,9 +553,63 @@ export function termSchematicFor(category: string): Mesh {
 
 /** Returns a specific mesh if one exists (animated where available), else a generic mesh for the first matching front.
  *  Called with a section id (schematicFor(sectionId, [sectionId])) it returns that front's animated schematic. */
+/**
+ * Technologies that share another technology's animated schematic because the drawing depicts the same mechanism
+ * (a checkpoint antibody, a radioligand, an epigenetic drug). Each key is a technology id; each value an id with its own scene.
+ */
+export const SCHEMATIC_ALIAS: Record<string, string> = {
+  "spatial-transcriptomics": "spatial-biology-instruments",
+  "imaging-mass-cytometry": "spatial-biology-instruments",
+  "multiplex-immunofluorescence": "histopathology-ihc",
+  "ai-pathology-scoring": "digital-pathology-ai",
+  radiomics: "radiology-ai-screening",
+  "ctc-capture": "liquid-biopsy",
+  "cfdna-methylation-testing": "methylation-profiling",
+  "gene-expression-prognostic-assays": "rna-seq",
+  "oncology-pharmacogenomics": "germline-testing",
+  "ai-mammography-screening": "mammography",
+  "ai-endoscopy-detection": "colorectal-screening",
+  "cns-tumour-methylation-classifier": "methylation-profiling",
+  "clonal-evolution-tracking": "wes-wgs",
+  "tigit-blockade": "checkpoint-inhibitor",
+  "lag3-blockade": "checkpoint-inhibitor",
+  "tim3-blockade": "checkpoint-inhibitor",
+  "cd47-blockade": "monoclonal-antibody",
+  "cd40-agonists": "monoclonal-antibody",
+  immunocytokines: "cytokine-therapy",
+  "nk-cell-engagers": "t-cell-engager",
+  "trispecific-antibodies": "bispecific-antibody",
+  "dendritic-cell-vaccines": "cell-vaccine",
+  "bacterial-vector-vaccines": "engineered-bacteria-therapy",
+  "gamma-delta-t-cell-therapy": "allogeneic-cell-therapy",
+  "nk-cell-therapy": "car-nk-macrophage",
+  "virus-specific-t-cells": "allogeneic-cell-therapy",
+  "lu177-radioligand-therapy": "radioligand-therapy",
+  "astatine-211-alpha-therapy": "targeted-alpha-therapy",
+  "radioligand-dosimetry": "spect",
+  "menin-inhibitors": "epigenetic-drugs",
+  "bcl2-inhibitors": "bh3-profiling",
+  "idh-inhibitors": "epigenetic-drugs",
+  "pi3k-akt-mtor-inhibitors": "kinase-inhibitors",
+  "mdm2-inhibitors": "molecular-glue-platforms",
+  "her2-tyrosine-kinase-inhibitors": "kinase-inhibitors",
+  "oral-serds": "endocrine-therapy",
+  "hedgehog-inhibitors": "kinase-inhibitors",
+  "gamma-secretase-inhibitors": "kinase-inhibitors",
+  celmods: "molecular-glue-platforms",
+  "lsd1-inhibitors": "epigenetic-drugs",
+  "atr-chk1-inhibitors": "parp-inhibitor",
+  "kat6-inhibitors": "epigenetic-drugs",
+  "genetically-engineered-mouse-models": "pdx-models",
+  "humanised-mouse-models": "pdx-models",
+  "cancer-cell-line-encyclopedias": "crispr-screens",
+  "tumour-on-chip": "organoids"
+};
+
 export function schematicFor(techId: string, sections: string[]): { mesh: Mesh; specific: boolean } {
-  if (ANIMATED[techId]) return { mesh: marker(techId), specific: true };
-  if (S[techId]) return { mesh: build(techId, S[techId]), specific: true };
+  const base = SCHEMATIC_ALIAS[techId] ?? techId;
+  if (ANIMATED[base]) return { mesh: marker(base), specific: true };
+  if (S[base]) return { mesh: build(base, S[base]), specific: true };
   if (hasFrontAnimation(techId) && sections.includes(techId)) return { mesh: marker(`front:${techId}`), specific: true };
   for (const s of sections) if (GENERIC[s]) return { mesh: build(`generic:${s}`, GENERIC[s]), specific: false };
   return { mesh: build("generic:default", () => { const m = empty(); add(m, sphere(1, 5, 10)); return m; }), specific: false };
