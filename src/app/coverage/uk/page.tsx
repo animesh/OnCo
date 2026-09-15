@@ -29,6 +29,8 @@ export default function CoverageUkPage() {
   const rows: BrowserRow[] = covered.map((d) => {
     const c = coverageUk[d.id];
     const label = NICE_STATUS_LABEL[c.nice.status];
+    // Appraisal numbers named in the note, minus the flagship: the product page carries the detail for each.
+    const others = [...new Set((c.nice.note ?? "").match(/TA\d{3,4}/g) ?? [])].filter((t) => t !== c.nice.ta);
     return {
       id: d.id, name: d.name, sub: d.brand, tldr: d.tldr, route: routeFor(d), molecule: d.id, modality: d.modality,
       facets: { nice: [label], smc: [c.smc?.status ?? "Not recorded"], modality: [d.modality] },
@@ -38,8 +40,9 @@ export default function CoverageUkPage() {
         year: c.nice.year,
         indication: c.nice.indication ?? c.nice.note,
         smc: c.smc?.status,
+        more: others.length ? [{ label: `${others.length} more`, href: routeFor(d), tip: `Other NICE appraisals named on the product page: ${others.join(", ")}` }] : undefined,
       },
-      sortKeys: { nice: NICE_STATUS_ORDER.indexOf(c.nice.status), year: c.nice.year ?? 9999 },
+      sortKeys: { nice: NICE_STATUS_ORDER.indexOf(c.nice.status), year: c.nice.year ?? 9999, more: others.length },
     };
   });
 
@@ -55,6 +58,7 @@ export default function CoverageUkPage() {
     { key: "year", label: "Year", sortable: true, numeric: true, hide: "sm", tip: "Year the flagship appraisal was published." },
     { key: "indication", label: "Appraised indication", hide: "md", className: "max-w-xl", tip: "The population NICE appraised, which is often narrower than the licence. Other indications are in the note on the product page." },
     { key: "smc", label: "SMC", sortable: true, chip: true, hide: "lg", tip: "Scottish Medicines Consortium: accepted for at least one cancer indication, often with restrictions." },
+    { key: "more", label: "Other appraisals", sortable: true, hide: "lg", tip: "How many further NICE appraisals of this product are recorded, each with its number, date and verdict on the product page. Hover for the numbers." },
   ];
 
   return (
