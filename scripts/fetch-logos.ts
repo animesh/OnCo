@@ -106,7 +106,24 @@ async function getBytes(url: string): Promise<{ buf: Buffer; type: string } | nu
 }
 
 // Acquired companies whose recorded website now redirects to the acquirer; a match there would show the acquirer's logo.
-const NO_LOGO_IDS = new Set(["emergence-therapeutics", "mablink-bioscience", "point-biopharma"]);
+const NO_LOGO_IDS = new Set([
+  // Generic NHS, ICB, health-service or platform favicons, or 16 to 20 pixel icons (audited 15 Sept 2026)
+  "cheshire-merseyside-cancer-alliance",
+  "east-of-england-cancer-alliance",
+  "peninsula-cancer-alliance",
+  "swag-cancer-alliance",
+  "south-east-london-cancer-alliance",
+  "surrey-sussex-cancer-alliance",
+  "west-yorkshire-harrogate-cancer-alliance",
+  "greater-manchester-cancer-alliance",
+  "gc-cell",
+  "hacettepe-cancer-institute",
+  "iasi-regional-oncology-institute",
+  "mater-misericordiae",
+  "mediterranean-institute-of-oncology",
+  "partner-therapeutics",
+  "bank-of-cyprus-oncology-centre",
+  "lancashire-south-cumbria-cancer-alliance","emergence-therapeutics", "mablink-bioscience", "point-biopharma"]);
 const NOT_OWN_HOST = /(^|\.)(archive\.org|sec\.gov|ycombinator\.com|biorxiv\.org|medrxiv\.org|linkedin\.com|crunchbase\.com|clinicaltrials\.gov|wikipedia\.org|github\.com)$/;
 const domainOf = (u?: string) => { try { if (!u) return ""; const h = new URL(u).hostname.replace(/^www\./, "").toLowerCase(); return NOT_OWN_HOST.test(h) ? "" : h; } catch { return ""; } };
 const sameDomain = (a: string, b: string) => !!a && !!b && (a === b || a.endsWith("." + b) || b.endsWith("." + a));
@@ -200,6 +217,8 @@ async function faviconLogo(id: string, website: string): Promise<Entry | null> {
   const d = domainOf(website); if (!d) return null;
   const got = await getBytes(`https://www.google.com/s2/favicons?domain=${encodeURIComponent(d)}&sz=256`);
   if (!got || got.buf.length < 200) return null;
+  // Reject tiny icons: a PNG stores its width in bytes 16 to 19 of the IHDR chunk; anything under 24 px is a 16 px favicon upscaled by nothing.
+  if (got.type.includes("png") && got.buf.length > 24 && got.buf.readUInt32BE(16) < 24) return null;
   const ext = got.type.includes("png") ? "png" : got.type.includes("svg") ? "svg" : got.type.includes("jpeg") ? "jpg" : "ico";
   const out = `${id}.${ext}`; writeFileSync(join(OUT, out), got.buf);
   return { file: out, source: "favicon" };
