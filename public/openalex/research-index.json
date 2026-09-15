@@ -3816,6 +3816,125 @@
       "clinicalTrials": 1,
       "reviews": 1
     },
+    "koo-foundation-sun-yat-sen-cancer-center": {
+      "openalexId": "I4210136900",
+      "openalexName": "Koo Foundation Sun Yat-Sen Cancer Center",
+      "confidence": "ror",
+      "works": 85,
+      "cited": 295,
+      "byYear": {
+        "2022": 7,
+        "2023": 7,
+        "2024": 13,
+        "2025": 6,
+        "2026": 52
+      },
+      "openAccess": 76,
+      "clinicalTrials": 7,
+      "reviews": 0
+    },
+    "korle-bu-teaching-hospital": {
+      "openalexId": "I2803053305",
+      "openalexName": "Korle Bu Teaching Hospital",
+      "confidence": "ror",
+      "works": 84,
+      "cited": 1182,
+      "byYear": {
+        "2022": 17,
+        "2023": 16,
+        "2024": 16,
+        "2025": 25,
+        "2026": 10
+      },
+      "openAccess": 62,
+      "clinicalTrials": 1,
+      "reviews": 5
+    },
+    "ku-cancer-center": {
+      "openalexId": "I4210097601",
+      "openalexName": "The University of Kansas Cancer Center",
+      "confidence": "ror",
+      "works": 365,
+      "cited": 4909,
+      "byYear": {
+        "2022": 69,
+        "2023": 89,
+        "2024": 63,
+        "2025": 93,
+        "2026": 51
+      },
+      "openAccess": 249,
+      "clinicalTrials": 68,
+      "reviews": 3
+    },
+    "kuopio-university-hospital": {
+      "openalexId": "I4210092991",
+      "openalexName": "Kuopio University Hospital",
+      "confidence": "ror",
+      "works": 97,
+      "cited": 1226,
+      "byYear": {
+        "2022": 21,
+        "2023": 22,
+        "2024": 17,
+        "2025": 27,
+        "2026": 10
+      },
+      "openAccess": 81,
+      "clinicalTrials": 8,
+      "reviews": 2
+    },
+    "kyoto-university-hospital": {
+      "openalexId": "I4210150196",
+      "openalexName": "Kyoto University Hospital",
+      "confidence": "ror",
+      "works": 251,
+      "cited": 1942,
+      "byYear": {
+        "2022": 49,
+        "2023": 52,
+        "2024": 54,
+        "2025": 46,
+        "2026": 50
+      },
+      "openAccess": 178,
+      "clinicalTrials": 40,
+      "reviews": 2
+    },
+    "kyushu-university-hospital": {
+      "openalexId": "I4210097767",
+      "openalexName": "Kyushu University Hospital",
+      "confidence": "ror",
+      "works": 207,
+      "cited": 1209,
+      "byYear": {
+        "2022": 32,
+        "2023": 45,
+        "2024": 44,
+        "2025": 52,
+        "2026": 34
+      },
+      "openAccess": 136,
+      "clinicalTrials": 52,
+      "reviews": 7
+    },
+    "la-fe-valencia": {
+      "openalexId": "I3019010403",
+      "openalexName": "Hospital Universitari i Politècnic La Fe",
+      "confidence": "ror",
+      "works": 416,
+      "cited": 3394,
+      "byYear": {
+        "2022": 83,
+        "2023": 91,
+        "2024": 88,
+        "2025": 84,
+        "2026": 70
+      },
+      "openAccess": 268,
+      "clinicalTrials": 67,
+      "reviews": 5
+    },
     "la-paz": {
       "openalexId": "I2800562746",
       "openalexName": "Hospital Universitario La Paz",
@@ -3832,6 +3951,57 @@
       "openAccess": 364,
       "clinicalTrials": 66,
       "reviews": 8
+    },
+    "landspitali": {
+      "openalexId": "I4210106610",
+      "openalexName": "National University Hospital of Iceland",
+      "confidence": "ror",
+      "works": 57,
+      "cited": 752,
+      "byYear": {
+        "2022": 14,
+        "2023": 8,
+        "2024": 13,
+        "2025": 14,
+        "2026": 8
+      },
+      "openAccess": 40,
+      "clinicalTrials": 2,
+      "reviews": 0
+    },
+    "leeds-cancer-centre": {
+      "openalexId": "I2801331674",
+      "openalexName": "St James's University Hospital",
+      "confidence": "ror",
+      "works": 363,
+      "cited": 6609,
+      "byYear": {
+        "2022": 80,
+        "2023": 82,
+        "2024": 58,
+        "2025": 83,
+        "2026": 60
+      },
+      "openAccess": 301,
+      "clinicalTrials": 58,
+      "reviews": 21
+    },
+    "lhsc-verspeeten": {
+      "openalexId": "I2800925808",
+      "openalexName": "London Health Sciences Centre",
+      "confidence": "ror",
+      "works": 183,
+      "cited": 1067,
+      "byYear": {
+        "2022": 37,
+        "2023": 41,
+        "2024": 37,
+        "2025": 39,
+        "2026": 29
+      },
+      "openAccess": 124,
+      "clinicalTrials": 23,
+      "reviews": 7
     },
     "lmu-munich": {
       "openalexId": "I8204097",
