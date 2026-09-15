@@ -107,6 +107,8 @@ async function getBytes(url: string): Promise<{ buf: Buffer; type: string } | nu
 
 // Acquired companies whose recorded website now redirects to the acquirer; a match there would show the acquirer's logo.
 const NO_LOGO_IDS = new Set([
+  "capio-st-goran",
+  "aidport",
   // Generic NHS, ICB, health-service or platform favicons, or 16 to 20 pixel icons (audited 15 Sept 2026)
   "cheshire-merseyside-cancer-alliance",
   "east-of-england-cancer-alliance",
