@@ -178,6 +178,7 @@ Everything below shipped through the gated chain in half-hourly ticks and was ve
 - Research panels: 266 institutions (ten added today after removing five charity and foundation matches); the free OpenAlex allowance was 100 credits, so about ten a day; 251 not yet attempted.
 - Logos: 1315 of 1571 after two fetch rounds; generic NHS lozenges, platform default icons and anything under 24 pixels are rejected and listed in NO_LOGO_IDS, and the favicon path now refuses tiny PNGs.
 - Deploy note: the Vercel CLI once printed "deploy_failed: Not authorized" mid-build while the remote build carried on and aliased six minutes later. Inspect the deployment URL from the log before redeploying.
+- Evening of 15 Sept: OECI members 190 of 193 (the Croatian coalition KUZ, the Swedish Network Against Cancer and the Türkiye Cancer Institute remain: no source states a seat) and representatives 182 of 186, every one linked both ways; fifteen ChEMBL approved-drug targets with HGNC cross-references (145 of 181); phase 3 sponsors 443 of 936 with head offices verified on Wikidata or company sites; the NHS coverage table shows how many further appraisals each product carries; 38 under-linked sponsors point at the pivotal-trial term so the backlinks gauge holds. Four Madrid hospitals had been counted present through a shared regional web host; they now have real pages. Wikipedia REST summaries (native language) work as a location source where Wikidata search fails.
 
 ## Search and agent surface (checked 14 Sept)
 
