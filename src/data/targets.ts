@@ -934,6 +934,9 @@ export const targets: TargetInput[] = [
     biology: "Karyopherin that exports nuclear export signal-bearing proteins and some RNAs; inhibited covalently by selinexor at Cys528.",
     whereFound: ["Multiple myeloma","Diffuse large B-cell lymphoma","TP53 wild-type endometrial cancer (investigational)"],
     drugs: ["selinexor"], cancers: ["multiple-myeloma","dlbcl","endometrial"],
+    prevalence: [
+      { cancerId: "hodgkin-lymphoma", pct: 26, measure: "XPO1 mutation (mostly E571K), sequencing, 5 of 19 cases", source: "https://doi.org/10.1002/ajh.24451", note: "Small series; the same study found XPO1 mutations in 24% of primary mediastinal B-cell lymphoma (28 of 117) and in under 2% of other diffuse large B-cell lymphoma" },
+    ],
     links: [{ label: "UniProt O14980: XPO1", url: "https://www.uniprot.org/uniprotkb/O14980/entry" }],
   },
   {
