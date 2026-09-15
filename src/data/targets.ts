@@ -1167,6 +1167,9 @@ export const targets: TargetInput[] = [
     biology: "A de novo methyltransferase working with DNMT3L during development and in haematopoietic stem cells; the R882H mutant acts dominantly to reduce methylation.",
     whereFound: ["Haematopoietic stem cells","Mutated in a large share of AML and in clonal haematopoiesis"],
     drugs: ["azacitidine","decitabine"], cancers: ["aml","mds"], related: ["dnmt1"],
+    prevalence: [
+      { cancerId: "aml", pct: 22.1, measure: "DNMT3A mutation, exon sequencing of 281 de novo AML cases (62 mutated)", source: "https://doi.org/10.1056/NEJMoa1005143", note: "33.7% in intermediate-risk cytogenetics and absent in favourable-risk disease; R882 the commonest site" },
+    ],
     links: [{"label":"UniProt Q9Y6K1: DNMT3A","url":"https://www.uniprot.org/uniprotkb/Q9Y6K1/entry"},{"label":"HGNC:2978 DNMT3A","url":"https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:2978"},{"label":"ChEMBL target CHEMBL1992","url":"https://www.ebi.ac.uk/chembl/explore/target/CHEMBL1992"}],
   },
   {
