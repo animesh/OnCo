@@ -2148,4 +2148,49 @@ export const targetXrefs: Record<string, TargetXref> = {
   pgr: {
     genes: [{ symbol: "PGR", name: "progesterone receptor", hgnc: "HGNC:8910", ensembl: "ENSG00000082175", uniprot: "P06401", entrez: "5241", locus: "11q22.1" }],
   },
+  eef2: {
+    genes: [{"symbol":"EEF2","name":"eukaryotic translation elongation factor 2","hgnc":"HGNC:3214","ensembl":"ENSG00000167658","uniprot":"P13639","entrez":"1938","locus":"19p13.3"}],
+  },
+  fkbp12: {
+    genes: [{"symbol":"FKBP1A","name":"FKBP prolyl isomerase 1A","hgnc":"HGNC:3711","ensembl":"ENSG00000088832","uniprot":"P62942","entrez":"2280","locus":"20p13"}],
+  },
+  dnmt3a: {
+    genes: [{"symbol":"DNMT3A","name":"DNA methyltransferase 3 alpha","hgnc":"HGNC:2978","ensembl":"ENSG00000119772","uniprot":"Q9Y6K1","entrez":"1788","locus":"2p23.3"}],
+  },
+  gart: {
+    genes: [{"symbol":"GART","name":"phosphoribosylglycinamide formyltransferase, phosphoribosylglycinamide synthetase, phosphoribosylaminoimidazole synthetase","hgnc":"HGNC:4163","ensembl":"ENSG00000159131","uniprot":"P22102","entrez":"2618","locus":"21q22.11"}],
+  },
+  tlr7: {
+    genes: [{"symbol":"TLR7","name":"toll like receptor 7","hgnc":"HGNC:15631","ensembl":"ENSG00000196664","uniprot":"Q9NYK1","entrez":"51284","locus":"Xp22.2"}],
+  },
+  pap: {
+    genes: [{"symbol":"ACP3","name":"acid phosphatase 3","hgnc":"HGNC:125","ensembl":"ENSG00000014257","uniprot":"P15309","entrez":"55","locus":"3q22.1"}],
+  },
+  ron: {
+    genes: [{"symbol":"MST1R","name":"macrophage stimulating 1 receptor","hgnc":"HGNC:7381","ensembl":"ENSG00000164078","uniprot":"Q04912","entrez":"4486","locus":"3p21.31"}],
+  },
+  ddr2: {
+    genes: [{"symbol":"DDR2","name":"discoidin domain receptor tyrosine kinase 2","hgnc":"HGNC:2731","ensembl":"ENSG00000162733","uniprot":"Q16832","entrez":"4921","locus":"1q23.3"}],
+  },
+  epha2: {
+    genes: [{"symbol":"EPHA2","name":"EPH receptor A2","hgnc":"HGNC:3386","ensembl":"ENSG00000142627","uniprot":"P29317","entrez":"1969","locus":"1p36.13"}],
+  },
+  raf1: {
+    genes: [{"symbol":"RAF1","name":"Raf-1 proto-oncogene, serine/threonine kinase","hgnc":"HGNC:9829","ensembl":"ENSG00000132155","uniprot":"P04049","entrez":"5894","locus":"3p25.2"}],
+  },
+  pkc: {
+    genes: [{"symbol":"PRKCA","name":"protein kinase C alpha","hgnc":"HGNC:9393","ensembl":"ENSG00000154229","uniprot":"P17252","entrez":"5578","locus":"17q24.2"}],
+  },
+  cox2: {
+    genes: [{"symbol":"PTGS2","name":"prostaglandin-endoperoxide synthase 2","hgnc":"HGNC:9605","ensembl":"ENSG00000073756","uniprot":"P35354","entrez":"5743","locus":"1q31.1"}],
+  },
+  tshr: {
+    genes: [{"symbol":"TSHR","name":"thyroid stimulating hormone receptor","hgnc":"HGNC:12373","ensembl":"ENSG00000165409","uniprot":"P16473","entrez":"7253","locus":"14q24-q31"}],
+  },
+  igf1r: {
+    genes: [{"symbol":"IGF1R","name":"insulin like growth factor 1 receptor","hgnc":"HGNC:5465","ensembl":"ENSG00000140443","uniprot":"P08069","entrez":"3480","locus":"15q26.3"}],
+  },
+  tie2: {
+    genes: [{"symbol":"TEK","name":"TEK receptor tyrosine kinase","hgnc":"HGNC:11724","ensembl":"ENSG00000120156","uniprot":"Q02763","entrez":"7010","locus":"9p21.2"}],
+  },
 };
