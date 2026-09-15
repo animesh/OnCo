@@ -1215,6 +1215,9 @@ export const targets: TargetInput[] = [
     biology: "Collagen binding through the discoidin domain triggers slow, sustained kinase activation, regulating cell adhesion, migration and matrix remodelling.",
     whereFound: ["Squamous non-small cell lung cancer (a small mutated subset)","Fibroblasts and stromal cells"],
     drugs: ["dasatinib"], cancers: ["nsclc"],
+    prevalence: [
+      { cancerId: "nsclc", pct: 3.8, measure: "DDR2 kinase mutation, Sanger sequencing of squamous cell lung cancers and cell lines", source: "https://doi.org/10.1158/2159-8274.CD-11-0005", note: "Squamous histology only; mutant cell lines and one patient responded to dasatinib" },
+    ],
     links: [{"label":"UniProt Q16832: DDR2","url":"https://www.uniprot.org/uniprotkb/Q16832/entry"},{"label":"HGNC:2731 DDR2","url":"https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:2731"},{"label":"ChEMBL target CHEMBL5122","url":"https://www.ebi.ac.uk/chembl/explore/target/CHEMBL5122"}],
   },
   {
