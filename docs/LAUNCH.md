@@ -279,3 +279,8 @@ The owner's patient-first roadmap (a real-case "For me", persistent cancer choic
 
 - The owner's "You're offline" pages at UCSF are the service worker's fallback after the campus network resets TLS for the onco.cc name; the site loads in Panama and Los Angeles. Not caching. Ask UCSF IT to allow onco.cc and www.onco.cc, or submit the domain for categorisation with the filter vendor.
 - The service worker now waits for the network after its short timeout when no cached copy exists, so slow connections no longer see the offline page; the offline page explains the filtered-network case.
+
+### Polycythaemia vera page (16 Sept 2026, owner request)
+
+- New cancer record /cancers/polycythaemia-vera/ with diagnosis, risk-adapted standard of care, state of the art, a history from Vaquez (1892) to rusfertide's approval (2026), open problems and a pipeline; seven pivotal trials (CYTO-PV, RESPONSE, RESPONSE-2, PROUD-PV with CONTINUATION-PV, Low-PV, MAJIC-PV, VERIFY) with primary endpoints; eight plain-English terms (JAK2 V617F, phlebotomy, haematocrit, erythrocytosis, hepcidin, aquagenic pruritus, erythromelalgia, post-PV myelofibrosis); two ideas (clone-directed therapy toward treatment-free remission; hepcidin control as first-line treatment in low-risk disease). The eight PV medicines now link to the page.
+- Left for later: aspirin as a drug record (it is referenced in PV care and cancer prevention but has no entity), and an essential thrombocythaemia page built the same way.
