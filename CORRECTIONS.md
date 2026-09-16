@@ -114,6 +114,10 @@ Every factual correction to the OnCo corpus, newest first. Format: date · entit
 | 2026-09-06 | [ezh2](/targets/ezh2/), [epigenetic-drugs](/technologies/epigenetic-drugs/), [sarcoma](/cancers/sarcoma/) | Described tazemetostat (Tazverik) as approved in epithelioid sarcoma and follicular lymphoma. Ipsen withdrew it from all markets and indications on 9 March 2026 after SYMPHONY-1 showed excess secondary haematologic malignancies. | Companies-expansion review; verified against the [FDA alert](https://www.fda.gov/drugs/drug-alerts-and-statements/fda-alerts-health-care-providers-and-patients-about-increased-risk-new-blood-cancers-tazverik) and Ipsen's press release | [1d0eb06](https://github.com/judegomila/OnCo/commit/1d0eb06) |
 | 2026-09-06 | [pubmed-europepmc](/collections/pubmed-europepmc/) | TL;DR was a two-word fragment that failed the readability check. | Automated test (`tldr` length) | [27e0eb6](https://github.com/judegomila/OnCo/commit/27e0eb6) |
 
+## Proposed by the update bot (pending review)
+
+- 2026-09-16: 44 proposals drafted from the feeds (32 high confidence); review in [docs/proposals/latest.md](docs/proposals/latest.md). Nothing here is a confirmed correction until a human moves it above.
+
 ## How corrections are logged
 
 - Anyone can report an error via a GitHub issue or pull request.
