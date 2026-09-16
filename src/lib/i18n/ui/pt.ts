@@ -379,4 +379,10 @@ export const pt: UiDict = {
   "account.send": "Enviar-me uma ligação de acesso",
   "account.sent": "Verifique o seu email: a ligação de acesso funciona em qualquer dispositivo.",
   "account.synced": "Lista sincronizada",
+  "signup.title": "Fique a par",
+  "signup.why": "Deixe o seu email e a OnCo escreve-lhe quando algo importante mudar na investigação do cancro. Sem spam; cancela com um clique.",
+  "signup.button": "Quero receber novidades",
+  "signup.done": "Obrigado. Está na lista.",
+  "signup.icon": "O seu perfil e avisos por email",
+  "signup.soon": "Os avisos por email chegam em breve. Até então, carregue em Seguir em qualquer página para a manter na sua lista.",
   "account.error": "Não foi possível enviar a ligação. Tente novamente daqui a um minuto.",};

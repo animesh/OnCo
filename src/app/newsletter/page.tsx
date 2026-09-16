@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { SignupBox } from "@/components/SignupBox";
 import Link from "next/link";
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
@@ -53,10 +52,6 @@ export default function NewsletterPage() {
       <PageHeader kicker={<GroupKicker id="learn" />} title="Weekly issue"
         lede="One issue a week, generated from the corpus: what changed in OnCo, dated regulatory events, the readouts and decisions due in the next month, what the leading journals published, and any corrections. No tracking pixels, no click tracking, no third-party scripts. The latest issue is below; every issue is archived here and published as an Atom feed." />
       <Container className="pb-16 max-w-3xl">
-        <section className="card p-5">
-          <div className="kicker mb-1">Subscribe</div>
-          <div className="mt-2"><SignupBox compact /></div>
-        </section>
 
         {latest ? (
           <article className="mt-10">

@@ -416,6 +416,12 @@ export const EN = {
   "account.send": "Send me a sign-in link",
   "account.sent": "Check your email for the sign-in link. It works on any device.",
   "account.synced": "Watchlist synced",
+  "signup.title": "Stay in the loop",
+  "signup.why": "Leave your email and OnCo will write when something big changes in cancer research. No spam, one click to unsubscribe.",
+  "signup.button": "Keep me posted",
+  "signup.done": "Thank you. You are on the list.",
+  "signup.icon": "Your profile and email updates",
+  "signup.soon": "Email updates open shortly. Until then, press Watch on any page to keep it on your list.",
   "account.error": "The link could not be sent. Try again in a minute.",} as const;
 
 export type UiKey = keyof typeof EN;

@@ -5,9 +5,17 @@ import { accountEnabled, captureSession, loadSession, onAccountChange, pushWatch
 import { useT } from "@/lib/i18n/ui";
 
 /**
- * Sign in to keep the watchlist across devices. Renders nothing unless accounts are configured (see lib/account.ts).
- * `inline` is the fuller card used on /saved/; the default is the compact header control.
+ * The profile icon in the header. With accounts configured (lib/account.ts) it signs in by magic link and keeps the
+ * watchlist across devices; otherwise it captures an email for updates through NEXT_PUBLIC_SIGNUP_ACTION (a Buttondown
+ * or Listmonk form endpoint). `inline` is the fuller card used on /saved/; the default is the compact header control.
  */
+const SIGNUP_ACTION = process.env.NEXT_PUBLIC_SIGNUP_ACTION ?? "";
+const SIGNUP_LIST = process.env.NEXT_PUBLIC_SIGNUP_LIST ?? "";
+
+function ProfileIcon() {
+  return <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden><circle cx="12" cy="8" r="4" /><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5" /></svg>;
+}
+
 export function AccountMenu({ inline = false, className = "" }: { inline?: boolean; className?: string }) {
   const { t } = useT();
   const [session, setSession] = useState<Session | null>(null);
@@ -39,7 +47,7 @@ export function AccountMenu({ inline = false, className = "" }: { inline?: boole
     if (!open && d.open) d.close();
   }, [open]);
 
-  if (!accountEnabled) return null;
+  if (!accountEnabled && inline) return null;
 
   const send = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -60,6 +68,22 @@ export function AccountMenu({ inline = false, className = "" }: { inline?: boole
             {state === "error" && <p className="text-sm text-muted">{t("account.error")}</p>}
           </>
         )}
+      </form>
+    </dialog>
+  );
+  const captureEl = (
+    <dialog ref={dialog} onClose={() => setOpen(false)} className="backdrop:bg-black/50 bg-card text-foreground rounded-xl border border-border p-0 w-[min(94vw,26rem)]">
+      <form action={SIGNUP_ACTION || undefined} method="post" target="_blank" onSubmit={() => { if (SIGNUP_ACTION) setState("sent"); }} className="p-5 space-y-3">
+        <div className="flex items-start justify-between gap-3"><h2 className="text-base font-semibold">{t("signup.title")}</h2><button type="button" onClick={() => setOpen(false)} className="rounded border border-border px-2 py-0.5 text-sm hover:bg-foreground/5" aria-label="Close">×</button></div>
+        <p className="text-sm text-muted">{t("signup.why")}</p>
+        {state === "sent" ? <p className="text-sm rounded-lg border border-accent/40 bg-accent-soft text-accent px-3 py-2">{t("signup.done")}</p> : SIGNUP_ACTION ? (
+          <>
+            <label className="block text-sm"><span className="text-muted">{t("account.email")}</span><input name="email" type="email" required autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} className="mt-1 w-full rounded-lg border border-border bg-background px-3 py-2" /></label>
+            {SIGNUP_LIST && <input type="hidden" name="l" value={SIGNUP_LIST} />}
+            <input type="hidden" name="tag" value="onco.cc" />
+            <button type="submit" className="btn btn-primary w-full justify-center">{t("signup.button")}</button>
+          </>
+        ) : <p className="text-sm text-muted">{t("signup.soon")}</p>}
       </form>
     </dialog>
   );
@@ -90,9 +114,9 @@ export function AccountMenu({ inline = false, className = "" }: { inline?: boole
           <span aria-hidden className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-accent text-white text-[11px] font-semibold">{(session.user.email[0] ?? "?").toUpperCase()}</span>
         </button>
       ) : (
-        <button type="button" onClick={() => setOpen(true)} className="ctl px-2.5 text-xs" title={t("account.title")}>{t("account.signIn")}</button>
+        <button type="button" onClick={() => setOpen(true)} className="ctl ctl-icon" title={accountEnabled ? t("account.title") : t("signup.title")} aria-label={t("signup.icon")}><ProfileIcon /></button>
       )}
-      {dialogEl}
+      {accountEnabled ? dialogEl : captureEl}
     </span>
   );
 }

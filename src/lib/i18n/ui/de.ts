@@ -379,4 +379,10 @@ export const de: UiDict = {
   "account.send": "Anmeldelink schicken",
   "account.sent": "Prüfen Sie Ihre E-Mail: der Anmeldelink funktioniert auf jedem Gerät.",
   "account.synced": "Liste synchronisiert",
+  "signup.title": "Auf dem Laufenden bleiben",
+  "signup.why": "Hinterlassen Sie Ihre E-Mail-Adresse, und OnCo schreibt Ihnen, wenn sich in der Krebsforschung etwas Wichtiges ändert. Kein Spam, Abmeldung mit einem Klick.",
+  "signup.button": "Haltet mich auf dem Laufenden",
+  "signup.done": "Danke. Sie stehen auf der Liste.",
+  "signup.icon": "Ihr Profil und E-Mail-Updates",
+  "signup.soon": "E-Mail-Updates starten bald. Bis dahin: Auf jeder Seite auf Beobachten drücken, um sie in Ihrer Liste zu behalten.",
   "account.error": "Der Link konnte nicht gesendet werden. Versuchen Sie es in einer Minute erneut.",};

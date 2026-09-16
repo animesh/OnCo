@@ -379,4 +379,10 @@ export const zh: UiDict = {
   "account.send": "发送登录链接",
   "account.sent": "请查收邮件中的登录链接，它可在任何设备上使用。",
   "account.synced": "关注列表已同步",
+  "signup.title": "保持联系",
+  "signup.why": "留下您的邮箱，当癌症研究出现重大变化时 OnCo 会写信告知您。没有垃圾邮件，一键退订。",
+  "signup.button": "订阅更新",
+  "signup.done": "谢谢，您已加入名单。",
+  "signup.icon": "您的个人资料和邮件更新",
+  "signup.soon": "邮件更新即将开放。在此之前，请在任意页面点击“关注”将其保存到您的列表。",
   "account.error": "链接发送失败，请一分钟后重试。",};
