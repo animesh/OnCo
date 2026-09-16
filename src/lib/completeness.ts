@@ -243,10 +243,12 @@ function drugsNci(g: Graph): Result {
   for (const d of g.kind("drug")) for (const k of drugKeys(d)) keys.add(k);
   // NCI lists combination regimens (ABVD, R-CHOP, FOLFIRI-cetuximab) alongside single agents; OnCo covers those as regimen pages.
   for (const r of regimens) for (const k of keysFrom([r.name, ...(r.aka ?? [])].flatMap(nameParts))) keys.add(k);
+  // Two-letter regimen acronyms (AC, EP, CP) fall under the three-character key floor; credit them on an exact match.
+  const acronyms = new Set(regimens.flatMap((r) => [r.name, ...(r.aka ?? [])]).filter((a) => /^[A-Z]{2}$/.test(a)));
   let ours = 0;
   const missing: MissingItem[] = [];
   for (const it of UNIVERSE_LISTS["nci-cancer-drugs"].items) {
-    const hit = keysFrom(it.names.flatMap(nameParts)).size > 0 && [...keysFrom(it.names.flatMap(nameParts))].some((k) => keys.has(k));
+    const hit = (keysFrom(it.names.flatMap(nameParts)).size > 0 && [...keysFrom(it.names.flatMap(nameParts))].some((k) => keys.has(k))) || it.names.some((n) => acronyms.has(n.trim()));
     if (hit) ours++;
     else missing.push({ name: it.names[0], url: it.url, detail: it.names.length > 1 ? `also ${it.names.slice(1).join(", ")}` : undefined });
   }
