@@ -18,6 +18,7 @@ import globocanSites from "./universe-lists/globocan-sites.json";
 import nciCenters from "./universe-lists/nci-cancer-centers.json";
 import oeciMembers from "./universe-lists/oeci-members.json";
 import nhsAlliances from "./universe-lists/nhs-cancer-alliances.json";
+import evenone from "./universe-lists/evenone-portfolio.json";
 import uicc from "./universe-lists/uicc-members.json";
 import nlmJournals from "./universe-lists/nlm-oncology-journals.json";
 import openalexTop from "./universe-lists/openalex-top-oncology-papers.json";
@@ -116,6 +117,11 @@ export const UNIVERSE: Denominator[] = [
     ours: "OECI members matched to an OnCo institution by website domain or name.", list: "oeci-members",
   },
   {
+    id: "companies-evenone", kind: "company", scope: "Even One Ventures portfolio companies",
+    total: evenone.total, approx: false, source: evenone.source, method: evenone.method, checked: evenone.checked,
+    ours: "Portfolio companies matched to an OnCo company by website domain or name; refreshed weekly so new companies surface here.", list: "evenone-portfolio",
+  },
+  {
     id: "institutions-nhs-alliances", kind: "institution", scope: "NHS England Cancer Alliances (UK)",
     total: nhsAlliances.total, approx: false, source: nhsAlliances.source, method: nhsAlliances.method, checked: nhsAlliances.checked,
     ours: "Cancer Alliances matched to an OnCo institution by website domain or name.", list: "nhs-cancer-alliances",
@@ -194,6 +200,7 @@ export const UNIVERSE_LISTS = {
   "nci-cancer-centers": nciCenters,
   "oeci-members": oeciMembers,
   "nhs-cancer-alliances": nhsAlliances,
+  "evenone-portfolio": evenone,
   "nlm-oncology-journals": nlmJournals,
   "openalex-top-oncology-papers": openalexTop,
   "kegg-cancer-pathways": keggCancer,

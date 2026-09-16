@@ -518,6 +518,26 @@ async function chemblTargets(): Promise<Envelope<ChemblTarget> | null> {
 
 // ---------------------------------------------------------------------------------------------------
 
+type EvenOneCompany = { name: string; website: string; tag: string };
+const EVENONE_URL = "https://evenone.ventures/";
+/** Even One Ventures embeds its portfolio as a JavaScript array (`companies = [...]`) in the page; parse it rather than the rendered tiles. */
+function parseEvenOne(html: string): EvenOneCompany[] {
+  const i = html.indexOf("companies = ["); if (i < 0) return [];
+  const j = html.indexOf("];", i); const src = html.slice(i + "companies = ".length, j + 1);
+  const arr = new Function("return " + src)() as Array<{ name?: string; url?: string; tag?: string }>;
+  return arr.filter((c) => c && c.name).map((c) => ({ name: String(c.name).trim(), website: String(c.url ?? "").trim(), tag: String(c.tag ?? "").trim() }));
+}
+async function evenone(): Promise<Envelope<EvenOneCompany> | null> {
+  const html = await getText(EVENONE_URL, { accept: "text/html" });
+  if (!html) return null;
+  const items = parseEvenOne(html);
+  return {
+    checked: today(), source: { label: "Even One Ventures: portfolio", url: EVENONE_URL },
+    method: "The companies array embedded in the Even One Ventures home page (name, website and sector tag), read weekly so new portfolio companies surface on /completeness/.",
+    total: items.length, items,
+  };
+}
+
 async function main() {
   await source("nci-cancer-drugs", nciDrugs);
   await source("nci-cancer-types", nciTypes);
@@ -525,6 +545,7 @@ async function main() {
   await source("nci-cancer-centers", nciCenters);
   await source("oeci-members", oeci);
   await source("nhs-cancer-alliances", nhsAlliances);
+  await source("evenone-portfolio", evenone);
   await source("uicc-members", uicc);
   await source("nlm-oncology-journals", nlmJournals);
   await source("openalex-top-oncology-papers", openalexTop);

@@ -410,6 +410,7 @@ const RESOLVERS: Record<string, Resolver> = {
   "companies-fda-oce": companiesAgainst(UNIVERSE_LISTS["fda-oce-sponsors"].items.map((s) => ({ name: s.name, detail: `${s.approvals} FDA oncology approval notification${s.approvals === 1 ? "" : "s"}, ${s.first.slice(0, 4)} to ${s.last.slice(0, 4)}` }))),
   "institutions-nci": institutionsAgainst(UNIVERSE_LISTS["nci-cancer-centers"].items.map((c) => ({ names: [c.name], website: c.website, url: c.url }))),
   "institutions-oeci": institutionsAgainst(UNIVERSE_LISTS["oeci-members"].items.map((m) => ({ names: [m.altName ?? m.name, m.name], website: m.website, url: m.website, detail: `${m.country}; ${m.membership.toLowerCase()}` }))),
+  "companies-evenone": companiesAgainst(UNIVERSE_LISTS["evenone-portfolio"].items.map((c) => ({ name: c.name, detail: `${c.tag || "portfolio"} · ${c.website}` }))),
   "institutions-nhs-alliances": institutionsAgainst(UNIVERSE_LISTS["nhs-cancer-alliances"].items.map((a) => ({ names: [a.name], website: a.website, url: a.website }))),
   "institutions-uicc": countOnly((g) => g.kind("institution").length),
   "people-oeci-leaders": peopleOeciLeaders,

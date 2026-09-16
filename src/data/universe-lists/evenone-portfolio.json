@@ -1,0 +1,86 @@
+{
+ "checked": "2026-09-16",
+ "source": {
+  "label": "Even One Ventures: portfolio",
+  "url": "https://evenone.ventures/"
+ },
+ "method": "The companies array embedded in the Even One Ventures home page (name, website and sector tag), read weekly so new portfolio companies surface on /completeness/.",
+ "total": 15,
+ "items": [
+  {
+   "name": "Arden Bio",
+   "website": "https://www.arden.bio/",
+   "tag": "immunology"
+  },
+  {
+   "name": "Bulsara Bioworks",
+   "website": "https://www.bulsarabio.com/",
+   "tag": "oncology"
+  },
+  {
+   "name": "Echo Immune",
+   "website": "https://www.echoimmune.com/",
+   "tag": "oncology"
+  },
+  {
+   "name": "Ignitus Bio",
+   "website": "https://ignitus.bio/",
+   "tag": ""
+  },
+  {
+   "name": "Invocata",
+   "website": "https://invocata.bio/",
+   "tag": "oncology"
+  },
+  {
+   "name": "Kernis Health",
+   "website": "https://kernis.health/",
+   "tag": "oncology"
+  },
+  {
+   "name": "Minuteman Tx",
+   "website": "https://minuteman.bio/",
+   "tag": "oncology"
+  },
+  {
+   "name": "Palitra Bio",
+   "website": "https://palitra.bio/",
+   "tag": "oncology"
+  },
+  {
+   "name": "Perita Bio",
+   "website": "https://perita.bio/",
+   "tag": "womens"
+  },
+  {
+   "name": "Ranata Tx",
+   "website": "https://ranatatx.com/",
+   "tag": "oncology"
+  },
+  {
+   "name": "Rarivive",
+   "website": "https://rarivive.com/",
+   "tag": ""
+  },
+  {
+   "name": "Relit Biosciences",
+   "website": "https://relit.bio/",
+   "tag": "oncology"
+  },
+  {
+   "name": "Stitchpoint Bio",
+   "website": "https://stitchpoint.bio/",
+   "tag": "rare"
+  },
+  {
+   "name": "Valius Sciences",
+   "website": "https://www.valiussciences.com/",
+   "tag": "oncology"
+  },
+  {
+   "name": "Yuga Bio",
+   "website": "https://yugabio.com/",
+   "tag": "oncology"
+  }
+ ]
+}

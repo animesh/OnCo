@@ -327,4 +327,8 @@ export const investors: CompanyInput[] = [
 
   // ---- Researched on 2026-09-10 (see .scratch/research-investors.json in the working tree of the pass) ----
 
+  inv({ id: "evenone-ventures", name: "Even One Ventures", aka: ["EvenOne Ventures", "EOV"], kindTag: "vc", hq: "United States (head office not published)", country: "US", website: "https://evenone.ventures", sections: ["drug-discovery", "diagnostics", "immunotherapy"], tags: ["vc", "patient-first", "venture-studio"],
+    tldr: "Even One Ventures is a venture studio that builds companies in the image of one patient's playbook: Sid Sijbrandij, the GitLab co-founder who, told in 2024 that he had run out of options for recurrent osteosarcoma, assembled a team, pursued every diagnostic and built individualised treatments in parallel.",
+    summary: "Even One Ventures describes its origin as November 2022, when Sid Sijbrandij was diagnosed with osteosarcoma in his spine; after surgery, chemotherapy and radiation the cancer returned in 2024 and his doctors said therapeutic options were exhausted, so he took agency, ran diagnostics and individualised treatments in parallel, and the fund now builds companies so that future patients do not have to start from scratch. Its portfolio of fifteen companies spans oncology (personalised vaccines, oncolytic viruses, TCR and antibody therapies, functional tumour testing, tumour tissue banking, theranostics access and AI care tools), immunology, women's health, rare disease and longevity. OnCo tracks the portfolio weekly on the completeness page and records every company, including the ones outside cancer, marked as such.",
+    links: [{ label: "Portfolio", url: "https://evenone.ventures/" }] }),
 ];
