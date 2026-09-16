@@ -2193,4 +2193,55 @@ export const targetXrefs: Record<string, TargetXref> = {
   tie2: {
     genes: [{"symbol":"TEK","name":"TEK receptor tyrosine kinase","hgnc":"HGNC:11724","ensembl":"ENSG00000120156","uniprot":"Q02763","entrez":"7010","locus":"9p21.2"}],
   },
+  il11ra: {
+    genes: [{"symbol":"IL11RA","name":"interleukin 11 receptor subunit alpha","hgnc":"HGNC:5967","ensembl":"ENSG00000137070","uniprot":"Q14626","entrez":"3590","locus":"9p13.3"}],
+  },
+  csf2ra: {
+    genes: [{"symbol":"CSF2RA","name":"colony stimulating factor 2 receptor subunit alpha","hgnc":"HGNC:2435","ensembl":"ENSG00000198223","uniprot":"P15509","entrez":"1438","locus":"Xp22.32 and Yp11.3"}],
+  },
+  lyn: {
+    genes: [{"symbol":"LYN","name":"LYN proto-oncogene, Src family tyrosine kinase","hgnc":"HGNC:6735","ensembl":"ENSG00000254087","uniprot":"P07948","entrez":"4067","locus":"8q12.1"}],
+  },
+  hck: {
+    genes: [{"symbol":"HCK","name":"HCK proto-oncogene, Src family tyrosine kinase","hgnc":"HGNC:4840","ensembl":"ENSG00000101336","uniprot":"P08631","entrez":"3055","locus":"20q11.21"}],
+  },
+  ptk6: {
+    genes: [{"symbol":"PTK6","name":"protein tyrosine kinase 6","hgnc":"HGNC:9617","ensembl":"ENSG00000101213","uniprot":"Q13882","entrez":"5753","locus":"20q13.33"}],
+  },
+  frk: {
+    genes: [{"symbol":"FRK","name":"fyn related Src family tyrosine kinase","hgnc":"HGNC:3955","ensembl":"ENSG00000111816","uniprot":"P42685","entrez":"2444","locus":"6q22.1"}],
+  },
+  xdh: {
+    genes: [{"symbol":"XDH","name":"xanthine dehydrogenase","hgnc":"HGNC:12805","ensembl":"ENSG00000158125","uniprot":"P47989","entrez":"7498","locus":"2p23.1"}],
+  },
+  txnrd1: {
+    genes: [{"symbol":"TXNRD1","name":"thioredoxin reductase 1","hgnc":"HGNC:12437","ensembl":"ENSG00000198431","uniprot":"Q16881","entrez":"7296","locus":"12q23.3"}],
+  },
+  gsr: {
+    genes: [{"symbol":"GSR","name":"glutathione-disulfide reductase","hgnc":"HGNC:4623","ensembl":"ENSG00000104687","uniprot":"P00390","entrez":"2936","locus":"8p12"}],
+  },
+  pola1: {
+    genes: [{"symbol":"POLA1","name":"DNA polymerase alpha 1, catalytic subunit","hgnc":"HGNC:9173","ensembl":"ENSG00000101868","uniprot":"P09884","entrez":"5422","locus":"Xp22.11-p21.3"}],
+  },
+  cyp11a1: {
+    genes: [{"symbol":"CYP11A1","name":"cytochrome P450 family 11 subfamily A member 1","hgnc":"HGNC:2590","ensembl":"ENSG00000140459","uniprot":"P05108","entrez":"1583","locus":"15q24.1"}],
+  },
+  srd5a2: {
+    genes: [{"symbol":"SRD5A2","name":"steroid 5 alpha-reductase 2","hgnc":"HGNC:11285","ensembl":"ENSG00000277893","uniprot":"P31213","entrez":"6716","locus":"2p23.1"}],
+  },
+  drd2: {
+    genes: [{"symbol":"DRD2","name":"dopamine receptor D2","hgnc":"HGNC:3023","ensembl":"ENSG00000149295","uniprot":"P14416","entrez":"1813","locus":"11q23.2"}],
+  },
+  oprm1: {
+    genes: [{"symbol":"OPRM1","name":"opioid receptor mu 1","hgnc":"HGNC:8156","ensembl":"ENSG00000112038","uniprot":"P35372","entrez":"4988","locus":"6q25.2"}],
+  },
+  cnr1: {
+    genes: [{"symbol":"CNR1","name":"cannabinoid receptor 1","hgnc":"HGNC:2159","ensembl":"ENSG00000118432","uniprot":"P21554","entrez":"1268","locus":"6q15"}],
+  },
+  tph1: {
+    genes: [{"symbol":"TPH1","name":"tryptophan hydroxylase 1","hgnc":"HGNC:12008","ensembl":"ENSG00000129167","uniprot":"P17752","entrez":"7166","locus":"11p15.1"}],
+  },
+  impdh2: {
+    genes: [{"symbol":"IMPDH2","name":"inosine monophosphate dehydrogenase 2","hgnc":"HGNC:6053","ensembl":"ENSG00000178035","uniprot":"P12268","entrez":"3615","locus":"3p21.31"}],
+  },
 };
