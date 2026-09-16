@@ -1329,4 +1329,18 @@ export const companiesSponsors: CompanyInput[] = [
     technologies: ["bispecific-antibody","t-cell-engager"], sections: ["supportive-care"],
     terms: ["pivotal-trial", "clinical-trial"],
     links: [{"label":"Official website","url":"http://www.yzybio.com"},{"label":"ClinicalTrials.gov: trials led by Wuhan YZY Biopharma Co., Ltd.","url":"https://clinicaltrials.gov/search?lead=Wuhan%20YZY%20Biopharma%20Co.%2C%20Ltd."},{"label":"Wikidata","url":"https://www.wikidata.org/wiki/Q30260850"}] },
+
+  // ======================= Phase 3 sponsors, batch 20 (16 Sept 2026, Wikidata-verified) =======================
+  { id: "huyabio", kind: "company", name: "HUYABIO International", aka: ["HUYABIO International, LLC.","HUYA Bioscience International","HUYABIO"], hq: "San Diego, CA", country: "US", companyType: "biotech", website: "https://huyabio.com", stage: "private-large", asOf, tags, provenance,
+    tldr: "HUYABIO is a San Diego company that licenses Chinese-discovered medicines for the rest of the world; its lead is tucidinostat, the oral HDAC inhibitor approved in China and Japan for T-cell lymphoma, which it took into a phase 3 trial in melanoma with a checkpoint inhibitor.",
+    summary: "HUYABIO International, based in San Diego, in-licenses drug candidates from Chinese companies and develops them outside China. Its lead compound tucidinostat (HBI-8000, chidamide), a class I HDAC inhibitor approved in China for peripheral T-cell lymphoma and breast cancer and in Japan for lymphoma, was tested with nivolumab in the phase 3 trial registered on ClinicalTrials.gov under HUYABIO as lead sponsor.",
+    cancers: ["melanoma","peripheral-t-cell-lymphoma"], drugs: ["tucidinostat"], companies: ["chipscreen"],
+    terms: ["pivotal-trial", "clinical-trial"],
+    links: [{"label":"Official website","url":"https://huyabio.com"},{"label":"ClinicalTrials.gov: trials led by HUYABIO International, LLC.","url":"https://clinicaltrials.gov/search?lead=HUYABIO%20International%2C%20LLC."},{"label":"Wikidata","url":"https://www.wikidata.org/wiki/Q140045552"}] },
+  { id: "immunitor", kind: "company", name: "Immunitor", aka: ["Immunitor LLC","Immunitor Inc."], hq: "Ulaanbaatar", country: "MN", companyType: "biotech", website: "http://www.immunitor.mn", founded: 2000, stage: "private-large", asOf, tags, provenance,
+    tldr: "Immunitor is a Mongolian biotech, founded in 2000, that makes oral tablet vaccines from heat-inactivated cells; its hepatocellular carcinoma vaccine hepcortespenlisimut-L went through phase 3 trials the company led.",
+    summary: "Immunitor, based in Ulaanbaatar and founded in 2000, develops oral tablet immunotherapies made from heat-inactivated cells, including a tuberculosis vaccine and hepcortespenlisimut-L (V5) for hepatocellular carcinoma, which it tested in phase 3 trials in Mongolia registered on ClinicalTrials.gov under Immunitor as lead sponsor.",
+    cancers: ["hcc"],
+    terms: ["pivotal-trial", "clinical-trial"],
+    links: [{"label":"Official website","url":"http://www.immunitor.mn"},{"label":"ClinicalTrials.gov: trials led by Immunitor LLC","url":"https://clinicaltrials.gov/search?lead=Immunitor%20LLC"},{"label":"Wikidata","url":"https://www.wikidata.org/wiki/Q50039606"}] },
 ];
