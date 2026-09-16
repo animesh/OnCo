@@ -287,7 +287,7 @@
   table.onco thead th:first-child { color: var(--foreground); }
   table.onco thead th button { color: inherit; font: inherit; letter-spacing: inherit; text-transform: inherit; }
   table.onco thead th button:hover { color: var(--foreground); }
-  table.onco td { padding: 0.65rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+  table.onco td { padding: 0.65rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; overflow-wrap: anywhere; }
   table.onco td:first-child { font-weight: 500; }
   table.onco td:first-child .text-muted { font-weight: 400; }
   table.onco tbody tr:last-child td { border-bottom-color: transparent; }

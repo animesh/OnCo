@@ -30,7 +30,7 @@ function rows(): { rows: BrowserRow[]; facets: FacetDef[]; columns: ColDef[] } {
     const latest = latestRound(c);
     const products = new Set([...c.drugs, ...(g.incoming(c.id).get("drug") ?? []).map((d) => d.id)]).size;
     return {
-      id: c.id, name: c.name, tldr: c.tldr, route: routeFor(c), logo: logoSrc(c.id, c.website),
+      id: c.id, name: c.name, tldr: c.tldr, route: routeFor(c), logo: logoSrc(c.id, c.website), avatar: "org",
       sub: `${c.hq}, ${c.country}${c.founded ? ` · founded ${c.founded}` : ""}`,
       facets: {
         stage: stageLabel ? [stageLabel] : [],

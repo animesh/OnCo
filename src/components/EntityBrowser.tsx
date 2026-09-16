@@ -11,6 +11,7 @@ import { flagFor, COUNTRY_FACETS } from "@/lib/flags";
 import { TargetThumb } from "./TargetThumb";
 import { TechThumb } from "./TechThumb";
 import { TermThumb } from "./TermThumb";
+import { RowAvatar } from "./RowAvatar";
 import { CancerIcon } from "./CancerIcon";
 import type { TargetSchematicTarget } from "./TargetSchematic";
 import { STATUS_LABEL, STATUS_TIPS, statusClass } from "@/lib/text";
@@ -59,6 +60,8 @@ export type BrowserRow = {
   logo?: string;
   /** Render the logo as a circle with object-cover (portraits). */
   round?: boolean;
+  /** Organisation or person row: show an initials tile when there is no usable logo or portrait. */
+  avatar?: "org" | "person";
 };
 
 /** A linked object; `tip` is the object's one-line explanation, shown on hover. */
@@ -290,12 +293,7 @@ export function EntityBrowser({ rows, facets, columns, noun, defaultSort, hideSt
         {r.schematic && <TechThumb id={r.schematic.id} sections={r.schematic.sections} name={r.name} route={r.route} />}
         {r.term && <TermThumb category={r.term.category} name={r.name} route={r.route} />}
         {r.cancerIcon && <Link href={r.route} aria-label={`${r.name} organ icon`} className="inline-flex h-10 w-14 shrink-0 items-center justify-center rounded-md border border-border bg-accent-soft text-accent"><CancerIcon cancerId={r.cancerIcon} className="h-7 w-7" /></Link>}
-        {r.logo && !r.molecule && (
-          <span className={`inline-flex h-7 w-7 shrink-0 items-center justify-center border border-border bg-white overflow-hidden ${r.round ? "rounded-full" : "rounded-md"}`}>
-            {/* eslint-disable-next-line @next/next/no-img-element -- self-hosted or hotlinked icon, never optimised */}
-            <img src={r.logo} alt="" className={r.round ? "h-full w-full object-cover" : "h-[70%] w-[70%] object-contain"} loading="lazy" referrerPolicy="no-referrer" />
-          </span>
-        )}
+        {(r.logo || r.avatar) && !r.molecule && <RowAvatar src={r.logo} name={r.name} round={r.round || r.avatar === "person"} />}
         <div><Link href={r.route} data-row className="font-medium hover:underline">{r.name}</Link>{r.sub && <div className="text-xs text-muted">{r.sub}</div>}{!hideTldr && <div className="text-xs text-muted line-clamp-2 max-w-lg">{tldrFor(r.id, r.tldr, lang)}</div>}</div>
       </div>) },
     ...(hideStatus ? [] : [{ key: "status", label: "Phase / status", sortable: true, render: (r: BrowserRow) => r.molecule

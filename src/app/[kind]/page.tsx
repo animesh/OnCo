@@ -143,7 +143,7 @@ function buildBrowser(k: Kind): { rows: BrowserRow[]; facets: FacetDef[]; column
           const stageLabel = stage ? STAGE_LABEL[stage] : undefined;
           const portfolio = c.companyType === "investor" ? portfolioOf(c.id).length : 0;
           return {
-            ...base(c), logo: logoFor(c.id, c.website), sub: `${c.hq}, ${c.country}${c.ticker ? ` · ${c.ticker}` : ""}${c.ycBatch ? ` · YC ${c.ycBatch}` : ""}`,
+            ...base(c), logo: logoFor(c.id, c.website), avatar: "org", sub: `${c.hq}, ${c.country}${c.ticker ? ` · ${c.ticker}` : ""}${c.ycBatch ? ` · YC ${c.ycBatch}` : ""}`,
             facets: { type: [label[c.companyType] ?? c.companyType], stage: stageLabel ? [stageLabel] : [], country: [c.country], front: c.sections.map((id) => g.must(id).name), cancers: names(c.cancers), investor: c.investors.map((id) => g.must(id).name) },
             cols: { type: fl("type", label[c.companyType] ?? c.companyType), stage: fl("stage", stageLabel, stage ? { tip: STAGE_TIP[stage] } : undefined), hq: c.hq, country: fl("country", c.country), products: c.companyType === "investor" ? count(portfolio, c, "portfolio", "portfolio company", "backed by") : count(products, c, "products", "product", "from"), techs: count(techs, c, "connected", "technology", "from") },
             sortKeys: { products: c.companyType === "investor" ? portfolio : products, techs },
@@ -158,7 +158,7 @@ function buildBrowser(k: Kind): { rows: BrowserRow[]; facets: FacetDef[]; column
       const ranked = rankInstitutions();
       return {
         hideStatus: true, hideTldr: true,
-        rows: ranked.map((r) => { const i = r.institution; return { ...base(i), logo: logoFor(i.id, i.website), sub: [i.university, `${i.city}, ${i.country}`].filter(Boolean).join(" · "), facets: { type: [cap(i.institutionType.replace("-", " "))], country: [i.country], nci: i.nci ? [cap(i.nci)] : [], cancers: names(i.cancers) }, cols: { rank: r.rank, type: fl("type", cap(i.institutionType.replace("-", " "))), country: fl("country", i.country), newsweek: i.newsweekOncology2026, nci: fl("nci", i.nci ? cap(i.nci) : undefined), links: count(r.links, i, "connected", "linked object", "at"), score: r.score }, sortKeys: { rank: r.rank, newsweek: i.newsweekOncology2026 ?? 999, links: r.links, score: r.score } }; }),
+        rows: ranked.map((r) => { const i = r.institution; return { ...base(i), logo: logoFor(i.id, i.website), avatar: "org", sub: [i.university, `${i.city}, ${i.country}`].filter(Boolean).join(" · "), facets: { type: [cap(i.institutionType.replace("-", " "))], country: [i.country], nci: i.nci ? [cap(i.nci)] : [], cancers: names(i.cancers) }, cols: { rank: r.rank, type: fl("type", cap(i.institutionType.replace("-", " "))), country: fl("country", i.country), newsweek: i.newsweekOncology2026, nci: fl("nci", i.nci ? cap(i.nci) : undefined), links: count(r.links, i, "connected", "linked object", "at"), score: r.score }, sortKeys: { rank: r.rank, newsweek: i.newsweekOncology2026 ?? 999, links: r.links, score: r.score } }; }),
         facets: [{ key: "type", label: "Type", searchable: false, width: "w-48" }, { key: "country", label: "Country", searchable: false, width: "w-40" }, { key: "nci", label: "NCI", searchable: false, width: "w-40" }, { key: "cancers", label: "Cancer", width: "w-52" }],
         columns: [{ key: "rank", label: "#", sortable: true, numeric: true }, { key: "type", label: "Type", hide: "hidden md:table-cell" }, { key: "country", label: "Country", sortable: true, hide: "hidden lg:table-cell" }, { key: "newsweek", label: "Newsweek 2026", sortable: true, numeric: true, hide: "hidden sm:table-cell" }, { key: "nci", label: "NCI", hide: "hidden lg:table-cell" }, { key: "links", label: "Linked objects", sortable: true, numeric: true, hide: "hidden sm:table-cell" }, { key: "score", label: "Score", sortable: true, numeric: true }],
         defaultSort: { key: "score", dir: -1 },
@@ -238,14 +238,14 @@ function buildBrowser(k: Kind): { rows: BrowserRow[]; facets: FacetDef[]; column
     };
     case "person": return {
       hideStatus: true,
-      rows: g.kind("person").map((p) => { const inst = p.institutionId ? g.get(p.institutionId) : undefined; return { ...base(p), logo: portraitSrc(p.id), round: true, sub: `${p.role}${inst ? ` · ${inst.name}` : ""}`, facets: { specialism: p.specialisms, institution: inst ? [inst.name] : [], cancers: names(p.cancers), country: inst && inst.kind === "institution" ? [inst.country] : [], role: p.tags.filter((t) => t in HERO_ROLE_LABEL).map((t) => HERO_ROLE_LABEL[t]) }, cols: { institution: inst ? [link(inst, inst.name)] : undefined, specialisms: p.specialisms.map((s) => ({ facet: "specialism", value: s })), papers: count(p.papers.length, p, "papers", "paper", "by"), trials: count(p.trials.length, p, "connected", "trial", "linked to") }, sortKeys: { papers: p.papers.length, trials: p.trials.length } }; }),
+      rows: g.kind("person").map((p) => { const inst = p.institutionId ? g.get(p.institutionId) : undefined; return { ...base(p), logo: portraitSrc(p.id), round: true, avatar: "person", sub: `${p.role}${inst ? ` · ${inst.name}` : ""}`, facets: { specialism: p.specialisms, institution: inst ? [inst.name] : [], cancers: names(p.cancers), country: inst && inst.kind === "institution" ? [inst.country] : [], role: p.tags.filter((t) => t in HERO_ROLE_LABEL).map((t) => HERO_ROLE_LABEL[t]) }, cols: { institution: inst ? [link(inst, inst.name)] : undefined, specialisms: p.specialisms.map((s) => ({ facet: "specialism", value: s })), papers: count(p.papers.length, p, "papers", "paper", "by"), trials: count(p.trials.length, p, "connected", "trial", "linked to") }, sortKeys: { papers: p.papers.length, trials: p.trials.length } }; }),
       facets: [{ key: "role", label: "Heroes", searchable: false, width: "w-40", order: Object.values(HERO_ROLE_LABEL) }, { key: "specialism", label: "Specialism", width: "w-56" }, { key: "institution", label: "Institution", width: "w-56" }, { key: "cancers", label: "Cancer", width: "w-52" }, { key: "country", label: "Country", searchable: false, width: "w-40" }],
       columns: [{ key: "institution", label: "Institution", hide: "hidden md:table-cell" }, { key: "specialisms", label: "Specialisms", hide: "hidden lg:table-cell" }, { key: "papers", label: "Papers listed", sortable: true, numeric: true }, { key: "trials", label: "Trials", sortable: true, numeric: true, hide: "hidden sm:table-cell" }],
       defaultSort: { key: "name", dir: 1 },
     };
     case "collection": return {
       hideStatus: true,
-      rows: g.kind("collection").map((c) => { const lic = c.license?.split(/[;(]/)[0].trim(); return { ...base(c), logo: logoFor(c.id, c.url), sub: c.maintainer, facets: { license: lic ? [lic] : [] }, cols: { holds: c.holds, license: fl("license", lic, { tip: c.license && c.license !== lic ? c.license : undefined }) } }; }),
+      rows: g.kind("collection").map((c) => { const lic = c.license?.split(/[;(]/)[0].trim(); return { ...base(c), logo: logoFor(c.id, c.url), avatar: "org", sub: c.maintainer, facets: { license: lic ? [lic] : [] }, cols: { holds: c.holds, license: fl("license", lic, { tip: c.license && c.license !== lic ? c.license : undefined }) } }; }),
       facets: [{ key: "license", label: "Licence", searchable: false, width: "w-56" }],
       columns: [{ key: "holds", label: "Holds", hide: "hidden md:table-cell" }, { key: "license", label: "Licence", hide: "hidden lg:table-cell" }],
     };
@@ -360,7 +360,7 @@ function FrontsGrid() {
 function institutionPoints() {
   return rankInstitutions().map((r) => {
     const i = r.institution;
-    return { id: i.id, name: i.name, city: i.city, country: i.country, type: cap(i.institutionType.replace("-", " ")), lat: i.lat, lon: i.lng, route: routeFor(i), logo: logoFor(i.id, i.website), links: r.links };
+    return { id: i.id, name: i.name, city: i.city, country: i.country, type: cap(i.institutionType.replace("-", " ")), lat: i.lat, lon: i.lng, route: routeFor(i), logo: logoFor(i.id, i.website), avatar: "org", links: r.links };
   });
 }
 

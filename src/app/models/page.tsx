@@ -14,7 +14,7 @@ const WEIGHTS_LABEL: Record<string, string> = { open: "Open weights", gated: "Ga
 const WEIGHTS_TIPS: Record<string, string> = { "Open weights": "Download without gating.", "Gated download": "Download after accepting terms or a request form (for example on Hugging Face).", "By request": "Academic access by application to the developers.", "API only": "Hosted access only; no weights.", Proprietary: "Not available outside the company." };
 const ACCESS_LABEL: Record<string, string> = { open: "Open", registered: "Registered access", controlled: "Controlled access", commercial: "Commercial" };
 const licenceFamily = (l?: string) => !l ? "Not verified" : /non-commercial|NC|CC BY-NC|Gemma|Cambrian|Chai Discovery|research use|licence \(/i.test(l) ? "Non-commercial or research" : /Apache|MIT|BSD|CC BY 4.0|CC BY\b|CC0/i.test(l) ? "Permissive open licence" : "Other";
-const paperLink = (p?: string): LinkItem | undefined => !p ? undefined : p.startsWith("10.") ? { label: p, href: `https://doi.org/${p}` } : p.startsWith("arXiv:") ? { label: p, href: `https://arxiv.org/abs/${p.slice(6)}` } : p.startsWith("bioRxiv ") ? { label: p, href: `https://doi.org/${p.slice(8)}` } : undefined;
+const paperLink = (p?: string): LinkItem | undefined => !p ? undefined : p.startsWith("10.") ? { label: "paper", href: `https://doi.org/${p}`, tip: `DOI ${p}` } : p.startsWith("arXiv:") ? { label: "arXiv", href: `https://arxiv.org/abs/${p.slice(6)}`, tip: p } : p.startsWith("bioRxiv ") ? { label: "bioRxiv", href: `https://doi.org/${p.slice(8)}`, tip: `bioRxiv DOI ${p.slice(8)}` } : undefined;
 
 export default function ModelsPage() {
   const g = graph();
