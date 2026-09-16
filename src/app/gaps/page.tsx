@@ -68,7 +68,9 @@ export default function Gaps() {
   const thinCancers = g.kind("cancer").filter((c) => c.standardOfCare.length < 3 || c.pipeline.length === 0 || c.history.length < 3).map((e) => ({ e, why: [e.standardOfCare.length < 3 ? `${e.standardOfCare.length} standard-of-care rows` : null, e.pipeline.length === 0 ? "empty pipeline" : null, e.history.length < 3 ? `${e.history.length} history events` : null].filter(Boolean).join(" · ") }));
   const targetsNoDrugs = g.kind("target").filter((t) => (g.neighbours(t.id).get("drug") ?? []).length === 0).map((e) => ({ e, why: "no product links to this target" }));
   const drugsNoTrials = g.kind("drug").filter((d) => (g.neighbours(d.id).get("trial") ?? []).length === 0 && d.status !== "established").map((e) => ({ e, why: "no trial recorded" }));
-  const companiesNoDrugs = g.kind("company").filter((c) => (g.neighbours(c.id).get("drug") ?? []).length === 0).map((e) => ({ e, why: "no product linked" }));
+  // Only companies that make treatments or tests are expected to have a product: investors, service firms, software, device and imaging makers and nonprofits are counted separately so the gap is honest.
+  const DEVELOPER_TYPES = new Set(["pharma", "biotech", "radiopharma", "cell-therapy", "diagnostics"]);
+  const companiesNoDrugs = g.kind("company").filter((c) => DEVELOPER_TYPES.has(c.companyType) && (g.neighbours(c.id).get("drug") ?? []).length === 0).map((e) => ({ e, why: `no product linked (${e.companyType})` }));
   const shortSummaries = all.filter((e) => e.summary.length < 160).map((e) => ({ e, why: `${e.summary.length}-character summary` }));
   const total = noSources.length + weak.length + thinCancers.length + targetsNoDrugs.length + drugsNoTrials.length + companiesNoDrugs.length + shortSummaries.length;
 
@@ -131,7 +133,7 @@ export default function Gaps() {
         <Gap title="Cancers with thin pages" intro="Every cancer should have at least three standard-of-care settings, a pipeline, and a history. TNBC is the model." items={thinCancers} field="standardOfCare" />
         <Gap title="Targets with no product" intro="A target with no drug, tracer, or cell therapy linked to it is either a research target (say so in the summary) or a documentation gap." items={targetsNoDrugs} field="drugs" />
         <Gap title="Products with no trial" intro="Approved and late-stage products should link to at least one trial record. Add the trial or link an existing one." items={drugsNoTrials} field="trials" />
-        <Gap title="Companies with no product" intro="Link the company's products, or add them." items={companiesNoDrugs} field="drugs" />
+        <Gap title="Developers with no product" intro="Drug, radiopharmaceutical, cell therapy and diagnostics companies whose candidates or tests are not yet recorded. Link the company's products, or add them; investors, service firms, software and device makers are not listed here because a product record is not expected of them." items={companiesNoDrugs} field="drugs" />
         <Gap title="Objects with no external source" intro="Add a Wikipedia link, a registry record, or a primary source in `links`." items={noSources} field="links" />
         <Gap title="Weakly connected objects" intro="Two or fewer connections. Link to cancers, targets, products, trials, or terms so the object participates in the graph." items={weak} field="related" />
         <Gap title="Short summaries" intro="Under 160 characters. Expand with mechanism, evidence, and open questions." items={shortSummaries} field="summary" />

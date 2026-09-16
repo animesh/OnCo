@@ -756,6 +756,13 @@ export const cancers: CancerInput[] = [
 
   c({
     id: "extragonadal-germ-cell-tumour", name: "Extragonadal germ cell tumour", group: "genitourinary", wikipedia: W("Germ_cell_tumor"),
+    pipeline: ["tiger-trial", "autologous-stem-cell-transplant"],
+    stateOfArt: [
+      "Extragonadal seminoma is cured as often as testicular seminoma: the 2002 international pooled analysis of 635 patients reported 88 percent overall survival whether the primary was mediastinal or retroperitoneal.",
+      "Non-seminoma depends on where it starts: about 63 percent of patients with retroperitoneal primaries and 49 percent with mediastinal primaries were alive in the same analysis, which is why primary mediastinal non-seminoma sits in the IGCCCG poor-risk group by definition.",
+      "Adverse factors for non-seminoma are liver, lung or brain metastases, a mediastinal primary and a raised beta-hCG; these guide the choice of four cycles and early referral to a high-volume centre.",
+      "Salvage is the open question: the randomised TIGER trial comparing conventional-dose TIP with high-dose chemotherapy and stem cell rescue has finished recruiting and its result will set the standard for relapse.",
+    ],
     aka: ["Extragonadal Germ Cell Tumor", "Extragonadal germ cell tumor", "Mediastinal germ cell tumour", "Retroperitoneal germ cell tumour", "Primary mediastinal nonseminomatous germ cell tumour"],
     burden: "Rare: only a few percent of germ cell tumours arise outside the testis or ovary, most in the chest (mediastinum) or the back of the abdomen (retroperitoneum) in young men; no separate GLOBOCAN count.",
     tldr: "Extragonadal germ cell tumours are the same cancers as testicular germ cell tumours but arising in the midline of the body, most often the chest or the back of the abdomen. Seminomas are highly curable with chemotherapy; non-seminomas of the chest are the hardest germ cell tumours to cure and are treated with intensive chemotherapy followed by surgery.",
@@ -768,6 +775,8 @@ export const cancers: CancerInput[] = [
       { setting: "Non-seminoma, mediastinal (poor risk)", approach: "Four cycles of BEP or VIP, then surgery of residual disease; consider high-dose chemotherapy with autologous stem cell rescue at relapse; treat in a specialist centre.", refs: ["etoposide", "ifosfamide", "cisplatin"] },
     ],
     history: [
+      { year: 2002, title: "International pooled analysis of extragonadal germ cell tumours", note: "Bokemeyer and colleagues pool 635 patients from eleven centres: seminomas do as well as testicular disease, mediastinal non-seminomas do worst, and prognostic factors are defined.", refs: ["cisplatin", "etoposide"] },
+      { year: 2015, title: "TIGER trial opens", note: "The Alliance and European groups randomise first-relapse germ cell tumours between conventional-dose TIP and high-dose TI-CE with stem cell rescue, the first randomised test of high-dose salvage since the 1990s.", refs: ["tiger-trial"] },
       { year: 1977, title: "Cisplatin combinations cure disseminated germ cell tumours", note: "Einhorn's PVB regimen (cisplatin, vinblastine, bleomycin) turned a usually fatal cancer into a curable one.", refs: ["cisplatin", "vinblastine", "bleomycin"] },
       { year: 1987, title: "BEP replaces PVB", note: "Etoposide in place of vinblastine gave equal cure with less neurotoxicity in the Indiana and SECSG trials.", refs: ["etoposide"] },
       { year: 1997, title: "IGCCCG classification", note: "The International Germ Cell Cancer Collaborative Group defined good, intermediate and poor risk; a mediastinal non-seminomatous primary alone places a patient in the poor-risk group." },
@@ -780,6 +789,13 @@ export const cancers: CancerInput[] = [
   }),
   c({
     id: "metastatic-cancer", name: "Metastatic cancer (cancer that has spread)", group: "other", wikipedia: W("Metastasis"),
+    pipeline: ["sabr-comet", "sbrt", "ctdna", "pembrolizumab", "larotrectinib", "entrectinib", "dabrafenib", "trametinib", "selpercatinib", "dostarlimab", "trastuzumab-deruxtecan"],
+    stateOfArt: [
+      "Oligometastatic disease can be treated for long-term control: in SABR-COMET, adding stereotactic radiotherapy to every metastasis (one to five sites) raised five-year overall survival from 17.7 to 42.3 percent, at the cost of some serious toxicity; phase 3 trials are confirming it.",
+      "Treatment is chosen by the tumour's biology, not only its origin: pembrolizumab for mismatch-repair-deficient or high-mutation-burden tumours (2017), larotrectinib and entrectinib for NTRK fusions, dabrafenib with trametinib for BRAF V600E, selpercatinib for RET, and trastuzumab deruxtecan for HER2-positive tumours of any site are approved regardless of where the cancer began.",
+      "Metastases to bone and brain have their own standards: bone-modifying agents and single-fraction palliative radiotherapy for bone, stereotactic radiosurgery rather than whole-brain radiotherapy for limited brain metastases, and brain-penetrant targeted drugs where a driver exists.",
+      "Early palliative care alongside cancer treatment improves quality of life and mood and does not shorten life; guidelines now recommend it from diagnosis of advanced disease.",
+    ],
     aka: ["Metastatic Cancer", "Secondary cancer", "Advanced cancer", "Stage 4 cancer", "Stage IV cancer", "Cancer that has spread"],
     burden: "Most cancer deaths follow metastasis rather than growth of the original tumour; how often a cancer spreads, and where, depends on the primary site.",
     tldr: "Metastatic cancer means the original cancer has spread to other parts of the body, most often the bones, liver, lungs or brain. It keeps the name of where it started, is treated with therapies that reach the whole body, and can increasingly be controlled for years; with limited spread it is sometimes treated with the aim of cure.",
@@ -793,6 +809,10 @@ export const cancers: CancerInput[] = [
       { setting: "Brain metastases", approach: "Stereotactic radiosurgery for limited lesions, surgery for large symptomatic ones, and brain-penetrant targeted drugs where a driver exists.", refs: ["stereotactic-radiosurgery"] },
     ],
     history: [
+      { year: 1995, title: "Oligometastasis proposed", note: "Hellman and Weichselbaum argue that some patients have a limited metastatic state that local treatment could control, the idea SABR-COMET later tested.", refs: ["sbrt"] },
+      { year: 2010, title: "Early palliative care trial", note: "Temel and colleagues randomise newly diagnosed metastatic lung cancer patients to early palliative care with standard oncology: better quality of life, less depression and no loss of survival.", refs: ["palliative-care"] },
+      { year: 2017, title: "First tissue-agnostic approval", note: "Pembrolizumab is approved for any solid tumour with mismatch-repair deficiency or microsatellite instability, the first cancer drug approved by biomarker rather than organ.", refs: ["pembrolizumab"] },
+      { year: 2020, title: "SABR-COMET long-term results", note: "Five-year survival more than doubles with stereotactic radiotherapy to all metastases in the randomised phase 2 trial.", refs: ["sabr-comet"] },
       { year: 1889, title: "Paget's seed and soil hypothesis", note: "Stephen Paget proposed that cancers spread to organs whose environment suits them, the founding idea of metastasis research." },
       { year: 2002, title: "Zoledronic acid approved for bone metastases", note: "Bisphosphonates, then denosumab, cut fractures and other skeletal events from bone metastases.", refs: ["zoledronic-acid", "denosumab"] },
       { year: 2019, title: "SABR-COMET reports", note: "Randomised phase 2 trial in which stereotactic radiotherapy to all sites of oligometastatic disease was associated with longer survival, launching phase 3 trials of the approach.", refs: ["sbrt"] },
