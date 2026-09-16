@@ -262,3 +262,9 @@ The owner's patient-first roadmap (a real-case "For me", persistent cancer choic
 
 - [ ] Parker Institute for Cancer Immunotherapy (parkerici.org): the institute is already a record; pull its useful entities the way the FCCT page was mined: member cancer centres and their leads, PICI investigators, PICI-backed companies and spin-outs, and the trials it sponsors, each linked back to the institute.
 - [ ] Do the same for other institutions with public network or portfolio pages (Cancer Research UK institutes, Stand Up To Cancer dream teams, NCI-designated centre consortia, EMBL and Institut Curie partner lists), one institution a tick, so every institution page links out to people, companies and trials rather than standing alone.
+
+### Registry waves 6 and 7 (16 Sept 2026, evening)
+
+- Trials wave 6: 1,616 industry-sponsored phase 1/2 to 3 trials from the ClinicalTrials.gov cache that earlier waves left out (recruiting or active), taking trials from 1,701 to 3,317. Cancers come from the registry's condition terms matched against OnCo's cancer names and a keyword table; 528 basket studies map only to the advanced-solid-tumour page. Trials naming only non-cancer conditions (myasthenia gravis, HPV infection, neurofibromatosis) were left out.
+- Products waves 6 and 7: 87 investigational agents that are interventions in recorded trials and were missing as products, each linked to its trials, cancers and sponsor; modality comes from the name stem or the registry's own description, and the record says so. Registry misspellings of recorded drugs (fuzzy match), formulations, combinations and immunology drugs used for side effects were filtered out. Generators live in /tmp/drafts on the owner's machine (gen-trials-wave6.ts, gen-wave6.ts) and should move into scripts/ as fetch-ctgov-waves.ts.
+- Still open: 568 code-named agents whose registry text gives no modality (needs sponsor pages), and a weekly refetch so new registrations flow in.
