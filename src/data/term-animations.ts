@@ -389,6 +389,19 @@ export function termCategoryKey(category: string): string { return category.toLo
 
 /** Category slug → animated builder. Some reuse existing sequences: ADC internalisation, imaging, radiopharma, prevention fronts. */
 export const TERM_ANIMATED: Record<string, () => Mesh> = {
+  // canonical categories (src/data/term-categories.ts); several reuse a front or technology sequence that fits
+  "treatment-jargon": FRONT_ANIMATED["targeted-therapy"],
+  "biology-basics": biologyTerm,
+  "procedures": FRONT_ANIMATED["surgery"],
+  "clinic-basics": FRONT_ANIMATED["supportive-care"],
+  "regulation-policy": regulatoryTerm,
+  "side-effects": toxicityTerm,
+  "adc-chemistry": ANIMATED["adc"],
+  "genomics-genetics": genomicsTerm,
+  "nutrition-lifestyle": FRONT_ANIMATED["nutrition-lifestyle"],
+  "anatomy": FRONT_ANIMATED["imaging"],
+  "diagnostics-imaging": diagnosticsTerm,
+  "epidemiology-prevention": FRONT_ANIMATED["prevention"],
   endpoints: endpointsTerm,
   biomarkers: biomarkersTerm,
   genomics: genomicsTerm,

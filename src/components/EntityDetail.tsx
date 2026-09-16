@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { publicTags } from "@/lib/tags";
 import type { ReactNode } from "react";
-import type { Cancer, Entity, Roadmap } from "@/lib/schema";
+import type { Cancer, Entity, Roadmap, Term } from "@/lib/schema";
 import { KIND_META, routeFor } from "@/lib/schema";
 import { graph } from "@/lib/graph";
 import { paragraphs, KIND_COLOR, statusClass } from "@/lib/text";
@@ -46,6 +46,7 @@ import { modalityGroup } from "@/lib/modality-group";
 import { TldrText } from "./TldrText";
 import { FrontSchematic } from "./FrontSchematic";
 import { TermSchematic } from "./TermSchematic";
+import { termVisual } from "@/lib/term-visual";
 import { DrugGrid } from "./DrugCard";
 import type { Drug, Paper } from "@/lib/schema";
 import { LayerAware } from "./LayerAware";
@@ -360,7 +361,7 @@ function kindTabs(e: Entity): Tab[] {
         { id: "interventions", label: "How drugs attack it", count: e.interventions.length, content: <Bullets items={e.interventions} linked={(t) => withTermHovers(t, { skipId: e.id })} /> },
       ];
     case "term":
-      return [overview(<><div className="mt-8"><TermSchematic category={e.category} /></div><div className="mt-6"><Field label="Category">{e.category}</Field></div></>)];
+      return [overview(<><div className="mt-8"><TermVisualPanel term={e} /></div><div className="mt-6"><Field label="Category"><Link className="underline" href={`/terms/?category=${encodeURIComponent(e.category)}`}>{e.category}</Link></Field></div></>)];
     case "trial":
       return [
         overview(<div className="grid gap-6 sm:grid-cols-2 mt-8">
@@ -685,4 +686,17 @@ function DrugSchematic({ technologies, modality }: { technologies: string[]; mod
       <div className="px-4 py-3 border-t border-border text-sm"><span className="font-medium">Schematic of the modality</span><span className="text-muted"> · {modality} · not a molecule; see the <Link className="underline" href={routeFor(tech)}>{tech.name}</Link> page</span></div>
     </div>
   );
+}
+
+/** A glossary term's picture: its target, molecule, technology or organ when it has one, otherwise the category animation. */
+function TermVisualPanel({ term }: { term: Term }) {
+  const g = graph();
+  const v = termVisual(term, g);
+  switch (v.kind) {
+    case "target": return <><TargetSchematic target={v.target} /><p className="mt-2 text-xs text-muted">Showing the target this term concerns: <Link className="underline" href={`/targets/${v.target.id}/`}>{v.target.name}</Link>.</p></>;
+    case "molecule": { const entries = STRUCTURES[v.drugId] ?? []; const d = g.get(v.drugId); return <><MoleculeViewer entries={entries} /><p className="mt-2 text-xs text-muted">Showing the molecule this term concerns: {d ? <Link className="underline" href={routeFor(d)}>{d.name}</Link> : v.drugId}.</p></>; }
+    case "tech": return <><TechSchematic tech={v.tech} /><p className="mt-2 text-xs text-muted">Showing the technology this term belongs to: <Link className="underline" href={routeFor(v.tech)}>{v.tech.name}</Link>.</p></>;
+    case "cancer": { const c = g.get(v.cancerId); return <><OrganSchematic cancerId={v.cancerId} /><p className="mt-2 text-xs text-muted">Showing the organ this term concerns{c ? <>: <Link className="underline" href={routeFor(c)}>{c.name}</Link></> : null}.</p></>; }
+    default: return <TermSchematic category={term.category} />;
+  }
 }

@@ -11,6 +11,7 @@ import { flagFor, COUNTRY_FACETS } from "@/lib/flags";
 import { TargetThumb } from "./TargetThumb";
 import { TechThumb } from "./TechThumb";
 import { TermThumb } from "./TermThumb";
+import { CancerIcon } from "./CancerIcon";
 import type { TargetSchematicTarget } from "./TargetSchematic";
 import { STATUS_LABEL, STATUS_TIPS, statusClass } from "@/lib/text";
 import { FacetSelect } from "./filters/FacetSelect";
@@ -44,6 +45,8 @@ export type BrowserRow = {
   schematic?: { id: string; sections: string[] };
   /** Glossary term: renders its category schematic beside the name. */
   term?: { category: string };
+  /** Organ icon (a cancer id) beside the name, for anatomical and pathological terms. */
+  cancerIcon?: string;
   /** Facet values keyed by facet key; arrays for multi-valued facets. */
   facets: Record<string, string[]>;
   /** Extra columns keyed by column key: formatted strings, numbers, lists of links, glossary-marked text, or facet chips. */
@@ -286,6 +289,7 @@ export function EntityBrowser({ rows, facets, columns, noun, defaultSort, hideSt
         {r.target && <TargetThumb target={r.target} route={r.route} />}
         {r.schematic && <TechThumb id={r.schematic.id} sections={r.schematic.sections} name={r.name} route={r.route} />}
         {r.term && <TermThumb category={r.term.category} name={r.name} route={r.route} />}
+        {r.cancerIcon && <Link href={r.route} aria-label={`${r.name} organ icon`} className="inline-flex h-10 w-14 shrink-0 items-center justify-center rounded-md border border-border bg-accent-soft text-accent"><CancerIcon cancerId={r.cancerIcon} className="h-7 w-7" /></Link>}
         {r.logo && !r.molecule && (
           <span className={`inline-flex h-7 w-7 shrink-0 items-center justify-center border border-border bg-white overflow-hidden ${r.round ? "rounded-full" : "rounded-md"}`}>
             {/* eslint-disable-next-line @next/next/no-img-element -- self-hosted or hotlinked icon, never optimised */}

@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { termVisual, type TermVisual } from "@/lib/term-visual";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { graph } from "@/lib/graph";
@@ -171,7 +172,7 @@ function buildBrowser(k: Kind): { rows: BrowserRow[]; facets: FacetDef[]; column
     };
     case "term": return {
       hideStatus: true,
-      rows: g.kind("term").map((t) => ({ ...base(t), term: { category: t.category }, facets: { category: [t.category] }, cols: { category: fl("category", t.category), links: count(g.degree(t.id), t, "connected", "linked object", "for") }, sortKeys: { links: g.degree(t.id) } })),
+      rows: g.kind("term").map((t) => ({ ...base(t), ...termRowVisual(termVisual(t, g), t.category), facets: { category: [t.category] }, cols: { category: fl("category", t.category), links: count(g.degree(t.id), t, "connected", "linked object", "for") }, sortKeys: { links: g.degree(t.id) } })),
       facets: [{ key: "category", label: "Category", searchable: false, width: "w-48" }],
       columns: [{ key: "category", label: "Category", sortable: true }, { key: "links", label: "Links", sortable: true, numeric: true, hide: "hidden sm:table-cell" }],
       defaultSort: { key: "category", dir: 1 },
@@ -274,7 +275,6 @@ export default async function KindIndex({ params }: { params: Promise<{ kind: st
       <PageHeader kicker={<span className="kicker"><KindName kind={k} form="plural" fallback={meta.plural} /></span>} title={<KindName kind={k} form="title" fallback={title} />} seed={title} lede={meta.blurb} right={right} />
       <Container className="pb-16">
         {k === "section" && <FrontsGrid />}
-        {k === "term" && <TermCategoryGrid />}
         {k === "bottleneck" && <BottlenecksPipeline />}
         {k === "cancer" && <CancersGrid />}
         {k === "term" && <GlossaryCategories />}
@@ -287,27 +287,6 @@ export default async function KindIndex({ params }: { params: Promise<{ kind: st
   );
 }
 
-function TermCategoryGrid() {
-  const g = graph();
-  const counts = new Map<string, number>();
-  for (const t of g.kind("term")) counts.set(t.category, (counts.get(t.category) ?? 0) + 1);
-  const cats = [...counts.entries()].sort((a, b) => b[1] - a[1]);
-  return (
-    <div className="mb-8">
-      <p className="text-sm text-muted mb-3">Each kind of term, as a short animation. Every term page opens with the animation for its category.</p>
-      <div className="grid gap-3 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6">
-        {cats.map(([cat, n]) => (
-          <div key={cat} className="card overflow-hidden">
-            <TermSchematic category={cat} compact height="h-28" />
-            <div className="px-3 py-2 text-sm flex items-baseline justify-between"><span className="font-medium">{cat}</span><span className="text-xs text-muted tabular-nums">{n}</span></div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-/** Every cancer as an icon tile, grouped, so a newcomer can find theirs by organ rather than by name. */
 /** One clickable card per glossary category, each with its animated schematic; clicking filters the table below. */
 function GlossaryCategories() {
   const g = graph();
@@ -316,13 +295,14 @@ function GlossaryCategories() {
   const cats = [...counts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
   return (
     <div className="mb-8">
-      <div className="kicker mb-2">Browse by category</div>
-      <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+      <div className="kicker mb-1">Browse by category</div>
+      <p className="text-sm text-muted mb-3">Twenty kinds of term, each with a short animation of what that kind is about. Click one to filter the glossary; every term page opens with its own picture.</p>
+      <ul className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-3">
         {cats.map(([c, n]) => (
-          <li key={c}>
-            <Link href={`/terms/?category=${encodeURIComponent(c)}`} className="card block overflow-hidden hover:shadow-md transition">
-              <TermSchematic category={c} compact height="h-20" />
-              <div className="px-3 py-2 flex items-baseline justify-between gap-2"><span className="text-sm font-medium">{c}</span><span className="text-xs text-muted tabular-nums">{n}</span></div>
+          <li key={c} className="min-w-0">
+            <Link href={`/terms/?category=${encodeURIComponent(c)}`} className="card flex h-full flex-col overflow-hidden hover:shadow-md transition">
+              <div className="h-24 shrink-0"><TermSchematic category={c} compact height="h-24" /></div>
+              <div className="px-3 py-2 flex items-baseline justify-between gap-2 min-w-0"><span className="text-sm font-medium truncate" title={c}>{c}</span><span className="text-xs text-muted tabular-nums shrink-0">{n}</span></div>
             </Link>
           </li>
         ))}
@@ -331,6 +311,7 @@ function GlossaryCategories() {
   );
 }
 
+/** Every cancer as an icon tile, grouped, so a newcomer can find theirs by organ rather than by name. */
 function CancersGrid() {
   const g = graph();
   const items = g.kind("cancer");
@@ -381,4 +362,15 @@ function institutionPoints() {
     const i = r.institution;
     return { id: i.id, name: i.name, city: i.city, country: i.country, type: cap(i.institutionType.replace("-", " ")), lat: i.lat, lon: i.lng, route: routeFor(i), logo: logoFor(i.id, i.website), links: r.links };
   });
+}
+
+/** Browser-row fields for a glossary term's picture: one slot only, the most specific available. */
+function termRowVisual(v: TermVisual, category: string): Partial<BrowserRow> {
+  switch (v.kind) {
+    case "target": return { target: v.target };
+    case "molecule": return { molecule: v.drugId, modality: v.modality };
+    case "tech": return { schematic: { id: v.tech.id, sections: v.tech.sections } };
+    case "cancer": return { cancerIcon: v.cancerId };
+    default: return { term: { category } };
+  }
 }

@@ -1,4 +1,5 @@
 import { cancers } from "./cancers";
+import { canonicalTermCategory } from "./term-categories";
 import { sections } from "./sections";
 import { technologies } from "./technologies";
 import { targets } from "./targets";
@@ -60,7 +61,7 @@ import { companiesSponsors } from "./companies-sponsors";
 import { drugsPipelineWave1 } from "./drugs-pipeline-wave1";
 import { pipelineTrialsWave2 } from "./pipeline-trials-wave2";
 
-export const ALL_INPUTS: EntityInput[] = [
+const RAW_INPUTS: EntityInput[] = [
   ...mergeSpikes(cancers),
   ...spikeEntities,
   ...sections,
@@ -122,3 +123,7 @@ export const ALL_INPUTS: EntityInput[] = [
   ...drugsPipelineWave1,
   ...pipelineTrialsWave2,
 ];
+
+/** Every input, with glossary terms mapped to their canonical category (see ./term-categories.ts). */
+export const ALL_INPUTS: EntityInput[] = RAW_INPUTS.map((e) => (e.kind === "term" ? { ...e, category: canonicalTermCategory(e.id, e.category) } : e));
+
