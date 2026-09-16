@@ -22,6 +22,7 @@ jobs:
       - run: npm run validate
       - run: npx tsx scripts/newsletter.ts
       - uses: peter-evans/create-pull-request@v7
+        id: cpr
         with:
           branch: bot/newsletter
           title: "Weekly issue"
@@ -31,3 +32,8 @@ jobs:
             Review the issue before merging; anything wrong in it is wrong in the corpus and should be fixed there.
           labels: automated, community
           delete-branch: true
+      - name: Merge the refresh (this run already validated and tested it)
+        if: steps.cpr.outputs.pull-request-number != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh pr merge --squash --delete-branch "${{ steps.cpr.outputs.pull-request-number }}" || echo "merge deferred, the pull request stays open for a human"

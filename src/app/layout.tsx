@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
@@ -67,6 +68,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-full flex flex-col">
         <RegionProvider>
         <ThemeScript />
+        {/* Google Analytics (gtag.js): visit counts only; the id is the owner's property. Disclosed on /about/. */}
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-2TTJ25WSN8" strategy="afterInteractive" />
+        <Script id="ga-init" strategy="afterInteractive">{`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-2TTJ25WSN8');`}</Script>
         <LayerScript />
         <GardenDefs />
         <SkipLink />

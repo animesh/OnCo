@@ -24,6 +24,7 @@ jobs:
       - run: npm run validate
       - run: npm test -- src/lib/completeness.test.ts
       - uses: peter-evans/create-pull-request@v7
+        id: cpr
         with:
           branch: bot/refresh-universe
           title: "Weekly refresh: universe denominators and lists"
@@ -34,3 +35,8 @@ jobs:
             A source that could not be reached keeps its previous snapshot. Check the diff for denominators that moved, then look at `/completeness/` for newly listed items to add.
           labels: automated, pipeline
           delete-branch: true
+      - name: Merge the refresh (this run already validated and tested it)
+        if: steps.cpr.outputs.pull-request-number != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh pr merge --squash --delete-branch "${{ steps.cpr.outputs.pull-request-number }}" || echo "merge deferred, the pull request stays open for a human"

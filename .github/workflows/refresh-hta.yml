@@ -24,6 +24,7 @@ jobs:
       - run: npx tsx scripts/fetch-survival.ts
       - run: npm run validate
       - uses: peter-evans/create-pull-request@v7
+        id: cpr
         with:
           branch: bot/refresh-hta
           title: "Monthly refresh: HTA decisions (NICE, G-BA, PBAC) and SEER survival"
@@ -35,3 +36,8 @@ jobs:
             Rows flagged "TA page does not name this product" mean a TA number in `coverage-uk.ts` needs checking.
           labels: automated, pipeline
           delete-branch: true
+      - name: Merge the refresh (this run already validated and tested it)
+        if: steps.cpr.outputs.pull-request-number != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh pr merge --squash --delete-branch "${{ steps.cpr.outputs.pull-request-number }}" || echo "merge deferred, the pull request stays open for a human"

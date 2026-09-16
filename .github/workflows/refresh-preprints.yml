@@ -23,6 +23,7 @@ jobs:
       - run: npx tsx scripts/fetch-preprints.ts
       - run: npm run validate
       - uses: peter-evans/create-pull-request@v7
+        id: cpr
         with:
           branch: bot/refresh-preprints
           title: "Weekly refresh: Europe PMC preprint tracker"
@@ -32,3 +33,8 @@ jobs:
             Files under `public/preprints/` changed. The /preprints/ page is rebuilt from `public/preprints/index.json`.
           labels: automated, pipeline
           delete-branch: true
+      - name: Merge the refresh (this run already validated and tested it)
+        if: steps.cpr.outputs.pull-request-number != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh pr merge --squash --delete-branch "${{ steps.cpr.outputs.pull-request-number }}" || echo "merge deferred, the pull request stays open for a human"

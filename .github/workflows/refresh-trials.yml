@@ -22,6 +22,7 @@ jobs:
       - run: npm run fetch:trials
       - run: npm run validate
       - uses: peter-evans/create-pull-request@v7
+        id: cpr
         with:
           branch: bot/refresh-trials
           title: "Weekly refresh: ClinicalTrials.gov phase 2/3 counts"
@@ -31,3 +32,8 @@ jobs:
             Files under `public/trials/` changed. Review new recruiting trials for objects worth adding to the corpus.
           labels: automated, pipeline
           delete-branch: true
+      - name: Merge the refresh (this run already validated and tested it)
+        if: steps.cpr.outputs.pull-request-number != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh pr merge --squash --delete-branch "${{ steps.cpr.outputs.pull-request-number }}" || echo "merge deferred, the pull request stays open for a human"

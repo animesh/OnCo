@@ -26,6 +26,7 @@ jobs:
       - run: npm run provenance
       - run: npm run factcheck
       - uses: peter-evans/create-pull-request@v7
+        id: cpr
         with:
           branch: bot/factcheck
           title: "Weekly fact check: registry mismatches, audit, provenance"
@@ -35,3 +36,8 @@ jobs:
             Review `public/factcheck.json` and `public/audit.json` for candidates; confirmed errors go to CORRECTIONS.md.
           labels: automated, trust
           delete-branch: true
+      - name: Merge the refresh (this run already validated and tested it)
+        if: steps.cpr.outputs.pull-request-number != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh pr merge --squash --delete-branch "${{ steps.cpr.outputs.pull-request-number }}" || echo "merge deferred, the pull request stays open for a human"

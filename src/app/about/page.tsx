@@ -46,7 +46,7 @@ export default function About() {
         </section>
         <section>
           <h2 className="text-xl font-semibold mb-2">How it is built</h2>
-          <p>Next.js static export on Vercel; TypeScript data files validated by Zod schemas; a build step that checks every cross-reference resolves and emits the corpus as JSON at <Link href="/api/">/api/v1/</Link>. Search runs entirely in the browser. The map uses Natural Earth country outlines from world-atlas. No server, no database, no tracking.</p>
+          <p>Next.js static export on Vercel; TypeScript data files validated by Zod schemas; a build step that checks every cross-reference resolves and emits the corpus as JSON at <Link href="/api/">/api/v1/</Link>. Search runs entirely in the browser. The map uses Natural Earth country outlines from world-atlas. No server and no database. Google Analytics counts visits and page views so we can see what people use; there are no advertising trackers, and the corrections, watchlist and sign-in features store nothing about you beyond what you type.</p>
         </section>
         <section>
           <h2 className="text-xl font-semibold mb-2">How to contribute</h2>

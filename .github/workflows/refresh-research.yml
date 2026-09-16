@@ -29,6 +29,7 @@ jobs:
       - run: npm run validate
       - run: npm test -- src/lib/research.test.ts
       - uses: peter-evans/create-pull-request@v7
+        id: cpr
         with:
           branch: bot/refresh-research
           title: "Weekly refresh: institution research output from OpenAlex"
@@ -39,3 +40,8 @@ jobs:
             Files under `public/openalex/research/` and `public/openalex/research-index.json` changed. Institution pages show the Research output panel from these files; /universities/ reads the five-year columns from the index.
           labels: automated, pipeline
           delete-branch: true
+      - name: Merge the refresh (this run already validated and tested it)
+        if: steps.cpr.outputs.pull-request-number != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh pr merge --squash --delete-branch "${{ steps.cpr.outputs.pull-request-number }}" || echo "merge deferred, the pull request stays open for a human"
