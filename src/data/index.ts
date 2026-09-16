@@ -63,6 +63,7 @@ import { pipelineTrialsWave2 } from "./pipeline-trials-wave2";
 import { drugsPipelineWave2 } from "./drugs-pipeline-wave2";
 import { drugsPipelineWave6 } from "./drugs-pipeline-wave6";
 import { drugsPipelineWave7 } from "./drugs-pipeline-wave7";
+import { drugsChinaWave1 } from "./drugs-china-wave1";
 import { pipelineTrialsWave3 } from "./pipeline-trials-wave3";
 import { pipelineTrialsWave4 } from "./pipeline-trials-wave4";
 import { pipelineTrialsWave5 } from "./pipeline-trials-wave5";
@@ -129,7 +130,7 @@ const RAW_INPUTS: EntityInput[] = [
   ...companiesSponsors,
   ...drugsPipelineWave1,
   ...pipelineTrialsWave2,
-  ...drugsPipelineWave2, ...drugsPipelineWave6, ...drugsPipelineWave7,
+  ...drugsPipelineWave2, ...drugsPipelineWave6, ...drugsPipelineWave7, ...drugsChinaWave1,
   ...pipelineTrialsWave3,
   ...pipelineTrialsWave4,
   ...pipelineTrialsWave5, ...pipelineTrialsWave6,

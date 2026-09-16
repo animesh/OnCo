@@ -467,6 +467,22 @@ export const regionalApprovals: Record<string, RegionalRow> = {
   golidocitinib: { CN: A(2024, NMPA, "Relapsed or refractory peripheral T-cell lymphoma (Jun 2024)") },
   pucotenlimab: { CN: A(2022, NMPA, "MSI-H/dMMR solid tumours and melanoma after prior therapy (Jul 2022)") },
   limertinib: { CN: A(2024, NMPA, "EGFR T790M-mutant NSCLC after prior EGFR inhibitor") },
+  befotertinib: { CN: A(2023, NMPA, "EGFR T790M-positive NSCLC after first- or second-generation EGFR inhibitors (May 2023); first-line EGFR-mutant NSCLC (2024)") },
+  fluzoparib: { CN: A(2020, NMPA, "Germline BRCA-mutated platinum-sensitive recurrent ovarian cancer after two or more lines (Dec 2020); maintenance after platinum (2021)") },
+  pamiparib: { CN: A(2021, NMPA, "Germline BRCA-mutated recurrent advanced ovarian, fallopian tube or primary peritoneal cancer after two or more lines (May 2021)") },
+  dabrafenib: { CN: A(2019, NMPA, "BRAF V600 mutation-positive unresectable or metastatic melanoma, with trametinib (Dec 2019)") },
+  benmelstobart: { CN: A(2024, NMPA, "Extensive-stage small-cell lung cancer, first line, with anlotinib and platinum-etoposide chemotherapy (2024)") },
+  iruplinalkib: { CN: A(2023, NMPA, "ALK-positive NSCLC after crizotinib (June 2023); first line (2024)") },
+  flumatinib: { CN: A(2019, NMPA, "Newly diagnosed Philadelphia chromosome-positive chronic myeloid leukaemia, chronic phase (Nov 2019)") },
+  utidelone: { CN: A(2021, NMPA, "Recurrent or metastatic breast cancer after anthracycline and taxane, with capecitabine (Mar 2021)") },
+  inetetamab: { CN: A(2020, NMPA, "HER2-positive metastatic breast cancer after chemotherapy, with vinorelbine (June 2020)") },
+  linperlisib: { CN: A(2022, NMPA, "Relapsed or refractory follicular lymphoma after two or more lines, conditional (Nov 2022)") },
+  gumarontinib: { CN: A(2023, NMPA, "NSCLC with MET exon 14 skipping, conditional (Mar 2023)") },
+  surufatinib: { CN: A(2020, NMPA, "Advanced non-pancreatic neuroendocrine tumours (Dec 2020); pancreatic neuroendocrine tumours (June 2021)") },
+  "recombinant-human-endostatin": { CN: A(2005, NMPA, "Advanced NSCLC with vinorelbine and cisplatin (Sept 2005)") },
+  "h101-oncolytic-adenovirus": { CN: A(2005, NMPA, "Late-stage nasopharyngeal carcinoma with chemotherapy (Nov 2005)") },
+  "iparomlimab-tuvonralimab": { CN: A(2024, NMPA, "Recurrent or metastatic cervical cancer after platinum chemotherapy (Sept 2024)") },
+  mecapegfilgrastim: { CN: A(2018, NMPA, "Prevention of chemotherapy-induced neutropenia in non-myeloid cancers (May 2018)") },
 };
 
 /** Convenience: which regions have an approval (approved or conditional). */

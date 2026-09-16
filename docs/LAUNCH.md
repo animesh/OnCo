@@ -268,3 +268,14 @@ The owner's patient-first roadmap (a real-case "For me", persistent cancer choic
 - Trials wave 6: 1,616 industry-sponsored phase 1/2 to 3 trials from the ClinicalTrials.gov cache that earlier waves left out (recruiting or active), taking trials from 1,701 to 3,317. Cancers come from the registry's condition terms matched against OnCo's cancer names and a keyword table; 528 basket studies map only to the advanced-solid-tumour page. Trials naming only non-cancer conditions (myasthenia gravis, HPV infection, neurofibromatosis) were left out.
 - Products waves 6 and 7: 87 investigational agents that are interventions in recorded trials and were missing as products, each linked to its trials, cancers and sponsor; modality comes from the name stem or the registry's own description, and the record says so. Registry misspellings of recorded drugs (fuzzy match), formulations, combinations and immunology drugs used for side effects were filtered out. Generators live in /tmp/drafts on the owner's machine (gen-trials-wave6.ts, gen-wave6.ts) and should move into scripts/ as fetch-ctgov-waves.ts.
 - Still open: 568 code-named agents whose registry text gives no modality (needs sponsor pages), and a weekly refetch so new registrations flow in.
+
+### China deep dive, wave 1 (16 Sept 2026, evening)
+
+- Twelve NMPA-approved cancer medicines that were missing joined china.ts's earlier set: benmelstobart, iruplinalkib, flumatinib, utidelone, inetetamab, linperlisib, gumarontinib, surufatinib, Endostar, Oncorine (H101), QL1706 and mecapegfilgrastim, each with its China approval row, developer and cancer links; five developers added (Biostar, 3SBio, Juventas, Shanghai Yingli, Shanghai Sunway). China rows added for befotertinib, fluzoparib, pamiparib and dabrafenib.
+- Left out on purpose because the approval facts were not certain enough: unecritinib, ripertamab, becotatug vedotin, satri-cel, vorolanib, socazolimab, plinabulin. Next: confirm those from NMPA notices, then the Chinese sponsors in the registry cache with no company record (Jacobio, ImmVira, Binhui, Beijing Mabworks, Chengdu Zenitar and about twenty more).
+- Two Hansoh records exist (hansoh and hansoh-pharma); merge them.
+
+### Office access finding (16 Sept, evening)
+
+- The owner's "You're offline" pages at UCSF are the service worker's fallback after the campus network resets TLS for the onco.cc name; the site loads in Panama and Los Angeles. Not caching. Ask UCSF IT to allow onco.cc and www.onco.cc, or submit the domain for categorisation with the filter vendor.
+- The service worker now waits for the network after its short timeout when no cached copy exists, so slow connections no longer see the offline page; the offline page explains the filtered-network case.

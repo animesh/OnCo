@@ -9,7 +9,7 @@
  * Visited pages accumulate in the page cache, capped at PAGE_LIMIT entries (oldest evicted).
  * Bump VERSION to drop every old cache on the next activation. Registered by src/components/RegisterSW.tsx.
  */
-const VERSION = "onco-v1";
+const VERSION = "onco-v2";
 const SHELL_CACHE = `${VERSION}-shell`;
 const PAGE_CACHE = `${VERSION}-pages`;
 const ASSET_CACHE = `${VERSION}-assets`;
@@ -18,7 +18,7 @@ const MEDIA_CACHE = `${VERSION}-media`;
 const SHELL = ["/", "/offline/", "/manifest.webmanifest", "/saved/"];
 const PAGE_LIMIT = 200;
 const MEDIA_LIMIT = 400;
-const NETWORK_TIMEOUT_MS = 4000;
+const NETWORK_TIMEOUT_MS = 6000;
 
 self.addEventListener("install", (event) => {
   event.waitUntil(caches.open(SHELL_CACHE).then((c) => c.addAll(SHELL).catch(() => undefined)).then(() => self.skipWaiting()));
@@ -61,12 +61,15 @@ async function staleWhileRevalidate(req, cacheName) {
 async function networkFirstPage(req) {
   const cache = await caches.open(PAGE_CACHE);
   try {
-    const res = await Promise.race([
-      fetch(req),
-      new Promise((_, reject) => setTimeout(() => reject(new Error("timeout")), NETWORK_TIMEOUT_MS)),
-    ]);
-    if (res && res.ok) { cache.put(req, res.clone()); trim(PAGE_CACHE, PAGE_LIMIT); }
-    return res;
+    // Give the network a head start; after the timeout serve a cached copy if there is one, otherwise keep waiting for the
+    // network. The offline page is for a real network failure, not a slow connection or a cold edge.
+    const network = fetch(req).then((res) => { if (res && res.ok) { cache.put(req, res.clone()); trim(PAGE_CACHE, PAGE_LIMIT); } return res; });
+    const timeout = new Promise((resolve) => setTimeout(() => resolve(null), NETWORK_TIMEOUT_MS));
+    const first = await Promise.race([network.catch(() => null), timeout]);
+    if (first) return first;
+    const cached = (await cache.match(req)) || (await cache.match(req, { ignoreSearch: true }));
+    if (cached) return cached;
+    return await network;
   } catch {
     const hit = (await cache.match(req)) || (await cache.match(req, { ignoreSearch: true }));
     if (hit) return hit;
