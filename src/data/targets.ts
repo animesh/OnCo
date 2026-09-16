@@ -1286,7 +1286,7 @@ export const targets: TargetInput[] = [
 
   // ======================= ChEMBL oncology drug targets, batch 3 (16 Sept 2026): supportive care, SRC family, steroid and nucleotide enzymes =======================
   {
-    id: "il11ra", kind: "target", name: "IL-11 receptor alpha", symbol: "IL11RA", targetClass: "surface-antigen", asOf, wikipedia: W("Interleukin_11_receptor_subunit_alpha"),
+    id: "il11ra", kind: "target", name: "IL-11 receptor alpha", symbol: "IL11RA", targetClass: "surface-antigen", asOf, wikipedia: W("Interleukin_11_receptor_alpha_subunit"),
     tldr: "The IL-11 receptor was the target of oprelvekin, the first drug approved to prevent the severe platelet falls that chemotherapy causes; the drug was withdrawn in 2011 and thrombopoietin agonists took over the problem.",
     summary: "Interleukin-11 receptor subunit alpha pairs with gp130 to carry the signal of interleukin-11, a cytokine that drives megakaryocytes to mature and release platelets. Recombinant IL-11 (oprelvekin, Neumega) was approved in the United States in 1997 to prevent severe thrombocytopenia after myelosuppressive chemotherapy, but fluid retention and cardiac side effects limited its use and it was withdrawn from the market in 2011. IL-11 signalling is now studied as a driver of fibrosis and of tumour-supporting inflammation in stomach and bowel cancers.",
     biology: "A cytokine receptor of the IL-6 family; ligand binding recruits gp130 and activates JAK-STAT3 signalling in megakaryocytes, epithelial cells and fibroblasts.",
@@ -1396,7 +1396,7 @@ export const targets: TargetInput[] = [
     tags: ["chembl-gap"],
   },
   {
-    id: "srd5a2", kind: "target", name: "5-alpha-reductase type 2 (SRD5A2)", symbol: "SRD5A2", targetClass: "enzyme", asOf, wikipedia: W("3-oxo-5α-steroid_4-dehydrogenase"),
+    id: "srd5a2", kind: "target", name: "5-alpha-reductase type 2 (SRD5A2)", symbol: "SRD5A2", targetClass: "enzyme", asOf, wikipedia: W("SRD5A2"),
     tldr: "5-alpha-reductase turns testosterone into the more potent dihydrotestosterone inside the prostate; finasteride and dutasteride block it, and two large trials showed they cut prostate cancer diagnoses by about a quarter while raising concern about high-grade tumours.",
     summary: "Steroid 5-alpha-reductase type 2 converts testosterone to dihydrotestosterone, the androgen that drives prostate growth. Finasteride (type 2 selective) and dutasteride (types 1 and 2) are approved for benign prostatic enlargement and were tested for prevention in the Prostate Cancer Prevention Trial and the REDUCE trial, where they reduced the overall incidence of prostate cancer but were associated with a small excess of high-grade cancers, so neither is approved for prevention. In castration-resistant prostate cancer, tumour cells raise their own 5-alpha-reductase and other steroidogenic enzymes to make androgens, part of the rationale for abiraterone and the newer androgen receptor blockers.",
     biology: "A membrane enzyme of the endoplasmic reticulum in prostate, genital skin and hair follicles; it is NADPH-dependent and genetic loss causes a disorder of sex development.",
