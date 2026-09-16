@@ -1,0 +1,1 @@
+{"id":"eik1001","kind":"drug","name":"EIK1001","query":"(TITLE:\"EIK1001\" OR ABSTRACT:\"EIK1001\") AND (cancer OR tumor OR tumour OR oncology OR carcinoma OR lymphoma OR leukemia OR leukaemia OR myeloma OR sarcoma OR melanoma OR glioma)","fetched":"2026-09-16","windowDays":90,"count":0,"preprints":[],"nowPublished":[]}

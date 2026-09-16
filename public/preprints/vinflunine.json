@@ -1,0 +1,1 @@
+{"id":"vinflunine","kind":"drug","name":"Vinflunine","query":"(TITLE:\"Vinflunine\" OR ABSTRACT:\"Vinflunine\" OR TITLE:\"Javlor\" OR ABSTRACT:\"Javlor\") AND (cancer OR tumor OR tumour OR oncology OR carcinoma OR lymphoma OR leukemia OR leukaemia OR myeloma OR sarcoma OR melanoma OR glioma)","fetched":"2026-09-16","windowDays":90,"count":0,"preprints":[],"nowPublished":[]}

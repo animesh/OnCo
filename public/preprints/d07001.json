@@ -1,0 +1,1 @@
+{"id":"d07001","kind":"drug","name":"D07001","query":"(TITLE:\"D07001\" OR ABSTRACT:\"D07001\" OR TITLE:\"D07001-softgel\" OR ABSTRACT:\"D07001-softgel\") AND (cancer OR tumor OR tumour OR oncology OR carcinoma OR lymphoma OR leukemia OR leukaemia OR myeloma OR sarcoma OR melanoma OR glioma)","fetched":"2026-09-16","windowDays":90,"count":0,"preprints":[],"nowPublished":[]}
