@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { publicTags } from "@/lib/tags";
 import type { ReactNode } from "react";
 import type { Cancer, Entity, Roadmap } from "@/lib/schema";
 import { KIND_META, routeFor } from "@/lib/schema";
@@ -193,7 +194,7 @@ export function EntityDetail({ e }: { e: Entity }) {
                   <ul className="space-y-1">{e.links.map((l) => <li key={l.url}><a className="underline break-words" href={l.url} rel="noopener">{l.label}</a></li>)}</ul>
                 </div>
               )}
-              {e.tags.filter((t) => t !== "spike" && !t.startsWith("lesson:") && !t.startsWith("evidence:")).length > 0 && <div><div className="kicker mb-1"><TL text="Tags" /></div><div className="flex flex-wrap gap-1">{e.tags.filter((t) => t !== "spike" && !t.startsWith("lesson:") && !t.startsWith("evidence:")).map((t) => <span key={t} className="chip bg-foreground/5">{t}</span>)}</div></div>}
+              {publicTags(e.tags).length > 0 && <div><div className="kicker mb-1"><TL text="Tags" /></div><div className="flex flex-wrap gap-1">{publicTags(e.tags).map((t) => <span key={t} className="chip bg-foreground/5">{t}</span>)}</div></div>}
               <div><div className="kicker mb-1"><TL text="Data" /></div>
                 <a className="underline" href={`/api/v1/entities/${e.id}.json`}>JSON</a>
                 <span className="text-muted"> · </span>

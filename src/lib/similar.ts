@@ -9,6 +9,7 @@
  * scripts/build-similar.ts writes the result to public/api/v1/similar.json.
  */
 import { graph } from "./graph";
+import { publicTags } from "./tags";
 import { routeFor, type Kind } from "./schema";
 
 export type Similar = { id: string; score: number; shared: string[]; sharedTags: string[] };
@@ -33,7 +34,7 @@ export function similarAll(): Map<string, Similar[]> {
     sets.set(id, s);
     weight.set(id, 1 / Math.log2(2 + s.size));
   }
-  const tagSets = new Map(ids.map((id) => [id, new Set(g.must(id).tags)]));
+  const tagSets = new Map(ids.map((id) => [id, new Set(publicTags(g.must(id).tags))]));
   const w = (id: string) => weight.get(id) ?? 1 / Math.log2(2 + g.degree(id));
 
   const out = new Map<string, Similar[]>();
@@ -49,7 +50,7 @@ export function similarAll(): Map<string, Similar[]> {
       const shared: string[] = [];
       for (const n of A) { if (B.has(n)) { inter += w(n); shared.push(n); } union += w(n); }
       for (const n of B) if (!A.has(n)) union += w(n);
-      const sharedTags = [...tagsA].filter((t) => tagsB.has(t) && t !== "spike");
+      const sharedTags = [...tagsA].filter((t) => tagsB.has(t));
       const tagUnion = new Set([...tagsA, ...tagsB]).size;
       const score = (union ? inter / union : 0) + 0.5 * (tagUnion ? sharedTags.length / tagUnion : 0);
       if (score >= MIN_SCORE && (shared.length + sharedTags.length) >= 2) scored.push({ id: c, score: Math.round(score * 1000) / 1000, shared: shared.sort((x, y) => w(y) - w(x)), sharedTags });
