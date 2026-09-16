@@ -755,7 +755,7 @@ export const cancers: CancerInput[] = [
   }),
 
   c({
-    id: "extragonadal-germ-cell-tumour", name: "Extragonadal germ cell tumour", group: "genitourinary", wikipedia: W("Extragonadal_germ_cell_tumor"),
+    id: "extragonadal-germ-cell-tumour", name: "Extragonadal germ cell tumour", group: "genitourinary", wikipedia: W("Germ_cell_tumor"),
     aka: ["Extragonadal Germ Cell Tumor", "Extragonadal germ cell tumor", "Mediastinal germ cell tumour", "Retroperitoneal germ cell tumour", "Primary mediastinal nonseminomatous germ cell tumour"],
     burden: "Rare: only a few percent of germ cell tumours arise outside the testis or ovary, most in the chest (mediastinum) or the back of the abdomen (retroperitoneum) in young men; no separate GLOBOCAN count.",
     tldr: "Extragonadal germ cell tumours are the same cancers as testicular germ cell tumours but arising in the midline of the body, most often the chest or the back of the abdomen. Seminomas are highly curable with chemotherapy; non-seminomas of the chest are the hardest germ cell tumours to cure and are treated with intensive chemotherapy followed by surgery.",
