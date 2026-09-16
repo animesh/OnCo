@@ -21,14 +21,14 @@ export function ApprovalChip({ drugId, status, compact = false }: { drugId: stri
 
   // Not an approved product anywhere we know of: plain global status.
   const globallyApproved = status === "approved" || status === "standard-of-care" || approvedIn.length > 0;
-  if (!globallyApproved) return status ? <span className={`chip ${statusClass(status)}`}>{STATUS_LABEL[status] ?? status}</span> : null;
+  if (!globallyApproved) return status ? <span className={`chip whitespace-nowrap ${statusClass(status)}`}>{STATUS_LABEL[status] ?? status}</span> : null;
 
   if (!region) {
     const first = approvedIn.length ? Math.min(...approvedIn.map((r) => row?.[r]?.year ?? 9999)) : undefined;
     const tip = approvedIn.length ? `Approved in ${approvedIn.map((r) => REGION_META[r].label).join(", ")}. Choose your country in the top bar to see the verdict that applies to you.` : "Recorded as approved; choose your country in the top bar to see which regulators have cleared it.";
     return (
       <Tip title="🌐 Global view" text={tip} href="/regulatory/regions/" linkLabel="Compare all regions →">
-        <span className={`chip cursor-help inline-flex items-center gap-1 ${statusClass("approved")}`}>Approved{!compact && first && first !== 9999 ? <span className="opacity-70 tabular-nums">{first}</span> : null}{!compact && <span className="inline-flex gap-0.5 ml-0.5">{flags()}</span>}</span>
+        <span className={`chip cursor-help inline-flex items-center gap-1 whitespace-nowrap ${statusClass("approved")}`}>Approved{!compact && first && first !== 9999 ? <span className="opacity-70 tabular-nums">{first}</span> : null}{!compact && <span className="inline-flex gap-0.5 ml-0.5">{flags()}</span>}</span>
       </Tip>
     );
   }
@@ -38,7 +38,7 @@ export function ApprovalChip({ drugId, status, compact = false }: { drugId: stri
     const tip = `${LABEL[here.status]} in ${meta.label} (${meta.regulator})${here.year ? `, ${here.year}` : ""}${here.indication ? `: ${here.indication}` : ""}${here.note ? `. ${here.note}` : ""}${approvedIn.filter((r) => r !== region).length ? `. Also approved in ${approvedIn.filter((r) => r !== region).map((r) => REGION_META[r].label).join(", ")}.` : ""}`;
     return (
       <Tip title={`${meta.flag} ${meta.label}`} text={tip} href="/regulatory/regions/" linkLabel="Compare all regions →">
-        <span className={`chip cursor-help inline-flex items-center gap-1 ${statusClass(TONE[here.status])}`}>
+        <span className={`chip cursor-help inline-flex items-center gap-1 whitespace-nowrap ${statusClass(TONE[here.status])}`}>
           <span aria-hidden>{meta.flag}</span>{LABEL[here.status]}{!compact && here.year && here.status === "approved" ? <span className="opacity-70 tabular-nums">{here.year}</span> : null}
           {!compact && <span className="inline-flex gap-0.5 ml-0.5">{flags(region)}</span>}
         </span>
