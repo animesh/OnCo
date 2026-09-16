@@ -21,7 +21,7 @@ export function Breadcrumbs({ items, className = "" }: { items: Crumb[]; classNa
     return k ? <KindName kind={k} form={KIND_META[k].title === c.label ? "title" : c.label === KIND_META[k].label ? "label" : "plural"} fallback={c.label} /> : c.label;
   };
   return (
-    <nav aria-label="Breadcrumb" className={`mx-auto max-w-7xl px-4 sm:px-6 pt-5 -mb-4 text-xs text-muted ${className}`}>
+    <nav aria-label="Breadcrumb" className={`relative z-10 mx-auto max-w-7xl px-4 sm:px-6 pt-5 -mb-4 text-xs text-muted ${className}`}>
       <ol className="flex flex-wrap items-center gap-x-1.5 gap-y-0.5">
         {items.map((c, i) => {
           const last = i === items.length - 1;

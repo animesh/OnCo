@@ -252,3 +252,13 @@ The site already ships a static JSON API with CORS, per-entity Markdown context 
 The owner's patient-first roadmap (a real-case "For me", persistent cancer choice, trial and cancer subscriptions, per-cancer "what changed", a first-60-days guide, when-to-call red cards, decision pages, outcome-based centre choice, appointment prep with answers) is recorded as batch K, items 101 to 109, in docs/IMPROVEMENTS-100.md.
 
 - [ ] Add Enso Bioscience as a company (owner request, 16 Sept 2026): its site ensobioscience.com shows only "Launching Soon" with an email list, so there is nothing sourced to record yet; ask the owner what it does and where it is based, or revisit when the site publishes.
+
+### Fix list (after the 16 Sept office-network check)
+
+- [ ] Issue 12 (odfalik, 16 Sept): breadcrumb links cannot be clicked because the strip's negative bottom margin lets the page header cover them. Fix: lift the breadcrumb above the header (relative, z-index) and confirm with elementFromPoint on /companies/noetik/.
+- [ ] Office network: TLS to onco.cc is reset by a server-name filter on the office side (plain HTTP and other names on the same edge address work; every outside vantage returns 200). Not a site fault and Cloudflare would not change it. Ask the office IT filter to allow onco.cc and www.onco.cc, or use a hotspot. Once the appliance vendor is known, submit the domain for categorisation.
+
+### Roadmap additions (owner, 16 Sept)
+
+- [ ] Parker Institute for Cancer Immunotherapy (parkerici.org): the institute is already a record; pull its useful entities the way the FCCT page was mined: member cancer centres and their leads, PICI investigators, PICI-backed companies and spin-outs, and the trials it sponsors, each linked back to the institute.
+- [ ] Do the same for other institutions with public network or portfolio pages (Cancer Research UK institutes, Stand Up To Cancer dream teams, NCI-designated centre consortia, EMBL and Institut Curie partner lists), one institution a tick, so every institution page links out to people, companies and trials rather than standing alone.
