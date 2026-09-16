@@ -1,5 +1,5 @@
 {
- "checked": "2026-09-10",
+ "checked": "2026-09-16",
  "source": {
   "label": "OECI: Member Profiles",
   "url": "https://www.oeci.eu/MemberList.aspx"
@@ -469,7 +469,7 @@
    "name": "KYS Syövänhoitokeskus Kuopion Yliopistollinen Sairaala",
    "altName": "Kuopio University Hospital (KUH) Cancer Centre",
    "country": "Finland",
-   "website": "https://www.pshyvinvointialue.fi",
+   "website": "www.pshyvinvointialue.fi",
    "membership": "Full Member",
    "leaders": [
     "Arto Mannermaa",
@@ -494,7 +494,7 @@
    "name": "Kansallinen syöpäkeskus FICAN",
    "altName": "Finnish Cancer Center - FICAN",
    "country": "Finland",
-   "website": "https://www.fican.fi",
+   "website": "www.fican.fi",
    "membership": "Full Member",
    "leaders": [
     "Tomi P. Mäkelä",
@@ -804,7 +804,9 @@
    "country": "France",
    "website": "https://fr.ap-hm.fr/",
    "membership": "Full Member",
-   "leaders": []
+   "leaders": [
+    "François Crémieux"
+   ]
   },
   {
    "id": "224A",
@@ -1329,7 +1331,7 @@
    "website": "http://www.irst.emr.it",
    "membership": "Full Member",
    "leaders": [
-    "Nicola Normanno",
+    "Antonino Musolino",
     "Martina Rosticci"
    ]
   },
@@ -1463,7 +1465,7 @@
    "name": "Hospital of Lithuanian University of Health Sciences Kauno Klinikos",
    "altName": "Lietuvos sveikatos mokslų universiteto ligoninė Kauno klinikos",
    "country": "Lithuania",
-   "website": "https://www.kaunoklinikos.lt",
+   "website": "www.kaunoklinikos.lt, www.lsmu.lt",
    "membership": "Full Member",
    "leaders": [
     "Renaldas Jurkevičius",
@@ -1474,7 +1476,7 @@
    "id": "211",
    "name": "Klaipėda University Hospital",
    "country": "Lithuania",
-   "website": "https://www.kul.lt",
+   "website": "htttps://www.kul.lt",
    "membership": "Full Member",
    "leaders": [
     "Audrius Šimaitis",

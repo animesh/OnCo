@@ -1,15 +1,15 @@
 {
- "checked": "2026-09-11",
+ "checked": "2026-09-16",
  "source": {
   "label": "ClinicalTrials.gov: interventional studies, condition 'cancer'",
   "url": "https://clinicaltrials.gov/search?cond=cancer&aggFilters=studyType:int"
  },
  "method": "ClinicalTrials.gov API v2 with query.cond=cancer and countTotal=true: interventional studies; of those, phase 3; of those, recruiting. Sponsors: distinct lead sponsor names (class INDUSTRY) across all phase 3 interventional cancer studies, so subsidiaries and name variants count separately.",
- "total": 97128,
- "phase3": 10997,
- "recruiting": 14322,
+ "total": 97177,
+ "phase3": 11002,
+ "recruiting": 14331,
  "industryPhase3": {
-  "studies": 4239,
+  "studies": 4241,
   "sponsors": 936
  },
  "items": [
@@ -23,7 +23,7 @@
   },
   {
    "name": "AstraZeneca",
-   "studies": 203
+   "studies": 204
   },
   {
    "name": "Novartis Pharmaceuticals",
@@ -250,10 +250,6 @@
    "studies": 11
   },
   {
-   "name": "Hutchison Medipharma Limited",
-   "studies": 11
-  },
-  {
    "name": "LEO Pharma",
    "studies": 11
   },
@@ -263,6 +259,10 @@
   },
   {
    "name": "argenx",
+   "studies": 10
+  },
+  {
+   "name": "Hutchison Medipharma Limited",
    "studies": 10
   },
   {
@@ -295,6 +295,10 @@
   },
   {
    "name": "Helsinn Healthcare SA",
+   "studies": 8
+  },
+  {
+   "name": "Ono Pharmaceutical Co., Ltd.",
    "studies": 8
   },
   {
@@ -358,10 +362,6 @@
    "studies": 7
   },
   {
-   "name": "Ono Pharmaceutical Co., Ltd.",
-   "studies": 7
-  },
-  {
    "name": "Repros Therapeutics Inc.",
    "studies": 7
   },
@@ -411,6 +411,10 @@
   },
   {
    "name": "Graceway Pharmaceuticals, LLC",
+   "studies": 6
+  },
+  {
+   "name": "Hutchmed",
    "studies": 6
   },
   {
@@ -503,10 +507,6 @@
   },
   {
    "name": "GTx",
-   "studies": 5
-  },
-  {
-   "name": "Hutchmed",
    "studies": 5
   },
   {
