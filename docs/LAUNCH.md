@@ -234,3 +234,15 @@ Owner-only, still open:
 - Supabase keys for accounts (magic-link sign-in) if wanted at launch.
 - npm publish of `onco` and the MCP server after the name clash is resolved; Zenodo DOI for the dataset release.
 - Review the two bot pull requests and the factcheck patches listed above.
+
+## To do: make OnCo agentically accessible and accessible by AI (owner request, 16 Sept 2026)
+
+The site already ships a static JSON API with CORS, per-entity Markdown context files, `llms.txt` and `llms-full.txt`, an OpenAPI 3.1 document, Atom feeds, RDF triples and an MCP server plus CLI under `packages/`. The owner wants this pushed further so agents and AI systems can use OnCo directly. Concrete items, in priority order:
+- Publish the MCP server and CLI to npm (name clash to resolve first) and register the MCP server in the public directories; add a one-line install to README and `/api/`.
+- Every page links its own machine forms in `<head>` (`alternate` links to JSON, Markdown and the entity's OpenAPI path) and states them in a visible footer line, so an agent landing on any page can find the data.
+- Add `/.well-known/ai-plugin.json`-style and `agents.md` discovery files and an explicit crawl policy for AI agents in `robots.txt` (allow, with the API as the preferred surface).
+- Schema.org JSON-LD on every entity page (MedicalEntity, Drug, MedicalCondition, ClinicalTrial, Organization, Person) generated from the graph.
+- Bulk downloads: one compressed JSON and one Parquet or CSV per kind at `/api/v1/bulk/`, refreshed at build time, with the dataset licence attached.
+- Task-shaped endpoints for agents: "what changed since <date>", "trials recruiting for <cancer> in <country>", "compare <drug A> and <drug B>", each with a documented example in the OpenAPI file.
+- A tool-use evaluation set (questions with expected entity ids) so regressions in agent usefulness are caught in CI, building on `src/lib/ask.test.ts`.
+- Rate and provenance headers on API responses (`X-OnCo-Provenance`, `Last-Modified`) so agents can cite and cache.

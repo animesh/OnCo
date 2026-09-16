@@ -456,6 +456,17 @@ export const regionalApprovals: Record<string, RegionalRow> = {
   "artera-ai-prostate": { US: A(2025, undefined, "FDA de novo, Aug 2025") },
   "artera-ai-breast": { US: A(2026, undefined, "FDA 510(k)/de novo, May 2026") },
   "cetuximab-sarotalocan": { US: UR("Phase 3 in recurrent head and neck (Rakuten Medical)"), JP: A(2020, PMDA, "Akalux + BioBlade laser, recurrent HNSCC (Sep 2020); first photoimmunotherapy approval globally") },
+  // ================= China-only approvals recorded on 16 Sept 2026 (pipeline wave 2) =================
+  olverembatinib: { CN: A(2021, NMPA, "CML with T315I mutation (Nov 2021); later resistant or intolerant CML") },
+  vebreltinib: { CN: A(2023, NMPA, "NSCLC with MET exon 14 skipping (Nov 2023)") },
+  tunlametinib: { CN: A(2024, NMPA, "NRAS-mutant advanced melanoma after immunotherapy") },
+  glecirasib: { CN: A(2024, NMPA, "KRAS G12C-mutant NSCLC after prior systemic therapy") },
+  glumetinib: { CN: A(2023, NMPA, "NSCLC with MET exon 14 skipping") },
+  zimberelimab: { CN: A(2021, NMPA, "Relapsed or refractory classical Hodgkin lymphoma; later cervical cancer") },
+  rezvilutamide: { CN: A(2022, NMPA, "High-volume metastatic hormone-sensitive prostate cancer (Jun 2022)") },
+  golidocitinib: { CN: A(2024, NMPA, "Relapsed or refractory peripheral T-cell lymphoma (Jun 2024)") },
+  pucotenlimab: { CN: A(2022, NMPA, "MSI-H/dMMR solid tumours and melanoma after prior therapy (Jul 2022)") },
+  limertinib: { CN: A(2024, NMPA, "EGFR T790M-mutant NSCLC after prior EGFR inhibitor") },
 };
 
 /** Convenience: which regions have an approval (approved or conditional). */

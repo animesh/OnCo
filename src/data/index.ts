@@ -60,6 +60,8 @@ import { journalsWave2 } from "./journals-wave2";
 import { companiesSponsors } from "./companies-sponsors";
 import { drugsPipelineWave1 } from "./drugs-pipeline-wave1";
 import { pipelineTrialsWave2 } from "./pipeline-trials-wave2";
+import { drugsPipelineWave2 } from "./drugs-pipeline-wave2";
+import { pipelineTrialsWave3 } from "./pipeline-trials-wave3";
 
 const RAW_INPUTS: EntityInput[] = [
   ...mergeSpikes(cancers),
@@ -122,6 +124,8 @@ const RAW_INPUTS: EntityInput[] = [
   ...companiesSponsors,
   ...drugsPipelineWave1,
   ...pipelineTrialsWave2,
+  ...drugsPipelineWave2,
+  ...pipelineTrialsWave3,
 ];
 
 /** Every input, with glossary terms mapped to their canonical category (see ./term-categories.ts). */
