@@ -1,5 +1,5 @@
 {
-  "fetched": "2026-09-15",
+  "fetched": "2026-09-16",
   "source": "https://openalex.org",
   "license": "CC0",
   "subfield": 2730,
@@ -720,6 +720,23 @@
       },
       "openAccess": 31,
       "clinicalTrials": 6,
+      "reviews": 0
+    },
+    "biomedical-research-center-sas": {
+      "openalexId": "I4210123996",
+      "openalexName": "Biomedical Research Center of the Slovak Academy of Sciences",
+      "confidence": "ror",
+      "works": 57,
+      "cited": 319,
+      "byYear": {
+        "2022": 4,
+        "2023": 15,
+        "2024": 9,
+        "2025": 16,
+        "2026": 13
+      },
+      "openAccess": 49,
+      "clinicalTrials": 2,
       "reviews": 0
     },
     "birmingham-cancer-centre": {
@@ -1555,6 +1572,23 @@
       "clinicalTrials": 0,
       "reviews": 0
     },
+    "clinico-san-carlos": {
+      "openalexId": "I2961216182",
+      "openalexName": "Hospital Clínico San Carlos",
+      "confidence": "ror",
+      "works": 345,
+      "cited": 3814,
+      "byYear": {
+        "2022": 64,
+        "2023": 69,
+        "2024": 80,
+        "2025": 77,
+        "2026": 55
+      },
+      "openAccess": 247,
+      "clinicalTrials": 49,
+      "reviews": 5
+    },
     "cmc-vellore": {
       "openalexId": "I172917736",
       "openalexName": "Christian Medical College, Vellore",
@@ -2388,6 +2422,23 @@
       "clinicalTrials": 15,
       "reviews": 6
     },
+    "greater-poland-cancer-centre": {
+      "openalexId": "I4210112614",
+      "openalexName": "Greater Poland Cancer Center",
+      "confidence": "ror",
+      "works": 119,
+      "cited": 1575,
+      "byYear": {
+        "2022": 23,
+        "2023": 23,
+        "2024": 22,
+        "2025": 35,
+        "2026": 16
+      },
+      "openAccess": 103,
+      "clinicalTrials": 15,
+      "reviews": 2
+    },
     "gregorio-maranon": {
       "openalexId": "I2960094004",
       "openalexName": "Hospital General Universitario Gregorio Marañón",
@@ -2607,6 +2658,23 @@
       },
       "openAccess": 661,
       "clinicalTrials": 252,
+      "reviews": 2
+    },
+    "henri-mondor": {
+      "openalexId": "I4210130325",
+      "openalexName": "Hôpitaux Universitaires Henri-Mondor",
+      "confidence": "ror",
+      "works": 305,
+      "cited": 2489,
+      "byYear": {
+        "2022": 63,
+        "2023": 62,
+        "2024": 57,
+        "2025": 84,
+        "2026": 39
+      },
+      "openAccess": 171,
+      "clinicalTrials": 50,
       "reviews": 2
     },
     "hhmi": {
@@ -3357,6 +3425,23 @@
       "clinicalTrials": 4,
       "reviews": 3
     },
+    "institut-sainte-catherine": {
+      "openalexId": "I4210157673",
+      "openalexName": "Institut Sainte Catherine",
+      "confidence": "ror",
+      "works": 76,
+      "cited": 735,
+      "byYear": {
+        "2022": 13,
+        "2023": 16,
+        "2024": 20,
+        "2025": 15,
+        "2026": 12
+      },
+      "openAccess": 46,
+      "clinicalTrials": 23,
+      "reviews": 0
+    },
     "institut-salah-azaiez": {
       "openalexId": "I4210090597",
       "openalexName": "Institut Salah-Azaïz",
@@ -3799,6 +3884,23 @@
       "clinicalTrials": 5,
       "reviews": 0
     },
+    "king-albert-ii-cancer-institute": {
+      "openalexId": "I1315288073",
+      "openalexName": "Cliniques Universitaires Saint-Luc",
+      "confidence": "ror",
+      "works": 342,
+      "cited": 4184,
+      "byYear": {
+        "2022": 74,
+        "2023": 81,
+        "2024": 66,
+        "2025": 78,
+        "2026": 43
+      },
+      "openAccess": 273,
+      "clinicalTrials": 60,
+      "reviews": 8
+    },
     "komfo-anokye-teaching-hospital": {
       "openalexId": "I2799504885",
       "openalexName": "Komfo Anokye Teaching Hospital",
@@ -3952,6 +4054,23 @@
       "clinicalTrials": 66,
       "reviews": 8
     },
+    "la-princesa": {
+      "openalexId": "I4210130498",
+      "openalexName": "Hospital Universitario de La Princesa",
+      "confidence": "ror",
+      "works": 210,
+      "cited": 1365,
+      "byYear": {
+        "2022": 42,
+        "2023": 50,
+        "2024": 56,
+        "2025": 31,
+        "2026": 31
+      },
+      "openAccess": 150,
+      "clinicalTrials": 18,
+      "reviews": 0
+    },
     "landspitali": {
       "openalexId": "I4210106610",
       "openalexName": "National University Hospital of Iceland",
@@ -4003,6 +4122,23 @@
       "clinicalTrials": 23,
       "reviews": 7
     },
+    "linkoping-university-hospital": {
+      "openalexId": "I4210151885",
+      "openalexName": "Linköping University Hospital",
+      "confidence": "ror",
+      "works": 92,
+      "cited": 434,
+      "byYear": {
+        "2022": 10,
+        "2023": 17,
+        "2024": 18,
+        "2025": 24,
+        "2026": 23
+      },
+      "openAccess": 73,
+      "clinicalTrials": 17,
+      "reviews": 2
+    },
     "lmu-munich": {
       "openalexId": "I8204097",
       "openalexName": "Ludwig-Maximilians-Universität München",
@@ -4019,6 +4155,125 @@
       "openAccess": 1368,
       "clinicalTrials": 223,
       "reviews": 43
+    },
+    "lumc-leiden": {
+      "openalexId": "I2800006345",
+      "openalexName": "Leiden University Medical Center",
+      "confidence": "ror",
+      "works": 1245,
+      "cited": 16125,
+      "byYear": {
+        "2022": 272,
+        "2023": 290,
+        "2024": 253,
+        "2025": 274,
+        "2026": 156
+      },
+      "openAccess": 1023,
+      "clinicalTrials": 138,
+      "reviews": 37
+    },
+    "lund-skane": {
+      "openalexId": "I4210137844",
+      "openalexName": "Skåne University Hospital",
+      "confidence": "ror",
+      "works": 521,
+      "cited": 4154,
+      "byYear": {
+        "2022": 90,
+        "2023": 91,
+        "2024": 110,
+        "2025": 106,
+        "2026": 124
+      },
+      "openAccess": 423,
+      "clinicalTrials": 45,
+      "reviews": 5
+    },
+    "luth-lagos": {
+      "openalexId": "I2800848520",
+      "openalexName": "Lagos University Teaching Hospital",
+      "confidence": "ror",
+      "works": 62,
+      "cited": 1335,
+      "byYear": {
+        "2022": 14,
+        "2023": 10,
+        "2024": 14,
+        "2025": 10,
+        "2026": 14
+      },
+      "openAccess": 48,
+      "clinicalTrials": 1,
+      "reviews": 3
+    },
+    "maastricht-umc": {
+      "openalexId": "I2800191616",
+      "openalexName": "Maastricht University Medical Centre",
+      "confidence": "ror",
+      "works": 540,
+      "cited": 6014,
+      "byYear": {
+        "2022": 107,
+        "2023": 92,
+        "2024": 108,
+        "2025": 134,
+        "2026": 99
+      },
+      "openAccess": 471,
+      "clinicalTrials": 64,
+      "reviews": 23
+    },
+    "maryland-greenebaum": {
+      "openalexId": "I4390039317",
+      "openalexName": "University of Maryland Marlene and Stewart Greenebaum Comprehensive Cancer Center",
+      "confidence": "ror",
+      "works": 101,
+      "cited": 2306,
+      "byYear": {
+        "2022": 25,
+        "2023": 30,
+        "2024": 23,
+        "2025": 15,
+        "2026": 8
+      },
+      "openAccess": 74,
+      "clinicalTrials": 7,
+      "reviews": 1
+    },
+    "mater-misericordiae": {
+      "openalexId": "I2803071314",
+      "openalexName": "Mater Misericordiae University Hospital",
+      "confidence": "ror",
+      "works": 134,
+      "cited": 598,
+      "byYear": {
+        "2022": 18,
+        "2023": 26,
+        "2024": 16,
+        "2025": 51,
+        "2026": 23
+      },
+      "openAccess": 84,
+      "clinicalTrials": 12,
+      "reviews": 7
+    },
+    "max-healthcare": {
+      "openalexId": "I307255591",
+      "openalexName": "Max Healthcare",
+      "confidence": "ror",
+      "works": 100,
+      "cited": 949,
+      "byYear": {
+        "2022": 14,
+        "2023": 15,
+        "2024": 26,
+        "2025": 28,
+        "2026": 17
+      },
+      "openAccess": 69,
+      "clinicalTrials": 8,
+      "reviews": 2
     },
     "mayo-clinic": {
       "openalexId": "I1330342723",
@@ -4054,6 +4309,23 @@
       "clinicalTrials": 1021,
       "reviews": 122
     },
+    "mdc-berlin": {
+      "openalexId": "I205582932",
+      "openalexName": "Max Delbrück Center",
+      "confidence": "ror",
+      "works": 146,
+      "cited": 1736,
+      "byYear": {
+        "2022": 42,
+        "2023": 21,
+        "2024": 20,
+        "2025": 33,
+        "2026": 30
+      },
+      "openAccess": 122,
+      "clinicalTrials": 13,
+      "reviews": 1
+    },
     "mgh": {
       "openalexId": "I4210087915",
       "openalexName": "Massachusetts General Hospital",
@@ -4088,6 +4360,40 @@
       "clinicalTrials": 210,
       "reviews": 43
     },
+    "mid-western-cancer-centre": {
+      "openalexId": "I2802992464",
+      "openalexName": "University Hospital Limerick",
+      "confidence": "ror",
+      "works": 74,
+      "cited": 153,
+      "byYear": {
+        "2022": 23,
+        "2023": 12,
+        "2024": 9,
+        "2025": 14,
+        "2026": 16
+      },
+      "openAccess": 57,
+      "clinicalTrials": 11,
+      "reviews": 7
+    },
+    "mit-koch": {
+      "openalexId": "I4390039253",
+      "openalexName": "Koch Institute for Integrative Cancer Research At MIT",
+      "confidence": "ror",
+      "works": 22,
+      "cited": 500,
+      "byYear": {
+        "2022": 5,
+        "2023": 6,
+        "2024": 6,
+        "2025": 5,
+        "2026": 0
+      },
+      "openAccess": 17,
+      "clinicalTrials": 0,
+      "reviews": 0
+    },
     "moffitt": {
       "openalexId": "I3019308854",
       "openalexName": "Moffitt Cancer Center",
@@ -4104,6 +4410,57 @@
       "openAccess": 1570,
       "clinicalTrials": 400,
       "reviews": 38
+    },
+    "montefiore-einstein": {
+      "openalexId": "I4390039242",
+      "openalexName": "Montefiore Einstein Comprehensive Cancer Center",
+      "confidence": "ror",
+      "works": 49,
+      "cited": 182,
+      "byYear": {
+        "2022": 0,
+        "2023": 4,
+        "2024": 23,
+        "2025": 13,
+        "2026": 9
+      },
+      "openAccess": 27,
+      "clinicalTrials": 7,
+      "reviews": 2
+    },
+    "mother-teresa-hospital-tirana": {
+      "openalexId": "I2800414091",
+      "openalexName": "Mother Teresa Hospital",
+      "confidence": "ror",
+      "works": 40,
+      "cited": 80,
+      "byYear": {
+        "2022": 11,
+        "2023": 5,
+        "2024": 4,
+        "2025": 11,
+        "2026": 9
+      },
+      "openAccess": 31,
+      "clinicalTrials": 1,
+      "reviews": 0
+    },
+    "mou-brno": {
+      "openalexId": "I4210115043",
+      "openalexName": "Masaryk Memorial Cancer Institute",
+      "confidence": "ror",
+      "works": 155,
+      "cited": 1946,
+      "byYear": {
+        "2022": 32,
+        "2023": 34,
+        "2024": 26,
+        "2025": 27,
+        "2026": 36
+      },
+      "openAccess": 128,
+      "clinicalTrials": 25,
+      "reviews": 5
     },
     "mount-sinai": {
       "openalexId": "I98704320",
@@ -4122,6 +4479,23 @@
       "clinicalTrials": 176,
       "reviews": 53
     },
+    "mount-vernon-cancer-centre": {
+      "openalexId": "I4210108939",
+      "openalexName": "Mount Vernon Cancer Centre",
+      "confidence": "ror",
+      "works": 128,
+      "cited": 2968,
+      "byYear": {
+        "2022": 23,
+        "2023": 26,
+        "2024": 39,
+        "2025": 18,
+        "2026": 22
+      },
+      "openAccess": 101,
+      "clinicalTrials": 23,
+      "reviews": 4
+    },
     "mskcc": {
       "openalexId": "I1334819555",
       "openalexName": "Memorial Sloan Kettering Cancer Center",
@@ -4138,6 +4512,142 @@
       "openAccess": 3411,
       "clinicalTrials": 754,
       "reviews": 67
+    },
+    "muhc-cedars-cancer-centre": {
+      "openalexId": "I2801766832",
+      "openalexName": "McGill University Health Centre",
+      "confidence": "ror",
+      "works": 598,
+      "cited": 5019,
+      "byYear": {
+        "2022": 120,
+        "2023": 124,
+        "2024": 116,
+        "2025": 123,
+        "2026": 115
+      },
+      "openAccess": 420,
+      "clinicalTrials": 61,
+      "reviews": 20
+    },
+    "musc-hollings": {
+      "openalexId": "I4210095449",
+      "openalexName": "MUSC Hollings Cancer Center",
+      "confidence": "ror",
+      "works": 178,
+      "cited": 1608,
+      "byYear": {
+        "2022": 28,
+        "2023": 47,
+        "2024": 29,
+        "2025": 44,
+        "2026": 30
+      },
+      "openAccess": 131,
+      "clinicalTrials": 40,
+      "reviews": 3
+    },
+    "narayana-health": {
+      "openalexId": "I288496929",
+      "openalexName": "Narayana Health",
+      "confidence": "ror",
+      "works": 111,
+      "cited": 260,
+      "byYear": {
+        "2022": 17,
+        "2023": 31,
+        "2024": 19,
+        "2025": 27,
+        "2026": 17
+      },
+      "openAccess": 82,
+      "clinicalTrials": 9,
+      "reviews": 1
+    },
+    "nationwide-childrens": {
+      "openalexId": "I1314135232",
+      "openalexName": "Nationwide Children's Hospital",
+      "confidence": "ror",
+      "works": 191,
+      "cited": 1053,
+      "byYear": {
+        "2022": 36,
+        "2023": 41,
+        "2024": 38,
+        "2025": 41,
+        "2026": 35
+      },
+      "openAccess": 129,
+      "clinicalTrials": 11,
+      "reviews": 4
+    },
+    "ncbs": {
+      "openalexId": "I194223965",
+      "openalexName": "National Centre for Biological Sciences",
+      "confidence": "ror",
+      "works": 27,
+      "cited": 42,
+      "byYear": {
+        "2022": 4,
+        "2023": 3,
+        "2024": 5,
+        "2025": 4,
+        "2026": 11
+      },
+      "openAccess": 25,
+      "clinicalTrials": 1,
+      "reviews": 0
+    },
+    "ncc-japan": {
+      "openalexId": "I4210145079",
+      "openalexName": "National Cancer Center Hospital East",
+      "confidence": "override",
+      "works": 1599,
+      "cited": 21937,
+      "byYear": {
+        "2022": 305,
+        "2023": 329,
+        "2024": 339,
+        "2025": 352,
+        "2026": 274
+      },
+      "openAccess": 991,
+      "clinicalTrials": 345,
+      "reviews": 16
+    },
+    "ncc-korea": {
+      "openalexId": "I4210120052",
+      "openalexName": "National Cancer Center",
+      "confidence": "ror",
+      "works": 573,
+      "cited": 9401,
+      "byYear": {
+        "2022": 123,
+        "2023": 138,
+        "2024": 100,
+        "2025": 133,
+        "2026": 79
+      },
+      "openAccess": 413,
+      "clinicalTrials": 64,
+      "reviews": 11
+    },
+    "nccs": {
+      "openalexId": "I4210137145",
+      "openalexName": "National Cancer Centre Singapore",
+      "confidence": "ror",
+      "works": 493,
+      "cited": 5212,
+      "byYear": {
+        "2022": 77,
+        "2023": 99,
+        "2024": 104,
+        "2025": 126,
+        "2026": 87
+      },
+      "openAccess": 329,
+      "clinicalTrials": 70,
+      "reviews": 16
     },
     "nci": {
       "openalexId": "I4210140884",
@@ -4156,6 +4666,108 @@
       "clinicalTrials": 312,
       "reviews": 52
     },
+    "nci-ccr": {
+      "openalexId": "I4210149717",
+      "openalexName": "Center for Cancer Research",
+      "confidence": "ror",
+      "works": 1312,
+      "cited": 26262,
+      "byYear": {
+        "2022": 260,
+        "2023": 317,
+        "2024": 260,
+        "2025": 276,
+        "2026": 199
+      },
+      "openAccess": 1082,
+      "clinicalTrials": 138,
+      "reviews": 29
+    },
+    "nci-ukraine": {
+      "openalexId": "I4210123359",
+      "openalexName": "National Cancer Institute",
+      "confidence": "ror",
+      "works": 149,
+      "cited": 1430,
+      "byYear": {
+        "2022": 33,
+        "2023": 19,
+        "2024": 32,
+        "2025": 40,
+        "2026": 25
+      },
+      "openAccess": 100,
+      "clinicalTrials": 22,
+      "reviews": 4
+    },
+    "nct-dresden": {
+      "openalexId": "I4210162051",
+      "openalexName": "University Hospital Carl Gustav Carus",
+      "confidence": "ror",
+      "works": 728,
+      "cited": 7984,
+      "byYear": {
+        "2022": 135,
+        "2023": 143,
+        "2024": 142,
+        "2025": 178,
+        "2026": 130
+      },
+      "openAccess": 535,
+      "clinicalTrials": 84,
+      "reviews": 9
+    },
+    "nebraska-buffett": {
+      "openalexId": "I4390039344",
+      "openalexName": "Fred and Pamela Buffett Cancer Center",
+      "confidence": "ror",
+      "works": 37,
+      "cited": 4159,
+      "byYear": {
+        "2022": 9,
+        "2023": 12,
+        "2024": 11,
+        "2025": 0,
+        "2026": 5
+      },
+      "openAccess": 16,
+      "clinicalTrials": 3,
+      "reviews": 0
+    },
+    "newcastle-cancer-centre": {
+      "openalexId": "I2801663869",
+      "openalexName": "Newcastle upon Tyne Hospitals NHS Foundation Trust",
+      "confidence": "ror",
+      "works": 510,
+      "cited": 4587,
+      "byYear": {
+        "2022": 116,
+        "2023": 115,
+        "2024": 105,
+        "2025": 88,
+        "2026": 86
+      },
+      "openAccess": 349,
+      "clinicalTrials": 72,
+      "reviews": 24
+    },
+    "nicrh-dhaka": {
+      "openalexId": "I4210154892",
+      "openalexName": "National Institute of Cancer Research and Hospital",
+      "confidence": "ror",
+      "works": 86,
+      "cited": 67,
+      "byYear": {
+        "2022": 4,
+        "2023": 19,
+        "2024": 19,
+        "2025": 25,
+        "2026": 19
+      },
+      "openAccess": 73,
+      "clinicalTrials": 8,
+      "reviews": 0
+    },
     "nki": {
       "openalexId": "I2898336195",
       "openalexName": "The Netherlands Cancer Institute",
@@ -4172,6 +4784,448 @@
       "openAccess": 1157,
       "clinicalTrials": 197,
       "reviews": 50
+    },
+    "noi-budapest": {
+      "openalexId": "I4210119956",
+      "openalexName": "National Institute of Oncology",
+      "confidence": "ror",
+      "works": 378,
+      "cited": 3070,
+      "byYear": {
+        "2022": 54,
+        "2023": 57,
+        "2024": 68,
+        "2025": 108,
+        "2026": 91
+      },
+      "openAccess": 301,
+      "clinicalTrials": 64,
+      "reviews": 6
+    },
+    "north-estonia-medical-centre": {
+      "openalexId": "I4210093692",
+      "openalexName": "North Estonia Medical Centre",
+      "confidence": "ror",
+      "works": 24,
+      "cited": 1358,
+      "byYear": {
+        "2022": 10,
+        "2023": 5,
+        "2024": 3,
+        "2025": 2,
+        "2026": 4
+      },
+      "openAccess": 19,
+      "clinicalTrials": 6,
+      "reviews": 0
+    },
+    "northern-ireland-cancer-centre": {
+      "openalexId": "I2802808109",
+      "openalexName": "Belfast City Hospital",
+      "confidence": "ror",
+      "works": 41,
+      "cited": 108,
+      "byYear": {
+        "2022": 14,
+        "2023": 6,
+        "2024": 7,
+        "2025": 10,
+        "2026": 4
+      },
+      "openAccess": 27,
+      "clinicalTrials": 6,
+      "reviews": 0
+    },
+    "northwestern-lurie": {
+      "openalexId": "I4390039227",
+      "openalexName": "Robert H. Lurie Comprehensive Cancer Center of Northwestern University",
+      "confidence": "ror",
+      "works": 264,
+      "cited": 7039,
+      "byYear": {
+        "2022": 55,
+        "2023": 46,
+        "2024": 60,
+        "2025": 60,
+        "2026": 43
+      },
+      "openAccess": 177,
+      "clinicalTrials": 43,
+      "reviews": 6
+    },
+    "nottingham-cancer-centre": {
+      "openalexId": "I2802921333",
+      "openalexName": "Nottingham City Hospital",
+      "confidence": "ror",
+      "works": 44,
+      "cited": 247,
+      "byYear": {
+        "2022": 5,
+        "2023": 10,
+        "2024": 17,
+        "2025": 9,
+        "2026": 3
+      },
+      "openAccess": 33,
+      "clinicalTrials": 3,
+      "reviews": 3
+    },
+    "nrg-oncology": {
+      "openalexId": "I4210162619",
+      "openalexName": "NRG Oncology",
+      "confidence": "ror",
+      "works": 87,
+      "cited": 2130,
+      "byYear": {
+        "2022": 16,
+        "2023": 27,
+        "2024": 16,
+        "2025": 12,
+        "2026": 16
+      },
+      "openAccess": 50,
+      "clinicalTrials": 24,
+      "reviews": 1
+    },
+    "nsabp-foundation": {
+      "openalexId": "I4210162844",
+      "openalexName": "NSABP Foundation",
+      "confidence": "ror",
+      "works": 58,
+      "cited": 1268,
+      "byYear": {
+        "2022": 12,
+        "2023": 17,
+        "2024": 12,
+        "2025": 10,
+        "2026": 7
+      },
+      "openAccess": 40,
+      "clinicalTrials": 13,
+      "reviews": 1
+    },
+    "ntuh": {
+      "openalexId": "I4210131804",
+      "openalexName": "National Taiwan University Hospital",
+      "confidence": "ror",
+      "works": 746,
+      "cited": 8966,
+      "byYear": {
+        "2022": 152,
+        "2023": 166,
+        "2024": 158,
+        "2025": 148,
+        "2026": 122
+      },
+      "openAccess": 496,
+      "clinicalTrials": 96,
+      "reviews": 18
+    },
+    "nuh-ncis": {
+      "openalexId": "I4210146690",
+      "openalexName": "National University Hospital",
+      "confidence": "ror",
+      "works": 293,
+      "cited": 4443,
+      "byYear": {
+        "2022": 63,
+        "2023": 60,
+        "2024": 67,
+        "2025": 72,
+        "2026": 31
+      },
+      "openAccess": 203,
+      "clinicalTrials": 22,
+      "reviews": 33
+    },
+    "ocean-road-cancer-institute": {
+      "openalexId": "I4210167355",
+      "openalexName": "Ocean Road Cancer Institute",
+      "confidence": "ror",
+      "works": 38,
+      "cited": 484,
+      "byYear": {
+        "2022": 5,
+        "2023": 8,
+        "2024": 10,
+        "2025": 6,
+        "2026": 9
+      },
+      "openAccess": 35,
+      "clinicalTrials": 3,
+      "reviews": 0
+    },
+    "odense-university-hospital": {
+      "openalexId": "I2801498763",
+      "openalexName": "Odense University Hospital",
+      "confidence": "ror",
+      "works": 677,
+      "cited": 5624,
+      "byYear": {
+        "2022": 123,
+        "2023": 143,
+        "2024": 126,
+        "2025": 166,
+        "2026": 119
+      },
+      "openAccess": 552,
+      "clinicalTrials": 59,
+      "reviews": 29
+    },
+    "ohsu-knight": {
+      "openalexId": "I4390039369",
+      "openalexName": "OHSU Knight Cancer Institute",
+      "confidence": "ror",
+      "works": 62,
+      "cited": 620,
+      "byYear": {
+        "2022": 8,
+        "2023": 18,
+        "2024": 18,
+        "2025": 14,
+        "2026": 4
+      },
+      "openAccess": 35,
+      "clinicalTrials": 13,
+      "reviews": 0
+    },
+    "oicr": {
+      "openalexId": "I112260969",
+      "openalexName": "Ontario Institute for Cancer Research",
+      "confidence": "ror",
+      "works": 205,
+      "cited": 2569,
+      "byYear": {
+        "2022": 41,
+        "2023": 54,
+        "2024": 40,
+        "2025": 42,
+        "2026": 28
+      },
+      "openAccess": 144,
+      "clinicalTrials": 19,
+      "reviews": 8
+    },
+    "oncology-institute-of-vojvodina": {
+      "openalexId": "I4210106714",
+      "openalexName": "Oncology Institute of Vojvodina",
+      "confidence": "ror",
+      "works": 147,
+      "cited": 1121,
+      "byYear": {
+        "2022": 20,
+        "2023": 30,
+        "2024": 42,
+        "2025": 28,
+        "2026": 27
+      },
+      "openAccess": 127,
+      "clinicalTrials": 9,
+      "reviews": 5
+    },
+    "oneal-uab": {
+      "openalexId": "I4390039376",
+      "openalexName": "O'Neal Comprehensive Cancer Center",
+      "confidence": "ror",
+      "works": 70,
+      "cited": 4399,
+      "byYear": {
+        "2022": 17,
+        "2023": 16,
+        "2024": 18,
+        "2025": 7,
+        "2026": 12
+      },
+      "openAccess": 40,
+      "clinicalTrials": 5,
+      "reviews": 0
+    },
+    "onj-cancer-centre": {
+      "openalexId": "I4210158799",
+      "openalexName": "Olivia Newton-John Cancer Wellness & Research Centre",
+      "confidence": "ror",
+      "works": 236,
+      "cited": 2839,
+      "byYear": {
+        "2022": 42,
+        "2023": 55,
+        "2024": 38,
+        "2025": 66,
+        "2026": 35
+      },
+      "openAccess": 170,
+      "clinicalTrials": 37,
+      "reviews": 7
+    },
+    "onkoloski-institut-ljubljana": {
+      "openalexId": "I3019592416",
+      "openalexName": "Institute of Oncology Ljubljana",
+      "confidence": "ror",
+      "works": 187,
+      "cited": 2566,
+      "byYear": {
+        "2022": 26,
+        "2023": 35,
+        "2024": 45,
+        "2025": 41,
+        "2026": 40
+      },
+      "openAccess": 154,
+      "clinicalTrials": 15,
+      "reviews": 3
+    },
+    "orebro-university-hospital": {
+      "openalexId": "I4210129463",
+      "openalexName": "Örebro University Hospital",
+      "confidence": "ror",
+      "works": 64,
+      "cited": 269,
+      "byYear": {
+        "2022": 11,
+        "2023": 11,
+        "2024": 9,
+        "2025": 14,
+        "2026": 19
+      },
+      "openAccess": 50,
+      "clinicalTrials": 14,
+      "reviews": 1
+    },
+    "osaka-international-cancer-institute": {
+      "openalexId": "I4210151107",
+      "openalexName": "Osaka International Cancer Institute",
+      "confidence": "ror",
+      "works": 505,
+      "cited": 4266,
+      "byYear": {
+        "2022": 95,
+        "2023": 105,
+        "2024": 115,
+        "2025": 114,
+        "2026": 76
+      },
+      "openAccess": 364,
+      "clinicalTrials": 71,
+      "reviews": 3
+    },
+    "oslo-radium-hospital": {
+      "openalexId": "I1281400175",
+      "openalexName": "Oslo University Hospital",
+      "confidence": "ror",
+      "works": 936,
+      "cited": 11600,
+      "byYear": {
+        "2022": 179,
+        "2023": 188,
+        "2024": 191,
+        "2025": 214,
+        "2026": 164
+      },
+      "openAccess": 744,
+      "clinicalTrials": 100,
+      "reviews": 19
+    },
+    "ottawa-hospital": {
+      "openalexId": "I2800722420",
+      "openalexName": "Ottawa Hospital",
+      "confidence": "ror",
+      "works": 494,
+      "cited": 4691,
+      "byYear": {
+        "2022": 117,
+        "2023": 95,
+        "2024": 107,
+        "2025": 107,
+        "2026": 68
+      },
+      "openAccess": 348,
+      "clinicalTrials": 70,
+      "reviews": 21
+    },
+    "oulu-university-hospital": {
+      "openalexId": "I2799272722",
+      "openalexName": "Oulu University Hospital",
+      "confidence": "ror",
+      "works": 148,
+      "cited": 1312,
+      "byYear": {
+        "2022": 36,
+        "2023": 33,
+        "2024": 26,
+        "2025": 36,
+        "2026": 17
+      },
+      "openAccess": 133,
+      "clinicalTrials": 10,
+      "reviews": 0
+    },
+    "oxford-cancer": {
+      "openalexId": "I2801179840",
+      "openalexName": "Churchill Hospital",
+      "confidence": "ror",
+      "works": 128,
+      "cited": 1264,
+      "byYear": {
+        "2022": 33,
+        "2023": 29,
+        "2024": 28,
+        "2025": 22,
+        "2026": 16
+      },
+      "openAccess": 91,
+      "clinicalTrials": 27,
+      "reviews": 5
+    },
+    "parker-institute": {
+      "openalexId": "I4210109986",
+      "openalexName": "Parker Institute for Cancer Immunotherapy",
+      "confidence": "ror",
+      "works": 544,
+      "cited": 24199,
+      "byYear": {
+        "2022": 130,
+        "2023": 89,
+        "2024": 97,
+        "2025": 128,
+        "2026": 100
+      },
+      "openAccess": 446,
+      "clinicalTrials": 47,
+      "reviews": 9
+    },
+    "pascale-naples": {
+      "openalexId": "I4210141868",
+      "openalexName": "Istituto Nazionale Tumori IRCCS \"Fondazione G. Pascale\"",
+      "confidence": "ror",
+      "works": 961,
+      "cited": 15028,
+      "byYear": {
+        "2022": 214,
+        "2023": 216,
+        "2024": 195,
+        "2025": 197,
+        "2026": 139
+      },
+      "openAccess": 725,
+      "clinicalTrials": 193,
+      "reviews": 21
+    },
+    "pauls-stradins-clinical-university-hospital": {
+      "openalexId": "I4210099352",
+      "openalexName": "Pauls Stradiņš Clinical University Hospital",
+      "confidence": "ror",
+      "works": 21,
+      "cited": 40,
+      "byYear": {
+        "2022": 6,
+        "2023": 2,
+        "2024": 4,
+        "2025": 6,
+        "2026": 3
+      },
+      "openAccess": 18,
+      "clinicalTrials": 2,
+      "reviews": 0
     },
     "penn-abramson": {
       "openalexId": "I79576946",
@@ -4207,6 +5261,74 @@
       "clinicalTrials": 256,
       "reviews": 71
     },
+    "pgimer-chandigarh": {
+      "openalexId": "I45294948",
+      "openalexName": "Post Graduate Institute of Medical Education and Research",
+      "confidence": "ror",
+      "works": 398,
+      "cited": 3509,
+      "byYear": {
+        "2022": 97,
+        "2023": 76,
+        "2024": 83,
+        "2025": 82,
+        "2026": 60
+      },
+      "openAccess": 235,
+      "clinicalTrials": 17,
+      "reviews": 11
+    },
+    "philippine-general-hospital": {
+      "openalexId": "I2802181614",
+      "openalexName": "Philippine General Hospital",
+      "confidence": "ror",
+      "works": 92,
+      "cited": 284,
+      "byYear": {
+        "2022": 30,
+        "2023": 19,
+        "2024": 22,
+        "2025": 11,
+        "2026": 10
+      },
+      "openAccess": 75,
+      "clinicalTrials": 3,
+      "reviews": 7
+    },
+    "pku-cancer-hospital": {
+      "openalexId": "I4210093964",
+      "openalexName": "Peking University Cancer Hospital",
+      "confidence": "ror",
+      "works": 1344,
+      "cited": 18195,
+      "byYear": {
+        "2022": 304,
+        "2023": 249,
+        "2024": 271,
+        "2025": 289,
+        "2026": 231
+      },
+      "openAccess": 893,
+      "clinicalTrials": 280,
+      "reviews": 17
+    },
+    "pku-peoples-hospital": {
+      "openalexId": "I4210124809",
+      "openalexName": "Peking University People's Hospital",
+      "confidence": "ror",
+      "works": 549,
+      "cited": 3578,
+      "byYear": {
+        "2022": 95,
+        "2023": 119,
+        "2024": 99,
+        "2025": 120,
+        "2026": 116
+      },
+      "openAccess": 413,
+      "clinicalTrials": 52,
+      "reviews": 18
+    },
     "pla-general-hospital": {
       "openalexId": "I2802939634",
       "openalexName": "Chinese PLA General Hospital",
@@ -4223,6 +5345,23 @@
       "openAccess": 870,
       "clinicalTrials": 129,
       "reviews": 20
+    },
+    "polish-mothers-memorial-hospital": {
+      "openalexId": "I4210143919",
+      "openalexName": "Polish Mother’s Memorial Hospital Research Institute",
+      "confidence": "ror",
+      "works": 46,
+      "cited": 1267,
+      "byYear": {
+        "2022": 7,
+        "2023": 9,
+        "2024": 13,
+        "2025": 14,
+        "2026": 3
+      },
+      "openAccess": 38,
+      "clinicalTrials": 13,
+      "reviews": 2
     },
     "princess-margaret": {
       "openalexId": "I2802654988",
@@ -4241,6 +5380,278 @@
       "clinicalTrials": 222,
       "reviews": 47
     },
+    "princess-maxima": {
+      "openalexId": "I4210127118",
+      "openalexName": "Princess Máxima Center",
+      "confidence": "ror",
+      "works": 324,
+      "cited": 6345,
+      "byYear": {
+        "2022": 67,
+        "2023": 73,
+        "2024": 82,
+        "2025": 63,
+        "2026": 39
+      },
+      "openAccess": 274,
+      "clinicalTrials": 40,
+      "reviews": 13
+    },
+    "providence-health": {
+      "openalexId": "I94396219",
+      "openalexName": "Providence Health & Services",
+      "confidence": "ror",
+      "works": 568,
+      "cited": 8561,
+      "byYear": {
+        "2022": 139,
+        "2023": 137,
+        "2024": 96,
+        "2025": 109,
+        "2026": 87
+      },
+      "openAccess": 362,
+      "clinicalTrials": 99,
+      "reviews": 3
+    },
+    "puerta-de-hierro": {
+      "openalexId": "I4210105637",
+      "openalexName": "Hospital Universitario Puerta de Hierro Majadahonda",
+      "confidence": "ror",
+      "works": 335,
+      "cited": 2208,
+      "byYear": {
+        "2022": 65,
+        "2023": 66,
+        "2024": 63,
+        "2025": 80,
+        "2026": 61
+      },
+      "openAccess": 227,
+      "clinicalTrials": 52,
+      "reviews": 1
+    },
+    "pumch": {
+      "openalexId": "I2801228662",
+      "openalexName": "Peking Union Medical College Hospital",
+      "confidence": "ror",
+      "works": 1784,
+      "cited": 18230,
+      "byYear": {
+        "2022": 416,
+        "2023": 380,
+        "2024": 319,
+        "2025": 375,
+        "2026": 294
+      },
+      "openAccess": 1323,
+      "clinicalTrials": 163,
+      "reviews": 53
+    },
+    "purdue-cancer-research": {
+      "openalexId": "I4390039259",
+      "openalexName": "Purdue University Institute for Cancer Research",
+      "confidence": "ror",
+      "works": 12,
+      "cited": 131,
+      "byYear": {
+        "2022": 0,
+        "2023": 3,
+        "2024": 6,
+        "2025": 2,
+        "2026": 1
+      },
+      "openAccess": 12,
+      "clinicalTrials": 1,
+      "reviews": 0
+    },
+    "qimr-berghofer": {
+      "openalexId": "I217937681",
+      "openalexName": "QIMR Berghofer Medical Research Institute",
+      "confidence": "ror",
+      "works": 281,
+      "cited": 3430,
+      "byYear": {
+        "2022": 49,
+        "2023": 56,
+        "2024": 56,
+        "2025": 61,
+        "2026": 59
+      },
+      "openAccess": 222,
+      "clinicalTrials": 27,
+      "reviews": 13
+    },
+    "queen-mary-hospital-hku": {
+      "openalexId": "I2800810863",
+      "openalexName": "Queen Mary Hospital",
+      "confidence": "ror",
+      "works": 170,
+      "cited": 1780,
+      "byYear": {
+        "2022": 40,
+        "2023": 32,
+        "2024": 34,
+        "2025": 40,
+        "2026": 24
+      },
+      "openAccess": 125,
+      "clinicalTrials": 23,
+      "reviews": 5
+    },
+    "queens-centre-hull": {
+      "openalexId": "I2801269832",
+      "openalexName": "Castle Hill Hospital",
+      "confidence": "ror",
+      "works": 33,
+      "cited": 415,
+      "byYear": {
+        "2022": 6,
+        "2023": 8,
+        "2024": 7,
+        "2025": 6,
+        "2026": 6
+      },
+      "openAccess": 27,
+      "clinicalTrials": 3,
+      "reviews": 3
+    },
+    "rabin-davidoff-center": {
+      "openalexId": "I2800389475",
+      "openalexName": "Rabin Medical Center",
+      "confidence": "ror",
+      "works": 286,
+      "cited": 5808,
+      "byYear": {
+        "2022": 58,
+        "2023": 60,
+        "2024": 59,
+        "2025": 57,
+        "2026": 52
+      },
+      "openAccess": 200,
+      "clinicalTrials": 36,
+      "reviews": 12
+    },
+    "radboudumc": {
+      "openalexId": "I2802934949",
+      "openalexName": "Radboud University Medical Center",
+      "confidence": "ror",
+      "works": 1163,
+      "cited": 11871,
+      "byYear": {
+        "2022": 262,
+        "2023": 251,
+        "2024": 224,
+        "2025": 267,
+        "2026": 159
+      },
+      "openAccess": 1003,
+      "clinicalTrials": 132,
+      "reviews": 39
+    },
+    "rambam": {
+      "openalexId": "I2801301638",
+      "openalexName": "Rambam Health Care Campus",
+      "confidence": "ror",
+      "works": 294,
+      "cited": 1908,
+      "byYear": {
+        "2022": 46,
+        "2023": 59,
+        "2024": 73,
+        "2025": 66,
+        "2026": 50
+      },
+      "openAccess": 201,
+      "clinicalTrials": 44,
+      "reviews": 3
+    },
+    "ramon-y-cajal": {
+      "openalexId": "I4210161852",
+      "openalexName": "Hospital Universitario Ramón y Cajal",
+      "confidence": "ror",
+      "works": 420,
+      "cited": 2505,
+      "byYear": {
+        "2022": 73,
+        "2023": 75,
+        "2024": 113,
+        "2025": 97,
+        "2026": 62
+      },
+      "openAccess": 277,
+      "clinicalTrials": 61,
+      "reviews": 4
+    },
+    "regina-elena-rome": {
+      "openalexId": "I4387152244",
+      "openalexName": "Instituto Nazionale Tumori Regina Elena",
+      "confidence": "ror",
+      "works": 37,
+      "cited": 332,
+      "byYear": {
+        "2022": 13,
+        "2023": 10,
+        "2024": 6,
+        "2025": 4,
+        "2026": 4
+      },
+      "openAccess": 22,
+      "clinicalTrials": 11,
+      "reviews": 1
+    },
+    "rgci": {
+      "openalexId": "I4210092995",
+      "openalexName": "Rajiv Gandhi Cancer Institute and Research Centre",
+      "confidence": "ror",
+      "works": 95,
+      "cited": 241,
+      "byYear": {
+        "2022": 24,
+        "2023": 16,
+        "2024": 13,
+        "2025": 28,
+        "2026": 14
+      },
+      "openAccess": 72,
+      "clinicalTrials": 11,
+      "reviews": 0
+    },
+    "riga-east-university-hospital": {
+      "openalexId": "I4210097420",
+      "openalexName": "Riga East University Hospital",
+      "confidence": "ror",
+      "works": 44,
+      "cited": 617,
+      "byYear": {
+        "2022": 11,
+        "2023": 10,
+        "2024": 7,
+        "2025": 9,
+        "2026": 7
+      },
+      "openAccess": 36,
+      "clinicalTrials": 7,
+      "reviews": 0
+    },
+    "rijnstate-arnhem": {
+      "openalexId": "I4210152306",
+      "openalexName": "Rijnstate Hospital",
+      "confidence": "ror",
+      "works": 95,
+      "cited": 1004,
+      "byYear": {
+        "2022": 23,
+        "2023": 14,
+        "2024": 20,
+        "2025": 17,
+        "2026": 21
+      },
+      "openAccess": 84,
+      "clinicalTrials": 22,
+      "reviews": 1
+    },
     "roswell-park": {
       "openalexId": "I1292894508",
       "openalexName": "Roswell Park Comprehensive Cancer Center",
@@ -4257,6 +5668,23 @@
       "openAccess": 747,
       "clinicalTrials": 166,
       "reviews": 21
+    },
+    "royal-adelaide-hospital": {
+      "openalexId": "I1320133117",
+      "openalexName": "Royal Adelaide Hospital",
+      "confidence": "ror",
+      "works": 218,
+      "cited": 2185,
+      "byYear": {
+        "2022": 50,
+        "2023": 45,
+        "2024": 38,
+        "2025": 45,
+        "2026": 40
+      },
+      "openAccess": 161,
+      "clinicalTrials": 43,
+      "reviews": 13
     },
     "royal-marsden": {
       "openalexId": "I1325846038",
@@ -4275,6 +5703,74 @@
       "clinicalTrials": 178,
       "reviews": 36
     },
+    "rutgers-cinj": {
+      "openalexId": "I4390039325",
+      "openalexName": "Rutgers Cancer Institute",
+      "confidence": "ror",
+      "works": 437,
+      "cited": 5088,
+      "byYear": {
+        "2022": 103,
+        "2023": 139,
+        "2024": 122,
+        "2025": 52,
+        "2026": 21
+      },
+      "openAccess": 270,
+      "clinicalTrials": 49,
+      "reviews": 2
+    },
+    "sacro-cuore-don-calabria": {
+      "openalexId": "I4210101944",
+      "openalexName": "Ospedale Sacro Cuore Don Calabria",
+      "confidence": "ror",
+      "works": 142,
+      "cited": 847,
+      "byYear": {
+        "2022": 29,
+        "2023": 27,
+        "2024": 42,
+        "2025": 27,
+        "2026": 17
+      },
+      "openAccess": 105,
+      "clinicalTrials": 20,
+      "reviews": 8
+    },
+    "sahlgrenska": {
+      "openalexId": "I2801112325",
+      "openalexName": "Sahlgrenska University Hospital",
+      "confidence": "ror",
+      "works": 553,
+      "cited": 5211,
+      "byYear": {
+        "2022": 94,
+        "2023": 99,
+        "2024": 108,
+        "2025": 143,
+        "2026": 109
+      },
+      "openAccess": 422,
+      "clinicalTrials": 58,
+      "reviews": 2
+    },
+    "salk-institute": {
+      "openalexId": "I1307098950",
+      "openalexName": "Salk Institute for Biological Studies",
+      "confidence": "ror",
+      "works": 84,
+      "cited": 2100,
+      "byYear": {
+        "2022": 14,
+        "2023": 17,
+        "2024": 17,
+        "2025": 19,
+        "2026": 17
+      },
+      "openAccess": 61,
+      "clinicalTrials": 3,
+      "reviews": 3
+    },
     "samsung-medical-center": {
       "openalexId": "I2802194831",
       "openalexName": "Samsung Medical Center",
@@ -4292,6 +5788,125 @@
       "clinicalTrials": 203,
       "reviews": 12
     },
+    "san-martino-genoa": {
+      "openalexId": "I4210146472",
+      "openalexName": "Ospedale Policlinico San Martino",
+      "confidence": "ror",
+      "works": 731,
+      "cited": 10239,
+      "byYear": {
+        "2022": 171,
+        "2023": 164,
+        "2024": 143,
+        "2025": 173,
+        "2026": 80
+      },
+      "openAccess": 546,
+      "clinicalTrials": 102,
+      "reviews": 29
+    },
+    "san-raffaele": {
+      "openalexId": "I4210133214",
+      "openalexName": "IRCCS Ospedale San Raffaele",
+      "confidence": "ror",
+      "works": 399,
+      "cited": 5644,
+      "byYear": {
+        "2022": 66,
+        "2023": 102,
+        "2024": 73,
+        "2025": 107,
+        "2026": 51
+      },
+      "openAccess": 283,
+      "clinicalTrials": 47,
+      "reviews": 15
+    },
+    "sanford-burnham-prebys": {
+      "openalexId": "I188891513",
+      "openalexName": "Sanford Burnham Prebys Medical Discovery Institute",
+      "confidence": "ror",
+      "works": 75,
+      "cited": 836,
+      "byYear": {
+        "2022": 11,
+        "2023": 20,
+        "2024": 13,
+        "2025": 18,
+        "2026": 13
+      },
+      "openAccess": 55,
+      "clinicalTrials": 3,
+      "reviews": 0
+    },
+    "sant-orsola-bologna": {
+      "openalexId": "I4210097083",
+      "openalexName": "IRCCS Azienda Ospedliero-Universitaria di Bologna Policlinico di Sant'Orsola",
+      "confidence": "ror",
+      "works": 229,
+      "cited": 2386,
+      "byYear": {
+        "2022": 70,
+        "2023": 42,
+        "2024": 44,
+        "2025": 46,
+        "2026": 27
+      },
+      "openAccess": 135,
+      "clinicalTrials": 18,
+      "reviews": 12
+    },
+    "saskatchewan-cancer-agency": {
+      "openalexId": "I4210091762",
+      "openalexName": "Saskatchewan Cancer Agency",
+      "confidence": "ror",
+      "works": 49,
+      "cited": 1109,
+      "byYear": {
+        "2022": 11,
+        "2023": 9,
+        "2024": 9,
+        "2025": 11,
+        "2026": 9
+      },
+      "openAccess": 36,
+      "clinicalTrials": 7,
+      "reviews": 0
+    },
+    "seoul-st-marys-hospital": {
+      "openalexId": "I4210160144",
+      "openalexName": "The Catholic University of Korea Seoul St. Mary's Hospital",
+      "confidence": "ror",
+      "works": 448,
+      "cited": 2611,
+      "byYear": {
+        "2022": 91,
+        "2023": 101,
+        "2024": 83,
+        "2025": 98,
+        "2026": 75
+      },
+      "openAccess": 332,
+      "clinicalTrials": 57,
+      "reviews": 10
+    },
+    "sestre-milosrdnice-tumors": {
+      "openalexId": "I4210123681",
+      "openalexName": "Sisters of Charity Hospital",
+      "confidence": "ror",
+      "works": 67,
+      "cited": 164,
+      "byYear": {
+        "2022": 6,
+        "2023": 10,
+        "2024": 16,
+        "2025": 22,
+        "2026": 13
+      },
+      "openAccess": 53,
+      "clinicalTrials": 4,
+      "reviews": 0
+    },
     "severance": {
       "openalexId": "I2799970807",
       "openalexName": "Severance Hospital",
@@ -4308,6 +5923,74 @@
       "openAccess": 339,
       "clinicalTrials": 48,
       "reviews": 6
+    },
+    "shandong-cancer-hospital": {
+      "openalexId": "I4210100830",
+      "openalexName": "Shandong Tumor Hospital",
+      "confidence": "ror",
+      "works": 920,
+      "cited": 7804,
+      "byYear": {
+        "2022": 166,
+        "2023": 180,
+        "2024": 205,
+        "2025": 212,
+        "2026": 157
+      },
+      "openAccess": 630,
+      "clinicalTrials": 201,
+      "reviews": 13
+    },
+    "shanghai-chest-hospital": {
+      "openalexId": "I2802608112",
+      "openalexName": "Shanghai Chest Hospital",
+      "confidence": "ror",
+      "works": 539,
+      "cited": 6491,
+      "byYear": {
+        "2022": 116,
+        "2023": 84,
+        "2024": 110,
+        "2025": 117,
+        "2026": 112
+      },
+      "openAccess": 371,
+      "clinicalTrials": 113,
+      "reviews": 5
+    },
+    "shanghai-pulmonary-hospital": {
+      "openalexId": "I4210127126",
+      "openalexName": "Shanghai Pulmonary Hospital",
+      "confidence": "ror",
+      "works": 464,
+      "cited": 6795,
+      "byYear": {
+        "2022": 101,
+        "2023": 98,
+        "2024": 101,
+        "2025": 99,
+        "2026": 65
+      },
+      "openAccess": 346,
+      "clinicalTrials": 77,
+      "reviews": 5
+    },
+    "shaukat-khanum": {
+      "openalexId": "I4210128772",
+      "openalexName": "Shaukat Khanum Memorial Cancer Hospital and Research Center",
+      "confidence": "ror",
+      "works": 143,
+      "cited": 424,
+      "byYear": {
+        "2022": 33,
+        "2023": 37,
+        "2024": 30,
+        "2025": 31,
+        "2026": 12
+      },
+      "openAccess": 120,
+      "clinicalTrials": 2,
+      "reviews": 1
     },
     "sirio-libanes": {
       "openalexId": "I4210149843",
@@ -4533,31 +6216,48 @@
   },
   "unresolved": {
     "accelerate-platform": "ROR affiliation matcher found nothing (checked 2026-09-14)",
+    "aidport": "ROR affiliation matcher found nothing (checked 2026-09-16)",
     "aiims-network": "ROR affiliation matcher found nothing (checked 2026-09-14)",
     "anadolu-medical-center": "ROR chose \"University of Oklahoma Medical Center\" in US, record says TR (checked 2026-09-14)",
+    "bjcn": "ROR affiliation matcher found nothing (checked 2026-09-16)",
+    "blida-anti-cancer-center": "ROR affiliation matcher found nothing (checked 2026-09-16)",
+    "blokhin-cancer-center": "ROR chose \"Centro de Investigación del Cáncer\" in ES, record says RU (checked 2026-09-16)",
     "caca": "ROR affiliation matcher found nothing (checked 2026-09-14)",
     "cancer-diseases-hospital-lusaka": "ROR affiliation matcher found nothing (checked 2026-09-14)",
+    "cancer-free-future-association": "ROR affiliation matcher found nothing (checked 2026-09-16)",
     "cancer-grand-challenges": "ROR affiliation matcher found nothing (checked 2026-09-14)",
+    "capio-st-goran": "ROR affiliation matcher found nothing (checked 2026-09-16)",
     "cche-57357": "ROR affiliation matcher found nothing (checked 2026-09-14)",
     "cdsco": "ROR affiliation matcher found nothing (checked 2026-09-14)",
     "cedars-sinai-cancer": "ROR affiliation matcher found nothing (checked 2026-09-14)",
+    "cheshire-merseyside-cancer-alliance": "ROR chose \"Digital Research Alliance of Canada\" in CA, record says GB (checked 2026-09-16)",
     "clara-campal-oncology-centre": "ROR affiliation matcher found nothing (checked 2026-09-15)",
     "cofepris": "ROR affiliation matcher found nothing (checked 2026-09-14)",
     "ctong": "ROR affiliation matcher found nothing (checked 2026-09-14)",
+    "east-midlands-cancer-alliance": "ROR chose \"Digital Research Alliance of Canada\" in CA, record says GB (checked 2026-09-16)",
+    "east-of-england-cancer-alliance": "ROR chose \"Digital Research Alliance of Canada\" in CA, record says GB (checked 2026-09-16)",
     "esgo": "ROR chose \"European Society of Gynaecological Oncology\" in CH, record says CZ (checked 2026-09-15)",
     "estro": "ROR affiliation matcher found nothing (checked 2026-09-15)",
+    "favo": "ROR affiliation matcher found nothing (checked 2026-09-16)",
     "fda-oce": "ROR chose \"Food and Drug Administration\" in TH, record says US (checked 2026-09-15)",
+    "fican": "ROR chose \"University of Hawaii Cancer Center\" in US, record says FI (checked 2026-09-16)",
+    "fondazione-the-bridge": "ROR affiliation matcher found nothing (checked 2026-09-16)",
     "gemelli": "ROR affiliation matcher found nothing (checked 2026-09-15)",
     "german-lymphoma-alliance": "ROR chose \"Digital Research Alliance of Canada\" in CA, record says DE (checked 2026-09-15)",
     "german-oncology-center-limassol": "ROR affiliation matcher found nothing (checked 2026-09-15)",
     "ghsg": "ROR affiliation matcher found nothing (checked 2026-09-15)",
     "gimema": "ROR affiliation matcher found nothing (checked 2026-09-15)",
+    "greater-manchester-cancer-alliance": "ROR chose \"Digital Research Alliance of Canada\" in CA, record says GB (checked 2026-09-16)",
     "has-france": "ROR affiliation matcher found nothing (checked 2026-09-15)",
     "hcmc-oncology-hospital": "ROR affiliation matcher found nothing (checked 2026-09-15)",
+    "heart-and-brain-pleven": "ROR chose \"Cancer Genomics Centre\" in NL, record says BG (checked 2026-09-16)",
+    "hellenic-cancer-federation": "ROR affiliation matcher found nothing (checked 2026-09-16)",
     "hl7": "ROR affiliation matcher found nothing (checked 2026-09-15)",
+    "humber-north-yorkshire-cancer-alliance": "ROR chose \"Digital Research Alliance of Canada\" in CA, record says GB (checked 2026-09-16)",
     "iaea": "ROR chose \"International Atomic Energy Agency\" in IT, record says AT (checked 2026-09-15)",
     "iisc": "ROR chose \"Shanghai Institute for Science of Science\" in CN, record says IN (checked 2026-09-15)",
     "inc-argentina": "ROR chose \"Instituto Nacional del Cáncer\" in CL, record says AR (checked 2026-09-15)",
+    "inc-luxembourg": "ROR chose \"National Cancer Institute\" in US, record says LU (checked 2026-09-16)",
     "inca-uruguay": "ROR chose \"Instituto Nacional del Cáncer\" in CL, record says UY (checked 2026-09-15)",
     "incan-mexico": "ROR chose \"Instituto Nacional de Cancerología\" in CO, record says MX (checked 2026-09-15)",
     "inkosi-albert-luthuli-hospital": "ROR chose \"INA Central Hospital\" in JP, record says ZA (checked 2026-09-15)",
@@ -4571,6 +6271,34 @@
     "jcog": "ROR affiliation matcher found nothing (checked 2026-09-15)",
     "jilin-cancer-hospital": "ROR affiliation matcher found nothing (checked 2026-09-15)",
     "jimmy-fund": "ROR affiliation matcher found nothing (checked 2026-09-15)",
-    "k-hospital-hanoi": "ROR chose \"National Cancer Institute\" in UA, record says VN (checked 2026-09-15)"
+    "k-hospital-hanoi": "ROR chose \"National Cancer Institute\" in UA, record says VN (checked 2026-09-15)",
+    "kent-medway-cancer-alliance": "ROR chose \"Digital Research Alliance of Canada\" in CA, record says GB (checked 2026-09-16)",
+    "koranyi-institute-budapest": "ROR affiliation matcher found nothing (checked 2026-09-16)",
+    "lancashire-south-cumbria-cancer-alliance": "ROR chose \"Digital Research Alliance of Canada\" in CA, record says GB (checked 2026-09-16)",
+    "ludwig-cancer-research": "ROR chose \"Ludwig Cancer Research\" in SE, record says US (checked 2026-09-16)",
+    "lysa": "ROR affiliation matcher found nothing (checked 2026-09-16)",
+    "mater-private": "ROR chose \"Mater Misericordiae Hospital\" in AU, record says IE (checked 2026-09-16)",
+    "mediterranean-institute-of-oncology": "ROR affiliation matcher found nothing (checked 2026-09-16)",
+    "metaxa-cancer-hospital": "ROR affiliation matcher found nothing (checked 2026-09-16)",
+    "mhra": "ROR affiliation matcher found nothing (checked 2026-09-16)",
+    "moi-teaching-referral-hospital": "ROR affiliation matcher found nothing (checked 2026-09-16)",
+    "motol-university-hospital": "ROR chose \"Kumamoto University Hospital\" in JP, record says CZ (checked 2026-09-16)",
+    "national-cancer-grid": "ROR affiliation matcher found nothing (checked 2026-09-16)",
+    "ncc-china": "ROR chose \"National Cancer Center\" in KR, record says CN (checked 2026-09-16)",
+    "nci-vilnius": "ROR chose \"National Cancer Institute\" in UA, record says LT (checked 2026-09-16)",
+    "nha-pmjay": "ROR affiliation matcher found nothing (checked 2026-09-16)",
+    "nhsa": "ROR affiliation matcher found nothing (checked 2026-09-16)",
+    "nmrrc-moscow": "ROR affiliation matcher found nothing (checked 2026-09-16)",
+    "nordic-lymphoma-group": "ROR chose \"Nordic Lymphoma Group\" in DK, record says SE (checked 2026-09-16)",
+    "northern-cancer-alliance": "ROR chose \"Digital Research Alliance of Canada\" in CA, record says GB (checked 2026-09-16)",
+    "oncological-institute-moldova": "ROR chose \"Public Health Institute\" in US, record says MD (checked 2026-09-16)",
+    "oncosalud-auna": "ROR affiliation matcher found nothing (checked 2026-09-16)",
+    "oncozon": "ROR affiliation matcher found nothing (checked 2026-09-16)",
+    "pbac": "ROR affiliation matcher found nothing (checked 2026-09-16)",
+    "peninsula-cancer-alliance": "ROR chose \"Digital Research Alliance of Canada\" in CA, record says GB (checked 2026-09-16)",
+    "policlinico-san-matteo": "ROR affiliation matcher found nothing (checked 2026-09-16)",
+    "qst-hospital": "ROR affiliation matcher found nothing (checked 2026-09-16)",
+    "saint-savvas-athens": "ROR affiliation matcher found nothing (checked 2026-09-16)",
+    "sgccn": "ROR affiliation matcher found nothing (checked 2026-09-16)"
   }
 }
