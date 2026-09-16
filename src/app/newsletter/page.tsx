@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SignupBox } from "@/components/SignupBox";
 import Link from "next/link";
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
@@ -7,12 +8,6 @@ import { Container, GroupKicker, PageHeader } from "@/components/ui";
 
 export const metadata: Metadata = pageMeta({ title: "Weekly issue", description: "OnCo's weekly issue: what changed in the corpus, regulatory events, upcoming readouts and what the journals published, rendered from the data with no tracking.", path: "/newsletter/" });
 
-/**
- * Signup endpoint for the email list. Leave empty until a Buttondown (https://buttondown.com/api/emails/embed-subscribe/<username>)
- * or Listmonk (<host>/subscription/form) endpoint exists; the page then offers the feed and archive only.
- * The form posts the address and nothing else: no pixels, no scripts, no third-party assets.
- */
-const SIGNUP_ACTION = "";
 
 type Issue = { date: string; title: string; path: string; summary: string; counts: Record<string, number> };
 type IssueSection = { id: string; title: string; blurb: string; items: string[] };
@@ -60,16 +55,7 @@ export default function NewsletterPage() {
       <Container className="pb-16 max-w-3xl">
         <section className="card p-5">
           <div className="kicker mb-1">Subscribe</div>
-          {SIGNUP_ACTION ? (
-            <form action={SIGNUP_ACTION} method="post" target="_blank" className="mt-2 flex flex-wrap gap-2 items-center">
-              <label htmlFor="nl-email" className="sr-only">Email address</label>
-              <input id="nl-email" name="email" type="email" required autoComplete="email" placeholder="you@example.org" className="rounded-lg border border-border bg-background px-3 py-2 text-sm min-w-[16rem]" />
-              <button type="submit" className="btn btn-primary text-sm">Subscribe</button>
-              <p className="text-xs text-muted basis-full">Your address is used only to send the weekly issue. Unsubscribe from any issue. No tracking.</p>
-            </form>
-          ) : (
-            <p className="text-sm mt-1">There is no email list yet, so the simplest way to follow along is the <a className="underline font-medium" href="/newsletter/feed.xml">Atom feed</a>: add it to any feed reader and each new issue arrives in full. New issues are published here on Mondays, and the <Link className="underline" href="/changelog/">changelog</Link> carries the same changes as they land.</p>
-          )}
+          <div className="mt-2"><SignupBox compact /></div>
         </section>
 
         {latest ? (

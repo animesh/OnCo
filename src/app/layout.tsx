@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { SignupBox } from "@/components/SignupBox";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
@@ -110,6 +111,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </div>
               <FooterNav />
             </div>
+            <div className="mt-10 max-w-xl"><SignupBox /></div>
             <div className="mt-10 pt-6 border-t border-border flex flex-wrap items-center justify-between gap-x-6 gap-y-2 text-xs text-muted">
               <p><T k="footer.licence" /> <Link href="/about/#licence" className="underline hover:text-foreground"><T k="footer.commercial" /></Link>. <T k="footer.madeBy" /> <a href="https://judegomila.com" rel="noopener author" className="underline hover:text-foreground">Jude Gomila</a>.</p>
               <p className="flex flex-wrap gap-x-4 gap-y-1">

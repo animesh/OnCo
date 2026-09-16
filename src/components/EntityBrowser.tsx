@@ -13,6 +13,7 @@ import { TechThumb } from "./TechThumb";
 import { TermThumb } from "./TermThumb";
 import { RowAvatar } from "./RowAvatar";
 import { CancerIcon } from "./CancerIcon";
+import { FrontIcon } from "./FrontIcon";
 import type { TargetSchematicTarget } from "./TargetSchematic";
 import { STATUS_LABEL, STATUS_TIPS, statusClass } from "@/lib/text";
 import { FacetSelect } from "./filters/FacetSelect";
@@ -48,6 +49,8 @@ export type BrowserRow = {
   term?: { category: string };
   /** Organ icon (a cancer id) beside the name, for anatomical and pathological terms. */
   cancerIcon?: string;
+  /** Front icon (a section id) beside the name. */
+  sectionIcon?: string;
   /** Facet values keyed by facet key; arrays for multi-valued facets. */
   facets: Record<string, string[]>;
   /** Extra columns keyed by column key: formatted strings, numbers, lists of links, glossary-marked text, or facet chips. */
@@ -292,6 +295,7 @@ export function EntityBrowser({ rows, facets, columns, noun, defaultSort, hideSt
         {r.target && <TargetThumb target={r.target} route={r.route} />}
         {r.schematic && <TechThumb id={r.schematic.id} sections={r.schematic.sections} name={r.name} route={r.route} />}
         {r.term && <TermThumb category={r.term.category} name={r.name} route={r.route} />}
+        {r.sectionIcon && <Link href={r.route} aria-label={`${r.name} front icon`} className="inline-flex h-10 w-14 shrink-0 items-center justify-center rounded-md border border-border bg-accent-soft text-accent"><FrontIcon id={r.sectionIcon} className="h-6 w-6" /></Link>}
         {r.cancerIcon && <Link href={r.route} aria-label={`${r.name} organ icon`} className="inline-flex h-10 w-14 shrink-0 items-center justify-center rounded-md border border-border bg-accent-soft text-accent"><CancerIcon cancerId={r.cancerIcon} className="h-7 w-7" /></Link>}
         {(r.logo || r.avatar) && !r.molecule && <RowAvatar src={r.logo} name={r.name} round={r.round || r.avatar === "person"} />}
         <div><Link href={r.route} data-row className="font-medium hover:underline">{r.name}</Link>{r.sub && <div className="text-xs text-muted">{r.sub}</div>}{!hideTldr && <div className="text-xs text-muted line-clamp-2 max-w-lg">{tldrFor(r.id, r.tldr, lang)}</div>}</div>

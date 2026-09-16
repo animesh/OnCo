@@ -4,7 +4,31 @@ All notable changes to OnCo are recorded here. The format follows [Keep a Change
 
 ## [Unreleased]
 
+Nothing yet.
+
+## [1.0.0] - 2026-09-16
+
+Public launch. The site is live at https://onco.cc and the repository is the source of record for the corpus.
+
 ### Added
+- Glossary: twenty canonical categories (mapped at load from the labels written across the data files), one regular category grid with an animation for every category, and a specific picture on every term that has one (its target's schematic, its molecule, its technology's schematic or the organ it concerns) in the table and at the top of the term page.
+- Email signup: a `SignupBox` in the footer and on `/newsletter/`, driven by `NEXT_PUBLIC_SIGNUP_ACTION` (Buttondown or Listmonk form endpoint); until it is set the box offers the Atom feed and the per-page Watch button.
+- Initials placeholder (`RowAvatar`) for startups, organisations and people without a usable logo or portrait; hotlinked favicons that fail or come back as the generic 16 px globe fall back to it.
+- Journal wordmarks for Nature, the New England Journal of Medicine, Science and The Lancet from Wikidata via their Wikipedia titles, shown on the journals index and journal pages.
+- Seventeen ChEMBL drug targets (SRC-family kinases, GM-CSF and IL-11 receptors, xanthine oxidase, DNA polymerase alpha, steroid, serotonin, dopamine, opioid and cannabinoid targets) with HGNC, UniProt and ChEMBL links.
+- Six NCI-listed supportive-care drugs (eltrombopag, romiplostim, emapalumab, fostamatinib, ravulizumab, propranolol as Hemangeol) from FDA labels; the chlorambucil-prednisone regimen from the ECOG trial; six earlier Cancer Statistics reports as key papers.
+- Papers for sixty-one leaders and OECI representatives via Europe PMC author and affiliation matching, each set checked against the person's role.
+
+### Changed
+- Provenance tags (gap-fill, chembl-gap, ctgov-ingest, nci-list and similar) are hidden from reader-facing pills and excluded from similarity scoring; they remain in the JSON API.
+- People pages show one plain-English provenance line under the papers table instead of a fetcher note on every row.
+- Table cells wrap long tokens site-wide; the models table's paper column uses short labels with the identifier as hover text.
+- Nine dead organisation websites replaced with verified current addresses; four Wikipedia links repointed to existing articles; every Wikipedia and organisation link in the corpus checked.
+- NCI drug list credits two-letter regimen acronyms; the completeness matcher no longer drops "AC".
+
+### Also in 1.0.0: work unreleased since 0.4.0
+
+#### Added
 - `Molecule3D`: ball-and-stick models of small molecules (CPK colours, shaded spheres, depth-sorted bond cylinders with double and triple bonds, drag to rotate, element legend) and smooth backbone ribbons for proteins (Catmull-Rom through the C-alpha trace, per-chain colours, wider on helices and strands, bound drug in ball-and-stick), with a wireframe toggle. Used on product pages, in every molecule thumbnail, and in a new "Solved structures with a drug bound" panel on target pages.
 - PDB snapshots now keep secondary structure from the HELIX and SHEET records (`ss`); `npm run fetch:structures -- --refresh-pdb 5A9U,5DK3` refreshes chosen entries without touching the rest.
 - Startups and investors: company records gain optional `stage`, `ycBatch`, `investors`, `funding` (sourced rounds, amounts only where the source states them) and `acquiredBy`; `companyType: "investor"` for venture funds, corporate venture arms, an accelerator and disease foundations, whose portfolios are derived from backlinks.

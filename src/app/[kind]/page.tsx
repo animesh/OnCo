@@ -95,14 +95,14 @@ function buildBrowser(k: Kind): { rows: BrowserRow[]; facets: FacetDef[]; column
   switch (k) {
     case "cancer": return {
       hideStatus: true,
-      rows: g.kind("cancer").map((c) => { const drugs = (g.forCancer(c.id).get("drug") ?? []).length; return { ...base(c), facets: { group: [cap(c.group)] }, cols: { group: fl("group", cap(c.group)), soc: count(c.standardOfCare.length, c, "care", "care setting"), pipeline: count(c.pipeline.length, c, "pipeline", "pipeline entry"), history: count(c.history.length, c, "history", "history event"), drugs: count(drugs, c, "relevant", "product") }, sortKeys: { soc: c.standardOfCare.length, pipeline: c.pipeline.length, history: c.history.length, drugs } }; }),
+      rows: g.kind("cancer").map((c) => { const drugs = (g.forCancer(c.id).get("drug") ?? []).length; return { ...base(c), cancerIcon: c.id, facets: { group: [cap(c.group)] }, cols: { group: fl("group", cap(c.group)), soc: count(c.standardOfCare.length, c, "care", "care setting"), pipeline: count(c.pipeline.length, c, "pipeline", "pipeline entry"), history: count(c.history.length, c, "history", "history event"), drugs: count(drugs, c, "relevant", "product") }, sortKeys: { soc: c.standardOfCare.length, pipeline: c.pipeline.length, history: c.history.length, drugs } }; }),
       facets: [{ key: "group", label: "Group", searchable: false }],
       columns: [{ key: "group", label: "Group" }, { key: "drugs", label: "Products", sortable: true, numeric: true }, { key: "soc", label: "Care settings", sortable: true, numeric: true, hide: "hidden md:table-cell" }, { key: "pipeline", label: "Pipeline", sortable: true, numeric: true, hide: "hidden md:table-cell" }, { key: "history", label: "History events", sortable: true, numeric: true, hide: "hidden lg:table-cell" }],
       defaultSort: { key: "drugs", dir: -1 },
     };
     case "section": return {
       hideStatus: true,
-      rows: g.kind("section").sort((a, b) => a.order - b.order).map((s) => ({ ...base(s), facets: {}, cols: { techs: count(inc(s.id, "technology").length, s, "technologies", "technology", "listed under"), order: s.order }, sortKeys: { techs: inc(s.id, "technology").length, order: s.order } })),
+      rows: g.kind("section").sort((a, b) => a.order - b.order).map((s) => ({ ...base(s), sectionIcon: s.id, facets: {}, cols: { techs: count(inc(s.id, "technology").length, s, "technologies", "technology", "listed under"), order: s.order }, sortKeys: { techs: inc(s.id, "technology").length, order: s.order } })),
       facets: [],
       columns: [{ key: "techs", label: "Technologies", sortable: true, numeric: true }],
       defaultSort: { key: "order", dir: 1 },
@@ -178,7 +178,7 @@ function buildBrowser(k: Kind): { rows: BrowserRow[]; facets: FacetDef[]; column
       defaultSort: { key: "category", dir: 1 },
     };
     case "trial": return {
-      rows: g.kind("trial").map((t) => ({ ...base(t), sub: t.nct, facets: { phase: [`Phase ${t.phase}`], cancers: names(t.cancers), sponsor: sponsorParts(t.sponsor), drugs: names(t.drugs) }, cols: { phase: fl("phase", `Phase ${t.phase}`), cancers: links(t.cancers), drugs: links(t.drugs), sponsor: sponsorCell(t.sponsor), year: t.yearReported }, sortKeys: { year: t.yearReported ?? 0 }, tie: t.yearReported ?? 0 })),
+      rows: g.kind("trial").map((t) => ({ ...base(t), cancerIcon: t.cancers[0], sub: t.nct, facets: { phase: [`Phase ${t.phase}`], cancers: names(t.cancers), sponsor: sponsorParts(t.sponsor), drugs: names(t.drugs) }, cols: { phase: fl("phase", `Phase ${t.phase}`), cancers: links(t.cancers), drugs: links(t.drugs), sponsor: sponsorCell(t.sponsor), year: t.yearReported }, sortKeys: { year: t.yearReported ?? 0 }, tie: t.yearReported ?? 0 })),
       facets: [{ key: "cancers", label: "Cancer", width: "w-56" }, { key: "phase", label: "Phase", searchable: false, width: "w-40" }, { key: "drugs", label: "Product", width: "w-48" }, { key: "sponsor", label: "Sponsor", width: "w-48" }],
       columns: [{ key: "phase", label: "Phase", sortable: true, hide: "hidden sm:table-cell" }, { key: "drugs", label: "Products", hide: "hidden md:table-cell" }, { key: "cancers", label: "Cancers", hide: "hidden lg:table-cell" }, { key: "sponsor", label: "Sponsor", hide: "hidden lg:table-cell" }, { key: "year", label: "Reported", sortable: true, numeric: true }],
       // What works first: positive and approved results at the top, negative and withdrawn last; newest first within a status.
@@ -190,7 +190,7 @@ function buildBrowser(k: Kind): { rows: BrowserRow[]; facets: FacetDef[]; column
       const typeLabel = (t: string) => cap(t.replace("-", " → "));
       return {
         hideStatus: true,
-        rows: g.kind("pairing").map((p) => ({ ...base(p), facets: { type: [typeLabel(p.pairingType)], cancers: names(p.cancers) }, cols: { type: fl("type", typeLabel(p.pairingType)), a: links([p.a]), b: links([p.b]), cancers: links(p.cancers) }, sortKeys: { type: rank(ORDER, p.pairingType) } })),
+        rows: g.kind("pairing").map((p) => ({ ...base(p), ...techVisual(g, p.a), facets: { type: [typeLabel(p.pairingType)], cancers: names(p.cancers) }, cols: { type: fl("type", typeLabel(p.pairingType)), a: links([p.a]), b: links([p.b]), cancers: links(p.cancers) }, sortKeys: { type: rank(ORDER, p.pairingType) } })),
         facets: [{ key: "type", label: "Type", searchable: false, width: "w-52", order: ORDER.map(typeLabel) }, { key: "cancers", label: "Cancer", width: "w-52" }],
         columns: [{ key: "type", label: "Type", sortable: true, chip: true, tip: "Combination: given together. Sequence: one after the other. Diagnostic → therapeutic: a test that picks the treatment. Platform: a shared technology. Caution: a pairing to avoid." }, { key: "a", label: "First", hide: "hidden md:table-cell" }, { key: "b", label: "Second", hide: "hidden md:table-cell" }, { key: "cancers", label: "Cancers", hide: "hidden lg:table-cell" }],
         defaultSort: { key: "type", dir: 1 },
@@ -198,7 +198,7 @@ function buildBrowser(k: Kind): { rows: BrowserRow[]; facets: FacetDef[]; column
     }
     case "roadmap": return {
       hideStatus: true,
-      rows: g.kind("roadmap").map((r) => ({ ...base(r), facets: { cancers: names(r.cancers) }, cols: { cancers: links(r.cancers), steps: count(r.steps.length, r, "steps", "step", "of"), current: r.steps.filter((s) => s.status === "current").length, emerging: r.steps.filter((s) => s.status === "emerging").length }, sortKeys: { steps: r.steps.length } })),
+      rows: g.kind("roadmap").map((r) => ({ ...base(r), cancerIcon: r.cancers[0], facets: { cancers: names(r.cancers) }, cols: { cancers: links(r.cancers), steps: count(r.steps.length, r, "steps", "step", "of"), current: r.steps.filter((s) => s.status === "current").length, emerging: r.steps.filter((s) => s.status === "emerging").length }, sortKeys: { steps: r.steps.length } })),
       facets: [{ key: "cancers", label: "Cancer", width: "w-52" }],
       columns: [{ key: "cancers", label: "Cancers", hide: "hidden md:table-cell" }, { key: "steps", label: "Steps", sortable: true, numeric: true }, { key: "current", label: "Current", numeric: true, hide: "hidden sm:table-cell" }, { key: "emerging", label: "Emerging", numeric: true, hide: "hidden sm:table-cell" }],
     };
@@ -208,7 +208,7 @@ function buildBrowser(k: Kind): { rows: BrowserRow[]; facets: FacetDef[]; column
       const matLabel = (m: string) => cap(m.replace(/-/g, " "));
       return {
       hideStatus: true,
-      rows: g.kind("idea").map((i) => ({ ...base(i), facets: { maturity: [matLabel(i.maturity)], bottleneck: names(i.bottlenecks), actor: i.actor ? [cap(i.actor)] : [], cost: i.cost ? [cap(i.cost)] : [], cancers: names(i.cancers), technologies: names(i.technologies) }, cols: { maturity: fl("maturity", matLabel(i.maturity)), bottlenecks: links(i.bottlenecks), actor: fl("actor", i.actor ? cap(i.actor) : undefined), cost: fl("cost", i.cost ? cap(i.cost) : undefined), cancers: links(i.cancers), technologies: links(i.technologies) }, sortKeys: { maturity: rank(ORDER, i.maturity) } })),
+      rows: g.kind("idea").map((i) => ({ ...base(i), cancerIcon: i.cancers[0], facets: { maturity: [matLabel(i.maturity)], bottleneck: names(i.bottlenecks), actor: i.actor ? [cap(i.actor)] : [], cost: i.cost ? [cap(i.cost)] : [], cancers: names(i.cancers), technologies: names(i.technologies) }, cols: { maturity: fl("maturity", matLabel(i.maturity)), bottlenecks: links(i.bottlenecks), actor: fl("actor", i.actor ? cap(i.actor) : undefined), cost: fl("cost", i.cost ? cap(i.cost) : undefined), cancers: links(i.cancers), technologies: links(i.technologies) }, sortKeys: { maturity: rank(ORDER, i.maturity) } })),
       facets: [{ key: "bottleneck", label: "Bottleneck", width: "w-60" }, { key: "maturity", label: "Maturity", searchable: false, width: "w-52", order: ORDER.map(matLabel) }, { key: "actor", label: "Who acts", searchable: false, width: "w-44" }, { key: "cost", label: "Cost to try", searchable: false, width: "w-40" }, { key: "cancers", label: "Cancer", width: "w-52" }, { key: "technologies", label: "Technology", width: "w-52" }],
       columns: [{ key: "maturity", label: "Maturity", sortable: true, chip: true }, { key: "bottlenecks", label: "Bottleneck", hide: "hidden md:table-cell" }, { key: "actor", label: "Who acts", sortable: true, hide: "hidden lg:table-cell" }, { key: "cost", label: "Cost", sortable: true, hide: "hidden xl:table-cell" }, { key: "technologies", label: "Technologies", hide: "hidden lg:table-cell" }, { key: "cancers", label: "Cancers", hide: "hidden xl:table-cell" }],
       defaultSort: { key: "maturity", dir: 1 },
@@ -223,7 +223,7 @@ function buildBrowser(k: Kind): { rows: BrowserRow[]; facets: FacetDef[]; column
     };
     case "paper": return {
       hideStatus: true,
-      rows: g.kind("paper").map((p) => ({ ...base(p), sub: `${p.authors} · ${p.journal} ${p.year}`, facets: { type: [cap(p.paperType.replace(/-/g, " "))], year: [String(p.year)], journal: [p.journal], cancers: names(p.cancers), changed: [p.changedPractice ? "Changed practice" : "Did not (yet)"] }, cols: { changed: fl("changed", p.changedPractice ? "Changed practice" : "Did not (yet)"), type: fl("type", cap(p.paperType.replace(/-/g, " "))), year: fl("year", p.year), journal: journalCell(p.journal), cancers: links(p.cancers), drugs: links(p.drugs.slice(0, 3)) }, sortKeys: { year: p.year, changed: p.changedPractice ? 0 : 1 }, tie: p.year })),
+      rows: g.kind("paper").map((p) => ({ ...base(p), logo: journalLogo(g, p.journal), sub: `${p.authors} · ${p.journal} ${p.year}`, facets: { type: [cap(p.paperType.replace(/-/g, " "))], year: [String(p.year)], journal: [p.journal], cancers: names(p.cancers), changed: [p.changedPractice ? "Changed practice" : "Did not (yet)"] }, cols: { changed: fl("changed", p.changedPractice ? "Changed practice" : "Did not (yet)"), type: fl("type", cap(p.paperType.replace(/-/g, " "))), year: fl("year", p.year), journal: journalCell(p.journal), cancers: links(p.cancers), drugs: links(p.drugs.slice(0, 3)) }, sortKeys: { year: p.year, changed: p.changedPractice ? 0 : 1 }, tie: p.year })),
       facets: [{ key: "type", label: "Type", searchable: false, width: "w-44" }, { key: "cancers", label: "Cancer", width: "w-52" }, { key: "journal", label: "Journal", width: "w-52" }, { key: "year", label: "Year", searchable: false, width: "w-32" }, { key: "changed", label: "Practice", searchable: false, width: "w-44", order: ["Changed practice", "Did not (yet)"] }],
       columns: [{ key: "changed", label: "Practice", sortable: true, tip: "Whether the paper changed what clinicians do: guidelines, approvals, or the standard of care." }, { key: "type", label: "Type", sortable: true, chip: true }, { key: "journal", label: "Journal", sortable: true, hide: "hidden md:table-cell" }, { key: "year", label: "Year", sortable: true, numeric: true }, { key: "cancers", label: "Cancers", hide: "hidden lg:table-cell" }, { key: "drugs", label: "Products", hide: "hidden xl:table-cell" }],
       // What works first: papers that changed practice at the top, newest first within each group.
@@ -373,4 +373,17 @@ function termRowVisual(v: TermVisual, category: string): Partial<BrowserRow> {
     case "cancer": return { cancerIcon: v.cancerId };
     default: return { term: { category } };
   }
+}
+
+/** Logo of the journal a paper appeared in, matched by the journal's name or its alternative names. */
+const journalLogoCache = new Map<string, string | undefined>();
+function journalLogo(g: ReturnType<typeof graph>, journal: string): string | undefined {
+  if (journalLogoCache.has(journal)) return journalLogoCache.get(journal);
+  const j = g.kind("journal").find((x) => x.name === journal || x.matchNames.includes(journal));
+  const src = j ? logoSrc(j.id, j.url) : undefined;
+  journalLogoCache.set(journal, src); return src;
+}
+/** The small rotating schematic of a technology, for rows about a pairing or roadmap built on it. */
+function techVisual(g: ReturnType<typeof graph>, id: string): Partial<BrowserRow> {
+  const e = g.get(id); return e?.kind === "technology" ? { schematic: { id: e.id, sections: e.sections } } : {};
 }

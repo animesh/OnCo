@@ -223,3 +223,14 @@ One `vercel deploy` failed after upload with "Not authorized" (reason deploy_fai
 - [x] Startups, YC and VC map with investors: live 10 Sept (/startups/, /investors/; 62 YC, 187 startups, 69 investors)
 - [x] Donors in the heroes section: merged 10 Sept (41 donors, 15 foundations)
 - [x] Open Medical Registry links per section: merged 10 Sept (133 tools, /open-tools/)
+
+## 16 Sept 2026: launch day
+
+Shipped today, each behind the full gate: glossary rebuilt (twenty categories, regular grid, per-term pictures); models table overflow fixed and long tokens wrap in every table; initials placeholders for organisations and people without images; journal wordmarks; email signup box wired to `NEXT_PUBLIC_SIGNUP_ACTION`; 61 people given papers via Europe PMC; 17 ChEMBL targets; six NCI supportive-care drugs; six Cancer Statistics key papers; provenance tags hidden from readers; nine dead websites and four Wikipedia links repaired after a full link sweep; repository metadata brought to 1.0.0 (homepage onco.cc, citation date, changelog).
+
+Owner-only, still open:
+- Email list: create a Buttondown list (free tier, no card) and set `NEXT_PUBLIC_SIGNUP_ACTION` to `https://buttondown.com/api/emails/embed-subscribe/<username>` in Vercel, then redeploy; or give the agent an address to use as a mailto fallback.
+- Google Search Console TXT token and Bing Webmaster import; confirm www.onco.cc is attached in Vercel.
+- Supabase keys for accounts (magic-link sign-in) if wanted at launch.
+- npm publish of `onco` and the MCP server after the name clash is resolved; Zenodo DOI for the dataset release.
+- Review the two bot pull requests and the factcheck patches listed above.

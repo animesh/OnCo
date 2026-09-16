@@ -1,4 +1,4 @@
-# OnCo — time to win
+# OnCo: time to win
 
 **Live:** https://onco.cc
 

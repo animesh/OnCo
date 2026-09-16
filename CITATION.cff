@@ -22,8 +22,8 @@ authors:
     website: https://judegomila.com
   - name: OnCo contributors
     website: https://onco.cc/contributors/
-version: 0.4.0
-date-released: 2026-09-08
+version: 1.0.0
+date-released: 2026-09-16
 license: MIT
 license-url: https://github.com/judegomila/OnCo/blob/main/LICENSE
 repository-code: https://github.com/judegomila/OnCo
