@@ -169,6 +169,7 @@ const list: UkCoverage[] = [
   inDev("camizestrant", "camizestrant"),
   rec("tepotinib", "tepotinib", 789, 2022, "Advanced NSCLC with MET exon 14 skipping alterations", { note: "Published 18 May 2022, within the licence with a commercial arrangement; the only MET inhibitor routinely funded in England." }),
   term("capmatinib", "capmatinib", 884, 2023, "Advanced NSCLC with MET exon 14 skipping", { note: "Terminated appraisal published 3 May 2023: NICE stopped the appraisal, so capmatinib is not routinely funded in England. FDA accelerated approval (Tabrecta) since 2020." }),
+  opt("mirdametinib", "mirdametinib", 1192, 2026, "Symptomatic, inoperable NF1 plexiform neurofibromas in people aged 2 to 17, using the least expensive suitable MEK inhibitor", { note: "Published 16 September 2026 with a commercial arrangement; the guidance asks prescribers to choose the cheapest suitable option among the MEK inhibitors for this indication." }),
   term("imlunestrant", "imlunestrant", 1168, 2026, "ER-positive HER2-negative advanced breast cancer after endocrine therapy", { note: "Terminated evaluation published 18 June 2026: NICE stopped the appraisal, so imlunestrant is not routinely funded in England." }),
   inDev("vepdegestrant", "vepdegestrant"),
   notUk("gedatolisib", "gedatolisib"),
