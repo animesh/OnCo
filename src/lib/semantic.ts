@@ -206,7 +206,10 @@ export function semanticSearch(index: SemanticIndex, query: string, k = 20, opts
       scores.set(di, cur);
     }
   }
-  if (wanted.size) for (const [di, v] of scores) if (wanted.has(index.kinds[di])) v.s *= boost;
+  // A kind named in the first two words ("drug for...", "trial of...") states what the reader wants; lift it further
+  // than a kind word that appears later in the question.
+  const lead = queryKinds(tokenize(query).slice(0, 2).join(" "));
+  if (wanted.size) for (const [di, v] of scores) { const k = index.kinds[di]; if (lead.has(k)) v.s *= boost * 1.35; else if (wanted.has(k)) v.s *= boost; }
   return [...scores].sort((a, b) => b[1].s - a[1].s || a[0] - b[0]).slice(0, k)
     .map(([di, { s, m }]) => ({ id: index.ids[di], score: Math.round(s * 1000) / 1000, matched: m.sort((a, b) => b[1] - a[1]).map(([t]) => t) }));
 }
