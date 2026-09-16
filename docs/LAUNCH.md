@@ -284,3 +284,8 @@ The owner's patient-first roadmap (a real-case "For me", persistent cancer choic
 
 - New cancer record /cancers/polycythaemia-vera/ with diagnosis, risk-adapted standard of care, state of the art, a history from Vaquez (1892) to rusfertide's approval (2026), open problems and a pipeline; seven pivotal trials (CYTO-PV, RESPONSE, RESPONSE-2, PROUD-PV with CONTINUATION-PV, Low-PV, MAJIC-PV, VERIFY) with primary endpoints; eight plain-English terms (JAK2 V617F, phlebotomy, haematocrit, erythrocytosis, hepcidin, aquagenic pruritus, erythromelalgia, post-PV myelofibrosis); two ideas (clone-directed therapy toward treatment-free remission; hepcidin control as first-line treatment in low-risk disease). The eight PV medicines now link to the page.
 - Left for later: aspirin as a drug record (it is referenced in PV care and cancer prevention but has no entity), and an essential thrombocythaemia page built the same way.
+
+### Essential thrombocythaemia page and aspirin record (16 Sept 2026, evening)
+
+- New cancer record /cancers/essential-thrombocythaemia/ built like the polycythaemia vera page (IPSET risk groups, PT-1 and MAJIC-ET trials, CALR and MPL biomarkers, prefibrotic myelofibrosis look-alike), on the bone marrow drawing; hydroxyurea, anagrelide, bomedemstat and the interferons link to it.
+- Aspirin now has a drug record covering clot prevention in PV and ET and the prevention evidence (CAPP2 in Lynch syndrome, ASPREE in the healthy elderly, Add-Aspirin ongoing); the PV page references it again.

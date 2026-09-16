@@ -200,7 +200,7 @@ export const agents: Agent[] = [
   { id: "antacid", name: "Aluminium / magnesium antacids", external: true, class: "Antacid", props: { acidReducer: "antacid" }, source: SOURCES.fdaCyp.url },
   { id: "warfarin", name: "Warfarin", external: true, class: "Vitamin K antagonist (CYP2C9 substrate)", props: { anticoagulant: true }, source: dm("warfarin") },
   { id: "apixaban", name: "Apixaban / rivaroxaban", external: true, class: "Direct oral anticoagulant (CYP3A4 and P-gp substrate)", props: { anticoagulant: true, cyp3a4Substrate: "moderate", pgpSubstrate: true }, management: { cyp3a4Inhibitor: "Combined strong CYP3A4 and P-gp inhibitors raise DOAC exposure and bleeding risk; avoid or reduce per DOAC label.", cyp3a4Inducer: "Combined strong inducers lower DOAC exposure; avoid.", pgpInhibitor: "Exposure rises; monitor for bleeding." }, source: dm("apixaban") },
-  { id: "aspirin", name: "Aspirin / clopidogrel", external: true, class: "Antiplatelet", props: { anticoagulant: true }, source: dm("clopidogrel") },
+  { id: "aspirin", name: "Aspirin / clopidogrel", class: "Antiplatelet", props: { anticoagulant: true }, source: dm("clopidogrel") },
   { id: "ondansetron", name: "Ondansetron", class: "5-HT3 antagonist antiemetic", props: { qt: "known" }, source: dm("ondansetron") },
   { id: "domperidone", name: "Domperidone / metoclopramide", external: true, class: "Prokinetic antiemetic", props: { qt: "known", cyp2d6Inhibitor: "weak" }, source: SOURCES.crediblemeds.url },
   { id: "haloperidol", name: "Haloperidol / olanzapine / quetiapine", external: true, class: "Antipsychotic (QT risk)", props: { qt: "known" }, source: SOURCES.crediblemeds.url },

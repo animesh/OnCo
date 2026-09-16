@@ -483,6 +483,7 @@ export const regionalApprovals: Record<string, RegionalRow> = {
   "h101-oncolytic-adenovirus": { CN: A(2005, NMPA, "Late-stage nasopharyngeal carcinoma with chemotherapy (Nov 2005)") },
   "iparomlimab-tuvonralimab": { CN: A(2024, NMPA, "Recurrent or metastatic cervical cancer after platinum chemotherapy (Sept 2024)") },
   mecapegfilgrastim: { CN: A(2018, NMPA, "Prevention of chemotherapy-induced neutropenia in non-myeloid cancers (May 2018)") },
+  vorolanib: { CN: A(2023, NMPA, "Advanced renal cell carcinoma after a prior tyrosine kinase inhibitor, with everolimus (June 2023)") },
 };
 
 /** Convenience: which regions have an approval (approved or conditional). */
