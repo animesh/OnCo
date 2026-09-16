@@ -150,6 +150,15 @@ const Summary = ({ e }: { e: Entity }) => (
   </LayerAware>
 );
 
+/** Fetcher notes on a person's papers, rendered once under the table in plain English rather than under every row. */
+const PAPER_PROVENANCE: Record<string, string> = {
+  "OpenAlex author record matched by institution": "These papers come from the OpenAlex author record for this person at their institution, taking the most cited articles with a DOI.",
+  "Europe PMC author record matched by affiliation": "These papers come from a Europe PMC search on the author's name and institution, taking the most cited articles.",
+};
+function paperProvenance(papers: ReadonlyArray<{ note?: string }>): string[] {
+  return [...new Set(papers.map((p) => (p.note && PAPER_PROVENANCE[p.note]) || "").filter(Boolean))];
+}
+
 export function EntityDetail({ e }: { e: Entity }) {
   const g = graph();
   const neighbours = g.neighbours(e.id);
@@ -479,7 +488,8 @@ function kindTabs(e: Entity): Tab[] {
         </div>),
         ...(e.papers.length ? [{ id: "papers", label: "Papers", count: e.papers.length, content: (
           <div className="card overflow-x-auto"><table className="onco"><thead><tr><th>Title</th><th>Journal</th><th>Year</th></tr></thead>
-            <tbody>{e.papers.map((p, i) => <tr key={i}><td>{p.url || p.doi ? <a className="underline" href={p.url ?? `https://doi.org/${p.doi}`} rel="noopener">{p.title}</a> : p.title}{p.note && <div className="text-xs text-muted">{p.note}</div>}</td><td className="text-muted">{p.journal}</td><td className="tabular-nums text-muted">{p.year}</td></tr>)}</tbody></table></div>) }] : []),
+            <tbody>{e.papers.map((p, i) => <tr key={i}><td>{p.url || p.doi ? <a className="underline" href={p.url ?? `https://doi.org/${p.doi}`} rel="noopener">{p.title}</a> : p.title}{p.note && !PAPER_PROVENANCE[p.note] && <div className="text-xs text-muted">{p.note}</div>}</td><td className="text-muted">{p.journal}</td><td className="tabular-nums text-muted">{p.year}</td></tr>)}</tbody></table>
+            {paperProvenance(e.papers).map((line) => <p key={line} className="px-4 py-2 text-xs text-muted border-t border-border">{line}</p>)}</div>) }] : []),
       ];
     }
     case "section": {
