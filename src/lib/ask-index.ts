@@ -121,7 +121,9 @@ export function deriveAliases(e: AliasSource): string[] {
     out.push(t);
   };
   push(base);
-  push(abbreviation(e.name));
+  // A registry title such as "Tepotinib Phase II in NSCLC Harboring MET Alterations (VISION)" must not claim the acronym: only a
+  // trial whose name is the acronym itself ("VISION") resolves from it.
+  if (!(e.kind === "trial" && e.name.length > 40)) push(abbreviation(e.name));
   // Glossary entries that name two things ("HER2-low and HER2-ultralow", "Hot vs cold tumours") resolve from each half.
   if (e.kind === "term") for (const h of base.split(/\s+(?:and|or|vs\.?|versus|\/|&)\s+/)) if (h !== base && h.length >= 4) push(h);
   // Slash-separated names ("PI3K / AKT / mTOR") also resolve from the compact form.

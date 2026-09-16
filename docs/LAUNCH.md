@@ -246,3 +246,9 @@ The site already ships a static JSON API with CORS, per-entity Markdown context 
 - Task-shaped endpoints for agents: "what changed since <date>", "trials recruiting for <cancer> in <country>", "compare <drug A> and <drug B>", each with a documented example in the OpenAPI file.
 - A tool-use evaluation set (questions with expected entity ids) so regressions in agent usefulness are caught in CI, building on `src/lib/ask.test.ts`.
 - Rate and provenance headers on API responses (`X-OnCo-Provenance`, `Last-Modified`) so agents can cite and cache.
+
+## Roadmap pointer (16 Sept 2026)
+
+The owner's patient-first roadmap (a real-case "For me", persistent cancer choice, trial and cancer subscriptions, per-cancer "what changed", a first-60-days guide, when-to-call red cards, decision pages, outcome-based centre choice, appointment prep with answers) is recorded as batch K, items 101 to 109, in docs/IMPROVEMENTS-100.md.
+
+- [ ] Add Enso Bioscience as a company (owner request, 16 Sept 2026): its site ensobioscience.com shows only "Launching Soon" with an email list, so there is nothing sourced to record yet; ask the owner what it does and where it is based, or revisit when the site publishes.

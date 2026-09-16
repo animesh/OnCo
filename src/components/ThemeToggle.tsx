@@ -33,9 +33,8 @@ export function ThemeToggle({ className = "" }: { className?: string }) {
   const label = (th: Theme) => t(`theme.${th}` as UiKey);
   return (
     <button type="button" onClick={() => set(next)} title={t("theme.title", { current: label(theme), next: label(next) })} aria-label={t("theme.aria", { current: label(theme), next: label(next) })}
-      className={`ctl px-0 md:px-3 xl:px-0 2xl:px-3 ${className}`}>
+      className={`ctl ctl-icon ${className}`}>
       <span aria-hidden className="text-base leading-none">{ICON[theme]}</span>
-      <span className="hidden md:inline xl:hidden 2xl:inline text-muted">{label(theme)}</span>
     </button>
   );
 }

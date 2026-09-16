@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import { accountEnabled, captureSession, loadSession, onAccountChange, pushWatchlist, sendMagicLink, signOut, syncWatchlist, type Session } from "@/lib/account";
 import { useT } from "@/lib/i18n/ui";
 
@@ -114,7 +115,7 @@ export function AccountMenu({ inline = false, className = "" }: { inline?: boole
           <span aria-hidden className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-accent text-white text-[11px] font-semibold">{(session.user.email[0] ?? "?").toUpperCase()}</span>
         </button>
       ) : (
-        <button type="button" onClick={() => setOpen(true)} className="ctl ctl-icon" title={accountEnabled ? t("account.title") : t("signup.title")} aria-label={t("signup.icon")}><ProfileIcon /></button>
+        <Link href="/signup/" className="ctl ctl-icon" title={accountEnabled ? t("account.title") : t("signup.title")} aria-label={t("signup.icon")}><ProfileIcon /></Link>
       )}
       {accountEnabled ? dialogEl : captureEl}
     </span>

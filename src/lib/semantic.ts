@@ -13,13 +13,15 @@
  * semantic-docs.ts; scripts/embed.ts writes the index to public/api/v1/embeddings.{bin,json}.
  */
 
-export type SemanticDoc = { id: string; kind: string; text: string };
+export type SemanticDoc = { id: string; kind: string; text: string; /** Optional score multiplier; thin registry-ingested records sit below 1. */ weight?: number };
 export type SemanticHit = { id: string; score: number; matched: string[] };
-export type SemanticMeta = { version: 1; ids: string[]; kinds: string[]; vocab: string[]; idf: number[]; built?: string; method?: string };
+export type SemanticMeta = { version: 1; ids: string[]; kinds: string[]; vocab: string[]; idf: number[]; weights?: number[]; built?: string; method?: string };
 
 export type SemanticIndex = {
   ids: string[];
   kinds: string[];
+  /** Per-document score multipliers (absent when every document weighs 1). */
+  weights?: number[];
   vocab: string[];
   vocabIndex: Map<string, number>;
   idf: Float32Array;
@@ -105,7 +107,8 @@ export function buildSemanticIndex(docs: SemanticDoc[], opts: BuildOptions = {})
     const norm = Math.sqrt(top.reduce((s, [, w]) => s + w * w, 0)) || 1;
     return { idx: Uint16Array.from(top.map(([i]) => i)), w: Float32Array.from(top.map(([, w]) => w / norm)) };
   });
-  return { ids: docs.map((d) => d.id), kinds: docs.map((d) => d.kind), vocab, vocabIndex, idf, docs: out };
+  const weights = docs.map((d) => d.weight ?? 1);
+  return { ids: docs.map((d) => d.id), kinds: docs.map((d) => d.kind), ...(weights.some((w) => w !== 1) ? { weights } : {}), vocab, vocabIndex, idf, docs: out };
 }
 
 /** Words in a query that name a kind of record. When present, records of that kind get a modest boost. */
@@ -145,7 +148,7 @@ export function encodeSemanticIndex(index: SemanticIndex): { bin: Uint8Array; me
     for (let i = 0; i < d.idx.length; i++) { v.setUint16(p, d.idx[i]); p += 2; }
     for (let i = 0; i < d.w.length; i++) { v.setUint8(p, Math.max(1, Math.round(d.w[i] * 255))); p += 1; }
   }
-  return { bin: new Uint8Array(buf), meta: { version: 1, ids: index.ids, kinds: index.kinds, vocab: index.vocab, idf: Array.from(index.idf, (x) => Math.round(x * 1000) / 1000) } };
+  return { bin: new Uint8Array(buf), meta: { version: 1, ids: index.ids, kinds: index.kinds, ...(index.weights ? { weights: index.weights } : {}), vocab: index.vocab, idf: Array.from(index.idf, (x) => Math.round(x * 1000) / 1000) } };
 }
 
 export function decodeSemanticIndex(bin: ArrayBuffer, meta: SemanticMeta): SemanticIndex {
@@ -167,7 +170,7 @@ export function decodeSemanticIndex(bin: ArrayBuffer, meta: SemanticMeta): Seman
     for (let i = 0; i < len; i++) w[i] /= norm;
     docs.push({ idx, w });
   }
-  return { ids: meta.ids, kinds: meta.kinds, vocab: meta.vocab, vocabIndex: new Map(meta.vocab.map((t, i) => [t, i])), idf: Float32Array.from(meta.idf), docs };
+  return { ids: meta.ids, kinds: meta.kinds, ...(meta.weights ? { weights: meta.weights } : {}), vocab: meta.vocab, vocabIndex: new Map(meta.vocab.map((t, i) => [t, i])), idf: Float32Array.from(meta.idf), docs };
 }
 
 function postings(index: SemanticIndex): Map<number, Array<[number, number]>> {
@@ -209,6 +212,8 @@ export function semanticSearch(index: SemanticIndex, query: string, k = 20, opts
   // A kind named in the first two words ("drug for...", "trial of...") states what the reader wants; lift it further
   // than a kind word that appears later in the question.
   const lead = queryKinds(tokenize(query).slice(0, 2).join(" "));
+  // Registry-ingested trials and pipeline products carry a title and little else; their weight keeps curated records ahead.
+  if (index.weights) for (const [di, v] of scores) v.s *= index.weights[di] ?? 1;
   if (wanted.size) for (const [di, v] of scores) { const k = index.kinds[di]; if (lead.has(k)) v.s *= boost * 1.35; else if (wanted.has(k)) v.s *= boost; }
   return [...scores].sort((a, b) => b[1].s - a[1].s || a[0] - b[0]).slice(0, k)
     .map(([di, { s, m }]) => ({ id: index.ids[di], score: Math.round(s * 1000) / 1000, matched: m.sort((a, b) => b[1] - a[1]).map(([t]) => t) }));
