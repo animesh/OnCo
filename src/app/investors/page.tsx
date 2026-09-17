@@ -28,7 +28,7 @@ export default function Investors() {
     const cancers = [...new Set(portfolio.flatMap((c) => c.cancers).map((id) => g.must(id).name))];
     const items: LinkItem[] = portfolio.slice(0, 8).map((c) => ({ label: c.name.replace(/ \(.*\)$/, ""), href: routeFor(c), tip: c.tldr }));
     return {
-      id: inv.id, name: inv.name, tldr: inv.tldr, route: routeFor(inv), logo: logoSrc(inv.id, inv.website), sub: `${inv.hq}, ${inv.country}`,
+      id: inv.id, name: inv.name, tldr: inv.tldr, route: routeFor(inv), logo: logoSrc(inv.id, inv.website), avatar: "org", sub: `${inv.hq}, ${inv.country}`,
       facets: { kind: [KIND_LABEL[kindOf(inv.tags)]], country: [inv.country], front: fronts, cancers, stage: stages },
       cols: { kind: fl("kind", KIND_LABEL[kindOf(inv.tags)]), country: fl("country", inv.country), portfolio: portfolio.length ? [{ label: String(portfolio.length), href: `${routeFor(inv)}#portfolio`, tip: `See the ${portfolio.length} portfolio ${portfolio.length === 1 ? "company" : "companies"} in OnCo.` }] : 0, companies: portfolio.length > 8 ? [...items, { label: `+${portfolio.length - 8} more`, href: `${routeFor(inv)}#portfolio` }] : items, founded: inv.founded },
       sortKeys: { portfolio: portfolio.length, founded: inv.founded ?? 0 },

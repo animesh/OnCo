@@ -10,15 +10,18 @@ import { STATUS_LABEL, statusClass } from "@/lib/text";
 import { ProfileBar, type ProfileCancer, type ProfileLine } from "./ProfileBar";
 import { TrialFinderGeo } from "./TrialFinderGeo";
 import { CaregiverPanel, type CareDetail, type QuestionItem, type SupportItem } from "./CaregiverPanel";
-import { KindIcon } from "./KindIcon";
 import { MoleculeThumb, hasMolecule } from "./MoleculeThumb";
 import { TechThumb } from "./TechThumb";
+import { RowVisualFallback } from "./RowVisualFallback";
 
-/** The visual the site already draws for this record: a technology schematic, a rotating molecule for the top drug rows, else the kind's icon. */
+/**
+ * The visual the site already draws for this record: a technology schematic, a rotating molecule for the top
+ * drug rows, else the shared kind-symbol tile (the same stand-in the index tables use), all at one size.
+ */
 function RowVisual({ r, rank }: { r: MatchRow; rank: number }) {
   if (r.kind === "technology") return <TechThumb id={r.id} sections={[]} name={r.name} route={r.route} className="h-9 w-12" />;
-  if (r.kind === "drug" && rank < 8 && hasMolecule(r.id)) return <div className="h-9 w-12 overflow-hidden rounded-md border border-border bg-card"><MoleculeThumb drugId={r.id} className="h-9 w-12" /></div>;
-  return <div className="h-9 w-12 flex items-center justify-center rounded-md border border-border bg-foreground/5 text-muted"><KindIcon kind={r.kind} className="h-5 w-5" /></div>;
+  if (r.kind === "drug" && rank < 8 && hasMolecule(r.id)) return <Link href={r.route} aria-label={`${r.name} molecule`} className="inline-flex h-9 w-12 shrink-0 overflow-hidden rounded-md border border-border bg-card"><MoleculeThumb drugId={r.id} className="h-9 w-12" /></Link>;
+  return <RowVisualFallback kind={r.kind} name={r.name} route={r.route} className="h-9 w-12" />;
 }
 
 export type SocRef = { id: string; name: string; route: string; status?: string; kind: string; technologies: string[] };
@@ -157,7 +160,7 @@ export function Navigator({ data }: { data: NavigatorData }) {
                   {options.slice(0, 40).map((o, i) => (
                     <tr key={o.r.id}>
                       <td className="tabular-nums text-muted">{i + 1}</td>
-                      <td className="min-w-[220px]"><div className="flex items-start gap-3"><Link href={o.r.route} className="shrink-0" aria-hidden tabIndex={-1}><RowVisual r={o.r} rank={i} /></Link><div><Link href={o.r.route} className="font-medium hover:underline">{o.r.name}</Link><div className="text-xs text-muted line-clamp-2 max-w-lg">{o.r.meta && <span className="text-foreground/70">{o.r.meta} · </span>}{o.r.tldr}</div></div></div></td>
+                      <td className="min-w-[220px]"><div className="flex items-start gap-3"><RowVisual r={o.r} rank={i} /><div><Link href={o.r.route} className="font-medium hover:underline">{o.r.name}</Link><div className="text-xs text-muted line-clamp-2 max-w-lg">{o.r.meta && <span className="text-foreground/70">{o.r.meta} · </span>}{o.r.tldr}</div></div></div></td>
                       <td>{o.r.status && <span className={`chip ${statusClass(o.r.status)}`}>{STATUS_LABEL[o.r.status] ?? o.r.status}</span>}</td>
                       <td className="hidden md:table-cell"><div className="flex flex-wrap gap-1">{o.parts.map(([k, v]) => <span key={k} className="chip bg-foreground/5 text-[10px]">{k} +{v}</span>)}</div></td>
                       <td className="tabular-nums font-semibold">{o.score}</td>
