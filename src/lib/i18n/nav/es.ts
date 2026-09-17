@@ -34,6 +34,7 @@ export const navEs: NavDict = {
   "/pathways/": ["Vías", "Circuitos de señalización, dibujados y explicados."],
   "/dossiers/": ["Dosieres de dianas", "Todo sobre una diana en una página: biología, prevalencia, puntos calientes, productos por fase, ensayos, resistencia, ensayos diagnósticos, modelos, preguntas abiertas, identificadores externos."],
   "/pathway-drugs/": ["Matriz vía-fármaco", "Qué nodos de cada vía tienen un fármaco, en qué fase, y qué nodos accionables no tienen ninguno."],
+  "/tumour-testing/": ["Pruebas de secuenciación tumoral", "BostonGene, Tempus, Foundation Medicine, Caris, Guardant y el resto lado a lado: tejido o sangre, panel o exoma, qué devuelve el informe y el estado regulatorio cuando es seguro."],
   "/models/": ["Modelos y conjuntos de datos", "Modelos fundacionales y los datos con que se entrenan, con parámetros, pesos, licencia y referencias."],
   "/open-questions/": ["Preguntas abiertas", "Preguntas sin resolver por diana y tecnología: por qué siguen abiertas, qué las respondería, quién actúa."],
   "/preclinical-models/": ["Modelos preclínicos", "Líneas celulares con identificadores de Cellosaurus y DepMap, bancos de PDX, modelos de ratón y organoides por cáncer y diana."],
@@ -110,6 +111,7 @@ export const navEs: NavDict = {
   "/survivorship/": ["Planificador de supervivencia", "Efectos tardíos que vigilar tras cada tratamiento, la prueba de cribado, con qué frecuencia y qué guía lo dice."],
   "/second-opinion/": ["Segunda opinión", "Centros expertos para tu cáncer en tu país, las personas que trabajan en él y cómo funciona la derivación donde vives."],
   "/assistance/": ["Ayuda económica", "Programas de fabricantes, reembolso y genéricos por país y producto, además de planes nacionales y organizaciones benéficas."],
+  "/free/": ["Gratis en oncología", "Todo lo que se puede obtener sin pagar: pruebas tumorales y genéticas gratuitas, cribado y vacunación contra el VPH, líneas de enfermería, traslados y alojamiento, segundas opiniones, ayuda de viaje para ensayos, pelucas y prótesis, y datos abiertos. Quién tiene derecho y dónde."],
   "/fronts/nutrition-lifestyle/": ["Dieta, ejercicio y estilo de vida", "Qué come, bebe, pesa y hace la gente: qué dice la evidencia y qué es humo."],
   "/fronts/supportive-care/": ["Cuidados de apoyo", "Tratar a la persona, no solo al tumor: síntomas, efectos secundarios, nutrición, salud mental."],
 

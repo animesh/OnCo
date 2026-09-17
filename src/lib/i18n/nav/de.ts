@@ -34,6 +34,7 @@ export const navDe: NavDict = {
   "/pathways/": ["Signalwege", "Signalkreise, gezeichnet und erklärt."],
   "/dossiers/": ["Zielstruktur-Dossiers", "Alles zu einer Zielstruktur auf einer Seite: Biologie, Häufigkeit, Hotspots, Produkte nach Phase, Studien, Resistenz, Tests, Modelle, offene Fragen, externe IDs."],
   "/pathway-drugs/": ["Signalweg-Wirkstoff-Matrix", "Welche Knoten eines Signalwegs ein Medikament haben, in welcher Phase, und welche adressierbaren Knoten keines haben."],
+  "/tumour-testing/": ["Tumorsequenzierungstests", "BostonGene, Tempus, Foundation Medicine, Caris, Guardant und die übrigen nebeneinander: Gewebe oder Blut, Panel oder Exom, was der Befund liefert und der Zulassungsstatus, wo er sicher ist."],
   "/models/": ["Modelle und Datensätze", "Foundation Models und die Datensätze, auf denen sie trainieren, mit Parametern, Gewichten, Lizenz und Benchmarks."],
   "/open-questions/": ["Offene Fragen", "Ungelöste Fragen je Zielstruktur und Technologie: warum offen, was sie beantworten würde, wer handelt."],
   "/preclinical-models/": ["Präklinische Modelle", "Zelllinien mit Cellosaurus- und DepMap-IDs, PDX-Banken, Mausmodelle und Organoide je Krebsart und Zielstruktur."],
@@ -110,6 +111,7 @@ export const navDe: NavDict = {
   "/survivorship/": ["Nachsorgeplaner", "Spätfolgen, auf die nach jeder Therapie zu achten ist, der Screeningtest, wie oft, und die Leitlinie, die das sagt."],
   "/second-opinion/": ["Zweitmeinung", "Fachzentren für Ihre Krebsart in Ihrem Land, die Menschen, die daran arbeiten, und wie Überweisung bei Ihnen funktioniert."],
   "/assistance/": ["Finanzielle Hilfe", "Herstellerprogramme, Erstattung und Generika je Land und Produkt, plus nationale Programme und gemeinnützige Organisationen."],
+  "/free/": ["Kostenlos in der Onkologie", "Alles, was es umsonst gibt: kostenlose Tumor- und Gentests, Früherkennung und HPV-Impfung, Pflege-Hotlines, Fahrten und Unterkunft, Zweitmeinungen, Reisehilfe für Studien, Perücken und Prothesen sowie offene Daten. Wer berechtigt ist und wo."],
   "/fronts/nutrition-lifestyle/": ["Ernährung, Bewegung und Lebensstil", "Was Menschen essen, trinken, wiegen und tun: was die Evidenz sagt und was Hype ist."],
   "/fronts/supportive-care/": ["Supportivtherapie", "Den Menschen behandeln, nicht nur den Tumor: Symptome, Nebenwirkungen, Ernährung, psychische Gesundheit."],
 

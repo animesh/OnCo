@@ -74,6 +74,8 @@ import { radiationDrugs, radiationCompanies } from "./radiation-wave3";
 import { cancerParentsWave2, cancerParentsWave2Map } from "./cancer-parents-wave2";
 import { radiationTrials4 } from "./radiation-wave4";
 import { pdacDrugs, pdacTrials, pdacCompanies } from "./pdac-wave";
+import { freeCollections } from "./free-wave";
+import { tumourTestCompanies } from "./tumour-tests";
 import { thyroidSubtypes } from "./thyroid-subtypes";
 import { headNeckSubtypes } from "./head-neck-subtypes";
 import { ovarianSubtypes } from "./ovarian-subtypes";
@@ -153,6 +155,7 @@ const RAW_INPUTS: EntityInput[] = [
   ...pipelineTrialsWave3,
   ...pipelineTrialsWave4,
   ...pipelineTrialsWave5, ...pipelineTrialsWave6,
+  ...freeCollections, ...tumourTestCompanies,
 ];
 
 /** Every input, with glossary terms mapped to their canonical category (see ./term-categories.ts). */
