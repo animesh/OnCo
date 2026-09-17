@@ -560,6 +560,7 @@ export function termSchematicFor(category: string): Mesh {
 import { radiationSchematicAliases } from "./radiation-wave1";
 import { modelSchematicAliases } from "./models-wave";
 import { machineSchematicAliases } from "./machines-wave";
+import { machineSchematicAliases2 } from "./machines-wave2";
 import { manufacturingSchematicAliases } from "./manufacturing-wave";
 
 export const SCHEMATIC_ALIAS: Record<string, string> = {
@@ -567,6 +568,7 @@ export const SCHEMATIC_ALIAS: Record<string, string> = {
   ...radiationSchematicAliases,
   ...modelSchematicAliases,
   ...machineSchematicAliases,
+  ...machineSchematicAliases2,
   ...manufacturingSchematicAliases,
   "spatial-transcriptomics": "spatial-biology-instruments",
   "imaging-mass-cytometry": "spatial-biology-instruments",
