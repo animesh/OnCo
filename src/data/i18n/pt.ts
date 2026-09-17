@@ -1698,7 +1698,7 @@ export const tldr_pt: Record<string, string> = {
   "centre-oscar-lambret": "O centro oncológico regional do norte de França, conhecido pela oncologia pediátrica, sarcomas, cancros ginecológicos e radioterapia.",
   charite: "A Charité é o maior hospital universitário da Europa, com um Comprehensive Cancer Center e o Berlin Institute of Health.",
   "charles-sawyers": "Codesenvolveu o dasatinib, sucessor do imatinib, e o fármaco para a próstata enzalutamida, e explicou como os cancros resistem aos fármacos dirigidos.",
-  "checkmate-548": "O CheckMate 548, 143 e 498 foram três grandes ensaios, todos negativos: a imunoterapia que transformou o melanoma e o cancro do pulmão não fez nada no glioblastoma.",
+  "checkmate-548": "O CheckMate 548 acrescentou nivolumabe à radioterapia com temozolomida no glioblastoma recém-diagnosticado e não mostrou benefício. Com o CheckMate 143 e o 498, são três grandes ensaios negativos: a imunoterapia que transformou o melanoma e o câncer de pulmão não fez nada no glioblastoma.",
   "checkmate-577": "Um ano de imunoterapia após a cirurgia duplicou o tempo até o cancro voltar em doentes cujo tumor não tinha respondido completamente à quimiorradioterapia, embora o ganho em sobrevivência não tenha atingido significância.",
   "checkmate-648": "Mostrou duas opções de imunoterapia para o cancro do esófago escamoso, incluindo uma sem qualquer quimioterapia, ambas a prolongar a sobrevivência.",
   "checkmate-743": "O CheckMate 743 foi o primeiro ensaio de imunoterapia a prolongar a sobrevivência no mesotelioma e deu a primeira nova opção de primeira linha em 16 anos.",

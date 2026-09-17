@@ -2,6 +2,13 @@
 
 Every factual correction to the OnCo corpus, newest first. Format: date · entity · what was wrong · how it was found · fix.
 
+## 2026-09-17
+
+| Date | Entity | What was wrong | How found | Fix |
+|---|---|---|---|---|
+| 2026-09-17 | [checkmate-548](/trials/checkmate-548/) | One record named "CheckMate 548 & CheckMate 143 & CheckMate 498" carried a single registry id (NCT02667587, which is CheckMate 548 only) and `yearReported` 2020 for all three. They are three separate trials: CheckMate 143 (NCT02017717, JAMA Oncology 2020), CheckMate 498 (NCT02617589, Neuro-Oncology 2023) and CheckMate 548 (NCT02667587, Neuro-Oncology 2022). The glioma history also dated CheckMate 143 to 2017 while the record said 2020. | Reader report (neurosurgeon), checked against ClinicalTrials.gov and the PubMed records ([143](https://pubmed.ncbi.nlm.nih.gov/32437507/), [498](https://pubmed.ncbi.nlm.nih.gov/35419607/), [548](https://pubmed.ncbi.nlm.nih.gov/35511454/)) | split into `checkmate-143`, `checkmate-498`, `checkmate-548`, each with its own registry id, publication, year and outcomes; history entry moved to 2020 |
+| 2026-09-17 | [checkmate-548](/trials/checkmate-548/) | The structured overall-survival outcome (28.9 vs 32.1 months) cited `academic.oup.com/neuro-oncology/article/25/1/123`, which is the CheckMate 498 paper (Omuro et al.), not CheckMate 548 (Lim et al., Neuro-Oncology 2022;24:1935-1949). | Reader report (neurosurgeon), checked against PubMed ([source](https://pubmed.ncbi.nlm.nih.gov/35511454/)) | `source` set to https://doi.org/10.1093/neuonc/noac116 |
+
 ## 2026-09-13
 
 | Date | Entity | What was wrong | How found | Fix |

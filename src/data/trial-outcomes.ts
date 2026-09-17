@@ -635,8 +635,23 @@ const RAW: Record<string, TrialOutcomeIn> = {
   },
   "checkmate-548": {
     enrolled: 716,
-    outcomes: [{ endpoint: "Overall survival, MGMT-methylated glioblastoma", primary: true, unit: "months", arms: [{ name: "Nivolumab + RT + temozolomide", n: 358, value: 28.9 }, { name: "Placebo + RT + temozolomide", n: 358, value: 32.1 }], hr: 1.10, ci: [0.92, 1.32], note: "Not significant", source: "https://academic.oup.com/neuro-oncology/article/25/1/123/6608713" }],
+    outcomes: [{ endpoint: "Overall survival, MGMT-methylated glioblastoma", primary: true, unit: "months", arms: [{ name: "Nivolumab + RT + temozolomide", n: 358, value: 28.9 }, { name: "Placebo + RT + temozolomide", n: 358, value: 32.1 }], hr: 1.10, ci: [0.92, 1.32], note: "Not significant", source: "https://doi.org/10.1093/neuonc/noac116" }],
     replication: "Consistent with CheckMate 143 and 498: three negative randomised trials of PD-1 blockade in glioblastoma.",
+  },
+  "checkmate-143": {
+    enrolled: 369,
+    outcomes: [{ endpoint: "Overall survival, first recurrence of glioblastoma", primary: true, unit: "months", arms: [{ name: "Nivolumab", n: 184, value: 9.8 }, { name: "Bevacizumab", n: 185, value: 10.0 }], hr: 1.04, ci: [0.83, 1.30], p: "0.76", note: "Not significant", source: "https://doi.org/10.1001/jamaoncol.2020.1024" }],
+    replication: "Consistent with CheckMate 498 and 548 in newly diagnosed disease: three negative randomised trials of PD-1 blockade in glioblastoma.",
+  },
+  "checkmate-498": {
+    enrolled: 560,
+    outcomes: [{ endpoint: "Overall survival, MGMT-unmethylated glioblastoma", primary: true, unit: "months", arms: [{ name: "Nivolumab + RT", n: 280, value: 13.4 }, { name: "Temozolomide + RT", n: 280, value: 14.9 }], hr: 1.31, ci: [1.09, 1.58], p: "0.0037", note: "Favours temozolomide", source: "https://doi.org/10.1093/neuonc/noac099" }],
+    replication: "Consistent with CheckMate 143 and 548: three negative randomised trials of PD-1 blockade in glioblastoma.",
+  },
+  "cctg-ce6": {
+    enrolled: 562,
+    outcomes: [{ endpoint: "Overall survival, age 65 or older", primary: true, unit: "months", arms: [{ name: "Short-course RT + temozolomide", n: 281, value: 9.3 }, { name: "Short-course RT alone", n: 281, value: 7.6 }], hr: 0.67, ci: [0.56, 0.80], p: "<0.001", source: nejm("NEJMoa1611977") }],
+    replication: "Single randomised trial of adding temozolomide to short-course radiotherapy; the Nordic and NOA-08 trials support hypofractionated radiotherapy or temozolomide alone in older patients, with MGMT status guiding the choice.",
   },
   "act-iv": {
     enrolled: 745,
