@@ -112,7 +112,7 @@ export default function Home() {
             <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 mb-3">
               <p className="text-sm text-muted"><span className="font-semibold text-foreground tabular-nums">{fmt(total)}</span> linked objects, one page each. Every count is a link.</p>
             </div>
-            <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-px rounded-xl border border-border bg-card overflow-hidden shadow-card [&>li]:border-border [&>li]:border-b [&>li]:border-r">
+            <ul className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-px rounded-xl border border-border bg-card overflow-hidden shadow-card [&>li]:border-border [&>li]:border-b [&>li]:border-r">
               {counts.map(({ k, n }) => (
                 <li key={k} className="bg-card">
                   <Link href={`/${KIND_META[k].route}/`} className="flex h-full items-center gap-3 px-3.5 py-3 hover:bg-surface transition-colors">

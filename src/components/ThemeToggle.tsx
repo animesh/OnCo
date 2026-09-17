@@ -31,7 +31,10 @@ export function ThemeToggle({ className = "" }: { className?: string }) {
   useEffect(() => {
     const id = requestAnimationFrame(() => {
       const saved = localStorage.getItem(KEY) as Theme | null;
-      if (saved && ORDER.includes(saved)) setTheme(saved);
+      const th: Theme = saved && ORDER.includes(saved) ? saved : "light";
+      setTheme(th);
+      // If React recovered from a hydration mismatch it re-rendered <html> without the attribute the pre-paint script set; put it back.
+      if (th !== "system" && document.documentElement.getAttribute("data-theme") !== th) apply(th);
     });
     return () => cancelAnimationFrame(id);
   }, []);
