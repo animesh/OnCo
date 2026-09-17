@@ -9,10 +9,13 @@ import { useRegion } from "@/lib/region";
 import { REGION_COUNTRIES, regionForCountry, type ReferralRoute } from "@/data/referral-routes";
 import type { Region } from "@/data/regional-approvals";
 import { REGION_META } from "@/data/regional-approvals";
+import { CentreTable } from "./CentreTable";
+import { unpackCentreRows, type CentreLink, type CentrePack, type CentreRow } from "@/lib/centre-table";
 
-export type SoCentre = { id: string; name: string; route: string; city: string; country: string; newsweek?: number; nci?: string; leadershipRank?: number; via: string[] };
+/** A centre row for the finder: the measurable record fields built in src/lib/centre-table.ts. Cancers carry packed links; rows are unpacked for the chosen cancer. */
+export type SoCentre = CentreRow;
 export type SoPerson = { id: string; name: string; role: string; route: string; institutionId?: string; institutionName?: string; specialisms: string[] };
-export type SoCancer = { id: string; name: string; group: string; route: string; centres: SoCentre[]; people: SoPerson[] };
+export type SoCancer = { id: string; name: string; group: string; route: string; centres: CentreLink[]; people: SoPerson[] };
 export type SoCountry = { code: string; label: string; n: number };
 
 function CentreRow({ c }: { c: SoCentre }) {
@@ -23,10 +26,11 @@ function CentreRow({ c }: { c: SoCentre }) {
           <Link href={c.route} className="font-medium hover:underline">{c.name}</Link>
           <span className="text-xs text-muted">{c.city}, {c.country}</span>
           {c.newsweek !== undefined && <Tip title="Newsweek oncology rank" text="Position in the Newsweek and Statista World's Best Specialized Hospitals 2026 list for oncology."><span className="chip bg-foreground/5 text-[10px] cursor-help">Newsweek #{c.newsweek}</span></Tip>}
-          {c.nci && <Tip title="NCI designation" text="Designated by the US National Cancer Institute; comprehensive centres run research, clinical care and outreach programmes."><span className="chip bg-foreground/5 text-[10px] capitalize cursor-help">NCI {c.nci}</span></Tip>}
+          {c.designations.map((d) => <Tip key={d.key} title={d.label} text="Recorded on the institution record: a designation, accreditation or network membership, with the body's page where OnCo has one." href={d.href}>{d.href ? <Link href={d.href} className="chip bg-foreground/5 text-[10px]">{d.label}</Link> : <span className="chip bg-foreground/5 text-[10px] cursor-help">{d.label}</span>}</Tip>)}
+          {c.trials.length > 0 && <Tip title={`${c.trials.length} trial${c.trials.length === 1 ? "" : "s"} for this cancer`} text={c.trials.slice(0, 5).map((t) => t.name).join(" · ")} href={`${c.route}#connected`}><Link href={`${c.route}#connected`} className="chip bg-foreground/5 text-[10px] tabular-nums">{c.trials.length} trial{c.trials.length === 1 ? "" : "s"}</Link></Tip>}
           {c.leadershipRank !== undefined && <Tip title="Trial leadership rank" text="Rank among all institutions in OnCo by presence in the pivotal trials, products and technologies recorded here. A coverage measure as much as a merit one."><Link href="/leadership/" className="chip bg-foreground/5 text-[10px]">Trial leadership #{c.leadershipRank}</Link></Tip>}
         </div>
-        <div className="text-xs text-muted mt-0.5 line-clamp-1">via {c.via.slice(0, 4).join(", ")}{c.via.length > 4 ? ` +${c.via.length - 4}` : ""}</div>
+        <div className="text-xs text-muted mt-0.5 line-clamp-1">via {c.via.slice(0, 4).join(", ")}{c.viaTotal > 4 ? ` +${c.viaTotal - 4}` : ""}</div>
       </div>
     </li>
   );
@@ -61,7 +65,7 @@ function RouteCard({ r }: { r: ReferralRoute }) {
  * Second-opinion finder: pick a cancer and a country; see the centres OnCo links to that cancer (in your
  * country first), the people who work on it, and how referral for a second opinion works where you live.
  */
-export function SecondOpinion({ cancers, routes, countries }: { cancers: SoCancer[]; routes: ReferralRoute[]; countries: SoCountry[] }) {
+export function SecondOpinion({ cancers, routes, countries, countryNames, pack }: { cancers: SoCancer[]; routes: ReferralRoute[]; countries: SoCountry[]; countryNames: Record<string, string>; pack: CentrePack }) {
   const [profile, , profileReady] = useProfile();
   const { region: chosen, ready: regionReady } = useRegion();
   // Global view starts from the US routes; the picker below lets the reader change country.
@@ -86,11 +90,12 @@ export function SecondOpinion({ cancers, routes, countries }: { cancers: SoCance
   }, [regionReady, region]);
 
   const cancer = cancers.find((c) => c.id === cancerId);
+  const centres = useMemo(() => (cancer ? unpackCentreRows(cancer.centres, pack) : []), [cancer, pack]);
   const effectiveRegion: Region = routeRegion ?? (country ? regionForCountry(country) : undefined) ?? region;
   const route = routes.find((r) => r.region === effectiveRegion);
 
   const { here, nearby, elsewhere } = useMemo(() => {
-    const list = cancer?.centres ?? [];
+    const list = centres;
     if (!country) return { here: [], nearby: [], elsewhere: list };
     const reg = regionForCountry(country);
     const regionCodes = reg ? REGION_COUNTRIES[reg] : [];
@@ -99,7 +104,7 @@ export function SecondOpinion({ cancers, routes, countries }: { cancers: SoCance
       nearby: list.filter((c) => c.country !== country && regionCodes.includes(c.country)),
       elsewhere: list.filter((c) => c.country !== country && !regionCodes.includes(c.country)),
     };
-  }, [cancer, country]);
+  }, [centres, country]);
 
   const countryOptions = countries.map((c) => ({ value: c.code, label: c.label, count: c.n }));
   const cancerOptions = cancers.map((c) => ({ value: c.id, label: c.name, group: c.group[0].toUpperCase() + c.group.slice(1) }));
@@ -130,15 +135,23 @@ export function SecondOpinion({ cancers, routes, countries }: { cancers: SoCance
                   <div className="kicker">Expert centres</div>
                   <h2 className="text-xl font-semibold mt-0.5"><Link href={cancer.route} className="hover:underline">{cancer.name}</Link></h2>
                 </div>
-                <span className="text-sm text-muted tabular-nums">{cancer.centres.length} centres</span>
+                <span className="text-sm text-muted tabular-nums">{centres.length} centres</span>
               </div>
-              {cancer.centres.length === 0 && <p className="text-sm text-muted mt-3">No institutions are linked to this cancer yet. Start from the general <Link className="underline" href="/institutions/">institution ranking</Link>.</p>}
+              {centres.length === 0 && <p className="text-sm text-muted mt-3">No institutions are linked to this cancer yet. Start from the general <Link className="underline" href="/institutions/">institution ranking</Link>.</p>}
               {country && here.length > 0 && (<><div className="kicker mt-4">In {countryLabel}</div><ul className="divide-y divide-border">{here.map((c) => <CentreRow key={c.id} c={c} />)}</ul></>)}
-              {country && here.length === 0 && cancer.centres.length > 0 && <p className="text-sm text-muted mt-3">None of the linked centres is in {countryLabel}. The list below is the rest of the world, nearest region first.</p>}
+              {country && here.length === 0 && centres.length > 0 && <p className="text-sm text-muted mt-3">None of the linked centres is in {countryLabel}. The list below is the rest of the world, nearest region first.</p>}
               {nearby.length > 0 && (<><div className="kicker mt-4">Same region</div><ul className="divide-y divide-border">{nearby.map((c) => <CentreRow key={c.id} c={c} />)}</ul></>)}
               {elsewhere.length > 0 && (<><div className="kicker mt-4">{country ? "Elsewhere" : "All centres"}</div><ul className="divide-y divide-border">{elsewhere.map((c) => <CentreRow key={c.id} c={c} />)}</ul></>)}
-              <p className="text-xs text-muted mt-4 border-t border-border pt-3">Ordered by Newsweek oncology rank, then by how many of this cancer&apos;s products, trials and guidelines link to the centre in OnCo. This reflects what OnCo has recorded, not a judgement of quality; a centre that treats many patients with your cancer but is missing here is a gap to report.</p>
+              <p className="text-xs text-muted mt-4 border-t border-border pt-3">Ordered by Newsweek oncology rank, then by trials for this cancer and research output recorded in OnCo. This reflects what OnCo has recorded, not a judgement of quality; a centre that treats many patients with your cancer but is missing here is a gap to report.</p>
             </div>
+
+            {centres.length > 0 && (
+              <div className="card p-5">
+                <div className="kicker">Compare the centres</div>
+                <h3 className="text-lg font-semibold mt-0.5 mb-3">What can be measured, side by side</h3>
+                <CentreTable rows={centres} cancerName={cancer.name.replace(/\s*\(.*?\)\s*$/, "")} countryNames={countryNames} compact />
+              </div>
+            )}
 
             <div className="card p-5">
               <div className="kicker">People who work on this cancer</div>
