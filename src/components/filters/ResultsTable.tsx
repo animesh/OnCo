@@ -72,7 +72,8 @@ export function ResultsTable<T>({ columns, rows, rowKey, sort, onSort, empty, sc
             })}
           </tr>
         </thead>
-        <tbody>
+        {/* Cells hold record data (English); cells that render translated text set their own lang. */}
+        <tbody lang="en">
           {visible.map((r, i) => (
             <tr key={rowKey(r)}>
               {columns.map((c) => <td key={c.key} className={`${c.hide ?? ""} ${c.className ?? ""}`}>{c.render(r, i)}</td>)}

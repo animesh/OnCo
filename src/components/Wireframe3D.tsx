@@ -255,6 +255,8 @@ export function Wireframe3D({ mesh: given, height = "h-64 sm:h-72", speed = 0.3,
   return (
     <div className="relative wire-bg">
       <canvas ref={ref} className={`block w-full ${height}`} aria-label={mesh.animate ? "Animated rotating wireframe schematic" : "Rotating wireframe schematic"} />
+      {/* The labels are painted into the canvas, where translators and screen readers cannot see them; repeat them as real text. */}
+      {!compact && (mesh.labels?.length ?? 0) > 0 && <ul className="sr-only" lang="en">{mesh.labels!.map((l, i) => <li key={i}>{l.text}</li>)}</ul>}
     </div>
   );
 }

@@ -115,6 +115,15 @@ export const zh: UiDict = {
   "strip.help": "如何在 {browser} 中翻译网页",
   "strip.dismiss": "关闭",
 
+  "offer.english": "本页为英文。您的浏览器可以翻译它。",
+  "offer.chrome": "在 Chrome 中，右键点击页面并选择“翻译”。",
+  "offer.edge": "在 Edge 中，右键点击页面并选择“翻译”。",
+  "offer.safari": "在 Safari 中，使用地址栏中的翻译按钮。",
+  "offer.firefox": "在 Firefox 中，点击地址栏中的翻译图标。",
+  "offer.other": "请在浏览器菜单中查找翻译选项。",
+  "offer.switch": "OnCo 也提供{language}版本。",
+  "offer.switchButton": "切换到{language}",
+
   "footer.about": "一张公开、有引用、可编辑的肿瘤学地图：技术、靶点、产品、公司、机构、通路、试验、组合、路线图和想法。每个对象一页，每页都有通俗易懂的 TL;DR。",
   "footer.wip": "持续建设中。",
   "footer.disclaimer": "本站的每一条信息都在公开构建和核查之中，可能不完整、过时或有误。在依赖任何内容之前，您必须自行研究并在原始来源核实。本站内容均非医疗建议；决定权属于您和您的医生。",

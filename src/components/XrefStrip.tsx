@@ -32,9 +32,9 @@ export function XrefStrip({ targetId, compact = false }: { targetId: string; com
     <div className="space-y-2">
       {x.genes.map((g) => (
         <div key={g.hgnc} className="flex flex-wrap items-baseline gap-x-2 gap-y-1 text-sm">
-          <span className="font-mono font-semibold">{g.symbol}</span>
+          <span className="font-mono font-semibold notranslate" translate="no">{g.symbol}</span>
           {!compact && <span className="text-muted text-xs">{g.name}{g.locus ? ` · ${g.locus}` : ""}</span>}
-          <span className="flex flex-wrap gap-1.5">
+          <span className="flex flex-wrap gap-1.5 notranslate" translate="no">
             {xrefLinks(g).map((l) => (
               <Tip key={l.label} title={l.label} text={`${l.tip} Id: ${l.id}.`}>
                 <a href={l.url} rel="noopener" className="chip border bg-card border-border hover:bg-foreground/5 text-xs">{l.label}</a>

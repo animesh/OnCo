@@ -278,7 +278,7 @@ export default async function KindIndex({ params }: { params: Promise<{ kind: st
         {k === "bottleneck" && <BottlenecksPipeline />}
         {k === "cancer" && <CancersGrid />}
         {k === "term" && <GlossaryCategories />}
-        <EntityBrowser rows={rows} facets={facets} columns={columns} noun={meta.plural} hideStatus={hideStatus} hideTldr={hideTldr} defaultSort={defaultSort} />
+        <EntityBrowser rows={rows} facets={facets} columns={columns} noun={meta.plural} hideStatus={hideStatus} hideTldr={hideTldr} defaultSort={defaultSort} nameKind={k} />
         {k === "institution" && (
           <p className="text-xs text-muted mt-3 max-w-3xl">Score = Newsweek points (60 − Newsweek/Statista 2026 Oncology rank, 0 if unranked) + NCI designation points (Comprehensive 15, Clinical or Basic 8) + 2 × distinct OnCo objects linked to the institution. The last term measures presence in this evidence base and grows with the corpus. A starting point for argument, not a verdict.</p>
         )}

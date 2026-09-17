@@ -115,6 +115,15 @@ export const ja: UiDict = {
   "strip.help": "{browser} でページを翻訳する方法",
   "strip.dismiss": "閉じる",
 
+  "offer.english": "このページは英語です。ブラウザーで翻訳できます。",
+  "offer.chrome": "Chrome では、ページを右クリックして「翻訳」を選びます。",
+  "offer.edge": "Edge では、ページを右クリックして「翻訳」を選びます。",
+  "offer.safari": "Safari では、アドレスバーの翻訳ボタンを使います。",
+  "offer.firefox": "Firefox では、アドレスバーの翻訳アイコンをクリックします。",
+  "offer.other": "ブラウザーのメニューで翻訳の項目を探してください。",
+  "offer.switch": "OnCo は{language}でも読めます。",
+  "offer.switchButton": "{language}に切り替える",
+
   "footer.about": "公開・出典付き・編集可能な腫瘍学の地図。技術、標的、製品、企業、機関、経路、試験、組み合わせ、ロードマップ、アイデアを、対象ごとに 1 ページで、やさしい言葉の TL;DR 付きでまとめています。",
   "footer.wip": "制作中です。",
   "footer.disclaimer": "本サイトの情報はすべて公開の場で作成・検証中であり、不完全、古い、または誤っている可能性があります。ご利用の前に必ずご自身で調べ、一次資料で確認してください。本サイトの内容は医療上の助言ではありません。判断はご本人と担当医の間で行ってください。",

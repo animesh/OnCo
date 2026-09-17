@@ -24,6 +24,8 @@ import type { CsvRow } from "@/lib/csv";
 import { useT } from "@/lib/i18n/ui";
 import { tldrFor } from "./TldrText";
 import { useTable } from "@/lib/tldr-tables";
+import { nameAttrs } from "@/lib/translate";
+import type { Kind } from "@/lib/schema";
 
 /**
  * One templated, full-width, sortable and filterable table for any kind of entity.
@@ -116,8 +118,10 @@ export function encodeView(state: { f: Record<string, string[]>; q: string; s: S
   return btoa(JSON.stringify({ f, q: state.q || undefined, s: state.s })).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
 }
 
-export function EntityBrowser({ rows, facets, columns, noun, defaultSort, hideStatus = false, hideTldr = false, external = null, onExternalChange }: {
+export function EntityBrowser({ rows, facets, columns, noun, defaultSort, hideStatus = false, hideTldr = false, external = null, onExternalChange, nameKind }: {
   rows: BrowserRow[]; facets: FacetDef[]; columns: ColDef[]; noun: string; defaultSort?: SortState; hideStatus?: boolean; hideTldr?: boolean;
+  /** Kind of the rows, so proper-noun names (drugs, genes, companies, trials, people) carry translate="no". Drug rows are recognised by `molecule` regardless. */
+  nameKind?: Kind;
   /** Facet values set by a parent (e.g. a map legend); merged with the internal selection for that key and shown as selected. */
   external?: { key: string; values: string[] } | null;
   /** Called when the user changes the externally controlled facet from inside the table (or clears all filters). */
@@ -300,11 +304,11 @@ export function EntityBrowser({ rows, facets, columns, noun, defaultSort, hideSt
         {r.sectionIcon && <Link href={r.route} aria-label={`${r.name} front icon`} className="inline-flex h-10 w-14 shrink-0 items-center justify-center rounded-md border border-border bg-accent-soft text-accent"><FrontIcon id={r.sectionIcon} className="h-6 w-6" /></Link>}
         {r.cancerIcon && <Link href={r.route} aria-label={`${r.name} organ icon`} className="inline-flex h-10 w-14 shrink-0 items-center justify-center rounded-md border border-border bg-accent-soft text-accent"><CancerIcon cancerId={r.cancerIcon} className="h-7 w-7" /></Link>}
         {(r.logo || r.avatar) && !r.molecule && <RowAvatar src={r.logo} name={r.name} round={r.round || r.avatar === "person"} />}
-        <div><Link href={r.route} data-row className="font-medium hover:underline">{r.name}</Link>{r.sub && <div className="text-xs text-muted">{r.sub}</div>}{!hideTldr && <div className="text-xs text-muted line-clamp-2 max-w-lg">{tldrFor(r.id, r.tldr, lang, tldrTable)}</div>}</div>
+        <div><Link href={r.route} data-row {...nameAttrs(r.molecule ? "drug" : nameKind, "font-medium hover:underline")}>{r.name}</Link>{r.sub && <div className="text-xs text-muted">{r.sub}</div>}{!hideTldr && <div lang={tldrTable?.[r.id] ? lang : "en"} className="text-xs text-muted line-clamp-2 max-w-lg">{tldrFor(r.id, r.tldr, lang, tldrTable)}</div>}</div>
       </div>) },
     ...(hideStatus ? [] : [{ key: "status", label: "Phase / status", sortable: true, render: (r: BrowserRow) => r.molecule
       ? <ApprovalChip drugId={r.molecule} status={r.status} />
-      : r.status ? facetChip({ facet: "status", value: r.status, label: statusText(r.status) }, STATUS_TIPS[r.status], statusClass(r.status)) : null } as Column<BrowserRow>]),
+      : r.status ? <span lang={lang}>{facetChip({ facet: "status", value: r.status, label: statusText(r.status) }, STATUS_TIPS[r.status], statusClass(r.status))}</span> : null } as Column<BrowserRow>]),
     ...columns.map((c): Column<BrowserRow> => ({
       key: c.key, label: c.label, sortable: c.sortable, hide: c.hide, className: c.className, tip: c.tip,
       render: (r) => {

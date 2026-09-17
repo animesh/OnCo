@@ -115,6 +115,15 @@ export const de: UiDict = {
   "strip.help": "So übersetzen Sie eine Seite in {browser}",
   "strip.dismiss": "Schließen",
 
+  "offer.english": "Diese Seite ist auf Englisch. Ihr Browser kann sie übersetzen.",
+  "offer.chrome": "In Chrome: Rechtsklick auf die Seite, dann Übersetzen wählen.",
+  "offer.edge": "In Edge: Rechtsklick auf die Seite, dann Übersetzen wählen.",
+  "offer.safari": "In Safari: die Übersetzen-Taste in der Adressleiste verwenden.",
+  "offer.firefox": "In Firefox: auf das Übersetzen-Symbol in der Adressleiste klicken.",
+  "offer.other": "Suchen Sie im Menü Ihres Browsers nach einer Übersetzungsoption.",
+  "offer.switch": "OnCo gibt es auch auf {language}.",
+  "offer.switchButton": "Zu {language} wechseln",
+
   "footer.about": "Eine öffentliche, belegte und editierbare Karte der Onkologie: Technologien, Zielstrukturen, Produkte, Unternehmen, Institutionen, Signalwege, Studien, Kombinationen, Roadmaps und Ideen. Eine Seite pro Objekt, jede mit einem TL;DR in einfacher Sprache.",
   "footer.wip": "In Arbeit.",
   "footer.disclaimer": "Jede Angabe auf dieser Website wird offen erstellt und geprüft und kann unvollständig, veraltet oder falsch sein. Recherchieren Sie selbst und prüfen Sie alles an der Primärquelle, bevor Sie sich darauf verlassen. Nichts auf dieser Website ist ein medizinischer Rat; Entscheidungen liegen bei Ihnen und Ihren Behandelnden.",

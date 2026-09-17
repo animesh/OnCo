@@ -159,7 +159,7 @@ export function TrialFinderGeo({ condition, intervention, title, drugNames = {} 
                 return (
                   <Fragment key={s.nctId}>
                     <tr>
-                      <td><a className="underline font-mono text-xs" href={`https://clinicaltrials.gov/study/${s.nctId}`} rel="noopener">{s.nctId}</a></td>
+                      <td><a className="underline font-mono text-xs notranslate" translate="no" href={`https://clinicaltrials.gov/study/${s.nctId}`} rel="noopener">{s.nctId}</a></td>
                       <td className="max-w-md">{s.title}</td>
                       <td className="tabular-nums whitespace-nowrap">{s.phase}</td>
                       {center && <td className="whitespace-nowrap">{s.nearest ? <><span className="tabular-nums font-medium">{Math.round(s.nearest.km)} km</span><div className="text-xs text-muted">{s.nearest.site.city}{s.nearest.site.country ? `, ${s.nearest.site.country}` : ""}</div></> : <span className="text-muted">-</span>}</td>}

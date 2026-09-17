@@ -13,11 +13,11 @@ export function DrugChip({ id, name, route, className = "", tldr }: { id: string
   const has = hasMolecule(id);
   return (
     <span className="relative inline-block" onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)} onFocus={() => setOpen(true)} onBlur={() => setOpen(false)}>
-      <Link href={route} className={`chip border hover:brightness-95 ${className}`}>{has && <span aria-hidden className="text-[9px] opacity-70">⟳</span>}{name}</Link>
+      <Link href={route} translate="no" className={`chip border notranslate hover:brightness-95 ${className}`}>{has && <span aria-hidden className="text-[9px] opacity-70">⟳</span>}{name}</Link>
       {open && has && (
         <span className="absolute left-0 top-full z-40 mt-1 w-56 card shadow-xl overflow-hidden pointer-events-none">
           <MoleculeThumb drugId={id} className="h-32" />
-          <span className="block px-3 py-2 text-xs"><span className="font-medium">{name}</span>{tldr && <span className="block text-muted line-clamp-2 mt-0.5">{tldr}</span>}</span>
+          <span className="block px-3 py-2 text-xs" lang="en"><span className="font-medium notranslate" translate="no">{name}</span>{tldr && <span className="block text-muted line-clamp-2 mt-0.5">{tldr}</span>}</span>
         </span>
       )}
     </span>

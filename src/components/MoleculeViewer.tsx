@@ -17,15 +17,15 @@ export function MoleculeViewer({ entries }: { entries: StructureEntry[] }) {
   return (
     <div className="card overflow-hidden">
       <Molecule3D key={entry.file} entry={entry} />
-      <div className="px-4 py-3 border-t border-border text-sm">
+      <div className="px-4 py-3 border-t border-border text-sm" lang="en">
         {entries.length > 1 && (
           <div className="flex flex-wrap gap-1.5 mb-2" role="tablist" aria-label="Structures">
             {entries.map((e, k) => (
-              <button key={e.file + k} type="button" role="tab" aria-selected={k === i} onClick={() => setI(k)} className={`chip border ${k === i ? "bg-foreground text-background border-foreground" : "bg-card border-border hover:bg-foreground/5"}`}>{e.label}</button>
+              <button key={e.file + k} type="button" role="tab" aria-selected={k === i} onClick={() => setI(k)} translate="no" className={`chip border notranslate ${k === i ? "bg-foreground text-background border-foreground" : "bg-card border-border hover:bg-foreground/5"}`}>{e.label}</button>
             ))}
           </div>
         )}
-        <div className="font-medium">{entry.label}</div>
+        <div className="font-medium notranslate" translate="no">{entry.label}</div>
         {entry.note && <p className="text-xs text-muted mt-1">{entry.note}</p>}
       </div>
     </div>

@@ -145,6 +145,16 @@ export const EN = {
   "strip.help": "How to translate a page in {browser}",
   "strip.dismiss": "Dismiss",
 
+  // ---- translate offer at the top of the main column (src/components/TranslateOffer.tsx) ----
+  "offer.english": "This page is in English. Your browser can translate it.",
+  "offer.chrome": "In Chrome, right-click the page and choose Translate.",
+  "offer.edge": "In Edge, right-click the page and choose Translate.",
+  "offer.safari": "In Safari, use the translate button in the address bar.",
+  "offer.firefox": "In Firefox, click the translate icon in the address bar.",
+  "offer.other": "Look for a translate option in your browser's menu.",
+  "offer.switch": "OnCo is also available in {language}.",
+  "offer.switchButton": "Switch to {language}",
+
   // ---- footer ----
   "footer.about": "A public, cited, editable map of oncology: technologies, targets, products, companies, institutions, pathways, trials, pairings, roadmaps, and ideas. One page per object, with a plain-language TL;DR on every page.",
   "footer.wip": "Work in progress.",
