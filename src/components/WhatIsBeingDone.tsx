@@ -150,7 +150,7 @@ export function assembleTopic(topic: ProblemTopic, cancerId?: string): Assembled
   }
   const relevant = (e: Entity) => !cancerId || linked.has(e.id) || e.cancers.includes(cancerId);
   const rank = (a: Entity, b: Entity) => Number(relevant(b)) - Number(relevant(a)) || a.name.localeCompare(b.name);
-  const items = [...pool.values()].filter((e) => !SKIP.has(e.status ?? "") && !meta.bottlenecks.includes(e.id));
+  const items = [...pool.values()].filter((e) => !SKIP.has(e.status ?? "") && !meta.bottlenecks.includes(e.id) && relevant(e));
   const now = items.filter((e) => (e.kind === "drug" || e.kind === "technology") && NOW.has(e.status ?? "")).sort(rank).slice(0, LIMIT);
   const trials = items.filter((e) => e.kind === "trial" || ((e.kind === "drug" || e.kind === "technology") && LATER.has(e.status ?? ""))).sort(rank).slice(0, LIMIT);
   const ideas = items.filter((e) => e.kind === "idea" || e.kind === "roadmap" || (e.kind === "technology" && e.status === "concept")).sort(rank).slice(0, LIMIT);
@@ -181,7 +181,7 @@ function Column({ title, items }: { title: string; items: Entity[] }) {
 /**
  * "What is being done about this": three columns (available now, in trials, ideas and roadmaps), each item
  * linked, with the matching bottleneck page. `topic` is a topic id or a free-text problem sentence;
- * `cancerId` ranks that cancer's own products, trials and ideas first. Renders nothing when no topic matches
+ * `cancerId` limits the lists to work directly linked to that cancer or explicitly tagged for it. Renders nothing when no topic matches
  * or the corpus has nothing on it.
  */
 export function WhatIsBeingDone({ topic, cancerId, compact = false, className = "" }: { topic: ProblemTopic | string; cancerId?: string; compact?: boolean; className?: string }) {
