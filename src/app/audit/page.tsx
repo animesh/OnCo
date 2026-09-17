@@ -5,7 +5,7 @@ import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { Container, GroupKicker, PageHeader } from "@/components/ui";
 import { runAudit, type Audit } from "../../../scripts/audit";
-import type { LinksReport } from "../../../scripts/check-links";
+import { isBlocked, isGone, isUnreachable, type LinksReport } from "../../../scripts/check-links";
 
 export const metadata: Metadata = pageMeta({ title: "Audit", description: "Automated staleness, contradiction, sourcing, hygiene, link and registry fact-check findings for the OnCo corpus.", path: "/audit/" });
 
@@ -48,7 +48,10 @@ export default function AuditPage() {
   const family = (check: string) => FAMILY[check] ?? "contradiction";
   const groups = (["contradiction", "sourcing", "hygiene"] as const).map((fam) => ({ fam, checks: [...byCheck.entries()].filter(([c]) => family(c) === fam) }));
   const stale = audit.staleness.filter((s) => s.days > 60);
-  const broken = links?.results.filter((r) => !r.ok) ?? [];
+  // Only links the server says are gone count as broken; sites that refuse a bot (403, 429, 5xx) are live to a reader.
+  const gone = links?.results.filter((r) => isGone(r) || isUnreachable(r)) ?? [];
+  const blocked = links?.results.filter(isBlocked) ?? [];
+  const broken = gone;
   const moved = links?.results.filter((r) => r.ok && r.domainMoved) ?? [];
 
   return (
@@ -63,7 +66,7 @@ export default function AuditPage() {
           <Stat label="Medium" value={audit.findings.filter((f) => f.severity === "medium").length} tone="amber" />
           <Stat label="Older than 60 days" value={stale.length} />
           <Stat label="Registry mismatches" value={fc?.mismatches.length ?? 0} />
-          <Stat label="Broken links" value={broken.length} tone={broken.length ? "rose" : undefined} />
+          <Stat label="Broken links (gone or unreachable)" value={broken.length} tone={broken.length ? "rose" : undefined} /><Stat label="Refused to the checker (live to readers)" value={blocked.length} />
         </div>
 
         {groups.map(({ fam, checks }) => (

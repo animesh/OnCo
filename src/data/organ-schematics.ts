@@ -36,7 +36,7 @@ export function organMesh(o: OrganSchematic): Mesh {
 }
 
 export const ORGAN_SCHEMATICS: OrganSchematic[] = [
-  { id: "breast", name: "Breast", cancers: ["tnbc", "breast-hr-positive", "breast-her2-positive", "male-breast-cancer", "ductal-carcinoma-in-situ"],
+  { id: "breast", name: "Breast", cancers: ["tnbc", "breast-cancer", "breast-hr-positive", "breast-her2-positive", "male-breast-cancer", "ductal-carcinoma-in-situ"],
     caption: "Most cancers start in the ducts and drain first to the axillary nodes, which is why the armpit is checked and a sentinel node is sampled.",
     subsites: [
       { id: "ducts", label: "Ducts (most cancers start here)", at: [0.35, 0.15, 0.85], match: ["ductal", "dcis", "no special type", "nst", "luminal", "basal", "her2", "claudin"] },
@@ -55,7 +55,7 @@ export const ORGAN_SCHEMATICS: OrganSchematic[] = [
       add(m, polyline([[1.3, 0.6, -0.4], [2.0, 0.9, 0.1], [2.6, 1.5, -0.1], [2.2, 2.3, 0]], "soft")); // lymphatic route
       return m;
     } },
-  { id: "lung", name: "Lungs, pleura and mediastinum", cancers: ["nsclc", "sclc", "mesothelioma", "pleural-mesothelioma", "thymic-epithelial", "pleuropulmonary-blastoma", "inflammatory-myofibroblastic-tumour"],
+  { id: "lung", name: "Lungs, pleura and mediastinum", cancers: ["nsclc", "lung-cancer", "sclc", "mesothelioma", "pleural-mesothelioma", "thymic-epithelial", "pleuropulmonary-blastoma", "inflammatory-myofibroblastic-tumour"],
     caption: "Central tumours arise in the large airways, peripheral ones in the alveoli; both drain to hilar then mediastinal nodes, and the pleural lining is a separate cancer site.",
     subsites: [
       { id: "central", label: "Central airways (squamous, small-cell)", at: [-0.75, 0.55, 0.05], match: ["squamous", "small-cell", "small cell", "sclc", "neuroendocrine", "pleuropulmonary", "tracheobronchial", "bronchus", "myofibroblastic"] },
@@ -120,7 +120,7 @@ export const ORGAN_SCHEMATICS: OrganSchematic[] = [
       add(m, ellipsoid(0.5, 0.35, 0.3, 3, 8, "soft"), { at: [-1.6, 0.4, -0.5] }); // spleen
       return m;
     } },
-  { id: "pancreas-biliary", name: "Pancreas and bile ducts", cancers: ["pancreatic", "cholangiocarcinoma", "neuroendocrine", "gallbladder", "ampullary"],
+  { id: "pancreas-biliary", name: "Pancreas and bile ducts", cancers: ["pancreatic", "cholangiocarcinoma", "biliary-tract-cancer", "neuroendocrine", "gallbladder", "ampullary"],
     caption: "Most pancreatic cancers arise in the head next to the bile duct, which is why jaundice is the presenting sign; bile duct cancers are named by where along the tree they sit.",
     subsites: [
       { id: "head", label: "Pancreatic head (most PDAC)", at: [-1.3, -0.15, 0.05], match: ["classical", "basal", "pdac", "ductal", "kras", "brca", "msi"] },
@@ -344,7 +344,7 @@ export const ORGAN_SCHEMATICS: OrganSchematic[] = [
       add(m, polyline([[0.2, -0.7, 1.2], [0, -1.3, 1.25], [-0.05, -1.95, 1.15], [0, -2.6, 0.9]], "soft")); // jugular chain
       return m;
     } },
-  { id: "haematopoietic", name: "Bone marrow, lymph nodes and spleen", cancers: ["aml", "all-leukemia", "cll", "cml", "dlbcl", "follicular-lymphoma", "hodgkin-lymphoma", "mantle-cell-lymphoma", "multiple-myeloma", "non-hodgkin-lymphoma", "mds", "myeloproliferative-neoplasms", "polycythaemia-vera", "essential-thrombocythaemia", "waldenstrom", "hairy-cell-leukemia", "peripheral-t-cell-lymphoma", "bpdcn", "burkitt-lymphoma", "hiv-associated-lymphoma", "cmml", "systemic-mastocytosis", "histiocytoses", "langerhans-cell-histiocytosis", "post-transplant-lymphoproliferative-disorder"],
+  { id: "haematopoietic", name: "Bone marrow, lymph nodes and spleen", cancers: ["leukaemia", "aml", "all-leukemia", "cll", "cml", "dlbcl", "follicular-lymphoma", "hodgkin-lymphoma", "mantle-cell-lymphoma", "multiple-myeloma", "non-hodgkin-lymphoma", "mds", "myeloproliferative-neoplasms", "polycythaemia-vera", "essential-thrombocythaemia", "waldenstrom", "hairy-cell-leukemia", "peripheral-t-cell-lymphoma", "bpdcn", "burkitt-lymphoma", "hiv-associated-lymphoma", "cmml", "systemic-mastocytosis", "histiocytoses", "langerhans-cell-histiocytosis", "post-transplant-lymphoproliferative-disorder"],
     caption: "Leukaemias, myeloma and MDS live in the marrow and blood; lymphomas grow in lymph nodes and spleen. The node stations are the disease map, not a route of spread, and staging counts them.",
     subsites: [
       { id: "marrow", label: "Bone marrow (leukaemia, MDS, MPN, myeloma)", at: [0, 0, 0], match: ["aml", "all", "leukaemia", "myeloid", "cmml", "mastocytosis", "burkitt", "ptld", "histiocyt", "lch", "lymphoblastic", "mds", "mpn", "myelofibrosis", "polycythaemia", "thrombocythaemia", "cml", "chronic phase", "blast", "myeloma", "plasma", "hairy", "waldenstr", "blastic", "npm1", "flt3", "kmt2a", "tp53", "ipss", "philadelphia", "ph-positive", "ph-negative", "t-cell", "b-cell", "hypercalcaemia", "light chain", "smouldering", "high-risk", "standard-risk", "del(17p)", "ighv", "richter", "jak2", "calr", "mpl"] },

@@ -300,3 +300,14 @@ The owner's patient-first roadmap (a real-case "For me", persistent cancer choic
 - Cancers now carry a `parent` field: pleural and peritoneal mesothelioma have pages of their own under mesothelioma, and 50-odd existing records (lymphoma, sarcoma, skin, brain, childhood, MPN subtypes, uveal melanoma, paediatric gliomas) are wired to their broader type. The parent page lists its subtypes in a strip at the top of the overview; the subtype page shows "Part of". Remaining: breast, lung, leukaemia and biliary subtypes have no parent cancer page (those are sections), and the plain-text `subtypes` lists on other cancers still need branching into pages, one family a tick.
 - Radiation wave 2: 19 landmark trials (START-B, FAST-Forward, CHHiP, PACE-B, HYPO-RT-PC, RTOG 0617, CALGB 9343, PRIME II, LUMINA, IMPORT LOW, NSABP B-39, CHISEL, JCOG0403, N0574, NRG CC001, QUARTZ, the Stupp trial, CATNON, DAHANCA 5) with primary endpoints and publications.
 - Roadmap row 112: rank startup requests by urgency and commerciality with the scoring dimensions.
+
+### Link report, radiation wave 3 and the Chinese review (17 Sept 2026, early)
+
+- Pull request 15 (benskamps) merged: the link checker now reports gone, unreachable and blocked separately; the audit page leads with links that are actually gone (about 1 percent) and shows refused ones as live to readers. The next weekly links run fills the new fields.
+- Radiation wave 3: nimorazole, NBTXR3 (CE mark 2019), pilocarpine (FDA 1994), avasopasem (FDA complete response 2023) and evofosfamide (failed phase 3s), plus Nanobiotix; palifermin already existed.
+- Chinese version: 5,404 TL;DRs are translated and read fluently on a 12-record sample; none is left in English. Coverage is the gap: cancers 100 of 110, drugs 823 of 1,013, technologies 411 of 480, targets 99 of 162, companies 764 of 995, trials 694 of 3,345 (registry ingests). One terminology slip fixed (mesothelioma now 胸膜间皮瘤). Next: translate the new cancer, radiation and China records first, then targets; keep drug names in Latin script as the file does now.
+
+### Parent pages for breast, lung, leukaemia and biliary tract cancer (17 Sept 2026)
+
+- Four overview cancer records so the subtype pages (HR-positive, HER2-positive, TNBC, DCIS, male breast; NSCLC, SCLC; ALL, AML, CLL, CML, hairy cell, CMML, BPDCN; cholangiocarcinoma, gallbladder, ampullary) show "Part of" and the parent lists them at the top. Each overview holds screening, staging and shared history and points to the subtype pages for treatment. Remaining text-only subtypes on other cancers still to branch.
+- Chinese: 56 new TL;DRs for the polycythaemia vera, essential thrombocythaemia, mesothelioma subtype, China and radiation records.
