@@ -12,8 +12,9 @@ import { tldrZh as law } from "../src/data/law-wave";
 import { tldrZh as diagnostics2 } from "../src/data/diagnostics-wave2";
 import { tldrZh as networks } from "../src/data/institution-networks-wave";
 import { tldrZh as prostate } from "../src/data/prostate-subtypes";
+import { tldrZh as machines2 } from "../src/data/machines-wave2";
 
-const WAVES: Record<string, string>[] = [manufacturing, theories, platform, trialDesign, law, diagnostics2, networks, prostate];
+const WAVES: Record<string, string>[] = [manufacturing, theories, platform, trialDesign, law, diagnostics2, networks, prostate, machines2];
 const path = "src/data/i18n/zh.ts";
 let z = readFileSync(path, "utf8");
 const have = new Set([...z.matchAll(/^\s*(?:"([^"]+)"|([A-Za-z_$][\w$]*)):\s/mg)].map((m) => m[1] ?? m[2]));
