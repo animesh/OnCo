@@ -139,6 +139,10 @@ export const EN = {
   "tldr.reviewedTitle": "Translation reviewed by {reviewer} on {date}.",
   "tldr.mt": "MT",
   "tldr.mtTitle": "Machine-assisted translation, not yet reviewed by a named speaker. Report a problem via Suggest an edit.",
+  "summary.mt": "Machine translated from the English",
+  "summary.mtReport": "report a problem",
+  "summary.showEnglish": "Show the English",
+  "summary.showTranslation": "Show in {lang}",
 
   // ---- translation strip under the header ----
   "strip.text": "Headings and menus are in {language}. Detailed text is in English; your browser can translate the rest.",

@@ -110,6 +110,10 @@ export const ja: UiDict = {
   "tldr.reviewedTitle": "{date} に {reviewer} が校閲した翻訳です。",
   "tldr.mt": "機械翻訳",
   "tldr.mtTitle": "機械翻訳で、氏名を明かした話者による校閲はまだ行われていません。問題は「修正を提案」から報告できます。",
+  "summary.mt": "英語からの機械翻訳",
+  "summary.mtReport": "問題を報告",
+  "summary.showEnglish": "英語を表示",
+  "summary.showTranslation": "{lang}で表示",
 
   "strip.text": "見出しとメニューは{language}です。詳しい本文は英語のままで、残りはブラウザーで翻訳できます。",
   "strip.help": "{browser} でページを翻訳する方法",

@@ -21,6 +21,7 @@ import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { graph } from "../src/lib/graph";
 import { KIND_META, KINDS, REL_FIELDS, type Entity, type Kind } from "../src/lib/schema";
+import { summaryTranslationIndex, SUMMARY_LANGS, type SummaryLang } from "../src/lib/summary-translations";
 
 const args = process.argv.slice(2);
 const opt = (name: string): string | null => { const i = args.indexOf(name); return i >= 0 && args[i + 1] && !args[i + 1].startsWith("--") ? args[i + 1] : null; };
@@ -56,23 +57,31 @@ async function loadTables(codes: string[]): Promise<Record<string, Record<string
   return out;
 }
 
-type Row = { kind: Kind; n: number; tldr: number; body: number; share: Record<string, number>; translated: Record<string, number> };
+type Row = { kind: Kind; n: number; tldr: number; body: number; share: Record<string, number>; translated: Record<string, number>; summaries: Record<string, number> };
 
-export function measure(entities: Entity[], tables: Record<string, Record<string, string>>, kinds: Kind[]): Row[] {
+/**
+ * Per kind and language: the share of page words in the language (translated TL;DR words plus the words of summaries
+ * with a valid machine translation, over all record words), the fraction of records with a translated TL;DR, and the
+ * count of records with a valid machine-translated summary. `summaries` maps a language to the ids whose stored
+ * translation hash matches the current English (see src/lib/summary-translations.ts).
+ */
+export function measure(entities: Entity[], tables: Record<string, Record<string, string>>, kinds: Kind[], summaries: Record<string, Set<string>> = {}): Row[] {
   const rows: Row[] = [];
   for (const kind of kinds) {
     const list = entities.filter((e) => e.kind === kind);
     if (!list.length) continue;
     const tldr = list.reduce((a, e) => a + words(e.tldr), 0);
     const body = list.reduce((a, e) => a + bodyWords(e), 0);
-    const share: Record<string, number> = {}; const translated: Record<string, number> = {};
+    const share: Record<string, number> = {}; const translated: Record<string, number> = {}; const mt: Record<string, number> = {};
     for (const [code, table] of Object.entries(tables)) {
       const hit = list.filter((e) => !!table[e.id]);
-      const got = hit.reduce((a, e) => a + words(e.tldr), 0);
+      const sums = list.filter((e) => summaries[code]?.has(e.id));
+      const got = hit.reduce((a, e) => a + words(e.tldr), 0) + sums.reduce((a, e) => a + words(e.summary), 0);
       share[code] = tldr + body ? got / (tldr + body) : 0;
       translated[code] = hit.length / list.length;
+      mt[code] = sums.length;
     }
-    rows.push({ kind, n: list.length, tldr, body, share, translated });
+    rows.push({ kind, n: list.length, tldr, body, share, translated, summaries: mt });
   }
   return rows;
 }
@@ -88,9 +97,23 @@ function printGraphTable(rows: Row[], codes: string[]) {
     const cols = [pad(r.kind, 12), pad(String(r.n), 8), pad((r.tldr / r.n).toFixed(0), 12), pad((r.body / r.n).toFixed(0), 11), pad(pct(r.tldr / (r.tldr + r.body)), 12), ...codes.map((c) => pad(pct(r.share[c] ?? 0), 6))];
     console.log(cols.join(" "));
   }
-  console.log("\nTranslated TL;DR share = words of a record page in the chosen language (TL;DR share is the ceiling when every TL;DR is translated).");
+  console.log("\nLanguage columns = words of a record page in the chosen language: translated TL;DRs plus machine-translated summaries (TL;DR share is the ceiling when only TL;DRs are translated).");
   console.log("Records with a translated TL;DR:");
   for (const r of rows) console.log(`  ${pad(r.kind, 12)} ${codes.map((c) => `${c} ${pct(r.translated[c] ?? 0)}`).join("  ")}`);
+  console.log("Records with a machine-translated summary (hash matches the current English):");
+  for (const r of rows) console.log(`  ${pad(r.kind, 12)} ${codes.map((c) => `${c} ${String(r.summaries[c] ?? 0).padStart(4)}`).join("  ")}`);
+}
+
+/** Machine-translated summaries on disk, per language: valid (hash matches) and stale (English changed or record gone). */
+function printSummaryCounts(entities: Entity[], codes: string[]) {
+  const idx = summaryTranslationIndex(entities);
+  const langs = codes.filter((c): c is SummaryLang => (SUMMARY_LANGS as readonly string[]).includes(c));
+  const total = langs.reduce((a, l) => a + idx[l].valid.size, 0);
+  console.log(`\nMachine-translated summaries in public/i18n/summaries: ${total} valid across ${langs.length} language${langs.length === 1 ? "" : "s"}, ${entities.filter((e) => e.summary.trim()).length} records with a summary`);
+  for (const l of langs) {
+    const stale = idx[l].stale.size;
+    console.log(`  ${pad(l, 4)} ${String(idx[l].valid.size).padStart(6)} valid${stale ? `, ${stale} stale (${[...idx[l].stale].slice(0, 5).join(", ")}${stale > 5 ? ", ..." : ""}; rerun scripts/translate-summaries.ts --lang ${l})` : ""}`);
+  }
 }
 
 /** Words of a built page by declared language, plus how many sit in translate="no" (names and ids a translator leaves alone). */
@@ -141,9 +164,12 @@ async function main() {
   const kinds = wanted?.length ? wanted : [...counts.entries()].sort((a, b) => b[1] - a[1]).slice(0, top).map(([k]) => k);
   const codes = (opt("--langs") ?? "es,zh,pt,hi,fr,de,ja,ar").split(",").map((c) => c.trim()).filter(Boolean);
   const tables = await loadTables(codes);
-  const rows = measure(all, tables, kinds);
+  const idx = summaryTranslationIndex(all);
+  const summaries = Object.fromEntries(Object.entries(idx).map(([l, v]) => [l, v.valid]));
+  const rows = measure(all, tables, kinds, summaries);
   console.log(`Share of a record page's words in the chosen language, by kind (${all.length} records; ${kinds.map((k) => KIND_META[k].plural).join(", ")})\n`);
   printGraphTable(rows, Object.keys(tables));
+  printSummaryCounts(all, codes);
 }
 
 const isMain = process.argv[1]?.endsWith("translation-coverage.ts");

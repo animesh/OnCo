@@ -47,6 +47,8 @@ import { MechanismCard } from "./MechanismCard";
 import { SeeItInAction } from "./SeeItInAction";
 import { modalityGroup } from "@/lib/modality-group";
 import { TldrText } from "./TldrText";
+import { SummaryText } from "./SummaryText";
+import { summaryTranslationsFor } from "@/lib/summary-translations";
 import { FrontSchematic } from "./FrontSchematic";
 import { TermSchematic } from "./TermSchematic";
 import { CancerPipeline } from "./CancerPipeline";
@@ -153,10 +155,16 @@ function Block({ title, children, aside }: { title?: string; children: ReactNode
   );
 }
 
-/** The long summary stays English whatever the site language (only TL;DRs are translated), so it carries lang="en". */
+/**
+ * The long summary. The server renders the English with lang="en"; when the reader's language has a cached machine
+ * translation whose hash matches this English (public/i18n/summaries), SummaryText swaps it in client-side, marked as
+ * machine translated with a report link and a toggle back to the English.
+ */
 const Summary = ({ e }: { e: Entity }) => (
   <LayerAware>
-    <div {...EN_TEXT} className="prose-onco text-[15px] leading-relaxed max-w-3xl">{paragraphs(e.summary).map((p, i) => <p key={i}>{withTermHovers(p, { skipId: e.id })}</p>)}</div>
+    <SummaryText e={{ kind: e.kind, id: e.id, name: e.name }} translations={summaryTranslationsFor(e)}>
+      <div {...EN_TEXT} className="prose-onco text-[15px] leading-relaxed max-w-3xl">{paragraphs(e.summary).map((p, i) => <p key={i}>{withTermHovers(p, { skipId: e.id })}</p>)}</div>
+    </SummaryText>
   </LayerAware>
 );
 
