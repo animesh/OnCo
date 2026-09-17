@@ -18,7 +18,7 @@ const SEER = (s: string) => `https://seer.cancer.gov/statfacts/html/${s}.html`;
 export const gapCancers: CancerInput[] = [
   // ======================= Haematologic =======================
   c({
-    id: "cml", name: "Chronic myeloid leukaemia (CML)", group: "haematologic", wikipedia: W("Chronic_myelogenous_leukemia"),
+    id: "cml", trials: ["nct04971226", "nct03459534", "nct05456191"], name: "Chronic myeloid leukaemia (CML)", group: "haematologic", wikipedia: W("Chronic_myelogenous_leukemia"),
     burden: "About 1-2 cases per 100,000 per year; because patients now live near-normal lifespans, prevalence keeps rising (SEER).",
     tldr: "Chronic myeloid leukaemia is a blood cancer driven by a single fused gene, BCR-ABL1, and the model for oncogene-targeted treatment: imatinib in 2001 and the tyrosine kinase inhibitors that followed turned it into a condition most people live with long-term. About half of patients with a sustained deep molecular response can now stop treatment altogether.",
     summary: "CML is defined by the Philadelphia chromosome t(9;22) and its product, the constitutively active BCR-ABL1 tyrosine kinase. It is the paradigm of oncogene addiction: tyrosine kinase inhibitors (TKIs) restore near-normal life expectancy in chronic phase, and treatment response is tracked by quantitative BCR-ABL1 PCR on the International Scale (IS), with milestones at 3, 6 and 12 months (ELN 2020).\n\nFirst-line options are imatinib, the second-generation TKIs dasatinib, nilotinib and bosutinib, and since 2024 asciminib (ASC4FIRST), the first allosteric STAMP inhibitor. Second-generation drugs achieve deeper responses faster but have not improved overall survival over imatinib; choice is driven by comorbidity (cardiovascular risk with nilotinib and ponatinib, pleural effusions with dasatinib) and by the goal of treatment-free remission (TFR). Resistance is largely through ABL1 kinase-domain mutations; T315I is covered by ponatinib and asciminib. Allogeneic transplant is reserved for blast phase or multi-TKI failure.\n\nThe frontier is TFR (about half of patients with sustained deep molecular response can stop, EURO-SKI), safer T315I coverage, olverembatinib in Asia, and the small residue of accelerated/blast-phase disease, where outcomes remain poor.",
@@ -56,7 +56,7 @@ export const gapCancers: CancerInput[] = [
     tags: ["gap-fill", "haematologic"], journals: ["leukemia-research"],
   }),
   c({
-    id: "mds", name: "Myelodysplastic syndromes / neoplasms (MDS)", group: "haematologic", wikipedia: W("Myelodysplastic_syndrome"),
+    id: "mds", trials: ["nct05883956", "nct04256317", "nct04064060"], name: "Myelodysplastic syndromes / neoplasms (MDS)", group: "haematologic", wikipedia: W("Myelodysplastic_syndrome"),
     burden: "MDS affects around 4-5 per 100,000 people per year overall, rising steeply with age (median age ~70), according to SEER.",
     tldr: "Bone-marrow disorders where blood cells are made badly and too few reach the blood; a third progress to acute leukaemia. Treatment ranges from transfusions and growth factors to hypomethylating drugs and, for the fit, transplant.",
     summary: "MDS are clonal myeloid neoplasms with ineffective haematopoiesis, cytopenias, dysplasia and variable risk of transformation to AML. Risk is stratified by IPSS-R and, since 2022, the molecular IPSS-M, which incorporates mutations (TP53 multi-hit, ASXL1, RUNX1, SF3B1 among 31 genes). The WHO 2022 and ICC classifications define genetically specified entities (SF3B1-mutant, del(5q), biallelic TP53) and renamed the group 'myelodysplastic neoplasms'.\n\nLower-risk disease is treated for anaemia: erythropoiesis-stimulating agents, lenalidomide for del(5q), luspatercept (MEDALIST 2020, COMMANDS 2023 first line), and imetelstat (IMerge, 2024) after ESA failure. Higher-risk disease is treated with hypomethylating agents (azacitidine, decitabine, oral decitabine-cedazuridine) and, for the fit with a donor, allogeneic transplant, the only cure. Three large phase 3 additions to azacitidine failed in 2023-24 (magrolimab ENHANCE, sabatolimab STIMULUS-MDS2, venetoclax VERONA), leaving azacitidine alone as the higher-risk standard.\n\nOpen problems: TP53-mutant MDS, post-HMA failure (median survival under six months), and how to use IPSS-M to time transplant.",
@@ -94,7 +94,7 @@ export const gapCancers: CancerInput[] = [
     tags: ["gap-fill", "haematologic"], people: ["uwe-platzbecker", "pierre-fenaux"], related: ["systemic-mastocytosis"], journals: ["leukemia-research"],
   }),
   c({
-    id: "myeloproliferative-neoplasms", trials: ["nct06093672", "nct06351631", "nct04468984"], name: "Myeloproliferative neoplasms (PV, ET, myelofibrosis)", group: "haematologic", wikipedia: W("Myeloproliferative_neoplasm"),
+    id: "myeloproliferative-neoplasms", trials: ["nct06093672", "nct06351631", "nct04468984", "nct06468033", "nct04717414", "nct04562389", "nct05210790", "nct07429266", "nct05481151", "nct06033586", "nct04064060", "nct04576156", "nct04285086", "nct04655092"], name: "Myeloproliferative neoplasms (PV, ET, myelofibrosis)", group: "haematologic", wikipedia: W("Myeloproliferative_neoplasm"),
     aka: ["MPN", "Polycythaemia vera", "Essential thrombocythaemia", "Primary myelofibrosis"],
     burden: "Combined incidence around 2-3 per 100,000 per year; PV and ET are chronic diseases lived with for decades, myelofibrosis has a median survival of about six years.",
     tldr: "Myeloproliferative neoplasms are slow-growing blood cancers in which the marrow overproduces red cells (polycythaemia vera), platelets (essential thrombocythaemia) or scar tissue (myelofibrosis). Almost all carry a mutation in JAK2, CALR or MPL; treatment aims to prevent clots and control symptoms, and only transplant cures myelofibrosis.",
@@ -134,7 +134,7 @@ export const gapCancers: CancerInput[] = [
     tags: ["gap-fill", "haematologic"],
   }),
   c({
-    id: "follicular-lymphoma", trials: ["nct07634471", "nct07562022"], name: "Follicular lymphoma", group: "haematologic", wikipedia: W("Follicular_lymphoma"),
+    id: "follicular-lymphoma", trials: ["nct07634471", "nct07562022", "nct06097364", "nct04712097", "nct06549595", "nct06149286", "nct06191744", "nct06911502", "nct04224493", "nct01804686", "nct04680052", "nct06091254", "nct05100862", "nct05888493", "nct05409066", "nct05371093"], name: "Follicular lymphoma", group: "haematologic", wikipedia: W("Follicular_lymphoma"),
     burden: "Follicular lymphoma is the second most common non-Hodgkin lymphoma in the West (~20% of NHL; about 3-4 per 100,000 per year), median age ~65.",
     tldr: "Follicular lymphoma is the most common slow-growing lymphoma, defined in about 85% of cases by a BCL2 translocation. Most people live with it for decades, treated only when it causes problems; it can be controlled repeatedly with anti-CD20 antibodies, chemotherapy, bispecifics or CAR-T but rarely cured, and a small share transform into an aggressive lymphoma each year.",
     summary: "Follicular lymphoma (FL) is an indolent germinal-centre B-cell lymphoma defined by t(14;18) BCL2 overexpression in ~85% and frequent CREBBP, KMT2D and EZH2 mutations. Median survival now exceeds 15-20 years, so the questions are when to treat, how to avoid over-treatment, and how to manage the ~20% who progress within 24 months (POD24) and the 2-3% per year who transform to DLBCL.\n\nAsymptomatic low-burden disease is watched or given rituximab monotherapy; symptomatic or high-burden disease receives anti-CD20 (rituximab or obinutuzumab) with bendamustine, CHOP or CVP, or with lenalidomide (R², RELEVANCE), usually followed by anti-CD20 maintenance (PRIMA). Relapsed disease has the richest menu in lymphoma: lenalidomide-rituximab (AUGMENT), CD20×CD3 bispecifics (mosunetuzumab 2022, epcoritamab 2024, odronextamab EU), CD19 CAR-T (axicabtagene 2021, tisagenlecleucel 2022, lisocabtagene 2024), zanubrutinib-obinutuzumab (ROSEWOOD, 2024) and radioimmunotherapy historically. Tazemetostat (EZH2) was withdrawn worldwide in March 2026.\n\nOpen questions: whether bispecifics or CAR-T should move to second line or even first line (EPCORE FL-1, MorningSun), PET/ctDNA-guided de-escalation, and biology-based prediction of POD24 and transformation.",
@@ -173,7 +173,7 @@ export const gapCancers: CancerInput[] = [
     tags: ["gap-fill", "haematologic"], related: ["lymphoma-research-foundation"], journals: ["hematological-oncology"],
   }),
   c({
-    id: "mantle-cell-lymphoma", trials: ["nct07377578"], name: "Mantle cell lymphoma", group: "haematologic", wikipedia: W("Mantle_cell_lymphoma"),
+    id: "mantle-cell-lymphoma", trials: ["nct07377578", "nct04002297", "nct01804686", "nct06742996", "nct06363994", "nct04662255", "nct02972840"], name: "Mantle cell lymphoma", group: "haematologic", wikipedia: W("Mantle_cell_lymphoma"),
     burden: "Mantle cell lymphoma makes up about 5-7% of non-Hodgkin lymphomas; incidence ~1 per 100,000 per year, median age ~68, 3:1 male.",
     tldr: "An uncommon B-cell lymphoma driven by cyclin D1 that used to behave badly in almost everyone. BTK inhibitors, CAR-T and now BCL2 drugs have changed it from chemotherapy-plus-transplant to targeted combinations.",
     summary: "Mantle cell lymphoma (MCL) carries t(11;14) with cyclin D1 overexpression (SOX11-positive in classical MCL). Risk is set by MIPI, Ki-67, blastoid morphology and TP53 mutation, the last defining a group that fails chemo-immunotherapy and transplant. A leukaemic non-nodal variant behaves indolently.\n\nYounger fit patients traditionally received cytarabine-containing induction and autologous transplant with rituximab maintenance; TRIANGLE (2024) showed adding ibrutinib to induction and maintenance is at least as good as transplant, and transplant is being abandoned. Older patients receive bendamustine-rituximab or R-CHOP; ECHO (2024) added acalabrutinib to BR first line (FDA approval 2025). Relapse is treated with covalent BTK inhibitors (ibrutinib 2013, acalabrutinib 2017, zanubrutinib 2019; ibrutinib's US MCL approval was withdrawn in 2023 after SHINE), then brexucabtagene autoleucel (ZUMA-2, 2020), the non-covalent BTKi pirtobrutinib (2023), or the BCL2 inhibitor sonrotoclax (2026); venetoclax-ibrutinib (SYMPATICO) is another option. Lisocabtagene was approved for MCL in 2024.\n\nTP53-mutant MCL still does poorly with everything except CAR-T and bispecifics; glofitamab and CD20×CD3 agents are in phase 3.",
@@ -211,7 +211,7 @@ export const gapCancers: CancerInput[] = [
     tags: ["gap-fill", "haematologic"],
   }),
   c({
-    id: "peripheral-t-cell-lymphoma", trials: ["nct06561048"], name: "Peripheral T-cell lymphomas (including cutaneous T-cell lymphoma)", group: "haematologic", wikipedia: W("Peripheral_T-cell_lymphoma"),
+    id: "peripheral-t-cell-lymphoma", trials: ["nct06561048", "nct06776952", "nct06072131", "nct04668690"], name: "Peripheral T-cell lymphomas (including cutaneous T-cell lymphoma)", group: "haematologic", wikipedia: W("Peripheral_T-cell_lymphoma"),
     aka: ["PTCL", "CTCL", "Mycosis fungoides", "Anaplastic large-cell lymphoma"],
     burden: "Peripheral T-cell lymphomas make up about 10-15% of non-Hodgkin lymphomas in the West, more in Asia; there are over 30 WHO subtypes, most individually rare.",
     tldr: "Peripheral T-cell lymphomas are lymphomas of T cells rather than B cells. They are rarer, more varied and, apart from a few subtypes, harder to treat than B-cell lymphomas; several new drugs help only defined subtypes.",
@@ -383,7 +383,7 @@ export const gapCancers: CancerInput[] = [
   }),
   // ======================= Skin and eye =======================
   c({
-    id: "merkel-cell-carcinoma", name: "Merkel cell carcinoma", group: "skin", wikipedia: W("Merkel-cell_carcinoma"),
+    id: "merkel-cell-carcinoma", trials: ["nct06947928"], name: "Merkel cell carcinoma", group: "skin", wikipedia: W("Merkel-cell_carcinoma"),
     burden: "Merkel cell carcinoma causes about 3,000 cases per year in the US and rising; median age is ~75; it is roughly 40 times rarer than melanoma and more likely to spread stage for stage, which is why immunotherapy's durable responses mattered so much.",
     tldr: "Merkel cell carcinoma is a rare, fast-growing skin cancer, usually caused by a common virus (Merkel cell polyomavirus) or by sun damage. It was almost untreatable once it spread; PD-1/PD-L1 immunotherapy now gives lasting responses in about half of patients.",
     summary: "Merkel cell carcinoma (MCC) is a neuroendocrine skin cancer of older, fair-skinned and immunosuppressed people. About 80% of cases in the Northern Hemisphere are driven by clonally integrated Merkel cell polyomavirus (MCPyV, discovered 2008); the remainder are UV-induced with a very high tumour mutational burden. Both forms are immunogenic, which explains why MCC responded to checkpoint blockade when chemotherapy gave only brief responses.\n\nLocalised disease is treated with wide excision, sentinel node biopsy and adjuvant radiotherapy; the STAMP and ADMEC-O trials tested adjuvant PD-1 blockade, with ADMEC-O (nivolumab) showing a disease-free survival benefit in 2023. Metastatic disease is treated first line with avelumab (JAVELIN Merkel 200, first approval 2017), pembrolizumab (KEYNOTE-017, 2018) or retifanlimab (POD1UM-201, 2023); durable responses occur in about half, and chemotherapy is reserved for immunotherapy failure. Circulating MCPyV oncoprotein antibodies (AMERK) allow surveillance in seropositive patients.\n\nUnsolved: primary and acquired immunotherapy resistance (about half of patients), immunosuppressed patients (transplant, CLL) who cannot receive checkpoint blockade safely, and the adjuvant standard.",
@@ -413,7 +413,7 @@ export const gapCancers: CancerInput[] = [
     tags: ["gap-fill", "skin", "rare"],
   }),
   c({
-    id: "cutaneous-scc", name: "Cutaneous squamous cell carcinoma", group: "skin", wikipedia: W("Squamous-cell_carcinoma_of_the_skin"),
+    id: "cutaneous-scc", trials: ["nct06585410"], name: "Cutaneous squamous cell carcinoma", group: "skin", wikipedia: W("Squamous-cell_carcinoma_of_the_skin"),
     aka: ["cSCC", "Squamous Cell Carcinoma of the Skin"],
     burden: "Second most common skin cancer; over one million cases per year in the US, almost all cured by removal; about 2-5% metastasise, which still amounts to several thousand deaths a year and is where PD-1 immunotherapy now helps.",
     tldr: "Cutaneous squamous cell carcinoma is a sun-related skin cancer with over a million US cases a year, almost all cured by removing them. The 2 to 5% that grow deep or spread respond to PD-1 immunotherapy (cemiplimab, pembrolizumab), which is now also given after surgery in high-risk cases; transplant recipients cannot safely receive it.",
@@ -446,7 +446,7 @@ export const gapCancers: CancerInput[] = [
     tags: ["gap-fill", "skin"],
   }),
   c({
-    id: "basal-cell-carcinoma", name: "Basal cell carcinoma", group: "skin", wikipedia: W("Basal-cell_carcinoma"),
+    id: "basal-cell-carcinoma", trials: ["nct06050122"], name: "Basal cell carcinoma", group: "skin", wikipedia: W("Basal-cell_carcinoma"),
     aka: ["BCC", "Basal Cell Carcinoma of the Skin"],
     burden: "The most common human cancer: several million cases per year in the US alone; metastasis is exceptionally rare (<0.1%), but locally advanced disease can be destructive.",
     tldr: "Basal cell carcinoma is the most common cancer of all, caused by sun exposure and almost never life-threatening. Nearly all are removed surgically; the rare advanced cases are treated with drugs that block the hedgehog signalling pathway, and with immunotherapy if those fail.",
@@ -476,7 +476,7 @@ export const gapCancers: CancerInput[] = [
     tags: ["gap-fill", "skin"], pathways: ["basal-cell-carcinoma-signalling"],
   }),
   c({
-    id: "uveal-melanoma", trials: ["nct07804186", "nct07015190"], name: "Uveal melanoma", group: "skin", wikipedia: W("Uveal_melanoma"),
+    id: "uveal-melanoma", trials: ["nct07804186", "nct07015190", "nct06581406", "nct05022901", "nct05987332", "nct06007690"], name: "Uveal melanoma", group: "skin", wikipedia: W("Uveal_melanoma"),
     aka: ["Ocular melanoma", "Choroidal melanoma", "Intraocular Melanoma"],
     burden: "About 5-7 per million per year (the most common primary eye cancer in adults); half of patients eventually develop metastases, almost always in the liver.",
     tldr: "A melanoma inside the eye that is biologically unrelated to skin melanoma: different mutations, no response to standard immunotherapy, and a tendency to spread to the liver years later. Tebentafusp is the first drug ever to extend survival in the metastatic disease.",
@@ -576,7 +576,7 @@ export const gapCancers: CancerInput[] = [
     tags: ["gap-fill", "gastrointestinal", "hpv"], related: ["urethral"],
   }),
   c({
-    id: "gist", trials: ["nct07585266", "nct05208047", "nct07218926", "nct07379047"], name: "Gastrointestinal stromal tumour (GIST)", group: "gastrointestinal", wikipedia: W("Gastrointestinal_stromal_tumor"),
+    id: "gist", trials: ["nct07585266", "nct05208047", "nct07218926", "nct07379047", "nct03673501"], name: "Gastrointestinal stromal tumour (GIST)", group: "gastrointestinal", wikipedia: W("Gastrointestinal_stromal_tumor"),
     burden: "GIST affects about 10-15 per million per year (the most common sarcoma); stomach 60%, small bowel 30%; median age ~65.",
     tldr: "GIST is a sarcoma of the gut wall driven almost always by a KIT or PDGFRA mutation. It was the proof that a pill can control a solid tumour: imatinib turned a median survival of about a year into one of eight years or more, and the mutation now dictates which drug to use.",
     summary: "GIST arises from interstitial cells of Cajal and carries activating KIT mutations (~75%, mostly exon 11, some exon 9) or PDGFRA mutations (~10%, including the imatinib-resistant D842V); the remainder are SDH-deficient (young patients, Carney-Stratakis), NF1-associated, or BRAF/NTRK-driven. Risk after resection is estimated from size, mitotic rate and site (Miettinen/AFIP, modified NIH).\n\nSurgery is the only cure; adjuvant imatinib for three years improves survival in high-risk disease (SSGXVIII), with five years or longer under study. Advanced disease is treated with imatinib (400 mg; 800 mg for exon 9), then sunitinib (2006), regorafenib (2013) and ripretinib (INVICTUS, 2020) in sequence; avapritinib is the drug for PDGFRA D842V (2020). Resistance comes from secondary KIT mutations in the ATP-binding pocket (exon 13/14) or activation loop (exon 17/18) and is heterogeneous across lesions, which is why single next-generation inhibitors have struggled (INTRIGUE: ripretinib not superior to sunitinib overall, but better in ctDNA-defined exon 11 + 17/18 disease, now tested in INSIGHT) and why combinations (bezuclastinib + sunitinib, Peak) and ctDNA-guided selection are the current strategy. SDH-deficient GIST is TKI-insensitive and slow-growing; temozolomide has activity.",
@@ -640,7 +640,7 @@ export const gapCancers: CancerInput[] = [
   }),
   // ======================= Gynaecologic =======================
   c({
-    id: "vulvar", name: "Vulvar cancer", group: "gynaecologic", wikipedia: W("Vulvar_cancer"),
+    id: "vulvar", trials: ["nct04422366"], name: "Vulvar cancer", group: "gynaecologic", wikipedia: W("Vulvar_cancer"),
     burden: "About 45,000 cases per year worldwide (GLOBOCAN); two peaks: younger women with HPV-related disease and older women with lichen sclerosus-associated disease.",
     tldr: "An uncommon cancer of the external genitalia with two distinct causes: HPV infection in younger women and chronic skin inflammation in older women. Surgery is the mainstay, and sentinel-node biopsy has made it far less mutilating.",
     summary: "Vulvar squamous cell carcinoma has two pathways: HPV-associated (usual-type VIN, p16-positive, younger patients, better prognosis) and HPV-independent (differentiated VIN arising in lichen sclerosus, p53-mutant, older patients, higher recurrence). Rarer histologies include melanoma, Bartholin gland adenocarcinoma, Paget disease and basal cell carcinoma. Nodal status is the dominant prognostic factor.\n\nEarly disease is treated with radical local excision and sentinel lymph node biopsy (GROINSS-V I established safety for tumours <4 cm with unifocal disease, replacing inguinofemoral lymphadenectomy and its lymphoedema in most); GROINSS-V II showed radiotherapy can replace lymphadenectomy for micrometastases ≤2 mm. Locally advanced disease receives chemoradiation (cisplatin-based, GOG 205/279) to avoid exenteration. Metastatic or recurrent disease has limited options: platinum-based chemotherapy, pembrolizumab for PD-L1-positive or TMB-high disease (KEYNOTE-158), cemiplimab in trials, and, for HPV-independent p53-mutant disease, no targeted therapy.",
@@ -953,7 +953,7 @@ export const gapCancers: CancerInput[] = [
     tags: ["gap-fill", "site-agnostic"], people: ["jim-valvano"],
   }),
   c({
-    id: "nasopharyngeal", trials: ["taishan-301", "nct05294172"], name: "Nasopharyngeal carcinoma", group: "head and neck", wikipedia: W("Nasopharyngeal_carcinoma"),
+    id: "nasopharyngeal", trials: ["taishan-301", "nct05294172", "nct06976190", "nct06118333", "nct04974398"], name: "Nasopharyngeal carcinoma", group: "head and neck", wikipedia: W("Nasopharyngeal_carcinoma"),
     aka: ["NPC"],
     burden: "About 120,000 cases per year worldwide, ~70% in East and Southeast Asia (Guangdong incidence 20-30 per 100,000 versus <1 in the West); strongly linked to Epstein-Barr virus.",
     tldr: "A cancer at the back of the nose caused largely by the Epstein-Barr virus and common in southern China and Southeast Asia. Radiation cures most early cases; adding chemotherapy and, recently, PD-1 immunotherapy has improved outcomes in advanced disease, and a blood test for viral DNA can detect it early.",
