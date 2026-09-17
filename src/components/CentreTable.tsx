@@ -8,7 +8,7 @@ import { Tip } from "./Tip";
 import { useRegion } from "@/lib/region";
 import { REGION_META } from "@/data/regional-approvals";
 import { REGION_COUNTRIES } from "@/data/referral-routes";
-import type { CentreRow } from "@/lib/centre-table";
+import type { CentreRow } from "@/lib/centre-pack";
 
 /**
  * Sortable table of the centres linked to one cancer, with the measurable facts the corpus holds on each:

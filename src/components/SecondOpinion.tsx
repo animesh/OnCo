@@ -10,7 +10,7 @@ import { REGION_COUNTRIES, regionForCountry, type ReferralRoute } from "@/data/r
 import type { Region } from "@/data/regional-approvals";
 import { REGION_META } from "@/data/regional-approvals";
 import { CentreTable } from "./CentreTable";
-import { unpackCentreRows, type CentreLink, type CentrePack, type CentreRow } from "@/lib/centre-table";
+import { unpackCentreRows, type CentreLink, type CentrePack, type CentreRow } from "@/lib/centre-pack";
 
 /** A centre row for the finder: the measurable record fields built in src/lib/centre-table.ts. Cancers carry packed links; rows are unpacked for the chosen cancer. */
 export type SoCentre = CentreRow;

@@ -21,7 +21,6 @@ import { trialLeadership } from "./trial-leadership";
  * builders take a lookup so the tests can run on synthetic records; `centreRowsFor` wires the graph.
  */
 
-export type CentreDesignation = { key: string; label: string; href?: string };
 
 /** Tags on institution records that name an accreditation, designation or network membership. */
 export const DESIGNATION_LABELS: Record<string, { label: string; body?: string }> = {
@@ -69,29 +68,10 @@ export function programmesFor(inst: Pick<Institution, "programs">, cancer: Pick<
   return inst.programs.filter((p) => { const s = p.toLowerCase(); return needles.some((n) => s.includes(n)); });
 }
 
-export type CentreResearch = { works: number; cited: number; clinicalTrials: number; years: [number, number] };
 
-export type CentreRow = {
-  id: string;
-  name: string;
-  route: string;
-  website?: string;
-  city: string;
-  country: string;
-  institutionType: Institution["institutionType"];
-  /** How the centre is linked to this cancer in the corpus ("this cancer", trial and product names). May be trimmed in packed form; `viaTotal` keeps the full count. */
-  via: string[];
-  viaTotal: number;
-  newsweek?: number;
-  nci?: Institution["nci"];
-  designations: CentreDesignation[];
-  programmes: string[];
-  /** Trials in the corpus linked to both this centre and this cancer. */
-  trials: Array<{ id: string; name: string; route: string }>;
-  research: CentreResearch | null;
-  technologies: Array<{ id: string; name: string; route: string }>;
-  leadershipRank?: number;
-};
+export { packCentreRows, unpackCentreRows } from "./centre-pack";
+export type { CentreRow, CentreBase, CentreLink, CentrePack, CentreDesignation, CentreResearch } from "./centre-pack";
+import type { CentreRow, CentreDesignation, CentreResearch } from "./centre-pack";
 
 export type CentreInput = { inst: Institution; via: string[] };
 
@@ -185,37 +165,6 @@ export function centreRowsFor(cancerId: string): CentreRow[] {
  * facts once per institution, trial names once per trial, and per cancer only the link (how it is linked, which
  * trial ids, which programmes). About a seventh of the size of the full rows; `unpackCentreRows` restores them.
  */
-export type CentreBase = Omit<CentreRow, "via" | "viaTotal" | "trials" | "programmes">;
-export type CentreLink = { i: string; v: string[]; vn: number; t: string[]; p: string[] };
-export type CentrePack = { institutions: Record<string, CentreBase>; trials: Record<string, { name: string; route: string }> };
-
-const VIA_KEEP = 5;
-
-export function packCentreRows(byCancer: Record<string, CentreRow[]>): { pack: CentrePack; links: Record<string, CentreLink[]> } {
-  const institutions: Record<string, CentreBase> = {};
-  const trials: Record<string, { name: string; route: string }> = {};
-  const links: Record<string, CentreLink[]> = {};
-  for (const [cancerId, rows] of Object.entries(byCancer)) {
-    links[cancerId] = rows.map((r) => {
-      const { via, viaTotal, trials: ts, programmes, ...base } = r;
-      void viaTotal;
-      institutions[r.id] ??= base;
-      for (const t of ts) trials[t.id] ??= { name: t.name, route: t.route };
-      return { i: r.id, v: via.slice(0, VIA_KEEP), vn: via.length, t: ts.map((t) => t.id), p: programmes };
-    });
-  }
-  return { pack: { institutions, trials }, links };
-}
-
-export function unpackCentreRows(links: CentreLink[], pack: CentrePack): CentreRow[] {
-  const out: CentreRow[] = [];
-  for (const l of links) {
-    const base = pack.institutions[l.i];
-    if (!base) continue;
-    out.push({ ...base, via: l.v, viaTotal: l.vn, programmes: l.p, trials: l.t.map((id) => ({ id, ...(pack.trials[id] ?? { name: id, route: `/trials/${id}/` }) })) });
-  }
-  return out;
-}
 
 const displayNames = new Intl.DisplayNames(["en-GB"], { type: "region" });
 export function countryName(code: string): string {
