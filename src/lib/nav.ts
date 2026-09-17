@@ -39,6 +39,7 @@ export const NAV_GROUPS: NavGroup[] = [
       { href: "/dossiers/", label: "Target dossiers", blurb: "Everything about a target on one page: biology, prevalence, hotspots, products by phase, trials, resistance, assays, models, open questions, external ids." },
       { href: "/pathway-drugs/", label: "Pathway-to-drug matrix", blurb: "Which pathway nodes have a drug, at what phase, and which druggable nodes have none." },
       { href: "/models/", label: "Models & datasets", blurb: "Foundation models and the datasets they train on, with parameters, weights, licence and benchmarks." },
+      { href: "/machines/", label: "Machines", blurb: "The scanners, accelerators, robots and ablation devices hospitals use against cancer: what each does, its advantages and limits, who makes it, and which centres run the rare ones." },
       { href: "/open-questions/", label: "Open questions", blurb: "Unresolved questions per target and technology: why open, what would answer them, who acts." },
       { href: "/preclinical-models/", label: "Preclinical models", blurb: "Cell lines with Cellosaurus and DepMap ids, PDX banks, mouse models and organoids per cancer and target." },
       { href: "/regimens/", label: "Regimens", blurb: "Named regimens with doses, days, cycles, emetogenicity and G-CSF need; calendar strip per regimen." },

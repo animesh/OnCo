@@ -35,6 +35,7 @@ export const navFr: NavDict = {
   "/dossiers/": ["Dossiers de cibles", "Tout sur une cible en une page : biologie, prévalence, points chauds, produits par phase, essais, résistance, tests, modèles, questions ouvertes, identifiants externes."],
   "/pathway-drugs/": ["Matrice voie-médicament", "Quels nœuds de voie ont un médicament, à quelle phase, et quels nœuds ciblables n'en ont aucun."],
   "/models/": ["Modèles et jeux de données", "Modèles de fondation et les données sur lesquelles ils s'entraînent, avec paramètres, poids, licence et benchmarks."],
+  "/machines/": ["Machines", "Scanners, accélérateurs, robots et dispositifs d'ablation utilisés contre le cancer : ce que fait chacun, ses avantages et limites, qui le fabrique et quels centres possèdent les plus rares."],
   "/open-questions/": ["Questions ouvertes", "Questions non résolues par cible et technologie : pourquoi ouvertes, ce qui y répondrait, qui agit."],
   "/preclinical-models/": ["Modèles précliniques", "Lignées cellulaires avec identifiants Cellosaurus et DepMap, banques de PDX, modèles murins et organoïdes par cancer et cible."],
   "/regimens/": ["Protocoles", "Protocoles nommés avec doses, jours, cycles, potentiel émétisant et besoin de G-CSF ; calendrier par protocole."],

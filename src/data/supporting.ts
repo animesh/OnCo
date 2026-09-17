@@ -120,7 +120,7 @@ const technologies: TechnologyInput[] = [
 
   // ---- Digital pathology infrastructure ----
   t({
-    id: "whole-slide-scanners", links: [{ label: "FDA allows marketing of first whole slide imaging system for digital pathology (2017)", url: "https://www.fda.gov/news-events/press-announcements/fda-allows-marketing-first-whole-slide-imaging-system-digital-pathology" }], name: "Whole-slide scanners and image management", sections: ["diagnostics", "ai-computation"], status: "established",
+    id: "whole-slide-scanners", related: ["flow-cytometers"], links: [{ label: "FDA allows marketing of first whole slide imaging system for digital pathology (2017)", url: "https://www.fda.gov/news-events/press-announcements/fda-allows-marketing-first-whole-slide-imaging-system-digital-pathology" }], name: "Whole-slide scanners and image management", sections: ["diagnostics", "ai-computation"], status: "established",
     tldr: "The scanners that turn glass slides into gigapixel images, and the software that stores and serves them, without which pathology AI cannot run.",
     summary: "Leica Biosystems (Aperio GT 450), Hamamatsu (NanoZoomer), 3DHISTECH (Pannoramic), Philips (IntelliSite; FDA-cleared for primary diagnosis 2017), Roche (VENTANA DP 600), and Grundium supply scanners; Sectra, Philips, Proscia (Concentriq), PathAI (AISight), Indica Labs (HALO), and Paige provide image management and viewing. Interoperability (DICOM-WSI) and storage costs (1-4 GB per slide) are the practical constraints on going fully digital.",
     principle: "Automated microscopy tiles a slide at 20-40x, then stitches and compresses it into a pyramidal image; image management platforms index, stream, and integrate with LIS/EHR and AI.",

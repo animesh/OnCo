@@ -35,6 +35,7 @@ export const navDe: NavDict = {
   "/dossiers/": ["Zielstruktur-Dossiers", "Alles zu einer Zielstruktur auf einer Seite: Biologie, Häufigkeit, Hotspots, Produkte nach Phase, Studien, Resistenz, Tests, Modelle, offene Fragen, externe IDs."],
   "/pathway-drugs/": ["Signalweg-Wirkstoff-Matrix", "Welche Knoten eines Signalwegs ein Medikament haben, in welcher Phase, und welche adressierbaren Knoten keines haben."],
   "/models/": ["Modelle und Datensätze", "Foundation Models und die Datensätze, auf denen sie trainieren, mit Parametern, Gewichten, Lizenz und Benchmarks."],
+  "/machines/": ["Geräte", "Scanner, Beschleuniger, Roboter und Ablationsgeräte im Kampf gegen Krebs: was jedes leistet, Vorteile und Grenzen, wer es baut und welche Zentren die seltenen betreiben."],
   "/open-questions/": ["Offene Fragen", "Ungelöste Fragen je Zielstruktur und Technologie: warum offen, was sie beantworten würde, wer handelt."],
   "/preclinical-models/": ["Präklinische Modelle", "Zelllinien mit Cellosaurus- und DepMap-IDs, PDX-Banken, Mausmodelle und Organoide je Krebsart und Zielstruktur."],
   "/regimens/": ["Schemata", "Benannte Schemata mit Dosen, Tagen, Zyklen, Emetogenität und G-CSF-Bedarf; Kalenderstreifen je Schema."],

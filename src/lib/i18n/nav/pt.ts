@@ -35,6 +35,7 @@ export const navPt: NavDict = {
   "/dossiers/": ["Dossiês de alvos", "Tudo sobre um alvo numa página: biologia, prevalência, pontos quentes, produtos por fase, ensaios, resistência, testes, modelos, questões em aberto, identificadores externos."],
   "/pathway-drugs/": ["Matriz via-fármaco", "Que nós de cada via têm um fármaco, em que fase, e que nós acionáveis não têm nenhum."],
   "/models/": ["Modelos e conjuntos de dados", "Modelos de base e os dados em que treinam, com parâmetros, pesos, licença e benchmarks."],
+  "/machines/": ["Máquinas", "Scanners, aceleradores, robôs e dispositivos de ablação usados contra o cancro: o que cada um faz, vantagens e limites, quem o fabrica e que centros têm os mais raros."],
   "/open-questions/": ["Questões em aberto", "Questões por resolver por alvo e tecnologia: porque continuam abertas, o que as responderia, quem age."],
   "/preclinical-models/": ["Modelos pré-clínicos", "Linhas celulares com identificadores Cellosaurus e DepMap, bancos de PDX, modelos de rato e organoides por cancro e alvo."],
   "/regimens/": ["Esquemas", "Esquemas com nome, com doses, dias, ciclos, emetogenicidade e necessidade de G-CSF; calendário por esquema."],
