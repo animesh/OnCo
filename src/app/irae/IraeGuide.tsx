@@ -58,11 +58,11 @@ export function IraeGuide({ icis }: { icis: IciLite[] }) {
 
         <div className="mt-4 overflow-x-auto">
           <table className="onco">
-            <thead><tr><th>Grade</th><th className="min-w-[160px]">Checkpoint inhibitor</th><th className="min-w-[220px]">Steroids</th><th className="min-w-[240px]">If refractory / other measures</th><th className="min-w-[200px]">Rechallenge</th></tr></thead>
+            <thead><tr><th className="min-w-[8.5rem]">Grade</th><th className="min-w-[160px]">Checkpoint inhibitor</th><th className="min-w-[220px]">Steroids</th><th className="min-w-[240px]">If refractory / other measures</th><th className="min-w-[200px]">Rechallenge</th></tr></thead>
             <tbody>
               {shown.map((g) => (
                 <tr key={g.grade}>
-                  <td><div className="font-semibold">Grade {g.grade}</div><div className="text-xs text-muted mt-0.5 max-w-[160px]">{g.defines}</div></td>
+                  <td className="min-w-[8.5rem]"><div className="font-semibold whitespace-nowrap tabular-nums">Grade {g.grade}</div><div className="text-xs text-muted mt-0.5 max-w-[160px]">{g.defines}</div></td>
                   <td><span className={`chip ${HOLD_CLASS[g.hold]}`}>{HOLD_LABEL[g.hold]}</span></td>
                   <td className="text-sm">{g.steroid}</td>
                   <td className="text-sm text-foreground/85">{g.escalation ?? "-"}{g.note && <div className="text-xs text-muted mt-1">{g.note}</div>}</td>

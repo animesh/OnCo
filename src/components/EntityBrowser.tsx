@@ -334,7 +334,9 @@ export function EntityBrowser({ rows, facets, columns, noun, defaultSort, hideSt
             : <span key={`f:${l.facet}:${l.value}`}>{i > 0 && !allChips && ", "}{facetChip(l, c.valueTips?.[itemLabel(l)])}</span>)}</span>;
         }
         const vt = c.valueTips?.[String(v)];
-        const cell = c.chip ? <span className={`chip inline-flex items-center gap-1 ${valueTone(c.key, String(v)) ?? "bg-foreground/5"}`}><ValueIcon facet={c.key} value={String(v)} />{v}</span> : <span className={`text-muted ${c.numeric ? "tabular-nums" : ""}`}>{v}</span>;
+        // Short categorical values (Phase 3, Public, 2024) stay on one line, so a narrow column never splits them.
+        const short = String(v).length <= 18;
+        const cell = c.chip ? <span className={`chip ${valueTone(c.key, String(v)) ?? "bg-foreground/5"}`}><ValueIcon facet={c.key} value={String(v)} />{v}</span> : <span className={`text-muted ${c.numeric ? "tabular-nums" : ""} ${short ? "whitespace-nowrap" : ""}`}>{v}</span>;
         return vt ? <Tip title={String(v)} text={vt}><span className="cursor-help">{cell}</span></Tip> : cell;
       },
     })),

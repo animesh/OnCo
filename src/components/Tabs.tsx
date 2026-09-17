@@ -16,7 +16,9 @@ const CONTENT_STYLE = { "--sticky-top": "calc(var(--header-h) + 3rem)" } as CSSP
  * The section id is kept in the URL hash and on the bar as `data-active` for other components.
  *
  * Accessibility: the bar is navigation (a list of same-page links), not a tablist, because no panel is ever
- * hidden; `aria-current` marks the section in view and Left/Right/Home/End move focus between the pills.
+ * hidden; `aria-current` marks the section in view and Left/Right/Home/End move focus between the tabs.
+ * The tabs form one compact strip (shared hairline, rounded ends, active tab filled); the count on each tab
+ * is hidden while it is active, since the reader is looking at the objects themselves.
  */
 export function Tabs({ tabs, ariaLabel }: { tabs: Tab[]; ariaLabel?: string }) {
   const [active, setActive] = useState(tabs[0]?.id);
@@ -58,7 +60,7 @@ export function Tabs({ tabs, ariaLabel }: { tabs: Tab[]; ariaLabel?: string }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  /** Left/Right/Home/End move focus between pills; Enter or Space on a focused pill follows the link as usual. */
+  /** Left/Right/Home/End move focus between tabs; Enter or Space on a focused tab follows the link as usual. */
   const onBarKey = (e: React.KeyboardEvent) => {
     if (!["ArrowRight", "ArrowLeft", "Home", "End"].includes(e.key)) return;
     const pills = [...(bar.current?.querySelectorAll<HTMLAnchorElement>("a[data-id]") ?? [])];
@@ -69,7 +71,7 @@ export function Tabs({ tabs, ariaLabel }: { tabs: Tab[]; ariaLabel?: string }) {
     pills[next].focus();
   };
 
-  // Keep the active pill in view inside the bar.
+  // Keep the active tab in view inside the bar.
   useEffect(() => {
     const el = bar.current?.querySelector<HTMLElement>(`[data-id="${active}"]`);
     el?.scrollIntoView({ block: "nearest", inline: "nearest" });
@@ -78,16 +80,19 @@ export function Tabs({ tabs, ariaLabel }: { tabs: Tab[]; ariaLabel?: string }) {
   return (
     <div>
       <nav ref={bar} aria-label={ariaLabel ?? tT("sections")} data-tabbar data-active={active} onKeyDown={onBarKey}
-        className="tabbar sticky top-14 z-30 -mx-4 sm:-mx-6 px-4 sm:px-6 h-12 bg-background/90 backdrop-blur border-b border-border flex items-center gap-1 overflow-x-auto no-scrollbar">
-        {tabs.map((t) => {
-          const on = t.id === active;
-          return (
-            <a key={t.id} href={`#${t.id}`} data-id={t.id} onClick={(e) => { e.preventDefault(); jump(t.id); }} aria-current={on ? "true" : undefined}
-              className={`shrink-0 inline-flex h-8 items-center whitespace-nowrap rounded-full border px-3 text-[13px] transition-colors ${on ? "bg-foreground text-background border-foreground font-medium" : "bg-card border-border text-foreground/75 hover:bg-surface hover:text-foreground hover:border-border-strong"}`}>
-              {tl(t.label)}{t.count !== undefined && <span className={`ms-1.5 text-xs tabular-nums ${on ? "text-background/70" : "text-muted"}`}>{t.count}</span>}
-            </a>
-          );
-        })}
+        className="tabbar sticky top-14 z-30 -mx-4 sm:-mx-6 px-4 sm:px-6 h-12 bg-background/90 backdrop-blur border-b border-border flex items-center overflow-x-auto no-scrollbar">
+        {/* One strip of adjoining tabs (see .tabstrip in globals.css); on phones the bar scrolls sideways and the active tab is kept in view. */}
+        <div className="tabstrip">
+          {tabs.map((t) => {
+            const on = t.id === active;
+            return (
+              <a key={t.id} href={`#${t.id}`} data-id={t.id} onClick={(e) => { e.preventDefault(); jump(t.id); }} aria-current={on ? "true" : undefined} className="tab">
+                <span>{tl(t.label)}</span>
+                {t.count !== undefined && <span className="tab-count">{t.count}</span>}
+              </a>
+            );
+          })}
+        </div>
       </nav>
       <div className="pt-6 space-y-14" style={CONTENT_STYLE}>
         {tabs.map((t) => (

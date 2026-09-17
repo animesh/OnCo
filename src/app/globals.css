@@ -218,8 +218,11 @@
     line-height: 1.35;
     font-weight: 600;
     letter-spacing: 0.01em;
+    font-variant-numeric: tabular-nums;
     border: 1px solid transparent;
   }
+  /* A glyph inside a chip keeps its size and sits on the chip's centre line beside the label. */
+  .chip > svg, .chip > img { display: block; flex-shrink: 0; }
 
   /* Header controls share one 40px height and one look. */
   .ctl {
@@ -237,12 +240,41 @@
     line-height: 1;
     color: var(--foreground);
     white-space: nowrap;
+    font-variant-numeric: tabular-nums;
     flex-shrink: 0;
     transition: background-color 120ms ease, border-color 120ms ease;
   }
   .ctl:hover { background: var(--surface); border-color: var(--border-strong); }
   .ctl[aria-expanded="true"] { background: var(--surface); }
+  /* Icon-only: a square with no padding, so the icon is centred by the box rather than by padding. */
   .ctl-icon { padding: 0; width: 2.5rem; }
+  .ctl > svg { display: block; flex-shrink: 0; }
+  /* Emoji and text glyphs used as icons sit in a fixed square, so their optical centre lands on the control's centre. */
+  .ctl-glyph { display: inline-flex; align-items: center; justify-content: center; width: 1.25rem; height: 1.25rem; font-size: 1rem; line-height: 1; flex-shrink: 0; }
+  /* Short text beside an icon: one size and one line height, so it shares the icon's centre line. */
+  .ctl-label { font-size: 0.75rem; line-height: 1; font-weight: 500; }
+  /* Two runs of text at different sizes inside one control share a baseline. */
+  .ctl-text { display: inline-flex; align-items: baseline; gap: 0.3rem; }
+
+  /* Section tabs on object pages: adjoining tabs sharing one hairline, first and last rounded, the active tab filled.
+     Pills (.chip) are for lists of things; this strip is for moving between sections. */
+  .tabstrip { display: inline-flex; align-items: stretch; flex-shrink: 0; }
+  .tabstrip > .tab {
+    display: inline-flex; align-items: center; gap: 0.375rem;
+    height: 2rem; padding: 0 0.75rem; margin-inline-start: -1px;
+    border: 1px solid var(--border); background: var(--card);
+    font-size: 0.8125rem; line-height: 1; white-space: nowrap;
+    color: color-mix(in srgb, var(--foreground) 78%, transparent);
+    transition: background-color 120ms ease, color 120ms ease;
+  }
+  .tabstrip > .tab:first-child { margin-inline-start: 0; border-start-start-radius: 0.5rem; border-end-start-radius: 0.5rem; }
+  .tabstrip > .tab:last-child { border-start-end-radius: 0.5rem; border-end-end-radius: 0.5rem; }
+  .tabstrip > .tab:hover { background: var(--surface); color: var(--foreground); }
+  .tabstrip > .tab:focus-visible { position: relative; z-index: 2; }
+  .tabstrip > .tab[aria-current="true"] { position: relative; z-index: 1; background: var(--foreground); border-color: var(--foreground); color: var(--background); font-weight: 500; }
+  /* The count shares the label's size and line height, so the two sit on one baseline; it is hidden on the active tab. */
+  .tabstrip > .tab .tab-count { font-variant-numeric: tabular-nums; color: var(--muted); }
+  .tabstrip > .tab[aria-current="true"] .tab-count { display: none; }
 
   /* Buttons */
   .btn {
@@ -292,7 +324,9 @@
   table.onco thead th:first-child { color: var(--foreground); }
   table.onco thead th button { color: inherit; font: inherit; letter-spacing: inherit; text-transform: inherit; }
   table.onco thead th button:hover { color: var(--foreground); }
-  table.onco td { padding: 0.65rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; overflow-wrap: anywhere; }
+  /* break-word (not anywhere): a column is never narrower than its longest word, so short categorical columns such as
+     Grade, Phase or Stage keep whole words while long text columns still wrap at spaces. */
+  table.onco td { padding: 0.65rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; overflow-wrap: break-word; }
   table.onco td:first-child { font-weight: 500; }
   table.onco td:first-child .text-muted { font-weight: 400; }
   table.onco tbody tr:last-child td { border-bottom-color: transparent; }
@@ -343,7 +377,7 @@
 .overflow-x-auto > table.onco thead th { position: static; }
 @media (min-width: 64rem) { .lg\:overflow-x-visible > table.onco thead th { position: sticky; } }
 
-/* Section tab bar on narrow screens: fade the right edge so the hidden pills read as scrollable. */
+/* Section tab bar on narrow screens: fade the right edge so the hidden tabs read as scrollable. */
 @media (max-width: 63.99rem) {
   .tabbar { mask-image: linear-gradient(to right, #000 calc(100% - 2.5rem), transparent); }
 }
