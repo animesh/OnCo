@@ -264,6 +264,7 @@ function kindTabs(e: Entity): Tab[] {
             <Field label="Generation">{e.generation}</Field>
             <Field label="Since">{e.since}</Field>
           </div>
+          <TechDependencies e={e} />
         </>),
         ...productsTab(g.incoming(e.id).get("drug") ?? []),
       ];
@@ -690,6 +691,31 @@ function cancerTabs(c: Cancer): Tab[] {
     { id: "questions", label: "Questions to ask", content: <Questions cancer={c} /> },
     { id: "relevant", label: "Related pages", count: nRel, content: <><p className="text-xs text-muted mb-3">Direct links plus the targets, companies, and technologies of this cancer&apos;s products.</p><Neighbours groups={forMe} exclude={["cancer"]} /></> },
   ];
+}
+
+/** "Depends on" and "Needed by" strips from the technology dependency DAG (`dependsOn`), linking to the map with this technology as root. */
+function TechDependencies({ e }: { e: Extract<Entity, { kind: "technology" }> }) {
+  const g = graph();
+  const up = e.dependsOn.map((id) => g.get(id)).filter((t): t is Entity => !!t);
+  const down = g.kind("technology").filter((t) => t.dependsOn.includes(e.id));
+  if (!up.length && !down.length) return null;
+  const chip = (t: Entity) => <Link key={t.id} href={routeFor(t)} className="chip border bg-card border-border hover:bg-foreground/5 text-sm">{t.name}</Link>;
+  const mapHref = `/dependencies/?root=${e.id}`;
+  return (
+    <Block title="Dependencies" aside={<Link className="text-sm text-accent hover:underline whitespace-nowrap" href={mapHref}>Open the dependency map →</Link>}>
+      <div className="grid gap-4 sm:grid-cols-2">
+        <div>
+          <div className="kicker mb-1.5"><TL text="Depends on" /> <span className="text-muted font-normal">({up.length})</span></div>
+          {up.length ? <div className="flex flex-wrap gap-1.5">{up.map(chip)}</div> : <p className="text-sm text-muted">Nothing recorded yet: a foundation, or a gap to fill.</p>}
+        </div>
+        <div>
+          <div className="kicker mb-1.5"><TL text="Needed by" /> <span className="text-muted font-normal">({down.length})</span></div>
+          {down.length ? <div className="flex flex-wrap gap-1.5">{down.map(chip)}</div> : <p className="text-sm text-muted">Nothing in the corpus depends on this yet.</p>}
+        </div>
+      </div>
+      <p className="text-xs text-muted mt-3">Dependencies are what this technology cannot be delivered without: manufacturing steps, instruments, software, upstream methods. <Link className="underline" href={mapHref}>See its full chain on the map</Link>.</p>
+    </Block>
+  );
 }
 
 /** Products with no molecule (cells, vaccines, devices, tests) get the schematic of their primary technology. */

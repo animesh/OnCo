@@ -206,7 +206,7 @@ const frontierRadical: EntityInput[] = [
     links: [{ label: "eFLASH skin melanoma study (NCT06549439)", url: "https://clinicaltrials.gov/study/NCT06549439" }],
   },
   {
-    id: "proton-arc-therapy", kind: "technology", name: "Proton arc therapy", sections: ["radiation"], status: "phase-1", asOf: RAD,
+    id: "proton-arc-therapy", dependsOn: ["intensity-modulated-proton-therapy"], kind: "technology", name: "Proton arc therapy", sections: ["radiation"], status: "phase-1", asOf: RAD,
     tldr: "Rotating the proton beam continuously around the patient instead of firing from a few fixed angles, to spread the entrance dose and sharpen the target dose.",
     summary: "Proton arc spreads low-weight spots across a continuously rotating gantry, so each direction contributes only part of the dose, improving conformality and robustness to range uncertainty. Vendors have released treatment-planning implementations and first patients have been reported at a small number of centres; a September 2026 search of ClinicalTrials.gov found no randomised comparison against intensity-modulated proton therapy. Delivery time and quality assurance are the practical barriers.",
     principle: "Spot-scanned protons are delivered during continuous gantry rotation, with energy layers distributed across angles so each direction contributes only part of the dose.",

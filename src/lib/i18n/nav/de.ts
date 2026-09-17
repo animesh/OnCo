@@ -50,6 +50,7 @@ export const navDe: NavDict = {
   "/trials/": ["Studien", "Wegweisende und laufende Studien."],
   "/pairings/": ["Kombinationen", "Was zusammen wirkt, und was nicht."],
   "/roadmaps/": ["Roadmaps", "Von der Geschichte zum Horizont für jede Technologiefamilie."],
+  "/dependencies/": ["Abhängigkeitskarte", "Was jede Onkologie-Technologie braucht, um zu existieren, in Schichten von den Grundlagen bis zu den Endprodukten."],
   "/bottlenecks/": ["Engpässe", "Die Beschränkungen, die den ganzen Krieg gegen den Krebs verlangsamen, und die Ideen, die jede lösen könnten."],
   "/ideas/": ["Ideen", "Hypothesen und Lösungen, jede mit einem vorgeschlagenen Test."],
   "/terms/": ["Glossar", "Begriffe mit TL;DRs und Wikipedia-Links."],

@@ -217,7 +217,7 @@ const targets: TargetInput[] = [
 
 // ======================= TECHNOLOGIES =======================
 const technologies: TechnologyInput[] = [
-  { id: "low-dose-ct-screening", kind: "technology", name: "Low-dose CT lung screening", sections: ["early-detection", "imaging"], status: "standard-of-care", asOf, since: 2011, wikipedia: W("Lung_cancer_screening"),
+  { id: "low-dose-ct-screening", dependsOn: ["ct"], kind: "technology", name: "Low-dose CT lung screening", sections: ["early-detection", "imaging"], status: "standard-of-care", asOf, since: 2011, wikipedia: W("Lung_cancer_screening"),
     tldr: "A yearly low-radiation CT scan for current and former heavy smokers that finds lung cancer early enough to cure it.",
     summary: "Proven by NLST (20% mortality reduction) and NELSON (24% in men). US eligibility: age 50-80, ≥20 pack-years, quit <15 years. Uptake remains under 20% in the US and lower elsewhere; risk models (PLCOm2012), AI nodule scoring (Sybil, Optellum), and blood biomarkers aim to widen and sharpen eligibility. Lung-RADS standardises reporting; volumetric management (NELSON) reduces false positives.",
     principle: "Non-contrast helical CT at ~1-1.5 mSv; nodules classified by size, volume, growth, and morphology; AI assists detection and malignancy scoring.",

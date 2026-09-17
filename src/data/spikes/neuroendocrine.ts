@@ -18,14 +18,14 @@ const pair = (x: Omit<PairingInput, "kind" | "asOf">): PairingInput => ({ kind: 
 
 // ======================= TECHNOLOGIES =======================
 const technologies: TechnologyInput[] = [
-  tech({ id: "sstr-pet", name: "Somatostatin receptor PET (68Ga/64Cu-DOTATATE)", sections: ["imaging", "radiopharma"], status: "standard-of-care", since: 2016, wikipedia: W("DOTA-TATE"),
+  tech({ id: "sstr-pet", dependsOn: ["pet-ct", "radionuclide-generators-kits"], name: "Somatostatin receptor PET (68Ga/64Cu-DOTATATE)", sections: ["imaging", "radiopharma"], status: "standard-of-care", since: 2016, wikipedia: W("DOTA-TATE"),
     tldr: "A PET scan using a radioactive hormone mimic that lights up neuroendocrine tumours and shows whether the matching radioactive treatment will work.",
     summary: "68Ga-DOTATATE (Netspot, 2016), 68Ga-DOTATOC (2019) and 64Cu-DOTATATE (Detectnet, 2020) replaced 111In-octreotide scintigraphy, with far higher sensitivity for small lesions and bone disease. Mandatory for staging, for selecting patients for PRRT (Krenning score ≥3 or uptake above liver), and for detecting occult primaries. FDG PET complements it in high-grade or dedifferentiated disease ('flip-flop' pattern).",
     principle: "Radiolabelled somatostatin analogue binds SSTR2 on tumour cells; positron emission imaged by PET/CT.",
     strengths: ["Whole-body receptor map", "Theranostic gatekeeper for 177Lu-DOTATATE", "Changes management in ~40% of patients versus conventional imaging"],
     limitations: ["Physiologic uptake in pancreas uncinate, spleen, pituitary", "Poor sensitivity in SSTR-negative high-grade disease", "68Ga generator supply and short half-life"],
     cancers: ["neuroendocrine", "sclc"], targets: ["sstr2"], technologies: ["pet", "pet-ct"], drugs: ["lutathera"], terms: ["theranostics"], links: [{ label: "Wikipedia", url: W("DOTA-TATE") }] }),
-  tech({ id: "prrt", name: "Peptide receptor radionuclide therapy (PRRT)", sections: ["radiopharma"], status: "approved", since: 2018, wikipedia: W("Peptide_receptor_radionuclide_therapy"),
+  tech({ id: "prrt", dependsOn: ["radioligand-therapy", "sstr-pet"], name: "Peptide receptor radionuclide therapy (PRRT)", sections: ["radiopharma"], status: "approved", since: 2018, wikipedia: W("Peptide_receptor_radionuclide_therapy"),
     tldr: "A radioactive version of the hormone mimic used for the scan; it homes to neuroendocrine tumour cells and irradiates them from inside.",
     summary: "177Lu-DOTATATE (Lutathera; NETTER-1 second line, NETTER-2 first line in grade 2-3) is the reference. 177Lu-edotreotide (ITM-11, COMPETE: PFS 23.9 vs 14.1 months vs everolimus; FDA PDUFA 28 August 2026) is the second beta-emitter. Alpha PRRT with 212Pb-DOTAMTATE (AlphaMedix, Breakthrough designation; phase 2 ORR 54% in PRRT-naive) and 225Ac-DOTATATE (RYZ101, ACTION-1 phase 3) aims at beta-refractory disease. Antagonist ligands (177Lu-satoreotide) bind more receptor sites than agonists.",
     principle: "An SSTR2-binding peptide is chelated to a therapeutic radionuclide and internalised by the tumour cell; beta (177Lu) or alpha (212Pb, 225Ac) emission; usually four cycles.",
