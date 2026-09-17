@@ -4,11 +4,18 @@ import { pageMeta } from "@/lib/seo";
 import { Container, GroupKicker, KindChip, PageHeader } from "@/components/ui";
 import { issueUrl, REPO } from "@/lib/issue-links";
 import { reviewCoverage, reviewQueue, translationCoverage, TRACK_META, type Track } from "@/lib/review-queue";
+import { graph } from "@/lib/graph";
+import { routeFor } from "@/lib/schema";
+import { panelOverview, STANCE_META } from "@/lib/model-reviews";
+import { DisagreeIcon, HumanIcon, MachineCommentaryNote, PanelIcon } from "@/components/ModelPanel";
+import { KindIcon } from "@/components/KindIcon";
 
-export const metadata: Metadata = pageMeta({ title: "Review queue", description: "Which OnCo pages most need a named clinical, scientific, regulatory or patient-advocate reviewer, how much of the corpus is reviewed, and how to sign a page off.", path: "/review/" });
+export const metadata: Metadata = pageMeta({ title: "Review: model panel and human queue", description: "A panel of named AI models comments on OnCo records (machine commentary, not clinical review) and a queue ranks which pages most need a named clinical, scientific, regulatory or patient-advocate reviewer.", path: "/review/" });
 
 const TRACKS: Track[] = ["clinical", "scientific", "regulatory", "advocate"];
 const pct = (a: number, b: number) => (b ? Math.round((a / b) * 100) : 0);
+
+const H2 = ({ id, icon, children }: { id?: string; icon: React.ReactNode; children: React.ReactNode }) => <h2 id={id} className="text-2xl font-semibold tracking-tight mb-3 inline-flex items-center gap-2"><span className="text-accent">{icon}</span>{children}</h2>;
 
 export default function ReviewPage() {
   const queue = reviewQueue();
@@ -16,22 +23,80 @@ export default function ReviewPage() {
   const langs = translationCoverage();
   const top = queue.slice(0, 50);
   const translationIssue = issueUrl("translation-review", {}, { title: "translation review: " });
+  const panel = panelOverview();
+  const g = graph();
+  const splits = panel.records.filter((r) => r.disagreements > 0).length;
 
   return (
     <>
-      <PageHeader kicker={<GroupKicker id="learn" />} title="Review queue"
-        lede={cov.reviewed
-          ? `${cov.reviewed.toLocaleString("en-GB")} of ${cov.total.toLocaleString("en-GB")} reviewable pages carry a named review. The queue below ranks the rest by reach, stakes and staleness, so a reviewer with an hour knows where it counts most. Signing off is an issue form; a maintainer verifies identity and records the review.`
-          : `${cov.total.toLocaleString("en-GB")} pages are open for a named review and none has one yet: OnCo has just opened to reviewers. The queue below ranks them by reach, stakes and staleness, so a reviewer with an hour knows where it counts most. Signing off is an issue form; a maintainer verifies identity and records the review.`} />
+      <PageHeader kicker={<GroupKicker id="learn" />} title="Review"
+        lede={`Two layers sit on every record. A panel of named AI models comments on what is right, what is missing and what is disputed, each claim tied to the record's own sources: machine commentary, not clinical review. Human reviewers sign pages off on top of it. ${cov.reviewed
+          ? `${cov.reviewed.toLocaleString("en-GB")} of ${cov.total.toLocaleString("en-GB")} reviewable pages carry a named human review; the queue below ranks the rest by reach, stakes and staleness.`
+          : `${cov.total.toLocaleString("en-GB")} pages are open for a named human review and none has one yet; the queue below ranks them by reach, stakes and staleness.`}`} />
       <Container className="pb-16">
         <nav aria-label="Sections" className="flex flex-wrap gap-x-4 gap-y-1 text-sm mb-8">
-          {[["#coverage", "Coverage"], ["#queue", "The queue"], ["#tracks", "By track"], ["#translations", "Translations"], ["#how", "How to review"]].map(([href, label]) => (
+          {[["#panel", "Model panel"], ["#disagreements", "Where models disagree"], ["#coverage", "Human coverage"], ["#queue", "The human queue"], ["#tracks", "By track"], ["#translations", "Translations"], ["#how", "How to review"]].map(([href, label]) => (
             <a key={href} href={href} className="underline decoration-foreground/25 underline-offset-[3px] hover:decoration-foreground">{label}</a>
           ))}
         </nav>
 
-        <section id="coverage" className="scroll-mt-24">
-          <h2 className="text-2xl font-semibold tracking-tight mb-3">Coverage</h2>
+        <section id="panel" className="scroll-mt-24">
+          <H2 icon={<PanelIcon className="h-6 w-6" />}>Model panel</H2>
+          <p className="text-sm text-muted mb-2 max-w-3xl">Each model on the panel reads a record and its linked records, then returns verdicts on the record&apos;s own claims: <span className="font-medium text-foreground">{STANCE_META.supports.label.toLowerCase()}</span> (stated and backed by the source), <span className="font-medium text-foreground">{STANCE_META.disputes.label.toLowerCase()}</span>, <span className="font-medium text-foreground">{STANCE_META.missing.label.toLowerCase()}</span> or <span className="font-medium text-foreground">{STANCE_META.unclear.label.toLowerCase()}</span>. Model name, version and date are shown on every card and sources come only from the record&apos;s own links. Hand-written illustrations carry an <span className="chip border border-dashed border-foreground/30 text-muted">Example</span> badge.</p>
+          <MachineCommentaryNote className="mb-4 max-w-3xl" />
+          <div className="grid gap-3 sm:grid-cols-3 mb-4">
+            <div className="card p-4"><div className="kicker mb-1">Models on the panel</div><div className="text-2xl font-semibold tabular-nums">{panel.models.filter((m) => m.onPanel).length}</div><div className="text-xs text-muted">{panel.models.filter((m) => m.onPanel).map((m) => m.name).join(", ")}</div></div>
+            <div className="card p-4"><div className="kicker mb-1">Records with commentary</div><div className="text-2xl font-semibold tabular-nums">{panel.records.length}</div><div className="text-xs text-muted">{panel.records.filter((r) => r.example).length ? `${panel.records.filter((r) => r.example).length} example${panel.records.filter((r) => r.example).length === 1 ? "" : "s"} so far` : "live model output"}</div></div>
+            <div className="card p-4"><div className="kicker mb-1">Records where models disagree</div><div className="text-2xl font-semibold tabular-nums">{splits}</div><div className="text-xs text-muted">same claim, different stances</div></div>
+          </div>
+          <div className="card overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead className="text-left text-xs text-muted"><tr><th className="p-3">Model</th><th className="p-3">Provider</th><th className="p-3">Version</th><th className="p-3 text-right">Records reviewed</th><th className="p-3">Latest</th></tr></thead>
+              <tbody className="divide-y divide-border">
+                {panel.models.map((m) => (
+                  <tr key={m.id}>
+                    <td className="p-3 font-medium"><span className="inline-flex items-center gap-2"><PanelIcon className="h-4 w-4 text-accent" />{m.name}{!m.onPanel && <span className="chip bg-zinc-100 text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300" title="Found in review files but not in the current panel table">past member</span>}</span></td>
+                    <td className="p-3 text-muted">{m.provider}</td>
+                    <td className="p-3 text-muted"><code className="text-xs">{m.id}</code> · v{m.version}</td>
+                    <td className="p-3 text-right tabular-nums">{m.records}</td>
+                    <td className="p-3 text-muted tabular-nums">{m.latest ?? "none yet"}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs text-muted mt-2 max-w-3xl">The panel table lives in <code>src/lib/model-reviews.ts</code>; reviews are written by <code>scripts/model-reviews.ts</code> to <code>public/reviews/models/</code>, one JSON file per record, and validated when the site is built.</p>
+        </section>
+
+        <section id="disagreements" className="scroll-mt-24 mt-12">
+          <H2 icon={<DisagreeIcon className="h-6 w-6" />}>Where models disagree</H2>
+          <p className="text-sm text-muted mb-4 max-w-3xl">Records with commentary, those that split the panel first. A split means two models gave the same claim different stances; the record page shows each position with its source.</p>
+          {panel.records.length ? (
+            <div className="card overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead className="text-left text-xs text-muted"><tr><th className="p-3">Record</th><th className="p-3 text-right">Models</th><th className="p-3 text-right">Disagreements</th><th className="p-3">Latest</th><th className="p-3"></th></tr></thead>
+                <tbody className="divide-y divide-border">
+                  {panel.records.map((r) => {
+                    const e = g.get(r.recordId);
+                    return (
+                      <tr key={r.recordId}>
+                        <td className="p-3"><div className="flex items-center gap-2">{e && <KindChip kind={e.kind} />}{e ? <Link href={routeFor(e)} className="font-medium hover:underline">{e.name}</Link> : <code>{r.recordId}</code>}{r.example && <span className="chip border border-dashed border-foreground/30 text-muted">Example</span>}</div></td>
+                        <td className="p-3 text-right tabular-nums">{r.models}</td>
+                        <td className="p-3 text-right tabular-nums">{r.disagreements ? <span className={`chip ${STANCE_META.disputes.cls}`}>{r.disagreements}</span> : <span className="text-muted">agree</span>}</td>
+                        <td className="p-3 text-muted tabular-nums">{r.latest}</td>
+                        <td className="p-3 text-right">{e && <Link className="text-xs underline whitespace-nowrap" href={routeFor(e)}>Read the panel</Link>}</td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+          ) : <p className="text-sm text-muted">No record carries model commentary yet.</p>}
+        </section>
+
+        <section id="coverage" className="scroll-mt-24 mt-12">
+          <H2 icon={<HumanIcon className="h-6 w-6" />}>Human coverage</H2>
+          <p className="text-sm text-muted mb-3 max-w-3xl">Named clinicians, scientists, regulatory specialists and patient advocates sign pages off on top of the model panel. A human review is a statement about a page on a date and is the only review OnCo treats as clinical.</p>
           <div className="grid gap-3 sm:grid-cols-3 mb-4">
             <div className="card p-4"><div className="kicker mb-1">Pages reviewed</div>{cov.reviewed ? <div className="text-2xl font-semibold tabular-nums">{cov.reviewed.toLocaleString("en-GB")} <span className="text-sm text-muted font-normal">of {cov.total.toLocaleString("en-GB")} ({pct(cov.reviewed, cov.total)}%)</span></div> : <div className="text-2xl font-semibold">None yet <span className="text-sm text-muted font-normal">of {cov.total.toLocaleString("en-GB")} open for review</span></div>}</div>
             <div className="card p-4"><div className="kicker mb-1">Expert sign-offs</div><div className="text-2xl font-semibold tabular-nums">{cov.byTrack.expert}</div><div className="text-xs text-muted">clinical, scientific and regulatory tracks</div></div>
@@ -58,7 +123,7 @@ export default function ReviewPage() {
         </section>
 
         <section id="queue" className="scroll-mt-24 mt-12">
-          <h2 className="text-2xl font-semibold tracking-tight mb-2">The queue</h2>
+          <H2 icon={<KindIcon kind="person" className="h-6 w-6" />}>The human queue</H2>
           <p className="text-sm text-muted mb-4 max-w-3xl">Score out of 100: <strong>reach</strong> (graph connections, log-scaled, up to 40), <strong>stakes</strong> (evidence score or a kind default, up to 30), <strong>staleness</strong> (days since the record&apos;s <code>asOf</code>, a year is 30). Pages already reviewed on every track they need within a year sort to the bottom.</p>
           <div className="card overflow-x-auto">
             <table className="w-full text-sm">
@@ -83,7 +148,7 @@ export default function ReviewPage() {
         </section>
 
         <section id="tracks" className="scroll-mt-24 mt-12">
-          <h2 className="text-2xl font-semibold tracking-tight mb-2">By track</h2>
+          <H2 icon={<KindIcon kind="section" className="h-6 w-6" />}>By track</H2>
           <p className="text-sm text-muted mb-4 max-w-3xl">The ten highest-need pages for each track, so a clinician, a scientist, a regulatory specialist or an advocate can start without reading the whole queue.</p>
           <div className="grid gap-4 md:grid-cols-2">
             {TRACKS.map((t) => {
@@ -105,7 +170,7 @@ export default function ReviewPage() {
         </section>
 
         <section id="translations" className="scroll-mt-24 mt-12">
-          <h2 className="text-2xl font-semibold tracking-tight mb-2">Translations</h2>
+          <H2 icon={<KindIcon kind="term" className="h-6 w-6" />}>Translations</H2>
           <p className="text-sm text-muted mb-4 max-w-3xl">Every translated TL;DR is machine-assisted until a named speaker of the language reviews it. Pages show <span className="text-[10px] font-semibold border border-border rounded px-1">MT</span> until then and <span className="text-[10px] font-semibold border rounded px-1 text-emerald-800 border-emerald-300 dark:text-emerald-200 dark:border-emerald-800">Reviewed</span> after. Reviews are recorded in <code>src/data/i18n/reviewed.ts</code>.</p>
           <div className="card overflow-x-auto">
             <table className="w-full text-sm">
@@ -127,7 +192,7 @@ export default function ReviewPage() {
         </section>
 
         <section id="how" className="scroll-mt-24 mt-12 max-w-3xl">
-          <h2 className="text-2xl font-semibold tracking-tight mb-2">How to review</h2>
+          <H2 icon={<KindIcon kind="paper" className="h-6 w-6" />}>How to review</H2>
           <ol className="list-decimal pl-5 space-y-2 text-[15px] leading-relaxed">
             <li>Pick a page from the queue and read it with its linked sources open.</li>
             <li>Click <em>Review this page</em>. The issue form carries the checklist for your track: {TRACKS.map((t) => TRACK_META[t].label.toLowerCase()).join(", ")}. Say what you checked and what you found wrong, with sources.</li>

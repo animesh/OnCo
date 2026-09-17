@@ -1,0 +1,28 @@
+[
+  {
+    "recordId": "sacituzumab-govitecan",
+    "model": { "id": "claude-fable-5-1", "name": "Fable", "provider": "Anthropic", "version": "5.1" },
+    "date": "2026-09-17",
+    "example": true,
+    "confidence": "high",
+    "summary": "Example of the shape a model review takes. The record lists four approval rows, names TROP2 as the target and SN-38 as the payload, and carries the 2026 first-line approval in its regulatory events. Urothelial cancer stays linked as a cancer although the summary says the US indication was withdrawn, which the panel reads differently.",
+    "verdicts": [
+      { "claim": "The record lists four approval rows: three in the US and one in the EU.", "stance": "supports", "note": "US 2020 (accelerated, full 2021), US 2023, US 2026 and EU 2021 are listed.", "source": { "label": "FDA label (DailyMed)", "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Sacituzumab%20govitecan" } },
+      { "claim": "The target is recorded as TROP2 and the payload as SN-38.", "stance": "supports", "note": "Target, payload and linker fields agree with the mechanism text.", "source": { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Sacituzumab_govitecan" } },
+      { "claim": "Urothelial cancer is listed among the record's cancers.", "stance": "disputes", "note": "The summary says the US urothelial indication was withdrawn after TROPiCS-04, yet the cancer link carries no note saying so.", "source": { "label": "FDA label (DailyMed)", "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Sacituzumab%20govitecan" } }
+    ]
+  },
+  {
+    "recordId": "sacituzumab-govitecan",
+    "model": { "id": "claude-opus-5", "name": "Astra", "provider": "Anthropic", "version": "5" },
+    "date": "2026-09-17",
+    "example": true,
+    "confidence": "medium",
+    "summary": "Example of the shape a model review takes. The approval rows and the dated 2026 regulatory event are internally consistent. Keeping urothelial cancer linked is a fair record of the drug's history because the summary already states the withdrawal.",
+    "verdicts": [
+      { "claim": "The record lists four approval rows: three in the US and one in the EU.", "stance": "supports", "note": "The row count matches the record text.", "source": { "label": "FDA label (DailyMed)", "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Sacituzumab%20govitecan" } },
+      { "claim": "Urothelial cancer is listed among the record's cancers.", "stance": "supports", "note": "The link records where the drug has been used; the summary states the US withdrawal, so a reader is not misled.", "source": { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Sacituzumab_govitecan" } },
+      { "claim": "The regulatory events run from a 2016 breakthrough designation to a 2026 first-line approval, with the urothelial withdrawal recorded in between.", "stance": "supports", "note": "Seven dated events are listed, all pointing at the FDA oncology approval notifications page rather than the individual notices.", "source": { "label": "FDA oncology approval notifications", "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/oncology-cancer-hematologic-malignancies-approval-notifications" } }
+    ]
+  }
+]
