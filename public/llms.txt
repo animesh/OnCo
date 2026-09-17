@@ -20,6 +20,16 @@
 - [OpenAPI 3.1 description](https://onco.cc/api/v1/openapi.json): every file under /api/v1/ and the feeds
 - [MCP server](https://github.com/judegomila/OnCo/tree/main/packages/onco-mcp): `npx -y onco-mcp` gives Claude, Cursor and other MCP clients search, get_entity, list_kind, ask, context and compare tools over this API; the CLI is `npx onco`
 
+## For agents
+
+- [API root](https://onco.cc/api/): the file list and counts are in [meta.json](https://onco.cc/api/v1/meta.json); everything is static GET, no key, CORS open
+- [Search index](https://onco.cc/api/v1/search.json): resolve a name or alias to an id here, then fetch /api/v1/context/<id>.md (Markdown) or /api/v1/entities/<id>.json (JSON)
+- [OpenAPI 3.1](https://onco.cc/api/v1/openapi.json): machine-readable description of every route
+- [RDF N-Triples](https://onco.cc/api/v1/onco.nt): a record's IRI is its page URL; owl:sameAs links to Wikidata
+- MCP: `npx -y onco-mcp` (tools search, get_entity, list_kind, ask, context, compare). WebMCP: browsers with a model context get onco_search and onco_get_entity on every page.
+- Every record page carries <link rel="alternate"> tags to its Markdown and JSON twins, schema.org JSON-LD (typed by kind, with a BreadcrumbList), and a hidden navigation landmark labelled "Machine-readable versions" whose links carry data-onco-id, data-onco-kind and data-onco-format; <main> carries data-onco-id and data-onco-kind.
+- Language is a reader-side toggle on the same URL, so there is one URL per record and no hreflang variants.
+
 ## Machine-readable corpus
 
 - [All records as JSON](https://onco.cc/api/v1/all.json): every entity with defaults applied plus a backlink map (several megabytes)

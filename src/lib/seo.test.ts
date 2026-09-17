@@ -1,5 +1,5 @@
 import { describe as suite, it, expect } from "vitest";
-import { describe, pageMeta } from "./seo";
+import { describe, pageMeta, shortTitle, TITLE_MAX } from "./seo";
 import { sitemapUrls, chunkUrls, SITEMAP_CHUNK, routeExists } from "./sitemap-urls";
 
 suite("describe", () => {
@@ -17,6 +17,18 @@ suite("describe", () => {
     expect(d.length).toBeLessThanOrEqual(155);
     expect(d.endsWith("…")).toBe(true);
     expect(d).not.toMatch(/\s…$/);
+  });
+});
+
+suite("shortTitle", () => {
+  it("returns a fitting name unchanged", () => {
+    expect(shortTitle("Trastuzumab deruxtecan", 20)).toBe("Trastuzumab deruxtecan");
+  });
+  it("cuts at a word boundary, drops trailing punctuation and adds an ellipsis", () => {
+    const t = shortTitle("A Study to Evaluate the Safety, Tolerability, Pharmacokinetics, and Preliminary Antitumor Activity of X", 21);
+    expect(t.length + 21).toBeLessThanOrEqual(TITLE_MAX);
+    expect(t.endsWith("…")).toBe(true);
+    expect(t).not.toMatch(/[,\s]…$/);
   });
 });
 

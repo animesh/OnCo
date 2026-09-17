@@ -55,14 +55,64 @@ export function pageMeta({ title, description, path, absoluteTitle, noindex }: {
   };
 }
 
-/** "Name · Kind" (layout template adds " · OnCo"). */
-export const entityTitle = (e: Entity) => `${e.name} · ${KIND_META[e.kind].label}`;
+/** Search engines show about this many characters of a <title>; longer ones are cut mid-word, so we cut at a word boundary first. */
+export const TITLE_MAX = 60;
+
+/** `text` cut at a word boundary so that it plus `reserve` more characters fits `TITLE_MAX`; unchanged when it already fits. */
+export function shortTitle(text: string, reserve: number): string {
+  const t = text.replace(/\s+/g, " ").trim();
+  const budget = TITLE_MAX - reserve;
+  if (t.length <= budget) return t;
+  const cut = t.slice(0, budget - 1);
+  const atWord = cut.lastIndexOf(" ");
+  return `${(atWord > budget / 2 ? cut.slice(0, atWord) : cut).replace(/[,;:(\-\s]+$/, "")}…`;
+}
+
+/**
+ * "Name · Kind" (layout template adds " · OnCo"). Long names, mostly registry trial titles and paper titles, are cut
+ * at a word boundary so the whole <title> stays within `TITLE_MAX`. A trial's registry id stands in for the kind
+ * label: people search by NCT number, and the id says "trial" on its own.
+ */
+export function entityTitle(e: Entity): string {
+  const tail = e.kind === "trial" && e.nct ? e.nct : KIND_META[e.kind].label;
+  return `${shortTitle(e.name, ` · ${tail} · ${SITE_NAME}`.length)} · ${tail}`;
+}
+
+/** One machine-readable twin of a record: site path, media type and a link title. */
+export type MachineRoute = { url: string; type: string; title: string };
+
+/**
+ * The machine-readable twins of one record. Shared by the `<link rel="alternate">` tags (`entityMeta`), the JSON-LD
+ * `subjectOf` and the hidden agent block (`MachineLinks`), so the three always name the same files.
+ */
+export function machineRoutes(e: { id: string; name: string }): { json: MachineRoute; markdown: MachineRoute } {
+  return {
+    json: { url: `/api/v1/entities/${e.id}.json`, type: "application/json", title: `${e.name}: JSON record with neighbours` },
+    markdown: { url: `/api/v1/context/${e.id}.md`, type: "text/markdown", title: `${e.name}: Markdown context for language models` },
+  };
+}
+
+/**
+ * Corpus-level machine entry points, for the hidden agent block and llms.txt. Tool names are the ones registered by
+ * packages/onco-mcp/src/server.ts and src/lib/webmcp-tools.ts; src/lib/agent-surface.test.ts keeps them in step.
+ */
+export const MACHINE = {
+  api: "/api/",
+  meta: "/api/v1/meta.json",
+  openapi: "/api/v1/openapi.json",
+  search: "/api/v1/search.json",
+  triples: "/api/v1/onco.nt",
+  llms: "/llms.txt",
+  mcp: { command: "npx -y onco-mcp", tools: ["search", "get_entity", "list_kind", "ask", "context", "compare"] },
+  webmcp: { tools: ["onco_search", "onco_get_entity"] },
+} as const;
 
 /** Metadata for an entity page. */
 export function entityMeta(e: Entity): Metadata {
   const m = pageMeta({ title: entityTitle(e), description: e.tldr, path: routeFor(e) });
   // Machine-readable twins of the page, so agents and crawlers find the Markdown context and the JSON record from the HTML.
-  const types = { ...FEED_TYPES, "text/markdown": [{ url: `/api/v1/context/${e.id}.md`, title: `${e.name}: Markdown context for language models` }], "application/json": [{ url: `/api/v1/entities/${e.id}.json`, title: `${e.name}: JSON record` }] };
+  const { json, markdown } = machineRoutes(e);
+  const types = { ...FEED_TYPES, [markdown.type]: [{ url: markdown.url, title: markdown.title }], [json.type]: [{ url: json.url, title: json.title }] };
   return { ...m, alternates: { ...m.alternates, types } };
 }
 

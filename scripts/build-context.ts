@@ -11,6 +11,7 @@ import { join } from "node:path";
 import { graph } from "../src/lib/graph";
 import { KIND_META, KINDS, routeFor, type Entity } from "../src/lib/schema";
 import { NAV_GROUPS } from "../src/lib/nav";
+import { MACHINE } from "../src/lib/seo";
 import { paragraphs } from "../src/lib/text";
 
 const SITE = "https://onco.cc";
@@ -109,7 +110,17 @@ const llms: string[] = [
   `- [Search documents](${SITE}/api/v1/search.json): compact id, kind, name, TL;DR and route for every record; find the id, then fetch its context file`,
   `- [Every record on one line](${SITE}/llms-full.txt): name, kind, TL;DR and context URL for the whole corpus`,
   `- [OpenAPI 3.1 description](${SITE}/api/v1/openapi.json): every file under /api/v1/ and the feeds`,
-  `- [MCP server](${REPO}/tree/main/packages/onco-mcp): \`npx -y onco-mcp\` gives Claude, Cursor and other MCP clients search, get_entity, list_kind, ask, context and compare tools over this API; the CLI is \`npx onco\``,
+  `- [MCP server](${REPO}/tree/main/packages/onco-mcp): \`${MACHINE.mcp.command}\` gives Claude, Cursor and other MCP clients ${MACHINE.mcp.tools.slice(0, -1).join(", ")} and ${MACHINE.mcp.tools.at(-1)} tools over this API; the CLI is \`npx onco\``,
+  "",
+  "## For agents",
+  "",
+  `- [API root](${SITE}${MACHINE.api}): the file list and counts are in [meta.json](${SITE}${MACHINE.meta}); everything is static GET, no key, CORS open`,
+  `- [Search index](${SITE}${MACHINE.search}): resolve a name or alias to an id here, then fetch /api/v1/context/<id>.md (Markdown) or /api/v1/entities/<id>.json (JSON)`,
+  `- [OpenAPI 3.1](${SITE}${MACHINE.openapi}): machine-readable description of every route`,
+  `- [RDF N-Triples](${SITE}${MACHINE.triples}): a record's IRI is its page URL; owl:sameAs links to Wikidata`,
+  `- MCP: \`${MACHINE.mcp.command}\` (tools ${MACHINE.mcp.tools.join(", ")}). WebMCP: browsers with a model context get ${MACHINE.webmcp.tools.join(" and ")} on every page.`,
+  `- Every record page carries <link rel="alternate"> tags to its Markdown and JSON twins, schema.org JSON-LD (typed by kind, with a BreadcrumbList), and a hidden navigation landmark labelled "Machine-readable versions" whose links carry data-onco-id, data-onco-kind and data-onco-format; <main> carries data-onco-id and data-onco-kind.`,
+  `- Language is a reader-side toggle on the same URL, so there is one URL per record and no hreflang variants.`,
   "",
   "## Machine-readable corpus",
   "",
