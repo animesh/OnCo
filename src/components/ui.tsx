@@ -9,6 +9,7 @@ import { GardenBackdrop, gardenSeed } from "./Garden";
 import { KindName, StatusName } from "./T";
 import { GroupText } from "./NavText";
 import { TldrText } from "./TldrText";
+import { EN_TEXT, nameAttrs } from "@/lib/translate";
 
 export function KindChip({ kind }: { kind: Kind }) {
   return <span className={`chip border ${KIND_COLOR[kind]}`}><KindName kind={kind} form="label" fallback={KIND_META[kind].label} /></span>;
@@ -19,9 +20,10 @@ export function StatusChip({ status }: { status?: string }) {
   return <span className={`chip ${statusClass(status)}`}><StatusName status={status} /></span>;
 }
 
+/** A record's name as a link. Proper-noun kinds (drugs, genes, companies, trials, people) carry translate="no"; see src/lib/translate.ts. */
 export function EntityLink({ e, className = "" }: { e: Entity; className?: string }) {
   return (
-    <Link href={routeFor(e)} className={`underline decoration-foreground/20 underline-offset-[3px] hover:decoration-foreground ${className}`}>
+    <Link href={routeFor(e)} {...nameAttrs(e.kind, `underline decoration-foreground/20 underline-offset-[3px] hover:decoration-foreground ${className}`)}>
       {e.name}
     </Link>
   );
@@ -34,7 +36,7 @@ export function EntityCard({ e, compact = false }: { e: Entity; compact?: boolea
         <KindChip kind={e.kind} />
         <StatusChip status={e.status} />
       </div>
-      <div className="font-semibold leading-snug text-balance">{e.name}</div>
+      <div {...nameAttrs(e.kind, "font-semibold leading-snug text-balance")}>{e.name}</div>
       {!compact && <p className="text-sm text-muted mt-1.5 line-clamp-3"><TldrText id={e.id} tldr={e.tldr} simple={e.simple} /></p>}
     </Link>
   );
@@ -47,7 +49,7 @@ export function ChipList({ items, kind }: { items: Entity[]; kind?: Kind }) {
       {items.map((e) => e.kind === "drug" ? (
         <DrugChip key={e.id} id={e.id} name={e.name} route={routeFor(e)} tldr={e.tldr} className={KIND_COLOR[kind ?? e.kind]} />
       ) : (
-        <Link key={e.id} href={routeFor(e)} className={`chip border transition-[filter] hover:brightness-95 dark:hover:brightness-125 ${KIND_COLOR[kind ?? e.kind]}`}>
+        <Link key={e.id} href={routeFor(e)} {...nameAttrs(e.kind, `chip border transition-[filter] hover:brightness-95 dark:hover:brightness-125 ${KIND_COLOR[kind ?? e.kind]}`)}>
           {e.name}
         </Link>
       ))}
@@ -72,7 +74,7 @@ export function GroupKicker({ id, children }: { id: string; children?: React.Rea
  * title so pages differ; hidden on phones). `tone="band"` adds the soft garden wash used by group
  * landing pages, echoing the home hero.
  */
-export function PageHeader({ kicker, title, lede, ledeNode, right, logo, tone = "plain", seed }: { kicker?: React.ReactNode; title: React.ReactNode; lede?: string; ledeNode?: React.ReactNode; right?: React.ReactNode; logo?: React.ReactNode; tone?: "plain" | "band"; /** Stable string for the decorative seed when `title` is not a plain string. */ seed?: string }) {
+export function PageHeader({ kicker, title, lede, ledeNode, right, logo, tone = "plain", seed, titleAttrs }: { kicker?: React.ReactNode; title: React.ReactNode; lede?: string; ledeNode?: React.ReactNode; right?: React.ReactNode; logo?: React.ReactNode; tone?: "plain" | "band"; /** Stable string for the decorative seed when `title` is not a plain string. */ seed?: string; /** `lang` and `translate` for the h1 (see `nameAttrs` in src/lib/translate.ts): a drug or gene name must not be translated, an English heading may be. */ titleAttrs?: ReturnType<typeof nameAttrs> }) {
   const inner = (
     <div className={`relative mx-auto max-w-7xl px-4 sm:px-6 pt-8 sm:pt-10 ${tone === "band" ? "pb-10 sm:pb-12" : "pb-6"}`}>
       <GardenBackdrop variant="page" seed={gardenSeed(seed ?? (typeof title === "string" ? title : ""))} />
@@ -81,7 +83,7 @@ export function PageHeader({ kicker, title, lede, ledeNode, right, logo, tone = 
         <div className="flex flex-wrap items-start justify-between gap-4">
           <div className="flex items-start gap-4 max-w-3xl">
             {logo}
-            <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight leading-[1.1] first-letter:uppercase">{title}</h1>
+            <h1 lang={titleAttrs?.lang} translate={titleAttrs?.translate} className={`text-3xl sm:text-4xl font-semibold tracking-tight leading-[1.1] first-letter:uppercase ${titleAttrs?.translate ? "notranslate" : ""}`}>{title}</h1>
           </div>
           {right}
         </div>
@@ -108,10 +110,11 @@ export function Container({ children, className = "" }: { children: React.ReactN
   return <div className={`mx-auto max-w-7xl px-4 sm:px-6 ${className}`}>{children}</div>;
 }
 
+/** Bulleted list of record text. The items stay English whatever the site language, hence lang="en". */
 export function Bullets({ items, linked }: { items: string[]; linked?: (s: string) => React.ReactNode }) {
   if (!items.length) return null;
   return (
-    <ul className="list-disc ps-5 space-y-1.5 text-[15px] leading-relaxed">
+    <ul {...EN_TEXT} className="list-disc ps-5 space-y-1.5 text-[15px] leading-relaxed">
       {items.map((s, i) => <li key={i}>{linked ? linked(s) : s}</li>)}
     </ul>
   );

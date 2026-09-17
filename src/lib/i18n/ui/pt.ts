@@ -115,6 +115,15 @@ export const pt: UiDict = {
   "strip.help": "Como traduzir uma página no {browser}",
   "strip.dismiss": "Fechar",
 
+  "offer.english": "Esta página está em inglês. O seu navegador pode traduzi-la.",
+  "offer.chrome": "No Chrome, clique com o botão direito na página e escolha Traduzir.",
+  "offer.edge": "No Edge, clique com o botão direito na página e escolha Traduzir.",
+  "offer.safari": "No Safari, use o botão de tradução na barra de endereços.",
+  "offer.firefox": "No Firefox, clique no ícone de tradução na barra de endereços.",
+  "offer.other": "Procure a opção de traduzir no menu do seu navegador.",
+  "offer.switch": "O OnCo também está disponível em {language}.",
+  "offer.switchButton": "Mudar para {language}",
+
   "footer.about": "Um mapa público, citado e editável da oncologia: tecnologias, alvos, produtos, empresas, instituições, vias, ensaios, combinações, roteiros e ideias. Uma página por objeto, com um TL;DR em linguagem simples em cada uma.",
   "footer.wip": "Trabalho em curso.",
   "footer.disclaimer": "Cada facto neste site está a ser construído e verificado em aberto e pode estar incompleto, desatualizado ou errado. Deve investigar por conta própria e confirmar tudo na fonte primária antes de confiar. Nada neste site é aconselhamento médico; as decisões cabem a si e aos seus médicos.",

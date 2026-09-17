@@ -85,7 +85,7 @@ function ChemistryPanel({ mol, isProtein, entry, pdbId }: { mol: Mol; isProtein:
         <div><dt className="text-muted">Chains</dt><dd className="font-medium">{p.chains.length} ({p.chains.join(", ")})</dd></div>
         <div><dt className="text-muted">Residues traced</dt><dd className="font-medium tabular-nums">{p.residues.toLocaleString()}</dd></div>
         <div><dt className="text-muted">Bound ligands</dt><dd className="font-medium">{p.ligands.length ? p.ligands.join(", ") : "none in this snapshot"}</dd></div>
-        <div><dt className="text-muted">Source</dt><dd><a className="underline" href={entry.ref} rel="noopener">RCSB PDB {pdbId}</a></dd></div>
+        <div><dt className="text-muted">Source</dt><dd><a className="underline notranslate" translate="no" href={entry.ref} rel="noopener">RCSB PDB {pdbId}</a></dd></div>
         <p className="col-span-full text-muted">Alpha-carbon backbone only; side chains are not in the snapshot, so no formula or weight is computed for proteins.</p>
       </dl>
     );
@@ -93,13 +93,13 @@ function ChemistryPanel({ mol, isProtein, entry, pdbId }: { mol: Mol; isProtein:
   const s = moleculeStats(mol);
   return (
     <dl id="chemistry-panel" className="px-3 pb-3 grid grid-cols-2 sm:grid-cols-4 gap-x-4 gap-y-1.5 text-xs border-t border-border pt-2">
-      <div><dt className="text-muted">Formula{s.hasH ? "" : " (heavy atoms)"}</dt><dd className="font-medium">{s.formula}</dd></div>
+      <div><dt className="text-muted">Formula{s.hasH ? "" : " (heavy atoms)"}</dt><dd className="font-medium notranslate" translate="no">{s.formula}</dd></div>
       <div><dt className="text-muted">Molecular weight</dt><dd className="font-medium tabular-nums">{s.weight === null ? "not computed" : `${s.weight.toLocaleString()} g/mol${s.hasH ? "" : " without hydrogens"}`}</dd></div>
       <div><dt className="text-muted">Atoms</dt><dd className="font-medium tabular-nums">{s.heavyAtoms} heavy{s.hasH ? `, ${s.hydrogens} hydrogen` : ""}</dd></div>
       <div><dt className="text-muted">Bonds and rings</dt><dd className="font-medium tabular-nums">{s.bonds} bonds, {s.rings} ring{s.rings === 1 ? "" : "s"}</dd></div>
       <div><dt className="text-muted">Halogens</dt><dd className="font-medium tabular-nums">{s.halogens}</dd></div>
       <div><dt className="text-muted">Metals</dt><dd className="font-medium">{s.metals.length ? s.metals.join(", ") : "none"}</dd></div>
-      <div><dt className="text-muted">Elements</dt><dd className="font-medium">{s.elements.map((e) => `${e.el} ${e.n}`).join(", ")}</dd></div>
+      <div><dt className="text-muted">Elements</dt><dd className="font-medium notranslate" translate="no">{s.elements.map((e) => `${e.el} ${e.n}`).join(", ")}</dd></div>
       <div><dt className="text-muted">Source</dt><dd><a className="underline" href={entry.ref} rel="noopener">PubChem record</a></dd></div>
       <p className="col-span-full text-muted">Counted from the {entry.dim === 2 ? "2D" : "3D"} record served by this site{s.hasH ? "" : ", which omits hydrogens, so formula and weight cover heavy atoms only"}. Ring count is the cycle rank of the bond graph.</p>
     </dl>

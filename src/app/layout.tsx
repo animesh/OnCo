@@ -10,6 +10,7 @@ import { ThemeToggle, ThemeScript } from "@/components/ThemeToggle";
 import { SkipLink } from "@/components/SkipLink";
 import { LayerToggle, LayerScript } from "@/components/LayerToggle";
 import { LangStrip } from "@/components/LangStrip";
+import { TranslateOffer } from "@/components/TranslateOffer";
 import { SectionSiblings } from "@/components/SectionSiblings";
 import { RegionProvider } from "@/lib/region";
 import { RegionToggle } from "@/components/RegionToggle";
@@ -101,7 +102,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <WebMCP />
         <ExternalLinks />
         {/* Record pages stamp data-onco-id / data-onco-kind on this element for agents (MachineLinks); the hydration warning is for those attributes. */}
-        <main id="main" className="flex-1" suppressHydrationWarning>{children}<SectionSiblings /></main>
+        <main id="main" className="flex-1" suppressHydrationWarning><TranslateOffer />{children}<SectionSiblings /></main>
         <footer className="garden-footer relative border-t border-border mt-28">
           {/* A low grass line grows up from the footer's top edge into the gap above it. */}
           <GardenBackdrop variant="footer" />

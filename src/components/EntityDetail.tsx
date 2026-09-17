@@ -87,6 +87,7 @@ import { regimensFor, regimenRoute, cycleSummary } from "@/lib/regimens";
 import { guidelineCancerIds } from "@/lib/guidelines";
 import { agentById } from "@/lib/interactions";
 import { XrefStrip } from "./XrefStrip";
+import { EN_TEXT, nameAttrs } from "@/lib/translate";
 import { HotspotPlot } from "./HotspotPlot";
 import { OpenMedicalPanel } from "./OpenMedicalPanel";
 import { hotspotsFor } from "@/data/hotspots";
@@ -133,7 +134,7 @@ function Field({ label, children }: { label: string; children: ReactNode }) {
   return (
     <div>
       <div className="kicker mb-1"><TL text={label} /></div>
-      <div className="text-[15px] leading-relaxed">{children}</div>
+      <div {...EN_TEXT} className="text-[15px] leading-relaxed">{children}</div>
     </div>
   );
 }
@@ -147,9 +148,10 @@ function Block({ title, children, aside }: { title?: string; children: ReactNode
   );
 }
 
+/** The long summary stays English whatever the site language (only TL;DRs are translated), so it carries lang="en". */
 const Summary = ({ e }: { e: Entity }) => (
   <LayerAware>
-    <div className="prose-onco text-[15px] leading-relaxed max-w-3xl">{paragraphs(e.summary).map((p, i) => <p key={i}>{withTermHovers(p, { skipId: e.id })}</p>)}</div>
+    <div {...EN_TEXT} className="prose-onco text-[15px] leading-relaxed max-w-3xl">{paragraphs(e.summary).map((p, i) => <p key={i}>{withTermHovers(p, { skipId: e.id })}</p>)}</div>
   </LayerAware>
 );
 
@@ -182,9 +184,10 @@ export function EntityDetail({ e }: { e: Entity }) {
       <PageHeader
         kicker={<><Link href={`/${meta.route}/`} className="kicker hover:underline"><KindName kind={e.kind} form="plural" fallback={meta.plural} /></Link><KindChip kind={e.kind} />{e.kind === "drug" ? <ApprovalChip drugId={e.id} status={e.status} /> : <StatusChip status={e.status} />}</>}
         title={e.name}
+        titleAttrs={nameAttrs(e.kind)}
         ledeNode={<TldrText id={e.id} tldr={e.tldr} simple={e.simple} />}
         logo={e.kind === "cancer" ? <span className="inline-flex h-16 w-16 items-center justify-center rounded-2xl border border-accent/30 bg-accent-soft text-accent"><CancerIcon cancerId={e.id} className="h-10 w-10" /></span> : e.kind === "section" ? <span className="inline-flex h-16 w-16 items-center justify-center rounded-2xl border border-accent/30 bg-accent-soft text-accent"><FrontIcon id={e.id} className="h-9 w-9" /></span> : "website" in e ? <Logo id={e.id} website={e.website} name={e.name} size={64} /> : "url" in e && (e.kind === "collection" || e.kind === "journal") ? <Logo id={e.id} website={e.url} name={e.name} size={64} /> : undefined}
-        right={e.aka.length > 0 ? <div className="text-xs text-muted text-end max-w-xs">aka {e.aka.join(", ")}</div> : undefined}
+        right={e.aka.length > 0 ? <div {...EN_TEXT} className="text-xs text-muted text-end max-w-xs">aka <span {...nameAttrs(e.kind)}>{e.aka.join(", ")}</span></div> : undefined}
       />
       <Container className="pb-16">
         <div className="grid gap-10 lg:grid-cols-[1fr_300px]">
@@ -311,7 +314,7 @@ function kindTabs(e: Entity): Tab[] {
         </>),
         ...(e.approvals.length || e.regulatoryEvents.length ? [{ id: "approvals", label: "Regulatory", count: e.regulatoryEvents.length || e.approvals.length, content: (<>
           {e.regulatoryEvents.length > 0 && <RegulatoryTimeline events={e.regulatoryEvents} />}
-          {e.approvals.length > 0 && <Block title="Approvals"><div className="overflow-x-auto -mx-4 px-4"><table className="onco"><thead><tr><th>Region</th><th>Year</th><th>Indication</th></tr></thead>
+          {e.approvals.length > 0 && <Block title="Approvals"><div className="overflow-x-auto -mx-4 px-4"><table className="onco" lang="en"><thead><tr><th>Region</th><th>Year</th><th>Indication</th></tr></thead>
             <tbody>{e.approvals.map((a, i) => <tr key={i}><td>{a.region}</td><td className="tabular-nums">{a.year}</td><td>{a.indication}{a.note && <span className="text-muted"> · {a.note}</span>}</td></tr>)}</tbody></table></div></Block>}
         </>) }] : []),
         ...(regimensFor(e.id).length ? [{ id: "regimens", label: "Regimens", count: regimensFor(e.id).length, content: (
@@ -492,7 +495,7 @@ function kindTabs(e: Entity): Tab[] {
           <Field label="Profiles"><ul className="space-y-0.5">{e.profiles.map((p) => <li key={p.url}><a className="underline" href={p.url} rel="noopener">{p.label}</a></li>)}{e.orcid && <li><a className="underline" href={`https://orcid.org/${e.orcid}`} rel="noopener">ORCID {e.orcid}</a></li>}</ul></Field>
         </div>),
         ...(e.papers.length ? [{ id: "papers", label: "Papers", count: e.papers.length, content: (
-          <div className="card overflow-x-auto"><table className="onco"><thead><tr><th>Title</th><th>Journal</th><th>Year</th></tr></thead>
+          <div className="card overflow-x-auto"><table className="onco" lang="en"><thead><tr><th>Title</th><th>Journal</th><th>Year</th></tr></thead>
             <tbody>{e.papers.map((p, i) => <tr key={i}><td>{p.url || p.doi ? <a className="underline" href={p.url ?? `https://doi.org/${p.doi}`} rel="noopener">{p.title}</a> : p.title}{p.note && !PAPER_PROVENANCE[p.note] && <div className="text-xs text-muted">{p.note}</div>}</td><td className="text-muted">{p.journal}</td><td className="tabular-nums text-muted">{p.year}</td></tr>)}</tbody></table>
             {paperProvenance(e.papers).map((line) => <p key={line} className="px-4 py-2 text-xs text-muted border-t border-border">{line}</p>)}</div>) }] : []),
       ];
