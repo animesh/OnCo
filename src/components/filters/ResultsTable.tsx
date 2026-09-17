@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { Tip, COLUMN_TIPS } from "@/components/Tip";
 import { useT } from "@/lib/i18n/ui";
 import { fillNodes } from "@/components/T";
@@ -29,13 +29,24 @@ export function ResultsTable<T>({ columns, rows, rowKey, sort, onSort, empty, sc
   columns: Column<T>[]; rows: T[]; rowKey: (r: T) => string; sort?: SortState; onSort?: (key: string) => void; empty?: string;
   /** Keep the table scrolling sideways inside its card at every width (for tables wider than the page). */
   scroll?: boolean;
-  /** When set, only this many rows render until the reader asks for the rest (for very long tables on phones). */
+  /** When set, this many rows render at first and another page is added each time the reader nears the foot of the table; a Show all button remains for those who want everything at once. */
   pageSize?: number;
 }) {
-  const [showAll, setShowAll] = useState(false);
+  const [limit, setLimit] = useState(pageSize ?? Infinity);
+  // Reset the window when the rows change (a new filter or sort), the React pattern for state derived from props.
+  const [prevRows, setPrevRows] = useState(rows);
+  if (rows !== prevRows) { setPrevRows(rows); setLimit(pageSize ?? Infinity); }
   const { t, tl } = useT();
-  const capped = pageSize !== undefined && !showAll && rows.length > pageSize;
-  const visible = capped ? rows.slice(0, pageSize) : rows;
+  const capped = pageSize !== undefined && rows.length > limit;
+  const visible = capped ? rows.slice(0, limit) : rows;
+  const foot = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (!capped || !foot.current || typeof IntersectionObserver === "undefined") return;
+    const el = foot.current;
+    const io = new IntersectionObserver((entries) => { if (entries.some((e) => e.isIntersecting)) setLimit((n) => n + (pageSize ?? 0)); }, { rootMargin: "600px 0px" });
+    io.observe(el);
+    return () => io.disconnect();
+  }, [capped, pageSize, limit]);
   return (
     <div className={`card results-table overflow-x-auto ${scroll ? "" : "lg:overflow-x-visible"}`}>
       <table className="onco">
@@ -70,7 +81,7 @@ export function ResultsTable<T>({ columns, rows, rowKey, sort, onSort, empty, sc
         </tbody>
       </table>
       {rows.length === 0 && <div className="px-6 py-12 text-center text-muted text-sm">{empty ?? t("table.nothingMatches")}</div>}
-      {capped && <div className="px-4 py-3 border-t border-border text-sm"><button type="button" onClick={() => setShowAll(true)} className="underline">{t("table.showAll", { n: rows.length.toLocaleString("en-GB") })}</button> <span className="text-muted">{t("table.showingFirst", { n: pageSize })}</span></div>}
+      {capped && <div ref={foot} className="px-4 py-3 border-t border-border text-sm"><button type="button" onClick={() => setLimit(Infinity)} className="underline">{t("table.showAll", { n: rows.length.toLocaleString("en-GB") })}</button> <span className="text-muted">{t("table.showingFirst", { n: pageSize })}</span></div>}
     </div>
   );
 }

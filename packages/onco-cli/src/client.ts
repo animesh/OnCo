@@ -179,7 +179,7 @@ export class OncoClient {
     const hits: SearchHit[] = [];
     for (const f of fuseRanks([lexical, concept])) {
       const d = byId.get(f.id);
-      if (!d || (opts.kind && d.kind !== opts.kind)) continue;
+      if (!d || d.kind === "page" || (opts.kind && d.kind !== opts.kind)) continue;
       hits.push({ id: d.id, kind: d.kind, name: d.name, tldr: d.tldr, route: d.route, status: d.status, url: SITE + d.route, matched: { words: lexIds.has(d.id), concepts: conceptById.get(d.id) ?? [] } });
       if (hits.length >= limit) break;
     }

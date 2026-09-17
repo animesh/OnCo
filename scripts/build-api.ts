@@ -12,7 +12,7 @@ import { join } from "node:path";
 import { z } from "zod";
 import { graph } from "../src/lib/graph";
 import { EntitySchema, KIND_META, KINDS, routeFor } from "../src/lib/schema";
-import { searchDocs } from "../src/lib/search-index";
+import { siteSearchDocs } from "../src/lib/search-index";
 import { rankInstitutions } from "../src/lib/ranking";
 import { benchmark } from "../src/data/benchmark";
 import { flattenForCsv, toCsv, toNdjson, EXPORT_LICENCE } from "../src/lib/csv";
@@ -35,7 +35,7 @@ for (const e of g.entities) {
 
 write("all.json", { entities: g.entities, incoming });
 writeText("all.ndjson", toNdjson(g.entities.map((e) => ({ ...e, route: routeFor(e) }))));
-write("search.json", searchDocs());
+write("search.json", siteSearchDocs());
 for (const k of KINDS) {
   const list = g.kind(k);
   write(`${KIND_META[k].plural}.json`, list);

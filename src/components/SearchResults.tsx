@@ -70,7 +70,7 @@ export function SearchResults() {
       {rows && (
         <div className="flex flex-wrap items-center gap-3 mb-3 text-sm">
           <span className="text-muted">{shown.length} of {rows.length} results</span>
-          <FacetSelect label="Kind" options={[...kindCounts.entries()].sort((a, b) => b[1] - a[1]).map(([k, n]) => ({ value: k, label: KIND_META[k as Kind].label, count: n }))} value={kind} onChange={(v) => setKind(v as string | null)} searchable={false} allLabel="All kinds" width="w-48" />
+          <FacetSelect label="Kind" options={[...kindCounts.entries()].sort((a, b) => b[1] - a[1]).map(([k, n]) => ({ value: k, label: (k === "page" ? "Page" : KIND_META[k as Kind].label), count: n }))} value={kind} onChange={(v) => setKind(v as string | null)} searchable={false} allLabel="All kinds" width="w-48" />
           {semanticReady === false && <span className="text-xs text-muted">Concept index not built for this deployment; showing lexical matches only.</span>}
         </div>
       )}
@@ -83,7 +83,7 @@ export function SearchResults() {
               {r.kind === "drug" && <MoleculeSlot drugId={r.id} name={r.name} className="h-10 w-10" />}
               <div className="min-w-0 flex-1">
                 <div className="flex flex-wrap items-center gap-2">
-                  <span className={`chip border ${KIND_COLOR[r.kind]}`}>{KIND_META[r.kind].label}</span>
+                  <span className={`chip border ${(r.kind === "page" ? "border-border text-muted" : KIND_COLOR[r.kind])}`}>{(r.kind === "page" ? "Page" : KIND_META[r.kind].label)}</span>
                   <Link href={r.route} className="font-medium hover:underline">{r.name}</Link>
                   {r.status && <span className={`chip ${statusClass(r.status)}`}>{STATUS_LABEL[r.status] ?? r.status}</span>}
                 </div>

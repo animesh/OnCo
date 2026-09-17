@@ -186,7 +186,7 @@ export function CommandPalette() {
             <li key={it.id} id={`palette-opt-${i}`} role="option" aria-selected={i === active} onMouseEnter={() => setActive(i)} onMouseDown={(e) => { e.preventDefault(); go(it); }}
               className={`flex items-start gap-3 px-4 py-2 cursor-pointer ${i === active ? "bg-foreground/5" : ""}`}>
               {it.kind === "drug" && <MoleculeSlot drugId={it.id} name={it.name} className="h-9 w-9" />}
-              <span className={`chip mt-0.5 border shrink-0 ${it.kind ? KIND_COLOR[it.kind] : "bg-foreground/5 border-border"}`}>{it.kind ? kindName(it.kind, "label") ?? KIND_META[it.kind].label : "Page"}</span>
+              <span className={`chip mt-0.5 border shrink-0 ${it.kind ? KIND_COLOR[it.kind] : "bg-foreground/5 border-border"}`}>{it.kind && it.kind !== "page" ? kindName(it.kind, "label") ?? KIND_META[it.kind].label : "Page"}</span>
               <span className="min-w-0 flex-1">
                 <span className="block text-sm font-medium truncate">{it.name}</span>
                 <span className="block text-xs text-muted line-clamp-1">{it.tldr}</span>

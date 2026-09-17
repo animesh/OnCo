@@ -27,7 +27,7 @@ export function RegionToggle() {
         <span className="hidden sm:inline xl:hidden 2xl:inline text-xs font-medium">{region}</span>
       </button>
       {open && (
-        <div role="listbox" aria-label={t("region.listbox")} className="absolute end-0 top-full mt-1.5 z-50 card shadow-pop w-72 p-1.5">
+        <div role="listbox" aria-label={t("region.listbox")} className="absolute end-0 top-full mt-1.5 z-50 card shadow-pop w-72 p-1.5 max-sm:fixed max-sm:inset-x-3 max-sm:top-[calc(var(--header-h)+0.375rem)] max-sm:w-auto max-sm:max-h-[75vh] max-sm:overflow-y-auto">
           <div className="px-2.5 pt-1.5 pb-2 text-xs text-muted leading-snug">
             {t("region.intro").split("{approved}").map((part, i, arr) => <span key={i}>{part}{i < arr.length - 1 && <span className="font-medium text-foreground">{t("region.approved")}</span>}</span>)}
           </div>

@@ -10875,4 +10875,5 @@ export const tldr_zh: Record<string, string> = {
   nct07112196: "一项在晚期实体瘤中评估Visugromab的2/3期试验，由CatalYm GmbH开展，正在招募。",
   "small-molecule": "小分子药物是化学合成的药物，分子小到可以进入细胞内部，因此通常可以做成口服片剂。",
   "vaccines-and-oncolytic-viruses": "癌症疫苗训练免疫系统识别肿瘤细胞上的蛋白；溶瘤病毒感染并裂解癌细胞，同时向免疫系统发出警报。",
+  "mathematical-oncology": "数学肿瘤学用方程和模拟来描述肿瘤如何生长、演化、对治疗产生反应以及与免疫系统相互作用，并据此设计剂量、方案和试验。本页汇集 OnCo 收录的全部模型。",
 };

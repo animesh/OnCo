@@ -348,7 +348,7 @@ export function EntityBrowser({ rows, facets, columns, noun, defaultSort, hideSt
           <DownloadTable rows={exportRows} name={noun} />
         </>}
       />
-      <ResultsTable columns={tableCols} rows={filtered} rowKey={(r) => r.id} sort={sort} onSort={onSort} />
+      <ResultsTable columns={tableCols} rows={filtered} rowKey={(r) => r.id} sort={sort} onSort={onSort} pageSize={100} />
     </div>
   );
 }

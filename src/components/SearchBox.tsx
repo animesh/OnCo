@@ -93,7 +93,7 @@ export function SearchBox({ large = false, autoFocus = false }: { large?: boolea
             {results.map((r) => (
               <li key={r.id}>
                 <Link href={r.route} onClick={close} className="flex items-start gap-3 px-3 py-2 hover:bg-foreground/5">
-                  <span className={`chip mt-0.5 border ${KIND_COLOR[r.kind]}`}>{KIND_META[r.kind].label}</span>
+                  <span className={`chip mt-0.5 border ${(r.kind === "page" ? "border-border text-muted" : KIND_COLOR[r.kind])}`}>{(r.kind === "page" ? "Page" : KIND_META[r.kind].label)}</span>
                   <span className="min-w-0 flex-1">
                     <span className="block text-sm font-medium truncate">{r.name}</span>
                     <span className="block text-xs text-muted line-clamp-2">{r.tldr}</span>
