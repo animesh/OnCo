@@ -247,7 +247,7 @@ const technologies: TechnologyInput[] = [
     principle: "Detect adenomas or early cancers by direct visualisation (endoscopy), occult blood or shed DNA in stool, or cfDNA methylation and fragmentation in blood.",
     strengths: ["Colonoscopy both detects and prevents by polypectomy", "Non-invasive options raise participation"],
     limitations: ["Blood and stool tests miss most precancerous polyps", "Colonoscopy capacity and access", "Early-onset cancers arise before screening age"],
-    technologies: ["mced", "liquid-biopsy"], drugs: ["shield"], cancers: ["colorectal"], terms: ["fit-test", "lynch-syndrome"], trials: ["nordicc"], related: ["cure-paths", "ai-endoscopy-detection"], links: [{ label: "Wikipedia", url: W("Colorectal_cancer_screening") }] },
+    technologies: ["mced", "liquid-biopsy"], drugs: ["shield"], cancers: ["colorectal"], terms: ["fit-test", "lynch-syndrome"], trials: ["nordicc"], related: ["cure-paths", "ai-endoscopy-detection", "multitarget-stool-rna-test", "cea-surveillance-colorectal"], links: [{ label: "Wikipedia", url: W("Colorectal_cancer_screening") }] },
 ];
 
 // ======================= TERMS =======================

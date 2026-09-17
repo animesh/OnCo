@@ -168,7 +168,7 @@ const terms: TermInput[] = [
 
 // ======================= TECHNOLOGIES =======================
 const technologies: TechnologyInput[] = [
-  te({ id: "hpv-testing", name: "HPV DNA testing and self-sampling", sections: ["early-detection", "diagnostics"], status: "standard-of-care", since: 2003, wikipedia: W("HPV_DNA_test"),
+  te({ id: "hpv-testing", related: ["via-cervical-screening", "hand-held-ultrasound"], name: "HPV DNA testing and self-sampling", sections: ["early-detection", "diagnostics"], status: "standard-of-care", since: 2003, wikipedia: W("HPV_DNA_test"),
     tldr: "A swab tested for the virus that causes cervical cancer, more accurate than the Pap smear and doable at home.",
     summary: "HPV primary screening detects CIN3+ more sensitively than cytology and allows 5-year intervals; it is the WHO-recommended screening test and is standard in the Netherlands, Australia, England, and increasingly the US. Self-collected vaginal samples perform as well as clinician samples for PCR-based tests; the FDA approved self-collection in health-care settings in May 2024 and the first at-home kit in 2025. Extended genotyping and methylation triage (FAM19A4/miR124-2) reduce colposcopy referrals. Point-of-care and AI-read tests target low-resource settings.",
     principle: "Nucleic acid amplification or hybrid capture of high-risk HPV types (16, 18 and 12 others) from cervical or vaginal cells.",
