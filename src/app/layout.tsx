@@ -19,6 +19,7 @@ import { RegisterSW } from "@/components/RegisterSW";
 import { WebMCP } from "@/components/WebMCP";
 import { FEED_TYPES } from "@/lib/seo";
 import { GardenBackdrop, GardenDefs } from "@/components/Garden";
+import { MotionGovernor } from "@/components/MotionGovernor";
 import { FooterNav } from "@/components/FooterNav";
 import { T } from "@/components/T";
 
@@ -98,6 +99,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <LangStrip />
         <CommandPalette />
         <RegisterSW />
+        <MotionGovernor />
         <WebMCP />
         <ExternalLinks />
         <main id="main" className="flex-1">{children}<SectionSiblings /></main>

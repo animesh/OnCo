@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { STATUS_LABEL, statusClass } from "@/lib/text";
+import { useAnimationBudget, useMotionSnapshot } from "@/lib/use-animation-budget";
 
 export type StoryRef = { id: string; kind: string; name: string; tldr: string; route: string; status?: string };
 export type StoryStep = { era: string; title: string; description: string; status: "historic" | "current" | "emerging" | "speculative"; refs: StoryRef[] };
@@ -40,12 +41,14 @@ export function RoadmapStory({ title, steps }: { title: string; steps: StoryStep
   };
 
   // Auto-play: advance every 6 s; stop after the last step (state change happens inside the timer callback).
+  // The timer waits while the tab is hidden (shared animation budget) and resumes where it was.
+  const motion = useMotionSnapshot(useAnimationBudget(null));
   useEffect(() => {
-    if (!playing) return;
+    if (!playing || motion.hidden) return;
     const t = setTimeout(() => { if (active >= steps.length - 1) setPlaying(false); else go(active + 1); }, active >= steps.length - 1 ? 0 : 6000);
     return () => clearTimeout(t);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [playing, active]);
+  }, [playing, active, motion.hidden]);
 
   return (
     <div className="grid gap-8 lg:grid-cols-[280px_1fr]">

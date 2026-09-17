@@ -1,4 +1,5 @@
 import type { CSSProperties } from "react";
+import { MotionScope } from "./MotionScope";
 
 /**
  * Garden: hand-drawn botanical line art used as quiet background decoration (fern fronds, a leaf
@@ -71,7 +72,7 @@ function Art({ id, viewBox, className = "", style, tilt = 0, flip = false, sway 
   const vars = { "--tilt": `${tilt}deg`, "--flip": flip ? -1 : 1, "--sway": `${swaySeconds}s`, ...style } as CSSProperties;
   return (
     <svg viewBox={viewBox} preserveAspectRatio={preserveAspectRatio} aria-hidden="true" focusable="false"
-      className={`garden-art pointer-events-none h-auto ${sway ? "garden-sway" : ""} ${className}`} style={vars}>
+      className={`garden-art pointer-events-none h-auto ${sway ? "garden-sway motion-css" : ""} ${className}`} style={vars}>
       <use href={`#${id}`} />
     </svg>
   );
@@ -101,7 +102,8 @@ export function GardenBackdrop({ variant, seed = 0, className = "" }: { variant:
 
   if (variant === "hero") {
     return (
-      <div aria-hidden="true" className={`${base} garden-hero-fade inset-0 overflow-hidden ${className}`}>
+      // MotionScope pauses the sway while the hero is off screen or the tab is hidden (src/lib/use-animation-budget.ts).
+      <MotionScope aria-hidden="true" className={`${base} garden-hero-fade inset-0 overflow-hidden ${className}`}>
         {/* Right corner: a tall frond, with a shorter one leaning the other way from lg. */}
         <FernFrond sway tilt={-9} swaySeconds={19}
           className="absolute -right-10 -top-6 w-[13rem] sm:w-[17rem] lg:w-[22rem] xl:w-[25rem] opacity-[0.06] lg:opacity-[0.15] lg:dark:opacity-[0.2]" />
@@ -110,7 +112,7 @@ export function GardenBackdrop({ variant, seed = 0, className = "" }: { variant:
         {/* Left corner, behind the headline: never more than a whisper. */}
         <FernFrond sway tilt={13} swaySeconds={21} style={{ animationDelay: "-4s" }}
           className="hidden sm:block absolute -left-20 -top-4 w-[15rem] lg:w-[19rem] opacity-[0.055] dark:opacity-[0.07]" />
-      </div>
+      </MotionScope>
     );
   }
 

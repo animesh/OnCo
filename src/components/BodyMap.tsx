@@ -1,8 +1,9 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { FIGURE, type BodyRegion } from "@/data/body-regions";
+import { useAnimationBudget, useMotionSnapshot } from "@/lib/use-animation-budget";
 
 export type BodyCancer = { id: string; name: string; tldr: string; route: string; products: number };
 export type BodyTech = { id: string; name: string; tldr: string; route: string; status?: string };
@@ -36,6 +37,9 @@ export function BodyMap({ regions, cancers, technologies }: Props) {
   const [sex, setSex] = useState<Sex>("female");
   const [active, setActive] = useState<string | null>(null);
   const [pinned, setPinned] = useState<string | null>(null);
+  // The breathing lungs and beating heart (CSS keyframes) pause while the figure is off screen or the tab is hidden.
+  const figure = useRef<HTMLDivElement>(null);
+  const motion = useMotionSnapshot(useAnimationBudget(figure, { wakeOnHover: false }));
 
   const visible = useMemo(() => regions.filter((r) => !r.sex || r.sex === sex), [regions, sex]);
   const shown = pinned ?? active;
@@ -50,7 +54,7 @@ export function BodyMap({ regions, cancers, technologies }: Props) {
   return (
     <div className="grid gap-6 lg:grid-cols-[440px_1fr]">
       <style>{CSS}</style>
-      <div className="card p-3">
+      <div ref={figure} data-motion-paused={motion.active ? undefined : ""} className="card p-3">
         <div className="flex flex-wrap items-center gap-1 mb-2 text-sm">
           <button type="button" onClick={() => setMode("cancers")} aria-pressed={mode === "cancers"} className={`chip border ${mode === "cancers" ? "bg-foreground text-background border-foreground" : "bg-card border-border hover:bg-foreground/5"}`}>Where cancers arise</button>
           <button type="button" onClick={() => setMode("technologies")} aria-pressed={mode === "technologies"} className={`chip border ${mode === "technologies" ? "bg-foreground text-background border-foreground" : "bg-card border-border hover:bg-foreground/5"}`}>Where technologies apply</button>
@@ -83,7 +87,7 @@ export function BodyMap({ regions, cancers, technologies }: Props) {
             <path d={FIGURE.hands[0]} strokeWidth={0.9} opacity={0.3} />
             <path d={FIGURE.mirror(FIGURE.hands[0])} strokeWidth={0.9} opacity={0.3} />
             <path d="M200 148 L200 496" strokeWidth={0.8} strokeDasharray="2 8" opacity={0.15} />
-            <g className="bm-heart"><path d={FIGURE.heart} strokeWidth={1.1} opacity={0.35} fill="currentColor" fillOpacity={0.06} /></g>
+            <g className="bm-heart motion-css"><path d={FIGURE.heart} strokeWidth={1.1} opacity={0.35} fill="currentColor" fillOpacity={0.06} /></g>
           </g>
 
           {/* Clickable organs */}
@@ -92,7 +96,7 @@ export function BodyMap({ regions, cancers, technologies }: Props) {
             const n = counts[r.id] ?? 0;
             const alpha = r.systemWide ? 0.5 : 0.14 + 0.46 * (n / max);
             const stroke = on ? "var(--accent)" : r.systemWide ? "currentColor" : tint;
-            const wrapperClass = r.id === "lung" ? "bm-lungs" : undefined;
+            const wrapperClass = r.id === "lung" ? "bm-lungs motion-css" : undefined;
             return (
               <g key={r.id} tabIndex={0} role="button" aria-pressed={on} aria-label={`${r.label}: ${n} ${mode}`}
                 className="bm-region"

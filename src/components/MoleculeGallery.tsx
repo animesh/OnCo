@@ -2,8 +2,12 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { MoleculeThumb } from "./MoleculeThumb";
-import { MoleculeViewer, type StructureEntry } from "./MoleculeViewer";
+import type { StructureEntry } from "./MoleculeViewer";
+
+/** The full 3D viewer is loaded the first time a card's dialog opens, not with the gallery grid. */
+const MoleculeViewer = dynamic(() => import("./MoleculeViewer").then((m) => m.MoleculeViewer), { ssr: false, loading: () => <div className="card h-64 sm:h-80 flex items-center justify-center text-sm text-muted">Loading the 3D viewer</div> });
 import { FacetSelect } from "./filters/FacetSelect";
 import { Toolbar } from "./filters/ResultsTable";
 import { placeholderKind } from "./MoleculeSlot";

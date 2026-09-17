@@ -360,6 +360,14 @@
   to   { transform: scaleX(var(--flip, 1)) rotate(calc(var(--tilt, 0deg) + 1.4deg)); }
 }
 .garden-sway { animation: garden-sway var(--sway, 16s) ease-in-out infinite alternate; }
+
+/* Animation budget (src/lib/use-animation-budget.ts). Elements with `motion-css` carry a CSS keyframe animation; it
+   pauses while the tab is hidden, on low-budget devices (Save-Data, four or fewer cores: <html data-motion~="low">),
+   and inside any box marked data-motion-paused (MotionScope, the body map, the resistance map) while that box is off
+   screen. Reduced motion is handled below with everything else. */
+html[data-motion~="hidden"] .motion-css, html[data-motion~="low"] .motion-css, [data-motion-paused] .motion-css { animation-play-state: paused !important; }
+/* Graph explorer: on a low budget the nodes jump to their new places instead of gliding (each move re-lays out a hundred SVG groups). */
+html[data-motion~="low"] .gx-node, html[data-motion~="low"] .gx-bubble, html[data-motion~="low"] .gx-edge, html[data-motion~="low"] .gx-link, html[data-motion~="low"] .gx-band, html[data-motion~="low"] .gx-arc-chip, html[data-motion~="low"] .gx-label { transition-duration: 0s; animation: none; }
 /* Page-header art fades out towards the text on its left; hero art fades before the count grid. */
 .garden-fade { mask-image: linear-gradient(to left, #000 45%, transparent 100%); }
 .garden-hero-fade { mask-image: linear-gradient(to bottom, #000 52%, transparent 74%); }

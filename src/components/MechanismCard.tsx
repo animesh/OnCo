@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { useAnimationBudget, useMotionSnapshot } from "@/lib/use-animation-budget";
 
 type StepKind = "bind" | "enter" | "release" | "damage" | "death" | "immune" | "spread" | "other";
 
@@ -39,21 +40,20 @@ function Glyph({ kind, active }: { kind: StepKind; active: boolean }) {
 export function MechanismCard({ steps, title = "Mechanism, step by step" }: { steps: string[]; title?: string }) {
   const [i, setI] = useState(0);
   const [paused, setPaused] = useState(false);
-  const [reduced, setReduced] = useState(false);
+  // Shared animation budget: no auto-advance under reduced motion, off screen, in a hidden tab or on a low-budget device.
+  const box = useRef<HTMLDivElement>(null);
+  const motion = useMotionSnapshot(useAnimationBudget(box, { wakeOnHover: false }));
+  const reduced = motion.reduced;
 
   useEffect(() => {
-    const id = requestAnimationFrame(() => setReduced(window.matchMedia("(prefers-reduced-motion: reduce)").matches));
-    return () => cancelAnimationFrame(id);
-  }, []);
-  useEffect(() => {
-    if (paused || reduced || steps.length < 2) return;
+    if (paused || !motion.active || steps.length < 2) return;
     const t = setInterval(() => setI((x) => (x + 1) % steps.length), 3000);
     return () => clearInterval(t);
-  }, [paused, reduced, steps.length]);
+  }, [paused, motion.active, steps.length]);
 
   if (!steps.length) return null;
   return (
-    <div className="card p-4" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
+    <div ref={box} className="card p-4" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
       <div className="flex items-baseline justify-between"><div className="kicker">{title}</div><span className="text-[10px] text-muted">{paused ? "paused" : reduced ? "" : "auto-advancing · hover to pause"}</span></div>
       <div className="mt-3 flex items-start gap-1 overflow-x-auto no-scrollbar pb-1">
         {steps.map((s, k) => (
