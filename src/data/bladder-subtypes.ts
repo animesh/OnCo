@@ -57,6 +57,6 @@ export const bladderSubtypes: CancerInput[] = [
       { year: 2023, title: "EV-302: enfortumab vedotin plus pembrolizumab replaces platinum first line", refs: ["ev-302"] },
       { year: 2024, title: "NIAGARA: perioperative durvalumab improves survival", refs: ["niagara"] },
     ],
-    pipeline: [], openProblems: ["Cisplatin-ineligible patients still have fewer options.", "Choosing between cystectomy and bladder preservation lacks randomised evidence.", "Variant histologies are excluded from most trials.", "Cost and access to antibody-drug conjugates."],
+    pipeline: ["durvalumab","erdafitinib","enfortumab-vedotin"], openProblems: ["Cisplatin-ineligible patients still have fewer options.", "Choosing between cystectomy and bladder preservation lacks randomised evidence.", "Variant histologies are excluded from most trials.", "Cost and access to antibody-drug conjugates."],
     links: [{ label: "Wikipedia", url: W("Bladder_cancer") }] },
 ];

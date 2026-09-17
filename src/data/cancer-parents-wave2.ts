@@ -32,7 +32,7 @@ export const cancerParentsWave2: CancerInput[] = [
       { year: 2015, title: "CDK4/6 inhibitors approved", refs: ["palbociclib"] },
       { year: 2022, title: "Trastuzumab deruxtecan in HER2-low disease", refs: ["trastuzumab-deruxtecan"] },
     ],
-    pipeline: [], openProblems: ["Metastatic disease remains incurable for almost everyone.", "Triple-negative and inflammatory breast cancer still have the worst outlook.", "Overdiagnosis from screening and overtreatment of low-risk DCIS.", "Survival gaps between countries and between Black and white women in the same country."],
+    pipeline: ["trastuzumab-deruxtecan","datopotamab-deruxtecan","oral-serds"], openProblems: ["Metastatic disease remains incurable for almost everyone.", "Triple-negative and inflammatory breast cancer still have the worst outlook.", "Overdiagnosis from screening and overtreatment of low-risk DCIS.", "Survival gaps between countries and between Black and white women in the same country."],
     links: [{ label: "Wikipedia", url: W("Breast_cancer") }, { label: "NCI PDQ", url: "https://www.cancer.gov/types/breast" }] },
   { id: "lung-cancer", kind: "cancer", name: "Lung cancer (all types)", group: "thoracic", asOf, tags, wikipedia: W("Lung_cancer"),
     aka: ["Bronchogenic carcinoma", "Lung carcinoma"],
@@ -54,7 +54,7 @@ export const cancerParentsWave2: CancerInput[] = [
       { year: 2015, title: "Nivolumab approved: immunotherapy enters lung cancer", refs: ["nivolumab"] },
       { year: 2024, title: "Tarlatamab: first targeted drug for small-cell lung cancer", refs: ["tarlatamab"] },
     ],
-    pipeline: [], openProblems: ["Most patients still present with advanced disease.", "Resistance to every targeted drug emerges within one to three years.", "Screening reaches a small fraction of those eligible.", "Small-cell lung cancer survival remains under a year for most with extensive disease."],
+    pipeline: ["tarlatamab","datopotamab-deruxtecan"], openProblems: ["Most patients still present with advanced disease.", "Resistance to every targeted drug emerges within one to three years.", "Screening reaches a small fraction of those eligible.", "Small-cell lung cancer survival remains under a year for most with extensive disease."],
     links: [{ label: "Wikipedia", url: W("Lung_cancer") }, { label: "NCI PDQ", url: "https://www.cancer.gov/types/lung" }] },
   { id: "leukaemia", kind: "cancer", name: "Leukaemia (all types)", group: "haematologic", asOf, tags, wikipedia: W("Leukemia"),
     aka: ["Leukemia", "Blood cancer (leukaemias)"],
@@ -66,6 +66,7 @@ export const cancerParentsWave2: CancerInput[] = [
     standardOfCare: [
       { setting: "Diagnosis", approach: "Blood count and film, bone marrow aspirate and biopsy, flow cytometry, cytogenetics and molecular panel; the subtype then sets the pathway.", refs: ["flow-cytometry-mrd", "cytogenetics-fish"] },
       { setting: "Treatment", approach: "By type on the subtype pages: intensive chemotherapy and transplant for acute leukaemias, tyrosine kinase inhibitors for CML, BTK and BCL2 inhibitors for CLL.", refs: ["all-leukemia", "aml", "cll", "cml"] },
+      { setting: "Supportive care", approach: "Growth factor support, transfusion, infection prevention and tumour lysis prophylaxis around intensive treatment.", refs: ["g-csf-growth-factors", "transfusion-support"] },
     ],
     stateOfArt: ["Childhood ALL cure rates near 90 percent through risk-adapted chemotherapy and measurable residual disease monitoring.", "CML patients live near-normal lifespans on tyrosine kinase inhibitors, and many can stop treatment.", "Venetoclax made AML treatable in older adults; CAR-T and blinatumomab rescued relapsed ALL.", "Treatment-free remission and measurable residual disease guide therapy across the chronic leukaemias."],
     history: [
@@ -75,7 +76,7 @@ export const cancerParentsWave2: CancerInput[] = [
       { year: 2001, title: "Imatinib approved", note: "The first kinase inhibitor and the model for targeted therapy.", refs: ["imatinib"] },
       { year: 2017, title: "Tisagenlecleucel: the first CAR-T approval, for childhood ALL", refs: ["tisagenlecleucel"] },
     ],
-    pipeline: [], openProblems: ["Adult ALL and TP53-mutated AML still have poor outcomes.", "Infant and relapsed childhood leukaemias.", "Access to CAR-T and transplant outside rich countries.", "Late effects of childhood treatment."],
+    pipeline: ["menin-inhibitors","car-t"], openProblems: ["Adult ALL and TP53-mutated AML still have poor outcomes.", "Infant and relapsed childhood leukaemias.", "Access to CAR-T and transplant outside rich countries.", "Late effects of childhood treatment."],
     links: [{ label: "Wikipedia", url: W("Leukemia") }, { label: "NCI PDQ", url: "https://www.cancer.gov/types/leukemia" }] },
   { id: "biliary-tract-cancer", kind: "cancer", name: "Biliary tract cancer (all types)", group: "gastrointestinal", asOf, tags, wikipedia: W("Biliary_tract_cancer"),
     aka: ["Biliary cancer", "Cancers of the bile ducts, gallbladder and ampulla"],
@@ -87,6 +88,7 @@ export const cancerParentsWave2: CancerInput[] = [
     standardOfCare: [
       { setting: "Resectable disease", approach: "Surgery followed by six months of capecitabine (BILCAP).", refs: ["bilcap", "capecitabine"] },
       { setting: "Advanced disease", approach: "Gemcitabine-cisplatin with durvalumab (TOPAZ-1) or pembrolizumab; targeted therapy for FGFR2 and IDH1 alterations on progression.", refs: ["cholangiocarcinoma", "gemcitabine", "cisplatin", "durvalumab"] },
+      { setting: "Second line by biology", approach: "Pemigatinib or futibatinib for FGFR2 fusions, ivosidenib for IDH1 mutations, FOLFOX otherwise.", refs: ["pemigatinib", "futibatinib", "ivosidenib", "oxaliplatin"] },
     ],
     stateOfArt: ["Immunotherapy added to chemotherapy improved survival for the first time in a decade (TOPAZ-1, KEYNOTE-966).", "FGFR2 and IDH1 inhibitors made intrahepatic cholangiocarcinoma a model for molecular selection in a rare cancer.", "Liver transplantation for selected perihilar tumours and liver-directed therapy for intrahepatic disease are expanding."],
     history: [
@@ -95,7 +97,7 @@ export const cancerParentsWave2: CancerInput[] = [
       { year: 2020, title: "Pemigatinib: first FGFR2 inhibitor approved", refs: ["pemigatinib"] },
       { year: 2022, title: "Durvalumab added to chemotherapy (TOPAZ-1)", refs: ["durvalumab"] },
     ],
-    pipeline: [], openProblems: ["Most patients are diagnosed too late for surgery.", "No screening even in high-incidence regions.", "Resistance to FGFR2 inhibitors within a year.", "Gallbladder cancer lacks any approved targeted drug."],
+    pipeline: ["pemigatinib","futibatinib","ivosidenib"], openProblems: ["Most patients are diagnosed too late for surgery.", "No screening even in high-incidence regions.", "Resistance to FGFR2 inhibitors within a year.", "Gallbladder cancer lacks any approved targeted drug."],
     links: [{ label: "Wikipedia", url: W("Biliary_tract_cancer") }, { label: "NCI PDQ: bile duct cancer", url: "https://www.cancer.gov/types/liver/patient/bile-duct-treatment-pdq" }] },
 ];
 

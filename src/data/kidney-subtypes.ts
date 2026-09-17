@@ -34,7 +34,7 @@ export const kidneySubtypes: CancerInput[] = [
       { year: 2019, title: "Pembrolizumab plus axitinib first line (KEYNOTE-426)", refs: ["keynote-426"] },
       { year: 2021, title: "Belzutifan approved for VHL disease; adjuvant pembrolizumab (KEYNOTE-564)", refs: ["belzutifan", "keynote-564"] },
     ],
-    pipeline: [], openProblems: ["No validated biomarker chooses between immunotherapy doublets.", "Most metastatic patients still progress within two to three years.", "Overtreatment of small renal masses versus the risk of surveillance."],
+    pipeline: ["belzutifan","hif2a"], openProblems: ["No validated biomarker chooses between immunotherapy doublets.", "Most metastatic patients still progress within two to three years.", "Overtreatment of small renal masses versus the risk of surveillance."],
     links: [{ label: "Wikipedia", url: W("Clear-cell_renal_cell_carcinoma") }] },
   { id: "papillary-rcc", kind: "cancer", name: "Papillary renal cell carcinoma", group: "genitourinary", parent: "rcc", asOf, tags, wikipedia: W("Papillary_renal_cell_carcinomas"),
     aka: ["pRCC", "Papillary RCC"],
@@ -55,7 +55,7 @@ export const kidneySubtypes: CancerInput[] = [
       { year: 2021, title: "PAPMET: cabozantinib beats sunitinib", refs: ["cabozantinib"] },
       { year: 2022, title: "WHO drops type 1 and 2 in favour of molecular groups" },
     ],
-    pipeline: [], openProblems: ["Small trials; most evidence is extrapolated from clear cell disease.", "No approved therapy specific to FH-deficient cancer.", "Which patients benefit from immunotherapy."],
+    pipeline: ["savolitinib","cabozantinib"], openProblems: ["Small trials; most evidence is extrapolated from clear cell disease.", "No approved therapy specific to FH-deficient cancer.", "Which patients benefit from immunotherapy."],
     links: [{ label: "Wikipedia", url: W("Papillary_renal_cell_carcinomas") }] },
   { id: "chromophobe-rcc", kind: "cancer", name: "Chromophobe renal cell carcinoma", group: "genitourinary", parent: "rcc", asOf, tags, wikipedia: W("Chromophobe_renal_cell_carcinoma")
     , aka: ["chRCC"],
@@ -75,6 +75,6 @@ export const kidneySubtypes: CancerInput[] = [
       { year: 2002, title: "FLCN identified as the Birt-Hogg-Dube gene" },
       { year: 2014, title: "TCGA maps chromosome losses and TP53 and PTEN mutations" },
     ],
-    pipeline: [], openProblems: ["No randomised trial has ever been run in chromophobe cancer.", "Immunotherapy rarely works and the reason is not understood.", "Sarcomatoid change has no effective treatment."],
+    pipeline: ["lenvatinib","everolimus"], openProblems: ["No randomised trial has ever been run in chromophobe cancer.", "Immunotherapy rarely works and the reason is not understood.", "Sarcomatoid change has no effective treatment."],
     links: [{ label: "Wikipedia", url: W("Chromophobe_renal_cell_carcinoma") }] },
 ];

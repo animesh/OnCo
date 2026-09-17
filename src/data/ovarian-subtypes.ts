@@ -35,7 +35,7 @@ export const ovarianSubtypes: CancerInput[] = [
       { year: 2019, title: "PRIMA and PAOLA-1 extend PARP maintenance beyond BRCA", refs: ["prima", "paola-1"] },
       { year: 2022, title: "Mirvetuximab soravtansine approved for platinum-resistant disease", refs: ["mirvetuximab-soravtansine"] },
     ],
-    pipeline: [], openProblems: ["No screening test lowers mortality.", "Homologous recombination proficient tumours gain little from PARP inhibitors.", "Platinum-resistant disease remains largely incurable.", "Access to HRD testing and PARP inhibitors outside high-income countries."],
+    pipeline: ["mirvetuximab-soravtansine","relacorilant","folr1"], openProblems: ["No screening test lowers mortality.", "Homologous recombination proficient tumours gain little from PARP inhibitors.", "Platinum-resistant disease remains largely incurable.", "Access to HRD testing and PARP inhibitors outside high-income countries."],
     links: [{ label: "Wikipedia", url: W("Ovarian_cancer") }] },
   { id: "low-grade-serous-ovarian-cancer", kind: "cancer", name: "Low-grade serous ovarian cancer", group: "gynaecological", parent: "ovarian", asOf, tags, wikipedia: W("Ovarian_cancer"),
     aka: ["LGSOC", "Low-grade serous carcinoma"],
@@ -47,6 +47,7 @@ export const ovarianSubtypes: CancerInput[] = [
     standardOfCare: [
       { setting: "First line", approach: "Complete cytoreductive surgery; carboplatin-paclitaxel followed by letrozole maintenance, or letrozole alone in selected patients.", refs: ["carboplatin", "paclitaxel", "letrozole"] },
       { setting: "Recurrent disease", approach: "Trametinib (GOG 281) or avutometinib plus defactinib for KRAS-mutant tumours; aromatase inhibitors; secondary surgery where complete resection is possible.", refs: ["trametinib", "avutometinib-defactinib", "letrozole"] },
+      { setting: "Maintenance", approach: "Letrozole after first-line treatment, continued for years while tolerated.", refs: ["letrozole"] },
     ],
     stateOfArt: ["GOG 281 was the first randomised trial in this rare disease and made trametinib a standard option.", "Avutometinib-defactinib is the first approval specific to low-grade serous cancer.", "Hormone maintenance is replacing chemotherapy in first-line care."],
     history: [
@@ -54,7 +55,7 @@ export const ovarianSubtypes: CancerInput[] = [
       { year: 2022, title: "GOG 281: trametinib doubles progression-free survival", refs: ["trametinib"] },
       { year: 2025, title: "Avutometinib plus defactinib approved for KRAS-mutant disease", refs: ["avutometinib-defactinib"] },
     ],
-    pipeline: [], openProblems: ["Whether first-line chemotherapy adds anything to surgery and hormone therapy.", "Options for MAPK wild-type tumours.", "Living for decades with a slow but incurable disease."],
+    pipeline: ["avutometinib-defactinib","trametinib"], openProblems: ["Whether first-line chemotherapy adds anything to surgery and hormone therapy.", "Options for MAPK wild-type tumours.", "Living for decades with a slow but incurable disease."],
     links: [{ label: "Wikipedia", url: W("Ovarian_cancer") }] },
   { id: "clear-cell-ovarian-cancer", kind: "cancer", name: "Clear cell ovarian cancer", group: "gynaecological", parent: "ovarian", asOf, tags, wikipedia: W("Clear-cell_ovarian_carcinoma"),
     aka: ["Ovarian clear cell carcinoma", "OCCC"],
@@ -72,8 +73,9 @@ export const ovarianSubtypes: CancerInput[] = [
     history: [
       { year: 1973, title: "WHO recognises clear cell carcinoma as an ovarian type" },
       { year: 2010, title: "ARID1A mutations discovered in clear cell carcinoma" },
+      { year: 2022, title: "MOCCA and other trials test immunotherapy in clear cell carcinoma", refs: ["pembrolizumab"] },
     ],
-    pipeline: [], openProblems: ["No effective treatment for platinum-resistant disease.", "Which early-stage patients can skip chemotherapy.", "Whether treating endometriosis reduces risk."],
+    pipeline: ["atr-chk1-inhibitors","pembrolizumab"], openProblems: ["No effective treatment for platinum-resistant disease.", "Which early-stage patients can skip chemotherapy.", "Whether treating endometriosis reduces risk."],
     links: [{ label: "Wikipedia", url: W("Clear-cell_ovarian_carcinoma") }] },
   { id: "mucinous-ovarian-cancer", kind: "cancer", name: "Mucinous ovarian cancer", group: "gynaecological", parent: "ovarian", asOf, tags, wikipedia: W("Ovarian_cancer"),
     aka: ["Mucinous ovarian carcinoma", "MOC"],
@@ -85,13 +87,15 @@ export const ovarianSubtypes: CancerInput[] = [
     standardOfCare: [
       { setting: "Early stage", approach: "Unilateral salpingo-oophorectomy or hysterectomy with staging; appendicectomy if abnormal; chemotherapy usually omitted for stage IA and IB.", refs: ["ovarian"] },
       { setting: "Advanced or recurrent", approach: "Cytoreduction; carboplatin-paclitaxel or gastrointestinal-type capecitabine-oxaliplatin; trastuzumab for HER2-amplified tumours in trials.", refs: ["capecitabine", "oxaliplatin", "trastuzumab", "carboplatin"] },
+      { setting: "Young women with stage IA disease", approach: "Fertility-sparing unilateral salpingo-oophorectomy with staging and close follow-up.", refs: ["ovarian"] },
     ],
     stateOfArt: ["Strict pathology criteria have cut the diagnosis to its true rare frequency and improved apparent survival.", "The GI-like biology is steering treatment toward bowel cancer regimens and HER2-directed therapy.", "International rare-tumour trials (mEOC/GOG 241) showed how hard it is to recruit for this disease."],
     history: [
       { year: 2003, title: "Seidman shows most 'mucinous ovarian cancers' are metastases from the gut" },
       { year: 2019, title: "mEOC/GOG 241 randomised trial closes early for poor accrual" },
+      { year: 2020, title: "WHO classification separates expansile from infiltrative mucinous carcinoma" },
     ],
-    pipeline: [], openProblems: ["No proven chemotherapy for advanced disease.", "Trials cannot recruit enough patients.", "Distinguishing primary from metastatic disease still needs expert pathology."],
+    pipeline: ["trastuzumab-deruxtecan","her2"], openProblems: ["No proven chemotherapy for advanced disease.", "Trials cannot recruit enough patients.", "Distinguishing primary from metastatic disease still needs expert pathology."],
     links: [{ label: "Wikipedia", url: W("Ovarian_cancer") }] },
   { id: "granulosa-cell-tumour", kind: "cancer", name: "Adult granulosa cell tumour of the ovary", group: "gynaecological", parent: "ovarian", asOf, tags, wikipedia: W("Granulosa_cell_tumour"),
     aka: ["Granulosa cell tumor", "AGCT", "Sex cord-stromal tumour of the ovary"],
@@ -109,7 +113,8 @@ export const ovarianSubtypes: CancerInput[] = [
     history: [
       { year: 1855, title: "Rokitansky describes granulosa cell tumour" },
       { year: 2009, title: "FOXL2 C134W mutation found in almost all adult granulosa cell tumours" },
+      { year: 2020, title: "ALIENOR: bevacizumab tested with paclitaxel in relapsed sex cord-stromal tumours", refs: ["bevacizumab"] },
     ],
-    pipeline: [], openProblems: ["No randomised trials guide adjuvant or relapse treatment.", "Late relapse makes follow-up long and uncertain.", "FOXL2 is not yet druggable."],
+    pipeline: ["bevacizumab","letrozole"], openProblems: ["No randomised trials guide adjuvant or relapse treatment.", "Late relapse makes follow-up long and uncertain.", "FOXL2 is not yet druggable."],
     links: [{ label: "Wikipedia", url: W("Granulosa_cell_tumour") }] },
 ];
