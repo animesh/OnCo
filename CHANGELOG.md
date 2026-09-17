@@ -7,9 +7,12 @@ All notable changes to OnCo are recorded here. The format follows [Keep a Change
 Regenerated from the commit log each time the site ships (`scripts/changelog-sync.ts`); the version sections below are written by hand when a release is cut.
 
 ### 17 September 2026
-- Theme stays light even when React recovers from a hydration mismatch; the counts grid fills its rows again with twenty kinds
+- For me from a real situation: setting, biomarkers, treatments had, country and trial interest drive what is standard, what your biomarkers change, trials that fit, warnings and questions, all from record fields with sources; dependency map renders identically on server and client
 - Navigation starts at the top of the page (scroll attribute on the html tag); footer credit Made with heart and soul by Jude Gomila with Mount Tamalpais and Golden Gate icons in nine languages; roadmap rows 130 to 137
 - Every list row has a visual or a designed stand-in (ideas borrow their cancer icon, technology drawing or molecule), with a test so it cannot regress; I-SPY 1, I-SPY 2, I-SPY 2.2, WISDOM and Quantum Leap Healthcare Collaborative linked to Laura Esserman and UCSF; navigation starts at the top of the page; Enter in search opens the results page; roadmap rows 122 to 129
+- Theme stays light even when React recovers from a hydration mismatch; the counts grid fills its rows again with twenty kinds
+- Fix hydration mismatch on the dependency map
+- For me from a real situation (roadmap item 101): setting, biomarkers, treatments had, country and trials drive record-backed sections
 - Machines of oncology, second wave: 23 more machine families from boron neutron capture and FLASH beams to hyperthermia, fluorescence surgery, positioning, gating and dosimetry, with 32 vendors; roadmap rows marked done for the day's work
 - Decisions you may face: a page per cancer laying out each treatment setting's options, evidence and trade-offs; expert centres as a sortable table of what can be measured, with a near-you marker; your remembered cancer follows you through the header, home, hubs, trials and search; a what-changed page per cancer; red cards for warnings on cancer pages
 - Machines wave 2: BNCT accelerators, FLASH, electron, hyperthermia, PDT lasers, LITT, focused ultrasound, ECT, HIPEC, endoscopy, skin and cervical imaging, RT guidance and QA, CSTDs
