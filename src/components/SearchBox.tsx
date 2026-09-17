@@ -14,7 +14,7 @@ let cache: Promise<{ ms: MiniSearch<SearchDoc>; docs: SearchDoc[]; byId: Map<str
 export function loadSearch() {
   if (!cache) {
     cache = fetch("/api/v1/search.json")
-      .then((r) => r.json())
+      .then((r) => { if (!r.ok) throw new Error("Search index unavailable"); return r.json(); })
       .then((docs: SearchDoc[]) => {
         const ms = new MiniSearch<SearchDoc>({
           fields: ["name", "aka", "tldr", "tags", "id"],
@@ -23,7 +23,8 @@ export function loadSearch() {
         });
         ms.addAll(docs);
         return { ms, docs, byId: new Map(docs.map((d) => [d.id, d])) };
-      });
+      })
+      .catch((error) => { cache = null; throw error; });
   }
   return cache;
 }

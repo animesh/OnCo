@@ -15,6 +15,7 @@ import { RegionToggle } from "@/components/RegionToggle";
 import { GitHubStars } from "@/components/GitHubStars";
 import { AccountMenu } from "@/components/AccountMenu";
 import { RegisterSW } from "@/components/RegisterSW";
+import { WebMCP } from "@/components/WebMCP";
 import { FEED_TYPES } from "@/lib/seo";
 import { GardenBackdrop, GardenDefs } from "@/components/Garden";
 import { FooterNav } from "@/components/FooterNav";
@@ -96,6 +97,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <LangStrip />
         <CommandPalette />
         <RegisterSW />
+        <WebMCP />
         <main id="main" className="flex-1">{children}<SectionSiblings /></main>
         <footer className="garden-footer relative border-t border-border mt-28">
           {/* A low grass line grows up from the footer's top edge into the gap above it. */}

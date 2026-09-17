@@ -9,6 +9,7 @@ The website is one surface. The same corpus ships as:
 - **the site** (https://onco.cc): tables with filters, tooltips on every technical term, molecule and target renderings, animated schematics, a graph explorer, Ask OnCo question answering, a living-with-cancer area (side effects, symptoms, second opinions, hair loss, complementary approaches graded by evidence), coverage of what insurers and the NHS pay for, and a completeness dashboard that states how much of the known world each kind covers;
 - **a static JSON API** under https://onco.cc/api/v1/ with CORS, per-entity Markdown context files for language models, Atom feeds and RDF triples;
 - **an MCP server and a command-line tool** (`packages/`), so agents and scripts can search, fetch, compare and ask over the corpus;
+- **browser WebMCP tools** for read-only record search and lookup in supporting browsers ([implementation and testing](docs/webmcp.md));
 - **eight interface languages** with translated TL;DRs where a translation exists.
 
 > **Work in progress. Verify at source.** Every fact is being built and checked in the open and may be incomplete, out of date or wrong. Nothing here is medical advice. Do your own research and check anything that matters at its primary source, which every page links.
