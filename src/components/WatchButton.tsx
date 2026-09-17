@@ -15,6 +15,7 @@ export function WatchButton({ id, kind, name, route, asOf, className = "" }: { i
   const [on, setOn] = useState(false);
   const [ready, setReady] = useState(false);
   const [busy, setBusy] = useState(false);
+  const [note, setNote] = useState<string | null>(null);
   const { t } = useT();
 
   useEffect(() => {
@@ -28,16 +29,18 @@ export function WatchButton({ id, kind, name, route, asOf, className = "" }: { i
     return () => { cancelAnimationFrame(raf); window.removeEventListener("onco:watchlist", onChange); };
   }, [id, asOf]);
 
+  useEffect(() => { if (!note) return; const t = setTimeout(() => setNote(null), 4000); return () => clearTimeout(t); }, [note]);
+
   const toggle = async () => {
-    if (on) { unwatch(id); return; }
+    if (on) { unwatch(id); setNote(t("watch.removed")); return; }
     setBusy(true);
     const dates = asOf ? { asOf, edited: undefined as string | undefined } : await fetchEntityDates(id);
     watch({ id, kind, name, route: route ?? window.location.pathname, asOf: dates?.asOf ?? asOf, edited: dates?.edited });
-    setBusy(false);
+    setBusy(false); setNote(t("watch.added"));
   };
 
   return (
-    <span className={`inline-flex items-center gap-2 ${className}`}>
+    <span className={`inline-flex flex-wrap items-center gap-2 ${className}`}>
       <button type="button" onClick={toggle} disabled={busy || !ready} aria-pressed={on}
         title={on ? t("watch.titleOn") : t("watch.title")}
         className={`inline-flex items-center gap-1.5 rounded-lg border px-2.5 py-1 text-xs transition-colors ${on ? "border-accent bg-accent-soft text-accent" : "border-border bg-card hover:bg-surface"}`}>
@@ -47,6 +50,7 @@ export function WatchButton({ id, kind, name, route, asOf, className = "" }: { i
       {on && !storageBlocked && <Link href="/saved/" className="text-xs text-muted underline hover:text-foreground">{t("watch.saved")}</Link>}
       {on && storageBlocked && <span className="text-xs text-muted">{t("watch.blocked")}</span>}
       <a href="/feeds/changelog.xml" className="text-xs text-muted underline hover:text-foreground" title={t("watch.feedTitle")}>{t("watch.feed")}</a>
+      <span role="status" aria-live="polite" className={`basis-full text-xs ${note ? "text-accent" : "sr-only"}`}>{note ?? ""}</span>
     </span>
   );
 }

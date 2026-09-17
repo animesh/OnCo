@@ -146,6 +146,8 @@ export const ja: UiDict = {
   "watch.feed": "フィードで追う",
   "watch.feedTitle": "OnCo のすべての更新の Atom フィード（フィードリーダー用）",
   "watch.saved": "保存済み",
+  "watch.added": "ウォッチリストに追加しました。保存済みでこのページの変化を確認できます。",
+  "watch.removed": "ウォッチリストから削除しました。",
   "watch.title": "このページをウォッチ: 前回見てからの変更を「保存済み」で確認できます。このブラウザーにのみ保存されます。",
   "watch.titleOn": "ウォッチ中。前回訪問後のこのページの変更を「保存済み」で確認できます。クリックで解除します。",
   "discuss.link": "議論",

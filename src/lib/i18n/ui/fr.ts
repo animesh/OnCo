@@ -146,6 +146,8 @@ export const fr: UiDict = {
   "watch.feed": "Suivre par flux",
   "watch.feedTitle": "Flux Atom de tous les changements sur OnCo, pour un lecteur de flux",
   "watch.saved": "Enregistré",
+  "watch.added": "Ajouté à votre liste de suivi. Enregistré montrera ce qui change sur cette page.",
+  "watch.removed": "Retiré de votre liste de suivi.",
   "watch.title": "Suivre cette page : Enregistré montrera ce qui a changé depuis votre dernière visite. Stocké dans ce navigateur seulement.",
   "watch.titleOn": "Page suivie. Enregistré montrera ce qui a changé ici depuis votre dernière visite. Cliquez pour arrêter.",
   "discuss.link": "Discuter",

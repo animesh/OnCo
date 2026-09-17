@@ -179,6 +179,8 @@ export const EN = {
   "watch.feed": "Follow by feed",
   "watch.feedTitle": "Atom feed of every change on OnCo, for a feed reader",
   "watch.saved": "Saved",
+  "watch.added": "Added to your watchlist. Saved will show what changes on this page.",
+  "watch.removed": "Removed from your watchlist.",
   "watch.title": "Watch this page: Saved will show what changed since you last looked. Stored in this browser only.",
   "watch.titleOn": "Watching. You will see what changed on this page since your last visit under Saved. Click to stop.",
   "discuss.link": "Discuss",

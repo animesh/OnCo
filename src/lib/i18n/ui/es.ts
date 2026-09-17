@@ -146,6 +146,8 @@ export const es: UiDict = {
   "watch.feed": "Seguir por feed",
   "watch.feedTitle": "Feed Atom de todos los cambios de OnCo, para un lector de feeds",
   "watch.saved": "Guardado",
+  "watch.added": "Añadido a tu lista de seguimiento. En Guardado verás qué cambia en esta página.",
+  "watch.removed": "Eliminado de tu lista de seguimiento.",
   "watch.title": "Sigue esta página: en Guardado verás qué ha cambiado desde tu última visita. Solo se guarda en este navegador.",
   "watch.titleOn": "Siguiendo. En Guardado verás qué ha cambiado en esta página desde tu última visita. Haz clic para dejar de seguir.",
   "discuss.link": "Debatir",

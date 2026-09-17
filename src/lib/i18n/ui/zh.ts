@@ -146,6 +146,8 @@ export const zh: UiDict = {
   "watch.feed": "通过订阅源关注",
   "watch.feedTitle": "OnCo 全部更新的 Atom 订阅源，供阅读器使用",
   "watch.saved": "已保存",
+  "watch.added": "已加入关注列表。“已保存”将显示本页的变化。",
+  "watch.removed": "已从关注列表移除。",
   "watch.title": "关注此页：在“已保存”中可查看自上次访问以来的变化。仅保存在此浏览器中。",
   "watch.titleOn": "已关注。在“已保存”中可查看此页自上次访问以来的变化。点击取消关注。",
   "discuss.link": "讨论",
