@@ -31,7 +31,7 @@ const technologies: TechnologyInput[] = [
     technologies: ["car-t", "point-of-care-cell-manufacturing", "in-vivo-car-t"], companies: ["miltenyi-biotec", "lonza", "cellares", "cytiva"],
   }),
   t({
-    id: "point-of-care-cell-manufacturing", links: [{ label: "FDA guidance: considerations for the development of CAR T cell products", url: "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/considerations-development-chimeric-antigen-receptor-car-t-cell-products" }], name: "Point-of-care and decentralised cell manufacturing", sections: ["cell-therapy"], status: "emerging",
+    id: "point-of-care-cell-manufacturing", dependsOn: ["closed-automated-cell-manufacturing"], links: [{ label: "FDA guidance: considerations for the development of CAR T cell products", url: "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/considerations-development-chimeric-antigen-receptor-car-t-cell-products" }], name: "Point-of-care and decentralised cell manufacturing", sections: ["cell-therapy"], status: "emerging",
     tldr: "Making CAR-T cells at or near the hospital instead of shipping cells to a central factory and back.",
     summary: "Academic centres (Sheba, Hospital Clínic Barcelona's ARI-0001, several Chinese and Indian programmes) and companies (Cellares 'Smart Factories', Orgenesis, Galapagos' decentralised model) manufacture cell therapies close to the patient, cutting vein-to-vein time to about a week and cost substantially. Regulators are working out how to license many small sites against one product specification.",
     principle: "Standardised closed platforms plus centralised quality oversight and digital batch records allow the same process to run at many sites.",
@@ -40,7 +40,7 @@ const technologies: TechnologyInput[] = [
     technologies: ["closed-automated-cell-manufacturing", "car-t"], companies: ["cellares", "galapagos"],
   }),
   t({
-    id: "viral-vector-manufacturing", links: [{ label: "FDA guidance: chemistry, manufacturing and control information for human gene therapy INDs", url: "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/chemistry-manufacturing-and-control-cmc-information-human-gene-therapy-investigational-new-drug" }], name: "Viral vector manufacturing (lentiviral, retroviral, AAV)", sections: ["cell-therapy", "drug-discovery"], status: "established",
+    id: "viral-vector-manufacturing", dependsOn: ["plasmid-dna-manufacturing"], links: [{ label: "FDA guidance: chemistry, manufacturing and control information for human gene therapy INDs", url: "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/chemistry-manufacturing-and-control-cmc-information-human-gene-therapy-investigational-new-drug" }], name: "Viral vector manufacturing (lentiviral, retroviral, AAV)", sections: ["cell-therapy", "drug-discovery"], status: "established",
     tldr: "Producing the engineered viruses that carry a CAR gene into T cells. Viral vector manufacturing is a long-standing bottleneck for cell and gene therapy.",
     summary: "Lentiviral vectors for CAR-T are made by transient transfection of HEK293 cells with plasmid DNA, or increasingly by stable producer cell lines; AAV serves in vivo gene therapy. Capacity shortages in 2018-2022 delayed trials; large CDMOs (Lonza, Thermo Fisher, Charles River, Oxford Biomedica) and in-house plants (Kite, Novartis, BMS) have since expanded. Titre, empty-capsid ratio, and cost per dose are the quality and economic levers.",
     principle: "Packaging and transfer plasmids co-transfected into producer cells; harvested particles are purified by chromatography and tested for titre, potency, and replication competence.",
@@ -71,7 +71,7 @@ const technologies: TechnologyInput[] = [
 
   // ---- Radiopharmacy logistics ----
   t({
-    id: "radiopharmacy-network", links: [{ label: "21 CFR Part 212: current good manufacturing practice for PET drugs", url: "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-C/part-212" }], name: "Radiopharmacy and cyclotron networks", sections: ["radiopharma", "imaging"], status: "standard-of-care",
+    id: "radiopharmacy-network", dependsOn: ["medical-cyclotrons-synthesis-modules"], links: [{ label: "21 CFR Part 212: current good manufacturing practice for PET drugs", url: "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-C/part-212" }], name: "Radiopharmacy and cyclotron networks", sections: ["radiopharma", "imaging"], status: "standard-of-care",
     tldr: "The factories and courier routes that make and deliver short-lived radioactive tracers to hospitals within hours.",
     summary: "PET tracers (18F, half-life 110 minutes) are produced in regional cyclotron pharmacies and driven or flown to scanners the same day; 68Ga comes from generators or cyclotrons on site; 177Lu and 225Ac therapies are made centrally and shipped globally against decay. Networks: PETNET (Siemens), Cardinal Health, SOFIE, Curium, Jubilant Radiopharma, Isologic/Isorad in Canada, with regional players in Europe and Asia. Capacity and licensing of nuclear pharmacies limits where radioligand therapy can be given.",
     principle: "Cyclotron proton bombardment or generator elution produces the isotope; automated synthesis modules label the ligand; QC release within an hour; timed logistics deliver a calibrated activity.",
@@ -131,7 +131,7 @@ const technologies: TechnologyInput[] = [
 
   // ---- Radiotherapy software ----
   t({
-    id: "treatment-planning-systems", related: ["in-vivo-dosimetry", "knowledge-based-planning"], links: [{ label: "AAPM Task Group 53: quality assurance for clinical radiotherapy treatment planning (Medical Physics 1998)", url: "https://doi.org/10.1118/1.598373" }], name: "Radiotherapy treatment planning and QA software", sections: ["radiation", "ai-computation"], status: "standard-of-care",
+    id: "treatment-planning-systems", dependsOn: ["ct"], related: ["in-vivo-dosimetry", "knowledge-based-planning"], links: [{ label: "AAPM Task Group 53: quality assurance for clinical radiotherapy treatment planning (Medical Physics 1998)", url: "https://doi.org/10.1118/1.598373" }], name: "Radiotherapy treatment planning and QA software", sections: ["radiation", "ai-computation"], status: "standard-of-care",
     tldr: "The software that calculates exactly how radiation beams should be shaped and checks the machine delivered it.",
     summary: "Treatment planning systems (Varian Eclipse, Elekta Monaco, RaySearch RayStation, Philips Pinnacle, Brainlab Elements) compute dose from CT/MR images, optimise beam arrangements for IMRT/VMAT/protons, and export plans; independent QA vendors (Sun Nuclear, IBA Dosimetry, PTW, RadCalc) verify delivered dose. RayStation's multi-vendor support and machine-learning planning are notable; cloud and automated planning are the direction.",
     principle: "Monte Carlo or convolution dose engines plus inverse optimisation of fluence subject to organ-at-risk constraints; deliverable plans checked by phantom measurement or log-file analysis.",
@@ -140,7 +140,7 @@ const technologies: TechnologyInput[] = [
     technologies: ["imrt-igrt", "sbrt", "proton-therapy", "mr-linac", "auto-contouring-ai"], companies: ["varian", "elekta", "raysearch", "sun-nuclear", "brainlab"],
   }),
   t({
-    id: "auto-contouring-ai", links: [{ label: "Cardenas et al., Advances in auto-segmentation (Seminars in Radiation Oncology 2019)", url: "https://doi.org/10.1016/j.semradonc.2019.02.001" }], name: "AI auto-contouring and adaptive planning", sections: ["radiation", "ai-computation"], status: "established",
+    id: "auto-contouring-ai", dependsOn: ["ai-compute-platforms"], links: [{ label: "Cardenas et al., Advances in auto-segmentation (Seminars in Radiation Oncology 2019)", url: "https://doi.org/10.1016/j.semradonc.2019.02.001" }], name: "AI auto-contouring and adaptive planning", sections: ["radiation", "ai-computation"], status: "established",
     tldr: "Software that draws organs and tumours on scans automatically, saving hours per patient and making daily plan adaptation practical.",
     summary: "Deep-learning segmentation of organs at risk and targets (Limbus AI, MIM Software, TheraPanacea, Siemens AI-Rad Companion Organs RT, Varian Ethos and Elekta's ADMIRE, MVision, Carina) is now routine in radiotherapy departments and FDA-cleared for dozens of structures. Target-volume contouring remains physician-reviewed. Online adaptive radiotherapy (Ethos, Unity) depends on it to re-plan in minutes.",
     principle: "Convolutional and transformer networks trained on expert contours segment CT/MR; outputs are edited and approved by clinicians.",
@@ -229,7 +229,7 @@ const technologies: TechnologyInput[] = [
 
   // ---- Imaging hardware (additions) ----
   t({
-    id: "pet-tracer-manufacturing", links: [{ label: "21 CFR Part 212: current good manufacturing practice for PET drugs", url: "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-C/part-212" }], name: "PET tracer manufacturing and distribution", sections: ["imaging", "radiopharma"], status: "standard-of-care",
+    id: "pet-tracer-manufacturing", dependsOn: ["medical-cyclotrons-synthesis-modules"], links: [{ label: "21 CFR Part 212: current good manufacturing practice for PET drugs", url: "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-C/part-212" }], name: "PET tracer manufacturing and distribution", sections: ["imaging", "radiopharma"], status: "standard-of-care",
     tldr: "Making PSMA, FDG, and new tracers under drug-manufacturing rules and delivering them daily.",
     summary: "FDA-approved PET drugs are made under cGMP at commercial radiopharmacies (PETNET, Cardinal Health, SOFIE, Jubilant, Curium) or academic sites under ANDA/NDA. New tracers (PSMA agents from Lantheus, Telix, Novartis; FES; FAPI in trials) rely on these networks for launch reach. Kits (Illuccix, Locametz) versus centrally produced doses (Pylarify) is a business-model divide.",
     principle: "Automated radiosynthesis modules, cassette-based chemistry, and rapid QC (radiochemical purity, endotoxin) before release.",

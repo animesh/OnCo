@@ -48,6 +48,7 @@ export const navPt: NavDict = {
   "/trials/": ["Ensaios", "Ensaios de referência e em curso."],
   "/pairings/": ["Combinações", "O que funciona em conjunto, e o que não funciona."],
   "/roadmaps/": ["Roteiros", "Da história ao horizonte para cada família tecnológica."],
+  "/dependencies/": ["Mapa de dependências", "O que cada tecnologia oncológica precisa para existir, em camadas, das bases aos produtos finais."],
   "/bottlenecks/": ["Estrangulamentos", "As limitações que travam toda a guerra contra o cancro, e as ideias que poderiam quebrar cada uma."],
   "/ideas/": ["Ideias", "Hipóteses e soluções, cada uma com um teste proposto."],
   "/terms/": ["Glossário", "Termos com TL;DR e ligações para a Wikipédia."],

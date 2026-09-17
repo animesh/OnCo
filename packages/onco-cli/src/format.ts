@@ -6,7 +6,7 @@ import { KIND_META, SITE, urlFor, type AskResult, type Entity, type EntityRecord
 /** Base fields every record has; printed in their own sections rather than under "Fields". */
 const BASE_FIELDS = new Set(["id", "kind", "name", "aka", "tldr", "summary", "status", "asOf", "wikipedia", "links", "tags", "notes", "simple"]);
 /** Relationship arrays hold ids; the neighbours section shows them with names instead. */
-const RELATION_FIELDS = new Set(["related", "cancers", "sections", "technologies", "targets", "drugs", "companies", "institutions", "pathways", "terms", "trials", "people", "bottlenecks", "keyPapers", "journals", "pipeline"]);
+const RELATION_FIELDS = new Set(["related", "cancers", "sections", "technologies", "targets", "drugs", "companies", "institutions", "pathways", "terms", "trials", "people", "bottlenecks", "keyPapers", "journals", "dependsOn", "pipeline"]);
 
 const humanise = (key: string) => key.replace(/([a-z0-9])([A-Z])/g, "$1 $2").replace(/^./, (c) => c.toUpperCase());
 

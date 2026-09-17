@@ -112,6 +112,12 @@ const Base = z.object({
   keyPapers: z.array(id).default([]),
   /** Journals (kind "journal") this object was published in or is tied to. */
   journals: z.array(id).default([]),
+  /**
+   * Upstream technologies this one cannot be delivered without (CAR-T needs apheresis, vector manufacturing,
+   * cryopreservation). Meaningful on `technology` records; the dependency DAG at /dependencies/ is built from it.
+   * Declared on the base so the relation arrays stay uniform (REL_FIELDS), and validated like every other id list.
+   */
+  dependsOn: z.array(id).default([]),
   /** Why this matters / what is hard about it. Optional editorial notes. */
   notes: z.array(z.string()).default([]),
   /** Even simpler explanation (about a 12-year-old reading age). Optional. */
@@ -497,6 +503,7 @@ export const REL_FIELDS = [
   "bottlenecks",
   "keyPapers",
   "journals",
+  "dependsOn",
 ] as const;
 export type RelField = (typeof REL_FIELDS)[number];
 

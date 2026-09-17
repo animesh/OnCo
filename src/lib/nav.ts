@@ -52,6 +52,7 @@ export const NAV_GROUPS: NavGroup[] = [
       { href: "/trials/", label: "Trials", blurb: "Landmark and current trials." },
       { href: "/pairings/", label: "Pairings", blurb: "What works together, and what does not." },
       { href: "/roadmaps/", label: "Roadmaps", blurb: "History to horizon for each technology family." },
+      { href: "/dependencies/", label: "Dependency map", blurb: "What each technology needs to exist, drawn in layers from foundations to end products: what CAR-T cannot run without, and what stops if one step fails." },
       { href: "/bottlenecks/", label: "Bottlenecks", blurb: "The constraints slowing the whole war on cancer, and the ideas that could break each one." },
       { href: "/ideas/", label: "Ideas", blurb: "Hypotheses and fixes, each with a proposed test." },
       { href: "/terms/", label: "Glossary", blurb: "Terms with TL;DRs and Wikipedia links." },

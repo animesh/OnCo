@@ -42,7 +42,7 @@ export const technologies: TechnologyInput[] = [
     technologies: ["radiology-ai-screening"], people: ["kris-hallenga", "betty-ford", "nancy-brinker"], trials: ["tmist"], links: [{ label: "Wikipedia", url: W("Mammography") }], journals: ["journal-of-breast-imaging"], companies: ["kheiron-medical-technologies", "therapixel", "vara", "volpara-health"],
   },
   {
-    id: "pet", kind: "technology", name: "PET (positron emission tomography)", sections: ["imaging"], status: "standard-of-care", asOf, since: 1975, wikipedia: W("Positron_emission_tomography"),
+    id: "pet", dependsOn: ["nuclear-medicine-hardware", "pet-tracer-manufacturing"], kind: "technology", name: "PET (positron emission tomography)", sections: ["imaging"], status: "standard-of-care", asOf, since: 1975, wikipedia: W("Positron_emission_tomography"),
     tldr: "A scan that shows where a radioactive tracer accumulates, so it images what tumours are doing rather than what they look like.",
     summary: "Positron emission tomography detects the paired 511 keV gamma photons produced when a positron from a radioactive tracer annihilates with an electron; coincidence detection localises the source and the standardised uptake value (SUV) quantifies it. Isotopes such as 18F, 68Ga, 89Zr and 64Cu are attached to a targeting molecule, and the tracer determines what is measured: glucose metabolism (FDG), receptor expression (PSMA, SSTR, TROP2, HER2), stroma (FAP), immune cells (CD8) or DNA repair (PARP). In clinical use since 1975, it is almost always combined with CT or MRI for anatomic reference. Its strengths are whole-body biology in one quantitative scan and the fact that any target with a ligand can in principle be imaged. Resolution of about 4 mm and tracer supply and cost are the main limitations. PET images what tumours are doing rather than what they look like.",
     principle: "Positron-emitting isotopes (18F, 68Ga, 89Zr, 64Cu) attached to a targeting molecule; coincidence detection of 511 keV photons; standardised uptake value (SUV) quantifies uptake.",
@@ -51,7 +51,7 @@ export const technologies: TechnologyInput[] = [
     technologies: ["fdg-pet", "psma-pet", "fapi-pet", "trop2-pet", "her2-pet", "immuno-pet", "parp-pet"], related: ["molecular-imaging-roadmap"], links: [{ label: "Wikipedia", url: W("Positron_emission_tomography") }], companies: ["alpha-9-oncology", "evergreen-theragnostics"],
   },
   {
-    id: "pet-ct", kind: "technology", name: "PET/CT", sections: ["imaging"], status: "standard-of-care", asOf, since: 2001, wikipedia: W("PET-CT"),
+    id: "pet-ct", dependsOn: ["pet", "ct"], kind: "technology", name: "PET/CT", sections: ["imaging"], status: "standard-of-care", asOf, since: 2001, wikipedia: W("PET-CT"),
     tldr: "PET and CT in one machine, so hot spots on the PET are pinned to exact locations on the CT.",
     summary: "PET/CT acquires PET and CT sequentially on one gantry; the CT provides attenuation correction for the PET data and pins each hot spot to an exact anatomical location. In clinical use since 2001, it is the default form of clinical PET and the standard for staging lymphoma, lung cancer, melanoma and head and neck cancer, combining anatomy with biology in one examination. Total-body PET/CT scanners such as the uEXPLORER and Biograph Vision Quadra image the whole body simultaneously with around 40 times the sensitivity of conventional scanners, enabling ultra-low-dose imaging and dynamic studies that follow tracer kinetics over time. The main drawback is that the CT adds radiation to the PET dose, which matters most in children and in patients scanned repeatedly. PET/CT is two scans in one machine so the biology shown by PET can be read against the anatomy shown by CT.",
     principle: "Sequential PET and CT acquisition on one gantry; CT provides attenuation correction and anatomic localisation.",
@@ -60,7 +60,7 @@ export const technologies: TechnologyInput[] = [
     technologies: ["pet", "ct"], drugs: ["fludeoxyglucose-f18"], related: ["molecular-imaging-roadmap"], links: [{ label: "Wikipedia", url: W("PET-CT") }], journals: ["cancer-imaging", "radiology-imaging-cancer"],
   },
   {
-    id: "pet-mri", kind: "technology", name: "PET/MRI", sections: ["imaging"], status: "established", asOf, since: 2010, wikipedia: W("PET-MRI"),
+    id: "pet-mri", dependsOn: ["pet", "mri"], kind: "technology", name: "PET/MRI", sections: ["imaging"], status: "established", asOf, since: 2010, wikipedia: W("PET-MRI"),
     tldr: "PET combined with MRI instead of CT, giving biology plus the best soft-tissue detail, at lower radiation dose.",
     summary: "PET/MRI acquires PET and MRI simultaneously or sequentially using MR-compatible detectors, pairing PET's biological signal with MRI's superior soft-tissue contrast instead of CT. Because MRI adds no ionising radiation, the combined dose is lower than PET/CT, which is why it is valuable in paediatrics and in patients who need repeated scans. It is also used in brain tumours, prostate and pelvic cancers, where MRI already outperforms CT for local staging. In clinical use since 2010, it remains limited by cost, the small number of scanners and long acquisition times, and attenuation correction is harder than with CT because MRI does not directly measure tissue density. Whether the added detail changes management enough to justify the expense is still debated outside those niches. It is PET plus the best soft-tissue pictures, at lower radiation dose but with fewer machines available.",
     principle: "PET and MRI are acquired simultaneously or sequentially with MR-compatible detectors.",
@@ -69,7 +69,7 @@ export const technologies: TechnologyInput[] = [
     technologies: ["pet", "mri"], links: [{ label: "Wikipedia", url: W("PET-MRI") }],
   },
   {
-    id: "fdg-pet", kind: "technology", name: "FDG PET", sections: ["imaging"], status: "standard-of-care", asOf, wikipedia: W("Fludeoxyglucose_(18F)"),
+    id: "fdg-pet", dependsOn: ["pet-ct"], kind: "technology", name: "FDG PET", sections: ["imaging"], status: "standard-of-care", asOf, wikipedia: W("Fludeoxyglucose_(18F)"),
     tldr: "FDG PET is the standard PET scan. A radioactive sugar shows which tissues are burning glucose fast, which most cancers do.",
     summary: "FDG PET uses 18F-fluorodeoxyglucose, a radioactive sugar analogue taken up through GLUT transporters and trapped after phosphorylation by hexokinase, exploiting the Warburg effect by which most cancers burn glucose fast. It is the standard PET scan for staging and response in lymphoma (scored on the Deauville scale), lung cancer, melanoma, head and neck cancer and oesophageal cancer, with universal availability and decades of validation. Its limits are biological: infection and inflammation are also hot, normal brain uptake creates a high background, and indolent tumours are poorly seen. It is weak in prostate cancer, low-grade neuroendocrine tumours, mucinous cancers and some breast cancers, which is why target-specific tracers such as PSMA and SSTR ligands exist. FDG PET shows which tissues are consuming glucose fastest, and most, though not all, cancers do.",
     principle: "FDG is taken up via GLUT transporters and trapped after phosphorylation by hexokinase.",
@@ -79,7 +79,7 @@ export const technologies: TechnologyInput[] = [
     terms: ["suv"], drugs: ["fludeoxyglucose-f18"], related: ["pet-adapted-her2-deescalation", "idea-metabolic-vulnerability-mapping"], links: [{ label: "Wikipedia", url: W("Fludeoxyglucose_(18F)") }],
   },
   {
-    id: "psma-pet", kind: "technology", name: "PSMA PET", sections: ["imaging", "radiopharma"], status: "standard-of-care", asOf, since: 2020,
+    id: "psma-pet", dependsOn: ["pet-ct", "radiopharmacy-network"], kind: "technology", name: "PSMA PET", sections: ["imaging", "radiopharma"], status: "standard-of-care", asOf, since: 2020,
     tldr: "A prostate-cancer-specific PET scan that finds spread far earlier than CT or bone scan, and tells you whether a matched radioactive drug will work.",
     summary: "PSMA PET uses small-molecule urea-based ligands that bind the active site of prostate-specific membrane antigen and are internalised, labelled with 68Ga or 18F. Approved agents are 68Ga-PSMA-11 (Illuccix, Locametz), 18F-DCFPyL (Pylarify, with Pylarify TruVu approved in March 2026) and 18F-rhPSMA-7.3 (Posluma). In clinical use since 2020, it is standard for initial staging of high-risk disease and for biochemical recurrence, where it detects disease at PSA below 0.5 ng/mL, far earlier than CT or bone scan. It is also the theranostic gatekeeper: a PSMA-positive scan is required to select patients for 177Lu-PSMA-617, as in VISION and PSMAfore. Around 10% of patients have PSMA-negative disease, and uptake in ganglia and salivary glands can be mistaken for tumour. It finds spread early and predicts whether the matched radioactive drug will work.",
     principle: "Small-molecule urea-based ligands bind PSMA's active site and are internalised.",
@@ -125,7 +125,7 @@ export const technologies: TechnologyInput[] = [
     cancers: ["breast-her2-positive", "breast-hr-positive", "gastric"],
   },
   {
-    id: "immuno-pet", kind: "technology", name: "Immuno-PET", sections: ["imaging", "immunotherapy"], status: "phase-2", asOf,
+    id: "immuno-pet", dependsOn: ["pet-ct", "monoclonal-antibody"], kind: "technology", name: "Immuno-PET", sections: ["imaging", "immunotherapy"], status: "phase-2", asOf,
     tldr: "PET scans built from radiolabelled antibodies or their fragments, to see any protein an antibody can reach, including immune cells inside tumours.",
     summary: "Immuno-PET attaches long-lived positron emitters such as 89Zr or 64Cu to antibodies, minibodies or nanobodies, so that any protein an antibody can reach can be imaged across the whole body. It covers 89Zr-antibody imaging of ADC targets including TROP2 and HER2, and T-cell imaging with 89Zr-crefmirlimab berdoxam, a CD8 minibody, and 18F-AraG, which marks activated T cells. CD8 PET is in phase 2/3 as a pharmacodynamic and predictive biomarker for checkpoint inhibitors, aiming to show whether T cells are entering tumours early in treatment. The strengths are non-invasive imaging of target and immune infiltrate, and the fact that any antibody can be turned into a tracer. Full antibodies have slow kinetics, requiring days before imaging, and 89Zr is costly. Immuno-PET turns therapeutic antibodies into imaging agents that show where their targets and the immune cells are.",
     principle: "Long-lived positron emitters (89Zr, 64Cu) chelated to antibodies, minibodies, or nanobodies.",
@@ -146,7 +146,7 @@ export const technologies: TechnologyInput[] = [
     cancers: ["ovarian", "tnbc"],
   },
   {
-    id: "spect", related: ["radioligand-dosimetry"], kind: "technology", name: "SPECT & bone scan", sections: ["imaging"], status: "standard-of-care", asOf, wikipedia: W("Single-photon_emission_computed_tomography"),
+    id: "spect", dependsOn: ["nuclear-medicine-hardware", "radionuclide-generators-kits"], related: ["radioligand-dosimetry"], kind: "technology", name: "SPECT & bone scan", sections: ["imaging"], status: "standard-of-care", asOf, wikipedia: W("Single-photon_emission_computed_tomography"),
     tldr: "SPECT and the bone scan are an older type of nuclear scan, still used for bone metastases and to check where a radioactive drug went after treatment.",
     summary: "SPECT uses gamma cameras to detect single photons from isotopes such as 99mTc, 111In and 177Lu, rotating around the patient to reconstruct a 3D distribution. The 99mTc-MDP bone scan is its most familiar oncology use, detecting skeletal metastases through increased bone turnover, although PSMA PET is displacing it in prostate cancer. Its growing role is in theranostics: SPECT/CT after 177Lu therapy shows where the radioligand went and enables post-treatment dosimetry, a key enabler of personalised radioligand dosing. It is cheap and widespread, but its resolution and sensitivity are lower than PET, and standardising dosimetry protocols across centres remains work in progress. SPECT is the older nuclear scan still used for bone metastases and for checking where a radioactive drug ended up.",
     principle: "Gamma cameras detect single photons from 99mTc, 111In, 177Lu; rotating acquisition reconstructs 3D distribution.",
@@ -165,7 +165,7 @@ export const technologies: TechnologyInput[] = [
     cancers: ["multiple-myeloma", "prostate"], companies: ["adialante"],
   },
   {
-    id: "radiology-ai-screening", kind: "technology", name: "AI in radiology", sections: ["imaging", "ai-computation"], status: "established", asOf, wikipedia: W("Artificial_intelligence_in_healthcare"),
+    id: "radiology-ai-screening", dependsOn: ["ai-compute-platforms"], kind: "technology", name: "AI in radiology", sections: ["imaging", "ai-computation"], status: "established", asOf, wikipedia: W("Artificial_intelligence_in_healthcare"),
     tldr: "Software that reads scans alongside radiologists, catching cancers earlier and predicting who is at risk.",
     summary: "Hundreds of FDA-cleared radiology AI devices exist; oncology use cases include mammography reading (Transpara, Lunit INSIGHT, MASAI trial in Sweden showed 29% more cancers detected with 44% less workload), lung nodule detection and malignancy scoring (Sybil, Optellum), prostate MRI, and risk models (Mirai). Foundation models linking images with text are emerging.",
     principle: "Deep convolutional and transformer networks trained on labelled imaging; increasingly self-supervised on large unlabelled corpora.",
@@ -193,7 +193,7 @@ export const technologies: TechnologyInput[] = [
     terms: ["ihc", "her2-low", "tils"], links: [{ label: "Wikipedia", url: W("Immunohistochemistry") }], journals: ["analytical-cellular-pathology", "cancer-cytopathology", "head-and-neck-pathology", "pathology-and-oncology-research"], companies: ["cyted-health", "digistain", "histowiz", "ibex-medical-analytics"],
   },
   {
-    id: "cgp", kind: "technology", name: "Comprehensive genomic profiling", sections: ["diagnostics"], status: "standard-of-care", asOf, wikipedia: W("Cancer_genome_sequencing"),
+    id: "cgp", dependsOn: ["ngs-bioinformatics-software", "variant-knowledgebases"], kind: "technology", name: "Comprehensive genomic profiling", sections: ["diagnostics"], status: "standard-of-care", asOf, wikipedia: W("Cancer_genome_sequencing"),
     tldr: "Sequencing hundreds of cancer genes at once from a biopsy to find the mutations a drug can target.",
     summary: "Targeted NGS panels of 300-600 genes (FoundationOne CDx, MSK-IMPACT, Tempus xT, Caris MI Profile, Guardant360 from blood) report mutations, copy number, fusions, TMB, and MSI. Guideline-recommended in advanced NSCLC, colorectal, breast, prostate, and most metastatic cancers. Adding RNA sequencing catches fusions DNA misses.",
     principle: "Hybrid-capture or amplicon enrichment of target genes followed by short-read sequencing; bioinformatic variant calling and annotation against knowledge bases like OncoKB.",
@@ -203,7 +203,7 @@ export const technologies: TechnologyInput[] = [
     companies: ["foundation-medicine", "tempus", "caris", "guardant-health", "billiontoone", "cambridge-cancer-genomics", "data-driven-bioscience", "fidocure", "inivata", "lucence", "omanta", "oncobox", "yemaachi-biotech"], people: ["razelle-kurzrock"], links: [{ label: "Wikipedia", url: W("Cancer_genome_sequencing") }], journals: ["cancer-genetics", "cancer-genomics-and-proteomics", "genes-chromosomes-and-cancer", "nar-cancer"],
   },
   {
-    id: "wes-wgs", kind: "technology", name: "Whole-exome & whole-genome sequencing", sections: ["diagnostics", "drug-discovery"], status: "established", asOf, wikipedia: W("Whole_genome_sequencing"),
+    id: "wes-wgs", dependsOn: ["ngs-bioinformatics-software"], kind: "technology", name: "Whole-exome & whole-genome sequencing", sections: ["diagnostics", "drug-discovery"], status: "established", asOf, wikipedia: W("Whole_genome_sequencing"),
     tldr: "Reading all the genes (exome) or the entire DNA (genome) of a tumour, rather than a chosen panel.",
     summary: "WGS reveals structural variants, mutational signatures (HRD, APOBEC, tobacco), whole-genome doubling, and non-coding drivers. Used by national programmes (Genomics England, Hartwig) and for neoantigen prediction in personalised vaccines. Long-read sequencing (PacBio, Oxford Nanopore) resolves complex rearrangements and methylation in one run.",
     principle: "Shotgun sequencing of the whole genome (or exon-captured fraction) at 30-100x depth, tumour-normal paired.",
@@ -221,7 +221,7 @@ export const technologies: TechnologyInput[] = [
     terms: ["gene-fusion", "pam50"], links: [{ label: "Wikipedia", url: W("RNA-Seq") }], companies: ["blank-bio", "cofactor-genomics", "data-driven-bioscience", "exai-bio", "insight-molecular-diagnostics", "isabl", "lucence", "oncobox"],
   },
   {
-    id: "single-cell-spatial", kind: "technology", name: "Single-cell & spatial profiling", sections: ["diagnostics", "drug-discovery"], status: "emerging", asOf, wikipedia: W("Spatial_transcriptomics"),
+    id: "single-cell-spatial", dependsOn: ["spatial-biology-instruments"], kind: "technology", name: "Single-cell & spatial profiling", sections: ["diagnostics", "drug-discovery"], status: "emerging", asOf, wikipedia: W("Spatial_transcriptomics"),
     tldr: "Reading the genes of each individual cell, and mapping where each cell sits in the tumour.",
     summary: "scRNA-seq (10x Genomics) resolves tumour, immune, and stromal populations; spatial transcriptomics (Visium, Xenium, CosMx, MERFISH) and multiplex protein imaging (CODEX, IMC) keep tissue architecture. Revealing how ADC bystander killing, T-cell exclusion, and resistance niches work. Research-grade; entering trials as correlative science.",
     principle: "RNA is captured with barcodes per cell or per spatial location, or read by imaging-based in situ hybridisation for hundreds to thousands of genes.",
@@ -229,7 +229,7 @@ export const technologies: TechnologyInput[] = [
     limitations: ["Cost, throughput, analysis burden", "Not yet clinically actionable"], companies: ["valius", "elucidate-bio", "immunai", "mission-bio", "nucleai", "origin-bio"], related: ["idea-immune-exclusion-drivers"], links: [{ label: "Wikipedia", url: W("Spatial_transcriptomics") }],
   },
   {
-    id: "liquid-biopsy", kind: "technology", name: "Liquid biopsy (ctDNA)", sections: ["diagnostics"], status: "standard-of-care", asOf, wikipedia: W("Liquid_biopsy"),
+    id: "liquid-biopsy", dependsOn: ["cgp", "ngs-bioinformatics-software", "preanalytics-sample-stabilisation"], kind: "technology", name: "Liquid biopsy (ctDNA)", sections: ["diagnostics"], status: "standard-of-care", asOf, wikipedia: W("Liquid_biopsy"),
     tldr: "A blood test that reads fragments of DNA shed by the tumour, so you can genotype or monitor cancer without a needle in the tumour.",
     summary: "Circulating tumour DNA assays (Guardant360 CDx, FoundationOne Liquid CDx) are approved companion diagnostics for EGFR, PIK3CA, ESR1, and others. Used when tissue is insufficient, to track resistance mutations (EGFR T790M, ESR1), and to follow clonal dynamics. Fragmentomics and methylation extend it to tumour-agnostic detection.",
     principle: "Cell-free DNA extracted from plasma; deep NGS with error suppression detects variants at <0.1% allele fraction.",
@@ -240,7 +240,7 @@ export const technologies: TechnologyInput[] = [
     technologies: ["mrd-testing", "mced"], links: [{ label: "Wikipedia", url: W("Liquid_biopsy") }],
   },
   {
-    id: "mrd-testing", kind: "technology", name: "MRD / molecular residual disease testing", sections: ["diagnostics"], status: "established", asOf, wikipedia: W("Minimal_residual_disease"),
+    id: "mrd-testing", dependsOn: ["liquid-biopsy", "ngs-bioinformatics-software"], kind: "technology", name: "MRD / molecular residual disease testing", sections: ["diagnostics"], status: "established", asOf, wikipedia: W("Minimal_residual_disease"),
     tldr: "An ultra-sensitive blood test after surgery that detects leftover cancer months before a scan would.",
     summary: "Tumour-informed assays (Signatera, Oncodetect, RaDaR) or tumour-naive assays (Guardant Reveal) detect ctDNA after curative treatment. ctDNA positivity predicts recurrence with high specificity. Trials (DYNAMIC, CIRCULATE, IMvigor011 in bladder cancer, positive in 2025-26 leading to atezolizumab approval in ctDNA+ MIBC) show it can guide adjuvant therapy. Standard in haematologic malignancies via flow cytometry and NGS (clonoSEQ).",
     principle: "Patient-specific variant panel designed from tumour sequencing, tracked at very high depth in plasma.",
@@ -252,7 +252,7 @@ export const technologies: TechnologyInput[] = [
     cancers: ["colorectal", "urothelial", "tnbc", "nsclc", "multiple-myeloma"], related: ["idea-dtc-colonisation-determinants", "idea-dormancy-maintenance-therapy"], links: [{ label: "Wikipedia", url: W("Minimal_residual_disease") }],
   },
   {
-    id: "mced", kind: "technology", name: "Multi-cancer early detection (MCED)", sections: ["early-detection", "diagnostics"], status: "phase-3", asOf,
+    id: "mced", dependsOn: ["liquid-biopsy"], kind: "technology", name: "Multi-cancer early detection (MCED)", sections: ["early-detection", "diagnostics"], status: "phase-3", asOf,
     tldr: "A single blood test intended to screen for dozens of cancers at once, including ones with no screening today.",
     summary: "Galleri (GRAIL) detects methylation patterns and predicts tissue of origin; PMA submitted to FDA in January 2026 with an advisory committee scheduled for 23 September 2026, based on PATHFINDER 2 and the 140,000-person NHS-Galleri trial. Exact Sciences' Cancerguard launched as an LDT; Guardant Shield adds multi-cancer results. Key open question: does earlier detection reduce mortality, and at what false-positive cost?",
     principle: "Machine learning classifies cfDNA methylation, fragmentation, and protein biomarkers.",
@@ -264,7 +264,7 @@ export const technologies: TechnologyInput[] = [
     drugs: ["galleri", "shield"], links: [{ label: "DETECT-A: a blood test plus PET-CT found treatable cancers in 10,000 women with no symptoms (Science 2020)", url: "https://doi.org/10.1126/science.abb9601" }, { label: "NHS-Galleri: design of the largest randomised trial of a multi-cancer blood test (Cancers 2022)", url: "https://doi.org/10.3390/cancers14194818" }],
   },
   {
-    id: "digital-pathology-ai", kind: "technology", name: "Digital pathology & AI", sections: ["diagnostics", "ai-computation"], status: "established", asOf, wikipedia: W("Digital_pathology"),
+    id: "digital-pathology-ai", dependsOn: ["whole-slide-scanners", "ai-compute-platforms"], kind: "technology", name: "Digital pathology & AI", sections: ["diagnostics", "ai-computation"], status: "established", asOf, wikipedia: W("Digital_pathology"),
     tldr: "Scanning microscope slides and letting software measure things a pathologist cannot see, including predictions of who will benefit from a treatment.",
     summary: "Whole-slide imaging, scanning glass slides into gigapixel digital images, is now routine in large pathology laboratories. FDA-cleared tools: Paige Prostate (detection), ArteraAI Prostate (2025, first prognostic and predictive AI) and ArteraAI Breast (May 2026, risk stratification in early HR+/HER2- breast cancer). Foundation models (Virchow, UNI, CONCH, Prov-GigaPath) predict molecular status (MSI, HRD, HER2) from H&E alone.",
     principle: "Gigapixel whole-slide images; tile-level self-supervised encoders aggregated to slide-level predictions.",
@@ -405,7 +405,7 @@ export const technologies: TechnologyInput[] = [
 
   // ======================= RADIATION =======================
   {
-    id: "imrt-igrt", related: ["fractionation-repopulation-models", "total-body-irradiation", "tumour-control-probability-models"], kind: "technology", name: "IMRT / IGRT (modern external beam)", sections: ["radiation"], status: "standard-of-care", asOf,
+    id: "imrt-igrt", dependsOn: ["treatment-planning-systems", "ct", "in-vivo-dosimetry"], related: ["fractionation-repopulation-models", "total-body-irradiation", "tumour-control-probability-models"], kind: "technology", name: "IMRT / IGRT (modern external beam)", sections: ["radiation"], status: "standard-of-care", asOf,
     tldr: "IMRT and IGRT shape the radiation beam to the tumour's outline from multiple angles and check the patient's position with a scan before every session, so surrounding organs receive less dose. Fewer, larger doses are now standard in breast and prostate cancer, but a low-dose bath still spreads across normal tissue.",
     summary: "Intensity-modulated and volumetric arc therapy shape the radiation dose using multi-leaf collimators that vary beam intensity from multiple angles around the patient, while image guidance with cone-beam CT verifies patient position before each fraction. Together they are the default for most curative radiotherapy, giving conformal dose to the tumour with fewer side effects. Hypofractionation, meaning fewer, larger doses, is now standard in breast and prostate cancer and saves patients many visits. The remaining drawbacks are the low-dose bath spread across normal tissue from many beam angles and the need for motion management in moving targets. Adaptive replanning and MR-guidance are the next step, adjusting the plan to daily anatomy. The simple version is radiation sculpted to the tumour and checked with imaging every day.",
     principle: "Multi-leaf collimators modulate beam intensity from many angles; cone-beam CT verifies position before each fraction.",
@@ -413,7 +413,7 @@ export const technologies: TechnologyInput[] = [
     limitations: ["Low-dose bath to normal tissue", "Motion management"], links: [{ label: "ADRIATIC: durvalumab after chemoradiotherapy for limited-stage small-cell lung cancer (New England Journal of Medicine 2024)", url: "https://doi.org/10.1056/NEJMoa2404873" }, { label: "PACIFIC: a year of durvalumab after chemoradiotherapy for stage III lung cancer (New England Journal of Medicine 2017)", url: "https://doi.org/10.1056/NEJMoa1709937" }], journals: ["cancer-radiotherapie", "clinical-oncology-rcr", "practical-radiation-oncology", "radiation-oncology", "seminars-in-radiation-oncology", "strahlentherapie-und-onkologie"], companies: ["intraop-medical", "radformation"],
   },
   {
-    id: "sbrt", kind: "technology", name: "SBRT / SABR (stereotactic radiotherapy)", sections: ["radiation"], status: "standard-of-care", asOf, wikipedia: W("Stereotactic_radiosurgery"),
+    id: "sbrt", dependsOn: ["imrt-igrt"], kind: "technology", name: "SBRT / SABR (stereotactic radiotherapy)", sections: ["radiation"], status: "standard-of-care", asOf, wikipedia: W("Stereotactic_radiosurgery"),
     tldr: "Stereotactic body radiotherapy converges multiple beams with sub-millimetre accuracy to deliver tumour-destroying doses in one to five outpatient sessions, doing the job of surgery for inoperable early lung cancer and for metastases in liver, spine and brain. Tumour size and location limit its use, and late toxicity is a concern near the central airways.",
     summary: "Stereotactic body radiotherapy delivers ablative doses in 1-5 sessions by converging multiple non-coplanar beams with sub-millimetre accuracy, producing steep dose gradients that spare surrounding tissue. It is standard for inoperable early lung cancer, oligometastatic disease, liver, spine, and brain metastases (radiosurgery). SABR-COMET showed an overall survival benefit in oligometastatic disease, which underpins the idea of metastasis-directed therapy. Treatment is outpatient with minimal recovery, and SBRT pairs with immunotherapy in the hope of abscopal effects, though that benefit remains unproven in randomised trials. Limits are tumour size and location, with late toxicity a concern near central airways. The simple version is a few very high, very precise doses that can ablate a tumour much as surgery would.",
     principle: "Multiple non-coplanar beams converge with sub-millimetre accuracy; steep dose gradients.",
@@ -422,7 +422,7 @@ export const technologies: TechnologyInput[] = [
     terms: ["oligometastatic", "abscopal-effect"], people: ["david-palma"], related: ["idea-ferroptosis-persisters", "sabr-oligometastases"], links: [{ label: "Wikipedia", url: W("Stereotactic_radiosurgery") }], journals: ["cancer-radiotherapie", "clinical-oncology-rcr", "practical-radiation-oncology", "radiation-oncology", "seminars-in-radiation-oncology", "strahlentherapie-und-onkologie"], companies: ["xcision-medical-systems"],
   },
   {
-    id: "proton-therapy", related: ["intensity-modulated-proton-therapy"], kind: "technology", name: "Proton therapy", sections: ["radiation"], status: "established", asOf, wikipedia: W("Proton_therapy"),
+    id: "proton-therapy", dependsOn: ["treatment-planning-systems", "ct", "in-vivo-dosimetry"], related: ["intensity-modulated-proton-therapy"], kind: "technology", name: "Proton therapy", sections: ["radiation"], status: "established", asOf, wikipedia: W("Proton_therapy"),
     tldr: "Radiation using protons, which stop inside the tumour instead of passing through, so tissue behind it gets no dose.",
     summary: "Proton therapy exploits the Bragg peak: protons deposit maximum energy at a depth set by their energy and then stop, so there is no exit dose, and pencil-beam scanning paints the tumour layer by layer. This lowers the integral dose to normal tissue and reduces second cancers in children, which is why it is established for paediatric tumours, skull-base and spine tumours, and re-irradiation. Randomised data versus photons are mixed in adults, with oesophageal cancer positive for toxicity but some negative trials, and cost-effectiveness is debated. Range uncertainty, the imprecision in where the beam stops, is a technical limitation alongside cost. Compact single-room systems (Mevion, IBA Proteus One) expand access. The simple version is that protons stop inside the tumour, so tissue behind it is spared.",
     principle: "Bragg peak: protons deposit maximum energy at a depth set by their energy, with no exit dose. Pencil-beam scanning paints the tumour.",
@@ -449,7 +449,7 @@ export const technologies: TechnologyInput[] = [
     cancers: ["cervical", "prostate", "melanoma"], links: [{ label: "Wikipedia", url: W("Brachytherapy") }], companies: ["empyrean-medical-systems", "gt-medical-technologies"],
   },
   {
-    id: "mr-linac", kind: "technology", name: "MR-guided adaptive radiotherapy", sections: ["radiation"], status: "established", asOf,
+    id: "mr-linac", dependsOn: ["mri", "imrt-igrt"], kind: "technology", name: "MR-guided adaptive radiotherapy", sections: ["radiation"], status: "established", asOf,
     tldr: "An MR-linac is a radiation machine with an MRI scanner built in, so images taken during setup let the plan be re-optimised in minutes to that day's anatomy. It allows tighter margins and higher doses in pancreatic and prostate cancer, but treatment is slow and costly, and whether daily adaptation improves cure rates rather than only toxicity is unproven.",
     summary: "An MR-linac integrates an MRI scanner into the treatment machine, acquiring images during setup and delivery so the plan can be re-optimised in minutes to the anatomy of that day. Elekta Unity and ViewRay MRIdian enable daily online adaptation and gating on soft-tissue targets such as pancreas, prostate, and liver, allowing tighter margins and dose escalation in pancreas. The MIRAGE trial showed reduced toxicity in prostate SBRT with MR guidance. Biology-guided radiotherapy (RefleXion, PET-guided) is a parallel approach that tracks the tumour's metabolic signal instead. Slow throughput and cost are the practical limits, and whether daily adaptation improves cure rates rather than only toxicity is still being tested. The simple version is a radiation machine with an MRI inside it.",
     principle: "Integrated MRI acquires images during setup and delivery; plan re-optimised in minutes.",
@@ -469,7 +469,7 @@ export const technologies: TechnologyInput[] = [
     tags: ["frontier"], links: [{ label: "Wikipedia", url: W("FLASH_radiotherapy") }],
   },
   {
-    id: "radioligand-therapy", kind: "technology", name: "Radioligand therapy (beta emitters)", sections: ["radiopharma", "radiation"], status: "approved", asOf, since: 2018, wikipedia: W("Radioligand_therapy"),
+    id: "radioligand-therapy", dependsOn: ["therapy-isotope-supply-chain", "radiopharmacy-network", "medical-cyclotrons-synthesis-modules", "pet-ct", "radioligand-dosimetry"], kind: "technology", name: "Radioligand therapy (beta emitters)", sections: ["radiopharma", "radiation"], status: "approved", asOf, since: 2018, wikipedia: W("Radioligand_therapy"),
     tldr: "A drug that finds tumour cells and carries a radioactive atom that irradiates them from inside the body.",
     summary: "177Lu-DOTATATE (Lutathera, 2018) in neuroendocrine tumours and 177Lu-PSMA-617 (Pluvicto, 2022; pre-chemotherapy label 2025; 2026 label expansion) in prostate cancer are the approved beta-emitter therapies. Pipeline: 177Lu-FAP, 177Lu-PSMA-I&T, 177Lu-NeoB (GRPR), 177Lu-labelled antibodies. Dosimetry-guided personalised dosing is emerging.",
     principle: "177Lu emits beta particles with ~2 mm range and gamma photons for SPECT imaging; the ligand determines biodistribution.",
@@ -481,7 +481,7 @@ export const technologies: TechnologyInput[] = [
     cancers: ["prostate", "neuroendocrine"], companies: ["clarity-pharmaceuticals", "abdera-therapeutics", "alpha-9-oncology", "ariceum-therapeutics", "artbio", "atomic-alchemy", "evergreen-theragnostics", "mariana-oncology", "nucleus-radiopharma", "point-biopharma", "precirix", "radionetics-oncology", "ratio-therapeutics"], links: [{ label: "Wikipedia", url: W("Radioligand_therapy") }], journals: ["cancer-biotherapy-and-radiopharmaceuticals"],
   },
   {
-    id: "targeted-alpha-therapy", related: ["astatine-211-alpha-therapy"], kind: "technology", name: "Targeted alpha therapy", sections: ["radiopharma"], status: "phase-3", asOf, wikipedia: W("Targeted_alpha-particle_therapy"),
+    id: "targeted-alpha-therapy", dependsOn: ["therapy-isotope-supply-chain", "radiopharmacy-network", "radioligand-dosimetry"], related: ["astatine-211-alpha-therapy"], kind: "technology", name: "Targeted alpha therapy", sections: ["radiopharma"], status: "phase-3", asOf, wikipedia: W("Targeted_alpha-particle_therapy"),
     tldr: "Like radioligand therapy but with alpha particles: far more destructive over a much shorter range, so single cells can be killed with less collateral damage.",
     summary: "Actinium-225 and lead-212 agents (225Ac-PSMA-617, 225Ac-DOTATATE/RYZ101, 212Pb-DOTAMTATE/AlphaMedix, 225Ac-FAP) are in phase 3. Radium-223 (Xofigo) is the only approved alpha emitter, for bone metastases. Isotope supply (TerraPower, Orano, ITM) is the binding constraint. Alpha therapy after beta failure produces responses in PSMA-refractory disease.",
     principle: "Alpha particles (4-9 MeV, <100 µm range) cause clustered double-strand breaks independent of oxygen and cell cycle.",
@@ -493,7 +493,7 @@ export const technologies: TechnologyInput[] = [
     tags: ["frontier"], links: [{ label: "Wikipedia", url: W("Targeted_alpha-particle_therapy") }],
   },
   {
-    id: "radioimmunotherapy", kind: "technology", name: "Radio-antibody & radio-ADC", sections: ["radiopharma", "adcs"], status: "phase-2", asOf, wikipedia: W("Radioimmunotherapy"),
+    id: "radioimmunotherapy", dependsOn: ["monoclonal-antibody", "therapy-isotope-supply-chain"], kind: "technology", name: "Radio-antibody & radio-ADC", sections: ["radiopharma", "adcs"], status: "phase-2", asOf, wikipedia: W("Radioimmunotherapy"),
     tldr: "Attaching a radioactive atom to an antibody, so an ADC's targeting is used to deliver radiation instead of chemotherapy.",
     summary: "90Y-ibritumomab (Zevalin) and 131I-tositumomab proved the concept in lymphoma but were commercially abandoned. Renewed interest: 225Ac-labelled antibodies to PSMA (J591), CD33 (lintuzumab), DLL3, HER2, and 177Lu-labelled antibodies. Long antibody half-life is both a dosimetry advantage and a marrow-toxicity problem; pretargeting and fragment approaches address it.",
     principle: "A chelator-conjugated antibody or fragment carries 177Lu, 225Ac, 212Pb, or 131I.",
@@ -565,7 +565,7 @@ export const technologies: TechnologyInput[] = [
     terms: ["oncogene-addiction", "resistance"], trials: ["gefitinib-chemo-tmh"], links: [{ label: "Wikipedia", url: W("Tyrosine_kinase_inhibitor") }], companies: ["acrivon-therapeutics", "alixia", "altay-therapeutics", "blueprint-medicines", "cogent-biosciences", "enliven-therapeutics", "erasca", "fidocure", "harmonic-discovery", "ideaya-biosciences", "nested-therapeutics", "oric-pharmaceuticals", "prelude-therapeutics", "relay-therapeutics", "reverie-labs", "scorpion-therapeutics", "tyra-biosciences", "velorum-therapeutics", "zentalis-pharmaceuticals"],
   },
   {
-    id: "monoclonal-antibody", related: ["cd40-agonists", "cd47-blockade"], kind: "technology", name: "Monoclonal antibodies", sections: ["targeted-therapy", "immunotherapy"], status: "standard-of-care", asOf, since: 1997, wikipedia: W("Monoclonal_antibody_therapy"),
+    id: "monoclonal-antibody", dependsOn: ["monoclonal-antibody-manufacturing"], related: ["cd40-agonists", "cd47-blockade"], kind: "technology", name: "Monoclonal antibodies", sections: ["targeted-therapy", "immunotherapy"], status: "standard-of-care", asOf, since: 1997, wikipedia: W("Monoclonal_antibody_therapy"),
     tldr: "Lab-made immune proteins that lock onto one target, either blocking it or flagging the cell for destruction.",
     summary: "Rituximab (1997) and trastuzumab (1998) founded the class. Mechanisms: signal blockade (trastuzumab, cetuximab), ligand sequestration (bevacizumab), effector recruitment (ADCC, CDC), and checkpoint blockade. The chassis for ADCs, bispecifics, and radio-conjugates. Subcutaneous and biosimilar versions expand access.",
     principle: "A humanised or fully human IgG binds a surface or soluble antigen; Fc engineering tunes effector function and half-life.",
@@ -574,7 +574,7 @@ export const technologies: TechnologyInput[] = [
     terms: ["adcc", "fc-effector"], companies: ["morphosys", "alentis-therapeutics", "bicara-therapeutics", "bighat-biosciences", "inhibrx", "ose-immunotherapeutics", "tradewind-bioscience"], links: [{ label: "Wikipedia", url: W("Monoclonal_antibody_therapy") }],
   },
   {
-    id: "bispecific-antibody", related: ["trispecific-antibodies"], kind: "technology", name: "Bispecific antibodies", sections: ["targeted-therapy", "immunotherapy"], status: "approved", asOf, since: 2014, wikipedia: W("Bispecific_monoclonal_antibody"),
+    id: "bispecific-antibody", dependsOn: ["monoclonal-antibody-manufacturing"], related: ["trispecific-antibodies"], kind: "technology", name: "Bispecific antibodies", sections: ["targeted-therapy", "immunotherapy"], status: "approved", asOf, since: 2014, wikipedia: W("Bispecific_monoclonal_antibody"),
     tldr: "A bispecific antibody is one antibody with two different grabbing arms, so it can block two targets at once or pull an immune cell onto a cancer cell.",
     summary: "Two families: T-cell engagers (CD3 arm; see separate entry) and dual-target blockers such as amivantamab (EGFR×MET), zanidatamab (HER2 biparatopic), zenocutuzumab (HER2×HER3 for NRG1 fusions), and ivonescimab (PD-1×VEGF), which beat pembrolizumab head-to-head on PFS in NSCLC (HARMONi-2). Bispecifics are also the antibody chassis for the next ADC generation.",
     principle: "Engineered heavy/light chain pairing (knobs-into-holes, CrossMab, DuoBody) yields one molecule with two specificities.",
@@ -662,7 +662,7 @@ export const technologies: TechnologyInput[] = [
 
   // ======================= ADC =======================
   {
-    id: "adc", kind: "technology", name: "Antibody-drug conjugate (ADC)", sections: ["adcs"], status: "approved", asOf, since: 2000, wikipedia: W("Antibody-drug_conjugate"),
+    id: "adc", dependsOn: ["monoclonal-antibody", "adc-cdmo-manufacturing", "high-potency-payload-synthesis", "site-specific-conjugation", "sterile-fill-finish"], kind: "technology", name: "Antibody-drug conjugate (ADC)", sections: ["adcs"], status: "approved", asOf, since: 2000, wikipedia: W("Antibody-drug_conjugate"),
     tldr: "An antibody-drug conjugate is an antibody that homes to a protein on the tumour cell, is swallowed, and releases a chemotherapy payload inside it. That widens chemotherapy's safe dose window about a hundredfold, which is why payloads too toxic to give alone can be used, though lung inflammation, neutropenia and eye toxicity from the payload still occur.",
     summary: "Fifteen-plus ADCs are approved. Components: antibody (target, internalisation), linker (cleavable or not, stability), payload (tubulin inhibitors MMAE/DM1; TOP1 inhibitors DXd/SN-38; PBD dimers; calicheamicin), and drug-to-antibody ratio (DAR). Third-generation ADCs (T-DXd, sacituzumab govitecan, Dato-DXd, enfortumab vedotin) with high DAR and bystander-capable TOP1 payloads changed breast, lung, and bladder cancer. Key issues: target heterogeneity, payload cross-resistance, ILD and ocular toxicities, and sequencing multiple ADCs.",
     principle: "Antigen binding → receptor-mediated endocytosis → lysosomal degradation or linker cleavage → payload release → tumour cell death and, with permeable payloads, killing of neighbouring antigen-negative cells.",
@@ -674,7 +674,7 @@ export const technologies: TechnologyInput[] = [
     terms: ["payload", "linker", "dar", "bystander-effect", "ild"], companies: ["celldex", "tubulis", "adcendo", "alentis-therapeutics", "bighat-biosciences", "callio-therapeutics", "cytomx-therapeutics", "dantari", "emergence-therapeutics", "enlaza-therapeutics", "firefly-bio", "ideaya-biosciences", "iksuda-therapeutics", "mablink-bioscience", "myricx-bio", "mythic-therapeutics", "nbe-therapeutics", "orum-therapeutics", "pheon-therapeutics", "profoundbio", "tallac-therapeutics", "valink-therapeutics"], trials: ["aaml0531"], related: ["idea-efflux-agnostic", "idea-neoadjuvant-adc-io"], links: [{ label: "Wikipedia", url: W("Antibody-drug_conjugate") }],
   },
   {
-    id: "bispecific-adc", links: [{ label: "ClinicalTrials.gov NCT06382142: BL-B01D1-307", url: "https://clinicaltrials.gov/study/NCT06382142" }, { label: "ClinicalTrials.gov NCT06304974: PANKU-Esophagus01 (BL-B01D1-305)", url: "https://clinicaltrials.gov/study/NCT06304974" }], kind: "technology", name: "Bispecific ADC", sections: ["adcs"], status: "phase-3", asOf, since: 2023, generation: "4th (next-gen)",
+    id: "bispecific-adc", dependsOn: ["adc", "bispecific-antibody"], links: [{ label: "ClinicalTrials.gov NCT06382142: BL-B01D1-307", url: "https://clinicaltrials.gov/study/NCT06382142" }, { label: "ClinicalTrials.gov NCT06304974: PANKU-Esophagus01 (BL-B01D1-305)", url: "https://clinicaltrials.gov/study/NCT06304974" }], kind: "technology", name: "Bispecific ADC", sections: ["adcs"], status: "phase-3", asOf, since: 2023, generation: "4th (next-gen)",
     tldr: "A bispecific ADC is an ADC whose antibody grabs two different proteins on the cancer cell, so it sticks better to tumour and less to healthy tissue.",
     summary: "Izalontamab brengitecan (iza-bren, EGFR×HER3, SystImmune/BMS) is the first bispecific ADC with positive phase 3 results, meeting PFS and OS in previously treated TNBC (BL-B01D1-307, February 2026) and in oesophageal cancer, with first-line trials (IZABRIGHT-Breast01) ongoing. Eight bsADC phase 3 trials started in 2025. c-MET×EGFR is the most crowded pair (tilatamig samrotecan, AZD9592, 24 candidates); Nectin-4×TROP2 (AK146D1, AVZO-103), HER2 biparatopic (zanidatamab zovodotin), and PD-L1×B7-H3 (BH4601) follow.",
     principle: "Dual antigen binding increases avidity and internalisation and can enable lysosomal trafficking (e.g., pairing with a rapidly internalising receptor). Biparatopic designs cross-link one receptor.",
@@ -698,7 +698,7 @@ export const technologies: TechnologyInput[] = [
     tags: ["frontier"], companies: ["callio-therapeutics"],
   },
   {
-    id: "degrader-antibody-conjugate", links: [{ label: "The first PROTAC: a chimeric molecule that tags a protein for destruction (PNAS 2001)", url: "https://doi.org/10.1073/pnas.141230798" }], kind: "technology", name: "Degrader-antibody conjugate (DAC)", sections: ["adcs", "targeted-therapy"], status: "phase-1", asOf, generation: "4th (next-gen)",
+    id: "degrader-antibody-conjugate", dependsOn: ["adc", "protac-degrader"], links: [{ label: "The first PROTAC: a chimeric molecule that tags a protein for destruction (PNAS 2001)", url: "https://doi.org/10.1073/pnas.141230798" }], kind: "technology", name: "Degrader-antibody conjugate (DAC)", sections: ["adcs", "targeted-therapy"], status: "phase-1", asOf, generation: "4th (next-gen)",
     tldr: "An ADC that delivers a protein-destroying molecule instead of chemotherapy, hitting targets inside the cell that were previously unreachable.",
     summary: "A degrader-antibody conjugate is an ADC whose payload is a molecular glue or PROTAC rather than a cytotoxic: the antibody delivers it to the tumour cell and intracellular release triggers targeted protein degradation. Programmes include Orum Therapeutics (ORM-5029, a HER2-directed GSPT1 degrader; ORM-6151, CD33), Genentech (BRD4 degrader conjugates), and others. The design solves the delivery and bioavailability problems of PROTACs and lets a non-cytotoxic, non-genotoxic mechanism be targeted to the tumour, reaching intracellular targets via antibody selectivity. The trade-off is that potency per molecule is lower than for cytotoxics, and the field is early clinical, so it is not yet known whether degradation can match chemotherapy payloads in efficacy. The simple version is an ADC that destroys a specific protein inside the cancer cell instead of poisoning it.",
     principle: "Antibody delivers a molecular glue or PROTAC payload; intracellular release triggers targeted degradation.",
@@ -750,7 +750,7 @@ export const technologies: TechnologyInput[] = [
 
   // ======================= IMMUNOTHERAPY =======================
   {
-    id: "checkpoint-inhibitor", related: ["tigit-blockade", "tim3-blockade"], keyPapers: ["paper-ribas-wolchok-checkpoint-blockade-science-2018", "paper-chen-mellman-cancer-immunity-cycle-immunity-2013"], kind: "technology", name: "Immune checkpoint inhibitors", sections: ["immunotherapy"], status: "standard-of-care", asOf, since: 2011, wikipedia: W("Checkpoint_inhibitor"),
+    id: "checkpoint-inhibitor", dependsOn: ["monoclonal-antibody"], related: ["tigit-blockade", "tim3-blockade"], keyPapers: ["paper-ribas-wolchok-checkpoint-blockade-science-2018", "paper-chen-mellman-cancer-immunity-cycle-immunity-2013"], kind: "technology", name: "Immune checkpoint inhibitors", sections: ["immunotherapy"], status: "standard-of-care", asOf, since: 2011, wikipedia: W("Checkpoint_inhibitor"),
     tldr: "Immune checkpoint inhibitors are antibodies against CTLA-4, PD-1 or PD-L1 that release the brakes on T cells so they attack the cancer. They are approved in more than 20 tumour types and produce lasting, sometimes curative responses that chemotherapy rarely does, but most patients do not respond and autoimmune side effects are the cost.",
     summary: "Anti-CTLA-4 (ipilimumab), anti-PD-1 (pembrolizumab, nivolumab, cemiplimab, dostarlimab, toripalimab, tislelizumab), anti-PD-L1 (atezolizumab, durvalumab, avelumab), anti-LAG-3 (relatlimab). Approved across >20 tumour types and tumour-agnostically for MSI-H/dMMR and TMB-high. Moving earlier: neoadjuvant/perioperative in melanoma, NSCLC, TNBC (KEYNOTE-522), bladder, and MSI-H colorectal (where dostarlimab produced 100% complete responses in rectal cancer without surgery). Immune-related adverse events are the cost.",
     principle: "Blocking inhibitory receptor-ligand interactions restores T-cell priming (CTLA-4) and effector function (PD-1).",
@@ -761,7 +761,7 @@ export const technologies: TechnologyInput[] = [
     terms: ["cps", "tmb", "msi", "irae"], people: ["lieping-chen"], trials: ["rationale-302"], links: [{ label: "Wikipedia", url: W("Checkpoint_inhibitor") }], journals: ["cancer-immunology-immunotherapy", "journal-of-immunotherapy", "oncoimmunology"], companies: ["compass-therapeutics", "eris-biotech", "onc-ai", "ose-immunotherapeutics", "persephone-biosciences", "xilio-therapeutics"],
   },
   {
-    id: "t-cell-engager", related: ["nk-cell-engagers"], kind: "technology", name: "T-cell engagers (bispecific)", sections: ["immunotherapy"], status: "approved", asOf, since: 2014, wikipedia: W("Bi-specific_T-cell_engager"),
+    id: "t-cell-engager", dependsOn: ["bispecific-antibody"], related: ["nk-cell-engagers"], kind: "technology", name: "T-cell engagers (bispecific)", sections: ["immunotherapy"], status: "approved", asOf, since: 2014, wikipedia: W("Bi-specific_T-cell_engager"),
     tldr: "An off-the-shelf drug that physically links a killer T cell to a cancer cell, forcing the attack.",
     summary: "Blinatumomab (CD19×CD3, 2014) proved the concept in ALL. Now standard in myeloma (teclistamab, elranatamab, talquetamab, linvoseltamab) and lymphoma (glofitamab, epcoritamab, mosunetuzumab). In solid tumours: tarlatamab (DLL3×CD3) improved survival in SCLC (DeLLphi-304, 2025), tebentafusp (gp100 ImmTAC) in uveal melanoma. Trispecifics, prostate (PSMA, STEAP1 xaluritamig), and GPC3 engagers follow. Cytokine release syndrome is managed with step-up dosing.",
     principle: "One arm binds tumour antigen, the other CD3, forming an artificial immune synapse independent of TCR specificity or MHC.",
@@ -773,7 +773,7 @@ export const technologies: TechnologyInput[] = [
     terms: ["crs"], companies: ["xencor", "amunix-pharmaceuticals", "cullinan-therapeutics", "cytomx-therapeutics", "enlaza-therapeutics", "harpoon-therapeutics", "igm-biosciences", "janux-therapeutics", "marengo-therapeutics"], links: [{ label: "Wikipedia", url: W("Bi-specific_T-cell_engager") }],
   },
   {
-    id: "neoantigen-mrna-vaccine", kind: "technology", name: "Personalised neoantigen (mRNA) vaccines", sections: ["immunotherapy"], status: "phase-3", asOf, since: 2017, wikipedia: W("Cancer_vaccine"),
+    id: "neoantigen-mrna-vaccine", dependsOn: ["wes-wgs", "rna-seq", "plasmid-dna-manufacturing", "sterile-fill-finish"], kind: "technology", name: "Personalised neoantigen (mRNA) vaccines", sections: ["immunotherapy"], status: "phase-3", asOf, since: 2017, wikipedia: W("Cancer_vaccine"),
     tldr: "A vaccine made for one patient, encoding the unique mutations in their own tumour, to train the immune system to hunt it.",
     summary: "Intismeran autogene (V940/mRNA-4157, Moderna/Merck) with pembrolizumab met RFS and DMFS endpoints in the phase 3 INTerpath-001 trial in resected stage IIB-IV melanoma (August 2026), the first positive phase 3 for an individualised neoantigen therapy. Autogene cevumeran (BioNTech/Genentech) showed durable T-cell responses correlating with recurrence-free survival in pancreatic cancer (phase 1, Balachandran) and is in phase 2. Phase 3 trials in NSCLC, RCC, bladder, and cutaneous squamous cell carcinoma are ongoing.",
     principle: "Tumour and normal DNA are sequenced, neoantigens are predicted computationally (up to 34 epitopes), and a patient-specific mRNA is made in lipid nanoparticles for dendritic cell presentation and T-cell priming, usually with PD-1 blockade.",
@@ -796,7 +796,7 @@ export const technologies: TechnologyInput[] = [
     cancers: ["pancreatic", "colorectal", "prostate"], companies: ["gritstone", "adventris-pharmaceuticals", "curevac", "evaxion", "guardian-bio", "io-biotech", "mendus", "nykode-therapeutics", "ose-immunotherapeutics", "tarebio"], related: ["idea-splice-neoantigens"],
   },
   {
-    id: "oncolytic-virus", kind: "technology", name: "Oncolytic viruses", sections: ["immunotherapy"], status: "approved", asOf, since: 2015, wikipedia: W("Oncolytic_virus"),
+    id: "oncolytic-virus", dependsOn: ["viral-vector-manufacturing"], kind: "technology", name: "Oncolytic viruses", sections: ["immunotherapy"], status: "approved", asOf, since: 2015, wikipedia: W("Oncolytic_virus"),
     tldr: "Viruses engineered to infect and burst cancer cells while leaving normal cells alone, and to alert the immune system in the process.",
     summary: "Talimogene laherparepvec (Imlygic, HSV-1, 2015) in melanoma. Vusolimogene oderparepvec (Tudriqev, RP1, Replimune), an HSV-1 expressing GM-CSF and a fusogenic protein, received accelerated approval with nivolumab for anti-PD-1-failed advanced melanoma on 6 August 2026 after an initial 2025 rejection. Intravesical nadofaragene firadenovec (Adstiladrin) and cretostimogene are approved or near approval in BCG-unresponsive bladder cancer.",
     principle: "Attenuated virus replicates selectively in tumour cells (defective antiviral signalling), lysing them and releasing antigens and encoded cytokines.",
@@ -828,7 +828,7 @@ export const technologies: TechnologyInput[] = [
 
   // ======================= CELL THERAPY =======================
   {
-    id: "car-t", kind: "technology", name: "CAR-T cell therapy", sections: ["cell-therapy"], status: "approved", asOf, since: 2017, wikipedia: W("Chimeric_antigen_receptor_T_cell"),
+    id: "car-t", dependsOn: ["apheresis-starting-material", "viral-vector-manufacturing", "cell-therapy-cold-chain", "cell-therapy-release-testing", "cell-therapy-orchestration-software"], kind: "technology", name: "CAR-T cell therapy", sections: ["cell-therapy"], status: "approved", asOf, since: 2017, wikipedia: W("Chimeric_antigen_receptor_T_cell"),
     tldr: "A patient's T cells are removed, given a synthetic receptor that recognises the cancer, multiplied, and put back as a living drug.",
     summary: "Seven approved autologous products: CD19 (tisagenlecleucel, axicabtagene, lisocabtagene, brexucabtagene, obecabtagene) and BCMA (idecabtagene, ciltacabtagene). Curative in a substantial fraction of relapsed large B-cell lymphoma and ALL; moving to second line and earlier in myeloma (CARTITUDE-4). Solid tumours: CLDN18.2 (satri-cel), GPC3, GD2 (neuroblastoma, glioma), B7-H3, IL13Rα2, and regionally delivered CARs. FDA removed REMS requirements in 2025; secondary T-cell malignancy warning added in 2024.",
     principle: "T cells are transduced with a lentiviral or retroviral chimeric antigen receptor (scFv + costimulatory domain + CD3ζ), infused after lymphodepletion, and expand in vivo.",
@@ -851,7 +851,7 @@ export const technologies: TechnologyInput[] = [
     tags: ["frontier"],
   },
   {
-    id: "til-therapy", kind: "technology", name: "TIL therapy", sections: ["cell-therapy"], status: "approved", asOf, since: 2024, wikipedia: W("Tumor-infiltrating_lymphocytes"),
+    id: "til-therapy", dependsOn: ["cell-therapy-cold-chain", "cell-therapy-release-testing", "cytokine-therapy"], kind: "technology", name: "TIL therapy", sections: ["cell-therapy"], status: "approved", asOf, since: 2024, wikipedia: W("Tumor-infiltrating_lymphocytes"),
     tldr: "Immune cells that have already found their way into the tumour are harvested, grown to billions, and returned.",
     summary: "Lifileucel (Amtagvi, Iovance) was approved in 2024 for anti-PD-1-refractory melanoma: ORR 31%, five-year data show durable responses in about a third of responders. Trials in NSCLC (TILVANCE-301), cervical, and head and neck cancer. Next-generation TILs are gene-edited (PD-1 knockout, IL-15 membrane-bound, OBX-115) to reduce IL-2 dependence.",
     principle: "Surgical harvest → ex vivo expansion of polyclonal tumour-reactive T cells with IL-2 → lymphodepletion → infusion with IL-2 support.",
@@ -862,7 +862,7 @@ export const technologies: TechnologyInput[] = [
     cancers: ["melanoma", "nsclc", "cervical"], links: [{ label: "Wikipedia", url: W("Tumor-infiltrating_lymphocytes") }],
   },
   {
-    id: "tcr-t", links: [{ label: "ClinicalTrials.gov NCT03967223: IGNYTE-ESO", url: "https://clinicaltrials.gov/study/NCT03967223" }], kind: "technology", name: "TCR-T cell therapy", sections: ["cell-therapy"], status: "approved", asOf, since: 2024,
+    id: "tcr-t", dependsOn: ["apheresis-starting-material", "viral-vector-manufacturing", "cell-therapy-cold-chain", "cell-therapy-release-testing"], links: [{ label: "ClinicalTrials.gov NCT03967223: IGNYTE-ESO", url: "https://clinicaltrials.gov/study/NCT03967223" }], kind: "technology", name: "TCR-T cell therapy", sections: ["cell-therapy"], status: "approved", asOf, since: 2024,
     tldr: "T cells engineered with a receptor that sees fragments of proteins inside the cancer cell, reaching targets CAR-T cannot.",
     summary: "Afamitresgene autoleucel (Tecelra) was the first approved TCR-T, for MAGE-A4+ HLA-A*02+ synovial sarcoma (2024, label expanded 2026). Letetresgene (NY-ESO-1) followed in trials. Neoantigen-specific TCR-T against KRAS G12D and TP53 hotspots (NCI Rosenberg) and PRAME-directed TCR-T (Immatics IMA203, phase 3 in melanoma) are the most watched.",
     principle: "Transgenic αβ TCR recognises a peptide-HLA complex; restricted to patients with the matching HLA allele.",
@@ -873,7 +873,7 @@ export const technologies: TechnologyInput[] = [
     cancers: ["sarcoma", "melanoma"], companies: ["affini-t-therapeutics", "neogene-therapeutics"],
   },
   {
-    id: "car-nk-macrophage", related: ["nk-cell-therapy"], links: [{ label: "Liu et al., CAR-transduced natural killer cells in CD19-positive lymphoid tumours (NEJM 2020)", url: "https://doi.org/10.1056/NEJMoa1910607" }, { label: "Klichinsky et al., Human chimeric antigen receptor macrophages for cancer immunotherapy (Nature Biotechnology 2020)", url: "https://doi.org/10.1038/s41587-020-0462-y" }], kind: "technology", name: "CAR-NK & CAR-macrophage", sections: ["cell-therapy"], status: "phase-1", asOf,
+    id: "car-nk-macrophage", dependsOn: ["viral-vector-manufacturing", "cell-therapy-release-testing"], related: ["nk-cell-therapy"], links: [{ label: "Liu et al., CAR-transduced natural killer cells in CD19-positive lymphoid tumours (NEJM 2020)", url: "https://doi.org/10.1056/NEJMoa1910607" }, { label: "Klichinsky et al., Human chimeric antigen receptor macrophages for cancer immunotherapy (Nature Biotechnology 2020)", url: "https://doi.org/10.1038/s41587-020-0462-y" }], kind: "technology", name: "CAR-NK & CAR-macrophage", sections: ["cell-therapy"], status: "phase-1", asOf,
     tldr: "Putting the cancer-seeking receptor on natural killer cells or macrophages instead of T cells, which could be safer and off-the-shelf.",
     summary: "CAR-NK and CAR-macrophage therapies put a chimeric antigen receptor on innate effector cells instead of T cells; NK cells lack graft-versus-host risk, enabling allogeneic, off-the-shelf use with low cytokine release syndrome and neurotoxicity. Cord-blood or iPSC-derived CAR-NK (Nkarta, Fate, Takeda/MD Anderson) show low CRS and allogeneic feasibility, but efficacy durability is the question because persistence is short. CAR-macrophages (Carisma CT-0508, HER2) aim at solid tumour infiltration and phagocytosis, with early and modest results. Manufacturing scale is a further hurdle. The simple version is that these therapies use other immune cells as the cancer-seeking vehicle, promising safety and availability but not yet matching the durable responses of CAR-T.",
     principle: "Innate effector cells engineered with a CAR; NK cells lack GVHD risk enabling allogeneic use.",
@@ -883,7 +883,7 @@ export const technologies: TechnologyInput[] = [
     tags: ["frontier"], companies: ["indapta-therapeutics", "onk-therapeutics"],
   },
   {
-    id: "allogeneic-cell-therapy", links: [{ label: "Depil et al., 'Off-the-shelf' allogeneic CAR T cells: development and challenges (Nature Reviews Drug Discovery 2020)", url: "https://doi.org/10.1038/s41573-019-0051-2" }], kind: "technology", name: "Allogeneic (off-the-shelf) cell therapy", sections: ["cell-therapy"], status: "phase-2", asOf,
+    id: "allogeneic-cell-therapy", dependsOn: ["allogeneic-cell-banking", "cell-therapy-cold-chain", "cell-therapy-release-testing"], links: [{ label: "Depil et al., 'Off-the-shelf' allogeneic CAR T cells: development and challenges (Nature Reviews Drug Discovery 2020)", url: "https://doi.org/10.1038/s41573-019-0051-2" }], kind: "technology", name: "Allogeneic (off-the-shelf) cell therapy", sections: ["cell-therapy"], status: "phase-2", asOf,
     tldr: "Cell therapies made from healthy donors in advance, so patients do not have to wait for their own cells to be engineered.",
     summary: "Allogeneic cell therapy manufactures engineered cells from healthy donors in advance: TRAC knockout prevents graft-versus-host disease, and B2M/HLA editing or CD52 knockout with alemtuzumab conditioning delays rejection by the patient's immune system. Gene-edited donor T cells (Allogene cema-cel, ALLO-316 against CD70; Caribou; CRISPR Therapeutics) and iPSC-derived platforms (Fate, Century) are the main approaches. The appeal is immediate availability and industrial scale, removing the manufacturing wait that patients with fast-moving disease cannot afford. Persistence is the main limitation, because host rejection eventually clears the donor cells, and deeper lymphodepletion is needed to hold it off. The simple version is a cell therapy taken off the shelf rather than made from each patient's own cells.",
     principle: "TRAC knockout prevents GVHD; B2M/HLA editing or CD52 knockout with alemtuzumab conditioning delays host rejection.",
@@ -893,7 +893,7 @@ export const technologies: TechnologyInput[] = [
     targets: ["cd70", "cd19"], companies: ["adicet-bio", "allotera-therapeutics", "century-therapeutics", "guardian-bio", "imugene", "indapta-therapeutics", "mendus", "onk-therapeutics", "orca-bio", "poseida-therapeutics"],
   },
   {
-    id: "armored-car", links: [{ label: "ClinicalTrials.gov NCT03373097: GD2-CART01 (Bambino Gesù phase 1/2)", url: "https://clinicaltrials.gov/study/NCT03373097" }], kind: "technology", name: "Armoured, logic-gated & next-gen CARs", sections: ["cell-therapy"], status: "phase-1", asOf,
+    id: "armored-car", dependsOn: ["car-t"], links: [{ label: "ClinicalTrials.gov NCT03373097: GD2-CART01 (Bambino Gesù phase 1/2)", url: "https://clinicaltrials.gov/study/NCT03373097" }], kind: "technology", name: "Armoured, logic-gated & next-gen CARs", sections: ["cell-therapy"], status: "phase-1", asOf,
     tldr: "Upgraded CAR-T cells that also secrete immune boosters, resist exhaustion, or only fire when two signals are present.",
     summary: "Armoured and logic-gated CARs add transgenes or synthetic circuits that change how CAR-T cells behave in the tumour microenvironment: IL-12 or IL-18 secretion, dominant-negative TGF-β receptors, PD-1 knockout, synNotch logic gates (AND/NOT gating for solid tumours, for example Arsenal Bio), and tunable CARs. Each design addresses one of the solid-tumour barriers of exhaustion, immune suppression, or on-target off-tumour toxicity, with logic gating meant to fire only when two antigens are present together. These constructs are designed for hostile solid-tumour environments where first-generation CARs failed. The cost is complexity, and the safety of constitutively secreted cytokines is unresolved, so most programmes are phase 1. The simple version is an upgraded CAR-T that carries its own boosters, armour, or a two-signal safety switch.",
     principle: "Additional transgenes or synthetic circuits modify CAR-T behaviour in the tumour microenvironment.",
@@ -978,7 +978,7 @@ export const technologies: TechnologyInput[] = [
 
   // ======================= AI & COMPUTATION =======================
   {
-    id: "pathology-foundation-model", links: [{ label: "Chen et al., Towards a general-purpose foundation model for computational pathology (Nature Medicine 2024)", url: "https://doi.org/10.1038/s41591-024-02857-3" }, { label: "Vorontsov et al., A foundation model for clinical-grade computational pathology (Nature Medicine 2024)", url: "https://doi.org/10.1038/s41591-024-03141-0" }], kind: "technology", name: "Pathology & radiology foundation models", sections: ["ai-computation"], status: "emerging", asOf,
+    id: "pathology-foundation-model", dependsOn: ["digital-pathology-ai", "ai-compute-platforms"], links: [{ label: "Chen et al., Towards a general-purpose foundation model for computational pathology (Nature Medicine 2024)", url: "https://doi.org/10.1038/s41591-024-02857-3" }, { label: "Vorontsov et al., A foundation model for clinical-grade computational pathology (Nature Medicine 2024)", url: "https://doi.org/10.1038/s41591-024-03141-0" }], kind: "technology", name: "Pathology & radiology foundation models", sections: ["ai-computation"], status: "emerging", asOf,
     tldr: "Pathology and radiology foundation models are AI networks pretrained without labels on over a million slides or scans (Virchow used 1.5 million), then adapted with small task heads to predict mutations, prognosis or treatment response from routine images. They power the FDA-cleared ArteraAI tools, but validation across hospitals and how regulators treat general-purpose models remain unsettled.",
     summary: "Virchow (Paige/MSK, 1.5M slides), UNI and CONCH (Harvard), Prov-GigaPath (Microsoft/Providence), PLUTO, and radiology models (Merlin, RadFM). They predict molecular alterations, prognosis, and treatment response from routine H&E and CT, and power the FDA-cleared ArteraAI tools. Multimodal patient-level models integrating genomics, imaging, and notes are in development (e.g., CanSim-style efforts, Tempus, Owkin).",
     principle: "Self-supervised pretraining (DINOv2, contrastive) on unlabelled images; frozen encoder plus small task heads.",
@@ -1070,7 +1070,7 @@ export const technologies: TechnologyInput[] = [
 
   // ======================= Areas from the Prometheus technology map that OnCo lacked (15 Sept 2026) =======================
   {
-    id: "spatial-transcriptomics", kind: "technology", name: "Spatial transcriptomics", sections: ["diagnostics","drug-discovery"], status: "emerging", asOf, wikipedia: W("Spatial_transcriptomics"),
+    id: "spatial-transcriptomics", dependsOn: ["spatial-biology-instruments", "rna-seq"], kind: "technology", name: "Spatial transcriptomics", sections: ["diagnostics","drug-discovery"], status: "emerging", asOf, wikipedia: W("Spatial_transcriptomics"),
     tldr: "Methods that read which genes are switched on in each spot or cell of a tumour slice while keeping the tissue's geography, so scientists can see how cancer, immune and stromal cells sit next to one another.",
     summary: "Spatial transcriptomics measures gene expression across a tissue section without losing position. Sequencing-based platforms capture RNA on barcoded spots (10x Genomics Visium), while imaging-based platforms read hundreds to thousands of RNA species in place at single-cell resolution (MERFISH, 10x Xenium, NanoString CosMx). In oncology it maps the tumour microenvironment, immune exclusion and clonal territories, and it underpins atlases such as the Human Tumor Atlas Network.",
     principle: "Tissue sections are either overlaid on barcoded capture arrays whose oligonucleotides record position before sequencing, or hybridised with fluorescent probes read out over many imaging rounds with combinatorial barcodes.",
@@ -1100,7 +1100,7 @@ export const technologies: TechnologyInput[] = [
     links: [{ label: "Wikipedia", url: W("Immunofluorescence") }],
   },
   {
-    id: "ai-pathology-scoring", kind: "technology", name: "AI scoring of biomarkers and grade on pathology slides", sections: ["diagnostics","ai-computation"], status: "approved", asOf, since: 2021, wikipedia: W("Digital_pathology"),
+    id: "ai-pathology-scoring", dependsOn: ["digital-pathology-ai"], kind: "technology", name: "AI scoring of biomarkers and grade on pathology slides", sections: ["diagnostics","ai-computation"], status: "approved", asOf, since: 2021, wikipedia: W("Digital_pathology"),
     tldr: "Software that reads digitised biopsy slides to detect cancer, grade it, and score biomarkers such as HER2, PD-L1 and Ki-67 more consistently than the eye alone.",
     summary: "Deep-learning models trained on whole-slide images now detect prostate cancer in biopsies (Paige Prostate, the first FDA-authorised AI pathology tool, 2021), assist Gleason grading, count mitoses, and quantify immunohistochemistry such as HER2, PD-L1 and Ki-67, where pathologist agreement is known to be poor at the decision thresholds. Newer models infer molecular states, such as microsatellite instability, directly from routine H&E slides.",
     principle: "Convolutional or transformer networks trained on annotated whole-slide images produce per-region probabilities that are aggregated into detections, grades or scores presented to the pathologist.",
@@ -1130,7 +1130,7 @@ export const technologies: TechnologyInput[] = [
     links: [{ label: "Wikipedia", url: W("Circulating_tumor_cell") }],
   },
   {
-    id: "cfdna-methylation-testing", kind: "technology", name: "Cell-free DNA methylation tests", sections: ["early-detection","diagnostics"], status: "approved", asOf, since: 2024, wikipedia: W("Cell-free_fetal_DNA"),
+    id: "cfdna-methylation-testing", dependsOn: ["liquid-biopsy", "methylation-profiling"], kind: "technology", name: "Cell-free DNA methylation tests", sections: ["early-detection","diagnostics"], status: "approved", asOf, since: 2024, wikipedia: W("Cell-free_fetal_DNA"),
     tldr: "Blood tests that read chemical marks on fragments of DNA shed by tumours; the marks tell cancer DNA from normal DNA and hint at where the cancer is.",
     summary: "Cancer cells carry characteristic DNA methylation patterns that survive in the cell-free DNA shed into blood. Methylation-based tests use bisulfite or enzymatic conversion followed by targeted sequencing to detect a cancer signal and predict its tissue of origin; the multi-cancer early detection test Galleri works this way, and Guardant's Shield, the first blood test approved by the FDA for colorectal cancer screening in 2024, combines methylation with other cfDNA signals. Methylation also underpins some minimal residual disease assays.",
     principle: "Extract cfDNA from plasma, convert unmethylated cytosines, sequence targeted regions, and classify methylation patterns against reference tumour and normal profiles.",
@@ -1160,7 +1160,7 @@ export const technologies: TechnologyInput[] = [
     links: [{ label: "Wikipedia", url: W("Pharmacogenomics") }],
   },
   {
-    id: "ai-mammography-screening", kind: "technology", name: "AI-assisted mammography screening", sections: ["early-detection","ai-computation"], status: "approved", asOf, wikipedia: W("Mammography"),
+    id: "ai-mammography-screening", dependsOn: ["mammography", "ai-compute-platforms"], kind: "technology", name: "AI-assisted mammography screening", sections: ["early-detection","ai-computation"], status: "approved", asOf, wikipedia: W("Mammography"),
     tldr: "Software that reads screening mammograms alongside or before radiologists, catching more cancers and cutting the reading workload in large trials.",
     summary: "Deep-learning readers for mammography have regulatory clearance in Europe and the United States and are being tested as a replacement for one of the two human readers used in European screening programmes. The Swedish MASAI randomised trial found AI-supported screening detected more cancers with a lower reading workload, and the Danish and German programmes have reported similar results in practice. Risk-prediction models from the same images are being studied to personalise screening intervals.",
     principle: "Convolutional networks trained on millions of mammograms produce a suspicion score per breast; low-scoring exams go to single reading and high-scoring ones are flagged for human review or recall.",
@@ -1280,7 +1280,7 @@ export const technologies: TechnologyInput[] = [
     links: [{ label: "Wikipedia", url: W("Bispecific_monoclonal_antibody") }],
   },
   {
-    id: "dendritic-cell-vaccines", kind: "technology", name: "Dendritic cell vaccines", sections: ["immunotherapy"], status: "approved", asOf, since: 2010, wikipedia: W("Sipuleucel-T"),
+    id: "dendritic-cell-vaccines", dependsOn: ["apheresis-starting-material", "cell-therapy-release-testing"], kind: "technology", name: "Dendritic cell vaccines", sections: ["immunotherapy"], status: "approved", asOf, since: 2010, wikipedia: W("Sipuleucel-T"),
     tldr: "Vaccines made from a patient's own antigen-presenting cells loaded with tumour proteins; sipuleucel-T for prostate cancer was the first approved, and newer versions are tested in brain and other cancers.",
     summary: "Dendritic cells present antigens to T cells. Sipuleucel-T, approved in 2010 for metastatic castration-resistant prostate cancer, loads the patient's antigen-presenting cells with a prostatic acid phosphatase fusion protein and reinfuses them, prolonging survival modestly. Later dendritic cell vaccines pulsed with tumour lysate or RNA have reached phase 3 in glioblastoma and are combined with checkpoint inhibitors, while off-the-shelf approaches try to target dendritic cells inside the body.",
     principle: "Leukapheresis harvests monocytes, which are matured into dendritic cells, loaded with antigen and reinfused to prime tumour-specific T cells.",
@@ -1310,7 +1310,7 @@ export const technologies: TechnologyInput[] = [
     links: [{ label: "Wikipedia", url: W("Gamma_delta_T_cell") }],
   },
   {
-    id: "nk-cell-therapy", kind: "technology", name: "NK cell therapy and CAR-NK", sections: ["cell-therapy"], status: "phase-2", asOf, wikipedia: W("Natural_killer_cell"),
+    id: "nk-cell-therapy", dependsOn: ["cell-therapy-cold-chain", "cell-therapy-release-testing"], kind: "technology", name: "NK cell therapy and CAR-NK", sections: ["cell-therapy"], status: "phase-2", asOf, wikipedia: W("Natural_killer_cell"),
     tldr: "Infusions of natural killer cells from donors or cord blood, sometimes fitted with a CAR, offering an off-the-shelf alternative to CAR-T with less cytokine release.",
     summary: "Natural killer cells kill cancer cells without prior sensitisation and do not cause graft-versus-host disease, so donor-derived, cord-blood or iPSC-derived NK products can be made off the shelf. CAR-NK cells against CD19 produced responses in lymphoma in early trials with little cytokine release syndrome or neurotoxicity, and cytokine-induced memory-like NK cells are tested in leukaemia. Limited persistence and expansion in patients remain the central problems.",
     principle: "NK cells from a donor, cord blood or a pluripotent stem cell line are expanded, optionally engineered with a CAR and interleukin-15, and infused after lymphodepletion.",
@@ -1330,7 +1330,7 @@ export const technologies: TechnologyInput[] = [
     links: [{ label: "Wikipedia", url: W("Tabelecleucel") }],
   },
   {
-    id: "lu177-radioligand-therapy", kind: "technology", name: "Lutetium-177 radioligand therapy", sections: ["radiopharma"], status: "approved", asOf, since: 2018, wikipedia: W("Lutetium-177"),
+    id: "lu177-radioligand-therapy", dependsOn: ["radioligand-therapy", "therapy-isotope-supply-chain"], kind: "technology", name: "Lutetium-177 radioligand therapy", sections: ["radiopharma"], status: "approved", asOf, since: 2018, wikipedia: W("Lutetium-177"),
     tldr: "Cancer-seeking molecules carrying the radioactive metal lutetium-177, which delivers short-range radiation to tumours it binds; approved for neuroendocrine tumours and prostate cancer.",
     summary: "Lutetium-177 emits beta particles with a range of a few millimetres and gamma rays that allow imaging, making it the workhorse isotope of radioligand therapy. Lutathera (Lu-177 dotatate, approved 2018) targets somatostatin receptors on neuroendocrine tumours, and Pluvicto (Lu-177 PSMA-617, approved 2022) targets PSMA on prostate cancer; both improved outcomes in randomised trials. Supply of no-carrier-added lutetium, dosimetry and combinations with earlier lines of therapy are the current frontiers.",
     principle: "A peptide or small molecule with high affinity for a tumour receptor is chelated to Lu-177 and infused; bound molecules irradiate the cell and its neighbours over the isotope's 6.6-day half-life.",
@@ -1340,7 +1340,7 @@ export const technologies: TechnologyInput[] = [
     links: [{ label: "Wikipedia", url: W("Lutetium-177") }],
   },
   {
-    id: "astatine-211-alpha-therapy", kind: "technology", name: "Astatine-211 alpha therapy", sections: ["radiopharma"], status: "phase-1", asOf, wikipedia: W("Astatine"),
+    id: "astatine-211-alpha-therapy", dependsOn: ["targeted-alpha-therapy", "medical-cyclotrons-synthesis-modules"], kind: "technology", name: "Astatine-211 alpha therapy", sections: ["radiopharma"], status: "phase-1", asOf, wikipedia: W("Astatine"),
     tldr: "A rare alpha-emitting halogen that can be attached to antibodies and small molecules like iodine, tested in leukaemia conditioning and brain and ovarian cancer.",
     summary: "Astatine-211 is an alpha emitter with a 7.2-hour half-life that behaves chemically like iodine, so it can label antibodies and small molecules by radiohalogenation. Its short range and high energy suit micrometastatic and disseminated disease; academic programmes in Gothenburg, Seattle and Japan have tested At-211 antibodies in ovarian cancer and as anti-CD45 conditioning before transplant, and At-211 PSMA and MABG agents are in early trials. Production requires a cyclotron with alpha beams, limiting supply to a few centres.",
     principle: "At-211 is produced by bombarding bismuth with alpha particles, labelled to a targeting molecule, and delivers high linear-energy-transfer alpha particles over a few cell diameters.",
@@ -1350,7 +1350,7 @@ export const technologies: TechnologyInput[] = [
     links: [{ label: "Wikipedia", url: W("Astatine") }],
   },
   {
-    id: "radioligand-dosimetry", kind: "technology", name: "Radioligand dosimetry", sections: ["radiopharma","imaging"], status: "established", asOf, wikipedia: W("Dosimetry"),
+    id: "radioligand-dosimetry", dependsOn: ["spect"], kind: "technology", name: "Radioligand dosimetry", sections: ["radiopharma","imaging"], status: "established", asOf, wikipedia: W("Dosimetry"),
     tldr: "Measuring, from scans taken after each dose, how much radiation a radioligand actually delivers to the tumour and to kidneys and marrow, so treatment can be personalised.",
     summary: "Radioligand therapies are mostly given at fixed activities, unlike external radiotherapy which is planned to a dose. Post-treatment SPECT or PET imaging at several time points lets physicists calculate absorbed doses to tumours and organs at risk, and trials are testing dose escalation guided by kidney and marrow dosimetry. European regulation now expects dosimetry to be available, and software and imaging protocols are being standardised to make it routine.",
     principle: "Serial quantitative imaging after administration measures activity in organs over time; time-integrated activity and dose kernels give absorbed dose per organ, which guides subsequent cycles.",
