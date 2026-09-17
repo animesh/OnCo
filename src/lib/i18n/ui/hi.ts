@@ -110,6 +110,10 @@ export const hi: UiDict = {
   "tldr.reviewedTitle": "अनुवाद की समीक्षा {reviewer} ने {date} को की।",
   "tldr.mt": "मशीनी",
   "tldr.mtTitle": "मशीन-सहायित अनुवाद, अभी किसी नामित भाषा-भाषी ने समीक्षा नहीं की है। समस्या “संपादन सुझाएँ” से बताएँ।",
+  "summary.mt": "अंग्रेज़ी से मशीनी अनुवाद",
+  "summary.mtReport": "समस्या बताएँ",
+  "summary.showEnglish": "अंग्रेज़ी दिखाएँ",
+  "summary.showTranslation": "{lang} में दिखाएँ",
 
   "strip.text": "शीर्षक और मेनू {language} में हैं। विस्तृत पाठ अंग्रेज़ी में है; बाक़ी आपका ब्राउज़र अनुवादित कर सकता है।",
   "strip.help": "{browser} में पृष्ठ का अनुवाद कैसे करें",

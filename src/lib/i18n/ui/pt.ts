@@ -110,6 +110,10 @@ export const pt: UiDict = {
   "tldr.reviewedTitle": "Tradução revista por {reviewer} em {date}.",
   "tldr.mt": "TA",
   "tldr.mtTitle": "Tradução automática, ainda não revista por um falante identificado. Comunique um problema em Sugerir uma edição.",
+  "summary.mt": "Tradução automática do inglês",
+  "summary.mtReport": "comunicar um problema",
+  "summary.showEnglish": "Mostrar o inglês",
+  "summary.showTranslation": "Mostrar em {lang}",
 
   "strip.text": "Os títulos e menus estão em {language}. O texto detalhado está em inglês; o seu navegador pode traduzir o resto.",
   "strip.help": "Como traduzir uma página no {browser}",

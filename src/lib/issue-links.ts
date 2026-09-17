@@ -74,6 +74,16 @@ export function suggestEditUrl(e: { kind: Kind; id: string; name: string }, extr
   return issueUrl("suggest-edit", { entity: `${entityRef(e.kind, e.id)} · ${e.name}`, field: extra.field, why: extra.why ? `${extra.why} · ${where}` : where }, { title: `edit: ${e.id}${extra.field ? ` · ${extra.field}` : ""}` });
 }
 
+/**
+ * The "Translation fix" issue for a machine-translated summary, with the record, the language (the form's dropdown
+ * label, e.g. "Spanish") and where the text came from prefilled. The translated text itself is long, so the reader
+ * pastes the sentence at fault rather than the URL carrying the whole summary.
+ */
+export function translationFixUrl(e: { kind: Kind; id: string; name: string }, language: string, extra: { model?: string; date?: string; field?: string } = {}): string {
+  const what = `${extra.field ?? "Summary"}, machine translated${extra.model ? ` by ${extra.model}` : ""}${extra.date ? ` on ${extra.date}` : ""}. Page: ${pageUrl(e.kind, e.id)}`;
+  return issueUrl("translation-fix", { entity: `${entityRef(e.kind, e.id)} · ${e.name}`, language, current: what }, { title: `translation: ${e.id} (${language})` });
+}
+
 /** Search the object's Discussions category for threads mentioning this id. */
 export function discussionSearchUrl(id: string): string {
   const q = new URLSearchParams({ discussions_q: `category:${DISCUSSION_CATEGORY} ${id}` });

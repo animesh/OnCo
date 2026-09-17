@@ -110,6 +110,10 @@ export const zh: UiDict = {
   "tldr.reviewedTitle": "译文由 {reviewer} 于 {date} 审校。",
   "tldr.mt": "机译",
   "tldr.mtTitle": "机器辅助翻译，尚未经具名母语者审校。可通过“建议修改”报告问题。",
+  "summary.mt": "由英文机器翻译",
+  "summary.mtReport": "报告问题",
+  "summary.showEnglish": "显示英文原文",
+  "summary.showTranslation": "显示{lang}",
 
   "strip.text": "标题和菜单为{language}。详细文字为英文，其余内容可由浏览器翻译。",
   "strip.help": "如何在 {browser} 中翻译网页",

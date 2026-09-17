@@ -110,6 +110,10 @@ export const ar: UiDict = {
   "tldr.reviewedTitle": "راجع الترجمة {reviewer} بتاريخ {date}.",
   "tldr.mt": "ترجمة آلية",
   "tldr.mtTitle": "ترجمة آلية لم يراجعها بعد متحدث معروف بالاسم. أبلغ عن مشكلة عبر «اقتراح تعديل».",
+  "summary.mt": "ترجمة آلية من الإنجليزية",
+  "summary.mtReport": "أبلغ عن مشكلة",
+  "summary.showEnglish": "عرض النص الإنجليزي",
+  "summary.showTranslation": "العرض بلغة {lang}",
 
   "strip.text": "العناوين والقوائم باللغة {language}. النص المفصل بالإنجليزية؛ ويمكن لمتصفحك ترجمة الباقي.",
   "strip.help": "كيفية ترجمة صفحة في {browser}",

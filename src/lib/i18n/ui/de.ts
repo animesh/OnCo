@@ -110,6 +110,10 @@ export const de: UiDict = {
   "tldr.reviewedTitle": "Übersetzung geprüft von {reviewer} am {date}.",
   "tldr.mt": "MÜ",
   "tldr.mtTitle": "Maschinelle Übersetzung, noch nicht von einer namentlich genannten Person geprüft. Melden Sie Probleme über „Änderung vorschlagen“.",
+  "summary.mt": "Maschinell aus dem Englischen übersetzt",
+  "summary.mtReport": "Problem melden",
+  "summary.showEnglish": "Englisch anzeigen",
+  "summary.showTranslation": "Auf {lang} anzeigen",
 
   "strip.text": "Überschriften und Menüs sind auf {language}. Ausführliche Texte sind auf Englisch; Ihr Browser kann den Rest übersetzen.",
   "strip.help": "So übersetzen Sie eine Seite in {browser}",

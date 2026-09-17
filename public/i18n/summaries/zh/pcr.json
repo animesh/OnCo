@@ -1,0 +1,7 @@
+{
+  "source_hash": "92df54838865337cbc6913b09c88d90c9da86fb4fc08c103826c78a800051a04",
+  "text": "病理完全缓解（pCR）指在术前治疗后，外科医生切除的乳腺组织和淋巴结中不再残留浸润性癌，记录为 ypT0/is ypN0。它在三阴性乳腺癌（TNBC）和 HER2 阳性乳腺癌中具有很强的预后价值，并被接受作为新辅助方案加速批准的依据，如 KEYNOTE-522。目前的试验将其用作决策点：OptimICE-pCR（A012103）研究在达到 pCR 后降阶梯治疗，而其他研究则对残留病灶升阶梯治疗。食管癌以及膀胱癌与尿路上皮癌的条目、CheckMate 816、KATHERINE、PHERGain、NICHE-2 和 MATTERHORN，以及相关术语主要病理缓解（MPR）和临床完全缓解（cCR）均引用了这一术语。",
+  "model": "hand-written example",
+  "date": "2026-09-17",
+  "example": true
+}
