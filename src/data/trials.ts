@@ -30,7 +30,7 @@ const raw: TrialInput[] = [
     summary: "NAVIGATE, trial NCT02576431 sponsored by Bayer through Loxo Oncology, enrolled adults and children with TRK fusion-positive solid tumours of any type. Its early results were pooled with the adult phase 1 study and the paediatric SCOUT trial in the New England Journal of Medicine in 2018: 75% of the first 55 patients responded on independent review across 17 tumour types, and most responses were durable. The data supported the 2018 US accelerated approval of larotrectinib, the first treatment approved for a genomic marker regardless of tumour site, and the 2019 EU approval.",
     result: "ORR 75% by independent review in the first 55 pooled patients across 17 tumour types.",
     outcomes: [{ endpoint: "Objective response rate (independent review, pooled with LOXO-TRK-14001 and SCOUT)", primary: true, unit: "%", arms: [{ name: "Larotrectinib", n: 55, value: 75 }], source: "https://doi.org/10.1056/NEJMoa1714448" }],
-    drugs: ["larotrectinib"], cancers: [], targets: ["ntrk"],
+    drugs: ["larotrectinib"], cancers: ["metastatic-cancer"], targets: ["ntrk"],
     links: [ct("NCT02576431"), { label: "Drilon et al., Efficacy of larotrectinib in TRK fusion-positive cancers in adults and children (NEJM 2018)", url: "https://doi.org/10.1056/NEJMoa1714448" }] }),
   // ---- TNBC ----
   t({ id: "keynote-522", name: "KEYNOTE-522", nct: "NCT03036488", phase: "3", status: "positive", yearReported: 2020, sponsor: "Merck",
