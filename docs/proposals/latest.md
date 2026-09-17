@@ -1,11 +1,311 @@
-# Change proposals 2026-09-16
+# Change proposals 2026-09-17
 
-Drafted by scripts/propose-updates.ts from: factcheck 2026-09-13, trialChanges 2026-09-11, fda 2026-09-09, regional 2026-09-10.
+Drafted by scripts/propose-updates.ts from: factcheck 2026-09-13, trialChanges 2026-09-14, fda 2026-09-16, regional 2026-09-16.
 
 Review each line against its source. Apply by editing the file named; nothing is applied automatically.
 
-## High confidence (32)
+## High confidence (89)
 
+- [ ] **Dorocubicel (UM171-expanded cord blood)** ([page](https://onco-umber.vercel.app/drugs/dorocubicel/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: C(2025, "https://www.ema.europa.eu/en/medicines/human/EPAR/zemcelpro", "Treatment of adult patients with haematological malignancies requiring an alloge")
+  - evidence: EMA register: Zemcelpro (allogeneic umbilical cord-derived CD34- cells, non-expanded;dorocubicel) Authorised (conditional), 2025-08-25. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/zemcelpro))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Mirdametinib** ([page](https://onco-umber.vercel.app/drugs/mirdametinib/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: C(2025, "https://www.ema.europa.eu/en/medicines/human/EPAR/ezmekly", "Ezmekly as monotherapy is indicated for the treatment of symptomatic, inoperable")
+  - evidence: EMA register: Ezmekly (mirdametinib) Authorised (conditional), 2025-07-17. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/ezmekly))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Catumaxomab** ([page](https://onco-umber.vercel.app/drugs/catumaxomab/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2025, "https://www.ema.europa.eu/en/medicines/human/EPAR/korjuny", "Korjuny is indicated for the intraperitoneal treatment of malignant ascites in a")
+  - evidence: EMA register: Korjuny (catumaxomab) Authorised, 2025-02-10. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/korjuny))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Efbemalenograstim alfa** ([page](https://onco-umber.vercel.app/drugs/efbemalenograstim-alfa/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2024, "https://www.ema.europa.eu/en/medicines/human/EPAR/ryzneuta", "Ryzneuta is indicated for the reduction in the duration of neutropenia and the i")
+  - evidence: EMA register: Ryzneuta (efbemalenograstim alfa) Authorised, 2024-03-21. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/ryzneuta))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Melphalan flufenamide** ([page](https://onco-umber.vercel.app/drugs/melflufen/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2022, "https://www.ema.europa.eu/en/medicines/human/EPAR/pepaxti", "Pepaxti is indicated, in combination with dexamethasone, for the treatment of ad")
+  - evidence: EMA register: Pepaxti (melphalan flufenamide) Authorised, 2022-08-17. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/pepaxti))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Capmatinib** ([page](https://onco-umber.vercel.app/drugs/capmatinib/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2022, "https://www.ema.europa.eu/en/medicines/human/EPAR/tabrecta", "Tabrecta as monotherapy is indicated for the treatment of adult patients with ad")
+  - evidence: EMA register: Tabrecta (capmatinib) Authorised, 2022-06-20. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/tabrecta))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Tepotinib** ([page](https://onco-umber.vercel.app/drugs/tepotinib/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2022, "https://www.ema.europa.eu/en/medicines/human/EPAR/tepmetko", "Tepmetko&nbsp;as monotherapy is indicated for the treatment of adult patients wi")
+  - evidence: EMA register: Tepmetko (tepotinib) Authorised, 2022-02-16. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/tepmetko))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Selumetinib** ([page](https://onco-umber.vercel.app/drugs/selumetinib/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: C(2021, "https://www.ema.europa.eu/en/medicines/human/EPAR/koselugo", "Koselugo as monotherapy is indicated for the treatment of symptomatic, inoperabl")
+  - evidence: EMA register: Koselugo (selumetinib) Authorised (conditional), 2021-06-17. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/koselugo))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Daunorubicin** ([page](https://onco-umber.vercel.app/drugs/daunorubicin/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2018, "https://www.ema.europa.eu/en/medicines/human/EPAR/vyxeos-liposomal", "Vyxeos liposomal is indicated for the treatment of adults with newly diagnosed, ")
+  - evidence: EMA register: Vyxeos liposomal (previously Vyxeos) (daunorubicin;cytarabine) Authorised, 2018-08-23. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/vyxeos-liposomal))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Carmustine** ([page](https://onco-umber.vercel.app/drugs/carmustine/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2018, "https://www.ema.europa.eu/en/medicines/human/EPAR/carmustine-medac", "Carmustine is indicated n adults&nbsp;in the following malignant neoplasms as a ")
+  - evidence: EMA register: Carmustine medac (previously Carmustine Obvius) (carmustine) Authorised, 2018-07-18. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/carmustine-medac))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Padeliporfin** ([page](https://onco-umber.vercel.app/drugs/padeliporfin/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2017, "https://www.ema.europa.eu/en/medicines/human/EPAR/tookad", "Tookad is indicated as monotherapy for adult patients with previously untreated,")
+  - evidence: EMA register: Tookad (padeliporfin) Authorised, 2017-11-10. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/tookad))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Telotristat ethyl** ([page](https://onco-umber.vercel.app/drugs/telotristat-ethyl/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2017, "https://www.ema.europa.eu/en/medicines/human/EPAR/xermelo", "Xermelo is indicated for the treatment of carcinoid syndrome diarrhoea in combin")
+  - evidence: EMA register: Xermelo (telotristat ethyl) Authorised, 2017-09-17. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/xermelo))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Rolapitant** ([page](https://onco-umber.vercel.app/drugs/rolapitant/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2017, "https://www.ema.europa.eu/en/medicines/human/EPAR/varuby", "Prevention of delayed nausea and vomiting associated with highly and moderately ")
+  - evidence: EMA register: Varuby (rolapitant) Withdrawn, 2017-04-19. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/varuby))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Mechlorethamine (chlormethine)** ([page](https://onco-umber.vercel.app/drugs/mechlorethamine/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2017, "https://www.ema.europa.eu/en/medicines/human/EPAR/ledaga", "Ledaga is indicated for the topical treatment of mycosis fungoides-type cutaneou")
+  - evidence: EMA register: Ledaga (chlormethine) Authorised, 2017-03-03. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/ledaga))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Dexamethasone** ([page](https://onco-umber.vercel.app/drugs/dexamethasone/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2016, "https://www.ema.europa.eu/en/medicines/human/EPAR/neofordex", "Treatment of multiple myeloma.")
+  - evidence: EMA register: Neofordex (dexamethasone) Authorised, 2016-03-16. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/neofordex))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Necitumumab** ([page](https://onco-umber.vercel.app/drugs/necitumumab/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2016, "https://www.ema.europa.eu/en/medicines/human/EPAR/portrazza", "Portrazza in combination with gemcitabine and cisplatin chemotherapy is indicate")
+  - evidence: EMA register: Portrazza (necitumumab) Withdrawn, 2016-02-15. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/portrazza))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Trametinib** ([page](https://onco-umber.vercel.app/drugs/trametinib/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2014, "https://www.ema.europa.eu/en/medicines/human/EPAR/mekinist", "Melanoma Trametinib&nbsp;as monotherapy or in combination with dabrafenib&nbsp;i")
+  - evidence: EMA register: Mekinist (trametinib) Authorised, 2014-06-30. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/mekinist))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Dabrafenib** ([page](https://onco-umber.vercel.app/drugs/dabrafenib/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2013, "https://www.ema.europa.eu/en/medicines/human/EPAR/tafinlar", "Melanoma Dabrafenib as monotherapy or in combination with trametinib is indicate")
+  - evidence: EMA register: Tafinlar (dabrafenib) Authorised, 2013-08-26. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/tafinlar))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Lipegfilgrastim** ([page](https://onco-umber.vercel.app/drugs/lipegfilgrastim/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2013, "https://www.ema.europa.eu/en/medicines/human/EPAR/lonquex", "Lonquex is indicated in adults and in children 2 years of age and older for redu")
+  - evidence: EMA register: Lonquex (lipegfilgrastim) Authorised, 2013-07-25. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/lonquex))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Ziv-aflibercept** ([page](https://onco-umber.vercel.app/drugs/ziv-aflibercept/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2013, "https://www.ema.europa.eu/en/medicines/human/EPAR/zaltrap", "Treatment of metastatic colorectal cancer (MCRC).")
+  - evidence: EMA register: Zaltrap (aflibercept) Authorised, 2013-02-01. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/zaltrap))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Decitabine** ([page](https://onco-umber.vercel.app/drugs/decitabine/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2012, "https://www.ema.europa.eu/en/medicines/human/EPAR/dacogen", "Treatment of adult patients with newly diagnosed de novo or secondary acute myel")
+  - evidence: EMA register: Dacogen (decitabine) Authorised, 2012-09-20. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/dacogen))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Granisetron** ([page](https://onco-umber.vercel.app/drugs/granisetron/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2012, "https://www.ema.europa.eu/en/medicines/human/EPAR/sancuso", "Prevention of nausea and vomiting in patients receiving moderately or highly eme")
+  - evidence: EMA register: Sancuso (granisetron) Authorised, 2012-04-20. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/sancuso))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Mercaptopurine** ([page](https://onco-umber.vercel.app/drugs/mercaptopurine/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2012, "https://www.ema.europa.eu/en/medicines/human/EPAR/xaluprine", "Xaluprine is indicated for the treatment of acute lymphoblastic leukaemia (ALL) ")
+  - evidence: EMA register: Xaluprine (previously Mercaptopurine Nova Laboratories) (mercaptopurine) Authorised, 2012-03-09. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/xaluprine))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Tegafur, gimeracil and oteracil (S-1)** ([page](https://onco-umber.vercel.app/drugs/tegafur-gimeracil-oteracil/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2011, "https://www.ema.europa.eu/en/medicines/human/EPAR/teysuno", "Teysuno is indicated in adults: - for the treatment of advanced gastric cancer w")
+  - evidence: EMA register: Teysuno (tegafur;gimeracil;oteracil) Authorised, 2011-03-14. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/teysuno))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Denosumab** ([page](https://onco-umber.vercel.app/drugs/denosumab/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2010, "https://www.ema.europa.eu/en/medicines/human/EPAR/prolia", "Treatment of osteoporosis in postmenopausal women and in men at increased risk o")
+  - evidence: EMA register: Prolia (denosumab) Authorised, 2010-05-26. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/prolia))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Ofatumumab** ([page](https://onco-umber.vercel.app/drugs/ofatumumab/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2010, "https://www.ema.europa.eu/en/medicines/human/EPAR/arzerra", "Previously untreated chronic lymphocytic leukaemia (CLL): Arzerra in combination")
+  - evidence: EMA register: Arzerra (ofatumumab) Withdrawn, 2010-04-19. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/arzerra))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Thiotepa** ([page](https://onco-umber.vercel.app/drugs/thiotepa/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2010, "https://www.ema.europa.eu/en/medicines/human/EPAR/tepadina", "TEPADINA is indicated, in combination with other chemotherapy medicinal products")
+  - evidence: EMA register: Tepadina (thiotepa) Authorised, 2010-03-15. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/tepadina))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Vinflunine** ([page](https://onco-umber.vercel.app/drugs/vinflunine/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2009, "https://www.ema.europa.eu/en/medicines/human/EPAR/javlor", "Javlor is indicated in monotherapy for the treatment of adult patients with adva")
+  - evidence: EMA register: Javlor (vinflunine) Authorised, 2009-09-21. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/javlor))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Plerixafor** ([page](https://onco-umber.vercel.app/drugs/plerixafor/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2009, "https://www.ema.europa.eu/en/medicines/human/EPAR/mozobil", "Mozobil is indicated in combination with granulocyte-colony-stimulating factor t")
+  - evidence: EMA register: Mozobil (plerixafor) Authorised, 2009-07-30. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/mozobil))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Histamine dihydrochloride** ([page](https://onco-umber.vercel.app/drugs/histamine-dihydrochloride/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2008, "https://www.ema.europa.eu/en/medicines/human/EPAR/ceplene", "Ceplene maintenance therapy is indicated for adult patients with acute myeloid l")
+  - evidence: EMA register: Ceplene (histamine dihydrochloride) Authorised, 2008-10-07. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/ceplene))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Epoetin alfa** ([page](https://onco-umber.vercel.app/drugs/epoetin-alfa/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2007, "https://www.ema.europa.eu/en/medicines/human/EPAR/retacrit", "Treatment of symptomatic anaemia associated with chronic renal failure (CRF) in ")
+  - evidence: EMA register: Retacrit (epoetin zeta) Authorised, 2007-12-18. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/retacrit))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **HPV bivalent vaccine (types 16 and 18)** ([page](https://onco-umber.vercel.app/drugs/hpv-bivalent-vaccine/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2007, "https://www.ema.europa.eu/en/medicines/human/EPAR/cervarix", "Cervarix is a vaccine for use from the age of 9 years for the prevention of prem")
+  - evidence: EMA register: Cervarix (human papillomavirus vaccine [types 16, 18] (recombinant, adjuvanted, adsorbed)) Authorised, 2007-09-20. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/cervarix))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Nelarabine** ([page](https://onco-umber.vercel.app/drugs/nelarabine/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2007, "https://www.ema.europa.eu/en/medicines/human/EPAR/atriance", "Nelarabine is indicated for the treatment of patients with T-cell acute lymphobl")
+  - evidence: EMA register: Atriance (nelarabine) Authorised, 2007-08-22. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/atriance))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **HPV quadrivalent vaccine (types 6, 11, 16 and 18)** ([page](https://onco-umber.vercel.app/drugs/hpv-quadrivalent-vaccine/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2006, "https://www.ema.europa.eu/en/medicines/human/EPAR/gardasil", "Gardasil is a vaccine for use from the age of 9 years for the prevention of:  pr")
+  - evidence: EMA register: Gardasil (human papillomavirus vaccine [types 6, 11, 16, 18] (recombinant, adsorbed)) Authorised, 2006-09-20. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/gardasil))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Clofarabine** ([page](https://onco-umber.vercel.app/drugs/clofarabine/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2006, "https://www.ema.europa.eu/en/medicines/human/EPAR/evoltra", "Treatment of acute lymphoblastic leukaemia (ALL) in paediatric patients who have")
+  - evidence: EMA register: Evoltra (clofarabine) Authorised, 2006-05-29. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/evoltra))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Palonosetron** ([page](https://onco-umber.vercel.app/drugs/palonosetron/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2005, "https://www.ema.europa.eu/en/medicines/human/EPAR/aloxi", "Aloxi is indicated in adults for:  the prevention of acute nausea and vomiting a")
+  - evidence: EMA register: Aloxi (palonosetron) Authorised, 2005-03-22. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/aloxi))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Anagrelide** ([page](https://onco-umber.vercel.app/drugs/anagrelide/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2004, "https://www.ema.europa.eu/en/medicines/human/EPAR/xagrid", "Xagrid is indicated for the reduction of elevated platelet counts in at-risk ess")
+  - evidence: EMA register: Xagrid (anagrelide) Authorised, 2004-11-15. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/xagrid))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Ibritumomab tiuxetan** ([page](https://onco-umber.vercel.app/drugs/ibritumomab-tiuxetan/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2004, "https://www.ema.europa.eu/en/medicines/human/EPAR/zevalin", "Zevalin is indicated in adults. [90Y]-radiolabelled Zevalin is indicated as cons")
+  - evidence: EMA register: Zevalin (ibritumomab tiuxetan) Lapsed, 2004-01-16. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/zevalin))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Aprepitant (and fosaprepitant)** ([page](https://onco-umber.vercel.app/drugs/aprepitant/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2003, "https://www.ema.europa.eu/en/medicines/human/EPAR/emend", "Emend 40 mg hard capsules is indicated for the prevention of postoperative nause")
+  - evidence: EMA register: Emend (aprepitant) Authorised, 2003-11-11. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/emend))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Busulfan** ([page](https://onco-umber.vercel.app/drugs/busulfan/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2003, "https://www.ema.europa.eu/en/medicines/human/EPAR/busilvex", "Busilvex followed by cyclophosphamide (BuCy2) is indicated as conditioning treat")
+  - evidence: EMA register: Busilvex (busulfan) Withdrawn, 2003-07-09. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/busilvex))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Pegfilgrastim** ([page](https://onco-umber.vercel.app/drugs/pegfilgrastim/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2002, "https://www.ema.europa.eu/en/medicines/human/EPAR/neulasta", "Reduction in the duration of neutropenia and the incidence of febrile neutropeni")
+  - evidence: EMA register: Neulasta (pegfilgrastim) Authorised, 2002-08-22. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/neulasta))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Temoporfin** ([page](https://onco-umber.vercel.app/drugs/temoporfin/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2001, "https://www.ema.europa.eu/en/medicines/human/EPAR/foscan", "Foscan is indicated for the palliative treatment of patients with advanced head ")
+  - evidence: EMA register: Foscan (temoporfin) Authorised, 2001-10-24. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/foscan))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Cytarabine** ([page](https://onco-umber.vercel.app/drugs/cytarabine/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2001, "https://www.ema.europa.eu/en/medicines/human/EPAR/depocyte", "Intrathecal treatment of lymphomatous meningitis. In the majority of patients su")
+  - evidence: EMA register: DepoCyte (cytarabine) Withdrawn, 2001-07-11. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/depocyte))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Alemtuzumab** ([page](https://onco-umber.vercel.app/drugs/alemtuzumab/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2001, "https://www.ema.europa.eu/en/medicines/human/EPAR/mabcampath", "MabCampath is indicated for the treatment of patients with B-cell chronic lympho")
+  - evidence: EMA register: MabCampath (alemtuzumab) Withdrawn, 2001-07-06. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/mabcampath))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Darbepoetin alfa** ([page](https://onco-umber.vercel.app/drugs/darbepoetin-alfa/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2001, "https://www.ema.europa.eu/en/medicines/human/EPAR/aranesp", "Treatment of symptomatic anaemia associated with chronic renal failure (CRF) in ")
+  - evidence: EMA register: Aranesp (darbepoetin alfa) Authorised, 2001-06-08. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/aranesp))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Bexarotene** ([page](https://onco-umber.vercel.app/drugs/bexarotene/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2001, "https://www.ema.europa.eu/en/medicines/human/EPAR/targretin", "Targretin capsules are indicated for the treatment of skin manifestations of adv")
+  - evidence: EMA register: Targretin (bexarotene) Authorised, 2001-03-29. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/targretin))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Zoledronic acid** ([page](https://onco-umber.vercel.app/drugs/zoledronic-acid/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2001, "https://www.ema.europa.eu/en/medicines/human/EPAR/zometa", "Prevention of skeletal related events (pathological fractures, spinal compressio")
+  - evidence: EMA register: Zometa (zoledronic acid) Authorised, 2001-03-20. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/zometa))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Rasburicase** ([page](https://onco-umber.vercel.app/drugs/rasburicase/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2001, "https://www.ema.europa.eu/en/medicines/human/EPAR/fasturtec", "Treatment and prophylaxis of acute hyperuricaemia, in order to prevent acute ren")
+  - evidence: EMA register: Fasturtec (rasburicase) Authorised, 2001-02-23. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/fasturtec))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Capecitabine** ([page](https://onco-umber.vercel.app/drugs/capecitabine/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2001, "https://www.ema.europa.eu/en/medicines/human/EPAR/xeloda", "Xeloda is indicated for the adjuvant treatment of patients following surgery of ")
+  - evidence: EMA register: Xeloda (capecitabine) Authorised, 2001-02-02. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/xeloda))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Thyrotropin alfa** ([page](https://onco-umber.vercel.app/drugs/thyrotropin-alfa/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(2000, "https://www.ema.europa.eu/en/medicines/human/EPAR/thyrogen", "Thyrogen is indicated for use with serum thyroglobulin (Tg) testing with or with")
+  - evidence: EMA register: Thyrogen (thyrotropin alfa) Authorised, 2000-03-09. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/thyrogen))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Tasonermin** ([page](https://onco-umber.vercel.app/drugs/tasonermin/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(1999, "https://www.ema.europa.eu/en/medicines/human/EPAR/beromun", "Beromun is indicated in adults as an adjunct to surgery for subsequent removal o")
+  - evidence: EMA register: Beromun (tasonermin) Authorised, 1999-04-12. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/beromun))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Imiquimod** ([page](https://onco-umber.vercel.app/drugs/imiquimod/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(1998, "https://www.ema.europa.eu/en/medicines/human/EPAR/aldara", "Imiquimod cream is indicated for the topical treatment of :  External genital an")
+  - evidence: EMA register: Aldara (imiquimod) Authorised, 1998-09-18. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/aldara))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Samarium-153 lexidronam** ([page](https://onco-umber.vercel.app/drugs/samarium-153-lexidronam/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(1998, "https://www.ema.europa.eu/en/medicines/human/EPAR/quadramet", "Quadramet is indicated for the relief of bone pain in patients with multiple pai")
+  - evidence: EMA register: Quadramet (samarium [153Sm] lexidronam pentasodium) Authorised, 1998-02-04. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/quadramet))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Ibandronic acid** ([page](https://onco-umber.vercel.app/drugs/ibandronic-acid/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(1996, "https://www.ema.europa.eu/en/medicines/human/EPAR/bondronat", "Bondronat is indicated for:  prevention of skeletal events (pathological fractur")
+  - evidence: EMA register: Bondronat (ibandronic acid) Authorised, 1996-06-25. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/bondronat))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Toremifene** ([page](https://onco-umber.vercel.app/drugs/toremifene/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(1996, "https://www.ema.europa.eu/en/medicines/human/EPAR/fareston", "First line hormone treatment of hormone-dependent metastatic breast cancer in po")
+  - evidence: EMA register: Fareston (toremifene) Authorised, 1996-02-14. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/fareston))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Sasanlimab** ([page](https://onco-umber.vercel.app/drugs/sasanlimab/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(<year>, "https://www.ema.europa.eu/en/medicines/human/EPAR/zumrad", "Treatment of bladder cancer in adults indicated for the treatment of adult indic")
+  - evidence: EMA register: Zumrad (sasanlimab) Application withdrawn. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/zumrad))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Filgrastim (G-CSF)** ([page](https://onco-umber.vercel.app/drugs/filgrastim/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(<year>, "https://www.ema.europa.eu/en/medicines/human/EPAR/zefylti-0", "Zefylti is indicated for the reduction in the duration of neutropenia and the in")
+  - evidence: EMA register: Zefylti (filgrastim) Application withdrawn. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/zefylti-0))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Omacetaxine mepesuccinate** ([page](https://onco-umber.vercel.app/drugs/omacetaxine/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(<year>, "https://www.ema.europa.eu/en/medicines/human/EPAR/tekinex", "")
+  - evidence: EMA register: Tekinex () Application withdrawn. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/tekinex))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Ixabepilone** ([page](https://onco-umber.vercel.app/drugs/ixabepilone/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(<year>, "https://www.ema.europa.eu/en/medicines/human/EPAR/ixempra", "")
+  - evidence: EMA register: Ixempra () Application withdrawn. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/ixempra))
+  - file: `src/data/regional-approvals.ts`
+- [ ] **Vorinostat** ([page](https://onco-umber.vercel.app/drugs/vorinostat/)) · regional-row · `EU`
+  - current: (no EU entry)
+  - proposed: EU: A(<year>, "https://www.ema.europa.eu/en/medicines/human/EPAR/vorinostat-msd", "")
+  - evidence: EMA register: Vorinostat MSD () Application withdrawn. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/vorinostat-msd))
+  - file: `src/data/regional-approvals.ts`
 - [ ] **Sevabertinib** ([page](https://onco-umber.vercel.app/drugs/sevabertinib/)) · regulatory-event · `regulatoryEvents`
   - current: 0 events; none dated 2026-09-09
   - proposed: { date: "2026-09-09", type: "approval", region: "US", note: "grants accelerated approval to sevabertinib for locally advanced or metastatic non-squamous non-small cell lung cancer (accelerated)", source: "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-sevabertinib-locally-advanced-or-metastatic-non-squamous-non-small" }
@@ -26,6 +326,11 @@ Review each line against its source. Apply by editing the file named; nothing is
   - proposed: { date: "2026-08-25", type: "approval", region: "US", note: "approves zanidatamab-hrii and tislelizumab-jsgr for HER2-positive gastric, gastroesophageal junction, or esophageal adenocarcinoma", source: "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-zanidatamab-hrii-and-tislelizumab-jsgr-her2-positive-gastric-gastroesophageal-junction" }
   - evidence: On August 25, 2026, the Food and Drug Administration approved zanidatamab-hrii (Ziihera, Jazz Pharmaceuticals) in combination with fluoropyrimidine- and platinum-containing chemotherapy and tislelizumab-jsgr (Tevimbra, BeOne Medicines USA, Inc.), as first-line treatment for adults with HER2-positive ([source](https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-zanidatamab-hrii-and-tislelizumab-jsgr-her2-positive-gastric-gastroesophageal-junction))
   - file: `src/data/drugs.ts:373`
+- [ ] **Dexamethasone** ([page](https://onco-umber.vercel.app/drugs/dexamethasone/)) · regulatory-event · `regulatoryEvents`
+  - current: 0 events; none dated 2026-08-13
+  - proposed: { date: "2026-08-13", type: "approval", region: "US", note: "grants accelerated approval to iberdomide with daratumumab and hyaluronidase-fihj and dexamethasone for multiple myeloma (accelerated)", source: "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-iberdomide-daratumumab-and-hyaluronidase-fihj-and-dexamethasone" }
+  - evidence: On August 13, 2026, the Food and Drug Administration granted accelerated approval to iberdomide (Zenbexus, Bristol-Myers Squibb Company) in combination with daratumumab and hyaluronidase-fihj and dexamethasone for adults with multiple myeloma who have received at least one prior line of therapy incl ([source](https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-iberdomide-daratumumab-and-hyaluronidase-fihj-and-dexamethasone))
+  - file: `src/data/drugs-approved-wave1.ts:197`
 - [ ] **Daratumumab** ([page](https://onco-umber.vercel.app/drugs/daratumumab/)) · regulatory-event · `regulatoryEvents`
   - current: 4 events; none dated 2026-08-13
   - proposed: { date: "2026-08-13", type: "approval", region: "US", note: "grants accelerated approval to iberdomide with daratumumab and hyaluronidase-fihj and dexamethasone for multiple myeloma (accelerated)", source: "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-iberdomide-daratumumab-and-hyaluronidase-fihj-and-dexamethasone" }
@@ -116,6 +421,11 @@ Review each line against its source. Apply by editing the file named; nothing is
   - proposed: { date: "2026-06-12", type: "approval", region: "US", note: "approves capivasertib with abiraterone and prednisone for PTEN-deficient androgen pathway modulation-naïve or -sensitive prostate cancer", source: "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-capivasertib-abiraterone-and-prednisone-pten-deficient-androgen-pathway-modulation" }
   - evidence: On June 12, 2026, the Food and Drug Administration approved capivasertib (Truqap, AstraZeneca) in combination with abiraterone and prednisone for adults with metastatic androgen pathway modulation-naïve or -sensitive (mAPMN/S) prostate cancer (previously referred to as metastatic hormone-sensitive p ([source](https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-capivasertib-abiraterone-and-prednisone-pten-deficient-androgen-pathway-modulation))
   - file: `src/data/drugs.ts:609`
+- [ ] **Prednisone** ([page](https://onco-umber.vercel.app/drugs/prednisone/)) · regulatory-event · `regulatoryEvents`
+  - current: 0 events; none dated 2026-06-12
+  - proposed: { date: "2026-06-12", type: "approval", region: "US", note: "approves capivasertib with abiraterone and prednisone for PTEN-deficient androgen pathway modulation-naïve or -sensitive prostate cancer", source: "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-capivasertib-abiraterone-and-prednisone-pten-deficient-androgen-pathway-modulation" }
+  - evidence: On June 12, 2026, the Food and Drug Administration approved capivasertib (Truqap, AstraZeneca) in combination with abiraterone and prednisone for adults with metastatic androgen pathway modulation-naïve or -sensitive (mAPMN/S) prostate cancer (previously referred to as metastatic hormone-sensitive p ([source](https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-capivasertib-abiraterone-and-prednisone-pten-deficient-androgen-pathway-modulation))
+  - file: `src/data/drugs-approved-wave1.ts:202`
 - [ ] **Pembrolizumab** ([page](https://onco-umber.vercel.app/drugs/pembrolizumab/)) · regulatory-event · `regulatoryEvents`
   - current: 10 events; none dated 2026-06-12
   - proposed: { date: "2026-06-12", type: "approval", region: "US", note: "approves belzutifan with pembrolizumab for adjuvant treatment of renal cell carcinoma", source: "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-belzutifan-pembrolizumab-adjuvant-treatment-renal-cell-carcinoma" }
@@ -141,33 +451,8 @@ Review each line against its source. Apply by editing the file named; nothing is
   - proposed: { date: "2026-05-22", type: "approval", region: "US", note: "approves datopotamab deruxtecan-dlnk for unresectable or metastatic triple-negative breast cancer", source: "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-datopotamab-deruxtecan-dlnk-unresectable-or-metastatic-triple-negative-breast-cancer" }
   - evidence: On May 22, 2026, the Food and Drug Administration approved datopotamab deruxtecan-dlnk (Datroway, Daiichi Sankyo, Inc.) for adult patients with unresectable or metastatic triple-negative breast cancer (TNBC) who are not candidates for PD-1/PD-L1 inhibitor therapy. ([source](https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-datopotamab-deruxtecan-dlnk-unresectable-or-metastatic-triple-negative-breast-cancer))
   - file: `src/data/drugs.ts:41`
-- [ ] **Trastuzumab deruxtecan** ([page](https://onco-umber.vercel.app/drugs/trastuzumab-deruxtecan/)) · regulatory-event · `regulatoryEvents`
-  - current: 9 events; none dated 2026-05-15
-  - proposed: { date: "2026-05-15", type: "approval", region: "US", note: "approves two separate indications for fam-trastuzumab deruxtecan-nxki in HER2-positive early-stage breast cancer", source: "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-two-separate-indications-fam-trastuzumab-deruxtecan-nxki-her2-positive-early-stage" }
-  - evidence: On May 15, 2026, the Food and Drug Administration (FDA) approved fam-trastuzumab deruxtecan-nxki (T-DXd, Enhertu, Daiichi Sankyo, Inc.) for two separate indications in adults with HER2-positive early-stage breast cancer. The first indication is for T-DXd followed by a taxane, trastuzumab, and pertuz ([source](https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-two-separate-indications-fam-trastuzumab-deruxtecan-nxki-her2-positive-early-stage))
-  - file: `src/data/drugs.ts:23`
-- [ ] **Trastuzumab** ([page](https://onco-umber.vercel.app/drugs/trastuzumab/)) · regulatory-event · `regulatoryEvents`
-  - current: 6 events; none dated 2026-05-15
-  - proposed: { date: "2026-05-15", type: "approval", region: "US", note: "approves two separate indications for fam-trastuzumab deruxtecan-nxki in HER2-positive early-stage breast cancer", source: "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-two-separate-indications-fam-trastuzumab-deruxtecan-nxki-her2-positive-early-stage" }
-  - evidence: On May 15, 2026, the Food and Drug Administration (FDA) approved fam-trastuzumab deruxtecan-nxki (T-DXd, Enhertu, Daiichi Sankyo, Inc.) for two separate indications in adults with HER2-positive early-stage breast cancer. The first indication is for T-DXd followed by a taxane, trastuzumab, and pertuz ([source](https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-two-separate-indications-fam-trastuzumab-deruxtecan-nxki-her2-positive-early-stage))
-  - file: `src/data/drugs.ts:697`
-- [ ] **Pertuzumab** ([page](https://onco-umber.vercel.app/drugs/pertuzumab/)) · regulatory-event · `regulatoryEvents`
-  - current: 4 events; none dated 2026-05-15
-  - proposed: { date: "2026-05-15", type: "approval", region: "US", note: "approves two separate indications for fam-trastuzumab deruxtecan-nxki in HER2-positive early-stage breast cancer", source: "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-two-separate-indications-fam-trastuzumab-deruxtecan-nxki-her2-positive-early-stage" }
-  - evidence: On May 15, 2026, the Food and Drug Administration (FDA) approved fam-trastuzumab deruxtecan-nxki (T-DXd, Enhertu, Daiichi Sankyo, Inc.) for two separate indications in adults with HER2-positive early-stage breast cancer. The first indication is for T-DXd followed by a taxane, trastuzumab, and pertuz ([source](https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-two-separate-indications-fam-trastuzumab-deruxtecan-nxki-her2-positive-early-stage))
-  - file: `src/data/spikes/breast-her2-positive.ts:168`
-- [ ] **Atezolizumab** ([page](https://onco-umber.vercel.app/drugs/atezolizumab/)) · regulatory-event · `regulatoryEvents`
-  - current: 9 events; none dated 2026-05-15
-  - proposed: { date: "2026-05-15", type: "approval", region: "US", note: "approves atezolizumab for adjuvant treatment of muscle invasive bladder cancer in patients with molecular residual disease", source: "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-atezolizumab-adjuvant-treatment-muscle-invasive-bladder-cancer-patients-molecular" }
-  - evidence: On May 15, 2026, the Food and Drug Administration approved atezolizumab (Tecentriq, Genentech, Inc. and atezolizumab and hyaluronidase-tqjs (Tecentriq Hybreza, Genentech, Inc.) as adjuvant treatments for adults with muscle invasive bladder cancer (MIBC) after cystectomy who have circulating tumor DN ([source](https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-atezolizumab-adjuvant-treatment-muscle-invasive-bladder-cancer-patients-molecular))
-  - file: `src/data/drugs.ts:274`
-- [ ] **Venetoclax** ([page](https://onco-umber.vercel.app/drugs/venetoclax/)) · regulatory-event · `regulatoryEvents`
-  - current: 5 events; none dated 2026-05-13
-  - proposed: { date: "2026-05-13", type: "approval", region: "US", note: "approves oral combination of decitabine and cedazuridine tablets with venetoclax for newly diagnosed acute myeloid leukemia", source: "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-oral-combination-decitabine-and-cedazuridine-tablets-venetoclax-newly-diagnosed-acute" }
-  - evidence: On May 13, 2026, the Food and Drug Administration approved an oral combination of decitabine and cedazuridine tablets (Inqovi, Taiho Oncology, Inc.) with venetoclax for the treatment of newly diagnosed acute myeloid leukemia (AML) in adults 75 years or older, or who have comorbidities that preclude  ([source](https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-oral-combination-decitabine-and-cedazuridine-tablets-venetoclax-newly-diagnosed-acute))
-  - file: `src/data/drugs.ts:681`
 
-## Medium confidence (3)
+## Medium confidence (5)
 
 - [ ] **TOWER** ([page](https://onco-umber.vercel.app/trials/tower/)) · trial-status · `status`
   - current: positive
@@ -179,6 +464,16 @@ Review each line against its source. Apply by editing the file named; nothing is
   - proposed: add { region: "US", year: <from label>, indication: <from label> } and set status to approved
   - evidence: openFDA has a label for "Givinostat" ([source](https://open.fda.gov/apis/drug/label/))
   - file: `src/data/drugs-pipeline-wave1.ts:541`
+- [ ] **Study of Sacituzumab Govitecan Combinations in First-line Treatment of Participants With Advanced or Metastatic Non-Small-Cell Lung Cancer (NSCLC)** ([page](https://onco-umber.vercel.app/trials/nct05186974/)) · trial-completion · `yearReported / calendar`
+  - current: 2026-09
+  - proposed: 2027-03
+  - evidence: Primary completion date moved from 2026-09 to 2027-03; check the readout calendar entry. ([source](https://clinicaltrials.gov/study/NCT05186974))
+  - file: `src/data/pipeline-trials-wave5.ts:3600`
+- [ ] **A Study to Evaluate Adverse Events and Change in Disease Activity of Subcutaneous (SC) Epcoritamab As Monotherapy or Combined With Standard of Care Th** ([page](https://onco-umber.vercel.app/trials/nct05201248/)) · trial-completion · `yearReported / calendar`
+  - current: 2025-04
+  - proposed: 2026-09
+  - evidence: Primary completion date moved from 2025-04 to 2026-09; check the readout calendar entry. ([source](https://clinicaltrials.gov/study/NCT05201248))
+  - file: `src/data/pipeline-trials-wave5.ts:1710`
 - [ ] **FDA approves allogeneic regulatory T cell-based immunotherapy with HSPC and T cells-vldq for use in matched donor hematopoietic stem cell transplantation for adults with hematologic malignancies** · new-product · `new drug record`
   - current: (not in corpus)
   - proposed: add product (see notice) with a US approval dated 2026-06-30
