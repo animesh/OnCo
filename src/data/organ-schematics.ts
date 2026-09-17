@@ -55,7 +55,7 @@ export const ORGAN_SCHEMATICS: OrganSchematic[] = [
       add(m, polyline([[1.3, 0.6, -0.4], [2.0, 0.9, 0.1], [2.6, 1.5, -0.1], [2.2, 2.3, 0]], "soft")); // lymphatic route
       return m;
     } },
-  { id: "lung", name: "Lungs, pleura and mediastinum", cancers: ["nsclc", "sclc", "mesothelioma", "thymic-epithelial", "pleuropulmonary-blastoma", "inflammatory-myofibroblastic-tumour"],
+  { id: "lung", name: "Lungs, pleura and mediastinum", cancers: ["nsclc", "sclc", "mesothelioma", "pleural-mesothelioma", "thymic-epithelial", "pleuropulmonary-blastoma", "inflammatory-myofibroblastic-tumour"],
     caption: "Central tumours arise in the large airways, peripheral ones in the alveoli; both drain to hilar then mediastinal nodes, and the pleural lining is a separate cancer site.",
     subsites: [
       { id: "central", label: "Central airways (squamous, small-cell)", at: [-0.75, 0.55, 0.05], match: ["squamous", "small-cell", "small cell", "sclc", "neuroendocrine", "pleuropulmonary", "tracheobronchial", "bronchus", "myofibroblastic"] },
@@ -77,7 +77,7 @@ export const ORGAN_SCHEMATICS: OrganSchematic[] = [
       add(m, ellipsoid(0.45, 0.35, 0.2, 3, 8, "soft"), { at: [0, 1.05, 0.75] }); // thymus
       return m;
     } },
-  { id: "colorectum", name: "Colon, rectum, anus and appendix", cancers: ["colorectal", "anal", "appendiceal", "small-bowel"],
+  { id: "colorectum", name: "Colon, rectum, anus and appendix", cancers: ["peritoneal-mesothelioma", "colorectal", "anal", "appendiceal", "small-bowel"],
     caption: "Right-sided tumours behave differently from left-sided and rectal ones; the colon drains along its mesenteric vessels, the rectum into the mesorectum and pelvic side wall.",
     subsites: [
       { id: "right", label: "Right colon (MSI-high, BRAF commoner)", at: [-1.7, 0.3, 0], match: ["msi", "mmr", "braf", "right", "cms1", "mucinous", "serrated", "duodenal", "jejunal", "ileal", "small bowel"] },
@@ -85,6 +85,7 @@ export const ORGAN_SCHEMATICS: OrganSchematic[] = [
       { id: "rectum", label: "Rectum", at: [0.45, -2.15, 0], match: ["rectal", "rectum"] },
       { id: "anus", label: "Anal canal (HPV squamous)", at: [0.45, -2.7, 0.05], match: ["anal", "squamous", "hpv", "p16", "hiv"] },
       { id: "appendix", label: "Appendix", at: [-1.95, -1.55, 0.1], match: ["appendiceal", "pseudomyxoma", "goblet", "lamn", "hamn", "carcinoid"] },
+      { id: "peritoneum", label: "Peritoneum and omentum (mesothelioma, peritoneal spread)", at: [0, 1.3, 0.3], match: ["peritone", "omentum", "mesothelioma", "mesothelial", "multicystic", "peritoneal metastas"] },
     ],
     nodes: [{ label: "pericolic", at: [-1.15, 0.65, 0.15] }, { label: "mesenteric root", at: [0, 0.1, 0.25] }, { label: "para-aortic", at: [0, 0.75, -0.25] }, { label: "mesorectal", at: [0.95, -2.0, 0.25] }, { label: "lateral pelvic and inguinal (anal)", at: [1.5, -2.45, 0] }],
     build: () => {

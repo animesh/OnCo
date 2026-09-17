@@ -62,6 +62,8 @@ const PHASE3_WITHOUT_NCT = new Set(["abc-02", "bilcap", "cadance-304", "circulat
   "ace-breast-02",
   // UK MRC trial run before ClinicalTrials.gov registration was required; registered as ISRCTN72251782.
   "pt-1",
+  // Radiotherapy trials from the pre-registration era: CALGB 9343 (opened 1994), DAHANCA 5 (1986 to 1994), START-B, CHHiP, HYPO-RT-PC, PRIME II, IMPORT LOW and QUARTZ (UK and Nordic trials registered with ISRCTN only).
+  "calgb-9343", "dahanca-5", "start-b", "chhip", "hypo-rt-pc", "prime-ii", "import-low", "quartz", "fast-forward",
   // Indian academic trials registered with the Clinical Trials Registry - India (CTRI) or run before registration was required.
   "low-dose-nivolumab-tmh", "metronomic-vs-cisplatin-tmh", "metro-plus-varanasi", "gefitinib-chemo-tmh", "progesterone-preop-tmh", "lidocaine-peritumoral-tmh", "osmanabad-hpv-screening", "kerala-oral-screening", "mumbai-via-screening"]);
 

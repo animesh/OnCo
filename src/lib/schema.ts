@@ -142,6 +142,8 @@ export const CancerSchema = Base.extend({
   /** What is coming: ids of drugs/technologies/trials/ideas. */
   pipeline: z.array(id).default([]),
   openProblems: z.array(z.string()).default([]),
+  /** The broader cancer this record is a subtype of (pleural mesothelioma -> mesothelioma); the parent page lists its subtypes at the top. */
+  parent: id.optional(),
 });
 
 export const SectionSchema = Base.extend({

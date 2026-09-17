@@ -67,6 +67,8 @@ import { drugsChinaWave1 } from "./drugs-china-wave1";
 import { pvCancer, pvTrials, pvTerms, pvIdeas } from "./polycythaemia-vera";
 import { etCancer, etTrials, aspirinDrug } from "./essential-thrombocythaemia";
 import { radiationTechnologies, radiationTerms } from "./radiation-wave1";
+import { radiationTrials } from "./radiation-wave2";
+import { cancerSubtypes, cancerParents } from "./cancer-subtypes";
 import { pipelineTrialsWave3 } from "./pipeline-trials-wave3";
 import { pipelineTrialsWave4 } from "./pipeline-trials-wave4";
 import { pipelineTrialsWave5 } from "./pipeline-trials-wave5";
@@ -133,12 +135,16 @@ const RAW_INPUTS: EntityInput[] = [
   ...companiesSponsors,
   ...drugsPipelineWave1,
   ...pipelineTrialsWave2,
-  ...drugsPipelineWave2, ...drugsPipelineWave6, ...drugsPipelineWave7, ...drugsChinaWave1, pvCancer, ...pvTrials, ...pvTerms, ...pvIdeas, etCancer, ...etTrials, aspirinDrug, ...radiationTechnologies, ...radiationTerms,
+  ...drugsPipelineWave2, ...drugsPipelineWave6, ...drugsPipelineWave7, ...drugsChinaWave1, pvCancer, ...pvTrials, ...pvTerms, ...pvIdeas, etCancer, ...etTrials, aspirinDrug, ...radiationTechnologies, ...radiationTerms, ...radiationTrials, ...cancerSubtypes,
   ...pipelineTrialsWave3,
   ...pipelineTrialsWave4,
   ...pipelineTrialsWave5, ...pipelineTrialsWave6,
 ];
 
 /** Every input, with glossary terms mapped to their canonical category (see ./term-categories.ts). */
-export const ALL_INPUTS: EntityInput[] = RAW_INPUTS.map((e) => (e.kind === "term" ? { ...e, category: canonicalTermCategory(e.id, e.category) } : e));
+export const ALL_INPUTS: EntityInput[] = RAW_INPUTS.map((e) => {
+  if (e.kind === "term") return { ...e, category: canonicalTermCategory(e.id, e.category) };
+  if (e.kind === "cancer" && !e.parent && cancerParents[e.id]) return { ...e, parent: cancerParents[e.id] };
+  return e;
+});
 

@@ -602,12 +602,27 @@ function RoadmapSteps({ r }: { r: Roadmap }) {
   </>);
 }
 
+/** Subtypes with pages of their own, and the broader type this one belongs to, shown before anything else on a cancer page. */
+function CancerFamily({ c }: { c: Cancer }) {
+  const g = graph();
+  const children = g.kind("cancer").filter((x) => x.parent === c.id);
+  const parent = c.parent ? g.get(c.parent) : undefined;
+  if (!children.length && !parent) return null;
+  return (
+    <div className="mb-6 flex flex-wrap items-center gap-2 text-sm">
+      {parent && <><span className="text-muted">Part of</span><Link href={routeFor(parent)} className="pill hover:border-accent"><CancerIcon cancerId={parent.id} className="h-4 w-4" /> {parent.name}</Link></>}
+      {children.length > 0 && <><span className="text-muted">{parent ? "Types" : `Types of ${c.name.replace(/\s*\(.*$/, "")}`}</span>{children.map((x) => <Link key={x.id} href={routeFor(x)} className="pill hover:border-accent"><CancerIcon cancerId={x.id} className="h-4 w-4" /> {x.name}</Link>)}</>}
+    </div>
+  );
+}
+
 function cancerTabs(c: Cancer): Tab[] {
   const g = graph();
   const forMe = g.forCancer(c.id);
   const nRel = [...forMe.values()].reduce((a, l) => a + l.length, 0);
   return [
     { id: "overview", label: "Overview", content: <>
+      <CancerFamily c={c} />
       <Summary e={c} />
       <Block title="State of the art"><SurvivalDisclosure items={c.stateOfArt} skipId={c.id} /></Block>
       {journeysForCancer(c.id).length > 0 && <div className="card p-4 mt-6"><div className="kicker mb-1"><TL text="Treatment journeys" /></div><p className="text-sm text-muted mb-2">What the next twelve months look like, phase by phase, with the decision points.</p><div className="flex flex-wrap gap-1.5">{journeysForCancer(c.id).map((j) => <Link key={j.id} href={`/journeys/${j.id}/`} className="chip border bg-card border-border hover:bg-foreground/5">{j.stage}</Link>)}</div></div>}
