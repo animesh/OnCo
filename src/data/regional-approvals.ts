@@ -477,7 +477,6 @@ export const regionalApprovals: Record<string, RegionalRow> = {
   utidelone: { CN: A(2021, NMPA, "Recurrent or metastatic breast cancer after anthracycline and taxane, with capecitabine (Mar 2021)") },
   inetetamab: { CN: A(2020, NMPA, "HER2-positive metastatic breast cancer after chemotherapy, with vinorelbine (June 2020)") },
   linperlisib: { CN: A(2022, NMPA, "Relapsed or refractory follicular lymphoma after two or more lines, conditional (Nov 2022)") },
-  gumarontinib: { CN: A(2023, NMPA, "NSCLC with MET exon 14 skipping, conditional (Mar 2023)") },
   surufatinib: { CN: A(2020, NMPA, "Advanced non-pancreatic neuroendocrine tumours (Dec 2020); pancreatic neuroendocrine tumours (June 2021)") },
   "recombinant-human-endostatin": { CN: A(2005, NMPA, "Advanced NSCLC with vinorelbine and cisplatin (Sept 2005)") },
   "h101-oncolytic-adenovirus": { CN: A(2005, NMPA, "Late-stage nasopharyngeal carcinoma with chemotherapy (Nov 2005)") },

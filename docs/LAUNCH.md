@@ -271,9 +271,9 @@ The owner's patient-first roadmap (a real-case "For me", persistent cancer choic
 
 ### China deep dive, wave 1 (16 Sept 2026, evening)
 
-- Twelve NMPA-approved cancer medicines that were missing joined china.ts's earlier set: benmelstobart, iruplinalkib, flumatinib, utidelone, inetetamab, linperlisib, gumarontinib, surufatinib, Endostar, Oncorine (H101), QL1706 and mecapegfilgrastim, each with its China approval row, developer and cancer links; five developers added (Biostar, 3SBio, Juventas, Shanghai Yingli, Shanghai Sunway). China rows added for befotertinib, fluzoparib, pamiparib and dabrafenib.
+- Eleven NMPA-approved cancer medicines that were missing joined china.ts's earlier set: benmelstobart, iruplinalkib, flumatinib, utidelone, inetetamab, linperlisib, surufatinib, Endostar, Oncorine (H101), QL1706 and mecapegfilgrastim, each with its China approval row, developer and cancer links; five developers added (Biostar, 3SBio, Juventas, Shanghai Yingli, Shanghai Sunway). China rows added for befotertinib, fluzoparib, pamiparib and dabrafenib.
 - Left out on purpose because the approval facts were not certain enough: unecritinib, ripertamab, becotatug vedotin, satri-cel, vorolanib, socazolimab, plinabulin. Next: confirm those from NMPA notices, then the Chinese sponsors in the registry cache with no company record (Jacobio, ImmVira, Binhui, Beijing Mabworks, Chengdu Zenitar and about twenty more).
-- Two Hansoh records exist (hansoh and hansoh-pharma); merge them.
+- Two Hansoh records exist (hansoh and hansoh-pharma); merge them. Gumarontinib turned out to be the INN of glumetinib (SCC244), so the duplicate was folded into the glumetinib record.
 
 ### Office access finding (16 Sept, evening)
 
