@@ -11,12 +11,12 @@ import { tldrZh as trialDesign } from "../src/data/trial-design-wave";
 import { tldrZh as law } from "../src/data/law-wave";
 import { tldrZh as diagnostics2 } from "../src/data/diagnostics-wave2";
 import { tldrZh as networks } from "../src/data/institution-networks-wave";
-
-const WAVES: Record<string, string>[] = [manufacturing, theories, platform, trialDesign, law, diagnostics2, networks];, prostate];
 import { tldrZh as prostate } from "../src/data/prostate-subtypes";
+
+const WAVES: Record<string, string>[] = [manufacturing, theories, platform, trialDesign, law, diagnostics2, networks, prostate];
 const path = "src/data/i18n/zh.ts";
 let z = readFileSync(path, "utf8");
-const have = new Set([...z.matchAll(/^\s*"([^"]+)":\s/mg)].map((m) => m[1]));
+const have = new Set([...z.matchAll(/^\s*(?:"([^"]+)"|([A-Za-z_$][\w$]*)):\s/mg)].map((m) => m[1] ?? m[2]));
 let add = "";
 for (const t of WAVES) for (const [k, v] of Object.entries(t)) if (!have.has(k)) { add += `  ${JSON.stringify(k)}: ${JSON.stringify(v)},\n`; have.add(k); }
 if (add) { const i = z.lastIndexOf("\n};"); z = z.slice(0, i + 1) + add + z.slice(i + 1); writeFileSync(path, z); }

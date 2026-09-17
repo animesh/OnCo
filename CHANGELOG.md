@@ -7,9 +7,11 @@ All notable changes to OnCo are recorded here. The format follows [Keep a Change
 Regenerated from the commit log each time the site ships (`scripts/changelog-sync.ts`); the version sections below are written by hand when a release is cut.
 
 ### 17 September 2026
-- Chinese quality pass: 82 TL;DRs corrected (standard NMPA drug names, basket trial term, methotrexate spelling, idioms), account strings in the formal register
+- Prostate cancer by state: eight subtype pages from low risk to neuroendocrine, linked from 45 trials and drugs; Tregzi added from the FDA notice and the remaining update bot proposals checked against the registry; Hansoh merged into one record with a redirect
 - Navigation starts at the top of the page (scroll attribute on the html tag); footer credit Made with heart and soul by Jude Gomila with Mount Tamalpais and Golden Gate icons in nine languages; roadmap rows 130 to 137
 - Every list row has a visual or a designed stand-in (ideas borrow their cancer icon, technology drawing or molecule), with a test so it cannot regress; I-SPY 1, I-SPY 2, I-SPY 2.2, WISDOM and Quantum Leap Healthcare Collaborative linked to Laura Esserman and UCSF; navigation starts at the top of the page; Enter in search opens the results page; roadmap rows 122 to 129
+- Prostate risk-group and disease-state pages, update bot leftovers, Hansoh merge
+- Chinese quality pass: 82 TL;DRs corrected (standard NMPA drug names, basket trial term, methotrexate spelling, idioms), account strings in the formal register
 - Chinese quality pass on today's TL;DRs and interface strings: 篮式试验 for basket trial, 甲氨蝶呤 typo, 磁共振直线加速器, established drug names in 61 templated trial lines, natural wording in 30 machine-flavoured sentences, 您 throughout the account strings
 - First sixty days after diagnosis: a week-by-week guide for every cancer built from its records, and a printable appointment sheet per cancer with questions, words you may hear and treatments you may be offered
 - Model review panel: schema, batch script and page for AI model commentary on records, with two example panels; diagnostics wave two: 24 tests from RAD51 foci and CTC counts to pharmacogenomics, cardiac markers and low-resource screening, with five companies; institution networks: Parker Institute members and leaders, CRUK, NCI, UNICANCER and DKTK links, and ten weakly linked centres strengthened
