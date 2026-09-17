@@ -207,7 +207,7 @@ export const chinaDrugs: DrugInput[] = [
       { region: "China", year: 2021, indication: "MET exon 14 skipping NSCLC after platinum chemotherapy or unfit for chemotherapy (conditional; later full)" },
       { region: "China", year: 2025, indication: "With osimertinib in EGFR-mutant NSCLC with MET amplification after EGFR TKI (SACHI)" },
     ],
-    targets: ["met", "egfr"], technologies: ["kinase-inhibitors"], pathways: ["ras-mapk"], companies: ["hutchmed", "astrazeneca"], cancers: ["nsclc", "rcc", "gastric"],
+    targets: ["met", "egfr"], technologies: ["kinase-inhibitors"], pathways: ["ras-mapk"], companies: ["hutchmed", "astrazeneca"], cancers: ["nsclc", "rcc", "gastric", "papillary-rcc"],
     links: [{ label: "Hutchmed: Orpathys", url: "https://www.hutch-med.com/" }, { label: "AstraZeneca and Hutchmed", url: "https://www.astrazeneca.com/media-centre/press-releases.html" }, NMPA], tags: ["china"], people: ["su-weiguo"] }),
   d({ id: "anlotinib", name: "Anlotinib", brand: "Focus V", code: "AL3818", modality: "Small-molecule multi-kinase inhibitor (VEGFR, FGFR, PDGFR, KIT)", status: "approved", wikipedia: W("Anlotinib"),
     mechanism: "Oral inhibitor of VEGFR1-3, FGFR1-4, PDGFR alpha and beta, and KIT, blocking angiogenesis and tumour cell proliferation.",

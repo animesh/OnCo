@@ -129,7 +129,7 @@ const drugs: DrugInput[] = [
     summary: "Letetresgene autoleucel is an engineered T-cell receptor therapy: the patient's own T cells receive an affinity-enhanced TCR that recognises the NY-ESO-1/LAGE-1a peptide presented on HLA-A*02, then are returned after lymphodepletion. Its targets are synovial sarcoma and myxoid/round cell liposarcoma (MRCLS), two rare sarcomas that usually express NY-ESO-1. In the pivotal phase 2 IGNYTE-ESO trial, the ORR by independent review was 42% (27 of 64), with 41% in synovial sarcoma and 43% in MRCLS, and a median duration of response of 12.2 months overall and 18.3 months in synovial sarcoma. It holds Breakthrough Therapy designation for MRCLS. Rights passed from GSK to Adaptimmune in 2023 and to US WorldMeds in August 2025, which committed to a BLA by 31 December 2026. It is a one-time infusion of T cells re-engineered to see an antigen these two sarcomas display.",
     mechanism: "Autologous T cells with an affinity-enhanced TCR against NY-ESO-1/LAGE-1a peptide on HLA-A*02; lymphodepletion then infusion.",
     regulatoryEvents: [{ date: "2024-06", type: "designation", region: "US", note: "Breakthrough Therapy for MRCLS" }, { date: "2025-08-04", type: "filing", region: "US", note: "Asset transferred to US WorldMeds; BLA committed by end-2026" }],
-    technologies: ["tcr-t"], companies: ["us-worldmeds"], cancers: ["sarcoma"], trials: ["ignyte-eso"], terms: ["crs"], keyPapers: ["paper-spearhead-1-afami-cel-sarcoma-lancet-2024"] }),
+    technologies: ["tcr-t"], companies: ["us-worldmeds"], cancers: ["sarcoma", "synovial-sarcoma"], trials: ["ignyte-eso"], terms: ["crs"], keyPapers: ["paper-spearhead-1-afami-cel-sarcoma-lancet-2024"] }),
 ];
 
 // ======================= TRIALS =======================

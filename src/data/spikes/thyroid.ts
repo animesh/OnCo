@@ -132,7 +132,7 @@ const drugs: DrugInput[] = [
     dosing: { route: "Oral", schedule: "300 mg once daily", monitoring: "ECG and electrolytes (QT prolongation REMS)", source: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/022405s015lbl.pdf" },
     approvals: [{ region: "US", year: 2011, indication: "Symptomatic or progressive medullary thyroid cancer" }],
     regulatoryEvents: [{ date: "2011-04-06", type: "approval", region: "US", note: "First approval for medullary thyroid cancer" }],
-    targets: ["ret", "vegf", "egfr"], technologies: ["kinase-inhibitors"], companies: ["sanofi"], cancers: ["thyroid"], trials: ["libretto-531"] }),
+    targets: ["ret", "vegf", "egfr"], technologies: ["kinase-inhibitors"], companies: ["sanofi"], cancers: ["thyroid", "medullary-thyroid-cancer"], trials: ["libretto-531"] }),
 ];
 
 // ======================= TECHNOLOGIES =======================
@@ -143,7 +143,7 @@ const technologies: TechnologyInput[] = [
     principle: "Thyroid cells take up iodine through the sodium-iodide symporter after TSH stimulation; the beta emission treats, the gamma emission images.",
     strengths: ["Highly selective without any engineered targeting", "Cheap, oral, curative in iodine-avid metastatic disease"],
     limitations: ["Dedifferentiated tumours lose uptake", "Salivary toxicity; radiation precautions; second cancers at high cumulative activity"],
-    cancers: ["thyroid"], drugs: ["radioactive-iodine"], technologies: ["radioligand-therapy", "spect"], terms: ["theranostics", "rai-refractory"], links: [{ label: "Wikipedia", url: W("Isotopes_of_iodine#Iodine-131") }] }),
+    cancers: ["thyroid", "papillary-thyroid-cancer", "follicular-thyroid-cancer"], drugs: ["radioactive-iodine"], technologies: ["radioligand-therapy", "spect"], terms: ["theranostics", "rai-refractory"], links: [{ label: "Wikipedia", url: W("Isotopes_of_iodine#Iodine-131") }] }),
   tech({ id: "thyroid-fna-molecular", links: [{ label: "Ali et al., The 2023 Bethesda System for Reporting Thyroid Cytopathology (Thyroid 2023)", url: "https://doi.org/10.1089/thy.2023.0141" }, { label: "Haugen et al., 2015 American Thyroid Association management guidelines for thyroid nodules and differentiated thyroid cancer (Thyroid 2016)", url: "https://doi.org/10.1089/thy.2015.0020" }], name: "Thyroid nodule FNA, Bethesda cytology & molecular classifiers", sections: ["diagnostics"], status: "standard-of-care",
     tldr: "Thyroid fine-needle aspiration takes a needle sample from a thyroid lump and grades it on a six-level scale; when the result is uncertain, a gene test on the same sample can often rule cancer out and avoid surgery.",
     summary: "Ultrasound-guided fine-needle aspiration reported by the Bethesda System (I-VI). Indeterminate categories (III-IV, ~20% of nodules) historically went to diagnostic lobectomy; molecular classifiers such as Afirma GSC (RNA expression, Veracyte) and ThyroSeq v3 (DNA/RNA NGS) have negative predictive values around 95-97%, halving unnecessary surgery. TI-RADS ultrasound scoring decides which nodules to biopsy at all.",

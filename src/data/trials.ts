@@ -225,7 +225,7 @@ const raw: TrialInput[] = [
     tldr: "Nearly doubled survival in advanced bladder cancer, ending 40 years of platinum chemotherapy as the standard.",
     summary: "EV-302, also KEYNOTE-A39, trial NCT04223856 sponsored by Astellas, Pfizer and Merck and published in the New England Journal of Medicine in 2023, nearly doubled survival in first-line advanced urothelial cancer, ending forty years of platinum chemotherapy as the standard. It randomised 886 patients to enfortumab vedotin plus pembrolizumab or platinum with gemcitabine, met both primary endpoints of progression-free and overall survival with very large effects and a much higher response rate, and the extended follow-up in 2025 maintained the survival advantage. It is the template for ADC plus immunotherapy combinations now copied in breast and lung cancer, and how far that template travels is the open question.",
     result: "OS HR 0.47.",
-    drugs: ["enfortumab-vedotin", "pembrolizumab"], cancers: ["urothelial"], targets: ["nectin4"], links: [ct("NCT04223856")], people: ["thomas-powles", "jonathan-rosenberg", "lee-jae-lyun"] }),
+    drugs: ["enfortumab-vedotin", "pembrolizumab"], cancers: ["urothelial", "muscle-invasive-bladder-cancer"], targets: ["nectin4"], links: [ct("NCT04223856")], people: ["thomas-powles", "jonathan-rosenberg", "lee-jae-lyun"] }),
   t({ id: "imvigor011", name: "IMvigor011", nct: "NCT04660344", phase: "3", status: "positive", yearReported: 2025, sponsor: "Roche",
     setting: "Muscle-invasive bladder cancer after cystectomy, ctDNA-positive (Signatera): atezolizumab vs placebo",
     tldr: "The first trial to use a blood test for leftover cancer to decide who gets immunotherapy, and it worked.",

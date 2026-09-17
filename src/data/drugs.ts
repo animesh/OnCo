@@ -33,7 +33,7 @@ const baseDrugs: DrugInput[] = [
       { region: "US", year: 2026, indication: "Early-stage HER2+ breast cancer (neoadjuvant and post-neoadjuvant)" },
     ],
     targets: ["her2"], technologies: ["adc", "topoisomerase-inhibitors"], companies: ["daiichi-sankyo", "astrazeneca"],
-    cancers: ["breast-her2-positive", "breast-hr-positive", "gastric", "nsclc", "colorectal"],
+    cancers: ["breast-her2-positive", "breast-hr-positive", "gastric", "nsclc", "colorectal", "oesophageal-adenocarcinoma"],
     trials: ["destiny-breast03", "destiny-breast04", "destiny-breast06", "destiny-breast09", "destiny-breast11"],
     terms: ["her2-low", "ild", "bystander-effect", "ggfg"],
   },
@@ -82,7 +82,7 @@ const baseDrugs: DrugInput[] = [
     mechanism: "Fully human anti-Nectin-4 IgG1; MMAE released by cathepsin B; bystander killing.",
     approvals: [{ region: "US", year: 2019, indication: "Advanced urothelial cancer after platinum and PD-1/PD-L1 (accelerated)" },
       { region: "US", year: 2023, indication: "First-line advanced urothelial cancer with pembrolizumab" }, { region: "EU", year: 2022, indication: "mUC after platinum + PD-1; 1L with pembrolizumab 2024" }],
-    targets: ["nectin4"], technologies: ["adc"], companies: ["astellas", "pfizer"], cancers: ["urothelial"], trials: ["ev-302"], terms: ["mc-vc-pabc"],
+    targets: ["nectin4"], technologies: ["adc"], companies: ["astellas", "pfizer"], cancers: ["urothelial", "muscle-invasive-bladder-cancer"], trials: ["ev-302"], terms: ["mc-vc-pabc"],
   },
   {
     id: "brentuximab-vedotin", kind: "drug", links: [{ label: "FDA label (DailyMed)", url: "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Brentuximab%20vedotin" }], name: "Brentuximab vedotin", brand: "Adcetris", modality: "ADC", asOf, status: "approved", wikipedia: W("Brentuximab_vedotin"),
@@ -91,7 +91,7 @@ const baseDrugs: DrugInput[] = [
     summary: "Brentuximab vedotin is a chimeric anti-CD30 IgG1 antibody carrying the microtubule poison MMAE (drug-to-antibody ratio about 4) through a cleavable mc-vc-PABC linker; inside a CD30-positive cell MMAE blocks mitosis and diffuses to kill neighbouring cells. Approved in 2011 for relapsed Hodgkin lymphoma and systemic anaplastic large-cell lymphoma, it made the modern ADC field credible and later moved to first line with AVD (ECHELON-1, overall survival benefit), CD30-positive peripheral T-cell lymphoma with CHP (ECHELON-2), post-transplant consolidation (AETHERA) and paediatric Hodgkin lymphoma. Peripheral neuropathy affected 65 percent of the A+AVD arm in ECHELON-1 and neutropenia 91 percent, so G-CSF prophylaxis is mandatory and bleomycin is contraindicated. Its vc-MMAE linker-payload was reused in enfortumab, polatuzumab, tisotumab and disitamab vedotin.",
     mechanism: "Chimeric anti-CD30 IgG1 with MMAE.",
     approvals: [{ region: "US", year: 2011, indication: "Relapsed Hodgkin lymphoma and systemic ALCL" }, { region: "US", year: 2018, indication: "First-line stage III/IV Hodgkin lymphoma with AVD" }],
-    technologies: ["adc"], companies: ["pfizer", "takeda"], cancers: ["hodgkin-lymphoma"], terms: ["mc-vc-pabc"],
+    technologies: ["adc"], companies: ["pfizer", "takeda"], cancers: ["hodgkin-lymphoma", "cutaneous-t-cell-lymphoma"], terms: ["mc-vc-pabc"],
   },
   {
     id: "mirvetuximab-soravtansine", kind: "drug", links: [{ label: "FDA label (DailyMed)", url: "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Mirvetuximab%20soravtansine" }], name: "Mirvetuximab soravtansine", brand: "Elahere", modality: "ADC", asOf, status: "approved", wikipedia: W("Mirvetuximab_soravtansine"),
@@ -100,7 +100,7 @@ const baseDrugs: DrugInput[] = [
     summary: "Mirvetuximab soravtansine (Elahere) is an anti-folate-receptor-alpha antibody carrying the maytansinoid DM4 (drug-to-antibody ratio about 3.5) through a cleavable sulfo-SPDB disulfide linker, and the released payload crosses membranes to kill neighbouring cells. It is the first ADC for ovarian cancer, given at 6 mg/kg every 3 weeks for FRα-high platinum-resistant disease. Accelerated approval in 2022 rested on SORAYA, and full approval in 2024 followed MIRASOL, which showed overall survival of 16.5 versus 12.7 months against chemotherapy; EMA approval came in late 2024. Ocular toxicity defines the side-effect profile, with blurred vision in 45 percent and keratopathy in 37 percent of MIRASOL patients, so eye examinations and steroid and lubricating drops are built into treatment. Combination and earlier-line trials are ongoing. It works in ovarian cancer at the price of careful eye care.",
     mechanism: "Anti-FRα antibody with DM4; bystander-capable after disulfide cleavage.",
     approvals: [{ region: "US", year: 2022, indication: "FRα-high platinum-resistant ovarian cancer (full approval 2024)" }, { region: "EU", year: 2024, indication: "FRα+ platinum-resistant ovarian; 14 Nov 2024" }],
-    targets: ["folr1"], technologies: ["adc"], companies: ["abbvie"], cancers: ["ovarian"], terms: ["sulfo-spdb", "ocular-toxicity"],
+    targets: ["folr1"], technologies: ["adc"], companies: ["abbvie"], cancers: ["ovarian", "high-grade-serous-ovarian-cancer"], terms: ["sulfo-spdb", "ocular-toxicity"],
   },
   {
     id: "tisotumab-vedotin", kind: "drug", links: [{ label: "FDA label (DailyMed)", url: "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Tisotumab%20vedotin" }], name: "Tisotumab vedotin", brand: "Tivdak", modality: "ADC", asOf, status: "approved", wikipedia: W("Tisotumab_vedotin"),
@@ -433,7 +433,7 @@ const baseDrugs: DrugInput[] = [
     summary: "Afamitresgene autoleucel (afami-cel) is a TCR-T therapy: patient T cells are engineered with an affinity-enhanced T-cell receptor that recognises the MAGE-A4 230-239 peptide on HLA-A*02, so eligibility requires both HLA typing and tumour MAGE-A4 testing. It received accelerated approval in August 2024 for advanced MAGE-A4-positive, HLA-A*02-positive synovial sarcoma on SPEARHEAD-1 (ORR about 39%, median duration of response about 12 months), and in Q2 2026 the label was extended to patients aged 12 and over. Treatment is a single infusion of 2.68 to 10 x 10^9 TCR-positive cells after fludarabine and cyclophosphamide; cytokine release syndrome and prolonged cytopenias are the main risks. Whether responses are durable enough to change survival is open. For a newcomer: the first engineered T-cell receptor therapy approved for a solid tumour.",
     mechanism: "Affinity-enhanced TCR against MAGE-A4 230-239/HLA-A*02.",
     approvals: [{ region: "US", year: 2024, indication: "Advanced MAGE-A4+ synovial sarcoma, HLA-A*02+ (age ≥12 from 2026)" }],
-    targets: ["mage-a4"], technologies: ["tcr-t"], companies: ["adaptimmune"], cancers: ["sarcoma"], keyPapers: ["paper-spearhead-1-afami-cel-sarcoma-lancet-2024"],
+    targets: ["mage-a4"], technologies: ["tcr-t"], companies: ["adaptimmune"], cancers: ["sarcoma", "synovial-sarcoma"], keyPapers: ["paper-spearhead-1-afami-cel-sarcoma-lancet-2024"],
   },
 
   // ======================= RADIOPHARMACEUTICALS =======================
@@ -539,7 +539,7 @@ const baseDrugs: DrugInput[] = [
     summary: "Selpercatinib is a selective RET kinase inhibitor, designed to avoid the off-target VEGFR effects of older multikinase drugs, taken as 160 mg twice daily. LIBRETTO-001 showed a response rate of about 84% in treatment-naive RET-fusion NSCLC, LIBRETTO-431 beat chemo-immunotherapy first line, and LIBRETTO-531 beat cabozantinib or vandetanib in RET-mutant medullary thyroid cancer. It was approved in 2020 for RET-fusion NSCLC and thyroid cancer and RET-mutant MTC, gained a tumour-agnostic RET-fusion indication in 2022, and a July 2026 FDA action is listed among that month's oncology approvals. Hypertension, raised transaminases and QT prolongation are the main adverse events. Acquired resistance through RET solvent-front mutations and bypass pathways is the current limit. For a newcomer: a pill that works wherever a RET fusion drives the cancer, regardless of organ.",
     mechanism: "Highly selective RET TKI.",
     approvals: [{ region: "US", year: 2020, indication: "RET-fusion NSCLC and thyroid; RET-mutant MTC" }, { region: "US", year: 2022, indication: "RET-fusion solid tumours (tumour-agnostic)" }, { region: "US", year: 2026, indication: "Label update (July 2026)" }, { region: "EU", year: 2021, indication: "EU brand Retsevmo" }],
-    targets: ["ret"], technologies: ["kinase-inhibitors"], companies: ["eli-lilly"], cancers: ["thyroid", "nsclc"],
+    targets: ["ret"], technologies: ["kinase-inhibitors"], companies: ["eli-lilly"], cancers: ["thyroid", "nsclc", "medullary-thyroid-cancer", "papillary-thyroid-cancer"],
   },
   {
     id: "zongertinib", kind: "drug", links: [{ label: "FDA label (DailyMed)", url: "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Zongertinib" }], name: "Zongertinib", brand: "Hernexeos", modality: "Small-molecule kinase inhibitor (HER2)", asOf, status: "approved",
@@ -563,7 +563,7 @@ const baseDrugs: DrugInput[] = [
     summary: "Approved 2014 (ovarian), then maintenance first-line (SOLO-1, 7-year OS benefit), with bevacizumab (PAOLA-1, HRD+), metastatic BRCA breast (OlympiAD), adjuvant germline-BRCA HER2-negative early breast cancer (OlympiA, OS HR 0.72), pancreatic maintenance (POLO), and prostate (PROfound; PROpel with abiraterone). AstraZeneca/Merck.",
     mechanism: "PARP1/2 inhibitor and trapper; synthetic lethality with HRD.",
     approvals: [{ region: "US", year: 2014, indication: "gBRCA ovarian cancer ≥3 lines" }, { region: "US", year: 2018, indication: "gBRCA HER2- metastatic breast cancer" }, { region: "US", year: 2022, indication: "Adjuvant gBRCA high-risk HER2- early breast cancer" }],
-    targets: ["parp", "brca"], technologies: ["parp-inhibitor"], companies: ["astrazeneca", "merck"], cancers: ["ovarian", "tnbc", "breast-hr-positive", "prostate", "pancreatic"], trials: ["olympia"],
+    targets: ["parp", "brca"], technologies: ["parp-inhibitor"], companies: ["astrazeneca", "merck"], cancers: ["ovarian", "tnbc", "breast-hr-positive", "prostate", "pancreatic", "high-grade-serous-ovarian-cancer"], trials: ["olympia"],
   },
   {
     id: "niraparib", aka: ["Niraparib Tosylate Monohydrate and Abiraterone Acetate", "Akeega"], kind: "drug", links: [{ label: "FDA label (DailyMed)", url: "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Niraparib" }], name: "Niraparib", brand: "Zejula", modality: "Small-molecule PARP inhibitor", asOf, status: "approved", wikipedia: W("Niraparib"),
@@ -571,7 +571,7 @@ const baseDrugs: DrugInput[] = [
     summary: "Niraparib is a PARP1/2 inhibitor that traps PARP on damaged DNA, killing tumour cells that cannot repair double-strand breaks through homologous recombination. It was approved in 2017 for maintenance in recurrent ovarian cancer (NOVA) and in 2020 for first-line maintenance regardless of BRCA status (PRIMA) (label later restricted to HRD-positive in some settings). Combined with abiraterone as Akeega, it is approved for BRCA-mutant metastatic castration-resistant prostate cancer (MAGNITUDE, 2023). Dosing is individualised at 200 or 300 mg daily by weight and platelet count, for up to 3 years in first-line maintenance; thrombocytopenia (66%, 38% grade 3 or higher) and anaemia are the main toxicities, and MDS or AML occurs in 3.3%. Whether HRD-negative patients gain survival remains contested. For a newcomer: a PARP pill that stretched maintenance therapy beyond BRCA carriers.",
     mechanism: "PARP1/2 inhibitor.",
     approvals: [{ region: "US", year: 2017, indication: "Recurrent ovarian cancer maintenance" }, { region: "US", year: 2020, indication: "First-line ovarian maintenance" }],
-    targets: ["parp"], technologies: ["parp-inhibitor"], companies: ["gsk"], cancers: ["ovarian", "prostate"],
+    targets: ["parp"], technologies: ["parp-inhibitor"], companies: ["gsk"], cancers: ["ovarian", "prostate", "high-grade-serous-ovarian-cancer"],
   },
   {
     id: "talazoparib", kind: "drug", links: [{ label: "FDA label (DailyMed)", url: "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Talazoparib" }], name: "Talazoparib", brand: "Talzenna", modality: "Small-molecule PARP inhibitor", asOf, status: "approved", wikipedia: W("Talazoparib"),
@@ -651,7 +651,7 @@ const baseDrugs: DrugInput[] = [
     summary: "Belzutifan is a small-molecule HIF-2-alpha inhibitor that blocks HIF-2-alpha from dimerising with ARNT, silencing the hypoxia programme that drives clear-cell kidney cancer when VHL is lost; it is taken as 120 mg once daily. It was approved in 2021 for VHL disease-associated renal cell carcinoma, CNS haemangioblastoma and pancreatic neuroendocrine tumours, in 2023 for advanced RCC after PD-1/PD-L1 and VEGF-TKI therapy (LITESPARK-005), in 2025 for pheochromocytoma and paraganglioma, and in Q2 2026 as adjuvant therapy for clear-cell RCC with pembrolizumab (LITESPARK-022). Merck markets it. Anaemia and hypoxia are on-mechanism effects because HIF-2-alpha regulates erythropoietin. Whether the adjuvant benefit translates into survival, and which patients respond, remain open. For a newcomer: the first drug from the Nobel-winning biology of how cells sense oxygen.",
     mechanism: "Blocks HIF-2α/ARNT dimerisation.",
     approvals: [{ region: "US", year: 2021, indication: "VHL-associated RCC, CNS haemangioblastoma, pNET" }, { region: "US", year: 2023, indication: "Advanced RCC after PD-1/PD-L1 and VEGF-TKI" }, { region: "US", year: 2026, indication: "Adjuvant clear-cell RCC with pembrolizumab" }, { region: "EU", year: 2025, indication: "ccRCC after ≥2 lines; VHL-associated tumours; 12 Feb 2025 (conditional)", note: "Conditional marketing authorisation" }],
-    targets: ["hif2a"], technologies: ["kinase-inhibitors"], companies: ["merck"], cancers: ["rcc"],
+    targets: ["hif2a"], technologies: ["kinase-inhibitors"], companies: ["merck"], cancers: ["rcc", "clear-cell-rcc"],
   },
   {
     id: "relacorilant", kind: "drug", links: [{ label: "FDA label (DailyMed)", url: "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Relacorilant" }], name: "Relacorilant", brand: "Lifyorli", modality: "Small-molecule glucocorticoid receptor antagonist", asOf, status: "approved",
@@ -817,7 +817,7 @@ const baseDrugs: DrugInput[] = [
     summary: "Carboplatin is a platinum chemotherapy that forms intrastrand DNA crosslinks, blocking replication and triggering apoptosis in dividing cells. First approved in 1989 for ovarian cancer and generic since 2004, it is dosed by the Calvert formula to a target AUC of 5 to 6 every 3 weeks or AUC 1.5 to 2 weekly with paclitaxel. It causes less kidney damage than cisplatin but more myelosuppression, with thrombocytopenia dose-limiting and hypersensitivity after 6 or more cycles. In triple-negative breast cancer, adding carboplatin to neoadjuvant chemotherapy raised pathological complete response rates in BrighTNess and GeparSixto, and it is part of the KEYNOTE-522 backbone, where pembrolizumab plus chemotherapy achieved pCR of 64.8% versus 51.2%. For a newcomer: a workhorse chemotherapy that damages DNA and underpins many curative-intent regimens.",
     mechanism: "DNA intrastrand crosslinks.",
     approvals: [{ region: "US", year: 1989, indication: "Ovarian cancer (now broad use)" }],
-    technologies: ["platinum", "cytotoxic-chemotherapy"], cancers: ["tnbc", "ovarian", "nsclc", "sclc"], trials: ["keynote-522", "gefitinib-chemo-tmh"], keyPapers: ["paper-keynote-189-nejm-2018"],
+    technologies: ["platinum", "cytotoxic-chemotherapy"], cancers: ["tnbc", "ovarian", "nsclc", "sclc", "seminoma"], trials: ["keynote-522", "gefitinib-chemo-tmh"], keyPapers: ["paper-keynote-189-nejm-2018"],
   },
   {
     id: "paclitaxel", kind: "drug", links: [{ label: "FDA label (DailyMed)", url: "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Paclitaxel" }], name: "Paclitaxel / nab-paclitaxel", brand: "Taxol / Abraxane", modality: "Cytotoxic chemotherapy (taxane)", asOf, status: "approved", wikipedia: W("Paclitaxel"),

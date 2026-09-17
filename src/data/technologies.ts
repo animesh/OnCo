@@ -550,7 +550,7 @@ export const technologies: TechnologyInput[] = [
     principle: "Direct peritoneal exposure at 41-43 °C enhances drug penetration.",
     strengths: ["High local concentration"],
     limitations: ["Morbidity, centre expertise", "Mixed trial results"],
-    cancers: ["ovarian", "colorectal", "gastric"], links: [{ label: "Wikipedia", url: W("Hyperthermic_intraperitoneal_chemotherapy") }],
+    cancers: ["ovarian", "colorectal", "gastric", "peritoneal-mesothelioma"], links: [{ label: "Wikipedia", url: W("Hyperthermic_intraperitoneal_chemotherapy") }],
   },
 
   // ======================= TARGETED THERAPY =======================
@@ -1476,7 +1476,7 @@ export const technologies: TechnologyInput[] = [
     principle: "ATP-competitive kinase inhibitors block ATR or CHK1 signalling so that cells with damaged or under-replicated DNA enter mitosis and die.",
     strengths: ["Exploits synthetic lethality with ATM loss and replication stress","Combines with PARP inhibitors and radiotherapy"],
     limitations: ["Haematological toxicity","Biomarkers still being defined","No approval"],
-    targets: ["atr"], technologies: ["synthetic-lethality-approaches","parp-inhibitor"], cancers: ["ovarian","nsclc"],
+    targets: ["atr"], technologies: ["synthetic-lethality-approaches","parp-inhibitor"], cancers: ["ovarian", "nsclc", "clear-cell-ovarian-cancer"],
     links: [{ label: "Wikipedia", url: W("Ataxia_telangiectasia_and_Rad3_related") }],
   },
   {
