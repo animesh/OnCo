@@ -28,7 +28,6 @@ import { useT } from "@/lib/i18n/ui";
 import { tldrFor } from "./TldrText";
 import { useTable } from "@/lib/tldr-tables";
 import { nameAttrs } from "@/lib/translate";
-import type { Kind } from "@/lib/schema";
 
 /**
  * One templated, full-width, sortable and filterable table for any kind of entity.

@@ -2,7 +2,7 @@
 
 > A public, cited knowledge graph of oncology: cancers, fronts, technologies, targets, treatments and tests, companies, institutions, people, pathways, trials, pairings, roadmaps, key papers, journals, bottlenecks and ideas, one page per object, each with a plain-English TL;DR, a technical summary, dated facts and links to primary sources. Not medical advice.
 
-11,092 records in 18 kinds: 140 cancers, 19 fronts, 543 technologies, 162 targets, 1,023 drugs, 1,034 companies, 668 institutions, 108 pathways, 634 terms, 3,398 trials, 85 pairings, 29 roadmaps, 1,139 ideas, 133 collections, 1,434 people, 45 bottlenecks, 239 key papers, 259 journals. Every fact is dated and linked to a primary source; where a number is not sourced it is omitted. Facts may be incomplete or out of date: cite the OnCo page and check the primary source it links before relying on anything that matters.
+11,172 records in 18 kinds: 140 cancers, 19 fronts, 543 technologies, 162 targets, 1,023 drugs, 1,034 companies, 668 institutions, 108 pathways, 714 terms, 3,398 trials, 85 pairings, 29 roadmaps, 1,139 ideas, 133 collections, 1,434 people, 45 bottlenecks, 239 key papers, 259 journals. Every fact is dated and linked to a primary source; where a number is not sourced it is omitted. Facts may be incomplete or out of date: cite the OnCo page and check the primary source it links before relying on anything that matters.
 
 ## Licence and attribution
 
@@ -121,6 +121,7 @@
 - [Journals](https://onco.cc/journals/): Where the evidence is published: scope, access model and the key papers each venue carried.
 - [Key papers](https://onco.cc/key-papers/): The papers that changed practice, each explained: what it found, what it means, what to be careful about.
 - [Trials in plain words](https://onco.cc/explained/): Every trial result as people out of 100, medians explained, surrogate endpoints flagged.
+- [Trial design picker](https://onco.cc/trial-designs/): Every trial design as a card: when to use it, a worked example from the corpus and its main risk, with a plain-English guide to which design fits your question.
 - [Guidelines](https://onco.cc/guidelines/): Where NCCN, ESMO, NICE and ASCO agree and disagree, and what changed between guideline versions.
 - [Forest plot](https://onco.cc/forest/): Every hazard ratio in the trial corpus on one log axis; filter by cancer, setting and endpoint.
 - [Evidence](https://onco.cc/evidence/): Every trial ranked by evidence strength, endpoints as people out of 100.
@@ -138,6 +139,7 @@
 - [Preprint tracker](https://onco.cc/preprints/): bioRxiv and medRxiv preprints of the last 90 days per target, product and technology, and which have since been published.
 - [Payloads & linkers](https://onco.cc/payloads/): The chemistry inside ADCs.
 - [Regulatory timeline](https://onco.cc/regulatory/): Every dated filing, approval, CRL, and label change.
+- [Laws around oncology](https://onco.cc/law/): The statutes, regulations and court rulings that decide how cancer drugs are approved, paid for and tested, and how data and genes are protected, by jurisdiction and theme.
 - [Paying for care in the US](https://onco.cc/coverage/us/): Medicare Part B or D, prior authorisation, list prices and assistance programmes for every approved product.
 - [NHS coverage](https://onco.cc/coverage/uk/): NICE, Cancer Drugs Fund and SMC decisions for every approved product, and how NHS cancer care works.
 - [Coverage rankings](https://onco.cc/coverage/rankings/): US insurers and plan types ranked by one published metric at a time, UK NHS entitlement against private medical insurance, and how nine countries pay for cancer drugs.

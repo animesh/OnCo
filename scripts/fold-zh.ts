@@ -7,8 +7,10 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { tldrZh as manufacturing } from "../src/data/manufacturing-wave";
 import { tldrZh as theories } from "../src/data/theories-wave";
 import { tldrZh as platform } from "../src/data/platform-trials-wave";
+import { tldrZh as trialDesign } from "../src/data/trial-design-wave";
+import { tldrZh as law } from "../src/data/law-wave";
 
-const WAVES: Record<string, string>[] = [manufacturing, theories, platform];
+const WAVES: Record<string, string>[] = [manufacturing, theories, platform, trialDesign, law];
 const path = "src/data/i18n/zh.ts";
 let z = readFileSync(path, "utf8");
 const have = new Set([...z.matchAll(/^\s*"([^"]+)":\s/mg)].map((m) => m[1]));

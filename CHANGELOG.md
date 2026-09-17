@@ -7,9 +7,15 @@ All notable changes to OnCo are recorded here. The format follows [Keep a Change
 Regenerated from the commit log each time the site ships (`scripts/changelog-sync.ts`); the version sections below are written by hand when a release is cut.
 
 ### 17 September 2026
-- Manufacturing in oncology: seven supply chains, 18 technologies and 14 makers; theories of cancer: a hub map and sixteen theory records with status; platform trials at depth: 21 master protocol trials and a hub term; technology dependency map with 119 edges and a viewer; Chinese TL;DRs folded in for every new record
+- Search results page as an index: kind chips, did-you-mean, pages strip, Ask OnCo card, related strip; 29 trial design terms and a design picker page; startup requests ranked by urgency and commerciality with every input cited; 51 law and regulation terms by jurisdiction with a law page; translation hygiene: language tags, no-translate on names and doses, a browser translation offer
 - Navigation starts at the top of the page (scroll attribute on the html tag); footer credit Made with heart and soul by Jude Gomila with Mount Tamalpais and Golden Gate icons in nine languages; roadmap rows 130 to 137
 - Every list row has a visual or a designed stand-in (ideas borrow their cancer icon, technology drawing or molecule), with a test so it cannot regress; I-SPY 1, I-SPY 2, I-SPY 2.2, WISDOM and Quantum Leap Healthcare Collaborative linked to Laura Esserman and UCSF; navigation starts at the top of the page; Enter in search opens the results page; roadmap rows 122 to 129
+- Add laws around oncology: 51 regulatory terms and /law/ page (roadmap 137)
+- Manufacturing in oncology: seven supply chains, 18 technologies and 14 makers; theories of cancer: a hub map and sixteen theory records with status; platform trials at depth: 21 master protocol trials and a hub term; technology dependency map with 119 edges and a viewer; Chinese TL;DRs folded in for every new record
+- Browser translation and language attributes (roadmap row 128, part three): summaries, field values, data tables, bullets and table bodies carry lang="en" while TL;DRs keep their own language; drug, gene, company, trial and person names, aka lines, NCT ids, gene symbols, database ids, molecule labels, formulas and doses carry translate="no" with the notranslate class; TranslateOffer shows one dismissible line at the top of the main column that switches to a carried language or explains the browser's translator in nine languages; wireframe canvas labels repeated as hidden real text; scripts/translation-coverage.ts measures the share of a page in the chosen language per kind
+- Rank startup requests by urgency and commerciality (row 112)
+- Trial designs at depth: 29 new terms, 40 enriched, design picker page (row 136)
+- Search results page as a proper index (roadmap row 123)
 - Manufacturing wave: remove the Hitachi remnant
 - Platform and adaptive trials at depth (roadmap row 124): master-protocol hub term, 21 platform, basket and umbrella trials, STAMPEDE enriched
 - Theories of cancer: hub map and sixteen theory records in the mechanics section
