@@ -18,6 +18,7 @@ import { PrintButton } from "./PrintButton";
 import { TrialFinderGeo as TrialFinder } from "./TrialFinderGeo";
 import { Questions } from "./Questions";
 import { ExpertCentres } from "./ExpertCentres";
+import { decisionsFor, decisionsRoute } from "@/lib/decisions";
 import { conditionQuery, interventionQuery } from "@/lib/ctgov";
 import { TrialCounts } from "./TrialCounts";
 import { ReviewBadge } from "./ReviewBadge";
@@ -609,6 +610,24 @@ function RoadmapSteps({ r }: { r: Roadmap }) {
   </>);
 }
 
+/** The decisions a patient faces, one per standard-of-care setting, linking into the cancer's decision page (roadmap item 107). */
+function DecisionsStrip({ c }: { c: Cancer }) {
+  const d = decisionsFor(c.id);
+  if (!d) return null;
+  return (
+    <div className="card p-4 mb-4">
+      <div className="flex flex-wrap items-baseline justify-between gap-2 mb-2">
+        <div className="kicker inline-flex items-center gap-1.5"><svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden><path d="M6 3v6c0 3 3 4 6 4s6-1 6-4V3" /><path d="M12 13v8" /><circle cx="6" cy="3" r="1.5" /><circle cx="18" cy="3" r="1.5" /><circle cx="12" cy="21" r="1.5" /></svg><TL text="Decisions you may face" /></div>
+        <Link href={decisionsRoute(c.id)} className="text-sm text-accent hover:underline">{d.forks} with more than one option · full decision page →</Link>
+      </div>
+      <p className="text-sm text-muted mb-2">One section per setting: the options named, what each is for, the trials behind them, the recorded trade-offs and the questions to ask.</p>
+      <div className="flex flex-wrap gap-1.5">
+        {d.sections.map((s) => <Link key={s.id} href={decisionsRoute(c.id, s.id)} className={`chip border text-sm hover:bg-foreground/5 ${s.singlePath ? "bg-card border-border" : "bg-accent-soft border-accent/40 text-accent"}`} title={s.singlePath ? "One path named" : `${s.options.length} options`}>{s.setting}{!s.singlePath && <span className="ms-1 text-[10px] tabular-nums">{s.options.length}</span>}</Link>)}
+      </div>
+    </div>
+  );
+}
+
 /** Subtypes with pages of their own, and the broader type this one belongs to, shown before anything else on a cancer page. */
 function CancerFamily({ c }: { c: Cancer }) {
   const g = graph();
@@ -662,6 +681,7 @@ function cancerTabs(c: Cancer): Tab[] {
           {guidelineCancerIds().includes(c.id) && <Link href={`/guidelines/${c.id}/`} className="underline">Guideline history and concordance →</Link>}
           <Link href={`/staging/#${c.id}`} className="underline">Staging and risk scores →</Link>
         </div>
+        <DecisionsStrip c={c} />
         {c.standardOfCare.map((s, i) => (
           <div key={i} className="card p-4">
             <div className="font-medium">{s.setting}</div>
