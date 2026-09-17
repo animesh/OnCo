@@ -279,7 +279,7 @@ const baseDrugs: DrugInput[] = [
       { region: "US", year: 2016, indication: "Urothelial carcinoma (later withdrawn); NSCLC" },
       { region: "US", year: 2026, indication: "Adjuvant muscle-invasive bladder cancer, ctDNA-positive after cystectomy" },
     ],
-    targets: ["pdl1"], technologies: ["checkpoint-inhibitor", "mrd-testing"], companies: ["roche-genentech"],
+    targets: ["pdl1"], technologies: ["checkpoint-inhibitor", "mrd-testing"], companies: ["roche-genentech", "chugai"],
     cancers: ["nsclc", "sclc", "hcc", "urothelial", "tnbc"], trials: ["imvigor011", "impassion130"],
   },
   {
@@ -699,7 +699,7 @@ const baseDrugs: DrugInput[] = [
     summary: "Trastuzumab is a humanised IgG1 antibody that binds domain IV of HER2, blocking receptor signalling and recruiting immune cells through ADCC. It was the first targeted antibody for a solid tumour, approved for HER2-positive metastatic breast cancer in 1998, as adjuvant therapy in 2006 (HERA, NSABP B-31/N9831, about a 37% reduction in death) and for HER2-positive gastric cancer in 2010. Dual blockade with pertuzumab (CLEOPATRA, APHINITY) and the subcutaneous Phesgo built on it, and it is the antibody backbone of the conjugates T-DM1 and T-DXd. Adjuvant treatment lasts 1 year, and cardiomyopathy requires LVEF monitoring. Biosimilars since 2017 have cut cost worldwide, and whether shorter adjuvant courses are safe for lower-risk patients remains debated. For a newcomer: the drug that turned the worst breast cancer subtype into one of the most treatable.",
     mechanism: "Humanised IgG1 binding HER2 ECD4; signal inhibition and ADCC.",
     approvals: [{ region: "US", year: 1998, indication: "HER2+ metastatic breast cancer" }, { region: "US", year: 2006, indication: "Adjuvant HER2+ breast cancer" }, { region: "US", year: 2010, indication: "HER2+ gastric cancer" }],
-    targets: ["her2"], technologies: ["monoclonal-antibody"], companies: ["roche-genentech"], cancers: ["breast-her2-positive", "gastric"], related: ["tucatinib-triplet-brain-mets"],
+    targets: ["her2"], technologies: ["monoclonal-antibody"], companies: ["roche-genentech", "nippon-kayaku", "halozyme"], cancers: ["breast-her2-positive", "gastric"], related: ["tucatinib-triplet-brain-mets"],
   },
   {
     id: "tucatinib", kind: "drug", links: [{ label: "FDA label (DailyMed)", url: "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Tucatinib" }], name: "Tucatinib", brand: "Tukysa", modality: "Small-molecule kinase inhibitor (HER2)", asOf, status: "approved", wikipedia: W("Tucatinib"),

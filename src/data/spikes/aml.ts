@@ -77,7 +77,7 @@ const targets: TargetInput[] = [
 
 // ======================= TECHNOLOGIES =======================
 const technologies: TechnologyInput[] = [
-  tech({ id: "allogeneic-hsct", name: "Allogeneic stem cell transplantation", sections: ["cell-therapy"], status: "standard-of-care", since: 1957, wikipedia: W("Hematopoietic_stem_cell_transplantation"),
+  tech({ id: "allogeneic-hsct", companies: ["vor-biopharma"], name: "Allogeneic stem cell transplantation", sections: ["cell-therapy"], status: "standard-of-care", since: 1957, wikipedia: W("Hematopoietic_stem_cell_transplantation"),
     tldr: "Allogeneic stem cell transplantation replaces a patient's blood system with a donor's after conditioning chemotherapy, so donor immune cells hunt down leukaemia left behind. It remains the only cure for adverse-risk acute myeloid leukaemia, high-risk acute lymphoblastic leukaemia and Richter transformation, at the price of graft-versus-host disease.",
     summary: "Conditioning chemotherapy (myeloablative or reduced-intensity) followed by donor stem cells. The graft-versus-leukaemia effect provides ongoing immune surveillance; graft-versus-host disease is the price. Indicated in ELN adverse-risk AML in first remission, intermediate-risk with MRD positivity, relapsed disease, high-risk ALL, and Richter transformation. Post-transplant cyclophosphamide has made haploidentical donors routine; post-transplant maintenance (FLT3 inhibitors, azacitidine, menin inhibitors in trials) is reducing relapse.",
     principle: "Myeloablation eradicates host haematopoiesis; donor T cells recognise residual leukaemia via minor histocompatibility antigens.",

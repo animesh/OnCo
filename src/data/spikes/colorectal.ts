@@ -241,7 +241,7 @@ const drugs: DrugInput[] = [
 
 // ======================= TECHNOLOGIES =======================
 const technologies: TechnologyInput[] = [
-  { id: "colorectal-screening", kind: "technology", name: "Colorectal cancer screening (colonoscopy, FIT, stool DNA, blood)", sections: ["early-detection"], status: "standard-of-care", asOf, since: 1990, wikipedia: W("Colorectal_cancer_screening"),
+  { id: "colorectal-screening", companies: ["norgine", "zeria"], kind: "technology", name: "Colorectal cancer screening (colonoscopy, FIT, stool DNA, blood)", sections: ["early-detection"], status: "standard-of-care", asOf, since: 1990, wikipedia: W("Colorectal_cancer_screening"),
     tldr: "Finding and removing polyps before they become cancer. Colonoscopy prevents cancer; stool and blood tests catch it early and get more people screened.",
     summary: "Colonoscopy every 10 years (finds and removes adenomas), annual FIT, multitarget stool DNA (Cologuard, every 3 years), CT colonography, and since 2024 the Shield blood test (83% sensitivity for cancer, low for advanced adenomas). USPSTF lowered the start age to 45 in 2021 as early-onset CRC rises. Screening is credited with much of the fall in CRC mortality in over-65s; uptake in 45-49-year-olds is low.",
     principle: "Detect adenomas or early cancers by direct visualisation (endoscopy), occult blood or shed DNA in stool, or cfDNA methylation and fragmentation in blood.",

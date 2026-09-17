@@ -58,7 +58,7 @@ const raw: EntityInput[] = [
     tldr: "Bempegaldesleukin was a re-engineered interleukin-2 meant to be a safer version of a famous old immunotherapy. It added nothing to nivolumab in three phase 3 trials.",
     summary: "Bempegaldesleukin is a PEGylated IL-2 prodrug biased toward the CD122 receptor to expand CD8 T cells over regulatory T cells. Phase 1/2 PIVOT-02 with nivolumab reported high response rates in melanoma. In 2022, PIVOT IO-001 (melanoma), PIVOT-09 (RCC), and PIVOT-10 (urothelial) all failed to improve response, PFS, or OS over nivolumab alone; BMS and Nektar ended the collaboration (BMS had paid $1.85B upfront in 2018).\n\nLesson: single-arm combination response rates in melanoma are unreliable because nivolumab alone already produces them; biological rationale (Treg sparing) did not translate.",
     mechanism: "IL-2 with releasable PEG chains; preferential CD122 (IL-2Rβγ) engagement.",
-    technologies: ["cytokine-therapy"], companies: ["bms"], cancers: ["melanoma", "rcc", "urothelial"], drugs: ["nivolumab"],
+    technologies: ["cytokine-therapy"], companies: ["bms", "nektar-therapeutics"], cancers: ["melanoma", "rcc", "urothelial"], drugs: ["nivolumab"],
     tags: ["failure", "lesson:phase-2-mirage"],
     links: [{ label: "PIVOT IO-001 (J Clin Oncol 2023)", url: "https://ascopubs.org/doi/10.1200/JCO.23.00172" }],
   },
@@ -72,7 +72,7 @@ const raw: EntityInput[] = [
     links: [{ label: "ADU-S100 phase 1 (Cancer Discov 2023)", url: "https://aacrjournals.org/cancerdiscovery/article/13/5/1117/725648" }],
   },
   {
-    id: "eprenetapopt", kind: "drug", name: "Eprenetapopt", code: "APR-246", modality: "Small molecule (p53 reactivator)", asOf, status: "negative", wikipedia: W("Eprenetapopt"),
+    id: "eprenetapopt", companies: ["aprea-therapeutics"], kind: "drug", name: "Eprenetapopt", code: "APR-246", modality: "Small molecule (p53 reactivator)", asOf, status: "negative", wikipedia: W("Eprenetapopt"),
     tldr: "Eprenetapopt (APR-246) was a drug meant to refold mutant p53, the most common broken protein in cancer. Its phase 3 in blood cancer failed in 2020.",
     summary: "Eprenetapopt (APR-246) is a prodrug of methylene quinuclidinone, proposed to covalently modify mutant p53 and restore wild-type conformation. Phase 2 with azacitidine in TP53-mutant MDS reported ~50% complete remission. The phase 3 (n=154) missed its primary endpoint of complete remission rate in 2020 (33% vs 22%, not significant). Aprea pivoted away. Subsequent studies suggest much of the activity reflected glutathione depletion and oxidative stress rather than p53 refolding.\n\nLesson: TP53 remains undrugged by direct reactivation; the field moved to mutation-specific correctors (rezatapopt for Y220C) and to exploiting p53-loss dependencies (WEE1, ATR).",
     mechanism: "Converted to MQ, which alkylates cysteines in mutant p53 (claimed) and depletes glutathione.",
@@ -120,7 +120,7 @@ const raw: EntityInput[] = [
     links: [{ label: "TULIP (Ann Oncol 2021 abstract)", url: "https://www.annalsofoncology.org/article/S0923-7534(21)04434-8/fulltext" }],
   },
   {
-    id: "melflufen", kind: "drug", name: "Melphalan flufenamide", brand: "Pepaxto", code: "melflufen", modality: "Peptide-drug conjugate", asOf, status: "withdrawn", wikipedia: W("Melphalan_flufenamide"),
+    id: "melflufen", companies: ["oncopeptides"], kind: "drug", name: "Melphalan flufenamide", brand: "Pepaxto", code: "melflufen", modality: "Peptide-drug conjugate", asOf, status: "withdrawn", wikipedia: W("Melphalan_flufenamide"),
     tldr: "A myeloma drug given accelerated approval in 2021 and withdrawn in the US months later when its confirmatory trial suggested it shortened survival.",
     summary: "Melflufen is a lipophilic peptide-conjugated alkylator activated by aminopeptidases enriched in myeloma cells. Accelerated approval (February 2021) rested on the single-arm HORIZON response rate. The confirmatory OCEAN trial met its PFS endpoint but showed an overall survival detriment in a subgroup (patients with prior autologous transplant), leading to a partial clinical hold, an ODAC vote against, and US withdrawal (2021; formal FDA withdrawal 2024). It remains approved in the EU with restrictions.\n\nLesson: accelerated approval on response rate carries real risk when the confirmatory trial shows harm; the same subgroup could be a true signal or noise, and regulators in the US and EU read it differently.",
     mechanism: "Peptidase-activated alkylating prodrug of melphalan.",

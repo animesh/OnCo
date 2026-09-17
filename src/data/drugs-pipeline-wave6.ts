@@ -60,7 +60,7 @@ export const drugsPipelineWave6: DrugInput[] = [
   { id: "tno155", kind: "drug", name: "TNO155", code: "TNO155", aka: [], modality: "Small-molecule inhibitor", mechanism: "Described in the registry record as a shp2 inhibitor; the trial entries below carry the sponsor's wording.", status: "phase-2", asOf, tags, provenance,
     tldr: "TNO155 is a small-molecule inhibitor from Novartis Pharmaceuticals, in registered phase 2 trials for non-small-cell lung cancer, small-cell lung cancer.",
     summary: "TNO155 is listed on ClinicalTrials.gov as an intervention in 1 registered phase 2 trial sponsored by Novartis Pharmaceuticals, in non-small-cell lung cancer, small-cell lung cancer. Described in the registry record as a shp2 inhibitor; the trial entries below carry the sponsor's wording. OnCo records the agent from the registry alone; approvals, results and the sponsor's own description will follow as they are published.",
-    targets: [], cancers: ["nsclc","sclc"], companies: ["advanced-accelerator-applications"], trials: ["nct07468071"],
+    targets: [], cancers: ["nsclc","sclc"], companies: ["novartis"], trials: ["nct07468071"],
     links: [{ label: "ClinicalTrials.gov: trials of TNO155", url: "https://clinicaltrials.gov/search?intr=TNO155" }] },
   { id: "parsaclisib", kind: "drug", name: "Parsaclisib", aka: ["INCB050465"], modality: "Oral PI3K inhibitor", mechanism: "A phosphoinositide 3-kinase inhibitor: the name stem -lisib marks a small molecule that blocks PI3K signalling.", status: "phase-2", asOf, tags, provenance,
     tldr: "Parsaclisib is an oral pi3k inhibitor from Incyte Corporation, in registered phase 2 trials for diffuse large B-cell lymphoma.",

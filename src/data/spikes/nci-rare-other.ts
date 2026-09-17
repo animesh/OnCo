@@ -371,7 +371,7 @@ export const nciRareOtherCancers: CancerInput[] = [
       { year: 2020, title: "Oral decitabine-cedazuridine approved for MDS and CMML", refs: ["decitabine-cedazuridine"] },
       { year: 2022, title: "WHO 5th edition and ICC redefine CMML", note: "Monocyte threshold lowered to 0.5 x 10^9/L with molecular support; dysplastic vs proliferative subtypes formalised." },
     ],
-    pipeline: ["ruxolitinib", "venetoclax", "azacitidine", "allogeneic-hsct"],
+    pipeline: ["ruxolitinib", "venetoclax", "azacitidine", "allogeneic-hsct", "jbi-802", "tuspetinib", "bexmarilimab"],
     openProblems: ["No drug alters the disease course; RAS-pathway inhibitors, GM-CSF antibodies and venetoclax combinations are in early trials.", "Transformation to AML in a substantial minority; sequential mutation tracking to intervene earlier is being studied.", "Transplant is curative but most patients are old; reduced-intensity conditioning and better donor availability widen access.", "Trials usually lump CMML with MDS or exclude it; dedicated CMML cohorts and registries (such as the European Hematology Association consortium) are the response."],
     targets: ["jak2", "kras", "bcl2"], technologies: ["allogeneic-hsct", "epigenetic-drugs", "cytogenetics-fish", "flow-cytometry-mrd", "ngs-bioinformatics-software", "transfusion-support"],
     drugs: ["azacitidine", "decitabine-cedazuridine", "hydroxyurea", "ruxolitinib", "venetoclax", "luspatercept"], pathways: ["ras-mapk", "jak-stat", "epigenetic-reprogramming", "clonal-haematopoiesis", "rna-splicing"],

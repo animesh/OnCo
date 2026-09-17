@@ -124,7 +124,7 @@ const drugs: DrugInput[] = [
 
 // ======================= TECHNOLOGIES =======================
 const technologies: TechnologyInput[] = [
-  { id: "endoscopic-resection", kind: "technology", name: "Endoscopic resection (EMR / ESD)", sections: ["surgery", "early-detection"], status: "standard-of-care", asOf, since: 1990, wikipedia: W("Endoscopic_submucosal_dissection"),
+  { id: "endoscopic-resection", companies: ["cellseed"], kind: "technology", name: "Endoscopic resection (EMR / ESD)", sections: ["surgery", "early-detection"], status: "standard-of-care", asOf, since: 1990, wikipedia: W("Endoscopic_submucosal_dissection"),
     tldr: "Endoscopic resection lifts an early cancer of the oesophagus or stomach with an injection and cuts it out from inside with a snare or electrosurgical knife, keeping the organ intact. It cures cancers confined to the mucosa (T1a) and gives a definitive depth reading; deeper invasion or lymph node spread still needs surgery.",
     summary: "Endoscopic mucosal resection (EMR) for small lesions and endoscopic submucosal dissection (ESD, developed in Japan) for larger en-bloc resections cure mucosal (T1a) cancers and high-grade dysplasia with organ preservation. Standard for Barrett's neoplasia, early squamous cancer, and early gastric cancer meeting Japanese criteria. Radiofrequency ablation eradicates residual Barrett's epithelium. Requires expert endoscopy and careful histologic staging; submucosal invasion (T1b) with risk features needs surgery.",
     principle: "Submucosal injection lifts the lesion; a snare (EMR) or electrosurgical knife (ESD) resects it en bloc for histologic assessment of depth and margins.",
