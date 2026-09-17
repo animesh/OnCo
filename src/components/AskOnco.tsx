@@ -8,7 +8,7 @@ import { semanticSearch } from "@/lib/semantic";
 import { loadAskIndex } from "@/lib/ask-index";
 import { answerQuestion, type AskResult } from "@/lib/ask-pipeline";
 import { INTENT_LABEL } from "@/lib/ask-intent";
-import type { AskEntityRecord } from "@/lib/ask-compose";
+import { loadEntityRecord } from "@/lib/entity-client";
 import { answerText } from "@/lib/ask";
 import { KIND_META, type Kind } from "@/lib/schema";
 import { KIND_COLOR } from "@/lib/text";
@@ -18,16 +18,6 @@ import { useRegion } from "@/lib/region";
 export type AskExample = { question: string; audience: string };
 
 type State = { status: "idle" } | { status: "working"; step: string } | { status: "done"; result: AskResult } | { status: "error"; message: string };
-
-const recordCache = new Map<string, Promise<AskEntityRecord | null>>();
-function loadRecord(id: string): Promise<AskEntityRecord | null> {
-  let p = recordCache.get(id);
-  if (!p) {
-    p = fetch(`/api/v1/entities/${id}.json`).then(async (r) => (r.ok ? ((await r.json()) as AskEntityRecord) : null)).catch(() => null);
-    recordCache.set(id, p);
-  }
-  return p;
-}
 
 /**
  * Ask OnCo. In the browser: the question is read for its intent and the records it names (name and alias
@@ -60,7 +50,7 @@ export function AskOnco({ examples }: { examples: AskExample[] }) {
         index,
         lexical: (text, k) => ms.search(text).slice(0, k).map((h) => String(h.id)),
         concept: (text, k) => (semantic ? semanticSearch(semantic, text, k).map((h) => h.id) : []),
-        load: loadRecord,
+        load: loadEntityRecord,
         region: regionRef.current ?? undefined,
         pin,
         onStep: (step) => { if (latest.current === key) setState({ status: "working", step }); },
