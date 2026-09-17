@@ -7,9 +7,12 @@ All notable changes to OnCo are recorded here. The format follows [Keep a Change
 Regenerated from the commit log each time the site ships (`scripts/changelog-sync.ts`); the version sections below are written by hand when a release is cut.
 
 ### 17 September 2026
-- Machine translation pipeline for record summaries with hash-checked cache and a report link; 157 Chinese summaries live (every cancer page and nine glossary terms) and two Spanish; model review panel populated for twenty cancers by Fable, each verdict tied to the record's own sources
+- 661 plain-English sentences: every cancer, 201 drugs, 179 technologies, 120 terms, 50 phase 3 trials and 63 targets; 451 reverse links give 126 orphaned drugs and 105 companies their first inbound link, with three maker corrections
 - Navigation starts at the top of the page (scroll attribute on the html tag); footer credit Made with heart and soul by Jude Gomila with Mount Tamalpais and Golden Gate icons in nine languages; roadmap rows 130 to 137
 - Every list row has a visual or a designed stand-in (ideas borrow their cancer icon, technology drawing or molecule), with a test so it cannot regress; I-SPY 1, I-SPY 2, I-SPY 2.2, WISDOM and Quantum Leap Healthcare Collaborative linked to Laura Esserman and UCSF; navigation starts at the top of the page; Enter in search opens the results page; roadmap rows 122 to 129
+- Reverse links for orphaned drugs and companies: their companies, trials, cancers, technologies and institutions now list them back; orphan floor 2827 to 2572
+- Simple layer: part-o with 661 sentences, layer test
+- Machine translation pipeline for record summaries with hash-checked cache and a report link; 157 Chinese summaries live (every cancer page and nine glossary terms) and two Spanish; model review panel populated for twenty cancers by Fable, each verdict tied to the record's own sources
 - Every record has its own RDF Turtle file at /api/v1/rdf/<id>.ttl, linked from the page head, the hidden machine links, JSON-LD, the OpenAPI document and llms.txt
 - Machine-translated summaries: cached per record and language under public/i18n/summaries, shown only while the English hash matches, marked as machine translated with a report link and an English toggle; prioritised batch script with a fetch call to the Messages API and a validator for NCT ids, doses, gene symbols and leftover English; hand-written Spanish and Chinese examples for pCR; coverage script counts them
 - Per-record RDF: one Turtle file per record at /api/v1/rdf/<id>.ttl, linked from every record page
