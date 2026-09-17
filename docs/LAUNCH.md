@@ -311,3 +311,8 @@ The owner's patient-first roadmap (a real-case "For me", persistent cancer choic
 
 - Four overview cancer records so the subtype pages (HR-positive, HER2-positive, TNBC, DCIS, male breast; NSCLC, SCLC; ALL, AML, CLL, CML, hairy cell, CMML, BPDCN; cholangiocarcinoma, gallbladder, ampullary) show "Part of" and the parent lists them at the top. Each overview holds screening, staging and shared history and points to the subtype pages for treatment. Remaining text-only subtypes on other cancers still to branch.
 - Chinese: 56 new TL;DRs for the polycythaemia vera, essential thrombocythaemia, mesothelioma subtype, China and radiation records.
+
+### Radiation wave 4 and Chinese wave 2 (17 Sept 2026)
+
+- Radiation wave 4: 21 chemoradiation, nodal, de-escalation and prophylactic irradiation trials (CROSS, INT-0116, German rectal CAO/ARO/AIO-94, RAPIDO, PRODIGE 23, ACT II, RTOG 91-11, Bonner cetuximab, RTOG 1016, De-ESCALaTE, RTOG 9601, HORRAD, POP-RT, Slotman and Takahashi PCI, EORTC 22922, MA.20, DBCG 82b/c, RTOG 9402, EORTC 26951, EORTC 22033). The wave 2 Stupp record was a duplicate of the existing EORTC 26981 page and was removed.
+- Chinese waves 2 to 4: 183 TL;DRs covering every cancer page, target, technology and curated drug; next are companies (231) and institutions, then the registry-ingested trials and products.
