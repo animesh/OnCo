@@ -110,7 +110,7 @@ export const nciRareSolidCancers: CancerInput[] = [
       { year: 2024, title: "MOTION phase 3 positive for vimseltinib", note: "Gelderblom and colleagues, Lancet.", refs: ["vimseltinib", "motion"] },
       { year: 2025, title: "Vimseltinib approved", note: "FDA approval 14 February 2025 for symptomatic TGCT where surgery would worsen function.", refs: ["vimseltinib"] },
     ],
-    pipeline: ["vimseltinib", "motion", "emactuzumab"],
+    pipeline: ["vimseltinib", "motion", "emactuzumab", "pimicotinib"],
     openProblems: ["Duration of CSF1R therapy and rebound after stopping: extension cohorts and intermittent schedules are being studied.", "Hepatotoxicity of pexidartinib: newer agents (vimseltinib, emactuzumab) are designed to avoid it.", "Neoadjuvant use to make surgery smaller or unnecessary: phase 2 studies under way.", "Access and cost for a benign disease in health systems that price by survival gain."],
     targets: ["csf1r"], technologies: ["kinase-inhibitors", "monoclonal-antibody", "mri", "limb-salvage-surgery"], drugs: ["pexidartinib", "vimseltinib", "imatinib", "nilotinib"],
     pathways: ["tumor-microenvironment"], companies: ["deciphera", "daiichi-sankyo"], trials: ["motion", "nct05417789"], terms: ["rare-cancers"], bottlenecks: ["b-rare-cancers", "b-toxicity-qol"],
@@ -361,7 +361,7 @@ export const nciRareSolidCancers: CancerInput[] = [
     biomarkers: ["Serum calcium and PTH (typically far above adenoma levels)", "CDC73 (HRPT2) mutation and parafibromin loss", "PGP9.5 and galectin-3 immunostaining", "Ki-67 and capsular or vascular invasion (WHO 2022 criteria)"],
     standardOfCare: [
       { setting: "Suspected or confirmed carcinoma, resectable", approach: "En bloc resection with ipsilateral thyroid lobectomy and removal of adherent tissue, avoiding capsule rupture; re-resection for loco-regional recurrence.", refs: ["thyroid"], guideline: { nccn: "Category 2A", version: "NCCN Neuroendocrine and Adrenal Tumors (parathyroid carcinoma); American Association of Endocrine Surgeons guideline 2016", url: "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1448" } },
-      { setting: "Hypercalcaemia, unresectable or metastatic disease", approach: "Cinacalcet titrated to calcium, denosumab or intravenous bisphosphonate, hydration; palliative resection or ablation of metastases to reduce PTH burden.", refs: ["bone-modifying-agents"], guideline: { version: "NCCN Neuroendocrine and Adrenal Tumors" } },
+      { setting: "Hypercalcaemia, unresectable or metastatic disease", approach: "Cinacalcet titrated to calcium, denosumab or intravenous bisphosphonate, hydration; palliative resection or ablation of metastases to reduce PTH burden.", refs: ["bone-modifying-agents", "cinacalcet"], guideline: { version: "NCCN Neuroendocrine and Adrenal Tumors" } },
       { setting: "All patients", approach: "Germline CDC73 testing and family counselling; surveillance for jaw and renal tumours in carriers.", refs: ["germline-testing", "hereditary-cancer-syndromes"] },
     ],
     stateOfArt: [

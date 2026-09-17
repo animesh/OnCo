@@ -72,7 +72,7 @@ const terms: TermInput[] = [
 
 // ======================= PRODUCTS =======================
 const drugs: DrugInput[] = [
-  d({ id: "dinutuximab", links: [{ label: "FDA label (DailyMed)", url: "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Dinutuximab/%20dinutuximab%20beta" }], name: "Dinutuximab (ch14.18) / dinutuximab beta", brand: "Unituxin / Qarziba (EU)", modality: "Monoclonal antibody (anti-GD2, chimeric)", status: "approved", wikipedia: W("Dinutuximab"),
+  d({ id: "dinutuximab", companies: ["united-therapeutics"], links: [{ label: "FDA label (DailyMed)", url: "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Dinutuximab/%20dinutuximab%20beta" }], name: "Dinutuximab (ch14.18) / dinutuximab beta", brand: "Unituxin / Qarziba (EU)", modality: "Monoclonal antibody (anti-GD2, chimeric)", status: "approved", wikipedia: W("Dinutuximab"),
     tldr: "The antibody that raised cure rates in high-risk childhood neuroblastoma by about 20 points when given after transplant with immune boosters and retinoid.",
     summary: "ANBL0032: ch14.18 + GM-CSF + IL-2 + isotretinoin vs isotretinoin: 2-year EFS 66% vs 46%, OS 86% vs 75%; approved March 2015 (United Therapeutics). Dinutuximab beta (SIOPEN/EUSA/Recordati) approved in EU 2017; HR-NBL1 showed adding IL-2 to dinutuximab beta added toxicity without benefit, so IL-2 is omitted in Europe. Now also given with chemotherapy for relapse (ANBL1221: irinotecan-temozolomide-dinutuximab ORR ~50%) and during induction (ANBL17P1).",
     mechanism: "Chimeric IgG1 anti-GD2; ADCC (NK cells, granulocytes with GM-CSF) and CDC against GD2+ cells; neuropathic pain from binding to peripheral nerve GD2.",

@@ -1066,7 +1066,7 @@ export const targets: TargetInput[] = [
     summary: "Chemotherapy damages enterochromaffin cells in the gut lining, releasing serotonin that activates 5-HT3 receptors on vagal afferents and in the area postrema to provoke acute vomiting. 5-HT3 antagonists, first ondansetron in 1991 and later granisetron and the long-acting palonosetron, block this pathway and transformed the experience of cisplatin-based and anthracycline-based chemotherapy. They are combined with an NK1 antagonist and dexamethasone for highly emetogenic regimens; constipation, headache and QT prolongation are the main side effects.",
     biology: "Ligand-gated ion channel for serotonin on vagal afferents and in the brainstem chemoreceptor trigger zone; blocked by setron antiemetics.",
     whereFound: ["Supportive care: prevention of chemotherapy-induced nausea and vomiting"],
-    drugs: ["ondansetron","palonosetron", "granisetron"], cancers: [],
+    drugs: ["ondansetron","palonosetron", "granisetron", "dolasetron"], cancers: [],
     prevalence: [{"cancerId":"metastatic-cancer","pct":"host","measure":"Host target: serotonin receptor on gut vagal endings and the vomiting centre. Not a tumour alteration, so no prevalence applies; the drug acts on normal tissue or on symptoms."}],
     links: [{ label: "UniProt P46098: HTR3A", url: "https://www.uniprot.org/uniprotkb/P46098/entry" }],
   },
@@ -1476,7 +1476,7 @@ export const targets: TargetInput[] = [
     tags: ["chembl-gap"],
   },
   {
-    id: "cnr1", kind: "target", name: "Cannabinoid receptor 1", symbol: "CNR1", targetClass: "other", asOf, wikipedia: W("Cannabinoid_receptor_1"),
+    id: "cnr1", drugs: ["dronabinol", "nabilone"], kind: "target", name: "Cannabinoid receptor 1", symbol: "CNR1", targetClass: "other", asOf, wikipedia: W("Cannabinoid_receptor_1"),
     tldr: "The CB1 cannabinoid receptor is how dronabinol and nabilone, synthetic cannabinoids approved for chemotherapy nausea that other drugs fail to control, act on the brain; their place is behind the 5-HT3 and NK1 antagonists.",
     summary: "Cannabinoid receptor 1 is the brain receptor for THC and for the body's own endocannabinoids. Dronabinol (synthetic THC) and nabilone are approved for nausea and vomiting from chemotherapy in patients who have not responded to conventional antiemetics, and dronabinol also for appetite loss in AIDS; guidelines place them as later options after 5-HT3 antagonists, NK1 antagonists, dexamethasone and olanzapine because of dizziness, sedation and mood effects. Claims that cannabinoids shrink tumours rest on laboratory and small early studies, and no cannabinoid is approved to treat cancer itself.",
     biology: "A Gi-coupled G-protein-coupled receptor, among the most abundant in the brain, that reduces neurotransmitter release from presynaptic terminals; also present in gut, fat and liver.",
