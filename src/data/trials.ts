@@ -237,13 +237,13 @@ const raw: TrialInput[] = [
     tldr: "VISION was the trial that established radioligand therapy in prostate cancer.",
     summary: "VISION, trial NCT03511664 sponsored by Novartis and published in the New England Journal of Medicine in 2021, was the trial that established radioligand therapy in prostate cancer. It randomised 831 men with PSMA-positive metastatic castration-resistant prostate cancer after an androgen receptor pathway inhibitor and a taxane to 177Lu-PSMA-617 plus standard care or standard care alone, selected by PSMA PET, and met both primary endpoints of overall and radiographic progression-free survival. Whether radioligand therapy should now be given before chemotherapy or even at diagnosis, as PSMAfore and PSMAddition test, is the open question.",
     result: "OS HR 0.62.",
-    drugs: ["pluvicto"], cancers: ["prostate"], targets: ["psma"], technologies: ["radioligand-therapy", "psma-pet"], links: [ct("NCT03511664")], people: ["oliver-sartor", "ken-herrmann", "michael-morris"] }),
+    drugs: ["pluvicto"], cancers: ["prostate", "prostate-mcrpc"], targets: ["psma"], technologies: ["radioligand-therapy", "psma-pet"], links: [ct("NCT03511664")], people: ["oliver-sartor", "ken-herrmann", "michael-morris"] }),
   t({ id: "psmafore", name: "PSMAfore", nct: "NCT04689828", phase: "3", status: "positive", yearReported: 2023, sponsor: "Novartis",
     setting: "PSMA+ mCRPC after one ARPI, taxane-naive: 177Lu-PSMA-617 vs ARPI switch",
     tldr: "PSMAfore moved Pluvicto before chemotherapy in prostate cancer.",
     summary: "PSMAfore, trial NCT04689828 sponsored by Novartis and published in the Lancet in 2024, moved Pluvicto, or 177Lu-PSMA-617, before chemotherapy in PSMA-positive metastatic castration-resistant prostate cancer after one androgen receptor pathway inhibitor. It randomised 468 taxane-naive men to the radioligand or a switch of androgen receptor pathway inhibitor, met its primary radiographic progression-free survival endpoint with a large effect, and overall survival was confounded by crossover of most control patients, with crossover-adjusted analyses favouring the radioligand; approval in the pre-chemotherapy setting followed in 2025. Whether earlier use improves survival, not just progression, is the open question.",
     result: "rPFS HR 0.41.",
-    drugs: ["pluvicto"], cancers: ["prostate"], links: [ct("NCT04689828")], people: ["oliver-sartor", "michael-morris"] }),
+    drugs: ["pluvicto"], cancers: ["prostate", "prostate-mcrpc"], links: [ct("NCT04689828")], people: ["oliver-sartor", "michael-morris"] }),
 
   // ---- Early detection / MRD ----
   t({ id: "nhs-galleri", name: "NHS-Galleri", nct: "ISRCTN91431511", phase: "3", status: "completed", sponsor: "NHS England / GRAIL",

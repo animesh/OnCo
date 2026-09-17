@@ -12,7 +12,8 @@ import { tldrZh as law } from "../src/data/law-wave";
 import { tldrZh as diagnostics2 } from "../src/data/diagnostics-wave2";
 import { tldrZh as networks } from "../src/data/institution-networks-wave";
 
-const WAVES: Record<string, string>[] = [manufacturing, theories, platform, trialDesign, law, diagnostics2, networks];
+const WAVES: Record<string, string>[] = [manufacturing, theories, platform, trialDesign, law, diagnostics2, networks];, prostate];
+import { tldrZh as prostate } from "../src/data/prostate-subtypes";
 const path = "src/data/i18n/zh.ts";
 let z = readFileSync(path, "utf8");
 const have = new Set([...z.matchAll(/^\s*"([^"]+)":\s/mg)].map((m) => m[1]));

@@ -1784,7 +1784,7 @@ export const pipelineTrialsWave6: TrialInput[] = [
     setting: "A Randomized Phase III Trial of Patients With Advanced Hematologic Malignancies Undergoing Allogeneic Hematopoietic Cell Transplantation With Either Orca-T, a T-cell-Depleted Graft With Additional Infusion of Conventional T Cells and Regulatory T Cells, or Standard-of-Care Allogeneic Graft",
     tldr: "A phase 3 trial of Orca-T in acute myeloid leukaemia and myelodysplastic syndromes / neoplasms, run by Orca Biosystems, Inc., active and no longer recruiting.",
     summary: "Precision-T: A Randomized Study of Orca-T in Recipients Undergoing Allogeneic Transplantation for Hematologic Malignancies is a phase 3 interventional study registered as NCT05316701 by Orca Biosystems, Inc., with 187 participants enrolled, started 2022-06-21 and due to reach its primary completion in 2024-07-15. Interventions recorded: Orca-T and Standard-of-Care. Results have been posted on the registry.",
-    drugs: [], cancers: ["aml","mds"], companies: ["orca-biosystems"],
+    drugs: ["tregzi"], cancers: ["aml","mds"], companies: ["orca-biosystems", "orca-bio"],
     links: [{ label: "ClinicalTrials.gov NCT05316701", url: "https://clinicaltrials.gov/study/NCT05316701" }] },
   { id: "nct05804045", kind: "trial", name: "Study of Pimicotinib (ABSK021) for Tenosynovial Giant Cell Tumor (MANEUVER)", nct: "NCT05804045", phase: "3", status: "active", sponsor: "Abbisko Therapeutics Co, Ltd", enrolled: 94, asOf, tags,
     setting: "A Phase 3, Randomized, Double-blind, Placebo-Controlled, Multicenter Study of ABSK021 to Assess the Efficacy and Safety in Patients With Tenosynovial Giant Cell Tumor",

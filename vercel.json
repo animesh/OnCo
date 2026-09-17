@@ -60,6 +60,11 @@
       "permanent": true
     },
     {
+      "source": "/companies/hansoh/:path*",
+      "destination": "/companies/hansoh-pharma/:path*",
+      "permanent": true
+    },
+    {
       "source": "/companies/cstone-pharmaceuticals/:path*",
       "destination": "/companies/cstone/:path*",
       "permanent": true
