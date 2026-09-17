@@ -10873,4 +10873,6 @@ export const tldr_zh: Record<string, string> = {
   nct06423911: "一项在慢性髓性白血病中评估Olverembatinib的3期试验，由Ascentage Pharma Group Inc.开展，正在招募。",
   nct06432296: "一项在晚期实体瘤中评估M701的3期试验，由Wuhan YZY Biopharma Co., Ltd.开展，进行中、不再招募。",
   nct07112196: "一项在晚期实体瘤中评估Visugromab的2/3期试验，由CatalYm GmbH开展，正在招募。",
+  "small-molecule": "小分子药物是化学合成的药物，分子小到可以进入细胞内部，因此通常可以做成口服片剂。",
+  "vaccines-and-oncolytic-viruses": "癌症疫苗训练免疫系统识别肿瘤细胞上的蛋白；溶瘤病毒感染并裂解癌细胞，同时向免疫系统发出警报。",
 };

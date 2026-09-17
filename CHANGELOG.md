@@ -7,6 +7,7 @@ All notable changes to OnCo are recorded here. The format follows [Keep a Change
 Regenerated from the commit log each time the site ships (`scripts/changelog-sync.ts`); the version sections below are written by hand when a release is cut.
 
 ### 17 September 2026
+- Pivot headers all link to pages: modality, front, status and phase; new small molecule and cancer vaccine pages; day-long cache headers for snapshots; Cloudflare caching on the roadmap
 - Changelog sync keeps the pending entry through the build
 - Changelog kept current from the commit log; linked from the README
 - Link 51 new technologies back from their drugs, targets and base drawings

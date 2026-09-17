@@ -40,11 +40,16 @@ export default function PivotPage() {
   const meta: DimMeta = {
     cancer: { label: "Cancer", ids: Object.fromEntries(g.kind("cancer").map((c) => [short(c.name), c.id])), routes: Object.fromEntries(g.kind("cancer").map((c) => [short(c.name), routeFor(c)])) },
     target: { label: "Target", routes: Object.fromEntries(g.kind("target").map((t) => [short(t.name), routeFor(t)])) },
-    modality: { label: "Modality" },
+    modality: { label: "Modality", routes: {
+      "Small molecule": "/terms/small-molecule/", "Antibody": routeFor(g.must("monoclonal-antibody")), "ADC": routeFor(g.must("adc")), "Bispecific ADC": routeFor(g.must("bispecific-adc")),
+      "Bispecific antibody": routeFor(g.must("bispecific-antibody")), "T-cell engager": routeFor(g.must("t-cell-engager")), "Cell therapy": routeFor(g.must("cell-therapy")),
+      "Radiopharmaceutical": routeFor(g.must("radiopharma")), "Imaging agent": routeFor(g.must("imaging")), "Vaccine or oncolytic": "/terms/vaccines-and-oncolytic-viruses/",
+      "Degrader or glue": routeFor(g.must("protac-degrader")), "Chemotherapy": routeFor(g.must("chemotherapy")), "Diagnostic": routeFor(g.must("diagnostics")), "Device": routeFor(g.must("devices")),
+    } },
     company: { label: "Company", routes: Object.fromEntries(g.kind("company").map((c) => [short(c.name), routeFor(c)])) },
-    front: { label: "Front" },
-    status: { label: "Status" },
-    phase: { label: "Phase" },
+    front: { label: "Front", routes: Object.fromEntries(g.kind("section").map((s) => [s.name, routeFor(s)])) },
+    status: { label: "Status", routes: { approved: "/regulatory/", "phase-3": "/terms/trial-phases/", "phase-2": "/terms/trial-phases/", "phase-1": "/terms/trial-phases/", withdrawn: "/terms/approval-withdrawal/", "standard-of-care": "/terms/standard-of-care/", preclinical: "/terms/preclinical/" } },
+    phase: { label: "Phase", routes: { Approved: "/regulatory/", "Phase 1": "/terms/trial-phases/", "Phase 2": "/terms/trial-phases/", "Phase 3": "/terms/trial-phases/", "Phase 4": "/terms/trial-phases/", "Phase 1/2": "/terms/trial-phases/", "Phase 2/3": "/terms/trial-phases/" } },
   };
 
   return (

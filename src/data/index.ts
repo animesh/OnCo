@@ -31,6 +31,7 @@ import { nutrition } from "./nutrition";
 import { adcChemistry } from "./adc-chemistry";
 import { journals } from "./journals";
 import { termsBasics } from "./terms-basics";
+import { termsModalities } from "./terms-modalities";
 import { termsJargon } from "./terms-jargon";
 import { institutionsUs } from "./institutions/us";
 import { institutionsWorld } from "./institutions/world";
@@ -118,6 +119,7 @@ const RAW_INPUTS: EntityInput[] = [
   ...adcChemistry,
   ...journals,
   ...termsBasics,
+  ...termsModalities,
   ...termsJargon,
   ...institutionsUs,
   ...institutionsWorld,
