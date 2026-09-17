@@ -106,6 +106,7 @@ export const navEs: NavDict = {
   "/cases/": ["Casos por país", "Nuevos casos de cáncer por país y por cáncer, con las lagunas de datos hechas explícitas."],
   "/funding/": ["Flujos de financiación", "De dónde viene el dinero."],
 
+  "/first-60-days/": ["Los primeros 60 días", "Semana a semana tras el diagnóstico, para su tipo de cáncer: las pruebas, el equipo, las decisiones que vienen, las preguntas que hacer, los ensayos que mencionar y la ayuda gratuita."],
   "/prep/": ["Preparar la consulta", "Marca las preguntas para tu cáncer, añade las tuyas e imprime o descarga una página para la consulta."],
   "/side-effects/": ["Efectos secundarios", "Parte del síntoma: qué tratamientos lo causan, con qué frecuencia y cuándo llamar."],
   "/symptoms/": ["Del síntoma a la prueba", "Parte de un síntoma preocupante: qué puede significar, qué prueba va primero y los umbrales de derivación de las guías."],

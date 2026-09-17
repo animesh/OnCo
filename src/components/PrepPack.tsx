@@ -104,7 +104,7 @@ export function PrepPack({ data }: { data: PrepData }) {
 
         {cancer && (
           <div className="mt-6 space-y-6">
-            <p className="text-sm text-muted">Questions for <Link href={cancer.route} className="underline">{cancer.name}</Link>{cancer.source === "generated" ? ", generated from its standard of care, biomarkers and open problems. Hand-written sets exist for some cancers; this one is on the list." : ", written by hand for this cancer."} Tick what you want to ask. The &ldquo;why&rdquo; line is for you; it is left off the printed page if you prefer plain questions.</p>
+            <p className="text-sm text-muted">Questions for <Link href={cancer.route} className="underline">{cancer.name}</Link>{cancer.source === "generated" ? ", generated from its standard of care, biomarkers and open problems. Hand-written sets exist for some cancers; this one is on the list." : ", written by hand for this cancer."} Tick what you want to ask. Prefer one page with room for the answers? Open the <Link href={`/prep/${cancer.id}/`} className="underline">appointment sheet for {cancer.name}</Link>. The &ldquo;why&rdquo; line is for you; it is left off the printed page if you prefer plain questions.</p>
             {groups.map(([setting, qs]) => {
               const allOn = qs.every((q) => picked.has(questionKey(q)));
               return (

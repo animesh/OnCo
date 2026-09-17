@@ -94,6 +94,8 @@ const P: Record<string, string> = {
   "/cases/": "M12 21s-6-5.5-6-11a6 6 0 0 1 12 0c0 5.5-6 11-6 11Zm0-9a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z",
   "/funding/": "M8 21h8l3-9H5l3 9ZM12 3v5M9 6l3 2 3-2M6 12l1-3h10l1 3",
   // Live
+  // Calendar with a tick: the first 60 days
+  "/first-60-days/": "M4 6.5A1.5 1.5 0 0 1 5.5 5h13A1.5 1.5 0 0 1 20 6.5v12a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5v-12ZM4 10h16M8 3v4m8-4v4M9.5 15l2 2 3.5-4",
   "/prep/": "M7 3h10v18H7zM10 3v2h4V3M9 9l1.5 1.5L13 8M9 14l1.5 1.5L13 12.5M15 9h2m-2 5h2",
   "/side-effects/": "M4 14a4 4 0 0 1 4-4h8a4 4 0 0 1 0 8H8a4 4 0 0 1-4-4Zm8-4v8M17 3v3m-1.5-1.5h3",
   "/symptoms/": "M6 3v6a6 6 0 0 0 12 0V3M9 3v1m6-1v1M12 15v3a3 3 0 0 0 6 0v-2a2 2 0 1 1 4 0",

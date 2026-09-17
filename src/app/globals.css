@@ -524,3 +524,15 @@ html[dir="rtl"] code, html[dir="rtl"] kbd, html[dir="rtl"] .tabular-nums { unico
   button, [role="menu"], .skip-link, kbd { display: none !important; }
   @page { margin: 14mm 12mm 16mm; }
 }
+
+/* Appointment sheet (/prep/[id]/): one page, sections kept whole, ruled lines where a field is empty. */
+.prep-lines { background: repeating-linear-gradient(to bottom, transparent 0, transparent calc(1.5rem - 1px), var(--color-border, #ccc) calc(1.5rem - 1px), var(--color-border, #ccc) 1.5rem); }
+@media print {
+  .prep-sheet { font-size: 10pt; }
+  .prep-sheet .prep-part { break-inside: avoid; margin-top: 0.6rem; }
+  .prep-sheet h1 { font-size: 16pt; }
+  .prep-sheet h2 { font-size: 11pt; margin-top: 0; }
+  .prep-sheet .prep-lines { background: repeating-linear-gradient(to bottom, transparent 0, transparent calc(1.5rem - 1px), #999 calc(1.5rem - 1px), #999 1.5rem); }
+  .prep-sheet input, .prep-sheet textarea { display: none !important; }
+  .prep-sheet a[href^="http"]::after { content: none; }
+}

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Cancer } from "@/lib/schema";
 import { questionsFor } from "@/lib/questions";
 
@@ -29,6 +30,7 @@ export function Questions({ cancer }: { cancer: Cancer }) {
           </section>
         ))}
       </div>
+      <p className="text-sm mt-5">Newly diagnosed? Read <Link href={`/first-60-days/${cancer.id}/`} className="underline">the first 60 days with {cancer.name.replace(/\s*\(.*?\)\s*$/, "")}</Link>, then print the <Link href={`/prep/${cancer.id}/`} className="underline">one-page appointment sheet</Link> with room for the answers.</p>
       <p className="text-xs text-muted mt-5">Print this page for your appointment (your browser&apos;s print command). These prompts are for discussion; your clinical team knows your case.</p>
     </div>
   );
