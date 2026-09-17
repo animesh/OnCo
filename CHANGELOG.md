@@ -7,16 +7,17 @@ All notable changes to OnCo are recorded here. The format follows [Keep a Change
 Regenerated from the commit log each time the site ships (`scripts/changelog-sync.ts`); the version sections below are written by hand when a release is cut.
 
 ### 17 September 2026
+- Apply the update bot's proposals (PR 16): 55 EU approval rows from the EMA register and 28 FDA regulatory events; pancreatic cancer wave: four failed phase 3 programmes, nimotuzumab's NOTABLE approval, elraglusib, their sponsors and cross-links; PDAC and Cloudflare rows on the roadmap
 - Merge PRs 25, 28 and 29 (CheckMate split, topic cards, WebMCP); mobile region menu stays on screen; one heading per cancer group; bevacizumab NICE note; glioblastoma MGMT and tovorafenib wording; mathematical models hub and site pages in search; long lists load in pages as you scroll
+- Add progressive WebMCP tools for public oncology search and lookup
+- fix: filter cancer topic cards by relevance
+- fix(glioblastoma): split CheckMate 143/498/548, add extent of resection and CCTG CE.6
 - Pivot headers all link to pages: modality, front, status and phase; new small molecule and cancer vaccine pages; day-long cache headers for snapshots; Cloudflare caching on the roadmap
 - Changelog sync keeps the pending entry through the build
 - Changelog kept current from the commit log; linked from the README
 - Link 51 new technologies back from their drugs, targets and base drawings
 - Point 27 trials, drugs, targets, pathways and terms at their 44 landmark papers
-- Add progressive WebMCP tools for public oncology search and lookup
-- fix: filter cancer topic cards by relevance
 - Link 28 cancer subtype pages from the drugs and trials that treat them
-- fix(glioblastoma): split CheckMate 143/498/548, add extent of resection and CCTG CE.6
 - Refresh provenance for this week's records
 - Cancer links for 20 unlinked trials; Chinese version complete for trials
 - Watch button confirms each click

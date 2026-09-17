@@ -202,9 +202,7 @@ export const cancers: CancerInput[] = [
     summary: "FOLFIRINOX or gemcitabine/nab-paclitaxel remain the mainstays; surgery cures a minority. 2026 brought the first new approval in locally advanced disease in decades (Optune Pax TTFields). Daraxonrasib (pan-RAS) showed ~14.5-month OS in second line and is in phase 3; KRAS G12D inhibitors and KRAS vaccines (ELI-002) follow. Personalised mRNA vaccines (autogene cevumeran) show durable T-cell responses correlating with recurrence-free survival. CLDN18.2 and mesothelin are ADC/CAR-T targets; FAPI PET outperforms FDG. Germline BRCA (~5-7%): olaparib maintenance (POLO). MCED tests aim at earlier detection.",
     biomarkers: ["KRAS (G12D 40%, G12V 30%, G12R 15%, G12C 1-2%)", "Germline BRCA/PALB2", "MSI (rare)", "NRG1 fusions (KRAS-wild-type)", "CLDN18.2", "CA19-9"],
     standardOfCare: [
-      { setting: "Resectable/borderline", approach: "Neoadjuvant FOLFIRINOX → surgery → adjuvant chemotherapy.", refs: ["cytotoxic-chemotherapy", "robotic-surgery"], guideline: { version: "NCCN Guidelines: Pancreatic Adenocarcinoma", url: "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1455" } },
-      { setting: "Locally advanced", approach: "Chemotherapy ± TTFields (Optune Pax, 2026); SBRT or MR-guided RT; IRE in selected cases.", refs: ["optune", "mr-linac", "irreversible-electroporation"], guideline: { version: "NCCN Guidelines: Pancreatic Adenocarcinoma", url: "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1455" } },
-      { setting: "Metastatic", approach: "FOLFIRINOX or gem/nab-pac; olaparib maintenance if gBRCA; zenocutuzumab if NRG1; trials of RAS inhibitors.", refs: ["olaparib", "zenocutuzumab", "daraxonrasib"], guideline: { version: "NCCN Guidelines: Pancreatic Adenocarcinoma", url: "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1455" } },
+      // Rows for resectable, locally advanced and metastatic disease live in spikes/pancreatic.ts (fuller, with trial refs).
     ],
     stateOfArt: ["First TTFields approval (2026).", "Pan-RAS inhibitors with unprecedented OS in phase 1/2.", "Personalised vaccines with durable immunity."],
     history: [
