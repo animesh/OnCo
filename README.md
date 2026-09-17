@@ -80,6 +80,10 @@ GitHub Actions run the checks on every push and open weekly pull requests with r
 - **Nothing stale by design.** Counts and dates are computed at build time from the corpus, never written into copy.
 - **Open for good.** Code is MIT. Data is copyright OnCo, free for individual and educational use under CC BY-NC 4.0 with attribution; commercial use must contact us to pay for the data (see `LICENSE-DATA`). Logos remain their owners' trademarks.
 
+## Changelog
+
+What changed, release by release, is in [CHANGELOG.md](CHANGELOG.md) and rendered live at [onco.cc/changelog](https://onco.cc/changelog/). The Unreleased section is regenerated from the commit log every time the site ships (`npm run changelog`, also run by `npm run build`), so it is never behind the live site. Version sections are written by hand when a release is cut.
+
 ## Cite and reuse
 
 - **Cite:** `CITATION.cff` holds the citation for the software and, under `preferred-citation`, for the corpus as a dataset; GitHub's "Cite this repository" button reads it. Each tagged release attaches the corpus (JSON, NDJSON, CSV, JSON Schema, OpenAPI, Markdown context files) at https://github.com/judegomila/OnCo/releases, and Zenodo archives releases with a DOI once the repository is linked there; the DOI goes into `CITATION.cff` when issued.

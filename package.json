@@ -25,7 +25,7 @@
   "scripts": {
     "dev": "npm run build:api && next dev",
     "build": "npm run build:api && next build",
-    "build:api": "tsx scripts/build-redirect-stubs.ts && tsx scripts/build-api.ts && tsx scripts/build-openapi.ts && tsx scripts/embed.ts && tsx scripts/build-ask.ts && tsx scripts/build-similar.ts && tsx scripts/build-triples.ts && tsx scripts/build-context.ts && tsx scripts/freshness.ts && tsx scripts/newsletter.ts",
+    "build:api": "tsx scripts/changelog-sync.ts && tsx scripts/build-redirect-stubs.ts && tsx scripts/build-api.ts && tsx scripts/build-openapi.ts && tsx scripts/embed.ts && tsx scripts/build-ask.ts && tsx scripts/build-similar.ts && tsx scripts/build-triples.ts && tsx scripts/build-context.ts && tsx scripts/freshness.ts && tsx scripts/newsletter.ts",
     "validate": "tsx scripts/validate.ts",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
@@ -80,7 +80,8 @@
     "fetch:xrefs": "tsx scripts/fetch-xrefs.ts",
     "fetch:cell-lines": "tsx scripts/fetch-cell-lines.ts",
     "fetch:openmedical": "tsx scripts/fetch-openmedical.ts",
-    "fetch:universe": "tsx scripts/fetch-universe.ts"
+    "fetch:universe": "tsx scripts/fetch-universe.ts",
+    "changelog": "tsx scripts/changelog-sync.ts"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.30.0",

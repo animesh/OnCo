@@ -4,7 +4,68 @@ All notable changes to OnCo are recorded here. The format follows [Keep a Change
 
 ## [Unreleased]
 
-Nothing yet.
+Regenerated from the commit log each time the site ships (`scripts/changelog-sync.ts`); the version sections below are written by hand when a release is cut.
+
+### 17 September 2026
+- Link 51 new technologies back from their drugs, targets and base drawings
+- Point 27 trials, drugs, targets, pathways and terms at their 44 landmark papers
+- Link 28 cancer subtype pages from the drugs and trials that treat them
+- Refresh provenance for this week's records
+- Cancer links for 20 unlinked trials; Chinese version complete for trials
+- Watch button confirms each click
+- Country pages: cancer site labels link to their OnCo pages in both tables
+- Chinese TL;DRs for the last 87 curated trials and drugs
+- Mathematical and biophysical models: 22 model technologies, a third type on the models page
+- Types strip as pills, navigator visuals, account-style signup, linked grid headers
+- chore: refresh pulse, abstract and citation snapshots (#20)
+- chore: refresh institution research output from OpenAlex (#17)
+
+### 16 September 2026
+- Add Anocca; biophysics sources as data-source candidates
+- Prevalence rows for 20 more targets
+- Prevalence rows for 36 targets
+- Molecules for 26 more drugs and tracers
+- Molecules for 29 more small-molecule drugs
+- Pipelines and missing rows for 29 new cancer pages
+- Keep the corpus out of the tool pages' JavaScript
+- Keep the corpus out of the guideline pages' JavaScript
+- Load translation tables on demand; Chinese TL;DRs for 2,678 registry records
+- Chinese TL;DRs for the remaining 131 people
+- Subtype pages: leiomyosarcoma, liposarcoma, synovial sarcoma, marginal zone lymphoma, cutaneous T-cell lymphoma
+- Subtype pages: kidney, testicular, oesophageal, bladder
+- Subtype pages: thyroid, head and neck, ovarian
+- Chinese TL;DRs for every company, institution, term and idea
+- Radiation wave 4 (21 landmark trials) and Chinese TL;DRs for every cancer, target, technology and curated drug
+- Parent pages for breast, lung, leukaemia and biliary cancer; radiation drugs; audit link report; Chinese TL;DRs
+- check-links: separate blocked from broken in the report (#15)
+- Cancer subtype pages (pleural and peritoneal mesothelioma), radiation wave 2, roadmap 112
+- Mobile search opens into the box; radiation wave 1
+- Add SciRouter, a prevention-first longevity start-up
+- Molecules for 31 small-molecule drugs; gumarontinib folded into glumetinib
+- Essential thrombocythaemia page, aspirin record, vorolanib
+- Polycythaemia vera: dedicated page, seven pivotal trials, eight terms, two ideas
+- China deep dive: fifteen trial sponsors as company records
+- Offline page only on real failures, China wave 1, favicon set
+- Registry trials wave 6 and products wave 7
+- Clickable breadcrumbs, pipeline products wave 6, checklist additions
+- Header signup, trial wave 5 and Ask weighting
+- trials: wave 4 from ClinicalTrials.gov, 309 recruiting or active industry phase 3 oncology trials each linked to a recorded drug and cancer (295 to their sponsor); wave 3 trials gain sponsor links; search lifts the kind named at the start of a question so a 'drug for' query ranks drugs above trials and people
+- data: pipeline wave 2 from ClinicalTrials.gov, curated: 27 products missing from the corpus (ten China-approved kinase and checkpoint drugs, Japan's amrubicin and pirarubicin, tabelecleucel, HER2 and GDF-15 antibodies, PSMA and CAIX PET tracers, CD45 radioimmunotherapy and others) with 32 phase 3 trial records and China regional rows; launch checklist gains the agentic and AI accessibility to-do
+- cancers: the four thin pages filled from sources (epithelioid sarcoma, extragonadal germ cell tumour, metastatic cancer, NUT carcinoma) with state of the art, history and development pipelines; six trials (TIGER, SABR-COMET, the tazemetostat run-in, three NUT carcinoma trials) and the BET inhibitor ZEN-3694; gaps page counts only developers as missing products
+- site: Google Analytics tag with an honest disclosure on the about page; refresh workflows merge their own pull requests once validate and tests pass (the proposals workflow stays a human gate); deploys the FCCT directory and the nine merged weekly snapshots
+- chore: draft change proposals from feed snapshots (#1)
+- chore: refresh pulse, abstract and citation snapshots (#2)
+- chore: refresh trial counts from ClinicalTrials.gov (#3)
+- chore: refresh public/votes.json from Discussions reactions (#5)
+- chore: weekly citation link check (#7)
+- chore: refresh FDA approvals feed (OCE notifications, openFDA drugsfda) (#8)
+- chore: refresh preprint tracker from Europe PMC (#9)
+- chore: check regional approvals against the EMA register (#10)
+- chore: refresh universe lists (NCI drugs and types, NCI centres, OECI, NHS alliances, NLM journals, OpenAlex, KEGG, ChEMBL, ClinicalTrials.gov, FDA OCE) (#11)
+- data: the Sijbrandij Foundation and Future of Cancer Care Today as entities with their leads, Sid Sijbrandij linked, and the FCCT directory brought in: 39 suppliers, tools and services and 10 clinics and centres for tissue preservation, tumour profiling, functional drug testing, liquid biopsy, theranostics, vaccines, cell therapy, trial finding and navigation
+- owner requests: aldoxorubicin and Gemini Therapeutics; anetumab ravtansine, its two mesothelioma trials, the UCL proton therapy trial and an idea on why ADCs have failed in mesothelioma; cancer pages replace the curated Pipeline list with an In development tab built from the whole corpus; Even One Ventures and fourteen portfolio companies with a weekly-refreshed universe list
+- data: forty-six approved cancer drugs missing from the corpus, curated from every ChEMBL molecule with an oncology indication (historic hormonal and cytotoxic agents, photodynamic and diagnostic agents, growth factors, antiemetics, drugs approved in Japan, China, India or Australia); approval pill no longer wraps
+- header: profile icon on every page opens an email capture dialog (magic-link sign-in when accounts are on, list endpoint otherwise); weekly-issue signup boxes removed from footer and newsletter page; strings in nine languages
 
 ## [1.0.0] - 2026-09-16
 
