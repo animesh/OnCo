@@ -13,7 +13,7 @@ export default function SignupPage() {
       <Container className="pb-16 max-w-xl space-y-6">
         <SignupForm />
         <div className="text-sm text-muted space-y-2">
-          <p>What you get: the <Link className="underline" href="/newsletter/">weekly issue</Link> generated from the corpus, and, once accounts are switched on, your watched pages kept across devices.</p>
+          <p>What an account gives you: your <Link className="underline" href="/saved/">watchlist and saved views</Link> synced across devices, your cancer choice remembered, and alerts when a trial or treatment you follow changes. Sign-in is by emailed link, so there is no password to lose.</p>
           <p>What we store: your email address with the list provider, nothing else. The site itself sets no advertising trackers; Google Analytics counts visits, as the <Link className="underline" href="/about/">about page</Link> says.</p>
         </div>
       </Container>

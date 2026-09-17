@@ -38,10 +38,10 @@ export default function PivotPage() {
   }
 
   const meta: DimMeta = {
-    cancer: { label: "Cancer", ids: Object.fromEntries(g.kind("cancer").map((c) => [short(c.name), c.id])) },
-    target: { label: "Target" },
+    cancer: { label: "Cancer", ids: Object.fromEntries(g.kind("cancer").map((c) => [short(c.name), c.id])), routes: Object.fromEntries(g.kind("cancer").map((c) => [short(c.name), routeFor(c)])) },
+    target: { label: "Target", routes: Object.fromEntries(g.kind("target").map((t) => [short(t.name), routeFor(t)])) },
     modality: { label: "Modality" },
-    company: { label: "Company" },
+    company: { label: "Company", routes: Object.fromEntries(g.kind("company").map((c) => [short(c.name), routeFor(c)])) },
     front: { label: "Front" },
     status: { label: "Status" },
     phase: { label: "Phase" },

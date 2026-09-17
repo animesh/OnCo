@@ -12,7 +12,7 @@ export type Fact = {
   dims: Record<Dim, string[]>;
 };
 export type Dim = "cancer" | "target" | "modality" | "company" | "front" | "status" | "phase";
-export type DimMeta = Record<Dim, { label: string; ids?: Record<string, string> }>;
+export type DimMeta = Record<Dim, { label: string; ids?: Record<string, string>; /** Page for a header label, when the dimension is made of records (cancers, targets, companies). */ routes?: Record<string, string> }>;
 
 const DIMS: Dim[] = ["cancer", "target", "modality", "company", "front", "status", "phase"];
 const TIER_RANK: Record<string, number> = { approved: 6, "standard-of-care": 6, positive: 5, "phase-3": 5, established: 4, completed: 4, recruiting: 3, active: 3, "phase-2": 3, emerging: 2, "phase-1": 2, preclinical: 1, concept: 0, planned: 0, mixed: 1, historic: 0, negative: 0, withdrawn: 0 };
@@ -82,7 +82,7 @@ export function PivotTable({ facts, meta }: { facts: Fact[]; meta: DimMeta }) {
           <thead>
             <tr>
               <th className="sticky left-0 bg-card z-10">{meta[rowDim].label} \ {meta[colDim].label}</th>
-              {visibleCols.map((c) => <th key={c} className="max-w-[120px] whitespace-normal align-bottom">{colDim === "status" ? STATUS_LABEL[c] ?? c : c}</th>)}
+              {visibleCols.map((c) => { const href = meta[colDim].routes?.[c]; const label = colDim === "status" ? STATUS_LABEL[c] ?? c : c; return <th key={c} className="max-w-[120px] whitespace-normal align-bottom">{href ? <Link href={href} className="hover:underline">{label}</Link> : label}</th>; })}
               <th>Total</th>
             </tr>
           </thead>
@@ -91,7 +91,7 @@ export function PivotTable({ facts, meta }: { facts: Fact[]; meta: DimMeta }) {
               const total = pool.filter((f) => f.dims[rowDim].includes(r)).length;
               return (
                 <tr key={r}>
-                  <td className="sticky left-0 bg-card z-10 font-medium whitespace-nowrap">{rowDim === "status" ? STATUS_LABEL[r] ?? r : r}</td>
+                  <td className="sticky left-0 bg-card z-10 font-medium whitespace-nowrap">{(() => { const href = meta[rowDim].routes?.[r]; const label = rowDim === "status" ? STATUS_LABEL[r] ?? r : r; return href ? <Link href={href} className="hover:underline">{label}</Link> : label; })()}</td>
                   {visibleCols.map((c) => {
                     const cell = cells.get(`${r}|${c}`);
                     if (!cell || cell.n < minCount) return <td key={c} className="text-center text-muted/40">·</td>;
@@ -111,7 +111,7 @@ export function PivotTable({ facts, meta }: { facts: Fact[]; meta: DimMeta }) {
       <div className="mt-3 flex flex-wrap items-center gap-2 text-xs text-muted">
         <span>Cell colour = best evidence tier in the cell:</span>
         {[6, 5, 4, 3, 2, 1].map((t) => <span key={t} className={`chip ${TIER_BG[t]}`}>{TIER_LABEL[t]}</span>)}
-        <span className="ml-auto">Click a count to open the filtered list. Hover for the ids. Columns capped at 24 by frequency.</span>
+        <span className="ml-auto">Click a count to open the filtered list, or a cancer, target or company name to open its page. Hover for the ids. Columns capped at 24 by frequency.</span>
       </div>
       {cols.length > 24 && <p className="text-xs text-muted mt-1">Showing the 24 most frequent columns of {cols.length}. Raise the minimum count or swap axes to narrow.</p>}
     </div>

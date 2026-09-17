@@ -609,9 +609,9 @@ function CancerFamily({ c }: { c: Cancer }) {
   const parent = c.parent ? g.get(c.parent) : undefined;
   if (!children.length && !parent) return null;
   return (
-    <div className="mb-6 flex flex-wrap items-center gap-2 text-sm">
-      {parent && <><span className="text-muted">Part of</span><Link href={routeFor(parent)} className="pill hover:border-accent"><CancerIcon cancerId={parent.id} className="h-4 w-4" /> {parent.name}</Link></>}
-      {children.length > 0 && <><span className="text-muted">{parent ? "Types" : `Types of ${c.name.replace(/\s*\(.*$/, "")}`}</span>{children.map((x) => <Link key={x.id} href={routeFor(x)} className="pill hover:border-accent"><CancerIcon cancerId={x.id} className="h-4 w-4" /> {x.name}</Link>)}</>}
+    <div className="mb-6 flex flex-wrap items-center gap-2 text-sm" aria-label="Related cancer types">
+      {parent && <><span className="text-muted">Part of</span><Link href={routeFor(parent)} className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-2.5 py-1 text-sm hover:border-accent hover:bg-accent-soft"><CancerIcon cancerId={parent.id} className="h-4 w-4 shrink-0" /><span>{parent.name}</span></Link></>}
+      {children.length > 0 && <><span className="text-muted">{parent ? "Types" : `Types of ${c.name.replace(/\s*\(.*$/, "")}`}</span>{children.map((x) => <Link key={x.id} href={routeFor(x)} className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-2.5 py-1 text-sm hover:border-accent hover:bg-accent-soft"><CancerIcon cancerId={x.id} className="h-4 w-4 shrink-0" /><span>{x.name}</span></Link>)}</>}
     </div>
   );
 }

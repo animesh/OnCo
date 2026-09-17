@@ -26,7 +26,6 @@ export function SignupForm() {
   if (!configured) return (
     <div className="card p-5 space-y-2 text-sm">
       <p>{t("signup.soon")}</p>
-      <p className="text-muted">Meanwhile the <a className="underline" href="/newsletter/feed.xml">weekly issue is available as a feed</a>, and the Watch button on any page keeps it on your list in this browser.</p>
     </div>
   );
   return (

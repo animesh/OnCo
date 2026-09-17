@@ -416,12 +416,12 @@ export const EN = {
   "account.send": "Send me a sign-in link",
   "account.sent": "Check your email for the sign-in link. It works on any device.",
   "account.synced": "Watchlist synced",
-  "signup.title": "Stay in the loop",
-  "signup.why": "Leave your email and OnCo will write when something big changes in cancer research. No spam, one click to unsubscribe.",
-  "signup.button": "Keep me posted",
-  "signup.done": "Thank you. You are on the list.",
+  "signup.title": "Create your OnCo account",
+  "signup.why": "One account keeps your watchlist, saved views and cancer choice in sync across your devices, and lets OnCo alert you when a trial or treatment you follow changes. No password: we email you a sign-in link.",
+  "signup.button": "Create account",
+  "signup.done": "Check your email for the sign-in link; opening it creates your account.",
   "signup.icon": "Your profile and email updates",
-  "signup.soon": "Email updates open shortly. Until then, press Watch on any page to keep it on your list.",
+  "signup.soon": "Account creation is being switched on. Until then, press Watch on any page and your list stays in this browser.",
   "account.error": "The link could not be sent. Try again in a minute.",} as const;
 
 export type UiKey = keyof typeof EN;

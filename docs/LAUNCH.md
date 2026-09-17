@@ -342,3 +342,10 @@ The owner's patient-first roadmap (a real-case "For me", persistent cancer choic
 - Anocca (Södertälje, Sweden; TCR-T) added from its website. Ribodyne (San Diego) could not be added: no website resolves under ribodyne.com, .bio, .ai or .io and no public source was reachable, so it needs a description or link from the owner before a record is written.
 - Biophysics dimension approved: build the "Mathematical and biophysical models" technology group (growth and kill kinetics, radiobiology models, PK/PD and systems pharmacology, evolutionary and adaptive-therapy dynamics, spatial and agent-based models, digital twins) with a third tab on /models/; BioModels, PhysiCell and CancerModels.Org added to the data-sources candidates.
 - The site lists what it connects to at /data-sources/ (in use versus candidates, with licence, access and pipeline for each).
+
+### Owner reports 17 Sept 2026 (night)
+
+- Watch button: works in the built site (headless Chrome: the page hydrates, a click flips the button to Watching and the list is stored); no script errors. If it does nothing on a device, the page JavaScript is not loading there, which matches the UCSF network block, or storage is disabled in private browsing. A small confirmation after clicking would still help and is queued.
+- Signup page: rewritten as account creation (magic-link sign-in, no password, watchlist and saved views synced) with the newsletter wording removed. Accounts switch on when NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY are set in the Vercel project (a Supabase project with email auth enabled); until then the page says account creation is being switched on.
+- Types strip on parent cancer pages restyled as proper pills (the icon sat above the label). Navigator rows carry a visual: technology schematic, molecule for the top drug rows, kind icon otherwise. Landscape grid: cancer, target and company headers link to their pages.
+- Cross-link audit still to do: tables and facets across the site that show cancer, target or company names as plain text.
