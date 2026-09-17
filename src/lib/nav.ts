@@ -64,6 +64,7 @@ export const NAV_GROUPS: NavGroup[] = [
       { href: "/journals/", label: "Journals", blurb: "Where the evidence is published: scope, access model and the key papers each venue carried." },
       { href: "/key-papers/", label: "Key papers", blurb: "The papers that changed practice, each explained: what it found, what it means, what to be careful about." },
       { href: "/explained/", label: "Trials in plain words", blurb: "Every trial result as people out of 100, medians explained, surrogate endpoints flagged." },
+      { href: "/trial-designs/", label: "Trial design picker", blurb: "Every trial design as a card: when to use it, a worked example from the corpus and its main risk, with a plain-English guide to which design fits your question." },
       { href: "/guidelines/", label: "Guidelines", blurb: "Where NCCN, ESMO, NICE and ASCO agree and disagree, and what changed between guideline versions." },
       { href: "/forest/", label: "Forest plot", blurb: "Every hazard ratio in the trial corpus on one log axis; filter by cancer, setting and endpoint." },
       { href: "/evidence/", label: "Evidence", blurb: "Every trial ranked by evidence strength, endpoints as people out of 100." },

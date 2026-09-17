@@ -56,6 +56,7 @@ export const navDe: NavDict = {
   "/journals/": ["Zeitschriften", "Wo die Evidenz erscheint: Themenbereich, Zugangsmodell und die Schlüsselpublikationen jeder Zeitschrift."],
   "/key-papers/": ["Schlüsselpublikationen", "Die Arbeiten, die die Praxis verändert haben, jede erklärt: was sie fand, was sie bedeutet, worauf zu achten ist."],
   "/explained/": ["Studien in einfachen Worten", "Jedes Studienergebnis als Menschen von 100, Mediane erklärt, Surrogatendpunkte markiert."],
+  "/trial-designs/": ["Studiendesign-Auswahl", "Jedes Studiendesign als Karte: wann es passt, ein reales Beispiel aus dem Korpus und sein Hauptrisiko, mit einer einfachen Anleitung, welches Design zu Ihrer Frage passt."],
   "/guidelines/": ["Leitlinien", "Wo NCCN, ESMO, NICE und ASCO übereinstimmen und abweichen, und was sich zwischen Versionen geändert hat."],
   "/forest/": ["Forest-Plot", "Jedes Hazard Ratio des Studienkorpus auf einer logarithmischen Achse; filtern nach Krebsart, Setting und Endpunkt."],
   "/evidence/": ["Evidenz", "Jede Studie nach Evidenzstärke gereiht, Endpunkte als Menschen von 100."],

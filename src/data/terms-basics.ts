@@ -758,7 +758,7 @@ export const termsBasics: TermInput[] = [
     tldr: "A research study that tests a treatment in volunteers under strict rules, to find out whether it is safe and whether it works. Every approved cancer drug went through several.",
     summary: "Trials have a written protocol specifying who may join, what they receive, what is measured and how the results will be analysed, and are overseen by ethics committees and regulators; participants give informed consent and are usually monitored more closely than in routine care. Cancer trials progress through phases, from small safety studies to large randomised comparisons against the standard of care, and their results, reported at congresses such as ASCO and ESMO and in journals, are what change practice and win approvals. Fewer than one in ten adult cancer patients take part, participation is skewed towards younger, wealthier and white patients, and the cost and duration of trials is one of the field's main bottlenecks.",
     wikipedia: W("Clinical_trial"),
-    related: ["trial-phases", "randomised-trial", "placebo", "blinding", "endpoint", "standard-of-care", "basket-umbrella-platform", "real-world-evidence"], technologies: ["ai-trial-matching"],
+    related: ["trial-phases", "randomised-trial", "placebo", "blinding", "endpoint", "standard-of-care", "basket-umbrella-platform", "real-world-evidence", "trial-lifecycle", "informed-consent", "ethics-review", "trial-registration", "clinical-equipoise"], technologies: ["ai-trial-matching"],
   }),
   t({
     id: "trial-phases", name: "Phase 1, 2 and 3 trials", category: CLINIC,
@@ -766,7 +766,7 @@ export const termsBasics: TermInput[] = [
     tldr: "The three stages a new drug passes through: phase 1 finds a safe dose in a few dozen patients, phase 2 looks for signs of activity in a hundred or so, and phase 3 compares it with the standard treatment in hundreds or thousands.",
     summary: "Phase 1 escalates the dose in small groups until side effects limit it, defining the maximum tolerated dose and the dose for later study; in oncology, phase 1 patients have usually exhausted standard options and modern phase 1 trials often expand into hundreds of patients with early efficacy readouts. Phase 2 tests the chosen dose for response in a specific cancer, sometimes randomised and sometimes single-arm, and phase 3 is the large randomised, often blinded, comparison against the standard of care that regulators normally require for full approval. Phase 4 studies follow a marketed drug. Only around 5% of oncology drugs entering phase 1 reach approval, and around a third of phase 3 trials fail, which is a major driver of drug cost.",
     wikipedia: W("Phases_of_clinical_research"),
-    related: ["clinical-trial", "randomised-trial", "dose", "endpoint", "accelerated-approval", "standard-of-care", "surrogate-endpoint"],
+    related: ["clinical-trial", "randomised-trial", "dose", "endpoint", "accelerated-approval", "standard-of-care", "surrogate-endpoint", "trial-lifecycle", "pivotal-trial", "confirmatory-trial", "first-in-human", "dose-escalation-design", "seamless-adaptive", "single-arm", "non-inferiority", "basket-umbrella-platform", "trial-protocol", "trial-registration", "ethics-review", "informed-consent", "data-monitoring-committee", "clinical-equipoise", "estimand", "kaplan-meier-curve", "absolute-benefit", "surrogate-validation", "quality-adjusted-survival", "trial-failure-modes", "basket-trial", "umbrella-trial", "response-adaptive-randomisation", "bayesian-trial-design", "sample-size-re-estimation", "smart-design", "biomarker-stratified-design", "pragmatic-trial", "registry-based-trial", "decentralised-trial", "n-of-1-trial", "cluster-randomised-trial", "stepped-wedge-design", "non-inferiority-margin", "stratified-randomisation", "group-sequential-design"], trials: ["navigate", "rejoice-ovarian01", "keynote-522", "adaura"],
   }),
   t({
     id: "randomised-trial", name: "Randomised trial", category: CLINIC,
@@ -774,7 +774,8 @@ export const termsBasics: TermInput[] = [
     tldr: "A trial in which a coin toss (done by computer) decides which treatment each patient gets, so the groups are alike in every way except the treatment. It is the only reliable way to prove a treatment causes a benefit.",
     summary: "Without randomisation, patients who receive a new drug tend to differ from those who do not (fitter, younger, treated at better centres), and those differences, not the drug, may explain a better outcome; randomising removes this bias, and analysing every patient in the group they were assigned to (intention-to-treat) preserves it. The control group receives the current standard of care, sometimes with a placebo added so that the two arms look identical, and the trial is powered so that a real difference of a given size is unlikely to be missed. Large randomised trials are slow and expensive, which is why surrogate endpoints, single-arm accelerated approvals and real-world evidence are all attempts to shortcut them, each with known pitfalls.",
     wikipedia: W("Randomized_controlled_trial"),
-    related: ["clinical-trial", "placebo", "blinding", "trial-phases", "hazard-ratio", "p-value", "confidence-interval", "standard-of-care", "real-world-evidence"],
+    links: [{ label: "Wikipedia", url: W("Randomized_controlled_trial") }, { label: "CONSORT statement: reporting randomised trials", url: "https://www.consort-statement.org/" }],
+    related: ["clinical-trial", "placebo", "blinding", "trial-phases", "hazard-ratio", "p-value", "confidence-interval", "standard-of-care", "real-world-evidence", "stratified-randomisation", "clinical-equipoise", "cluster-randomised-trial", "pragmatic-trial", "intention-to-treat", "kaplan-meier-curve", "non-inferiority", "trial-failure-modes", "estimand"], trials: ["checkmate-067", "adaura", "interlace", "challenge", "protect"],
   }),
   t({
     id: "placebo", name: "Placebo", category: CLINIC,
@@ -782,7 +783,7 @@ export const termsBasics: TermInput[] = [
     tldr: "An inactive look-alike treatment given to the comparison group in a trial so that neither patients nor doctors can tell who is on the real drug. In cancer trials it is added on top of standard treatment, never given instead of it.",
     summary: "Placebos control for the placebo effect (improvement from expectation), for the extra attention trial patients receive, and for bias in how symptoms and side effects are reported; in oncology a placebo arm nearly always means 'standard of care plus placebo' versus 'standard of care plus new drug', since withholding effective treatment would be unethical. Placebo-controlled designs are most common in adjuvant and maintenance settings where the comparator is observation, and they are impossible when the new drug's side effects give it away. When an active standard exists, trials compare against it directly (open-label or double-dummy) rather than using placebo.",
     wikipedia: W("Placebo"),
-    related: ["randomised-trial", "blinding", "clinical-trial", "standard-of-care", "side-effect-vs-adverse-event"],
+    related: ["randomised-trial", "blinding", "clinical-trial", "standard-of-care", "side-effect-vs-adverse-event", "double-blind", "clinical-equipoise", "informed-consent", "n-of-1-trial"], trials: ["add-aspirin", "olanzapine-appetite-tmh", "keynote-564", "act-iv"],
   }),
   t({
     id: "blinding", name: "Blinded trial", category: CLINIC,
@@ -790,7 +791,7 @@ export const termsBasics: TermInput[] = [
     tldr: "Keeping patients (single-blind) or patients and doctors (double-blind) from knowing who is on which treatment, so that hopes and expectations cannot colour the results.",
     summary: "Blinding protects outcomes that involve judgement: how a patient rates their symptoms, whether a doctor decides a scan shows progression, or when to stop treatment; hard outcomes such as death are less vulnerable. Many cancer trials are open-label because the treatments are too different to disguise (an infusion versus a tablet, distinctive side effects), and they compensate by having scans read by a blinded independent central review (BICR) and by using overall survival, which cannot be biased by knowing the assignment. Unblinding a trial early, for example at an interim analysis, is a formal step overseen by an independent data monitoring committee.",
     wikipedia: W("Blinded_experiment"),
-    related: ["randomised-trial", "placebo", "bicr", "clinical-trial", "endpoint"],
+    related: ["randomised-trial", "placebo", "bicr", "clinical-trial", "endpoint", "double-blind", "stratified-randomisation", "clinical-equipoise"],
   }),
   t({
     id: "endpoint", name: "Endpoint", category: CLINIC,
@@ -798,7 +799,7 @@ export const termsBasics: TermInput[] = [
     tldr: "The specific outcome a trial is designed to measure, fixed in advance: for example how long patients live, or how long before their cancer grows. A trial 'meets its endpoint' when the new treatment beats the comparison on that measure.",
     summary: "The primary endpoint determines the trial's size and its verdict; secondary endpoints (response rate, quality of life, safety, overall survival if not primary) add context but are not what the trial was powered to prove. Overall survival is the gold standard because it is unambiguous and matters most, but it takes years and is muddied when control patients later receive the new drug; progression-free survival, response rate and pathologic complete response are faster surrogates that may or may not translate into living longer. Choosing endpoints, and whether regulators should accept surrogates, is one of the most contested areas in oncology.",
     wikipedia: W("Clinical_endpoint"),
-    related: ["surrogate-endpoint", "os", "pfs", "orr", "efs", "pcr", "hazard-ratio", "p-value", "randomised-trial"],
+    related: ["surrogate-endpoint", "os", "pfs", "orr", "efs", "pcr", "hazard-ratio", "p-value", "randomised-trial", "surrogate-validation", "primary-endpoint", "quality-adjusted-survival", "qol-pro"],
   }),
   t({
     id: "surrogate-endpoint", name: "Surrogate endpoint", category: CLINIC,
@@ -806,8 +807,8 @@ export const termsBasics: TermInput[] = [
     tldr: "A quicker, easier measurement used as a stand-in for what really matters. Tumour shrinkage or delayed growth stands in for living longer, on the assumption, not always true, that one leads to the other.",
     summary: "Progression-free survival, response rate, pathologic complete response, minimal residual disease and ctDNA clearance are the main surrogates in oncology; they are available months or years before overall survival and need fewer patients, so they drive most accelerated approvals and a share of full ones. A surrogate is valid for a given drug class and disease only if trials show that improving it reliably improves survival, and this correlation is strong in some settings (PFS in ovarian cancer maintenance) and weak in others (response rate in many solid tumours). When a surrogate-based approval is not confirmed by later survival data, the approval can be withdrawn, as has happened repeatedly since 2021.",
     wikipedia: W("Surrogate_endpoint"),
-    related: ["endpoint", "pfs", "orr", "pcr", "mrd", "os", "accelerated-approval", "stage-shift", "primary-endpoint", "confirmatory-trial"],
-    sections: ["drug-discovery"],
+    related: ["endpoint", "pfs", "orr", "pcr", "mrd", "os", "accelerated-approval", "stage-shift", "primary-endpoint", "confirmatory-trial", "surrogate-validation", "efs", "trial-failure-modes"],
+    sections: ["drug-discovery"], trials: ["keynote-522", "tropion-breast01", "announce", "ukctocs"],
   }),
   t({
     id: "hazard-ratio-basics", name: "Reading a hazard ratio", category: CLINIC,
@@ -815,7 +816,7 @@ export const termsBasics: TermInput[] = [
     tldr: "A hazard ratio of 0.70 means that at any given moment patients on the new treatment had 30% less risk of the event (death, progression) than those on the comparison. It says nothing about how many months that is worth.",
     summary: "The hazard ratio comes from a model that compares event rates across the entire follow-up period, not just at one time point; the confidence interval around it must exclude 1.0 for the difference to be considered statistically significant, and the closer to zero, the larger the effect. Because it is relative, the same hazard ratio can mean very different absolute gains: 0.70 might add one month to a median of three, or two years to a median of six, so it should always be read alongside the median difference and the survival curves. A hazard ratio also assumes the effect is roughly constant over time, which immunotherapy, with its delayed benefit and long tail, often violates.",
     wikipedia: W("Hazard_ratio"),
-    related: ["hazard-ratio", "confidence-interval", "p-value", "median-survival", "os", "pfs", "endpoint"],
+    related: ["hazard-ratio", "confidence-interval", "p-value", "median-survival", "os", "pfs", "endpoint", "absolute-benefit", "kaplan-meier-curve"],
   }),
   t({
     id: "median-survival", name: "Median survival", category: CLINIC,
@@ -831,7 +832,7 @@ export const termsBasics: TermInput[] = [
     tldr: "The range of values consistent with the trial's data, usually given at 95%. A hazard ratio of 0.70 with an interval of 0.55 to 0.89 means the true effect probably lies somewhere in that range; if the range crossed 1.0 the result would not be statistically significant, and an upper end close to 1.0 signals a fragile result.",
     summary: "Because a trial studies a sample rather than every patient in the world, its estimate carries uncertainty, and the confidence interval expresses it: a narrow interval comes from a large trial with more events, a wide one from a small trial. For a hazard ratio, an interval that excludes 1.0 corresponds to a p-value below 0.05; for a difference in months or percentage points, the interval must exclude zero. Reading the interval rather than just the point estimate shows how large or small the true benefit could plausibly be, and an interval whose upper end is close to 1.0 signals a fragile result even if it is technically significant.",
     wikipedia: W("Confidence_interval"),
-    related: ["p-value", "hazard-ratio", "hazard-ratio-basics", "randomised-trial", "endpoint"],
+    related: ["p-value", "hazard-ratio", "hazard-ratio-basics", "randomised-trial", "endpoint", "statistical-significance", "non-inferiority-margin", "absolute-benefit", "bayesian-trial-design", "sample-size-re-estimation"],
   }),
   t({
     id: "p-value", name: "P-value", category: CLINIC,
@@ -839,7 +840,7 @@ export const termsBasics: TermInput[] = [
     tldr: "The probability of seeing a difference at least this large if the treatment actually did nothing. Below 0.05 (a 1 in 20 chance) is the conventional threshold for calling a result 'statistically significant'. It measures surprise, not the size of the benefit: a trivial gain in a huge trial can have a tiny p-value.",
     summary: "A small p-value means the result would be unlikely under pure chance, but it does not measure how big or how clinically meaningful the effect is; a trivial benefit in a huge trial can have a tiny p-value while a large benefit in a small trial can miss significance. Trials with several endpoints or several interim looks must spend their 0.05 across them (hierarchical testing, alpha spending), which is why an endpoint can be 'nominally significant' yet not count formally. The confidence interval conveys the same information about significance while also showing the size of the effect, and is generally more useful.",
     wikipedia: W("P-value"),
-    related: ["confidence-interval", "hazard-ratio", "endpoint", "randomised-trial"],
+    related: ["confidence-interval", "hazard-ratio", "endpoint", "randomised-trial", "statistical-significance", "group-sequential-design", "bayesian-trial-design", "prespecified-vs-post-hoc"],
   }),
 
   // =====================================================================================
