@@ -2,7 +2,7 @@
 
 > A public, cited knowledge graph of oncology: cancers, fronts, technologies, targets, treatments and tests, companies, institutions, people, pathways, trials, pairings, roadmaps, key papers, journals, bottlenecks and ideas, one page per object, each with a plain-English TL;DR, a technical summary, dated facts and links to primary sources. Not medical advice.
 
-11,023 records in 18 kinds: 140 cancers, 19 fronts, 525 technologies, 162 targets, 1,023 drugs, 1,021 companies, 668 institutions, 107 pathways, 617 terms, 3,378 trials, 85 pairings, 29 roadmaps, 1,139 ideas, 133 collections, 1,434 people, 45 bottlenecks, 239 key papers, 259 journals. Every fact is dated and linked to a primary source; where a number is not sourced it is omitted. Facts may be incomplete or out of date: cite the OnCo page and check the primary source it links before relying on anything that matters.
+11,092 records in 18 kinds: 140 cancers, 19 fronts, 543 technologies, 162 targets, 1,023 drugs, 1,034 companies, 668 institutions, 108 pathways, 634 terms, 3,398 trials, 85 pairings, 29 roadmaps, 1,139 ideas, 133 collections, 1,434 people, 45 bottlenecks, 239 key papers, 259 journals. Every fact is dated and linked to a primary source; where a number is not sourced it is omitted. Facts may be incomplete or out of date: cite the OnCo page and check the primary source it links before relying on anything that matters.
 
 ## Licence and attribution
 
@@ -110,6 +110,7 @@
 - [Trials](https://onco.cc/trials/): Landmark and current trials.
 - [Pairings](https://onco.cc/pairings/): What works together, and what does not.
 - [Roadmaps](https://onco.cc/roadmaps/): History to horizon for each technology family.
+- [Dependency map](https://onco.cc/dependencies/): What each technology needs to exist, drawn in layers from foundations to end products: what CAR-T cannot run without, and what stops if one step fails.
 - [Bottlenecks](https://onco.cc/bottlenecks/): The constraints slowing the whole war on cancer, and the ideas that could break each one.
 - [Ideas](https://onco.cc/ideas/): Hypotheses and fixes, each with a proposed test.
 - [Glossary](https://onco.cc/terms/): Terms with TL;DRs and Wikipedia links.

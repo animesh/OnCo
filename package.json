@@ -82,7 +82,8 @@
     "fetch:openmedical": "tsx scripts/fetch-openmedical.ts",
     "fetch:universe": "tsx scripts/fetch-universe.ts",
     "changelog": "tsx scripts/changelog-sync.ts",
-    "orphans": "tsx scripts/orphans.ts"
+    "orphans": "tsx scripts/orphans.ts",
+    "fold:zh": "tsx scripts/fold-zh.ts"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.30.0",

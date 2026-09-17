@@ -7,9 +7,16 @@ All notable changes to OnCo are recorded here. The format follows [Keep a Change
 Regenerated from the commit log each time the site ships (`scripts/changelog-sync.ts`); the version sections below are written by hand when a release is cut.
 
 ### 17 September 2026
-- Machines of oncology: 21 machine technologies, 17 vendors and 66 centres with their proton, carbon, MR-linac, Gamma Knife and other rare machines, with a machines page; Free in oncology page with 62 services; tumour sequencing tests compared across 13 laboratories; useful 404 page with nearest matches; section tabs, aligned header icons and unsqueezed tables; machine-readable links, Wikidata sameAs and short titles for search engines and agents; footer credit; navigation starts at the top
+- Manufacturing in oncology: seven supply chains, 18 technologies and 14 makers; theories of cancer: a hub map and sixteen theory records with status; platform trials at depth: 21 master protocol trials and a hub term; technology dependency map with 119 edges and a viewer; Chinese TL;DRs folded in for every new record
 - Navigation starts at the top of the page (scroll attribute on the html tag); footer credit Made with heart and soul by Jude Gomila with Mount Tamalpais and Golden Gate icons in nine languages; roadmap rows 130 to 137
 - Every list row has a visual or a designed stand-in (ideas borrow their cancer icon, technology drawing or molecule), with a test so it cannot regress; I-SPY 1, I-SPY 2, I-SPY 2.2, WISDOM and Quantum Leap Healthcare Collaborative linked to Laura Esserman and UCSF; navigation starts at the top of the page; Enter in search opens the results page; roadmap rows 122 to 129
+- Manufacturing wave: remove the Hitachi remnant
+- Platform and adaptive trials at depth (roadmap row 124): master-protocol hub term, 21 platform, basket and umbrella trials, STAMPEDE enriched
+- Theories of cancer: hub map and sixteen theory records in the mechanics section
+- One Hitachi record (machines wave)
+- Machines of oncology: 21 machine technologies, 17 vendors and 66 centres with their proton, carbon, MR-linac, Gamma Knife and other rare machines, with a machines page; Free in oncology page with 62 services; tumour sequencing tests compared across 13 laboratories; useful 404 page with nearest matches; section tabs, aligned header icons and unsqueezed tables; machine-readable links, Wikidata sameAs and short titles for search engines and agents; footer credit; navigation starts at the top
+- Technology dependency DAG viewer (roadmap 134)
+- Manufacturing wave: seven supply chains, 18 technologies, 14 makers
 - Merge fixes: single Strata Oncology record, Chinese dictionary without duplicate keys
 - Machines wave: imaging, radiotherapy, particle, ablation, surgical and laboratory hardware with vendors and centres
 - Free in oncology and tumour sequencing test pages (roadmap 117, 118)
