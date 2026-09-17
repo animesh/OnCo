@@ -2,7 +2,7 @@
 
 > A public, cited knowledge graph of oncology: cancers, fronts, technologies, targets, treatments and tests, companies, institutions, people, pathways, trials, pairings, roadmaps, key papers, journals, bottlenecks and ideas, one page per object, each with a plain-English TL;DR, a technical summary, dated facts and links to primary sources. Not medical advice.
 
-10,944 records in 18 kinds: 140 cancers, 19 fronts, 504 technologies, 162 targets, 1,023 drugs, 1,004 companies, 668 institutions, 107 pathways, 617 terms, 3,378 trials, 85 pairings, 29 roadmaps, 1,139 ideas, 92 collections, 1,434 people, 45 bottlenecks, 239 key papers, 259 journals. Every fact is dated and linked to a primary source; where a number is not sourced it is omitted. Facts may be incomplete or out of date: cite the OnCo page and check the primary source it links before relying on anything that matters.
+11,023 records in 18 kinds: 140 cancers, 19 fronts, 525 technologies, 162 targets, 1,023 drugs, 1,021 companies, 668 institutions, 107 pathways, 617 terms, 3,378 trials, 85 pairings, 29 roadmaps, 1,139 ideas, 133 collections, 1,434 people, 45 bottlenecks, 239 key papers, 259 journals. Every fact is dated and linked to a primary source; where a number is not sourced it is omitted. Facts may be incomplete or out of date: cite the OnCo page and check the primary source it links before relying on anything that matters.
 
 ## Licence and attribution
 
@@ -94,7 +94,9 @@
 - [Pathways](https://onco.cc/pathways/): Signalling circuits, drawn and explained.
 - [Target dossiers](https://onco.cc/dossiers/): Everything about a target on one page: biology, prevalence, hotspots, products by phase, trials, resistance, assays, models, open questions, external ids.
 - [Pathway-to-drug matrix](https://onco.cc/pathway-drugs/): Which pathway nodes have a drug, at what phase, and which druggable nodes have none.
+- [Tumour sequencing tests](https://onco.cc/tumour-testing/): BostonGene, Tempus, Foundation Medicine, Caris, Guardant and the rest side by side: tissue or blood, panel or exome, what the report returns, and regulatory status where certain.
 - [Models & datasets](https://onco.cc/models/): Foundation models and the datasets they train on, with parameters, weights, licence and benchmarks.
+- [Machines](https://onco.cc/machines/): The scanners, accelerators, robots and ablation devices hospitals use against cancer: what each does, its advantages and limits, who makes it, and which centres run the rare ones.
 - [Open questions](https://onco.cc/open-questions/): Unresolved questions per target and technology: why open, what would answer them, who acts.
 - [Preclinical models](https://onco.cc/preclinical-models/): Cell lines with Cellosaurus and DepMap ids, PDX banks, mouse models and organoids per cancer and target.
 - [Regimens](https://onco.cc/regimens/): Named regimens with doses, days, cycles, emetogenicity and G-CSF need; calendar strip per regimen.
@@ -184,6 +186,7 @@
 - [Survivorship planner](https://onco.cc/survivorship/): Late effects to watch for after each treatment, the screening test, how often, and the guideline that says so.
 - [Second opinion](https://onco.cc/second-opinion/): Expert centres for your cancer in your country, the people who work on it, and how referral works where you live.
 - [Financial help](https://onco.cc/assistance/): Manufacturer programmes, reimbursement and generics by country and product, plus national schemes and charities.
+- [Free in oncology](https://onco.cc/free/): Everything you can get for nothing: free tumour and gene testing, screening and HPV vaccination, nurse helplines, rides and lodging, second opinions, trial travel help, wigs and prostheses, and open data. Who is eligible and where.
 - [Paying for care in the US](https://onco.cc/coverage/us/): Medicare Part B or D, prior authorisation, list prices and assistance programmes for every approved product.
 - [NHS coverage](https://onco.cc/coverage/uk/): NICE, Cancer Drugs Fund and SMC decisions for every approved product, and how NHS cancer care works.
 - [Paying for care in India](https://onco.cc/countries/in/): PM-JAY, Tata Memorial's subsidised care, National Cancer Grid pooled prices and what CDSCO has approved.
