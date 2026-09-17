@@ -557,7 +557,10 @@ export function termSchematicFor(category: string): Mesh {
  * Technologies that share another technology's animated schematic because the drawing depicts the same mechanism
  * (a checkpoint antibody, a radioligand, an epigenetic drug). Each key is a technology id; each value an id with its own scene.
  */
+import { radiationSchematicAliases } from "./radiation-wave1";
+
 export const SCHEMATIC_ALIAS: Record<string, string> = {
+  ...radiationSchematicAliases,
   "spatial-transcriptomics": "spatial-biology-instruments",
   "imaging-mass-cytometry": "spatial-biology-instruments",
   "multiplex-immunofluorescence": "histopathology-ihc",

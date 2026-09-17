@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { flushSync } from "react-dom";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { loadSearch } from "./SearchBox";
@@ -115,7 +116,9 @@ export function CommandPalette() {
       }
     };
     window.addEventListener("keydown", onKey);
-    const onOpen = () => setOpen(true);
+    // Open synchronously inside the tap that asked for it: iOS only shows the keyboard when focus happens in the user gesture,
+    // so the input must mount (and autofocus) before the click handler returns, not in a later timer.
+    const onOpen = () => flushSync(() => setOpen(true));
     const onSheet = () => setSheet(true);
     window.addEventListener("onco:open-palette", onOpen);
     window.addEventListener("onco:open-shortcuts", onSheet);
@@ -171,7 +174,7 @@ export function CommandPalette() {
       <div ref={dialog} role="dialog" aria-modal="true" aria-label="Search OnCo" onKeyDown={trap} className="w-full max-w-2xl card shadow-2xl overflow-hidden">
         <div className="flex items-center gap-3 px-4 border-b border-border">
           <span className="text-muted" aria-hidden>⌕</span>
-          <input ref={input} value={q} onChange={(e) => { setQ(e.target.value); run(e.target.value); }} onKeyDown={onKeyDown}
+          <input ref={input} autoFocus value={q} onChange={(e) => { setQ(e.target.value); run(e.target.value); }} onKeyDown={onKeyDown}
             placeholder="Search products, targets, cancers, trials, companies, pages…" className="flex-1 bg-transparent py-3.5 text-base outline-none"
             role="combobox" aria-label="Search" aria-expanded="true" aria-controls="palette-list" aria-autocomplete="list" aria-activedescendant={items[active] ? `palette-opt-${active}` : undefined} autoComplete="off" spellCheck={false} />
           <kbd className="hidden sm:inline text-[10px] text-muted border border-border rounded px-1.5 py-0.5">esc</kbd>
