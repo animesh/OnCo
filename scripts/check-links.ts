@@ -11,6 +11,13 @@
  *   domainMoved the final host differs from the original (a sign the citation now points elsewhere)
  *   archive     nearest Wayback Machine snapshot, if any; a save is requested for broken URLs
  *
+ * The summary separates the three ways a link can be not-ok, because they mean different things:
+ *   gone         404/410 — the citation is genuinely broken
+ *   unreachable  no response at all
+ *   blocked      the site answered and refused us (403/429/5xx). Publishers bot-block heavily;
+ *                these are overwhelmingly live links and should not read as rot.
+ * `broken` is retained as the total not-ok count so existing consumers keep working.
+ *
  * Writes public/links.json. The weekly workflow (.github/workflows/links.yml) opens a PR with the
  * result and /audit/ shows the broken-links section from it.
  *
@@ -25,7 +32,7 @@ import { routeFor, type Entity } from "../src/lib/schema";
 
 export type LinkRef = { id: string; kind: string; name: string; route: string; field: string; label?: string };
 export type LinkResult = { url: string; status: number; ok: boolean; finalUrl?: string; domainMoved?: boolean; archive?: string; archiveRequested?: boolean; error?: string; checked: string; refs: LinkRef[] };
-export type LinksReport = { generated: string; total: number; checked: number; broken: number; moved: number; archived: number; results: LinkResult[] };
+export type LinksReport = { generated: string; total: number; checked: number; broken: number; gone: number; blocked: number; unreachable: number; moved: number; archived: number; results: LinkResult[] };
 
 const UA = "Mozilla/5.0 (compatible; OnCo link checker; +https://github.com/judegomila/OnCo)";
 const MAX_CONCURRENCY = 8;
@@ -69,6 +76,14 @@ async function fetchWithTimeout(url: string, init: RequestInit, ms = 20000): Pro
 }
 
 /** HEAD first, GET on 405/403/501 or when HEAD errors; retry 429/5xx/network with backoff. */
+/** Actually gone: the server answered and said the resource is not there. */
+export const isGone = (r: { ok: boolean; status: number }) => !r.ok && (r.status === 404 || r.status === 410);
+/** No answer at all — DNS failure, timeout, connection refused. */
+export const isUnreachable = (r: { ok: boolean; status: number }) => !r.ok && r.status === 0;
+/** The server answered and refused us: bot protection, auth wall, rate limit, transient 5xx.
+ *  Almost never a broken citation — the same judgement the archiver below already makes. */
+export const isBlocked = (r: { ok: boolean; status: number }) => !r.ok && !isGone(r) && !isUnreachable(r);
+
 export async function probe(url: string, attempt = 1): Promise<{ status: number; finalUrl?: string; error?: string }> {
   const headers = { "User-Agent": UA, Accept: "text/html,application/xhtml+xml,application/json;q=0.9,*/*;q=0.8", "Accept-Language": "en-GB,en;q=0.9" };
   try {
@@ -169,7 +184,7 @@ async function main() {
   if (archive) {
     // Only links that are actually gone need an archive copy. A 403, 429 or 5xx is almost always a site
     // refusing a bot, and looking those up would triple the run time for nothing.
-    const dead = results.filter((r) => !r.ok && (r.status === 404 || r.status === 410 || r.status === 0));
+    const dead = results.filter((r) => isGone(r) || isUnreachable(r));
     console.log(`archiving: ${dead.length} dead links (404, 410 or no response), looking up Wayback snapshots`);
     for (const r of dead) {
       if (!r.archive) r.archive = await waybackAvailable(r.url);
@@ -186,12 +201,12 @@ async function main() {
     for (const r of Object.values(prev)) if (all.has(r.url) && !probed.has(r.url)) results.push({ ...r, refs: all.get(r.url) ?? r.refs });
   }
   results.sort((a, b) => Number(a.ok) - Number(b.ok) || a.status - b.status || a.url.localeCompare(b.url));
-  const report: LinksReport = { generated: new Date().toISOString(), total: all.size, checked: results.length, broken: results.filter((r) => !r.ok).length, moved: results.filter((r) => r.domainMoved).length, archived: results.filter((r) => r.archive).length, results };
+  const report: LinksReport = { generated: new Date().toISOString(), total: all.size, checked: results.length, broken: results.filter((r) => !r.ok).length, gone: results.filter(isGone).length, blocked: results.filter(isBlocked).length, unreachable: results.filter(isUnreachable).length, moved: results.filter((r) => r.domainMoved).length, archived: results.filter((r) => r.archive).length, results };
   const out = join(process.cwd(), "public");
   mkdirSync(out, { recursive: true });
   writeFileSync(join(out, "links.json"), JSON.stringify(report, null, 0));
-  console.log(`links: ${report.checked} of ${report.total} URLs checked; ${report.broken} broken; ${report.moved} moved domain; ${report.archived} with an archive copy`);
-  for (const r of results.filter((r) => !r.ok).slice(0, 40)) console.log(`  [${r.status}] ${r.url} (${r.refs.map((x) => x.id).slice(0, 3).join(", ")})${r.archive ? ` archive: ${r.archive}` : ""}`);
+  console.log(`links: ${report.checked} of ${report.total} URLs checked; ${report.gone} gone (404/410); ${report.unreachable} unreachable; ${report.blocked} blocked by the site (not broken); ${report.moved} moved domain; ${report.archived} with an archive copy`);
+  for (const r of results.filter((r) => isGone(r) || isUnreachable(r)).slice(0, 40)) console.log(`  [${r.status}] ${r.url} (${r.refs.map((x) => x.id).slice(0, 3).join(", ")})${r.archive ? ` archive: ${r.archive}` : ""}`);
 }
 
 if (process.argv[1]?.endsWith("check-links.ts")) main().catch((e) => { console.error(e); process.exit(1); });
