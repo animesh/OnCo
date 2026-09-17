@@ -18,7 +18,16 @@
       ]
     },
     {
-      "source": "/(.*)\\.(json|svg|png|jpg|jpeg|webp|ico|txt|xml)",
+      "source": "/(logos|portraits|papers|globocan|trials|openalex|fda|regional|proposals|structures|schematics|icons|images)/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)\\.(svg|png|jpg|jpeg|webp|ico)",
       "headers": [
         {
           "key": "Cache-Control",

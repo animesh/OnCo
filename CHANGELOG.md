@@ -7,6 +7,7 @@ All notable changes to OnCo are recorded here. The format follows [Keep a Change
 Regenerated from the commit log each time the site ships (`scripts/changelog-sync.ts`); the version sections below are written by hand when a release is cut.
 
 ### 17 September 2026
+- Search index is fresh on every visit (service worker network-first for the API, cache rule narrowed to snapshots and images); site pages ranked higher in search; models table shows each maker's logo or an initials tile; orphan detector script and ratchet test; hub page linked from digital twins
 - Apply the update bot's proposals (PR 16): 55 EU approval rows from the EMA register and 28 FDA regulatory events; pancreatic cancer wave: four failed phase 3 programmes, nimotuzumab's NOTABLE approval, elraglusib, their sponsors and cross-links; PDAC and Cloudflare rows on the roadmap
 - Merge PRs 25, 28 and 29 (CheckMate split, topic cards, WebMCP); mobile region menu stays on screen; one heading per cancer group; bevacizumab NICE note; glioblastoma MGMT and tovorafenib wording; mathematical models hub and site pages in search; long lists load in pages as you scroll
 - Add progressive WebMCP tools for public oncology search and lookup
@@ -27,6 +28,7 @@ Regenerated from the commit log each time the site ships (`scripts/changelog-syn
 - Types strip as pills, navigator visuals, account-style signup, linked grid headers
 - chore: refresh pulse, abstract and citation snapshots (#20)
 - chore: refresh institution research output from OpenAlex (#17)
+- chore: draft change proposals from feed snapshots
 
 ### 16 September 2026
 - Add Anocca; biophysics sources as data-source candidates

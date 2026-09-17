@@ -437,7 +437,7 @@ const frontierRadical: EntityInput[] = [
     links: [{ label: "ClinicalTrials.gov: hypoxia-activated prodrug", url: "https://clinicaltrials.gov/search?term=hypoxia-activated%20prodrug" }],
   },
   {
-    id: "digital-twins-trials", related: ["digital-twin-patient-models"], kind: "technology", name: "Digital twins and virtual control arms", sections: ["ai-computation", "drug-discovery"], status: "emerging", asOf: RAD,
+    id: "digital-twins-trials", related: ["digital-twin-patient-models", "mathematical-oncology"], kind: "technology", name: "Digital twins and virtual control arms", sections: ["ai-computation", "drug-discovery"], status: "emerging", asOf: RAD,
     tldr: "Using a model of what would have happened to a patient on standard treatment, so fewer people have to be randomised to it.",
     summary: "Prognostic models trained on historical trial and registry data generate an expected control trajectory for each enrolled patient, which can shrink the control arm or sharpen its estimate. Regulators have accepted external and synthetic control arms in narrow settings, mainly rare diseases and single-arm oncology submissions; in common cancers the concern is that treatment and supportive care drift faster than the model. Adoption is real but cautious.",
     principle: "A model predicts each participant's counterfactual outcome under control therapy; the prediction is used as a covariate or replaces part of the control arm.",

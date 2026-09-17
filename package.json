@@ -81,7 +81,8 @@
     "fetch:cell-lines": "tsx scripts/fetch-cell-lines.ts",
     "fetch:openmedical": "tsx scripts/fetch-openmedical.ts",
     "fetch:universe": "tsx scripts/fetch-universe.ts",
-    "changelog": "tsx scripts/changelog-sync.ts"
+    "changelog": "tsx scripts/changelog-sync.ts",
+    "orphans": "tsx scripts/orphans.ts"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.30.0",

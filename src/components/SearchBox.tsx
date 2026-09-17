@@ -19,7 +19,7 @@ export function loadSearch() {
         const ms = new MiniSearch<SearchDoc>({
           fields: ["name", "aka", "tldr", "tags", "id"],
           storeFields: ["id", "kind", "name", "tldr", "route", "status"],
-          searchOptions: { boost: { name: 4, aka: 3, id: 2 }, prefix: true, fuzzy: 0.2 },
+          searchOptions: { boost: { name: 4, aka: 3, id: 2 }, prefix: true, fuzzy: 0.2, boostDocument: (_id, _term, fields) => (fields?.kind === "page" ? 1.6 : 1) },
         });
         ms.addAll(docs);
         return { ms, docs, byId: new Map(docs.map((d) => [d.id, d])) };

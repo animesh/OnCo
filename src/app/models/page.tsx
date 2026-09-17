@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { logoFor } from "@/lib/logos";
 import Link from "next/link";
 import { pageMeta } from "@/lib/seo";
 import { graph } from "@/lib/graph";
@@ -16,6 +17,12 @@ const ACCESS_LABEL: Record<string, string> = { open: "Open", registered: "Regist
 const licenceFamily = (l?: string) => !l ? "Not verified" : /non-commercial|NC|CC BY-NC|Gemma|Cambrian|Chai Discovery|research use|licence \(/i.test(l) ? "Non-commercial or research" : /Apache|MIT|BSD|CC BY 4.0|CC BY\b|CC0/i.test(l) ? "Permissive open licence" : "Other";
 const paperLink = (p?: string): LinkItem | undefined => !p ? undefined : p.startsWith("10.") ? { label: "paper", href: `https://doi.org/${p}`, tip: `DOI ${p}` } : p.startsWith("arXiv:") ? { label: "arXiv", href: `https://arxiv.org/abs/${p.slice(6)}`, tip: p } : p.startsWith("bioRxiv ") ? { label: "bioRxiv", href: `https://doi.org/${p.slice(8)}`, tip: `bioRxiv DOI ${p.slice(8)}` } : undefined;
 
+/** Logo of the model's maker: the first company or institution on the record that has a logo on file. */
+function makerLogo(e: { companies?: string[]; institutions?: string[] }): string | undefined {
+  for (const id of [...(e.companies ?? []), ...(e.institutions ?? [])]) { const l = logoFor(id); if (l.src) return l.src; }
+  return undefined;
+}
+
 export default function ModelsPage() {
   const g = graph();
   const rows: BrowserRow[] = [];
@@ -24,7 +31,7 @@ export default function ModelsPage() {
     const ds = (m.datasets ?? []).map((id) => g.get(id)).filter((x): x is NonNullable<typeof x> => !!x).map((x) => ({ label: x.name.split(" (")[0], href: routeFor(x), tip: x.tldr }));
     const paper = paperLink(m.paper);
     rows.push({
-      id: m.id, name: e.name, tldr: e.tldr, route: routeFor(e), status: e.status, logo: undefined,
+      id: m.id, name: e.name, tldr: e.tldr, route: routeFor(e), status: e.status, logo: makerLogo(e), avatar: "org",
       facets: { type: ["Model"], modality: [MODALITY_LABEL[m.modality]], weights: [WEIGHTS_LABEL[m.weights]], licence: [licenceFamily(m.licence)], year: [String(m.year)] },
       cols: {
         params: m.parametersM ? (m.parametersM >= 1000 ? `${(m.parametersM / 1000).toLocaleString("en-GB", { maximumFractionDigits: 1 })} B` : `${m.parametersM.toLocaleString("en-GB")} M`) : undefined,
@@ -43,7 +50,7 @@ export default function ModelsPage() {
     if (!t.tags.includes("mathematical-model")) continue;
     const primary = t.links[0];
     rows.push({
-      id: t.id, name: t.name, tldr: t.tldr, route: routeFor(t), status: t.status,
+      id: t.id, name: t.name, tldr: t.tldr, route: routeFor(t), status: t.status, logo: makerLogo(t), avatar: "org",
       facets: { type: ["Mathematical model"], modality: ["Mechanistic model"], weights: ["Published equations"], licence: ["Open literature"], year: t.since ? [String(t.since)] : [] },
       cols: { params: undefined, training: t.principle, weights: { facet: "weights", value: "Published equations" }, licence: undefined, benchmark: t.strengths[0], paper: primary ? [{ label: primary.label.length > 24 ? "source" : primary.label, href: primary.url }] : undefined, datasets: [], year: typeof t.since === "number" ? t.since : undefined },
       sortKeys: { params: 0, year: typeof t.since === "number" ? t.since : 0 },
@@ -53,7 +60,7 @@ export default function ModelsPage() {
     const e = g.get(d.id); if (!e) continue;
     const used = (d.usedBy ?? []).map((id) => g.get(id)).filter((x): x is NonNullable<typeof x> => !!x).map((x) => ({ label: x.name.split(" (")[0], href: routeFor(x), tip: x.tldr }));
     rows.push({
-      id: d.id, name: e.name, tldr: e.tldr, route: routeFor(e),
+      id: d.id, name: e.name, tldr: e.tldr, route: routeFor(e), logo: makerLogo(e), avatar: "org",
       facets: { type: ["Dataset"], modality: [MODALITY_LABEL[d.modality]], weights: [ACCESS_LABEL[d.access]], licence: [e.kind === "collection" && e.license ? licenceFamily(e.license) : "Not verified"], year: d.year ? [String(d.year)] : [] },
       cols: { params: undefined, training: d.size, weights: { facet: "weights", value: ACCESS_LABEL[d.access] }, licence: e.kind === "collection" ? e.license : undefined, benchmark: d.consent, paper: e.kind === "collection" ? [{ label: "portal", href: e.url }] : undefined, datasets: used, year: d.year },
       sortKeys: { params: 0, year: d.year ?? 0 },
