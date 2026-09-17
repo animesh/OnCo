@@ -13,6 +13,7 @@ import { RedCards } from "./RedCards";
 import { ChangesGlyph } from "./MyCancer";
 import { useMyCancer } from "@/lib/use-my-cancer";
 import type { RedCard } from "@/lib/red-cards";
+import { ForMeSituation } from "./ForMeSituation";
 
 export type Lite = { id: string; name: string; tldr: string; route: string; status?: string };
 export type PickerCancer = { id: string; name: string; group: string; tldr: string; route: string; stateOfArt: string[]; redCards: RedCard[]; pipeline: Lite[]; groups: Partial<Record<Kind, Lite[]>> };
@@ -106,6 +107,8 @@ export function CancerPicker({ cancers }: { cancers: PickerCancer[] }) {
             <div><div className="kicker mb-1">Coming down the pipeline</div><div className="flex flex-wrap gap-1.5">{c.pipeline.map((p) => <Tip key={p.id} title={p.name} text={p.tldr} href={p.route}><Link href={p.route} className="chip border bg-card border-border hover:bg-foreground/5">{p.name}</Link></Tip>)}</div></div>
           </div>
           {c.redCards.length > 0 && <div className="mt-5"><RedCards cards={c.redCards} cancerName={c.name} compact /></div>}
+          {/* The situation view (item 101) follows the remembered cancer (or the only one chosen); other selections keep the simple view. */}
+          {(c.id === my.id || chosen.length === 1) && <ForMeSituation cancerId={c.id} cancerName={c.name} />}
         </div>
       ))}
 
