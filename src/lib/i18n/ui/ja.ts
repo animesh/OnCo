@@ -387,4 +387,8 @@ export const ja: UiDict = {
   "signup.done": "ありがとうございます。リストに登録されました。",
   "signup.icon": "プロフィールとメール通知",
   "signup.soon": "メール通知はまもなく始まります。それまでは各ページの「ウォッチ」を押してリストに残してください。",
-  "account.error": "リンクを送信できませんでした。1分後にもう一度お試しください。",};
+  "account.error": "リンクを送信できませんでした。1分後にもう一度お試しください。",
+  "account.hello": "{email} としてログイン中",
+  "account.continue": "アカウントを作成またはログイン",
+  "account.providerNote": "ログインは WorkOS が処理します：メールで届くコード、パスワード、Google、パスキー。OnCo が保存するのはメールアドレスと入力した名前だけです。",
+};

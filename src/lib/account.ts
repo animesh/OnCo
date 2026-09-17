@@ -1,17 +1,26 @@
 /**
- * Optional accounts for syncing the watchlist across devices, built on Supabase's REST endpoints with plain fetch
- * (no client library). Everything is off unless NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY are set
- * at build time; the anon key is public by design and every row is protected by row-level security (see docs/LAUNCH.md).
- * Sign-in is a magic link by email; the session lives in localStorage; only the email address and the watchlist are stored.
+ * Optional accounts. Two providers, chosen at build time by which public keys are present:
+ *  - WorkOS (NEXT_PUBLIC_WORKOS_CLIENT_ID): AuthKit hosted sign-in (email code, password, Google, passkey) through the
+ *    browser-only PKCE flow, no server and no client library. Every user is recorded in WorkOS User Management.
+ *  - Supabase (NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY): magic link by email plus a watchlist table.
+ * With neither set, everything here is off. The session lives in localStorage; only the email address (and, with
+ * WorkOS, the name the user gave) is stored. See docs/LAUNCH.md for the dashboard steps.
  */
 import { loadWatchlist, replaceWatchlist, type WatchItem } from "@/lib/watchlist";
 
 const URL = process.env.NEXT_PUBLIC_SUPABASE_URL ?? "";
 const KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? "";
-export const accountEnabled = !!(URL && KEY);
+const WORKOS = process.env.NEXT_PUBLIC_WORKOS_CLIENT_ID ?? "";
+const WORKOS_API = "https://api.workos.com/user_management";
+export type Provider = "workos" | "supabase" | "none";
+export const provider: Provider = WORKOS ? "workos" : URL && KEY ? "supabase" : "none";
+export const accountEnabled = provider !== "none";
+/** True when the provider keeps the watchlist server-side (Supabase); WorkOS accounts keep it in the browser. */
+export const syncsWatchlist = provider === "supabase";
 
-export type Session = { access_token: string; refresh_token: string; expires_at: number; user: { id: string; email: string } };
+export type Session = { access_token: string; refresh_token: string; expires_at: number; user: { id: string; email: string; name?: string } };
 const SKEY = "onco:session:v1";
+const PKCE_KEY = "onco:pkce";
 const EVENT = "onco:account";
 
 export function loadSession(): Session | null {
@@ -30,15 +39,69 @@ export function onAccountChange(fn: (s: Session | null) => void): () => void {
 
 const headers = (token?: string): Record<string, string> => ({ apikey: KEY, "Content-Type": "application/json", ...(token ? { Authorization: `Bearer ${token}` } : {}) });
 
-/** Email a one-time sign-in link that returns to the current page. */
+/* ---------- WorkOS (PKCE, browser only) ---------- */
+
+const b64url = (bytes: ArrayBuffer) => btoa(String.fromCharCode(...new Uint8Array(bytes))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+function jwtClaims(token: string): Record<string, unknown> {
+  try { const p = token.split(".")[1] ?? ""; return JSON.parse(atob(p.replace(/-/g, "+").replace(/_/g, "/"))) as Record<string, unknown>; } catch { return {}; }
+}
+/** The address WorkOS returns to; registered in the dashboard under Redirects. */
+export const workosRedirect = () => window.location.origin + "/signup/";
+
+/** Send the reader to WorkOS AuthKit; `returnTo` is the path to come back to once signed in. */
+export async function startSignIn(returnTo?: string): Promise<void> {
+  if (provider !== "workos") return;
+  const verifierBytes = new Uint8Array(48); crypto.getRandomValues(verifierBytes);
+  const verifier = b64url(verifierBytes.buffer);
+  const challenge = b64url(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(verifier)));
+  const state = b64url(crypto.getRandomValues(new Uint8Array(12)).buffer);
+  try { window.sessionStorage.setItem(PKCE_KEY, JSON.stringify({ verifier, state, returnTo: returnTo ?? window.location.pathname + window.location.search })); } catch { /* storage blocked */ }
+  const q = new URLSearchParams({ response_type: "code", client_id: WORKOS, redirect_uri: workosRedirect(), provider: "authkit", code_challenge: challenge, code_challenge_method: "S256", state });
+  // eslint-disable-next-line @next/next/no-location-assign-relative-destination -- external WorkOS address
+  window.location.href = `${WORKOS_API}/authorize?${q}`;
+}
+
+type WorkosAuth = { access_token: string; refresh_token: string; user: { id: string; email: string; first_name?: string | null; last_name?: string | null } };
+function fromWorkos(j: WorkosAuth): Session {
+  const exp = Number(jwtClaims(j.access_token).exp ?? 0);
+  const name = [j.user.first_name, j.user.last_name].filter(Boolean).join(" ") || undefined;
+  return { access_token: j.access_token, refresh_token: j.refresh_token, expires_at: exp ? exp * 1000 : Date.now() + 5 * 60 * 1000, user: { id: j.user.id, email: j.user.email, name } };
+}
+async function workosExchange(body: Record<string, string>): Promise<Session | null> {
+  const r = await fetch(`${WORKOS_API}/authenticate`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ client_id: WORKOS, ...body }) }).catch(() => null);
+  if (!r || !r.ok) return null;
+  return fromWorkos(await r.json() as WorkosAuth);
+}
+
+/* ---------- shared surface ---------- */
+
+/** Supabase only: email a one-time sign-in link that returns to the current page. */
 export async function sendMagicLink(email: string): Promise<boolean> {
+  if (provider !== "supabase") return false;
   const redirect = encodeURIComponent(window.location.origin + window.location.pathname);
   const r = await fetch(`${URL}/auth/v1/otp?redirect_to=${redirect}`, { method: "POST", headers: headers(), body: JSON.stringify({ email, create_user: true }) });
   return r.ok;
 }
 
-/** After the link is clicked the tokens arrive in the URL fragment; store them, fetch the user and clean the address bar. */
+/**
+ * Complete a sign-in that arrived in the address bar: the WorkOS `?code=` (checked against the PKCE state saved before
+ * the redirect) or the Supabase tokens in the fragment. Stores the session, cleans the address bar, and for WorkOS
+ * returns the reader to the page they started from.
+ */
 export async function captureSession(): Promise<Session | null> {
+  if (provider === "workos") {
+    const p = new URLSearchParams(window.location.search);
+    const code = p.get("code"); if (!code) return null;
+    let saved: { verifier: string; state: string; returnTo: string } | null = null;
+    try { saved = JSON.parse(window.sessionStorage.getItem(PKCE_KEY) ?? "null"); window.sessionStorage.removeItem(PKCE_KEY); } catch { /* storage blocked */ }
+    if (!saved || saved.state !== p.get("state")) return null;
+    const s = await workosExchange({ grant_type: "authorization_code", code, code_verifier: saved.verifier });
+    if (!s) return null;
+    saveSession(s);
+    const back = saved.returnTo && saved.returnTo !== "/signup/" && !saved.returnTo.startsWith("/signup/?") ? saved.returnTo : "/signup/";
+    history.replaceState(null, "", back);
+    return s;
+  }
   const h = window.location.hash;
   if (!h.includes("access_token=")) return null;
   const p = new URLSearchParams(h.slice(1));
@@ -57,6 +120,11 @@ export async function currentSession(): Promise<Session | null> {
   const s = loadSession();
   if (!s) return null;
   if (s.expires_at - Date.now() > 5 * 60 * 1000) return s;
+  if (provider === "workos") {
+    const next = await workosExchange({ grant_type: "refresh_token", refresh_token: s.refresh_token });
+    if (!next) { saveSession(null); return null; }
+    saveSession(next); return next;
+  }
   const r = await fetch(`${URL}/auth/v1/token?grant_type=refresh_token`, { method: "POST", headers: headers(), body: JSON.stringify({ refresh_token: s.refresh_token }) }).catch(() => null);
   if (!r || !r.ok) { saveSession(null); return null; }
   const j = await r.json() as { access_token: string; refresh_token: string; expires_in: number };
@@ -67,8 +135,12 @@ export async function currentSession(): Promise<Session | null> {
 
 export async function signOut(): Promise<void> {
   const s = loadSession();
-  if (s) await fetch(`${URL}/auth/v1/logout`, { method: "POST", headers: headers(s.access_token) }).catch(() => null);
+  if (s && provider === "supabase") await fetch(`${URL}/auth/v1/logout`, { method: "POST", headers: headers(s.access_token) }).catch(() => null);
   saveSession(null);
+  if (s && provider === "workos") {
+    const sid = jwtClaims(s.access_token).sid;
+    if (typeof sid === "string") { const img = new Image(); img.src = `${WORKOS_API}/sessions/logout?session_id=${encodeURIComponent(sid)}`; }
+  }
 }
 
 type Row = { items: WatchItem[]; updated_at: string };
@@ -85,8 +157,9 @@ async function push(s: Session, items: WatchItem[]): Promise<boolean> {
   return !!r && r.ok;
 }
 
-/** Merge the browser's list with the account's (union by id, the browser's copy wins for a shared id), save both ways. */
+/** Merge the browser's list with the account's (union by id, the browser's copy wins for a shared id), save both ways. Supabase only. */
 export async function syncWatchlist(): Promise<{ ok: boolean; count: number }> {
+  if (!syncsWatchlist) return { ok: false, count: 0 };
   const s = await currentSession();
   if (!s) return { ok: false, count: 0 };
   const remote = await pull(s);
@@ -99,8 +172,9 @@ export async function syncWatchlist(): Promise<{ ok: boolean; count: number }> {
   return { ok, count: merged.length };
 }
 
-/** Push the current browser list to the account; called after every star or unstar while signed in. */
+/** Push the current browser list to the account; called after every star or unstar while signed in. Supabase only. */
 export async function pushWatchlist(): Promise<boolean> {
+  if (!syncsWatchlist) return false;
   const s = await currentSession();
   if (!s) return false;
   return push(s, loadWatchlist());

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { pageMeta } from "@/lib/seo";
 import { graph } from "@/lib/graph";
 import { routeFor } from "@/lib/schema";
+import { modalityClass } from "@/lib/company-score";
 import { Container, GroupKicker, PageHeader } from "@/components/ui";
 import { PivotTable, type Dim, type DimMeta, type Fact } from "@/components/PivotTable";
 
@@ -9,9 +10,6 @@ export const metadata: Metadata = pageMeta({ title: "Landscape grid", descriptio
 
 const short = (s: string) => s.replace(/ \(.*\)$/, "");
 
-function modalityClass(m: string): string {
-  return /bispecific adc/i.test(m) ? "Bispecific ADC" : /^adc/i.test(m) ? "ADC" : /engager|immtac/i.test(m) ? "T-cell engager" : /bispecific/i.test(m) ? "Bispecific antibody" : /monoclonal/i.test(m) ? "Monoclonal antibody" : /car-t|til|tcr-t/i.test(m) ? "Cell therapy" : /radioligand|alpha|theranostic/i.test(m) ? "Radiopharmaceutical" : /pet imaging|imaging agent/i.test(m) ? "Imaging agent" : /vaccine/i.test(m) ? "Vaccine" : /oncolytic/i.test(m) ? "Oncolytic virus" : /device/i.test(m) ? "Device" : /test|assay|profiling|detection|diagnostic|classifier/i.test(m) ? "Diagnostic test" : /cytotoxic|regimen/i.test(m) ? "Chemotherapy" : /protac|degrader/i.test(m) ? "Degrader" : /small-molecule|serd|inhibitor|antagonist/i.test(m) ? "Small molecule" : m;
-}
 
 export default function PivotPage() {
   const g = graph();

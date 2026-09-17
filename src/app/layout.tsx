@@ -30,7 +30,7 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
  * The Open Graph / Twitter image comes from src/app/opengraph-image.png and is inherited by every route.
  */
 export const metadata: Metadata = {
-  title: { default: "OnCo: time to win", template: "%s · OnCo" },
+  title: { default: "OnCo: total information dominance on cancer", template: "%s · OnCo" },
   description: "Total information dominance on cancer: every technology, target, product, company, institution, pathway, trial, and idea, one page per object, linked, with plain-English TL;DRs.",
   metadataBase: new URL("https://onco.cc"),
   manifest: "/manifest.webmanifest",
@@ -38,8 +38,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://onco.cc/", types: FEED_TYPES },
   applicationName: "OnCo",
   keywords: ["oncology", "cancer", "cancer treatments", "clinical trials", "drug targets", "antibody-drug conjugates", "radiopharmaceuticals", "knowledge graph", "open data"],
-  openGraph: { title: "OnCo: time to win", description: "The current state of the art, the history, and what is coming, for every cancer.", type: "website", siteName: "OnCo", locale: "en_GB", url: "https://onco.cc/" },
-  twitter: { card: "summary_large_image", title: "OnCo: time to win", description: "The current state of the art, the history, and what is coming, for every cancer." },
+  openGraph: { title: "OnCo: total information dominance on cancer", description: "The current state of the art, the history, and what is coming, for every cancer.", type: "website", siteName: "OnCo", locale: "en_GB", url: "https://onco.cc/" },
+  twitter: { card: "summary_large_image", title: "OnCo: total information dominance on cancer", description: "The current state of the art, the history, and what is coming, for every cancer." },
   robots: { index: true, follow: true },
   formatDetection: { telephone: false },
 };
@@ -80,7 +80,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Link href="/" className="inline-flex h-10 shrink-0 items-center gap-2.5 rounded-lg sm:pe-2 font-semibold tracking-tight" aria-label="OnCo home">
               <Mark />
               <span className="text-[15px]">OnCo</span>
-              <span className="hidden min-[1800px]:inline text-muted font-normal text-sm">time to win</span>
+              <span className="hidden min-[1800px]:inline text-muted font-normal text-sm">total information dominance on cancer</span>
             </Link>
             <NavMenu />
             {/* Shrinks to an icon at phone widths so the fixed-width controls and the menu button always fit on one row. */}

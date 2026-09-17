@@ -387,4 +387,8 @@ export const zh: UiDict = {
   "signup.done": "谢谢，您已加入名单。",
   "signup.icon": "您的个人资料和邮件更新",
   "signup.soon": "邮件更新即将开放。在此之前，请在任意页面点击“关注”将其保存到您的列表。",
-  "account.error": "链接发送失败，请一分钟后重试。",};
+  "account.error": "链接发送失败，请一分钟后重试。",
+  "account.hello": "已登录：{email}",
+  "account.continue": "创建账户或登录",
+  "account.providerNote": "登录由 WorkOS 处理：邮箱验证码、密码、Google 或通行密钥。OnCo 只保存你的邮箱地址和你填写的姓名。",
+};

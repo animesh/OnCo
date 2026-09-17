@@ -387,4 +387,8 @@ export const pt: UiDict = {
   "signup.done": "Obrigado. Está na lista.",
   "signup.icon": "O seu perfil e avisos por email",
   "signup.soon": "Os avisos por email chegam em breve. Até então, carregue em Seguir em qualquer página para a manter na sua lista.",
-  "account.error": "Não foi possível enviar a ligação. Tente novamente daqui a um minuto.",};
+  "account.error": "Não foi possível enviar a ligação. Tente novamente daqui a um minuto.",
+  "account.hello": "Sessão iniciada como {email}",
+  "account.continue": "Criar uma conta ou iniciar sessão",
+  "account.providerNote": "O início de sessão é feito pelo WorkOS: um código por e-mail, uma palavra-passe, Google ou uma chave de acesso. A OnCo guarda o seu e-mail e o nome que indicar, nada mais.",
+};

@@ -387,4 +387,8 @@ export const fr: UiDict = {
   "signup.done": "Merci. Vous êtes sur la liste.",
   "signup.icon": "Votre profil et les alertes par courriel",
   "signup.soon": "Les alertes par courriel arrivent bientôt. En attendant, appuyez sur Suivre sur n'importe quelle page pour la garder dans votre liste.",
-  "account.error": "Le lien n'a pas pu être envoyé. Réessayez dans une minute.",};
+  "account.error": "Le lien n'a pas pu être envoyé. Réessayez dans une minute.",
+  "account.hello": "Connecté en tant que {email}",
+  "account.continue": "Créer un compte ou se connecter",
+  "account.providerNote": "La connexion est assurée par WorkOS : un code envoyé par e-mail, un mot de passe, Google ou une clé d'accès. OnCo conserve votre adresse e-mail et le nom que vous indiquez, rien d'autre.",
+};

@@ -424,7 +424,11 @@ export const EN = {
   "signup.done": "Check your email for the sign-in link; opening it creates your account.",
   "signup.icon": "Your profile and email updates",
   "signup.soon": "Account creation is being switched on. Until then, press Watch on any page and your list stays in this browser.",
-  "account.error": "The link could not be sent. Try again in a minute.",} as const;
+  "account.error": "The link could not be sent. Try again in a minute.",
+  "account.hello": "Signed in as {email}",
+  "account.continue": "Create an account or sign in",
+  "account.providerNote": "Sign-in is handled by WorkOS: a code sent to your email, a password, Google or a passkey. OnCo keeps your email address and the name you give, nothing else.",
+} as const;
 
 export type UiKey = keyof typeof EN;
 export type UiDict = Record<UiKey, string>;

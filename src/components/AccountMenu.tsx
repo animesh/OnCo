@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { accountEnabled, captureSession, loadSession, onAccountChange, pushWatchlist, sendMagicLink, signOut, syncWatchlist, type Session } from "@/lib/account";
+import { accountEnabled, captureSession, loadSession, onAccountChange, provider, pushWatchlist, sendMagicLink, signOut, startSignIn, syncWatchlist, type Session } from "@/lib/account";
 import { useT } from "@/lib/i18n/ui";
 
 /**
@@ -100,7 +100,7 @@ export function AccountMenu({ inline = false, className = "" }: { inline?: boole
         ) : (
           <div className="flex flex-wrap items-center justify-between gap-2">
             <span className="text-muted">{t("account.why")}</span>
-            <button type="button" onClick={() => setOpen(true)} className="btn">{t("account.signIn")}</button>
+            <button type="button" onClick={() => (provider === "workos" ? startSignIn() : setOpen(true))} className="btn">{t("account.signIn")}</button>
           </div>
         )}
         {dialogEl}
@@ -115,7 +115,7 @@ export function AccountMenu({ inline = false, className = "" }: { inline?: boole
           <span aria-hidden className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-accent text-white text-[11px] font-semibold">{(session.user.email[0] ?? "?").toUpperCase()}</span>
         </button>
       ) : (
-        <Link href="/signup/" className="ctl ctl-icon" title={accountEnabled ? t("account.title") : t("signup.title")} aria-label={t("signup.icon")}><ProfileIcon /></Link>
+        provider === "workos" ? <button type="button" onClick={() => startSignIn()} className="ctl ctl-icon" title={t("account.signIn")} aria-label={t("account.signIn")}><ProfileIcon /></button> : <Link href="/signup/" className="ctl ctl-icon" title={accountEnabled ? t("account.title") : t("signup.title")} aria-label={t("signup.icon")}><ProfileIcon /></Link>
       )}
       {accountEnabled ? dialogEl : captureEl}
     </span>

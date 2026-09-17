@@ -387,4 +387,8 @@ export const de: UiDict = {
   "signup.done": "Danke. Sie stehen auf der Liste.",
   "signup.icon": "Ihr Profil und E-Mail-Updates",
   "signup.soon": "E-Mail-Updates starten bald. Bis dahin: Auf jeder Seite auf Beobachten drücken, um sie in Ihrer Liste zu behalten.",
-  "account.error": "Der Link konnte nicht gesendet werden. Versuchen Sie es in einer Minute erneut.",};
+  "account.error": "Der Link konnte nicht gesendet werden. Versuchen Sie es in einer Minute erneut.",
+  "account.hello": "Angemeldet als {email}",
+  "account.continue": "Konto erstellen oder anmelden",
+  "account.providerNote": "Die Anmeldung übernimmt WorkOS: ein Code per E-Mail, ein Passwort, Google oder ein Passkey. OnCo speichert nur Ihre E-Mail-Adresse und den angegebenen Namen.",
+};

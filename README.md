@@ -1,6 +1,8 @@
-# OnCo: time to win
+# OnCo: Total information dominance on cancer.
 
 **Live:** https://onco.cc
+
+OnCo is an open repository for cancer. The whole corpus, every page, source, drawing, translation and script, is in this repository under an open licence (CC BY-NC 4.0 for the data, MIT for the code), built in public, corrected through issues and pull requests, and free for patients, clinicians, researchers, companies and AI agents to read and reuse. If you know something the site does not, open an issue or a pull request: the gate runs the same checks on every contribution.
 
 OnCo is a public, cited knowledge graph of oncology, aiming at total information dominance on cancer: every cancer, front, technology, target, treatment and test, company, institution, person, pathway, trial, key paper, journal, pairing, roadmap, bottleneck and idea, one page each, with a plain-English TL;DR before the technical layer and links in every direction. Readers start in a Global view and pick their country, so "approved" means their regulator's verdict. It exists so that a patient, a carer, a clinician, a scientist, an investor or a policymaker can walk from any object to everything connected to it and see the state of the art, the history, what is being done about each problem, and what is coming.
 
@@ -15,6 +17,19 @@ The website is one surface. The same corpus ships as:
 > **Work in progress. Verify at source.** Every fact is being built and checked in the open and may be incomplete, out of date or wrong. Nothing here is medical advice. Do your own research and check anything that matters at its primary source, which every page links.
 
 Current counts live at https://onco.cc/about/ and print from `npm run validate`. This file deliberately carries no numbers, so it never goes stale.
+
+## Screenshots
+
+Captured from the built site on 17 September 2026. Click any image to open the live page.
+
+| | |
+|---|---|
+| [![Home: total information dominance on cancer](docs/screenshots/home.png)](https://onco.cc/) | [![Body map: pick where the cancer is](docs/screenshots/body-map.png)](https://onco.cc/body/) |
+| [![Graph explorer: every page is a node](docs/screenshots/graph.png)](https://onco.cc/graph/) | [![Molecule gallery: 3D structures of every product](docs/screenshots/molecules.png)](https://onco.cc/molecules/) |
+| [![Cancer page: leukaemia with its subtypes](docs/screenshots/cancer-leukaemia.png)](https://onco.cc/cancers/leukaemia/) | [![Timeline: scrub through the years](docs/screenshots/timeline.png)](https://onco.cc/timeline/) |
+| [![Landscape grid: count what exists where](docs/screenshots/pivot.png)](https://onco.cc/pivot/) | [![Models and datasets with maker logos](docs/screenshots/models.png)](https://onco.cc/models/) |
+
+<p align="center"><a href="https://onco.cc/cancers/pancreatic/"><img src="docs/screenshots/mobile-cancer.png" width="280" alt="A cancer page on a phone"></a></p>
 
 ## How the site is organised
 
