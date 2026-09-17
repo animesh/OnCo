@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { pageMeta } from "@/lib/seo";
 import { graph } from "@/lib/graph";
 import { routeFor } from "@/lib/schema";
-import { matchRows } from "@/lib/biomarker-match";
+import { matchRows } from "@/lib/biomarker-match-rows";
 import { Container, GroupKicker, PageHeader } from "@/components/ui";
 import { TumorBoard, type TbCancer } from "@/components/TumorBoard";
 

@@ -3,7 +3,7 @@ import { pageMeta } from "@/lib/seo";
 import { Suspense } from "react";
 import { graph } from "@/lib/graph";
 import { routeFor } from "@/lib/schema";
-import { powerRows } from "@/lib/relevance";
+import { powerRows } from "@/lib/relevance-rows";
 import { Container, GroupKicker, PageHeader } from "@/components/ui";
 import { PowerView, type PowerCancer } from "@/components/PowerView";
 

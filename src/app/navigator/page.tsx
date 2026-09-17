@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { pageMeta } from "@/lib/seo";
 import { graph } from "@/lib/graph";
 import { routeFor } from "@/lib/schema";
-import { matchRows } from "@/lib/biomarker-match";
+import { matchRows } from "@/lib/biomarker-match-rows";
 import { questionsFor } from "@/lib/questions";
 import { Container, GroupKicker, PageHeader } from "@/components/ui";
 import { Navigator, type NavigatorData, type NavCancer, type SocRef } from "@/components/Navigator";

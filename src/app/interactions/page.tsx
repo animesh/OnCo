@@ -4,7 +4,7 @@ import { pageMeta } from "@/lib/seo";
 import { graph } from "@/lib/graph";
 import { routeFor } from "@/lib/schema";
 import { agents, SOURCES } from "@/data/interactions";
-import { validateInteractions } from "@/lib/interactions";
+import { validateInteractions } from "@/lib/interactions-validate";
 import { Container, GroupKicker, PageHeader } from "@/components/ui";
 import { InteractionChecker, type CheckerDrug } from "./InteractionChecker";
 

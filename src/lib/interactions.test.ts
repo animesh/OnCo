@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { agents } from "@/data/interactions";
-import { checkPairs, singleFlags, validateInteractions, worst } from "./interactions";
+import { checkPairs, singleFlags, worst } from "./interactions";
+import { validateInteractions } from "./interactions-validate";
 
 describe("interaction data", () => {
   it("validates against the graph", () => {

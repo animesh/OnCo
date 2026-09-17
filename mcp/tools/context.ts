@@ -8,7 +8,7 @@ import { routeFor, type Entity, type Kind } from "../../src/lib/schema";
 import { searchDocs, type SearchDoc } from "../../src/lib/search-index";
 import { buildSemanticIndex, fuseRanks, semanticSearch, type SemanticHit } from "../../src/lib/semantic";
 import { semanticDocs } from "../../src/lib/semantic-docs";
-import { powerRows } from "../../src/lib/relevance";
+import { powerRows } from "../../src/lib/relevance-rows";
 
 export const SITE = "https://onco.cc";
 export const g = graph();
