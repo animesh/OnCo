@@ -9,8 +9,9 @@ import { tldrZh as theories } from "../src/data/theories-wave";
 import { tldrZh as platform } from "../src/data/platform-trials-wave";
 import { tldrZh as trialDesign } from "../src/data/trial-design-wave";
 import { tldrZh as law } from "../src/data/law-wave";
+import { tldrZh as prostate } from "../src/data/prostate-subtypes";
 
-const WAVES: Record<string, string>[] = [manufacturing, theories, platform, trialDesign, law];
+const WAVES: Record<string, string>[] = [manufacturing, theories, platform, trialDesign, law, prostate];
 const path = "src/data/i18n/zh.ts";
 let z = readFileSync(path, "utf8");
 const have = new Set([...z.matchAll(/^\s*"([^"]+)":\s/mg)].map((m) => m[1]));

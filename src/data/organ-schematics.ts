@@ -164,7 +164,7 @@ export const ORGAN_SCHEMATICS: OrganSchematic[] = [
       add(m, ellipsoid(0.22, 0.42, 0.22, 3, 8, "soft"), { at: [0.35, -1.15, 0.75] }); // gallbladder
       return m;
     } },
-  { id: "prostate", name: "Prostate", cancers: ["prostate"],
+  { id: "prostate", name: "Prostate", cancers: ["prostate", "prostate-low-risk", "prostate-intermediate-risk", "prostate-high-risk", "prostate-bcr", "prostate-mhspc", "prostate-nmcrpc", "prostate-mcrpc", "prostate-nepc"],
     caption: "About three quarters of cancers arise in the peripheral zone at the back of the gland, the part a finger or a biopsy needle reaches; drainage is to the obturator and iliac nodes.",
     subsites: [
       { id: "peripheral", label: "Peripheral zone (most cancers)", at: [0, -0.5, -0.75], match: ["acinar", "adenocarcinoma", "gleason-grade-group", "grade group", "localised", "castration", "hormone-sensitive", "mcrpc", "mhspc"] },
