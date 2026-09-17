@@ -93,6 +93,7 @@ export function sitemapUrls(): SitemapUrl[] {
   for (const t of graph().kind("target")) out.push({ url: absoluteUrl(`/dossiers/${t.id}/`), lastModified: t.asOf });
   for (const r of regimens) out.push({ url: absoluteUrl(`/regimens/${r.id}/`), lastModified: r.asOf });
   for (const c of sequencingIndex()) out.push({ url: absoluteUrl(`/sequencing/${c.id}/`) });
+  for (const c of g.kind("cancer")) { add(`/first-60-days/${c.id}/`, c.asOf); add(`/prep/${c.id}/`, c.asOf); }
   for (const id of guidelineCancerIds()) out.push({ url: absoluteUrl(`/guidelines/${id}/`) });
   return out;
 }

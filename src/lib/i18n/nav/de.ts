@@ -108,6 +108,7 @@ export const navDe: NavDict = {
   "/cases/": ["Fälle nach Land", "Neue Krebsfälle je Land und Krebsart, mit klar benannten Datenlücken."],
   "/funding/": ["Finanzierungsflüsse", "Woher das Geld kommt."],
 
+  "/first-60-days/": ["Die ersten 60 Tage", "Woche für Woche nach der Diagnose, für Ihre Krebsart: die Untersuchungen, das Team, die anstehenden Entscheidungen, die Fragen, die Studien, die Sie ansprechen können, und die kostenlose Hilfe."],
   "/prep/": ["Termin vorbereiten", "Fragen für Ihre Krebsart ankreuzen, eigene ergänzen und eine Seite für den Termin drucken oder herunterladen."],
   "/side-effects/": ["Nebenwirkungen", "Beim Symptom beginnen: welche Therapien es auslösen, wie oft, und wann anrufen."],
   "/symptoms/": ["Vom Symptom zum Test", "Bei einem beunruhigenden Symptom beginnen: was es bedeuten kann, welcher Test zuerst kommt, und die Überweisungsschwellen der Leitlinien."],

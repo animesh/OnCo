@@ -132,7 +132,8 @@ export const NAV_GROUPS: NavGroup[] = [
     id: "live", label: "Living with cancer", href: "/live/", blurb: "Practical help for patients, families and carers: what to ask, what to watch for, what it costs and who can help, in plain words.",
     items: [
       { href: "/for-me/", label: "For me", blurb: "Research your cancer type and see what works and what could work." },
-      { href: "/prep/", label: "Appointment prep pack", blurb: "Tick the questions to ask for your cancer, add your own, and print or download one page for the appointment." },
+      { href: "/first-60-days/", label: "The first 60 days", blurb: "Week by week after a diagnosis, for your cancer type: the tests, the team, the decisions ahead, the questions to ask, the trials to mention and the help that costs nothing." },
+      { href: "/prep/", label: "Appointment prep pack", blurb: "Tick the questions to ask for your cancer, add your own, and print or download one page for the appointment; each cancer also has a one-page sheet with room for the answers." },
       { href: "/side-effects/", label: "Side effects", blurb: "Start from the symptom: which treatments cause it, how often, and when to call." },
       { href: "/symptoms/", label: "Symptom to test", blurb: "Start from a worrying symptom: what it can mean, which test comes first, and the referral thresholds guidelines state." },
       { href: "/report-reader/", label: "Report reader", blurb: "Type the values from a pathology report and read what each one means. Nothing is stored." },

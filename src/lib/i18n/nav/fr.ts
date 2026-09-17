@@ -108,6 +108,7 @@ export const navFr: NavDict = {
   "/cases/": ["Cas par pays", "Nouveaux cas de cancer par pays et par cancer, avec les lacunes de données rendues explicites."],
   "/funding/": ["Flux de financement", "D'où vient l'argent."],
 
+  "/first-60-days/": ["Les 60 premiers jours", "Semaine par semaine après le diagnostic, pour votre type de cancer : les examens, l’équipe, les décisions à venir, les questions à poser, les essais à évoquer et l’aide gratuite."],
   "/prep/": ["Préparer le rendez-vous", "Cochez les questions à poser pour votre cancer, ajoutez les vôtres, et imprimez ou téléchargez une page pour le rendez-vous."],
   "/side-effects/": ["Effets secondaires", "Partez du symptôme : quels traitements le causent, à quelle fréquence, et quand appeler."],
   "/symptoms/": ["Du symptôme au test", "Partez d'un symptôme inquiétant : ce qu'il peut signifier, quel test vient d'abord, et les seuils d'orientation des recommandations."],
