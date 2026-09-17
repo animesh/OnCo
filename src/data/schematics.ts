@@ -558,9 +558,11 @@ export function termSchematicFor(category: string): Mesh {
  * (a checkpoint antibody, a radioligand, an epigenetic drug). Each key is a technology id; each value an id with its own scene.
  */
 import { radiationSchematicAliases } from "./radiation-wave1";
+import { modelSchematicAliases } from "./models-wave";
 
 export const SCHEMATIC_ALIAS: Record<string, string> = {
   ...radiationSchematicAliases,
+  ...modelSchematicAliases,
   "spatial-transcriptomics": "spatial-biology-instruments",
   "imaging-mass-cytometry": "spatial-biology-instruments",
   "multiplex-immunofluorescence": "histopathology-ihc",

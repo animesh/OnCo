@@ -7,11 +7,11 @@ import { Container, GroupKicker, PageHeader } from "@/components/ui";
 import { EntityBrowser, type BrowserRow, type ColDef, type FacetDef, type LinkItem } from "@/components/EntityBrowser";
 import { models, datasets } from "@/data/model-registry";
 
-export const metadata: Metadata = pageMeta({ title: "Models and datasets", description: "Foundation models for cancer and the cell, and the datasets they train on, in one comparable table: parameters, modality, training data, weights availability, licence, benchmarks and papers.", path: "/models/" });
+export const metadata: Metadata = pageMeta({ title: "Models and datasets", description: "Foundation models for cancer and the cell, the mathematical and biophysical models oncology reasons with, and the datasets they train on, in one comparable table: parameters, modality, training data, weights availability, licence, benchmarks and papers.", path: "/models/" });
 
 const MODALITY_LABEL: Record<string, string> = { histology: "Histology", radiology: "Radiology", "single-cell": "Single cell", DNA: "DNA", protein: "Protein", multimodal: "Multimodal", "clinical-text": "Clinical text", phenomics: "Phenomics", EHR: "EHR", clinical: "Clinical", mixed: "Mixed" };
 const WEIGHTS_LABEL: Record<string, string> = { open: "Open weights", gated: "Gated download", request: "By request", api: "API only", proprietary: "Proprietary" };
-const WEIGHTS_TIPS: Record<string, string> = { "Open weights": "Download without gating.", "Gated download": "Download after accepting terms or a request form (for example on Hugging Face).", "By request": "Academic access by application to the developers.", "API only": "Hosted access only; no weights.", Proprietary: "Not available outside the company." };
+const WEIGHTS_TIPS: Record<string, string> = { "Published equations": "A mathematical or biophysical model published in the literature; the equations and parameters are on the technology page and in the linked paper.", "Open weights": "Download without gating.", "Gated download": "Download after accepting terms or a request form (for example on Hugging Face).", "By request": "Academic access by application to the developers.", "API only": "Hosted access only; no weights.", Proprietary: "Not available outside the company." };
 const ACCESS_LABEL: Record<string, string> = { open: "Open", registered: "Registered access", controlled: "Controlled access", commercial: "Commercial" };
 const licenceFamily = (l?: string) => !l ? "Not verified" : /non-commercial|NC|CC BY-NC|Gemma|Cambrian|Chai Discovery|research use|licence \(/i.test(l) ? "Non-commercial or research" : /Apache|MIT|BSD|CC BY 4.0|CC BY\b|CC0/i.test(l) ? "Permissive open licence" : "Other";
 const paperLink = (p?: string): LinkItem | undefined => !p ? undefined : p.startsWith("10.") ? { label: "paper", href: `https://doi.org/${p}`, tip: `DOI ${p}` } : p.startsWith("arXiv:") ? { label: "arXiv", href: `https://arxiv.org/abs/${p.slice(6)}`, tip: p } : p.startsWith("bioRxiv ") ? { label: "bioRxiv", href: `https://doi.org/${p.slice(8)}`, tip: `bioRxiv DOI ${p.slice(8)}` } : undefined;
@@ -39,6 +39,16 @@ export default function ModelsPage() {
       sortKeys: { params: m.parametersM ?? 0, year: m.year },
     });
   }
+  for (const t of g.kind("technology")) {
+    if (!t.tags.includes("mathematical-model")) continue;
+    const primary = t.links[0];
+    rows.push({
+      id: t.id, name: t.name, tldr: t.tldr, route: routeFor(t), status: t.status,
+      facets: { type: ["Mathematical model"], modality: ["Mechanistic model"], weights: ["Published equations"], licence: ["Open literature"], year: t.since ? [String(t.since)] : [] },
+      cols: { params: undefined, training: t.principle, weights: { facet: "weights", value: "Published equations" }, licence: undefined, benchmark: t.strengths[0], paper: primary ? [{ label: primary.label.length > 24 ? "source" : primary.label, href: primary.url }] : undefined, datasets: [], year: typeof t.since === "number" ? t.since : undefined },
+      sortKeys: { params: 0, year: typeof t.since === "number" ? t.since : 0 },
+    });
+  }
   for (const d of datasets) {
     const e = g.get(d.id); if (!e) continue;
     const used = (d.usedBy ?? []).map((id) => g.get(id)).filter((x): x is NonNullable<typeof x> => !!x).map((x) => ({ label: x.name.split(" (")[0], href: routeFor(x), tip: x.tldr }));
@@ -50,7 +60,7 @@ export default function ModelsPage() {
     });
   }
   const facets: FacetDef[] = [
-    { key: "type", label: "Type", searchable: false, width: "w-36", order: ["Model", "Dataset"] },
+    { key: "type", label: "Type", searchable: false, width: "w-36", order: ["Model", "Mathematical model", "Dataset"] },
     { key: "modality", label: "Modality", searchable: false, width: "w-44" },
     { key: "weights", label: "Weights / access", searchable: false, width: "w-48", order: ["Open weights", "Gated download", "By request", "API only", "Proprietary", "Open", "Registered access", "Controlled access", "Commercial"] },
     { key: "licence", label: "Licence", searchable: false, width: "w-56" },
