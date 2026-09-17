@@ -7,7 +7,7 @@
  *   entities/<id>.json  one entity with its neighbours                   schema.json  JSON Schema of an entity
  *   search.json, ranking.json, benchmark.json, meta.json                 feeds: see scripts/build-feeds.ts
  */
-import { mkdirSync, rmSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readdirSync, rmSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { z } from "zod";
 import { graph } from "../src/lib/graph";
@@ -21,7 +21,9 @@ import { apiFiles, FEEDS } from "./api-layout";
 import { buildSituationData } from "../src/lib/for-me-situation-data";
 
 const out = join(process.cwd(), "public", "api", "v1");
-rmSync(out, { recursive: true, force: true });
+// Clear the previous build, keeping rdf/: scripts/build-triples.ts rewrites only the Turtle files whose content changed
+// (about 11,000 small files) and removes stale ones itself, so incremental builds do not touch them all.
+if (existsSync(out)) for (const name of readdirSync(out)) if (name !== "rdf") rmSync(join(out, name), { recursive: true, force: true });
 mkdirSync(join(out, "entities"), { recursive: true });
 mkdirSync(join(out, "for-me"), { recursive: true });
 

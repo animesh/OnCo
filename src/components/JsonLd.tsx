@@ -76,7 +76,7 @@ function entityNode(e: Entity): Node {
     license: LICENSE_URL,
     isPartOf: { "@id": `${SITE}/api/#dataset` },
     // The record's machine-readable twins, the same files the page's <link rel="alternate"> tags point at.
-    subjectOf: [twins.markdown, twins.json].map((r) => ({ "@type": "DigitalDocument", url: absoluteUrl(r.url), encodingFormat: r.type })),
+    subjectOf: [twins.markdown, twins.json, twins.turtle].map((r) => ({ "@type": "DigitalDocument", url: absoluteUrl(r.url), encodingFormat: r.type })),
   };
   switch (e.kind) {
     case "drug":
