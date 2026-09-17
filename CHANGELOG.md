@@ -7,9 +7,11 @@ All notable changes to OnCo are recorded here. The format follows [Keep a Change
 Regenerated from the commit log each time the site ships (`scripts/changelog-sync.ts`); the version sections below are written by hand when a release is cut.
 
 ### 17 September 2026
-- Model review panel: schema, batch script and page for AI model commentary on records, with two example panels; diagnostics wave two: 24 tests from RAD51 foci and CTC counts to pharmacogenomics, cardiac markers and low-resource screening, with five companies; institution networks: Parker Institute members and leaders, CRUK, NCI, UNICANCER and DKTK links, and ten weakly linked centres strengthened
+- First sixty days after diagnosis: a week-by-week guide for every cancer built from its records, and a printable appointment sheet per cancer with questions, words you may hear and treatments you may be offered
 - Navigation starts at the top of the page (scroll attribute on the html tag); footer credit Made with heart and soul by Jude Gomila with Mount Tamalpais and Golden Gate icons in nine languages; roadmap rows 130 to 137
 - Every list row has a visual or a designed stand-in (ideas borrow their cancer icon, technology drawing or molecule), with a test so it cannot regress; I-SPY 1, I-SPY 2, I-SPY 2.2, WISDOM and Quantum Leap Healthcare Collaborative linked to Laura Esserman and UCSF; navigation starts at the top of the page; Enter in search opens the results page; roadmap rows 122 to 129
+- Model review panel: schema, batch script and page for AI model commentary on records, with two example panels; diagnostics wave two: 24 tests from RAD51 foci and CTC counts to pharmacogenomics, cardiac markers and low-resource screening, with five companies; institution networks: Parker Institute members and leaders, CRUK, NCI, UNICANCER and DKTK links, and ten weakly linked centres strengthened
+- Add the first 60 days guide and per-cancer appointment sheets
 - Mine institution networks (rows 110, 111): PICI, CRUK, NCI, UNICANCER, DKTK members and leaders; strengthen weak institution pages
 - Diagnostics wave 2: 24 tests around sequencing, 5 companies (roadmap row 119)
 - Animations pause off screen, when the tab is hidden and on slow phones, with a shared budget of six spinning molecules or drawings at once; the record page sidebar stays inside its column and never reaches the footer

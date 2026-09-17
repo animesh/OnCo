@@ -182,7 +182,8 @@
 ## Living with cancer
 
 - [For me](https://onco.cc/for-me/): Research your cancer type and see what works and what could work.
-- [Appointment prep pack](https://onco.cc/prep/): Tick the questions to ask for your cancer, add your own, and print or download one page for the appointment.
+- [The first 60 days](https://onco.cc/first-60-days/): Week by week after a diagnosis, for your cancer type: the tests, the team, the decisions ahead, the questions to ask, the trials to mention and the help that costs nothing.
+- [Appointment prep pack](https://onco.cc/prep/): Tick the questions to ask for your cancer, add your own, and print or download one page for the appointment; each cancer also has a one-page sheet with room for the answers.
 - [Side effects](https://onco.cc/side-effects/): Start from the symptom: which treatments cause it, how often, and when to call.
 - [Symptom to test](https://onco.cc/symptoms/): Start from a worrying symptom: what it can mean, which test comes first, and the referral thresholds guidelines state.
 - [Report reader](https://onco.cc/report-reader/): Type the values from a pathology report and read what each one means. Nothing is stored.
