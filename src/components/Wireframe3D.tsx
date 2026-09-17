@@ -3,6 +3,8 @@
 import { useEffect, useMemo, useRef } from "react";
 import { faceSegments, facing, fitScale, hexToRgb, sceneExtents, type Mesh, type Vec3 } from "@/lib/wireframe";
 import { ALL_ANIMATED } from "@/data/schematics";
+import { runFrameLoop, useAnimationBudget } from "@/lib/use-animation-budget";
+import { MotionHint } from "./MotionHint";
 
 /**
  * Slowly turning wireframe schematic on a canvas, in the same visual language as MoleculeViewer:
@@ -65,6 +67,9 @@ function fill(cls: string | undefined, pal: Palette): { rgb: Rgb; alpha: number 
 /** `compact`: thumbnail mode. Draws at ~30 fps, skips labels and the caption box, thin progress bar. Safe to show many at once. */
 export function Wireframe3D({ mesh: given, height = "h-64 sm:h-72", speed = 0.3, tilt = 0.35, compact = false }: { mesh: Mesh; height?: string; speed?: number; tilt?: number; compact?: boolean }) {
   const ref = useRef<HTMLCanvasElement>(null);
+  // Animation budget: pauses off screen and in a hidden tab, still under reduced motion, thumbnails share six slots,
+  // low-budget devices draw a still frame until a tap (full size) or a hover.
+  const gate = useAnimationBudget(ref, compact ? { pool: "schematic" } : { tapToPlay: true });
   // Server components send a marker (`anim`) instead of the animation function; build the animated mesh here.
   const mesh = useMemo(() => (given.anim && ALL_ANIMATED[given.anim] ? ALL_ANIMATED[given.anim]() : given), [given]);
 
@@ -91,20 +96,17 @@ export function Wireframe3D({ mesh: given, height = "h-64 sm:h-72", speed = 0.3,
     maxR ||= 1;
     const faces = mesh.faces ?? [];
     const faceSegs = faceSegments(mesh);
-    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     let pal = readPalette();
     const font = getComputedStyle(document.body).fontFamily || "ui-sans-serif, system-ui, sans-serif";
-    const repaint = () => { pal = readPalette(); if (reduced) draw(performance.now()); };
+    // Still frames (reduced motion, no slot, low budget) are not redrawn by the loop, so repaint them on theme changes and resizes.
+    const repaint = () => { pal = readPalette(); if (!gate.state.active) draw(performance.now()); };
     const mo = new MutationObserver(repaint);
     mo.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
     const scheme = window.matchMedia("(prefers-color-scheme: dark)");
     scheme.addEventListener("change", repaint);
 
-    let raf = 0, visible = true;
     const t0 = performance.now();
-    const io = new IntersectionObserver(([e]) => { visible = e.isIntersecting; if (visible) { cancelAnimationFrame(raf); loop(performance.now()); } }, { threshold: 0.05 });
-    io.observe(canvas);
-    const ro = new ResizeObserver(() => { if (reduced) draw(performance.now()); });
+    const ro = new ResizeObserver(() => { if (!gate.state.active) draw(performance.now()); });
     ro.observe(canvas);
 
     const project = (time: number, W: number, H: number) => {
@@ -113,6 +115,7 @@ export function Wireframe3D({ mesh: given, height = "h-64 sm:h-72", speed = 0.3,
       // Camera: the scene sways slowly about a three-quarter view (±0.5 rad around -0.25) rather than spinning through
       // 360°, because these compositions are laid out left-to-right and a full turn shows them edge-on twice a cycle.
       // `speed` sets the sway rate. Reduced motion: a still three-quarter view, slightly from above.
+      const reduced = gate.state.reduced;
       const ay = reduced ? -0.62 : -0.25 + 0.5 * Math.sin(secs * speed);
       const ax = reduced ? tilt + 0.06 : tilt + Math.sin(secs * 0.15) * 0.2;
       const cy = Math.cos(ay), sy = Math.sin(ay), cx = Math.cos(ax), sx = Math.sin(ax);
@@ -148,6 +151,7 @@ export function Wireframe3D({ mesh: given, height = "h-64 sm:h-72", speed = 0.3,
       // Animation frame (static meshes: identity).
       let pts: Vec3[] = basePts, alpha: number[] | undefined, caption: string | undefined, labels = mesh.labels ?? [];
       if (mesh.animate) {
+        const reduced = gate.state.reduced;
         const t = reduced ? 0.35 : (((time - t0) / 1000) % mesh.animate.duration) / mesh.animate.duration;
         const fr = mesh.animate.frame(t);
         // Seamless loop: over the last part of the cycle, ease the geometry back towards the opening frame so the
@@ -241,22 +245,16 @@ export function Wireframe3D({ mesh: given, height = "h-64 sm:h-72", speed = 0.3,
       }
     };
 
-    let last = 0;
-    const minGap = compact ? 1000 / 30 : 0;
-    const loop = (time: number) => {
-      if (!visible) return;
-      if (time - last >= minGap) { draw(time); last = time; }
-      if (!reduced) raf = requestAnimationFrame(loop);
-    };
-    loop(performance.now());
-    return () => { cancelAnimationFrame(raf); io.disconnect(); ro.disconnect(); mo.disconnect(); scheme.removeEventListener("change", repaint); };
-  }, [mesh, speed, tilt, compact]);
+    const stop = runFrameLoop(gate, (time) => draw(time), { fps: compact ? 30 : undefined });
+    return () => { stop(); ro.disconnect(); mo.disconnect(); scheme.removeEventListener("change", repaint); };
+  }, [mesh, speed, tilt, compact, gate]);
 
   return (
     <div className="relative wire-bg">
       <canvas ref={ref} className={`block w-full ${height}`} aria-label={mesh.animate ? "Animated rotating wireframe schematic" : "Rotating wireframe schematic"} />
       {/* The labels are painted into the canvas, where translators and screen readers cannot see them; repeat them as real text. */}
       {!compact && (mesh.labels?.length ?? 0) > 0 && <ul className="sr-only" lang="en">{mesh.labels!.map((l, i) => <li key={i}>{l.text}</li>)}</ul>}
+      {!compact && <MotionHint gate={gate} />}
     </div>
   );
 }

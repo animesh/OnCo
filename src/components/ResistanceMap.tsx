@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useId, useState, type ReactNode } from "react";
+import { useId, useRef, useState, type ReactNode } from "react";
 import { CATEGORY_BY_ID, type MechanismCategory } from "@/lib/resistance-categories";
+import { useAnimationBudget, useMotionSnapshot } from "@/lib/use-animation-budget";
 import { CategoryDot, useAtlas } from "./ResistanceMatrix";
 
 /**
@@ -28,24 +29,20 @@ export type MapRoute = {
 export function ResistanceMap({ drugLabel, exemplarCount, routes, details }: { drugLabel: string; exemplarCount: number; routes: MapRoute[]; details?: ReactNode[] }) {
   const [hover, setHover] = useState<number | null>(null);
   const [open, setOpen] = useState<number | null>(null);
-  const [reduced, setReduced] = useState(false);
   const { highlight } = useAtlas();
   const uid = useId().replace(/[^a-zA-Z0-9]/g, "");
-
-  useEffect(() => {
-    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const update = () => setReduced(mq.matches);
-    update();
-    mq.addEventListener("change", update);
-    return () => mq.removeEventListener("change", update);
-  }, []);
+  // Shared animation budget: the spinning rings and the flowing dashes are still under reduced motion, and pause
+  // (data-motion-paused) while the map is off screen, the tab is hidden or the device has a low budget.
+  const box = useRef<HTMLDivElement>(null);
+  const motion = useMotionSnapshot(useAnimationBudget(box, { wakeOnHover: false }));
+  const reduced = motion.reduced;
 
   const focus = hover ?? open;
   const current = focus !== null ? routes[focus] : null;
   const counts = routes.reduce((m, r) => m.set(r.category, (m.get(r.category) ?? 0) + 1), new Map<MechanismCategory, number>());
 
   return (
-    <div className="card overflow-hidden">
+    <div ref={box} data-motion-paused={motion.active ? undefined : ""} className="card overflow-hidden">
       <style>{`
         @keyframes res-flow-${uid} { to { stroke-dashoffset: -28; } }
         @keyframes res-spin-${uid} { to { transform: rotate(360deg); } }
@@ -149,7 +146,7 @@ function Diagram({ uid, compact, drugLabel, exemplarCount, routes, focus, open, 
   const cx = compact ? 168 : 300;
   const r = Math.min(compact ? 42 : 62, H / 2 - 14);
   const ex = compact ? 292 : 516;
-  const flow = reduced ? "" : `res-flow-${uid}`;
+  const flow = reduced ? "" : `res-flow-${uid} motion-css`;
   const anyFocus = focus !== null;
 
   return (
@@ -176,8 +173,8 @@ function Diagram({ uid, compact, drugLabel, exemplarCount, routes, focus, open, 
       {/* Tumour cell */}
       <g transform={`translate(${cx} ${cy})`} className="text-foreground">
         <circle r={r} fill="none" stroke="currentColor" strokeWidth={1.4} opacity={0.85} />
-        <circle r={r * 0.8} fill="none" stroke="currentColor" strokeWidth={0.8} strokeDasharray="5 4" opacity={0.45} className={reduced ? "" : `res-spin-${uid}`} style={{ transformOrigin: "0 0" }} />
-        <circle r={r * 0.58} fill="none" stroke="currentColor" strokeWidth={0.7} strokeDasharray="1.5 4" opacity={0.4} className={reduced ? "" : `res-spin-rev-${uid}`} style={{ transformOrigin: "0 0" }} />
+        <circle r={r * 0.8} fill="none" stroke="currentColor" strokeWidth={0.8} strokeDasharray="5 4" opacity={0.45} className={reduced ? "" : `res-spin-${uid} motion-css`} style={{ transformOrigin: "0 0" }} />
+        <circle r={r * 0.58} fill="none" stroke="currentColor" strokeWidth={0.7} strokeDasharray="1.5 4" opacity={0.4} className={reduced ? "" : `res-spin-rev-${uid} motion-css`} style={{ transformOrigin: "0 0" }} />
         <circle r={r * 0.32} className="fill-foreground/5" stroke="currentColor" strokeWidth={1.1} opacity={0.8} />
         <circle r={r * 0.32} fill="none" stroke="currentColor" strokeWidth={0.6} strokeDasharray="2 3" opacity={0.45} transform="scale(0.72)" />
         <circle cx={r * 0.08} cy={-r * 0.06} r={r * 0.07} fill="currentColor" opacity={0.7} />

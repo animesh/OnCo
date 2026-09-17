@@ -20,6 +20,7 @@ import { RegisterSW } from "@/components/RegisterSW";
 import { WebMCP } from "@/components/WebMCP";
 import { FEED_TYPES } from "@/lib/seo";
 import { GardenBackdrop, GardenDefs } from "@/components/Garden";
+import { MotionGovernor } from "@/components/MotionGovernor";
 import { FooterNav } from "@/components/FooterNav";
 import { T } from "@/components/T";
 
@@ -99,6 +100,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <LangStrip />
         <CommandPalette />
         <RegisterSW />
+        <MotionGovernor />
         <WebMCP />
         <ExternalLinks />
         {/* Record pages stamp data-onco-id / data-onco-kind on this element for agents (MachineLinks); the hydration warning is for those attributes. */}

@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { STATUS_LABEL, statusClass } from "@/lib/text";
+import { useAnimationBudget, useMotionSnapshot } from "@/lib/use-animation-budget";
 
 export type TLApproval = { year: number; drug: string; route: string; region: string; indication: string };
 export type TLTrial = { year: number; name: string; route: string; status?: string; cancers: string[] };
@@ -15,12 +16,16 @@ export function TimelineScrubber({ data }: { data: TimelineData }) {
   const [year, setYear] = useState(2026);
   const [playing, setPlaying] = useState(false);
   const timer = useRef<number | null>(null);
+  // Shared animation budget: the year ticker waits while the tab is hidden or the controls are off screen, then resumes.
+  const controls = useRef<HTMLDivElement>(null);
+  const motion = useMotionSnapshot(useAnimationBudget(controls, { wakeOnHover: false }));
+  const ticking = playing && motion.visible && !motion.hidden;
 
   useEffect(() => {
-    if (!playing) { if (timer.current) window.clearInterval(timer.current); timer.current = null; return; }
+    if (!ticking) { if (timer.current) window.clearInterval(timer.current); timer.current = null; return; }
     timer.current = window.setInterval(() => setYear((y) => (y >= data.max ? (setPlaying(false), y) : y + 1)), 700);
     return () => { if (timer.current) window.clearInterval(timer.current); };
-  }, [playing, data.max]);
+  }, [ticking, data.max]);
 
   const approvalsToDate = useMemo(() => data.approvals.filter((a) => a.year <= year), [data, year]);
   const newThisYear = approvalsToDate.filter((a) => a.year === year);
@@ -42,7 +47,7 @@ export function TimelineScrubber({ data }: { data: TimelineData }) {
 
   return (
     <div>
-      <div className="card p-4 sticky top-14 z-30 bg-card/95 backdrop-blur">
+      <div ref={controls} className="card p-4 sticky top-14 z-30 bg-card/95 backdrop-blur">
         <div className="flex items-center gap-4">
           <button type="button" onClick={() => setPlaying((p) => !p)} className="rounded-lg border border-border px-3 py-1.5 text-sm hover:bg-foreground/5">{playing ? "Pause" : "Play"}</button>
           <div className="text-3xl font-semibold tabular-nums w-20">{year}</div>

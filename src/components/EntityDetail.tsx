@@ -23,6 +23,7 @@ import { TrialCounts } from "./TrialCounts";
 import { ReviewBadge } from "./ReviewBadge";
 import { TechSchematic } from "./TechSchematic";
 import { Wireframe3D } from "./Wireframe3D";
+import { StickyAside } from "./StickyAside";
 import { schematicFor } from "@/data/schematics";
 import { Tabs, type Tab } from "./Tabs";
 import { RoadmapStory } from "./RoadmapStory";
@@ -196,7 +197,7 @@ export function EntityDetail({ e }: { e: Entity }) {
             {(e.kind === "section" || e.kind === "technology") && <OpenMedicalPanel id={e.id} kind={e.kind} limit={e.kind === "section" ? 12 : undefined} />}
           </div>
 
-          <aside className="space-y-4 lg:sticky lg:top-28 self-start">
+          <StickyAside>
             {e.kind === "person" && <PortraitCredit id={e.id} />}
             {e.kind === "technology" && e.tags.some((t) => t.startsWith("evidence:")) && <div className="card p-4 text-sm"><div className="kicker mb-1.5">Evidence grade</div><EvidenceGradeChip tags={e.tags} /><p className="text-[11px] text-muted mt-2">How much and what kind of evidence, for the stated purpose. Grades are explained on the <Link className="underline" href="/live/complementary/">complementary approaches page</Link>.</p></div>}
             {(e.kind === "drug" || e.kind === "technology" || e.kind === "target" || e.kind === "trial") && <EvidenceBar e={e} />}
@@ -219,7 +220,7 @@ export function EntityDetail({ e }: { e: Entity }) {
             </div>
             <SuggestEdit id={e.id} kind={e.kind} name={e.name} fields={Object.keys(e)} source={sourceLocation(e.id, e.kind)} route={routeFor(e)} asOf={e.asOf} />
             <QuickLinks e={e} />
-          </aside>
+          </StickyAside>
         </div>
       </Container>
       <MachineLinks e={e} />

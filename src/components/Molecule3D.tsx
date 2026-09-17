@@ -5,6 +5,8 @@ import { Wireframe3D } from "./Wireframe3D";
 import { chainColour, elementColour, elementName, type Mol } from "@/lib/molecule-render";
 import { buildScene, createRenderer, LIGAND_CARBON, toMesh, type Scene, type SpriteCanvas } from "@/lib/molecule-draw";
 import { moleculeStats, proteinStats } from "@/lib/molecule-stats";
+import { runFrameLoop, useAnimationBudget } from "@/lib/use-animation-budget";
+import { MotionHint } from "./MotionHint";
 
 export type StructureEntry = { label: string; file: string; note?: string; dim: 2 | 3; source: string; ref: string };
 type Style = "solid" | "wire";
@@ -20,6 +22,8 @@ const themeOf = () => { const t = document.documentElement.dataset.theme; return
 export function Molecule3D({ entry, compact = false, height = "h-64 sm:h-80", className = "" }: { entry: StructureEntry; compact?: boolean; height?: string; className?: string }) {
   // The loaded snapshot is tagged with its file name so a changed entry never shows a stale molecule.
   const [loaded, setLoaded] = useState<{ file: string; mol: Mol | null; err: boolean } | null>(null);
+  // The structure file is fetched once the canvas has been on screen: a long list of thumbnails loads as it scrolls.
+  const [near, setNear] = useState(false);
   const [style, setStyle] = useState<Style>("solid");
   const [showH, setShowH] = useState(false);
   const [playing, setPlaying] = useState(true);
@@ -29,18 +33,19 @@ export function Molecule3D({ entry, compact = false, height = "h-64 sm:h-80", cl
   const err = loaded?.file === entry.file ? loaded.err : false;
 
   useEffect(() => {
+    if (!near) return;
     let alive = true;
     const file = entry.file;
     fetch(`/structures/${file}`).then((r) => { if (!r.ok) throw new Error(String(r.status)); return r.json(); }).then((m: Mol) => { if (alive) setLoaded({ file, mol: m, err: false }); }).catch(() => { if (alive) setLoaded({ file, mol: null, err: true }); });
     return () => { alive = false; };
-  }, [entry.file]);
+  }, [entry.file, near]);
 
   const scene = useMemo(() => (mol ? buildScene(mol, isProtein) : null), [mol, isProtein]);
   const mesh = useMemo(() => (mol && style === "wire" ? toMesh(mol, isProtein, showH) : null), [mol, isProtein, style, showH]);
 
   const canvasEl = style === "wire" && mesh
     ? <Wireframe3D mesh={mesh} height={compact ? className : height} compact={compact} speed={0.3} />
-    : <SolidCanvas scene={scene} compact={compact} className={compact ? `block w-full ${className}` : `block w-full ${height}`} showH={showH} playing={playing} label={entry.label} onTap={() => setChem((c) => !c)} />;
+    : <SolidCanvas scene={scene} compact={compact} className={compact ? `block w-full ${className}` : `block w-full ${height}`} showH={showH} playing={playing} label={entry.label} onTap={() => setChem((c) => !c)} onVisible={() => setNear(true)} />;
 
   if (compact) return canvasEl;
 
@@ -138,10 +143,20 @@ function makeSpriteCanvas(sizePx: number): SpriteCanvas {
   return { width: sizePx, height: sizePx, ctx: c.getContext("2d")!, image: c };
 }
 
-function SolidCanvas({ scene, compact, className, showH, playing, label, onTap }: { scene: Scene | null; compact: boolean; className: string; showH: boolean; playing: boolean; label: string; onTap?: () => void }) {
+function SolidCanvas({ scene, compact, className, showH, playing, label, onTap, onVisible }: { scene: Scene | null; compact: boolean; className: string; showH: boolean; playing: boolean; label: string; onTap?: () => void; onVisible?: () => void }) {
   const tapRef = useRef(onTap);
   useEffect(() => { tapRef.current = onTap; }, [onTap]);
+  const visRef = useRef(onVisible);
+  useEffect(() => { visRef.current = onVisible; }, [onVisible]);
   const ref = useRef<HTMLCanvasElement>(null);
+  // Animation budget: pauses off screen and in a hidden tab, still under reduced motion, thumbnails share six slots,
+  // low-budget devices draw a still frame until a tap (full size) or a hover.
+  const gate = useAnimationBudget(ref, compact ? { pool: "molecule" } : { tapToPlay: true });
+  useEffect(() => {
+    const check = () => { if (gate.state.visible) visRef.current?.(); };
+    check();
+    return gate.subscribe(check);
+  }, [gate]);
   const st = useRef({ showH, playing, yaw: 0, seeded: false, pitchOff: 0, dragging: false, lastX: 0, lastY: 0, downX: 0, downY: 0, resumeAt: 0, lastTime: 0 });
   const redraw = useRef<(() => void) | null>(null);
   useEffect(() => { st.current.showH = showH; st.current.playing = playing; redraw.current?.(); }, [showH, playing]);
@@ -153,11 +168,11 @@ function SolidCanvas({ scene, compact, className, showH, playing, label, onTap }
     if (!ctx) return;
     const s0 = st.current;
     if (!s0.seeded) { s0.yaw = Math.random() * Math.PI * 2; s0.seeded = true; } // thumbnails in a grid start at different angles
-    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const renderer = createRenderer(scene, makeSpriteCanvas);
 
     let dark = themeOf();
-    const retheme = () => { dark = themeOf(); if (reduced) draw(performance.now()); };
+    // Still frames (reduced motion, no slot, low budget) are not redrawn by the loop, so repaint them on theme changes and resizes.
+    const retheme = () => { dark = themeOf(); if (!gate.state.active) draw(performance.now()); };
     const mo = new MutationObserver(retheme);
     mo.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
     const mq = window.matchMedia("(prefers-color-scheme: dark)");
@@ -170,6 +185,7 @@ function SolidCanvas({ scene, compact, className, showH, playing, label, onTap }
       if (canvas.width !== Math.round(W * dpr) || canvas.height !== Math.round(H * dpr)) { canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr); }
       const dt = s0.lastTime ? Math.min(0.1, (time - s0.lastTime) / 1000) : 0;
       s0.lastTime = time;
+      const reduced = gate.state.reduced;
       if (s0.playing && !s0.dragging && time > s0.resumeAt && !reduced) s0.yaw += dt * (compact ? 0.3 : 0.35);
       const pitch = 0.35 + s0.pitchOff + (reduced ? 0 : Math.sin((time / 1000) * 0.15) * 0.15);
       renderer.draw(ctx, { W, H, dpr, yaw: s0.yaw, pitch, showH: s0.showH, compact, dark });
@@ -183,28 +199,21 @@ function SolidCanvas({ scene, compact, className, showH, playing, label, onTap }
       s0.yaw += (e.clientX - s0.lastX) * 0.01;
       s0.pitchOff = Math.max(-1.2, Math.min(1.2, s0.pitchOff + (e.clientY - s0.lastY) * 0.01));
       s0.lastX = e.clientX; s0.lastY = e.clientY; s0.resumeAt = performance.now() + 2500;
-      if (reduced) draw(performance.now());
+      if (!gate.state.active) draw(performance.now());
     };
     const onUp = (e: PointerEvent) => { if (!s0.dragging) return; s0.dragging = false; if (Math.hypot(e.clientX - s0.downX, e.clientY - s0.downY) < 5) tapRef.current?.(); s0.resumeAt = performance.now() + 2500; try { canvas.releasePointerCapture(e.pointerId); } catch { /* already released */ } };
     canvas.addEventListener("pointerdown", onDown); canvas.addEventListener("pointermove", onMove); canvas.addEventListener("pointerup", onUp); canvas.addEventListener("pointercancel", onUp);
 
-    let raf = 0, visible = true, last = 0;
-    const minGap = compact || scene.isProtein ? 1000 / 30 : 0;
-    const loop = (time: number) => {
-      if (!visible) return;
-      if (time - last >= minGap) { draw(time); last = time; }
-      if (!reduced) raf = requestAnimationFrame(loop);
-    };
-    const io = new IntersectionObserver(([e]) => { visible = e.isIntersecting; if (visible) { cancelAnimationFrame(raf); raf = requestAnimationFrame(loop); } }, { threshold: 0.05 });
-    io.observe(canvas);
-    const ro = new ResizeObserver(() => { if (reduced) draw(performance.now()); });
+    const ro = new ResizeObserver(() => { if (!gate.state.active) draw(performance.now()); });
     ro.observe(canvas);
-    raf = requestAnimationFrame(loop);
+    const stop = runFrameLoop(gate, (time) => draw(time), { fps: compact || scene.isProtein ? 30 : undefined });
     return () => {
-      cancelAnimationFrame(raf); io.disconnect(); ro.disconnect(); mo.disconnect(); mq.removeEventListener("change", retheme); redraw.current = null;
+      stop(); ro.disconnect(); mo.disconnect(); mq.removeEventListener("change", retheme); redraw.current = null;
       canvas.removeEventListener("pointerdown", onDown); canvas.removeEventListener("pointermove", onMove); canvas.removeEventListener("pointerup", onUp); canvas.removeEventListener("pointercancel", onUp);
     };
-  }, [scene, compact]);
+  }, [scene, compact, gate]);
 
-  return <canvas ref={ref} className={`${className} ${compact ? "" : "cursor-grab active:cursor-grabbing touch-none"}`} aria-label={scene?.isProtein ? `${label}: backbone ribbon, drag to rotate` : `${label}: ball-and-stick model, drag to rotate`} />;
+  const canvas = <canvas ref={ref} className={`${className} ${compact ? "" : "cursor-grab active:cursor-grabbing touch-none"}`} aria-label={scene?.isProtein ? `${label}: backbone ribbon, drag to rotate` : `${label}: ball-and-stick model, drag to rotate`} />;
+  if (compact) return canvas;
+  return <>{canvas}<MotionHint gate={gate} /></>;
 }
