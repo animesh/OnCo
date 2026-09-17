@@ -36,6 +36,7 @@ export const navZh: NavDict = {
   "/pathway-drugs/": ["通路-药物矩阵", "哪些通路节点已有药物、处于哪个阶段，哪些可成药节点尚无药物。"],
   "/tumour-testing/": ["肿瘤测序检测", "BostonGene、Tempus、Foundation Medicine、Caris、Guardant 等并列比较：组织还是血液、靶向面板还是外显子组、报告返回什么，以及确定时的监管状态。"],
   "/models/": ["模型与数据集", "基础模型及其训练数据集，附参数、权重、许可和基准。"],
+  "/machines/": ["机器", "医院用于对抗癌症的扫描仪、加速器、机器人和消融设备：每种机器的作用、优势与局限、制造商，以及哪些中心拥有稀有机器。"],
   "/open-questions/": ["开放问题", "每个靶点和技术的未解问题：为何未解、什么能回答、谁来行动。"],
   "/preclinical-models/": ["临床前模型", "带 Cellosaurus 和 DepMap 编号的细胞系、PDX 库、小鼠模型和类器官，按癌症和靶点分类。"],
   "/regimens/": ["方案", "有名称的方案，附剂量、天数、周期、致吐性和 G-CSF 需求；每个方案有日历条。"],

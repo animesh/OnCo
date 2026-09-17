@@ -29,6 +29,7 @@ const P: Record<string, string> = {
   "/dossiers/": "M3 7h6l2 2h10v11H3V7Zm0 0V5h5",
   "/pathway-drugs/": "M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM15 15l4 4m-4 0 4-4",
   "/models/": "M5 15a4 4 0 0 0 8 0v-1h5a2 2 0 0 0 0-4h-4l-2-3H9a4 4 0 0 0-4 4v4Zm12-1v4",
+  "/machines/": "M4 12a8 8 0 0 1 16 0v6H4v-6ZM8 12a4 4 0 0 1 8 0M12 18v3M2 21h20",
   "/open-questions/": "M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.8.5-1 1-1 2.2M12 17v.5M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Z",
   "/preclinical-models/": "M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.7 3h10.6a2 2 0 0 0 1.7-3l-5-9V3M7.5 15h9",
   "/regimens/": "M4 6h16v14H4zM8 3v6m8-6v6M4 11h16M9 15h2m2 0h2",

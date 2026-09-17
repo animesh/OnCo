@@ -36,6 +36,7 @@ export const navDe: NavDict = {
   "/pathway-drugs/": ["Signalweg-Wirkstoff-Matrix", "Welche Knoten eines Signalwegs ein Medikament haben, in welcher Phase, und welche adressierbaren Knoten keines haben."],
   "/tumour-testing/": ["Tumorsequenzierungstests", "BostonGene, Tempus, Foundation Medicine, Caris, Guardant und die übrigen nebeneinander: Gewebe oder Blut, Panel oder Exom, was der Befund liefert und der Zulassungsstatus, wo er sicher ist."],
   "/models/": ["Modelle und Datensätze", "Foundation Models und die Datensätze, auf denen sie trainieren, mit Parametern, Gewichten, Lizenz und Benchmarks."],
+  "/machines/": ["Geräte", "Scanner, Beschleuniger, Roboter und Ablationsgeräte im Kampf gegen Krebs: was jedes leistet, Vorteile und Grenzen, wer es baut und welche Zentren die seltenen betreiben."],
   "/open-questions/": ["Offene Fragen", "Ungelöste Fragen je Zielstruktur und Technologie: warum offen, was sie beantworten würde, wer handelt."],
   "/preclinical-models/": ["Präklinische Modelle", "Zelllinien mit Cellosaurus- und DepMap-IDs, PDX-Banken, Mausmodelle und Organoide je Krebsart und Zielstruktur."],
   "/regimens/": ["Schemata", "Benannte Schemata mit Dosen, Tagen, Zyklen, Emetogenität und G-CSF-Bedarf; Kalenderstreifen je Schema."],

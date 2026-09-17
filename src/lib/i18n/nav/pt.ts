@@ -36,6 +36,7 @@ export const navPt: NavDict = {
   "/pathway-drugs/": ["Matriz via-fármaco", "Que nós de cada via têm um fármaco, em que fase, e que nós acionáveis não têm nenhum."],
   "/tumour-testing/": ["Testes de sequenciação tumoral", "BostonGene, Tempus, Foundation Medicine, Caris, Guardant e os restantes lado a lado: tecido ou sangue, painel ou exoma, o que o relatório devolve e o estado regulamentar quando é certo."],
   "/models/": ["Modelos e conjuntos de dados", "Modelos de base e os dados em que treinam, com parâmetros, pesos, licença e benchmarks."],
+  "/machines/": ["Máquinas", "Scanners, aceleradores, robôs e dispositivos de ablação usados contra o cancro: o que cada um faz, vantagens e limites, quem o fabrica e que centros têm os mais raros."],
   "/open-questions/": ["Questões em aberto", "Questões por resolver por alvo e tecnologia: porque continuam abertas, o que as responderia, quem age."],
   "/preclinical-models/": ["Modelos pré-clínicos", "Linhas celulares com identificadores Cellosaurus e DepMap, bancos de PDX, modelos de rato e organoides por cancro e alvo."],
   "/regimens/": ["Esquemas", "Esquemas com nome, com doses, dias, ciclos, emetogenicidade e necessidade de G-CSF; calendário por esquema."],

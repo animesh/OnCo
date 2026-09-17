@@ -84,7 +84,7 @@ const technologies: TechnologyInput[] = [
     strengths: ["Curative for otherwise incurable leukaemia", "Graft-versus-leukaemia is an antigen-agnostic immune therapy"],
     limitations: ["Treatment-related mortality 10-20%", "Chronic GVHD", "Relapse remains the main cause of failure"],
     cancers: ["aml", "all-leukemia", "cll", "multiple-myeloma"], technologies: ["mrd-testing"], terms: ["mrd-negative-cr", "eln-risk"], drugs: ["defibrotide"], links: [{ label: "Wikipedia", url: W("Hematopoietic_stem_cell_transplantation") }], journals: ["hematology-oncology-and-stem-cell-therapy"] }),
-  tech({ id: "flow-cytometry-mrd", name: "Multiparameter flow cytometry MRD", sections: ["diagnostics"], status: "standard-of-care", wikipedia: W("Flow_cytometry"),
+  tech({ id: "flow-cytometry-mrd", related: ["flow-cytometers"], companies: ["becton-dickinson", "beckman-coulter"], name: "Multiparameter flow cytometry MRD", sections: ["diagnostics"], status: "standard-of-care", wikipedia: W("Flow_cytometry"),
     tldr: "Flow cytometry MRD counts leukaemia cells in the bone marrow one at a time by their surface proteins, down to one in ten thousand.",
     summary: "Eight- to ten-colour flow detects leukaemia-associated immunophenotypes or 'different-from-normal' patterns at 10^-4 sensitivity. The most widely available MRD method in AML and ALL; ELN 2021 MRD guidelines define thresholds and timepoints. Next-generation flow (EuroFlow) reaches 10^-5 in myeloma and ALL. In CLL, undetectable MRD (<10^-4) after venetoclax combinations predicts long remission and is a regulatory endpoint.",
     principle: "Panels of fluorescently tagged antibodies distinguish aberrant blasts from regenerating normal precursors.",
