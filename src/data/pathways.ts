@@ -266,7 +266,7 @@ export const pathways: PathwayInput[] = [
     targets: ["gpc3"], cancers: ["colorectal", "hcc", "endometrial"], technologies: ["chemoprevention"], links: [{ label: "Wikipedia", url: W("Wnt_signaling_pathway") }],
   }),
   p({
-    id: "emt", name: "Epithelial-mesenchymal transition & drug efflux", keyPapers: ["paper-lamouille-emt-molecular-mechanisms-nrmcb-2014"], wikipedia: W("Epithelial–mesenchymal_transition"),
+    id: "emt", related: ["theories-of-cancer", "cancer-stem-cell-theory"], name: "Epithelial-mesenchymal transition & drug efflux", keyPapers: ["paper-lamouille-emt-molecular-mechanisms-nrmcb-2014"], wikipedia: W("Epithelial–mesenchymal_transition"),
     tldr: "How a cancer cell changes shape to migrate and to shrug off drugs. Transcription factors like ZEB1 and SNAIL loosen the cell, switch on pumps that eject chemotherapy, and hide it from the immune system.",
     summary: "TGF-β, Wnt, Notch, hypoxia, and inflammation induce ZEB1/2, SNAIL, SLUG, TWIST, which repress E-cadherin and epithelial genes and induce vimentin, N-cadherin, and matrix proteases. EMT confers invasiveness, stemness, resistance to apoptosis, upregulated ABC efflux transporters (ABCB1/P-gp, ABCG2), and immune exclusion. Partial EMT states dominate in tumours. Clinically: the mesenchymal/claudin-low TNBC subtype, sarcomatoid carcinomas, and TKI resistance (EGFR NSCLC). No approved EMT drug; strategies include TGF-β blockade (bintrafusp failed), efflux-agnostic payloads, and targeting mesenchymal-state dependencies (GPX4, ferroptosis).",
     analogy: "A brick in a wall (epithelial cell) turning into a nomad: it lets go of its neighbours, packs pumps to spit out poison, and puts on camouflage. The wall-brick was easy to hit; the nomad is not.",

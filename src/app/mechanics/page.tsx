@@ -8,6 +8,8 @@ import { MECHANICS, MECHANICS_STAGE_COUNT, type MechanicsStage } from "@/data/me
 import { PathwayDiagramInteractive } from "@/components/PathwayDiagramInteractive";
 import { ChipList, Container, GroupKicker, PageHeader } from "@/components/ui";
 import { Tip } from "@/components/Tip";
+import { FrontIcon } from "@/components/FrontIcon";
+import { THEORY_HUB_ID, THEORY_ICONS, THEORY_IDS, theoryStatus } from "@/data/theories-wave";
 
 export const metadata: Metadata = {
   title: "Mechanics of cancer",
@@ -68,6 +70,8 @@ export default function MechanicsPage() {
   const diagramCount = drawnAt.size;
   const drugIds = new Set(MECHANICS.flatMap((c) => c.stages.flatMap((s) => s.drugs)).filter((id) => g.get(id)?.kind === "drug"));
   const targetIds = new Set(MECHANICS.flatMap((c) => c.stages.flatMap((s) => s.targets)).filter((id) => g.get(id)?.kind === "target"));
+  const theoryHub = g.get(THEORY_HUB_ID);
+  const theories = pick([...THEORY_IDS], "term");
 
   return (
     <>
@@ -101,6 +105,11 @@ export default function MechanicsPage() {
               <span className="text-muted tabular-nums mr-1">{i + 1}</span>{c.title}
             </a>
           ))}
+          {theories.length > 0 && (
+            <a href="#c-theories" className="chip border bg-card border-border hover:bg-foreground/5 whitespace-nowrap">
+              <span className="text-muted tabular-nums mr-1">{MECHANICS.length + 1}</span>Theories
+            </a>
+          )}
         </nav>
 
         <div className="space-y-16">
@@ -125,6 +134,47 @@ export default function MechanicsPage() {
             </section>
           ))}
         </div>
+
+        {theories.length > 0 && (
+          <section id="c-theories" className="mt-16 scroll-mt-28">
+            <header className="max-w-3xl">
+              <div className="kicker">Chapter {MECHANICS.length + 1} · {theories.length} schools of thought</div>
+              <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight mt-1 text-balance">Theories of cancer</h2>
+              <p className="mt-3 text-[15px] sm:text-base text-foreground/85 leading-relaxed">
+                The chapters above describe what cancer does. This chapter is about what cancer is: the schools of thought that have tried to explain it, from Boveri&apos;s
+                chromosomes and the somatic mutation theory to bioelectric patterning, with what each got right, what it got wrong, and the treatments that came from it.
+                Solid arrows in the map mean one theory feeds another; blocked arrows mean it was proposed against another.
+              </p>
+            </header>
+            {theoryHub?.kind === "pathway" && (
+              <figure className="mt-6">
+                <PathwayDiagramInteractive view={pathwayView(theoryHub)} />
+                <figcaption className="mt-2 flex flex-wrap items-baseline gap-x-3 gap-y-1 text-sm">
+                  <Link href={routeFor(theoryHub)} className="font-medium underline decoration-foreground/20 underline-offset-[3px] hover:decoration-foreground">{theoryHub.name}</Link>
+                  <span className="text-muted leading-snug">Open the hub for the full comparison and the scorecard of what has panned out.</span>
+                </figcaption>
+                {theoryHub.analogy && <p className="mt-1.5 text-sm text-muted italic max-w-3xl leading-relaxed">{theoryHub.analogy}</p>}
+              </figure>
+            )}
+            <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+              {theories.map((e) => {
+                const status = theoryStatus(e.summary);
+                return (
+                  <li key={e.id}>
+                    <Link href={routeFor(e)} className="card h-full p-4 flex gap-3 transition-[filter] hover:brightness-95 dark:hover:brightness-125">
+                      <FrontIcon id={THEORY_ICONS[e.id] ?? "drug-discovery"} className="h-6 w-6 shrink-0 text-accent mt-0.5" />
+                      <div className="min-w-0">
+                        <div className="font-medium leading-snug text-balance">{e.name}</div>
+                        {status && <div className="kicker mt-1">{status}</div>}
+                        <p className="mt-1.5 text-sm text-muted leading-relaxed line-clamp-4">{e.tldr}</p>
+                      </div>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </section>
+        )}
 
         <div className="mt-16 text-xs text-muted max-w-3xl leading-relaxed">
           How this page is built: the chapters and stages are a curated atlas (<code>src/data/mechanics-atlas.ts</code>); every diagram, drug, target, technology and term is an

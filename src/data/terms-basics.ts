@@ -126,7 +126,7 @@ export const termsBasics: TermInput[] = [
     tldr: "One of the few mutations in a tumour that actually causes it to grow. Everything else is a passenger along for the ride. Drivers are the mutations drugs are aimed at.",
     summary: "A tumour with thousands of mutations usually has two to eight drivers that confer a growth advantage; the rest are passengers that happened to be present in the cell that became cancerous. Drivers cluster in a few hundred genes: oncogenes activated by mutation or amplification (EGFR, KRAS, BRAF, HER2, ALK) and tumour suppressors lost by mutation or deletion (TP53, RB1, PTEN). Genomic profiling looks for known drivers because a tumour that depends on one can often be treated with a drug against it, the phenomenon called oncogene addiction.",
     wikipedia: W("Carcinogenesis#Driver_and_passenger_mutations"),
-    related: ["mutation", "oncogene", "tumour-suppressor-gene", "oncogene-addiction", "genomic-profiling", "targeted-therapy-term", "egfr-mutation-subtypes", "kras-mutation-subtypes", "braf-v600-mutation", "gene-fusion", "tumour-agnostic"], targets: ["egfr", "kras", "braf", "alk", "tp53"],
+    related: ["mutation", "oncogene", "tumour-suppressor-gene", "oncogene-addiction", "genomic-profiling", "targeted-therapy-term", "egfr-mutation-subtypes", "kras-mutation-subtypes", "braf-v600-mutation", "gene-fusion", "tumour-agnostic", "driver-passenger-model", "somatic-mutation-theory"], targets: ["egfr", "kras", "braf", "alk", "tp53"],
     sections: ["targeted-therapy", "diagnostics"], technologies: ["cgp", "kinase-inhibitors", "companion-diagnostic"],
   }),
   t({
@@ -383,7 +383,7 @@ export const termsBasics: TermInput[] = [
     tldr: "Cancer that has spread from where it started to distant parts of the body, travelling through the blood or lymph. Metastasis is why staging scans look at the whole body, and the setting in which most new cancer drugs are approved first.",
     summary: "To metastasise, a cell must break away from the primary, invade through tissue into a blood or lymph vessel, survive the journey, exit at a distant organ, and grow there; each step is inefficient, yet enough cells succeed that around ninety percent of cancer deaths are due to metastases rather than the primary. Common destinations depend on the cancer (bone for prostate and breast, liver for colorectal, brain for lung and melanoma). Metastatic cancer is stage IV and is usually treated with systemic therapy rather than surgery, aiming at long control rather than cure, though a few sites (limited liver metastases in colorectal cancer, oligometastatic disease) can still be treated with curative intent.",
     wikipedia: W("Metastasis"),
-    related: ["primary-tumour", "metastatic-cascade", "activating-invasion-metastasis", "cancer-stage", "oligometastatic", "systemic-vs-local-therapy", "lymph-node", "disseminated-tumor-cells", "tumor-dormancy"], journals: ["cancer-metastasis-reviews", "clinical-and-experimental-metastasis"],
+    related: ["primary-tumour", "metastatic-cascade", "activating-invasion-metastasis", "cancer-stage", "oligometastatic", "systemic-vs-local-therapy", "lymph-node", "disseminated-tumor-cells", "tumor-dormancy", "theories-of-cancer", "seed-and-soil-hypothesis"], journals: ["cancer-metastasis-reviews", "clinical-and-experimental-metastasis"],
   }),
   t({
     id: "lesion", name: "Lesion", category: CLINIC,
@@ -594,7 +594,7 @@ export const termsBasics: TermInput[] = [
     tldr: "The body's response to injury or infection: immune cells and fluid rush in, causing redness, heat and swelling. Short bursts heal; long-term smouldering inflammation promotes cancer.",
     summary: "Chronic inflammation from infection (hepatitis B and C, H. pylori, HPV), irritation (tobacco, asbestos, acid reflux) or disease (ulcerative colitis) supplies growth factors, free radicals that mutate DNA, and blood-vessel growth, and it is estimated to underlie around a fifth of cancers; 'tumour-promoting inflammation' is a recognised enabling characteristic in the hallmarks of cancer. Yet inflammation is also how the immune system attacks tumours, and an 'inflamed' or 'hot' tumour is one full of T cells that responds well to checkpoint inhibitors. Aspirin and other anti-inflammatory drugs reduce colorectal cancer risk, and the inflammatory markers CRP and IL-6 track cachexia and prognosis.",
     wikipedia: W("Inflammation"),
-    related: ["immune-system", "cytokine", "macrophage", "tumor-promoting-inflammation", "inflammation-nfkb", "cold-vs-hot", "risk-factor", "aspirin-cancer-prevention"],
+    related: ["immune-system", "cytokine", "macrophage", "tumor-promoting-inflammation", "inflammation-nfkb", "cold-vs-hot", "risk-factor", "aspirin-cancer-prevention", "theories-of-cancer", "microenvironment-inflammation-theory"],
   }),
   t({
     id: "immune-checkpoint", name: "Immune checkpoint", category: BIO,
