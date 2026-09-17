@@ -328,7 +328,7 @@ export const targets: TargetInput[] = [
     biology: "Invariant TCR co-receptor; engagement triggers activation and cytokine release independent of MHC.",
     whereFound: ["All T cells (effector arm, not a tumour target)"],
     tags: ["t-cell-engager-target"],
-    notes: ["Prevalence not applicable: CD3 is the T-cell effector arm of bispecific engagers, not a tumour antigen, so no expression rate by cancer is recorded. Surface CD3 is present on most mature T-cell lymphomas, but that is not what the drugs select for."], drugs: ["catumaxomab", "asp2138", "azd0486", "tqb2825", "azd6621", "cart84", "azd5863"], links: [{ label: "Wikipedia", url: W("CD3_(immunology)") }], companies: ["asher-bio", "cullinan-therapeutics", "cytomx-therapeutics", "harpoon-therapeutics", "janux-therapeutics"],
+    notes: ["Prevalence not applicable: CD3 is the T-cell effector arm of bispecific engagers, not a tumour antigen, so no expression rate by cancer is recorded. Surface CD3 is present on most mature T-cell lymphomas, but that is not what the drugs select for."], drugs: ["catumaxomab", "asp2138", "azd0486", "tqb2825", "azd6621", "cart84", "azd5863"], prevalence: [{"cancerId":"metastatic-cancer","pct":"immune","measure":"Immune-cell target (CD3 on every T cell, the arm that T-cell engagers pull on): expressed on immune cells rather than on the tumour, so patient selection rests on the cancer type and, in trials, on PD-L1 or immune biomarkers."}], links: [{ label: "Wikipedia", url: W("CD3_(immunology)") }], companies: ["asher-bio", "cullinan-therapeutics", "cytomx-therapeutics", "harpoon-therapeutics", "janux-therapeutics"],
   },
   {
     id: "cd38", drugs: ["sg301", "sti-6129"], kind: "target", name: "CD38", symbol: "CD38", targetClass: "surface-antigen", asOf, wikipedia: W("CD38"),
@@ -996,6 +996,7 @@ export const targets: TargetInput[] = [
     biology: "Leukocyte-restricted class I PI3K catalytic subunit downstream of the B-cell receptor; isoform-selective inhibitors spare the ubiquitous alpha and beta isoforms.",
     whereFound: ["Chronic lymphocytic leukaemia","Follicular lymphoma"],
     drugs: ["idelalisib","duvelisib","copanlisib"], cancers: ["cll","follicular-lymphoma"],
+    prevalence: [{"cancerId":"cll","pct":"all","measure":"PI3K delta is the B-cell form of the enzyme, present in essentially every B-cell malignancy; drugs are chosen by disease, not by a test","source":"https://www.cancer.gov/types/leukemia/hp/cll-treatment-pdq"}],
     links: [{ label: "UniProt O00329: PIK3CD", url: "https://www.uniprot.org/uniprotkb/O00329/entry" }],
   },
   {
@@ -1024,6 +1025,7 @@ export const targets: TargetInput[] = [
     biology: "Receptor tyrosine kinase of mesenchymal cells and pericytes; oncogenic through fusions in dermatofibrosarcoma protuberans and myeloid neoplasms with eosinophilia.",
     whereFound: ["Dermatofibrosarcoma protuberans (COL1A1::PDGFB)","Myeloid or lymphoid neoplasms with PDGFRB rearrangement","Tumour stroma and pericytes"],
     drugs: ["imatinib","sunitinib"], cancers: ["sarcoma","cmml"],
+    prevalence: [{"cancerId":"sarcoma","pct":"more than 90","measure":"COL1A1-PDGFB fusion in dermatofibrosarcoma protuberans, the PDGFRB-driven sarcoma imatinib treats","source":"https://doi.org/10.1038/ng0997-95"}],
     links: [{ label: "UniProt P09619: PDGFRB", url: "https://www.uniprot.org/uniprotkb/P09619/entry" }],
   },
   {
@@ -1033,6 +1035,7 @@ export const targets: TargetInput[] = [
     biology: "Non-receptor tyrosine kinase family downstream of receptor tyrosine kinases and integrins; dual BCR::ABL1 and SRC-family inhibition by dasatinib and bosutinib.",
     whereFound: ["Chronic myeloid leukaemia and Ph-positive ALL (as a secondary target)","Activated in many solid tumours without proven dependency"],
     drugs: ["dasatinib","bosutinib"], cancers: ["cml","all-leukemia"],
+    prevalence: [{"cancerId":"metastatic-cancer","pct":"all","measure":"Signalling protein present in most cells (SRC family kinases); drugs act on the pathway rather than on a mutation that selects patients, so no prevalence applies."}],
     links: [{ label: "UniProt P12931: SRC", url: "https://www.uniprot.org/uniprotkb/P12931/entry" }],
   },
   {
@@ -1042,6 +1045,7 @@ export const targets: TargetInput[] = [
     biology: "Subunit of the type I interferon receptor signalling through JAK1, TYK2 and STAT1/STAT2 to induce interferon-stimulated genes.",
     whereFound: ["Immune and tumour cells broadly; historic indications in melanoma, hairy cell leukaemia, CML and Kaposi sarcoma"],
     drugs: ["interferon-alfa"], cancers: ["melanoma","hairy-cell-leukemia","cml"],
+    prevalence: [{"cancerId":"metastatic-cancer","pct":"immune","measure":"Immune-cell target (interferon alpha receptor on immune and tumour cells alike): expressed on immune cells rather than on the tumour, so patient selection rests on the cancer type and, in trials, on PD-L1 or immune biomarkers."}],
     links: [{ label: "UniProt P17181: IFNAR1", url: "https://www.uniprot.org/uniprotkb/P17181/entry" }],
   },
   {
@@ -1093,6 +1097,7 @@ export const targets: TargetInput[] = [
     biology: "TAM-family receptor tyrosine kinase activated by GAS6; mediates mesenchymal transition and acquired resistance to targeted therapy.",
     whereFound: ["Kidney, liver and thyroid cancers treated with cabozantinib","Drug-resistant lung cancer, melanoma and triple-negative breast cancer"],
     drugs: ["cabozantinib"], cancers: ["rcc","hcc","thyroid"],
+    prevalence: [{"cancerId":"nsclc","pct":"about 20","measure":"AXL activation among EGFR-mutant lung cancers resistant to EGFR inhibitors","source":"https://doi.org/10.1038/ng.2330"}],
     links: [{ label: "UniProt P30530: AXL", url: "https://www.uniprot.org/uniprotkb/P30530/entry" }],
   },
   {
@@ -1209,6 +1214,7 @@ export const targets: TargetInput[] = [
     biology: "An endosomal pattern-recognition receptor signalling through MyD88 to NF-kB and IRF7, driving type I interferon production.",
     whereFound: ["Plasmacytoid dendritic cells and B cells","Skin immune cells activated by topical imiquimod"],
     drugs: ["imiquimod"], cancers: ["basal-cell-carcinoma"],
+    prevalence: [{"cancerId":"metastatic-cancer","pct":"immune","measure":"Immune-cell target (innate immune sensor in skin and immune cells, switched on by imiquimod): expressed on immune cells rather than on the tumour, so patient selection rests on the cancer type and, in trials, on PD-L1 or immune biomarkers."}],
     links: [{"label":"UniProt Q9NYK1: TLR7","url":"https://www.uniprot.org/uniprotkb/Q9NYK1/entry"},{"label":"HGNC:15631 TLR7","url":"https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:15631"},{"label":"ChEMBL target CHEMBL5936","url":"https://www.ebi.ac.uk/chembl/explore/target/CHEMBL5936"}],
   },
   {
@@ -1228,6 +1234,7 @@ export const targets: TargetInput[] = [
     biology: "A receptor tyrosine kinase signalling through PI3K, MAPK and beta-catenin pathways; short isoforms act as constitutively active oncogenes.",
     whereFound: ["Overexpressed in subsets of breast, colon, pancreatic and lung carcinomas","Macrophages"],
     drugs: ["crizotinib","cabozantinib"], cancers: ["nsclc","colorectal"], related: ["met"],
+    prevalence: [{"cancerId":"metastatic-cancer","pct":"all","measure":"Signalling protein present in most cells (RON receptor kinase, a secondary target of MET drugs); drugs act on the pathway rather than on a mutation that selects patients, so no prevalence applies."}],
     links: [{"label":"UniProt Q04912: MST1R","url":"https://www.uniprot.org/uniprotkb/Q04912/entry"},{"label":"HGNC:7381 MST1R","url":"https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:7381"},{"label":"ChEMBL target CHEMBL2689","url":"https://www.ebi.ac.uk/chembl/explore/target/CHEMBL2689"}],
   },
   {
@@ -1249,6 +1256,7 @@ export const targets: TargetInput[] = [
     biology: "A receptor tyrosine kinase for ephrin-A ligands; ligand binding suppresses growth signalling, while unliganded EphA2 phosphorylated by AKT drives motility.",
     whereFound: ["Glioblastoma, ovarian, breast, lung and pancreatic cancers (overexpressed)","Low in normal adult epithelium"],
     drugs: ["dasatinib","regorafenib"], cancers: ["glioblastoma","ovarian"],
+    prevalence: [{"cancerId":"metastatic-cancer","pct":"all","measure":"Signalling protein present in most cells (EphA2 receptor, over-expressed in many solid tumours without a selecting mutation); drugs act on the pathway rather than on a mutation that selects patients, so no prevalence applies."}],
     links: [{"label":"UniProt P29317: EPHA2","url":"https://www.uniprot.org/uniprotkb/P29317/entry"},{"label":"HGNC:3386 EPHA2","url":"https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:3386"},{"label":"ChEMBL target CHEMBL2068","url":"https://www.ebi.ac.uk/chembl/explore/target/CHEMBL2068"}],
   },
   {
@@ -1258,6 +1266,7 @@ export const targets: TargetInput[] = [
     biology: "Activated by RAS-GTP at the membrane and by dimerisation; it also has kinase-independent roles in blocking apoptosis.",
     whereFound: ["All tissues","Drives MAPK signalling in RAS-mutant tumours and in resistance to BRAF inhibitors"],
     drugs: ["sorafenib","regorafenib"], cancers: ["hcc","rcc","colorectal"], related: ["braf","mek"],
+    prevalence: [{"cancerId":"metastatic-cancer","pct":"all","measure":"Signalling protein present in most cells (CRAF in the RAS-MAPK relay); drugs act on the pathway rather than on a mutation that selects patients, so no prevalence applies."}],
     links: [{"label":"UniProt P04049: RAF1","url":"https://www.uniprot.org/uniprotkb/P04049/entry"},{"label":"HGNC:9829 RAF1","url":"https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:9829"},{"label":"ChEMBL target CHEMBL1906","url":"https://www.ebi.ac.uk/chembl/explore/target/CHEMBL1906"}],
   },
   {
@@ -1267,6 +1276,7 @@ export const targets: TargetInput[] = [
     biology: "Serine/threonine kinases in conventional, novel and atypical subfamilies; PKC-alpha also drives resistance and vascular permeability signalling.",
     whereFound: ["Ubiquitous","Inhibited by midostaurin in AML and mastocytosis"],
     drugs: ["midostaurin"], cancers: ["aml"], related: ["flt3"],
+    prevalence: [{"cancerId":"metastatic-cancer","pct":"all","measure":"Signalling protein present in most cells (protein kinase C family); drugs act on the pathway rather than on a mutation that selects patients, so no prevalence applies."}],
     links: [{"label":"UniProt P17252: PRKCA","url":"https://www.uniprot.org/uniprotkb/P17252/entry"},{"label":"HGNC:9393 PRKCA","url":"https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:9393"},{"label":"ChEMBL target CHEMBL2093867","url":"https://www.ebi.ac.uk/chembl/explore/target/CHEMBL2093867"}],
   },
   {
@@ -1296,6 +1306,7 @@ export const targets: TargetInput[] = [
     biology: "A heterotetrameric receptor kinase activated by IGF-1 and IGF-2; hybrid receptors with the insulin receptor complicate selective blockade.",
     whereFound: ["Ewing sarcoma, breast, lung and pancreatic cancers (expressed)","Most normal tissues at lower levels"],
     drugs: [], cancers: ["ewing-sarcoma","nsclc","breast-hr-positive"],
+    prevalence: [{"cancerId":"metastatic-cancer","pct":"all","measure":"Signalling protein present in most cells (IGF-1 receptor, widely expressed; a decade of trials found no selecting marker); drugs act on the pathway rather than on a mutation that selects patients, so no prevalence applies."}],
     links: [{"label":"UniProt P08069: IGF1R","url":"https://www.uniprot.org/uniprotkb/P08069/entry"},{"label":"HGNC:5465 IGF1R","url":"https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:5465"},{"label":"ChEMBL target CHEMBL1957","url":"https://www.ebi.ac.uk/chembl/explore/target/CHEMBL1957"}],
   },
   {
@@ -1305,6 +1316,7 @@ export const targets: TargetInput[] = [
     biology: "A receptor tyrosine kinase activated by angiopoietin-1 and antagonised or weakly activated by angiopoietin-2, signalling through AKT to stabilise the endothelium.",
     whereFound: ["Tumour and normal endothelium","TIE2-expressing monocytes and macrophages"],
     drugs: ["regorafenib","cabozantinib"], cancers: ["colorectal","hcc","rcc"], terms: ["angiogenesis"], related: ["vegf"],
+    prevalence: [{"cancerId":"metastatic-cancer","pct":"all","measure":"Signalling protein present in most cells (TIE2 on blood-vessel endothelium); drugs act on the pathway rather than on a mutation that selects patients, so no prevalence applies."}],
     links: [{"label":"UniProt Q02763: TEK","url":"https://www.uniprot.org/uniprotkb/Q02763/entry"},{"label":"HGNC:11724 TEK","url":"https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:11724"},{"label":"ChEMBL target CHEMBL4128","url":"https://www.ebi.ac.uk/chembl/explore/target/CHEMBL4128"}],
   },
 
@@ -1338,6 +1350,7 @@ export const targets: TargetInput[] = [
     biology: "A membrane-anchored non-receptor tyrosine kinase; it phosphorylates immunoreceptor tyrosine motifs to start SYK signalling and also activates inhibitory phosphatases, giving it dual roles.",
     whereFound: ["B lymphocytes and myeloid cells","Imatinib-resistant CML and CLL cells"],
     drugs: ["dasatinib","bosutinib"], cancers: ["cml","cll","aml"], related: ["bcr-abl","src"],
+    prevalence: [{"cancerId":"metastatic-cancer","pct":"all","measure":"Signalling protein present in most cells (LYN kinase under the B-cell receptor); drugs act on the pathway rather than on a mutation that selects patients, so no prevalence applies."}],
     links: [{ label: "UniProt P07948: LYN", url: "https://www.uniprot.org/uniprotkb/P07948/entry" }, { label: "HGNC:6735 LYN", url: "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:6735" }, { label: "ChEMBL target CHEMBL3905", url: "https://www.ebi.ac.uk/chembl/explore/target/CHEMBL3905" }],
     tags: ["chembl-gap"],
   },
@@ -1348,6 +1361,7 @@ export const targets: TargetInput[] = [
     biology: "A non-receptor tyrosine kinase downstream of Fc, integrin and Toll-like receptors in myeloid cells; it activates STAT5, PI3K and MAPK pathways.",
     whereFound: ["Monocytes, macrophages, neutrophils and B cells","CML and Waldenstrom macroglobulinaemia cells"],
     drugs: ["dasatinib","bosutinib","ibrutinib"], cancers: ["cml","waldenstrom","colorectal"], related: ["lyn","btk","src"],
+    prevalence: [{"cancerId":"metastatic-cancer","pct":"all","measure":"Signalling protein present in most cells (HCK kinase, mainly in white blood cells); drugs act on the pathway rather than on a mutation that selects patients, so no prevalence applies."}],
     links: [{ label: "UniProt P08631: HCK", url: "https://www.uniprot.org/uniprotkb/P08631/entry" }, { label: "HGNC:4840 HCK", url: "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:4840" }, { label: "ChEMBL target CHEMBL3234", url: "https://www.ebi.ac.uk/chembl/explore/target/CHEMBL3234" }],
     tags: ["chembl-gap"],
   },
@@ -1358,6 +1372,7 @@ export const targets: TargetInput[] = [
     biology: "An intracellular non-receptor tyrosine kinase lacking a membrane anchor; in tumours it phosphorylates STAT3, paxillin and Sam68 and cooperates with HER2 and EGFR signalling.",
     whereFound: ["Differentiated intestinal and skin epithelium","Most breast cancers; some colon, prostate and ovarian cancers"],
     drugs: ["dasatinib"], cancers: ["breast-her2-positive","tnbc","colorectal","prostate"], related: ["her2","egfr","src"],
+    prevalence: [{"cancerId":"metastatic-cancer","pct":"all","measure":"Signalling protein present in most cells (PTK6, over-expressed in many breast cancers without a selecting mutation); drugs act on the pathway rather than on a mutation that selects patients, so no prevalence applies."}],
     links: [{ label: "UniProt Q13882: PTK6", url: "https://www.uniprot.org/uniprotkb/Q13882/entry" }, { label: "HGNC:9617 PTK6", url: "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:9617" }, { label: "ChEMBL target CHEMBL4601", url: "https://www.ebi.ac.uk/chembl/explore/target/CHEMBL4601" }],
     tags: ["chembl-gap"],
   },
@@ -1368,6 +1383,7 @@ export const targets: TargetInput[] = [
     biology: "A nuclear and cytoplasmic SRC-family kinase expressed in epithelial tissues, brain and liver; it phosphorylates PTEN and retinoblastoma protein, slowing the cell cycle.",
     whereFound: ["Epithelial tissues, brain and liver","Reduced in glioma, hepatocellular carcinoma and some breast cancers"],
     drugs: ["dasatinib"], cancers: ["glioblastoma","hcc"], related: ["src"],
+    prevalence: [{"cancerId":"metastatic-cancer","pct":"all","measure":"Signalling protein present in most cells (FRK kinase); drugs act on the pathway rather than on a mutation that selects patients, so no prevalence applies."}],
     links: [{ label: "UniProt P42685: FRK", url: "https://www.uniprot.org/uniprotkb/P42685/entry" }, { label: "HGNC:3955 FRK", url: "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:3955" }, { label: "ChEMBL target CHEMBL4223", url: "https://www.ebi.ac.uk/chembl/explore/target/CHEMBL4223" }],
     tags: ["chembl-gap"],
   },
