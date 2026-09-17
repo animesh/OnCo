@@ -68,6 +68,9 @@ import { ResearchOutput } from "./ResearchOutput";
 import { confidence } from "@/data/confidence";
 import { FrontIcon } from "./FrontIcon";
 import { ApprovalChip } from "./ApprovalChip";
+import { RedCardsStrip } from "./RedCardsStrip";
+import { ChangesPreview, FollowLine } from "./CancerChanges";
+import { changesForCancer, splitUpcoming } from "@/lib/cancer-changes";
 import { TargetSchematic } from "./TargetSchematic";
 import { Tip } from "./Tip";
 import { TargetExplainer } from "./TargetExplainer";
@@ -627,11 +630,13 @@ function cancerTabs(c: Cancer): Tab[] {
   const g = graph();
   const forMe = g.forCancer(c.id);
   const nRel = [...forMe.values()].reduce((a, l) => a + l.length, 0);
+  const changes = splitUpcoming(changesForCancer(g, c), new Date().toISOString().slice(0, 10)).past;
   return [
     { id: "overview", label: "Overview", content: <>
       <CancerFamily c={c} />
       <Summary e={c} />
       <Block title="State of the art"><SurvivalDisclosure items={c.stateOfArt} skipId={c.id} /></Block>
+      <RedCardsStrip cancer={c} />
       {journeysForCancer(c.id).length > 0 && <div className="card p-4 mt-6"><div className="kicker mb-1"><TL text="Treatment journeys" /></div><p className="text-sm text-muted mb-2">What the next twelve months look like, phase by phase, with the decision points.</p><div className="flex flex-wrap gap-1.5">{journeysForCancer(c.id).map((j) => <Link key={j.id} href={`/journeys/${j.id}/`} className="chip border bg-card border-border hover:bg-foreground/5">{j.stage}</Link>)}</div></div>}
       {organFor(c.id) && <Block title="Anatomy and lymph node drainage"><OrganSchematic cancerId={c.id} /></Block>}
       {modelsFor(c.id) && <Block title="Preclinical models"><p className="text-sm text-muted">{modelsFor(c.id)!.cellLines.length} cell lines, {modelsFor(c.id)!.gemms.length} mouse models and {modelsFor(c.id)!.pdx.length + modelsFor(c.id)!.organoids.length} repositories are listed for this cancer. <Link className="underline" href={`/preclinical-models/?subject=${encodeURIComponent(c.name.split(" (")[0])}`}>See them →</Link></p></Block>}
@@ -689,6 +694,7 @@ function cancerTabs(c: Cancer): Tab[] {
           </li>
         ))}
       </ol>) },
+    { id: "changes", label: "What changed", count: changes.length, content: <><ChangesPreview items={changes.slice(0, 6)} total={changes.length} href={`${routeFor(c)}changes/`} /><div className="mt-4"><FollowLine cancer={{ id: c.id, name: c.name, route: routeFor(c), asOf: c.asOf }} /></div></> },
     { id: "pipeline", label: "In development", count: c.pipeline.length, content: <><CancerPipeline c={c} /><Block title="Open problems and what is being done"><ul className="space-y-4">{c.openProblems.map((p, i) => <li key={i}><p className="text-[15px] leading-relaxed">{withTermHovers(p, { skipId: c.id })}</p><div className="mt-2"><WhatIsBeingDoneFor text={p} cancerId={c.id} /></div></li>)}</ul></Block></> },
     { id: "trials", label: "Trials", content: <><Block title="Trials recruiting now"><TrialFinder condition={conditionQuery(c.name)} title={c.name} /></Block>{(forMe.get("trial") ?? []).length > 0 && <Block title="Landmark trials"><ChipList items={forMe.get("trial") ?? []} /></Block>}</> },
     { id: "centres", label: "Expert centres", content: <ExpertCentres cancerId={c.id} /> },

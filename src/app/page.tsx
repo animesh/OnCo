@@ -16,6 +16,8 @@ import { GardenBackdrop } from "@/components/Garden";
 import { GardenDivider } from "@/components/GardenDivider";
 import { WebSiteJsonLd } from "@/components/JsonLd";
 import { pageMeta } from "@/lib/seo";
+import { MyCancerContinue } from "@/components/MyCancer";
+import { myCancerList } from "@/lib/my-cancer-list";
 
 const HOME_DESCRIPTION = "The open, cited map of oncology: every cancer, treatment, target, trial, company, institution and idea on one page each, in plain English first, with sources.";
 
@@ -99,7 +101,7 @@ export default function Home() {
             </p>
             <div className="mt-8 max-w-2xl"><SearchBox large autoFocus={false} /></div>
             <div className="mt-5 flex flex-wrap gap-2">
-              <Link href="/for-me/" className="btn btn-primary">Research my cancer type <span aria-hidden>→</span></Link>
+              <MyCancerContinue cancers={myCancerList()} />
               <Link href={routeFor(tnbc)} className="btn">Example: triple-negative breast cancer</Link>
               <Link href="/roadmaps/trop2-adc-roadmap/" className="btn">TROP2 ADC roadmap</Link>
             </div>

@@ -2,7 +2,7 @@ import { graph } from "./graph";
 import { NAV_GROUPS } from "./nav";
 import { routeFor, type Kind } from "./schema";
 
-export type SearchDoc = { id: string; kind: Kind | "page"; name: string; aka: string; tldr: string; tags: string; route: string; status?: string };
+export type SearchDoc = { id: string; kind: Kind | "page"; name: string; aka: string; tldr: string; tags: string; route: string; status?: string; /** Space-separated ids of the cancers the record links to, for the "for my cancer" filter. */ cancers?: string };
 
 /** Compact documents for the client-side search index. */
 /** The site's own tool and landing pages, so a search for "models" or "pivot" reaches the page and not only the records. */
@@ -26,6 +26,7 @@ export function searchDocs(): SearchDoc[] {
     tags: e.tags.join(" "),
     route: routeFor(e),
     status: e.status,
+    cancers: e.cancers.length ? e.cancers.join(" ") : undefined,
   }));
 }
 
