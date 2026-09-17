@@ -16,7 +16,7 @@ import { graph, type Graph } from "./graph";
 import { completeness } from "./completeness";
 import { KINDS, KIND_META, routeFor, type Entity, type Kind } from "./schema";
 import { hasMolecule } from "./structures";
-import { SPECIFIC_IDS, hasAnimation } from "@/data/schematics";
+import { SCHEMATIC_ALIAS, SPECIFIC_IDS, hasAnimation } from "@/data/schematics";
 import { hasAnchorApproval, isDiagnostic, regionalApprovals, regionSpecific } from "@/data/regional-approvals";
 import { reviews } from "@/data/reviews";
 import { simple } from "@/data/simple";
@@ -170,10 +170,10 @@ export const METRIC_DEFS: MetricDef[] = [
   },
   {
     id: "schematics", label: "Technologies with a specific schematic", kind: "technology",
-    plain: "Each technology page should show its own wireframe schematic, not the generic one borrowed from its front.",
+    plain: "Each technology page should show a wireframe schematic of its mechanism, its own or an aliased drawing of the same process, not the generic one borrowed from its front.",
     action: "Add a builder for this id in data/schematics.ts (static) or data/animated.ts (animated).",
     target: 80,
-    check: (g) => { const specific = new Set(SPECIFIC_IDS); return fails(g.kind("technology"), (t) => (hasAnimation(t.id) || specific.has(t.id) ? null : "generic schematic")); },
+    check: (g) => { const specific = new Set(SPECIFIC_IDS); return fails(g.kind("technology"), (t) => (hasAnimation(t.id) || specific.has(t.id) || (t.id in SCHEMATIC_ALIAS && (specific.has(SCHEMATIC_ALIAS[t.id]) || hasAnimation(SCHEMATIC_ALIAS[t.id]))) ? null : "generic schematic")); },
   },
   {
     id: "target-prevalence", label: "Targets with sourced prevalence", kind: "target",
