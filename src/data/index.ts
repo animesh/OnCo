@@ -33,6 +33,7 @@ import { journals } from "./journals";
 import { termsBasics } from "./terms-basics";
 import { termsModalities } from "./terms-modalities";
 import { trialDesignTerms } from "./trial-design-wave";
+import { lawTerms } from "./law-wave";
 import { termsJargon } from "./terms-jargon";
 import { institutionsUs } from "./institutions/us";
 import { institutionsWorld } from "./institutions/world";
@@ -131,6 +132,7 @@ const RAW_INPUTS: EntityInput[] = [
   ...termsBasics,
   ...termsModalities,
   ...trialDesignTerms,
+  ...lawTerms,
   ...termsJargon,
   ...institutionsUs,
   ...institutionsWorld,

@@ -77,6 +77,7 @@ export const navPt: NavDict = {
   "/preprints/": ["Seguimento de preprints", "Preprints do bioRxiv e medRxiv dos últimos 90 dias por alvo, produto e tecnologia, e quais já foram publicados."],
   "/payloads/": ["Cargas e ligantes", "A química dentro dos ADC."],
   "/regulatory/": ["Cronologia regulamentar", "Cada submissão, aprovação, CRL e alteração de rótulo com data."],
+  "/law/": ["Leis em oncologia", "As leis, regulamentos e decisões judiciais que determinam como os medicamentos contra o cancro são aprovados, pagos e testados, e como dados e genes são protegidos, por jurisdição e tema."],
   "/coverage/us/": ["Pagar os cuidados nos EUA", "Medicare Parte B ou D, autorização prévia, preços de lista e programas de apoio para cada produto aprovado."],
   "/coverage/uk/": ["Cobertura do NHS", "Decisões do NICE, Cancer Drugs Fund e SMC para cada produto aprovado, e como funcionam os cuidados oncológicos do NHS."],
   "/hta/": ["Decisões de ATS", "Veredictos do NICE, SMC, G-BA e PBAC por produto e país, com datas e ligações para a avaliação."],

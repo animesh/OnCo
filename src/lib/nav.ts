@@ -85,6 +85,7 @@ export const NAV_GROUPS: NavGroup[] = [
       { href: "/preprints/", label: "Preprint tracker", blurb: "bioRxiv and medRxiv preprints of the last 90 days per target, product and technology, and which have since been published." },
       { href: "/payloads/", label: "Payloads & linkers", blurb: "The chemistry inside ADCs." },
       { href: "/regulatory/", label: "Regulatory timeline", blurb: "Every dated filing, approval, CRL, and label change." },
+      { href: "/law/", label: "Laws around oncology", blurb: "The statutes, regulations and court rulings that decide how cancer drugs are approved, paid for and tested, and how data and genes are protected, by jurisdiction and theme." },
       { href: "/coverage/us/", label: "Paying for care in the US", blurb: "Medicare Part B or D, prior authorisation, list prices and assistance programmes for every approved product.", regions: ["US"] },
       { href: "/coverage/uk/", label: "NHS coverage", blurb: "NICE, Cancer Drugs Fund and SMC decisions for every approved product, and how NHS cancer care works.", regions: ["UK"] },
       { href: "/coverage/rankings/", label: "Coverage rankings", blurb: "US insurers and plan types ranked by one published metric at a time, UK NHS entitlement against private medical insurance, and how nine countries pay for cancer drugs." },
