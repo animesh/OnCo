@@ -43,6 +43,10 @@ const ICON = 18;
 const UP = "var(--accent-solid)";
 const DOWN = "#0e7490";
 
+/** Deterministic in Node and every browser, unlike localeCompare and toLocaleString. */
+const byCodePoint = (a: string, b: string) => { const x = a.toLowerCase(), y = b.toLowerCase(); return x < y ? -1 : x > y ? 1 : a < b ? -1 : a > b ? 1 : 0; };
+const num = (n: number) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
 const shorten = (s: string, max = 26) => (s.length <= max ? s : `${s.slice(0, max - 1).trimEnd()}…`);
 
 function closure(start: string, next: Map<string, string[]>): Set<string> {
@@ -69,7 +73,8 @@ export function DagViewer({ data }: { data: DagViewData }) {
   const downMap = useMemo(() => new Map(data.nodes.map((n) => [n.id, n.down])), [data.nodes]);
   const chokepoints = useMemo(() => new Set(data.chokepoints), [data.chokepoints]);
   const singleVendor = useMemo(() => new Set(data.singleVendor), [data.singleVendor]);
-  const sorted = useMemo(() => [...data.nodes].sort((a, b) => a.name.localeCompare(b.name)), [data.nodes]);
+  // Code-point order, not localeCompare: Node and the browser collate punctuation differently, which broke hydration.
+  const sorted = useMemo(() => [...data.nodes].sort((a, b) => byCodePoint(a.name, b.name)), [data.nodes]);
 
   const [root, setRoot] = useState<string | null>(null);
   const [hovered, setHovered] = useState<string | null>(null);
@@ -126,7 +131,6 @@ export function DagViewer({ data }: { data: DagViewData }) {
   };
 
   const panel = focus ? byId.get(focus) : undefined;
-  const num = (n: number) => n.toLocaleString("en-GB");
 
   return (
     <div className="dag">
