@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { BODY_META, type GuidelineBodyId, type GuidelineMapEntry } from "@/data/guideline-map";
-import { concordanceOf, STANCE_CLASS, STANCE_LABEL, type Concordance } from "@/lib/guidelines";
+import { concordanceOf, STANCE_CLASS, STANCE_LABEL, type Concordance } from "@/lib/guidelines-shared";
 import { FacetSelect } from "./filters/FacetSelect";
 import { Tip } from "./Tip";
 

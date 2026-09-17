@@ -332,3 +332,7 @@ The owner's patient-first roadmap (a real-case "For me", persistent cancer choic
 
 - The TL;DR component and the browser tables imported all eight language dictionaries and the simplified-English table statically, so every page shipped about ten megabytes of translations in its JavaScript. They now load per language on demand through src/lib/tldr-tables.ts: English readers download none; a reader who picks Chinese downloads Chinese once. English shows without a mark until a table arrives.
 - Chinese TL;DRs generated for 2,678 registry-ingested trials and products from their record fields (phase, status, sponsor, drugs, cancer ids, modality); 46 remain whose cancers or modality have no Chinese mapping yet.
+
+### Corpus in client JavaScript (17 Sept 2026)
+
+- After the translation tables moved to on-demand loading, one chunk of about 18 MB remained: the whole corpus, bundled because client components imported graph-backed libraries. The 20 guideline pages are fixed (src/lib/guidelines-shared.ts holds the client-safe helpers; the graph stays server-side). Four tool pages still load it: tumor-board, navigator, interactions and explore; trace their client components next and pass server-computed props.

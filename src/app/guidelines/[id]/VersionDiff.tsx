@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import type { GuidelineChange, GuidelineVersion } from "@/data/guideline-versions";
-import { diffVersions } from "@/lib/guidelines";
+import { diffVersions } from "@/lib/guidelines-shared";
 
 /** Two-version diff: pick a "from" and a "to" version and see every row added, removed or recategorised between them. */
 export type RefLite = { id: string; name: string; route: string };
