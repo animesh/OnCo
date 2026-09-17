@@ -237,6 +237,7 @@ export const lawTerms: TermInput[] = [
   }),
   t({
     id: "bpcia", name: "Biologics Price Competition and Innovation Act 2010",
+    wikipedia: W("Biologics_Price_Competition_and_Innovation_Act_of_2009"),
     aka: ["BPCIA", "biosimilar pathway", "351(k)", "351(k) pathway", "abbreviated biologics licence application", "twelve-year biologic exclusivity", "12-year exclusivity", "interchangeability", "interchangeable biosimilar", "patent dance", "Purple Book"],
     links: [
       { label: "FDA: biosimilars", url: "https://www.fda.gov/drugs/therapeutic-biologics-applications-bla/biosimilars" },
@@ -546,6 +547,7 @@ export const lawTerms: TermInput[] = [
   // ---------------------------------------------------------------- Germany, France, Japan
   t({
     id: "amnog", name: "AMNOG (Germany, 2011)",
+    wikipedia: W("AMNOG"),
     aka: ["AMNOG", "Arzneimittelmarktneuordnungsgesetz", "early benefit assessment", "added benefit", "Zusatznutzen", "SGB V section 35a", "GKV-Finanzstabilisierungsgesetz", "Erstattungsbetrag"],
     links: [
       { label: "G-BA: benefit assessment of pharmaceuticals (English)", url: "https://www.g-ba.de/english/benefitassessment/" },
