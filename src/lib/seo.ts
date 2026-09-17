@@ -85,10 +85,11 @@ export type MachineRoute = { url: string; type: string; title: string };
  * The machine-readable twins of one record. Shared by the `<link rel="alternate">` tags (`entityMeta`), the JSON-LD
  * `subjectOf` and the hidden agent block (`MachineLinks`), so the three always name the same files.
  */
-export function machineRoutes(e: { id: string; name: string }): { json: MachineRoute; markdown: MachineRoute } {
+export function machineRoutes(e: { id: string; name: string }): { json: MachineRoute; markdown: MachineRoute; turtle: MachineRoute } {
   return {
     json: { url: `/api/v1/entities/${e.id}.json`, type: "application/json", title: `${e.name}: JSON record with neighbours` },
     markdown: { url: `/api/v1/context/${e.id}.md`, type: "text/markdown", title: `${e.name}: Markdown context for language models` },
+    turtle: { url: `/api/v1/rdf/${e.id}.ttl`, type: "text/turtle", title: `${e.name}: RDF Turtle with owl:sameAs links` },
   };
 }
 
@@ -110,9 +111,9 @@ export const MACHINE = {
 /** Metadata for an entity page. */
 export function entityMeta(e: Entity): Metadata {
   const m = pageMeta({ title: entityTitle(e), description: e.tldr, path: routeFor(e) });
-  // Machine-readable twins of the page, so agents and crawlers find the Markdown context and the JSON record from the HTML.
-  const { json, markdown } = machineRoutes(e);
-  const types = { ...FEED_TYPES, [markdown.type]: [{ url: markdown.url, title: markdown.title }], [json.type]: [{ url: json.url, title: json.title }] };
+  // Machine-readable twins of the page, so agents and crawlers find the Markdown context, the JSON record and the Turtle triples from the HTML.
+  const { json, markdown, turtle } = machineRoutes(e);
+  const types = { ...FEED_TYPES, [markdown.type]: [{ url: markdown.url, title: markdown.title }], [json.type]: [{ url: json.url, title: json.title }], [turtle.type]: [{ url: turtle.url, title: turtle.title }] };
   return { ...m, alternates: { ...m.alternates, types } };
 }
 
