@@ -547,7 +547,7 @@ const companies: CompanyInput[] = [
   co({ id: "myriad-genetics", name: "Myriad Genetics", hq: "Salt Lake City, UT", country: "US", companyType: "diagnostics", website: "https://myriad.com", ticker: "MYGN", founded: 1991, sections: ["diagnostics", "prevention"],
     tldr: "The company that made BRCA testing a business, now selling hereditary panels and the myChoice, EndoPredict and Prolaris tumour tests.",
     summary: "Myriad held the BRCA1/2 gene patents until the 2013 US Supreme Court ruling and launched BRACAnalysis CDx (2014) and myChoice CDx (2019), the two FDA-approved companion diagnostics for PARP inhibitors. MyRisk is its hereditary cancer panel; EndoPredict (breast) and Prolaris (prostate) are its prognostic tests. Its history is a case study in how gene patents, guidelines and reimbursement shape which tests patients receive.",
-    drugs: ["bracanalysis-cdx", "mychoice-cdx", "endopredict", "prolaris"], technologies: ["germline-testing", "hrd-testing"], cancers: ["ovarian", "breast-hr-positive", "prostate"],
+    drugs: ["bracanalysis-cdx", "mychoice-cdx", "endopredict", "prolaris"], technologies: ["germline-testing", "hrd-testing", "companion-diagnostic"], cancers: ["ovarian", "breast-hr-positive", "prostate"],
     links: [{ label: "Official website", url: "https://myriad.com" }] }),
   co({ id: "agendia", name: "Agendia", hq: "Amsterdam / Irvine, CA", country: "NL", companyType: "diagnostics", website: "https://agendia.com", founded: 2003, sections: ["diagnostics"],
     tldr: "Dutch maker of MammaPrint, the 70-gene breast cancer test validated in the MINDACT trial.",

@@ -81,7 +81,7 @@ export function PageHeader({ kicker, title, lede, ledeNode, right, logo, tone = 
         <div className="flex flex-wrap items-start justify-between gap-4">
           <div className="flex items-start gap-4 max-w-3xl">
             {logo}
-            <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight leading-[1.1]">{title}</h1>
+            <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight leading-[1.1] first-letter:uppercase">{title}</h1>
           </div>
           {right}
         </div>

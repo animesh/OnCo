@@ -10891,4 +10891,7 @@ export const tldr_zh: Record<string, string> = {
   "fibrogen": "一家专注纤维化的生物技术公司，其抗 CTGF 抗体 pamrevlumab 在胰腺癌和肺纤维化的 3 期试验中失败。",
   "newlink-genetics": "这家爱荷华州生物技术公司开展了规模最大的胰腺癌疫苗试验 IMPRESS 以及 IDO 抑制剂 indoximod 项目，2020 年并入 Lumos Pharma。",
   "actuate-therapeutics": "一家德州生物技术公司，正在开发 GSK-3β 抑制剂 elraglusib；该药在转移性胰腺癌的随机 2 期试验中改善了生存。",
+  "stride-dna-break-detection": "STRIDE 是一种显微镜检测，能让细胞内单个断裂的 DNA 链发光，从而逐个细胞地计数肿瘤携带或药物造成的 DNA 损伤。",
+  "intodna": "克拉科夫雅盖隆大学的衍生公司，其 STRIDE 检测可计数细胞中的单个 DNA 断裂，服务于药物开发商，并致力于预测谁会对 DNA 修复类药物产生反应。",
+  "strata-oncology": "密歇根州安娜堡的检测公司，能用极小的活检样本进行肿瘤测序（StrataNGS），并通过其试验网络为患者匹配临床试验和免疫治疗。",
 };

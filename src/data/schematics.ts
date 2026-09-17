@@ -561,6 +561,7 @@ import { radiationSchematicAliases } from "./radiation-wave1";
 import { modelSchematicAliases } from "./models-wave";
 
 export const SCHEMATIC_ALIAS: Record<string, string> = {
+  "stride-dna-break-detection": "wes-wgs",
   ...radiationSchematicAliases,
   ...modelSchematicAliases,
   "spatial-transcriptomics": "spatial-biology-instruments",

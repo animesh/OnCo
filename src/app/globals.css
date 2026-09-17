@@ -209,6 +209,11 @@
     gap: 0.25rem;
     border-radius: 9999px;
     padding: 0.125rem 0.6rem;
+    /* One pill is one unit: wrap between pills, never inside a word (row 120). */
+    white-space: nowrap;
+    overflow-wrap: normal;
+    word-break: keep-all;
+    max-width: 100%;
     font-size: 0.72rem;
     line-height: 1.35;
     font-weight: 600;

@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { ExternalLinks } from "@/components/ExternalLinks";
 import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
@@ -98,6 +99,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <CommandPalette />
         <RegisterSW />
         <WebMCP />
+        <ExternalLinks />
         <main id="main" className="flex-1">{children}<SectionSiblings /></main>
         <footer className="garden-footer relative border-t border-border mt-28">
           {/* A low grass line grows up from the footer's top edge into the gap above it. */}

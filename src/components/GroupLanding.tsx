@@ -4,7 +4,6 @@ import { NAV_GROUPS } from "@/lib/nav";
 import { Container, PageHeader } from "./ui";
 import { GardenBackdrop, gardenSeed } from "./Garden";
 import { GroupText, ItemText } from "./NavText";
-import { T } from "./T";
 
 /**
  * Landing page for one navigation group: a calm header band (the home hero's quieter sibling), its
@@ -27,7 +26,7 @@ export function GroupLanding({ groupId, children }: { groupId: string; children?
                   <span aria-hidden className="text-xs text-muted tabular-nums mt-0.5 shrink-0">{String(i + 1).padStart(2, "0")}</span>
                 </div>
                 <p className="relative text-sm text-muted mt-1.5 leading-relaxed"><ItemText href={it.href} groupId={g.id} field="blurb" /></p>
-                <div className="relative mt-3 text-sm font-medium text-accent"><T k="open" /> <span aria-hidden className="inline-block rtl:-scale-x-100">→</span></div>
+                <span aria-hidden className="absolute bottom-3 end-3 text-accent text-base leading-none rtl:-scale-x-100 transition-transform group-hover:translate-x-0.5">→</span>
               </>
             );
             return it.href.startsWith("http")

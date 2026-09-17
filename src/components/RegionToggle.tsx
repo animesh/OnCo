@@ -31,18 +31,18 @@ export function RegionToggle() {
           <div className="px-2.5 pt-1.5 pb-2 text-xs text-muted leading-snug">
             {t("region.intro").split("{approved}").map((part, i, arr) => <span key={i}>{part}{i < arr.length - 1 && <span className="font-medium text-foreground">{t("region.approved")}</span>}</span>)}
           </div>
-          <button role="option" aria-selected={region === null} onClick={() => { setRegion(null); setOpen(false); }} className={`w-full flex items-center gap-2.5 rounded-lg px-2.5 py-2 text-start text-sm hover:bg-surface ${region === null ? "bg-surface font-medium" : ""}`}>
+          <button role="option" aria-selected={region === null} onClick={() => { setRegion(null); window.setTimeout(() => setOpen(false), 80); }} className={`w-full flex items-center gap-2.5 rounded-lg px-2.5 py-2 text-start text-sm hover:bg-surface ${region === null ? "bg-surface font-medium" : ""}`}>
             <span aria-hidden className="text-lg leading-none">🌐</span>
             <span className="min-w-0"><span className="block leading-snug">{t("region.global")}</span><span className="block text-xs text-muted leading-snug">{t("region.globalBlurb")}</span></span>
             {region === null && <span className="ms-auto text-xs text-accent">{t("selected")}</span>}
           </button>
-          <button type="button" onClick={() => { setRegion(guessRegion()); setOpen(false); }} className="w-full flex items-center gap-2.5 rounded-lg px-2.5 py-2 text-start text-sm hover:bg-surface text-muted"><span aria-hidden className="text-lg leading-none">📍</span><span className="leading-snug">{t("region.useBrowser")}</span></button>
+          <button type="button" onClick={() => { setRegion(guessRegion()); window.setTimeout(() => setOpen(false), 80); }} className="w-full flex items-center gap-2.5 rounded-lg px-2.5 py-2 text-start text-sm hover:bg-surface text-muted"><span aria-hidden className="text-lg leading-none">📍</span><span className="leading-snug">{t("region.useBrowser")}</span></button>
           <div className="my-1 border-t border-border" />
           {REGION_ORDER.map((r) => {
             const m = REGION_META[r];
             const on = r === region;
             return (
-              <button key={r} role="option" aria-selected={on} onClick={() => { setRegion(r); setOpen(false); }}
+              <button key={r} role="option" aria-selected={on} onClick={() => { setRegion(r); window.setTimeout(() => setOpen(false), 80); }}
                 className={`w-full flex items-center gap-2.5 rounded-lg px-2.5 py-2 text-start text-sm hover:bg-surface ${on ? "bg-surface font-medium" : ""}`}>
                 <span aria-hidden className="text-lg leading-none">{m.flag}</span>
                 <span className="min-w-0"><span className="block leading-snug">{countryName(r)}</span><span className="block text-xs text-muted leading-snug">{m.regulator}</span></span>
