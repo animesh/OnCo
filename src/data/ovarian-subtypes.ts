@@ -1,0 +1,115 @@
+/**
+ * Ovarian cancer subtypes (17 Sept 2026): high-grade serous, low-grade serous, clear cell, mucinous and adult granulosa cell
+ * tumours as pages under the ovarian record, because they are different diseases in origin, genetics, chemosensitivity and
+ * targeted options. Facts follow the ESMO and NCCN guidelines, the WHO 2020 classification and the trial publications named
+ * in each record. Registered in src/data/index.ts as ovarianSubtypes.
+ */
+import type { CancerInput } from "@/lib/schema";
+
+const asOf = "2026-09-17";
+const W = (s: string) => `https://en.wikipedia.org/wiki/${s}`;
+const tags = ["subtype-page"];
+
+export const ovarianSubtypes: CancerInput[] = [
+  { id: "high-grade-serous-ovarian-cancer", kind: "cancer", name: "High-grade serous ovarian cancer", group: "gynaecological", parent: "ovarian", asOf, tags, wikipedia: W("Ovarian_cancer"),
+    aka: ["HGSOC", "High-grade serous carcinoma of the ovary, fallopian tube and peritoneum"],
+    burden: "About seven in ten ovarian cancers and most of the deaths; three quarters present at stage III or IV, most respond to platinum chemotherapy and most relapse, but PARP inhibitor maintenance now keeps a growing share of BRCA-mutant patients disease-free for years.",
+    tldr: "High-grade serous cancer is the common, aggressive form of ovarian cancer, now known to start in the fallopian tube. It is treated with surgery and platinum chemotherapy, and maintenance PARP inhibitors have changed its course for the half of patients whose tumours cannot repair DNA properly.",
+    summary: "High-grade serous carcinoma arises in the fimbria of the fallopian tube and spreads across the peritoneum before it causes symptoms. Every tumour carries a TP53 mutation; about a fifth have a germline or somatic BRCA1 or BRCA2 mutation and roughly half are homologous recombination deficient, which makes them exquisitely sensitive to platinum and to PARP inhibitors. Standard care is complete cytoreductive surgery, before or after three cycles of carboplatin-paclitaxel, with bevacizumab in higher-risk disease, then maintenance: olaparib for BRCA-mutant tumours (SOLO-1), niraparib for all comers (PRIMA) or olaparib with bevacizumab for HRD-positive tumours (PAOLA-1). Secondary surgery helps selected patients at first relapse (DESKTOP III), and platinum-resistant disease has gained mirvetuximab soravtansine for folate receptor alpha-high tumours. Germline testing of every patient and risk-reducing salpingo-oophorectomy in carriers are part of the standard.",
+    subtypes: ["BRCA1 or BRCA2-mutant (germline or somatic, about 20 percent)", "Homologous recombination deficient without BRCA mutation", "Homologous recombination proficient", "Primary peritoneal and fallopian tube carcinoma (same disease)"],
+    biomarkers: ["TP53 mutation (universal)", "Germline and somatic BRCA1/2", "HRD score (Myriad myChoice or equivalent)", "Folate receptor alpha (mirvetuximab)", "CA-125 for monitoring", "Platinum-free interval"],
+    standardOfCare: [
+      { setting: "First line", approach: "Complete cytoreductive surgery, primary or after three cycles, with carboplatin-paclitaxel for six cycles; bevacizumab added in stage IV or residual disease.", refs: ["carboplatin", "paclitaxel", "bevacizumab", "hipec"] },
+      { setting: "Maintenance after first line", approach: "Olaparib for BRCA-mutant tumours (SOLO-1), niraparib for all comers (PRIMA), olaparib plus bevacizumab for HRD-positive tumours (PAOLA-1).", refs: ["olaparib", "niraparib", "solo-1", "prima", "paola-1", "hrd", "brca"] },
+      { setting: "Platinum-sensitive relapse", approach: "Secondary cytoreduction in selected patients (DESKTOP III), platinum doublet, PARP inhibitor maintenance if not already used.", refs: ["desktop-iii", "rucaparib", "niraparib"] },
+      { setting: "Platinum-resistant relapse", approach: "Single-agent chemotherapy with or without bevacizumab; mirvetuximab soravtansine for folate receptor alpha-high tumours (MIRASOL); relacorilant with nab-paclitaxel in trials and early approvals.", refs: ["mirvetuximab-soravtansine", "folr1", "relacorilant", "bevacizumab"] },
+      { setting: "Prevention in carriers", approach: "Risk-reducing salpingo-oophorectomy around age 35 to 45 by gene; opportunistic salpingectomy at other pelvic surgery for everyone.", refs: ["brca", "risk-reducing-salpingectomy"] },
+    ],
+    stateOfArt: ["PARP inhibitor maintenance has turned a disease of relentless relapse into one where a large fraction of BRCA-mutant patients remain disease-free seven years on.", "The fallopian tube origin has made opportunistic salpingectomy a population prevention strategy.", "Antibody-drug conjugates against folate receptor alpha are the first new active drugs in platinum-resistant disease in a decade."],
+    history: [
+      { year: 1996, title: "Carboplatin-paclitaxel becomes standard (GOG 111 and successors)", refs: ["carboplatin", "paclitaxel"] },
+      { year: 2007, title: "Fallopian tube fimbria identified as the origin of serous cancer" },
+      { year: 2011, title: "Bevacizumab improves progression-free survival (GOG-0218, ICON7)", refs: ["bevacizumab"] },
+      { year: 2014, title: "Olaparib: first PARP inhibitor approved", refs: ["olaparib"] },
+      { year: 2018, title: "SOLO-1: olaparib maintenance transforms BRCA-mutant first-line outcomes", refs: ["solo-1"] },
+      { year: 2019, title: "PRIMA and PAOLA-1 extend PARP maintenance beyond BRCA", refs: ["prima", "paola-1"] },
+      { year: 2022, title: "Mirvetuximab soravtansine approved for platinum-resistant disease", refs: ["mirvetuximab-soravtansine"] },
+    ],
+    pipeline: [], openProblems: ["No screening test lowers mortality.", "Homologous recombination proficient tumours gain little from PARP inhibitors.", "Platinum-resistant disease remains largely incurable.", "Access to HRD testing and PARP inhibitors outside high-income countries."],
+    links: [{ label: "Wikipedia", url: W("Ovarian_cancer") }] },
+  { id: "low-grade-serous-ovarian-cancer", kind: "cancer", name: "Low-grade serous ovarian cancer", group: "gynaecological", parent: "ovarian", asOf, tags, wikipedia: W("Ovarian_cancer"),
+    aka: ["LGSOC", "Low-grade serous carcinoma"],
+    burden: "About one in twenty ovarian cancers, affecting younger women, with a median age in the forties; it grows slowly but resists chemotherapy, so patients live for years with disease that is hard to eradicate.",
+    tldr: "Low-grade serous cancer is the slow-growing, chemotherapy-resistant cousin of the common ovarian cancer. Surgery and hormone therapy are its mainstays, and MEK inhibitors, alone or combined with a FAK inhibitor, are the first drugs shown to shrink it reliably.",
+    summary: "Low-grade serous carcinoma is a distinct disease with wild-type TP53 and mutations in the MAPK pathway (KRAS, BRAF, NRAS) in about half of cases; it often arises from a serous borderline tumour and expresses oestrogen receptors. Complete surgical removal matters more than in high-grade disease because chemotherapy response rates are low; letrozole or other aromatase inhibitors are used as maintenance and for recurrence. The GOG 281 trial showed that the MEK inhibitor trametinib nearly doubled progression-free survival compared with standard chemotherapy or hormone therapy in recurrent disease, and the combination of avutometinib and defactinib was approved in the United States in 2025 for KRAS-mutant recurrent disease after the RAMP 201 trial.",
+    subtypes: ["KRAS-mutant (most responsive to MEK and RAF/MEK inhibition)", "BRAF or NRAS-mutant", "MAPK wild-type", "Arising from serous borderline tumour"],
+    biomarkers: ["KRAS, BRAF and NRAS mutations", "Oestrogen and progesterone receptor expression", "Wild-type TP53 (distinguishes it from high-grade)", "CA-125 (less reliable than in high-grade disease)"],
+    standardOfCare: [
+      { setting: "First line", approach: "Complete cytoreductive surgery; carboplatin-paclitaxel followed by letrozole maintenance, or letrozole alone in selected patients.", refs: ["carboplatin", "paclitaxel", "letrozole"] },
+      { setting: "Recurrent disease", approach: "Trametinib (GOG 281) or avutometinib plus defactinib for KRAS-mutant tumours; aromatase inhibitors; secondary surgery where complete resection is possible.", refs: ["trametinib", "avutometinib-defactinib", "letrozole"] },
+    ],
+    stateOfArt: ["GOG 281 was the first randomised trial in this rare disease and made trametinib a standard option.", "Avutometinib-defactinib is the first approval specific to low-grade serous cancer.", "Hormone maintenance is replacing chemotherapy in first-line care."],
+    history: [
+      { year: 2004, title: "Two-tier grading separates low-grade from high-grade serous cancer (MD Anderson)" },
+      { year: 2022, title: "GOG 281: trametinib doubles progression-free survival", refs: ["trametinib"] },
+      { year: 2025, title: "Avutometinib plus defactinib approved for KRAS-mutant disease", refs: ["avutometinib-defactinib"] },
+    ],
+    pipeline: [], openProblems: ["Whether first-line chemotherapy adds anything to surgery and hormone therapy.", "Options for MAPK wild-type tumours.", "Living for decades with a slow but incurable disease."],
+    links: [{ label: "Wikipedia", url: W("Ovarian_cancer") }] },
+  { id: "clear-cell-ovarian-cancer", kind: "cancer", name: "Clear cell ovarian cancer", group: "gynaecological", parent: "ovarian", asOf, tags, wikipedia: W("Clear-cell_ovarian_carcinoma"),
+    aka: ["Ovarian clear cell carcinoma", "OCCC"],
+    burden: "About one in ten ovarian cancers in Western countries and a quarter in Japan; most present at an early stage and are cured, but advanced disease responds poorly to chemotherapy and carries a worse outlook than high-grade serous cancer.",
+    tldr: "Clear cell ovarian cancer grows out of endometriosis, is usually caught early and cured by surgery, but when advanced it resists platinum chemotherapy. Its distinct genetics, with ARID1A and PIK3CA mutations, are the focus of targeted and immune approaches.",
+    summary: "Clear cell carcinoma is strongly associated with endometriosis and is commoner in East Asian women. About half carry ARID1A mutations and a third PIK3CA mutations; TP53 is usually wild-type. It presents as a large unilateral mass, often at stage I, with a raised risk of venous thromboembolism and hypercalcaemia. Surgery is curative for most early disease, with adjuvant carboplatin-paclitaxel for stage IC and above; advanced and recurrent disease respond poorly to chemotherapy and do not benefit from PARP inhibitors. Immune checkpoint inhibitors have produced responses in a minority, and trials target ARID1A loss (ATR and EZH2 inhibitors), PI3K and the hypoxia pathway.",
+    subtypes: ["Clear cell carcinoma arising in endometriosis", "Stage I clear cell carcinoma (most cases)", "Advanced and recurrent clear cell carcinoma (chemoresistant)"],
+    biomarkers: ["ARID1A mutation (about 50 percent)", "PIK3CA mutation", "HNF1B expression (diagnostic)", "Mismatch repair deficiency (a minority)", "Wild-type TP53"],
+    standardOfCare: [
+      { setting: "Early stage", approach: "Complete staging surgery; adjuvant carboplatin-paclitaxel for stage IC and above; observation may be considered for stage IA.", refs: ["carboplatin", "paclitaxel"] },
+      { setting: "Advanced or recurrent", approach: "Cytoreduction and platinum-based chemotherapy despite modest responses; clinical trials of immunotherapy and ARID1A-directed drugs are preferred where available.", refs: ["pembrolizumab", "atr-chk1-inhibitors"] },
+      { setting: "Supportive", approach: "Thromboprophylaxis awareness because of the high clot risk.", refs: ["ovarian"] },
+    ],
+    stateOfArt: ["Recognition of clear cell cancer as a separate disease has ended its lumping into serous trials.", "ARID1A loss creates dependencies (ATR, EZH2, immune) now being exploited in dedicated trials.", "Early detection through endometriosis follow-up is under study in Japan."],
+    history: [
+      { year: 1973, title: "WHO recognises clear cell carcinoma as an ovarian type" },
+      { year: 2010, title: "ARID1A mutations discovered in clear cell carcinoma" },
+    ],
+    pipeline: [], openProblems: ["No effective treatment for platinum-resistant disease.", "Which early-stage patients can skip chemotherapy.", "Whether treating endometriosis reduces risk."],
+    links: [{ label: "Wikipedia", url: W("Clear-cell_ovarian_carcinoma") }] },
+  { id: "mucinous-ovarian-cancer", kind: "cancer", name: "Mucinous ovarian cancer", group: "gynaecological", parent: "ovarian", asOf, tags, wikipedia: W("Ovarian_cancer"),
+    aka: ["Mucinous ovarian carcinoma", "MOC"],
+    burden: "About three percent of ovarian cancers once metastases from the bowel and appendix are excluded; most are large, unilateral stage I tumours that surgery cures, and the rare advanced cases respond poorly to standard ovarian regimens.",
+    tldr: "Mucinous ovarian cancer is rare, usually confined to one large ovary at diagnosis and cured by surgery. Its genetics resemble bowel cancer more than ovarian cancer, and pathologists must first rule out a spread from the gut before making the diagnosis.",
+    summary: "Primary mucinous carcinoma of the ovary is uncommon and was historically over-diagnosed because metastases from the appendix, colon, stomach and pancreas mimic it. True primary tumours carry KRAS mutations in about two thirds and HER2 amplification in a fifth, share their biology with gastrointestinal cancers and often arise from a mucinous borderline tumour. Most are stage I and treated with surgery alone or with fertility-sparing unilateral oophorectomy; appendicectomy is performed if the appendix looks abnormal. Advanced disease responds poorly to carboplatin-paclitaxel, and gastrointestinal-type regimens such as capecitabine-oxaliplatin are used by extrapolation; HER2-directed therapy is an option in amplified tumours.",
+    subtypes: ["Expansile (confluent) pattern (better outlook)", "Infiltrative pattern", "HER2-amplified", "Arising from mucinous borderline tumour or teratoma"],
+    biomarkers: ["KRAS mutation", "HER2 amplification (about 20 percent)", "CK7 and CK20 pattern and SATB2 to exclude gastrointestinal origin", "CEA and CA 19-9 rather than CA-125"],
+    standardOfCare: [
+      { setting: "Early stage", approach: "Unilateral salpingo-oophorectomy or hysterectomy with staging; appendicectomy if abnormal; chemotherapy usually omitted for stage IA and IB.", refs: ["ovarian"] },
+      { setting: "Advanced or recurrent", approach: "Cytoreduction; carboplatin-paclitaxel or gastrointestinal-type capecitabine-oxaliplatin; trastuzumab for HER2-amplified tumours in trials.", refs: ["capecitabine", "oxaliplatin", "trastuzumab", "carboplatin"] },
+    ],
+    stateOfArt: ["Strict pathology criteria have cut the diagnosis to its true rare frequency and improved apparent survival.", "The GI-like biology is steering treatment toward bowel cancer regimens and HER2-directed therapy.", "International rare-tumour trials (mEOC/GOG 241) showed how hard it is to recruit for this disease."],
+    history: [
+      { year: 2003, title: "Seidman shows most 'mucinous ovarian cancers' are metastases from the gut" },
+      { year: 2019, title: "mEOC/GOG 241 randomised trial closes early for poor accrual" },
+    ],
+    pipeline: [], openProblems: ["No proven chemotherapy for advanced disease.", "Trials cannot recruit enough patients.", "Distinguishing primary from metastatic disease still needs expert pathology."],
+    links: [{ label: "Wikipedia", url: W("Ovarian_cancer") }] },
+  { id: "granulosa-cell-tumour", kind: "cancer", name: "Adult granulosa cell tumour of the ovary", group: "gynaecological", parent: "ovarian", asOf, tags, wikipedia: W("Granulosa_cell_tumour"),
+    aka: ["Granulosa cell tumor", "AGCT", "Sex cord-stromal tumour of the ovary"],
+    burden: "The commonest malignant sex cord-stromal tumour but only two to five percent of ovarian cancers; most are found at stage I and cured, yet a third relapse, sometimes twenty or thirty years later, so follow-up is lifelong.",
+    tldr: "Granulosa cell tumours make oestrogen, so they often announce themselves with abnormal bleeding, and almost all carry the same single FOXL2 mutation. Surgery cures most; relapses come late and are treated with further surgery, hormone-blocking drugs, bevacizumab or chemotherapy.",
+    summary: "Adult granulosa cell tumours arise from the hormone-producing cells of the ovarian follicle and carry a FOXL2 C134W mutation in about 97 percent of cases, one of the most specific mutations in oncology. Oestrogen production causes irregular bleeding, endometrial hyperplasia and occasionally endometrial cancer, and inhibin B and anti-Mullerian hormone serve as tumour markers. Surgery, fertility-sparing where appropriate, cures most stage I disease; adjuvant chemotherapy for higher stages is debated. Relapse, typically in the pelvis and abdomen years or decades later, is managed with repeat surgery, aromatase inhibitors or other hormonal therapy, bevacizumab, or platinum-based chemotherapy such as carboplatin-paclitaxel or BEP.",
+    subtypes: ["Adult granulosa cell tumour (FOXL2 C134W)", "Juvenile granulosa cell tumour (children and young women, different biology)", "Other sex cord-stromal tumours (Sertoli-Leydig, DICER1-related)"],
+    biomarkers: ["FOXL2 C134W mutation (diagnostic)", "Inhibin B and anti-Mullerian hormone (monitoring)", "Oestradiol", "Stage and rupture at surgery (prognosis)"],
+    standardOfCare: [
+      { setting: "Stage I", approach: "Surgical staging with hysterectomy and bilateral salpingo-oophorectomy, or unilateral oophorectomy to preserve fertility; endometrial sampling because of oestrogen exposure; no adjuvant therapy.", refs: ["ovarian"] },
+      { setting: "Advanced or relapsed", approach: "Repeat cytoreduction; aromatase inhibitors such as letrozole; bevacizumab; carboplatin-paclitaxel or BEP chemotherapy.", refs: ["letrozole", "bevacizumab", "carboplatin", "paclitaxel"] },
+      { setting: "Follow-up", approach: "Lifelong monitoring with inhibin B and imaging because relapses occur decades later.", refs: ["ovarian"] },
+    ],
+    stateOfArt: ["The FOXL2 mutation, found in 2009, gives a definitive diagnosis and a target for research.", "Hormonal therapy and bevacizumab have added low-toxicity options for relapse.", "Registries and rare-tumour networks are replacing case series as the evidence base."],
+    history: [
+      { year: 1855, title: "Rokitansky describes granulosa cell tumour" },
+      { year: 2009, title: "FOXL2 C134W mutation found in almost all adult granulosa cell tumours" },
+    ],
+    pipeline: [], openProblems: ["No randomised trials guide adjuvant or relapse treatment.", "Late relapse makes follow-up long and uncertain.", "FOXL2 is not yet druggable."],
+    links: [{ label: "Wikipedia", url: W("Granulosa_cell_tumour") }] },
+];

@@ -210,7 +210,7 @@ export const ORGAN_SCHEMATICS: OrganSchematic[] = [
       add(m, dots([[-0.45, 2.4, -0.3], [-0.45, 2.0, -0.3], [-0.45, 1.6, -0.3], [-0.45, 1.2, -0.3]], "soft")); // sympathetic chain
       return m;
     } },
-  { id: "female-pelvis", name: "Uterus, cervix, ovaries, tubes and vulva", cancers: ["ovarian", "endometrial", "cervical", "vulvar", "gestational-trophoblastic", "uterine-sarcoma", "vaginal"],
+  { id: "female-pelvis", name: "Uterus, cervix, ovaries, tubes and vulva", cancers: ["high-grade-serous-ovarian-cancer", "low-grade-serous-ovarian-cancer", "clear-cell-ovarian-cancer", "mucinous-ovarian-cancer", "granulosa-cell-tumour", "ovarian", "endometrial", "cervical", "vulvar", "gestational-trophoblastic", "uterine-sarcoma", "vaginal"],
     caption: "Most high-grade ovarian cancers begin at the tip of the fallopian tube; endometrial cancer lines the uterus, cervical cancer starts at the transformation zone; each drains to a different node group.",
     subsites: [
       { id: "fimbria", label: "Fallopian tube fimbria (origin of high-grade serous)", at: [1.65, 0.8, 0], match: ["high-grade serous", "hgsoc", "serous", "brca", "hrd", "platinum"] },
@@ -318,7 +318,7 @@ export const ORGAN_SCHEMATICS: OrganSchematic[] = [
       add(m, ring(0.35, 12, "soft", "x"), { at: [-0.6, 0.15, -0.25] }); add(m, ring(0.35, 12, "soft", "x"), { at: [0.6, 0.15, -0.25] }); // ventricles
       return m;
     } },
-  { id: "head-neck", name: "Head and neck, salivary glands and thyroid", cancers: ["head-and-neck", "nasopharyngeal", "salivary-gland", "thyroid", "sinonasal", "nut-carcinoma", "parathyroid-carcinoma", "multiple-endocrine-neoplasia"],
+  { id: "head-neck", name: "Head and neck, salivary glands and thyroid", cancers: ["oropharyngeal-cancer", "laryngeal-cancer", "oral-cavity-cancer", "head-and-neck", "nasopharyngeal", "salivary-gland", "papillary-thyroid-cancer", "follicular-thyroid-cancer", "medullary-thyroid-cancer", "anaplastic-thyroid-cancer", "thyroid", "sinonasal", "nut-carcinoma", "parathyroid-carcinoma", "multiple-endocrine-neoplasia"],
     caption: "Site decides cause and behaviour: HPV drives oropharyngeal cancer, EBV drives nasopharyngeal cancer, tobacco drives oral and laryngeal cancer; all drain into the neck node levels that surgeons and radiotherapists map.",
     subsites: [
       { id: "oral", label: "Oral cavity and tongue", at: [1.15, -0.6, 0.35], match: ["oral", "tongue", "oral cavity", "hpv-negative", "hpv negative", "tobacco", "tp53"] },

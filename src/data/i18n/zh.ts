@@ -7897,4 +7897,19 @@ export const tldr_zh: Record<string, string> = {
   "west-midlands-cancer-alliance": "英格兰NHS西米德兰兹癌症联盟，覆盖伯明翰、黑乡、考文垂、沃里克郡、赫里福德郡、伍斯特郡、什罗普郡和斯塔福德郡：规划并改进当地癌症服务的合作组织。",
   "west-yorkshire-harrogate-cancer-alliance": "英格兰NHS西约克郡与哈罗盖特癌症联盟，覆盖利兹、布拉德福德、韦克菲尔德、柯克利斯和卡尔德代尔：规划并改进当地癌症服务的合作组织。",
   "zealand-university-hospital": "西兰大学医院位于克厄和罗斯基勒两个院区，是丹麦西兰大区的大学医院，也是欧洲癌症研究所组织（OECI）的正式成员。",
+  // Added 17 Sept 2026: thyroid subtype pages.
+  "papillary-thyroid-cancer": "乳头状甲状腺癌是最常见、最可治愈的甲状腺癌。多数患者接受手术，部分术后加放射性碘治疗，许多小肿瘤只需观察。只有极少数不再摄取碘的肿瘤才需要靶向药物。",
+  "follicular-thyroid-cancer": "滤泡状甲状腺癌在针吸活检中看起来像良性结节，因此通常在手术后才能确诊。它经血流而非颈部淋巴结扩散，治疗与乳头状癌相同——手术加放射性碘，早期发现预后良好。",
+  "medullary-thyroid-cancer": "髓样甲状腺癌来自分泌降钙素的C细胞而非甲状腺激素细胞，因此放射性碘无效。手术是唯一的治愈手段，四分之一的病例通过RET基因在家族中遗传，RET选择性药物selpercatinib彻底改变了晚期疾病的治疗。",
+  "anaplastic-thyroid-cancer": "未分化甲状腺癌是罕见、生长迅速的类型，表现为快速增大、威胁气道的颈部肿块。它曾几乎无一例外在数月内致命；BRAF靶向药物、免疫治疗、手术和放疗的联合首次提高了生存率。",
+  // Added 17 Sept 2026: head and neck subsite pages.
+  "oropharyngeal-cancer": "扁桃体和舌根的癌症如今主要源于HPV感染而非吸烟，其表现如同另一种疾病：对放化疗反应良好，多数患者可治愈，研究的问题是能安全地减少多少治疗。",
+  "laryngeal-cancer": "喉癌以声音嘶哑为首发表现，早期发现时高度可治愈，激光手术或放疗都能保留嗓音。晚期疾病尽可能用放化疗保喉，最广泛的肿瘤或其他治疗失败时行全喉切除。",
+  "oral-cavity-cancer": "口腔和舌癌主要由烟草、酒精和槟榔引起，通常早期就能看到或摸到，却常被延误诊断。手术是主要治疗，高风险者术后加放疗或放化疗，并通过重建恢复言语和吞咽功能。",
+  // Added 17 Sept 2026: ovarian subtype pages.
+  "high-grade-serous-ovarian-cancer": "高级别浆液性癌是常见且侵袭性强的卵巢癌类型，现已知起源于输卵管。治疗为手术加铂类化疗，PARP抑制剂维持治疗改变了半数因DNA修复缺陷而受益患者的病程。",
+  "low-grade-serous-ovarian-cancer": "低级别浆液性癌是常见卵巢癌的生长缓慢、对化疗耐药的“表亲”。手术和激素治疗是其主要手段，MEK抑制剂（单用或与FAK抑制剂联合）是首批能可靠缩小它的药物。",
+  "clear-cell-ovarian-cancer": "透明细胞卵巢癌由子宫内膜异位症发展而来，通常早期发现并经手术治愈，但晚期对铂类化疗耐药。其独特的ARID1A和PIK3CA突变遗传学是靶向和免疫治疗研究的焦点。",
+  "mucinous-ovarian-cancer": "黏液性卵巢癌罕见，诊断时通常局限于一侧增大的卵巢，可经手术治愈。其遗传学更像肠癌而非卵巢癌，病理医生必须先排除来自消化道的转移才能确诊。",
+  "granulosa-cell-tumour": "颗粒细胞瘤分泌雌激素，因此常以异常出血为首发表现，几乎都携带同一个FOXL2突变。手术可治愈多数患者；复发出现较晚，用再次手术、激素阻断药、bevacizumab或化疗治疗。",
 };
