@@ -100,7 +100,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <RegisterSW />
         <WebMCP />
         <ExternalLinks />
-        <main id="main" className="flex-1">{children}<SectionSiblings /></main>
+        {/* Record pages stamp data-onco-id / data-onco-kind on this element for agents (MachineLinks); the hydration warning is for those attributes. */}
+        <main id="main" className="flex-1" suppressHydrationWarning>{children}<SectionSiblings /></main>
         <footer className="garden-footer relative border-t border-border mt-28">
           {/* A low grass line grows up from the footer's top edge into the gap above it. */}
           <GardenBackdrop variant="footer" />

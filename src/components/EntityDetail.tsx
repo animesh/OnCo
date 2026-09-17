@@ -13,6 +13,7 @@ import { MoleculeViewer, type StructureEntry } from "./MoleculeViewer";
 import { Logo } from "./Logo";
 import { Portrait, PortraitCredit } from "./Portrait";
 import { JsonLd } from "./JsonLd";
+import { MachineLinks } from "./MachineLinks";
 import { PrintButton } from "./PrintButton";
 import { TrialFinderGeo as TrialFinder } from "./TrialFinderGeo";
 import { Questions } from "./Questions";
@@ -218,6 +219,7 @@ export function EntityDetail({ e }: { e: Entity }) {
           </aside>
         </div>
       </Container>
+      <MachineLinks e={e} />
     </>
   );
 }

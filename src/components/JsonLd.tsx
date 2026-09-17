@@ -1,7 +1,8 @@
 import type { Entity } from "@/lib/schema";
 import { KIND_META, routeFor } from "@/lib/schema";
 import { graph } from "@/lib/graph";
-import { SITE, SITE_NAME, absoluteUrl, entityCrumbs, type Crumb } from "@/lib/seo";
+import { SITE, SITE_NAME, absoluteUrl, entityCrumbs, machineRoutes, type Crumb } from "@/lib/seo";
+import { wikidataIds } from "@/data/wikidata-ids";
 
 type Node = Record<string, unknown>;
 const CTX = "https://schema.org";
@@ -19,6 +20,11 @@ const uniq = <T,>(xs: Array<T | undefined>): T[] | undefined => {
   return out.length ? out : undefined;
 };
 const shortName = (s: string) => s.replace(/ \(.*\)$/, "");
+
+/** Wikidata item URI for a record, from the generated map (same form as the owl:sameAs triples in onco.nt). */
+const wikidata = (id: string): string | undefined => (wikidataIds[id] ? `http://www.wikidata.org/entity/${wikidataIds[id]}` : undefined);
+/** The record's external identities: Wikipedia article and Wikidata item, when we have them. */
+const identities = (e: Entity): Array<string | undefined> => [e.wikipedia, wikidata(e.id)];
 
 /** Reference to another OnCo record: name plus the page it lives on. */
 function ref(id: string, type: string): Node | undefined {
@@ -61,7 +67,17 @@ function legalStatus(e: Extract<Entity, { kind: "drug" }>): string | undefined {
 /** The typed node for one entity. Only fields present in the record are emitted; nothing is inferred. */
 function entityNode(e: Entity): Node {
   const url = absoluteUrl(routeFor(e));
-  const base: Node = { "@context": CTX, "@type": "Thing", "@id": url, name: e.name, description: e.tldr, url, alternateName: e.aka.length ? e.aka : undefined, sameAs: e.wikipedia, dateModified: e.asOf, license: LICENSE_URL, isPartOf: { "@id": `${SITE}/api/#dataset` }, subjectOf: { "@type": "DigitalDocument", url: `${SITE}/api/v1/context/${e.id}.md`, encodingFormat: "text/markdown" } };
+  const twins = machineRoutes(e);
+  const base: Node = {
+    "@context": CTX, "@type": "Thing", "@id": url, name: e.name, description: e.tldr, url,
+    alternateName: e.aka.length ? e.aka : undefined,
+    sameAs: uniq(identities(e)),
+    dateModified: e.asOf,
+    license: LICENSE_URL,
+    isPartOf: { "@id": `${SITE}/api/#dataset` },
+    // The record's machine-readable twins, the same files the page's <link rel="alternate"> tags point at.
+    subjectOf: [twins.markdown, twins.json].map((r) => ({ "@type": "DigitalDocument", url: absoluteUrl(r.url), encodingFormat: r.type })),
+  };
   switch (e.kind) {
     case "drug":
       return {
@@ -88,7 +104,7 @@ function entityNode(e: Entity): Node {
         sponsor: e.sponsor ? { "@type": "Organization", name: e.sponsor } : undefined,
         studySubject: e.drugs.length ? e.drugs.map((id) => ref(id, "Drug")).filter(Boolean) : undefined,
         healthCondition: e.cancers.length ? e.cancers.map((id) => ref(id, "MedicalCondition")).filter(Boolean) : undefined,
-        sameAs: uniq([e.wikipedia, e.nct ? `https://clinicaltrials.gov/study/${e.nct}` : undefined]),
+        sameAs: uniq([...identities(e), e.nct ? `https://clinicaltrials.gov/study/${e.nct}` : undefined]),
       };
     case "company":
       return {
@@ -96,7 +112,7 @@ function entityNode(e: Entity): Node {
         "@type": "Organization",
         url: e.website,
         mainEntityOfPage: url,
-        sameAs: uniq([e.wikipedia, url]),
+        sameAs: uniq([...identities(e), url]),
         address: { "@type": "PostalAddress", addressLocality: e.hq, addressCountry: e.country.toUpperCase() },
         foundingDate: e.founded ? String(e.founded) : undefined,
         tickerSymbol: e.ticker,
@@ -107,7 +123,7 @@ function entityNode(e: Entity): Node {
         "@type": INSTITUTION_TYPE[e.institutionType] ?? "Organization",
         url: e.website,
         mainEntityOfPage: url,
-        sameAs: uniq([e.wikipedia, url]),
+        sameAs: uniq([...identities(e), url]),
         address: { "@type": "PostalAddress", addressLocality: e.city, addressCountry: e.country.toUpperCase() },
         geo: { "@type": "GeoCoordinates", latitude: e.lat, longitude: e.lng },
         parentOrganization: e.university ? { "@type": "CollegeOrUniversity", name: e.university } : undefined,
@@ -118,7 +134,7 @@ function entityNode(e: Entity): Node {
         "@type": "Periodical",
         url: e.url,
         mainEntityOfPage: url,
-        sameAs: uniq([e.wikipedia, url]),
+        sameAs: uniq([...identities(e), url]),
         issn: e.issn,
         publisher: { "@type": "Organization", name: e.publisher },
       };
@@ -131,7 +147,7 @@ function entityNode(e: Entity): Node {
         datePublished: String(e.year),
         isPartOf: { "@type": "Periodical", name: e.journal },
         identifier: uniq([e.doi ? { "@type": "PropertyValue", propertyID: "DOI", value: e.doi } : undefined, e.pmid ? { "@type": "PropertyValue", propertyID: "PMID", value: e.pmid } : undefined]),
-        sameAs: uniq([e.wikipedia, e.doi ? `https://doi.org/${e.doi}` : undefined, e.pmid ? `https://pubmed.ncbi.nlm.nih.gov/${e.pmid}/` : undefined]),
+        sameAs: uniq([...identities(e), e.doi ? `https://doi.org/${e.doi}` : undefined, e.pmid ? `https://pubmed.ncbi.nlm.nih.gov/${e.pmid}/` : undefined]),
       };
     case "person":
       return {
@@ -140,12 +156,12 @@ function entityNode(e: Entity): Node {
         jobTitle: e.role,
         affiliation: e.institutionId ? orgRef(e.institutionId) : undefined,
         knowsAbout: e.specialisms.length ? e.specialisms : undefined,
-        sameAs: uniq([e.wikipedia, e.orcid ? (e.orcid.startsWith("http") ? e.orcid : `https://orcid.org/${e.orcid}`) : undefined, ...e.profiles.map((p) => p.url)]),
+        sameAs: uniq([...identities(e), e.orcid ? (e.orcid.startsWith("http") ? e.orcid : `https://orcid.org/${e.orcid}`) : undefined, ...e.profiles.map((p) => p.url)]),
       };
     case "term":
       return { ...base, "@type": "DefinedTerm", inDefinedTermSet: { "@type": "DefinedTermSet", name: `${SITE_NAME} glossary`, url: `${SITE}/terms/` } };
     case "collection":
-      return { ...base, "@type": "DataCatalog", url: e.url, mainEntityOfPage: url, sameAs: uniq([e.wikipedia, url]), license: e.license, provider: e.maintainer ? { "@type": "Organization", name: e.maintainer } : undefined };
+      return { ...base, "@type": "DataCatalog", url: e.url, mainEntityOfPage: url, sameAs: uniq([...identities(e), url]), license: e.license, provider: e.maintainer ? { "@type": "Organization", name: e.maintainer } : undefined };
     default:
       return base;
   }
