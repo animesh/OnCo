@@ -135,7 +135,7 @@ export const drugsPipelineWave6: DrugInput[] = [
   { id: "amo959", kind: "drug", name: "AMO959", code: "AMO959", aka: ["BY1298","BY101298"], modality: "Small-molecule inhibitor", mechanism: "Described in the registry record as a by1298 by101298 dna damage response inhibitor; the trial entries below carry the sponsor's wording.", status: "phase-2", asOf, tags, provenance,
     tldr: "AMO959 is a small-molecule inhibitor from Novartis Pharmaceuticals, in registered phase 2 trials for prostate cancer.",
     summary: "AMO959 is listed on ClinicalTrials.gov as an intervention in 1 registered phase 2 trial sponsored by Novartis Pharmaceuticals, in prostate cancer. Described in the registry record as a by1298 by101298 dna damage response inhibitor; the trial entries below carry the sponsor's wording. OnCo records the agent from the registry alone; approvals, results and the sponsor's own description will follow as they are published.",
-    targets: [], cancers: ["prostate"], companies: ["advanced-accelerator-applications"], trials: ["nct07226986"],
+    targets: [], cancers: ["prostate"], companies: ["novartis"], trials: ["nct07226986"],
     links: [{ label: "ClinicalTrials.gov: trials of AMO959", url: "https://clinicaltrials.gov/search?intr=AMO959" }] },
   { id: "sotevtamab", kind: "drug", name: "Sotevtamab", aka: ["AB-16B5"], modality: "Monoclonal antibody", mechanism: "A monoclonal antibody: the international non-proprietary name stem -mab marks an antibody that binds one target. The registry record does not state the target unless named in the trial entries below.", status: "phase-2", asOf, tags, provenance,
     tldr: "Sotevtamab is a monoclonal antibody from Alethia Biotherapeutics, in registered phase 2 trials for colorectal cancer.",
