@@ -73,6 +73,7 @@ export const navDe: NavDict = {
   "/preprints/": ["Preprint-Tracker", "bioRxiv- und medRxiv-Preprints der letzten 90 Tage je Zielstruktur, Produkt und Technologie, und welche seither publiziert wurden."],
   "/payloads/": ["Wirkstofffrachten und Linker", "Die Chemie im Inneren der ADCs."],
   "/regulatory/": ["Regulatorische Zeitleiste", "Jede datierte Einreichung, Zulassung, CRL und Label-Änderung."],
+  "/law/": ["Gesetze in der Onkologie", "Die Gesetze, Verordnungen und Gerichtsurteile, die bestimmen, wie Krebsmedikamente zugelassen, bezahlt und geprüft werden und wie Daten und Gene geschützt sind, nach Rechtsraum und Thema."],
   "/coverage/us/": ["Kostenübernahme in den USA", "Medicare Part B oder D, Vorabgenehmigung, Listenpreise und Hilfsprogramme für jedes zugelassene Produkt."],
   "/coverage/uk/": ["Leistungen des NHS", "NICE-, Cancer-Drugs-Fund- und SMC-Entscheidungen für jedes zugelassene Produkt, und wie die Krebsversorgung im NHS funktioniert."],
   "/hta/": ["HTA-Entscheidungen", "Urteile von NICE, SMC, G-BA und PBAC je Produkt und Land, mit Daten und Links zur Bewertung."],

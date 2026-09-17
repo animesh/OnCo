@@ -255,7 +255,7 @@ const terms: TermInput[] = [
   term({ id: "biosimilar", aka: ["biosimilars", "biosimilar competition", "biosimilar uptake", "biosimilar versions", "biosimilar entry", "biosimilar switching"], name: "Biosimilar", category: "Regulatory", wikipedia: W("Biosimilar"),
     tldr: "A biosimilar is a copy of a biologic drug such as trastuzumab, shown to be as safe and effective as the original once its patent expires, usually at a lower price.",
     summary: "A biosimilar is a copy of a biologic drug, such as trastuzumab, shown to match the original in safety and effectiveness once its patent has expired, and usually sold at a lower price. Approval runs through abbreviated pathways, the FDA 351(k) route and the EMA equivalent, on analytical, pharmacokinetic and comparative clinical evidence. Oncology biosimilars of trastuzumab, bevacizumab, rituximab and pegfilgrastim now dominate volume, and interchangeability designations and WHO prequalification widen access. Readers meet it on the trastuzumab biosimilars page and in the drug pricing, regulatory divergence and global access bottlenecks. Ideas on default substitution at the pharmacy, dropping switching studies, and a flat fee for giving Part B drugs depend on it.",
-    drugs: ["trastuzumab-biosimilars", "trastuzumab"], cancers: ["breast-her2-positive"], links: [{ label: "Wikipedia", url: W("Biosimilar") }] }),
+    drugs: ["trastuzumab-biosimilars", "trastuzumab"], cancers: ["breast-her2-positive"], related: ["bpcia", "hatch-waxman", "us-regulatory-exclusivity", "eu-data-exclusivity", "spc", "china-vbp-nrdl", "eu-pharma-package", "inflation-reduction-act"], links: [{ label: "Wikipedia", url: W("Biosimilar") }] }),
 ];
 
 // ======================= PAIRINGS =======================

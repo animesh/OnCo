@@ -32,6 +32,7 @@ import { adcChemistry } from "./adc-chemistry";
 import { journals } from "./journals";
 import { termsBasics } from "./terms-basics";
 import { termsModalities } from "./terms-modalities";
+import { lawTerms } from "./law-wave";
 import { termsJargon } from "./terms-jargon";
 import { institutionsUs } from "./institutions/us";
 import { institutionsWorld } from "./institutions/world";
@@ -122,6 +123,7 @@ const RAW_INPUTS: EntityInput[] = [
   ...journals,
   ...termsBasics,
   ...termsModalities,
+  ...lawTerms,
   ...termsJargon,
   ...institutionsUs,
   ...institutionsWorld,

@@ -73,6 +73,7 @@ export const navZh: NavDict = {
   "/preprints/": ["预印本追踪", "最近 90 天内 bioRxiv 和 medRxiv 上按靶点、产品和技术分类的预印本，以及哪些已正式发表。"],
   "/payloads/": ["载荷与连接子", "ADC 内部的化学。"],
   "/regulatory/": ["监管时间线", "每一次有日期的申报、批准、CRL 和说明书变更。"],
+  "/law/": ["肿瘤相关法律", "决定癌症药物如何获批、付费和试验，以及数据和基因如何受保护的法律、法规和判决，按司法辖区和主题分类。"],
   "/coverage/us/": ["美国的医疗费用支付", "每个已获批产品的 Medicare B 部分或 D 部分、事先授权、标价和援助项目。"],
   "/coverage/uk/": ["NHS 覆盖范围", "每个已获批产品的 NICE、Cancer Drugs Fund 和 SMC 决定，以及 NHS 癌症诊疗如何运作。"],
   "/hta/": ["HTA 决定", "NICE、SMC、G-BA 和 PBAC 对每个产品和国家的裁定，附日期和评估链接。"],
