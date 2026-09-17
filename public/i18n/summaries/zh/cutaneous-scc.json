@@ -1,0 +1,6 @@
+{
+  "source_hash": "61fb22d60ad1cd1a7876ef65920f44108e44f46bde20721ba7046118036fa4f6",
+  "text": "皮肤鳞状细胞癌（cSCC）起源于紫外线损伤的角质形成细胞，是所有癌症中突变负荷最高的癌种之一（TP53、NOTCH1/2、CDKN2A）。免疫抑制（移植受者的风险高出65-100倍）和慢性创面是其他病因。大多数肿瘤可通过切除术或Mohs手术治愈；复发和转移风险按BWH/AJCC-8分期（浸润深度、神经周围侵犯、分化程度、免疫抑制）进行分层，高危或不可手术的疾病采用放疗。\n\nCemiplimab（EMPOWER-CSCC-1，2018年）是首个获批用于晚期cSCC的全身治疗药物，缓解率约45-50%，且疾病控制持久；pembrolizumab（KEYNOTE-629，2020年）和cosibelimab（抗PD-L1，2024年12月）随后获批。新辅助cemiplimab在51%的II-IV期患者中获得病理完全缓解（Gross，NEJM 2022），C-POST试验（2025年）显示手术和放疗后辅助cemiplimab降低了高危患者的复发，从而获得辅助治疗适应症批准。EGFR抗体（cetuximab）和化疗保留用于不适合免疫治疗的患者，如器官移植受者。\n\n待解决的问题：移植受者的管理（免疫检查点抑制剂可导致移植物排斥）、化学预防（nicotinamide、acitretin），以及区域癌化带来的负担。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

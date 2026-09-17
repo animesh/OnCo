@@ -1,0 +1,6 @@
+{
+  "source_hash": "cc3861c5ba6df5b97bf1d1ce0fdce917e2c0f43e368a86ff07286b23b5a176df",
+  "text": "鼻咽癌（NPC）在流行地区为EBV相关的非角化性癌，具有独特的生物学特征（NF-κB通路改变、富含免疫细胞的间质、低TMB），而西方散发病例则包括角化性、HPV相关或吸烟相关的肿瘤。血浆EBV DNA是诊断、预后和监测标志物，在香港开展的基于EBV DNA的人群筛查发现了早期癌症（Chan, NEJM 2017）。\n\nIMRT是治疗的基石：I期采用单纯放疗，II-IVA期采用cisplatin同期放化疗（Intergroup 0099），gemcitabine-cisplatin诱导化疗可改善局部区域晚期患者的生存（Zhang, NEJM 2019），capecitabine节拍式辅助化疗可为高危患者带来额外获益（Chen, Lancet 2021）。复发或转移性疾病采用gemcitabine-cisplatin联合PD-1抑制剂治疗：toripalimab（JUPITER-02；2023年获FDA批准，为美国首个批准用于NPC的药物）、camrelizumab（CAPTAIN-1st）、tislelizumab（RATIONALE-309）和penpulimab（2025年获FDA批准）。鼻咽切除术（内镜下）和再程放疗是局部复发的治疗选择。放疗的晚期毒性（口干、听力下降、颞叶坏死、颈动脉狭窄）推动了以EBV DNA为指导的降阶梯治疗试验。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

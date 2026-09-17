@@ -1,0 +1,6 @@
+{
+  "source_hash": "9d9c48a58b1d6245bd7d003f0ee719762f3a0f5c6f5076ca4d502bc2f308df81",
+  "text": "急性髓系白血病是一种源于不成熟髓系细胞的癌症，可在数周内充满骨髓和血液。其定义基于分子特征：WHO 2022和ICC 2022按驱动基因进行分类，ELN 2022则根据NPM1、CEBPA、核心结合因子融合、FLT3、TP53、KMT2A以及骨髓增生异常相关突变，将患者划分为预后良好、中等或不良三组。诊断时中位年龄为68岁，预后因年龄和体能状态而差异显著。\n\n治疗分为两种模式。适合强化治疗的患者接受强化“7+3”诱导治疗（自1973年以来未曾改变），并根据遗传学特征加用靶向药物：FLT3突变者用midostaurin或quizartinib，CD33阳性且预后良好或中等者用gemtuzumab ozogamicin，继发性AML用CPX-351，随后进行大剂量cytarabine巩固治疗，预后不良或MRD阳性者进行异基因造血干细胞移植。不适合强化治疗的患者过去仅能接受支持治疗，如今可接受venetoclax联合azacitidine（VIALE-A），或自2026年5月起接受含decitabine-cedazuridine的全口服方案；IDH1突变患者可接受ivosidenib联合azacitidine（AGILE）。复发按基因型治疗：gilteritinib（FLT3），ivosidenib、olutasidenib或enasidenib（IDH），以及新型menin抑制剂revumenib和ziftomenib（NPM1突变或KMT2A重排），并以移植作为巩固性治愈手段。\n\n通过流式细胞术、NPM1 qPCR或纠错NGS检测的可测量残留病，如今决定是否移植和维持治疗；myeloMATCH等平台试验则根据诊断时的快速基因组检测结果分配治疗。尚未解决的问题包括：TP53突变和复杂核型AML（迄今所有新型药物类别均告失败）、移植后复发、老年患者因感染导致的早期死亡，以及日益个体化的治疗路径所带来的费用和实施管理问题。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

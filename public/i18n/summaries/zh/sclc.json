@@ -1,0 +1,6 @@
+{
+  "source_hash": "55f8742d1ce28b83d0f0d3a54dd04e6b4ba7f485e42d6a00df67aaf8ac0660f5",
+  "text": "小细胞肺癌是一种高级别神经内分泌癌，几乎全部由吸烟引起，其特征是几乎普遍存在的TP53和RB1缺失以及爆发性生长。三分之二的患者确诊时为广泛期，多数患者对化疗有反应，但几乎全部会复发。三十年来，其治疗一直是铂类联合etoposide、局限期给予胸部放疗、预防性全脑放疗，以及复发时使用topotecan。\n\n该领域的进展分为三步。一线化疗联合免疫治疗（IMpower133，2018年；CASPIAN，2019年；ASTRUM-005，2022年）使中位生存期延长2至5个月，并带来了一小部分长期生存者。局限期患者放化疗后durvalumab巩固治疗（ADRIATIC，2024年12月获批）是30年来首个以治愈为目的的进展，将中位生存期提高至近5年。在复发性疾病中，DLL3 T细胞衔接器tarlatamab成为首个在总生存期上优于化疗的药物（DeLLphi-304；2025年11月获FDA完全批准），lurbinectedin联合atezolizumab成为首个获批的一线维持治疗方案（IMforte，2025年10月）。\n\n下一步方向：以tarlatamab强化维持治疗（DeLLphi-305）、B7-H3抗体药物偶联物（ADC）ifinatamab deruxtecan用于二线治疗（IDeate-Lung02）、α粒子发射型SSTR放射性配体（RYZ101）、亚型导向治疗（ASCL1、NEUROD1、POU2F3、炎症型）、双特异性和三特异性DLL3衔接器，以及MRI监测能否替代预防性全脑放疗这一已有定论的问题。筛查仍限于对吸烟者进行低剂量CT，其早期检出的小细胞肺癌很少。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

@@ -1,0 +1,6 @@
+{
+  "source_hash": "4b056eac921481d67baed92aa8c31ddccd26872168ae22f97c6c9145f8e1d7ed",
+  "text": "黑色素瘤起源于色素细胞；大多数病例在早期发现时可通过切除治愈，而未能早期发现时，它是最易发生转移的皮肤癌。风险由紫外线暴露和浅色皮肤驱动；该肿瘤的突变负荷在所有常见癌症中最高，这正是它成为免疫治疗试验场的原因。约半数皮肤黑色素瘤携带BRAF V600突变，四分之一携带NRAS突变，肢端型和黏膜型亚型携带KIT改变；葡萄膜黑色素瘤是一种由GNAQ/GNA11和BAP1驱动的独立疾病。\n\n治疗革命始于2011年的ipilimumab和vemurafenib，并随着PD-1阻断（2014年）而加速。目前，nivolumab联合ipilimumab在晚期疾病中可带来约50%的十年黑色素瘤特异性生存率（CheckMate 067），pembrolizumab的十年总生存率为34%（KEYNOTE-006），而nivolumab联合relatlimab提供了一种更温和的双药方案。对于BRAF突变型疾病，DREAMseq确定了免疫治疗应先行。在可切除的III期疾病中，NADINA和SWOG S1801将免疫治疗前移至手术之前，并根据应答调整后续治疗，而辅助PD-1或BRAF/MEK治疗覆盖IIB-III期。免疫治疗失败后，lifileucel TIL疗法（2024年）和溶瘤病毒RP1联合nivolumab（2026年）已获批准；tebentafusp是转移性葡萄膜黑色素瘤中首个可延长生存的药物。Intismeran autogene联合pembrolizumab于2026年8月成为首个通过3期试验的个体化mRNA疫苗。\n\n尚未解决的问题：约40%的晚期患者对免疫治疗始终无应答，PD-1治疗失败后的二线选择仍然有限；LAG-3阻断作为辅助治疗以及与另一种PD-1药物联合均告失败；II期的辅助治疗对大多数患者构成过度治疗；葡萄膜、黏膜和肢端亚型的进展远远滞后；脑转移影响多达半数的晚期患者；全球半数人口缺乏T细胞受体类药物所需的HLA型别。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

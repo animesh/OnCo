@@ -1,0 +1,6 @@
+{
+  "source_hash": "3af7ccf698e292c1d928b5810e9d59f4bfec395c1e08dc7370340ab59fad68a3",
+  "text": "炎性肌纤维母细胞瘤（IMT）是一种由肌纤维母细胞性梭形细胞构成、伴浆细胞和淋巴细胞浸润的中间型间叶性肿瘤。约半数病例携带ALK重排，伴侣基因多样（TPM3、TPM4、CLTC、RANBP2等）；大多数ALK阴性病例携带ROS1、NTRK3、PDGFRB或RET融合，因此几乎每例IMT都存在可用药物靶向的激酶融合。上皮样炎性肌纤维母细胞肉瘤这一亚型由RANBP2-ALK或RRBP1-ALK驱动，侵袭性强，多位于腹腔内。临床表现范围从偶然发现的肺部肿块，到因细胞因子释放引起的发热、体重下降和贫血。\n\n完整手术切除对大多数患者可获治愈，仍是一线治疗。对于不可切除、复发或转移性ALK阳性IMT，crizotinib在EORTC 90101 CREATE 2期研究（Lancet Respir Med 2018）和Children's Oncology Group ADVL0912研究中产生了客观缓解，促使FDA于2022年7月批准其用于成人及1岁以上儿童，这是ALK抑制剂首次获批用于儿童的非肺部适应症。第二代ALK抑制剂（alectinib、ceritinib、lorlatinib）用于耐药后治疗，ROS1或NTRK融合病例分别对crizotinib、entrectinib、larotrectinib或repotrectinib有效。\n\n尚待解答的问题包括：达到完全缓解的儿童的治疗持续时间，新辅助激酶抑制治疗是否能降低手术的毁损程度，以及如何处理ALK阴性且融合阴性的少数病例。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

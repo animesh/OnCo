@@ -1,0 +1,6 @@
+{
+  "source_hash": "e5fbee816908c73290f6d304346b722f2a6f08e0838e52cd98bb7e6590e98a7c",
+  "text": "经典BCR-ABL1阴性骨髓增殖性肿瘤（真性红细胞增多症、原发性血小板增多症、原发性骨髓纤维化）是由JAK-STAT通路激活驱动的克隆性疾病：JAK2 V617F突变见于约95%的PV和约60%的ET/PMF，CALR突变见于约25%的ET/PMF，MPL突变见于约5%。PV/ET的风险在于血栓形成（采用aspirin、静脉放血、hydroxyurea或干扰素治疗）；骨髓纤维化的风险在于血细胞减少、脾大、全身症状和白血病转化（约10-20%），采用DIPSS-plus、MIPSS70和MIPSS70+ v2.0进行风险分层。\n\nRuxolitinib（COMFORT-I/II，2011年）是首个JAK抑制剂；随后有fedratinib（2019年）、pacritinib（2022年，用于血小板<50的患者）和momelotinib（2023年，用于贫血患者）。这些药物均不能改变疾病进程：异基因移植仍是骨髓纤维化唯一的治愈手段。Ropeginterferon alfa-2b（2021年）是首个获批用于PV并有分子学缓解证据的干扰素，rusfertide（2026年）是一种铁调素模拟物，是首个无需静脉放血即可控制PV红细胞增多的药物（VERIFY）。CALR靶向抗体和JAK2 V617F选择性抑制剂是有望改变疾病进程的方向；在MANIFEST-2研究中，pelabresib（BET抑制剂）联合ruxolitinib改善了脾脏缓解，但未改善症状。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

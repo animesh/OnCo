@@ -1,0 +1,6 @@
+{
+  "source_hash": "0c168b6ae631571fbe8be9b34e69504944f52cc0c2f0f3e9e4002ba9d2d7cd06",
+  "text": "前列腺癌是大多数高收入国家男性中最常见的癌症，也是一个疾病谱：大多数经PSA检出的疾病为惰性，可安全地进行观察（ProtecT：无论采用何种策略，15年前列腺癌死亡率约为3%），而初诊转移性疾病，经激素二联和三联方案治疗、并自2026年起加用放射性配体治疗，中位生存期仍约为五年，这使其成为男性癌症死亡的第二大常见原因。目前的诊断流程为PSA → 多参数MRI（PRECISION）→ 靶向活检 → 分级分组（Grade Group），晚期疾病进行胚系和体系HRR检测，并采用PSMA PET进行分期（proPSMA）和复发评估。数字病理人工智能（ArteraAI Prostate，2025年）和基因表达分类器（Decipher）有助于更精准地判断哪些患者需要治疗以及哪些患者可从加用激素治疗中获益。\n\n治疗以雄激素剥夺为基础，这是第一种癌症靶向治疗（Huggins，1941年）。转移性激素敏感性疾病采用二联方案（ADT + abiraterone、enzalutamide、apalutamide或darolutamide）或加用docetaxel的三联方案（ARASENS、PEACE-1）治疗，并自2026年7月31日起可在ADT + ARPI基础上加用177Lu-PSMA-617（PSMAddition，rPFS HR 0.72）。PTEN缺失型疾病于2026年获得了capivasertib + abiraterone。在去势抵抗性疾病中，治疗序贯包括更换ARPI、针对HRR突变肿瘤的PARP抑制剂（PROfound、PROpel、具有OS获益的TALAPRO-2）、docetaxel和cabazitaxel、用于仅骨转移疾病的radium-223，以及在化疗前或化疗后使用的177Lu-PSMA-617（VISION、PSMAfore）。Enzalutamide甚至已获批用于高危单纯PSA复发（EMBARK）。\n\n前列腺癌是诊疗一体化的试验场：PSMA PET用于筛选，PSMA放射性配体用于治疗。竞争性的177Lu-PSMA-I&T产品（SPLASH、ECLIPSE）改善了疾病进展但尚未改善生存；发射α粒子的225Ac-PSMA药物正处于3期研究（AlphaBreak、AcTION），并在lutetium治疗失败后产生缓解。针对STEAP1（xaluritamig，XALute）和KLK2（pasritamig）的T细胞衔接器是在这一对免疫检查点抑制剂无反应的疾病中首批具有真实活性的免疫疗法；EZH2抑制（mevrometostat，MEVPRO）旨在使肿瘤对激素治疗重新敏感。尚未解决的问题包括神经内分泌转化、AR-V7驱动的耐药（N端结构域抑制剂masofaniten已失败）、Ac-225的供应，以及筛查中过度诊断与诊断不足之间的矛盾。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

@@ -1,0 +1,79 @@
+[
+  {
+    "recordId": "colorectal",
+    "model": {
+      "id": "claude-fable-5-1",
+      "name": "Fable",
+      "provider": "Anthropic",
+      "version": "5.1"
+    },
+    "date": "2026-09-17",
+    "verdicts": [
+      {
+        "claim": "It is the third most common cancer worldwide (about 1.9 million cases a year) and the second most common cause of cancer death (900,000 a year).",
+        "stance": "supports",
+        "note": "These figures match the GLOBOCAN 2020 estimates that the Wikipedia article reports for incidence, deaths and world ranking. The record does not say which GLOBOCAN year it uses, and the linked GLOBOCAN 2022 paper would give slightly different numbers, so a year should be attached.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Colorectal_cancer"
+        }
+      },
+      {
+        "claim": "Resection then adjuvant CAPOX for 3 months (T1-3 N1, low risk) or FOLFOX/CAPOX for 6 months (T4 or N2), per IDEA.",
+        "stance": "supports",
+        "note": "The PDQ colon treatment summary describes the IDEA pooled analysis and the risk-based 3 versus 6 month choice, with the non-inferiority of 3 months clearest for CAPOX in low-risk stage III. The record's wording is consistent with that.",
+        "source": {
+          "label": "NCI PDQ colon cancer treatment",
+          "url": "https://www.cancer.gov/types/colorectal/hp/colon-treatment-pdq"
+        }
+      },
+      {
+        "claim": "dMMR stage II derives no benefit from 5-FU alone.",
+        "stance": "supports",
+        "note": "The PDQ summary discusses the retrospective pooled analyses showing that stage II patients with mismatch-repair-deficient tumours did not benefit from fluoropyrimidine monotherapy, which is the basis for the guideline recommendation the record paraphrases.",
+        "source": {
+          "label": "NCI PDQ colon cancer treatment",
+          "url": "https://www.cancer.gov/types/colorectal/hp/colon-treatment-pdq"
+        }
+      },
+      {
+        "claim": "1990: MOSAIC and the adjuvant era; adjuvant 5-FU/levamisole shown to improve survival in stage III (1990).",
+        "stance": "disputes",
+        "note": "The record contradicts itself. Its own 2004 history entry states that 'MOSAIC establishes adjuvant FOLFOX', and PDQ places MOSAIC among the oxaliplatin-era adjuvant trials of the 2000s. The 1990 milestone was the 5-FU/levamisole result and NIH consensus, not MOSAIC; the title should be corrected. The history list also carries duplicate entries for 2004, 2017, 2022, 2024 and 2026.",
+        "source": {
+          "label": "NCI PDQ colon cancer treatment",
+          "url": "https://www.cancer.gov/types/colorectal/hp/colon-treatment-pdq"
+        }
+      },
+      {
+        "claim": "Resection then FOLFOX + atezolizumab for 12 months (ATOMIC, 3-year DFS 86% vs 77%); dostarlimab with organ preservation (AZUR-1 registrational, PDUFA February 2027); BREAKWATER full approval in 2026.",
+        "stance": "unclear",
+        "note": "The record lists NCCN as the guideline for these settings, but the NCCN URL given is a login-gated landing page and none of the other listed sources report ATOMIC's DFS figures, an AZUR-1 PDUFA date or a BREAKWATER full approval. The internal ATOMIC and AZUR-1 records are consistent with the text, but the specific numbers and regulatory dates cannot be checked against the sources supplied.",
+        "source": {
+          "label": "NCCN Colon Cancer guideline",
+          "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1428"
+        }
+      },
+      {
+        "claim": "Colonoscopy every 10 years, annual FIT, multitarget stool DNA every 3 years, CT colonography, or the Shield blood test every 3 years; start at 45 (USPSTF 2021).",
+        "stance": "unclear",
+        "note": "Screening from age 45 and the stool and endoscopic intervals are consistent with the Wikipedia summary of US recommendations. Whether the NCCN screening guideline lists a blood-based test at a 3-year interval as an equal option alongside the others cannot be confirmed from the landing page cited, and the record's own linked ECLIPSE record notes the test detects few advanced adenomas, a limitation the approach text does not mention.",
+        "source": {
+          "label": "Guideline (Screening (average risk, age 45-75))",
+          "url": "https://www.nccn.org/guidelines/guidelines-detail?category=2&id=1429"
+        }
+      },
+      {
+        "claim": "Risk factors and hereditary syndromes other than Lynch syndrome",
+        "stance": "missing",
+        "note": "The summary and subtypes cover the molecular pathways and Lynch syndrome but say nothing about established risk factors (processed and red meat, alcohol, obesity, smoking, inflammatory bowel disease) or about familial adenomatous polyposis and other polyposis syndromes, all of which the Wikipedia article covers and many of which have linked records in the graph. For a record that leads with 'screening works best', the causes that prevention targets are a notable gap.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Colorectal_cancer"
+        }
+      }
+    ],
+    "summary": "The record's epidemiology, its account of adjuvant therapy (IDEA duration, lack of 5-FU benefit in dMMR stage II) and its molecular stratification of metastatic disease are consistent with the Wikipedia article and the NCI PDQ summary. Its most specific and most recent claims, including ATOMIC survival figures, an AZUR-1 PDUFA date, BREAKWATER full approval and blood-based screening intervals, rest on NCCN landing pages that cannot be read without a login and are not corroborated by any other listed source, so they remain unverified here. One history entry misplaces MOSAIC in 1990 while the record itself puts it in 2004, and the history, biomarkers and openProblems lists contain duplicated entries that should be merged. The record omits modifiable risk factors and non-Lynch hereditary syndromes despite framing the disease around prevention.",
+    "confidence": "medium"
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "source_hash": "38a6264b4eb7bb719088a9bf53b6e13b4b1eba6e60d80b563f80e46d15fcd43c",
+  "text": "慢性淋巴细胞白血病是成熟B细胞在血液、骨髓和淋巴结中缓慢蓄积的疾病，诊断时中位年龄为70岁，常为偶然发现。预后在诊断时即由IGHV突变状态、TP53状态（del(17p)或突变）和核型以及CLL-IPI决定。约三分之一的患者始终不需要治疗；其余患者接受观察等待，直至症状、血细胞减少、巨块型或快速进展的疾病符合iwCLL标准。\n\n治疗在十年内放弃了化疗。在RESONATE、ELEVATE-TN、SEQUOIA、CLL13和CLL14研究之后，持续使用的BTK抑制剂（2014年的ibrutinib，随后是耐受性更好的acalabrutinib和zanubrutinib）和BCL-2抑制剂venetoclax取代了FCR和BR。目前一线治疗有两种策略并存：无限期BTK抑制，或为期12-15个月的固定疗程治疗，采用venetoclax-obinutuzumab（CLL14）或BTK抑制剂联合venetoclax（acalabrutinib-venetoclax，2026年2月在美国获批的首个全口服固定疗程方案）。固定疗程治疗结束时MRD不可检测预示可获得数年的无治疗缓解。存在del(17p)/TP53异常的患者接受持续BTK抑制或以venetoclax为基础的治疗，并完全排除化学免疫治疗。\n\n复发时通过更换药物类别进行治疗：BTK抑制剂治疗失败后使用venetoclax，或venetoclax之后使用BTK抑制剂；pirtobrutinib（非共价）在共价BTK抑制剂之后仍然有效，并于2025年12月获得完全批准；CAR-T（liso-cel，2024年）和异基因移植则保留用于双重难治性疾病。接下来是BTK降解剂（BGB-16673，3期）、新一代BCL-2抑制剂sonrotoclax（2026年5月获批用于套细胞淋巴瘤；CLL的3期研究结果即将公布）以及MRD指导的治疗时长。尚未解决的问题包括Richter转化、双重难治性疾病、长期治疗中的感染和第二原发肿瘤，以及无限期治疗的费用。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

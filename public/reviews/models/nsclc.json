@@ -1,0 +1,88 @@
+[
+  {
+    "recordId": "nsclc",
+    "model": {
+      "id": "claude-fable-5-1",
+      "name": "Fable",
+      "provider": "Anthropic",
+      "version": "5.1"
+    },
+    "date": "2026-09-17",
+    "verdicts": [
+      {
+        "claim": "Non-small-cell lung cancer is ~85% of lung cancer; adenocarcinoma and squamous cell carcinoma dominate, with large-cell and other histologies making up the rest.",
+        "stance": "supports",
+        "note": "The Wikipedia article gives NSCLC as roughly 85% of lung cancers and names adenocarcinoma, squamous cell and large-cell carcinoma as the main histologies. The record's adenocarcinoma share (~50%) is higher than the figure commonly quoted on that page, so the exact split should be treated as approximate.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Non-small-cell_lung_cancer"
+        }
+      },
+      {
+        "claim": "Tobacco drives most squamous and KRAS-mutant disease; never-smoker adenocarcinoma is EGFR- and ALK-enriched.",
+        "stance": "supports",
+        "note": "The Wikipedia article links squamous cell carcinoma closely with smoking and describes adenocarcinoma as the histology most often seen in never-smokers, with EGFR mutations concentrated in that group. The ALK enrichment is consistent with the linked target record but is not detailed in the cited page.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Non-small-cell_lung_cancer"
+        }
+      },
+      {
+        "claim": "HARMONi-3 missed its interim PFS analysis in May 2026, with an FDA decision on ivonescimab due 14 November 2026; neladalkib PDUFA 27 November 2026; zidesamtinib approved July 2026; divarasib superior in Krascendo 1 in 2026.",
+        "stance": "unclear",
+        "note": "None of the three listed sources is a regulatory or trial-results source, and the NCCN page requires a login, so these dated regulatory and trial statements cannot be checked from the record's own citations. They rest on linked drug and trial records rather than on a cited primary source.",
+        "source": {
+          "label": "NCCN Guidelines: Non-Small Cell Lung Cancer (Screening)",
+          "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1450"
+        }
+      },
+      {
+        "claim": "Metastatic, driver-positive: matched TKI or bispecific; ADCs after progression (guideline: NCCN Guidelines, url PMC11163648, ESMO-MCBS 3 for DESTINY-Lung02).",
+        "stance": "unclear",
+        "note": "The guideline field is labelled as the NCCN guideline but points to a PubMed Central article rather than the NCCN guideline page used for the other settings, and it attaches an ESMO-MCBS score for a HER2 trial to an NCCN label. The record should say what the PMC article is and separate the ESMO scoring from the NCCN citation.",
+        "source": {
+          "label": "NCCN Guidelines: Non-Small Cell Lung Cancer (Metastatic, driver-positive)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11163648/"
+        }
+      },
+      {
+        "claim": "Lorlatinib: 5-year PFS 60% in ALK-positive disease, the longest for any targeted therapy in metastatic solid tumours.",
+        "stance": "unclear",
+        "note": "The 60% five-year figure matches the linked CROWN trial record, but the superlative that it is the longest for any targeted therapy in any metastatic solid tumour is a cross-tumour comparison that none of the listed sources addresses.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Non-small-cell_lung_cancer"
+        }
+      },
+      {
+        "claim": "Screening uptake is under 20% in the US and lower elsewhere.",
+        "stance": "unclear",
+        "note": "The NCCN screening guideline sets eligibility (the record's age 50-80 and 20 pack-year criteria are consistent with current US practice) but is not a source for uptake statistics, and it is behind a login. No cited source gives the uptake figure.",
+        "source": {
+          "label": "NCCN Guidelines: Non-Small Cell Lung Cancer (Screening)",
+          "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1450"
+        }
+      },
+      {
+        "claim": "Staging (TNM stage groups) and survival by stage at diagnosis.",
+        "stance": "missing",
+        "note": "The record organises care by stage but never states what the stages are or gives stage-specific survival, which the Wikipedia article covers. A cancer record for a disease whose whole narrative is 'found late' should quantify what late means.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Non-small-cell_lung_cancer"
+        }
+      },
+      {
+        "claim": "The record contains duplicated entries in subtypes, biomarkers, standardOfCare (two Screening and two Stage III unresectable rows) and history (2004, 2007, 2011, 2015, 2021, 2025 each appear twice).",
+        "stance": "disputes",
+        "note": "This is an internal consistency problem rather than a factual one: the duplicates carry slightly different wording and refs, so a reader cannot tell which version is authoritative. Merging them would not change the medicine but would make the record checkable.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Non-small-cell_lung_cancer"
+        }
+      }
+    ],
+    "summary": "The epidemiology and histology framing (NSCLC as about 85% of lung cancer, tobacco driving squamous and KRAS-mutant disease, never-smoker adenocarcinoma enriched for EGFR) is consistent with the cited Wikipedia article, and the stage-by-stage treatment structure matches how NCCN organises the disease. The bulk of the record's most specific content, however, is a dense sequence of 2025-2026 approvals, PDUFA dates and head-to-head trial outcomes that none of the three listed sources can confirm: the NCCN guideline is login-gated, and the third source is a PubMed Central article mislabelled as the NCCN guideline with an ESMO-MCBS score attached. The record also omits TNM staging and survival by stage, and carries many duplicated rows across subtypes, biomarkers, standard of care and history that should be merged. Nothing here is a clinical review and no treatment advice is implied.",
+    "confidence": "low"
+  }
+]

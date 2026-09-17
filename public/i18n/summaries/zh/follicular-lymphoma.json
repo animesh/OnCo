@@ -1,0 +1,6 @@
+{
+  "source_hash": "0b30c9eb8c1518e544386f1d3acaae9f061d6585628f3dc2cbd74f23b0f8c0f9",
+  "text": "滤泡性淋巴瘤（FL）是一种惰性生发中心B细胞淋巴瘤，其特征为约85%的患者存在t(14;18)所致的BCL2过表达，并常见CREBBP、KMT2D和EZH2突变。目前中位生存期已超过15-20年，因此关键问题在于何时开始治疗、如何避免过度治疗，以及如何管理约20%在24个月内进展（POD24）的患者和每年2-3%转化为弥漫大B细胞淋巴瘤（DLBCL）的患者。\n\n无症状、低肿瘤负荷的患者采取观察等待或rituximab单药治疗；有症状或高肿瘤负荷的患者接受抗CD20单抗（rituximab或obinutuzumab）联合bendamustine、CHOP或CVP，或联合lenalidomide（R²，RELEVANCE），通常随后进行抗CD20单抗维持治疗（PRIMA）。复发患者拥有淋巴瘤中最丰富的治疗选择：lenalidomide联合rituximab（AUGMENT）、CD20×CD3双特异性抗体（mosunetuzumab 2022年，epcoritamab 2024年，odronextamab 欧盟）、CD19 CAR-T（axicabtagene 2021年，tisagenlecleucel 2022年，lisocabtagene 2024年）、zanubrutinib联合obinutuzumab（ROSEWOOD，2024年），以及历史上曾使用的放射免疫治疗。Tazemetostat（EZH2抑制剂）已于2026年3月在全球撤市。\n\n尚待解决的问题包括：双特异性抗体或CAR-T是否应前移至二线甚至一线治疗（EPCORE FL-1，MorningSun）、PET/ctDNA指导的治疗降阶梯，以及基于生物学的POD24和转化预测。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

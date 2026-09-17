@@ -1,0 +1,6 @@
+{
+  "source_hash": "bb7c10fc2423e9d1ac7ff6be2666d08cf3c9525eecf12b045473e834ebe39b7f",
+  "text": "HER2阳性乳腺癌（占病例的15-20%；HER2 IHC 3+ 或 ISH 扩增）曾是侵袭性最强的亚型，直到 trastuzumab（1998年）使其成为最可治疗的亚型之一。现代根治性治疗路径是根据疗效调整的：新辅助化疗联合双重HER2阻断（或自2026年起，先用 T-DXd 再序贯 THP），手术，随后对达到病理完全缓解的患者完成抗体治疗，对有残留病灶的患者使用 ADC（此前为来自 KATHERINE 研究的 T-DM1，现为来自 DESTINY-Breast05 研究的 T-DXd）。小的淋巴结阴性肿瘤仅用 paclitaxel-trastuzumab 即可治愈；PHERGain 研究显示，早期 PET 应答可使三分之一的患者完全免于化疗。延长辅助 neratinib 和辅助 pertuzumab 在较高风险的淋巴结阳性疾病中带来小幅获益。\n\n转移性疾病经历了两次变革：先是 CLEOPATRA 研究中的 pertuzumab（OS 57个月），随后是 trastuzumab deruxtecan，其在二线以显著优势胜过 T-DM1（DESTINY-Breast03），并在一线胜过 THP（DESTINY-Breast09，PFS 40.7个月；2025年获批）。多达一半的患者会发生脑转移，现在可用 tucatinib（HER2CLIMB）和 T-DXd（DESTINY-Breast12）进行全身治疗。HER2CLIMB-05（tucatinib 维持治疗）和 PATINA（HR+/HER2+ 患者中的 palbociclib 维持治疗，2026年获批）强化了不含化疗的维持治疗，一批中国的 HER2 ADC（trastuzumab rezetecan、BL-M07D1、ARX788、disitamab vedotin）正在产生与 Enhertu 相当的结果。\n\n尚未解决的问题包括 T-DXd 之后 HER2 ADC 的序贯（载荷交叉耐药）、间质性肺病、多年治疗中的心脏毒性、抗体治疗的费用和持续时间、脑转移的预防，以及降阶梯治疗：识别出相当大比例接受了过度治疗的患者。研发管线的特点是 T-DXd 进入每一个根治性治疗场景、基于 tucatinib 的维持治疗、新一代和双互补位 HER2 ADC（zanidatamab zovodotin）、HER2 CAR-T 和疫苗，以及基于影像学和 ctDNA 调整的降阶梯试验。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

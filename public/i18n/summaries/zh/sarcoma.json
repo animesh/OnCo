@@ -1,0 +1,6 @@
+{
+  "source_hash": "288cdc75b90d2956514c1607f40ebee54be7804aa117e04c0f2647172a8e1b1f",
+  "text": "肉瘤是结缔组织来源的癌症：包括70余种亚型的软组织肉瘤（脂肪肉瘤、平滑肌肉瘤、未分化多形性肉瘤、滑膜肉瘤、血管肉瘤等）、骨的肉瘤（骨肉瘤、尤文肉瘤、软骨肉瘤）、胃肠间质瘤（GIST），以及局部侵袭性但不发生转移的肿瘤，如硬纤维瘤病和腱鞘巨细胞瘤。总体而言，肉瘤约占成人癌症的1%和儿童癌症的15%。由于每种亚型均较罕见，专业经验集中于专科诊疗中心，治疗也日益按组织学类型和基因型进行：FNCLCC分级、大小和深度决定软组织肉瘤的风险；KIT/PDGFRA突变决定GIST的治疗；融合基因（SS18-SSX、EWSR1-FLI1、FUS-DDIT3）界定疾病实体，并越来越多地成为治疗靶点。\n\n切缘阴性的手术仍是根治性治疗手段，保肢手术现已成为标准，放疗可改善软组织肉瘤的局部控制。新辅助蒽环类联合ifosfamide对高危局限期软组织肉瘤有益（ISG-STS 1001），多药联合化疗可治愈大多数局限期骨肉瘤（MAP）和尤文肉瘤（VDC/IE，INT-0091和Euro Ewing 2012）。晚期软组织肉瘤仍依赖doxorubicin，中位生存期约为18-20个月；olaratumab的失败（ANNOUNCE）显示了这一标准多么难以突破。随后由亚型特异性药物补充：trabectedin和eribulin用于L型肉瘤，pazopanib用于非脂肪源性肉瘤；在GIST中，依次为imatinib（辅助治疗3年，SSGXVIII）、sunitinib、regorafenib和ripretinib（INVICTUS），avapritinib用于PDGFRA D842V，ctDNA基因型指导的药物选择（INSIGHT）也即将到来。硬纤维瘤获得了首个药物nirogacestat（DeFi，2023年），腱鞘巨细胞瘤获得了第二个药物vimseltinib（MOTION，2025年2月）；用于上皮样肉瘤的tazemetostat因继发性血液肿瘤于2026年3月在全球撤市。\n\n肉瘤也是实体瘤T细胞工程疗法首次取得成功的领域：afamitresgene autoleucel（MAGE-A4 TCR-T）于2024年获批，并于2026年6月获得完全批准且扩展至青少年，letetresgene autoleucel（NY-ESO-1）的生物制品许可申请（BLA）预计于2026年底前提交。免疫检查点抑制剂对少数患者有效（腺泡状软组织肉瘤、UPS、血管肉瘤）；大多数肉瘤在免疫学上属于\"冷\"肿瘤。尚未解决的问题包括转移性骨肉瘤和尤文肉瘤（30年来生存率未变）、TCR疗法的HLA限制性、大多数成人亚型的化疗耐药，以及在每年仅数百例病例的疾病中开展临床试验的可行性。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

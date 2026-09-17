@@ -1,0 +1,6 @@
+{
+  "source_hash": "16923f8585da4842a92dccbe36398d431a407066ad50b15aeb9447b32a0ec69c",
+  "text": "胃癌及胃食管结合部腺癌在早期发现时可以治愈：日本和韩国开展内镜筛查，多数病例得以治愈。该病每年新发病例约100万例，集中于东亚、东欧和拉丁美洲，这些地区幽门螺杆菌感染、高盐饮食和吸烟是发病率的主要驱动因素；在其他地区，三分之二的患者确诊时已为晚期，因此该病每年导致66万例死亡，在未开展筛查的人群中五年生存率不足30%。生物学上按Lauren分型（肠型与弥漫型）和TCGA分类（EBV阳性型、MSI型、基因组稳定型、染色体不稳定型）划分，临床上则按三个可干预的生物标志物划分：HER2（约15-20%）、PD-L1（CPS ≥5者约占60%）和Claudin 18.2（按获批阈值约38%），另有FGFR2b、MSI和EBV作为进一步的分层依据。\n\n局限期疾病采用胃切除术加D2淋巴结清扫，联合围手术期化疗：西方采用FLOT方案，亚洲采用辅助S-1或CAPOX方案。MATTERHORN研究（2025年）在FLOT基础上加用durvalumab，成为首个带来总生存获益的围手术期免疫治疗（3年OS 68.6%）。晚期疾病在诊断时进行分层：HER2阳性肿瘤接受trastuzumab + 化疗 + pembrolizumab（KEYNOTE-811），或在HERIZON-GEA-01之后接受zanidatamab + 化疗 ± tislelizumab；HER2阴性、PD-L1 CPS ≥5的肿瘤接受nivolumab或pembrolizumab联合化疗（CheckMate 649 5年OS 16%对6%）；CLDN18.2阳性肿瘤接受zolbetuximab + 化疗（SPOTLIGHT/GLOW）。二线治疗：HER2阳性疾病采用T-DXd（DESTINY-Gastric04，OS 14.7个月对11.4个月），其他情况采用ramucirumab + paclitaxel，自2026年起可采用CLDN18.2 ADC药物sonesitatug vedotin（CLARITY-Gastric 01）。三线治疗：trifluridine/tipiracil。\n\n前沿方向包括Claudin 18.2（ADC、已在中国获批的CAR-T药物satri-cel、双特异性抗体）、生物标志物重叠与四药联合方案、针对最常见复发部位的腹膜靶向治疗、FORTITUDE-101结果不一致之后的FGFR2b，以及ctDNA指导的围手术期策略。弥漫型和基因组稳定型肿瘤仍是最难治疗的亚组。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

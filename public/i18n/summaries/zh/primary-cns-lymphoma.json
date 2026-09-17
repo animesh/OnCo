@@ -1,0 +1,6 @@
+{
+  "source_hash": "7d96110cf12d97172598f422b650f70253b288c1e055eed4d7018cb8383a8a12",
+  "text": "PCNSL几乎总是活化B细胞型弥漫大B细胞淋巴瘤，几乎普遍存在MYD88 L265P和CD79B突变以及9p24（PD-L1）扩增。临床表现为局灶性神经功能缺损或认知改变；诊断需要在使用糖皮质激素之前进行立体定向活检，并同时进行眼科检查和脑脊液细胞学/流式细胞术检查。\n\n诱导治疗为大剂量methotrexate（≥3 g/m²）联合cytarabine、thiotepa和rituximab（MATRix，IELSG32），或联合temozolomide/procarbazine（R-MPV）。大剂量化疗联合自体移植的巩固治疗在疗效上与全脑放疗相当或更优，且神经毒性远低于后者（IELSG32，PRECIS），因此放疗仅用于不适合强化治疗的患者或作为挽救治疗。老年患者接受以methotrexate为基础的方案并进行维持治疗（temozolomide、lenalidomide或ibrutinib）。复发疾病对ibrutinib、lenalidomide和PD-1阻断治疗有短暂缓解；CD19 CAR-T可进入中枢神经系统，在小样本系列中观察到缓解。\n\n尚未解决的问题包括神经毒性、占多数且无法接受强化治疗的老年患者，以及诱导治疗之后缺乏经随机试验确立的标准治疗。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

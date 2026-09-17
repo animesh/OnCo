@@ -7,9 +7,11 @@ All notable changes to OnCo are recorded here. The format follows [Keep a Change
 Regenerated from the commit log each time the site ships (`scripts/changelog-sync.ts`); the version sections below are written by hand when a release is cut.
 
 ### 17 September 2026
-- Every record has its own RDF Turtle file at /api/v1/rdf/<id>.ttl, linked from the page head, the hidden machine links, JSON-LD, the OpenAPI document and llms.txt
+- Machine translation pipeline for record summaries with hash-checked cache and a report link; 157 Chinese summaries live (every cancer page and nine glossary terms) and two Spanish; model review panel populated for twenty cancers by Fable, each verdict tied to the record's own sources
 - Navigation starts at the top of the page (scroll attribute on the html tag); footer credit Made with heart and soul by Jude Gomila with Mount Tamalpais and Golden Gate icons in nine languages; roadmap rows 130 to 137
 - Every list row has a visual or a designed stand-in (ideas borrow their cancer icon, technology drawing or molecule), with a test so it cannot regress; I-SPY 1, I-SPY 2, I-SPY 2.2, WISDOM and Quantum Leap Healthcare Collaborative linked to Laura Esserman and UCSF; navigation starts at the top of the page; Enter in search opens the results page; roadmap rows 122 to 129
+- Every record has its own RDF Turtle file at /api/v1/rdf/<id>.ttl, linked from the page head, the hidden machine links, JSON-LD, the OpenAPI document and llms.txt
+- Machine-translated summaries: cached per record and language under public/i18n/summaries, shown only while the English hash matches, marked as machine translated with a report link and an English toggle; prioritised batch script with a fetch call to the Messages API and a validator for NCT ids, doses, gene symbols and leftover English; hand-written Spanish and Chinese examples for pCR; coverage script counts them
 - Per-record RDF: one Turtle file per record at /api/v1/rdf/<id>.ttl, linked from every record page
 - For me from a real situation: setting, biomarkers, treatments had, country and trial interest drive what is standard, what your biomarkers change, trials that fit, warnings and questions, all from record fields with sources; dependency map renders identically on server and client
 - Theme stays light even when React recovers from a hydration mismatch; the counts grid fills its rows again with twenty kinds

@@ -1,0 +1,6 @@
+{
+  "source_hash": "7a9d47d4ae516fdd6b9b0616fac955ad253f0685608465b7cc706d6111130996",
+  "text": "涎腺癌越来越多地以融合基因来定义：腺样囊性癌（ACC）中的MYB-NFIB，黏液表皮样癌中的CRTC1-MAML2，分泌性癌中的ETV6-NTRK3，多形性腺瘤癌变中的PLAG1/HMGA2融合，以及涎腺导管癌（SDC）中的雄激素受体和HER2。腺样囊性癌是进展缓慢但持续不断的疾病的典型代表，伴有神经周围侵犯和晚期肺转移；涎腺导管癌具有侵袭性，类似于大汗腺型乳腺癌。\n\n对于局限性疾病，手术联合术后放疗（不可切除的ACC可采用中子/碳离子治疗）是标准治疗；RTOG 1008试验检验了加用cisplatin的效果。系统治疗按亚型进行：HER2阳性SDC采用trastuzumab-docetaxel或T-DXd；AR阳性SDC采用雄激素剥夺治疗（leuprorelin ± bicalutamide、enzalutamide）；ETV6-NTRK3分泌性癌采用larotrectinib或entrectinib；进展性ACC采用lenvatinib、axitinib或rivoceranib（客观缓解率约10-15%，疾病控制率高）；其他类型采用化疗（CAP、carboplatin-paclitaxel）。免疫检查点抑制剂活性较低，仅在少数高TMB或PD-L1表达的患者中例外。Notch突变型ACC（约15%，侵袭性强）是gamma-secretase抑制剂的靶点。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

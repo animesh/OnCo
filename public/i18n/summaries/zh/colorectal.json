@@ -1,0 +1,6 @@
+{
+  "source_hash": "4bc0dd9ba54b540fcca1a88998ec5422d86584e80493dc909956db32b4b8e5a6",
+  "text": "结直肠癌是筛查效果最好的疾病：在结肠镜检查中切除腺瘤可以预防癌症，粪便和血液检测可以早期发现，局限期疾病可通过手术治愈。它是全球第三常见的癌症（每年约190万例），并且由于许多病例仍在晚期才被发现，是癌症死亡的第二大常见原因（每年90万例）。大多数病例通过腺瘤-癌序列发生，由 APC 缺失、KRAS 突变和 TP53 缺失驱动（染色体不稳定）；约15%通过错配修复缺陷（dMMR/MSI-H）发生，或为散发性、经由 MLH1 甲基化，或源于林奇综合征。50岁以下成人的发病率正在急剧上升，原因尚不清楚。\n\n治疗按生物学特征分路。局限期疾病通过手术治愈，III期患者接受 FOLFOX 或 CAPOX 辅助化疗（低风险疾病3个月即可），并且自 ATOMIC（2025）起，dMMR 的 III期患者加用 atezolizumab。直肠癌采用包含放化疗的全程新辅助治疗，并越来越多地采用器官保留；dMMR 直肠癌可以用6个月的 dostarlimab 治疗而完全不做手术（AZUR-1，FDA 优先审评）。转移性疾病按 RAS、BRAF、HER2、MSI 和原发部位（左半或右半）分层：左半 RAS/BRAF 野生型肿瘤接受化疗联合 EGFR 单抗（PARADIGM）；其他患者接受 bevacizumab；BRAF V600E 疾病一线接受 encorafenib + cetuximab + 化疗（BREAKWATER，总生存期翻倍至30个月）；KRAS G12C 疾病接受 sotorasib 或 adagrasib 联合 EGFR 单抗；HER2 扩增疾病接受 tucatinib + trastuzumab 或 T-DXd；dMMR 疾病一线接受 pembrolizumab 或 nivolumab + ipilimumab，5年生存率超过50%。后线治疗：trifluridine/tipiracil + bevacizumab（SUNLIGHT）、fruquintinib（FRESCO-2）、regorafenib。局限于肝脏的转移灶在少数但不可忽视的一部分患者中可以根治为目的进行切除或消融。\n\n尚未解决的问题：95%的转移性肿瘤为微卫星稳定型，仍对免疫治疗耐药；KRAS G12D（最常见的突变）尚无靶向药物；早发性结直肠癌既无解释也无筛查手段；ctDNA 能够识别术后将会复发的患者，但尚无任何强化治疗策略被证明可以改变这一结局（ALTAIR 结果为阴性）；并且在转移性疾病中，经由 RAS/EGFR 胞外域克隆、MET 扩增和 HER2 扩增产生的抗 EGFR 耐药普遍存在。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

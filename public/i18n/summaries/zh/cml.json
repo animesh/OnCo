@@ -1,0 +1,6 @@
+{
+  "source_hash": "3cf97b6f2f44a3a7ac58977d7bd4c03cc4dbc0b2fe43722666b446f1cc8240fa",
+  "text": "CML的定义特征是费城染色体t(9;22)及其产物，即持续活化的BCR-ABL1酪氨酸激酶。它是癌基因成瘾的典型范例：酪氨酸激酶抑制剂（TKI）可使慢性期患者的预期寿命恢复至接近正常水平，治疗反应通过国际标准化（IS）下的BCR-ABL1定量PCR进行监测，并在第3、6和12个月设有里程碑（ELN 2020）。\n\n一线选择包括imatinib、第二代TKI dasatinib、nilotinib和bosutinib，以及自2024年起的asciminib（ASC4FIRST），后者是首个变构STAMP抑制剂。第二代药物能更快获得更深的反应，但与imatinib相比并未改善总生存；药物选择取决于合并症（nilotinib和ponatinib的心血管风险，dasatinib的胸腔积液）以及无治疗缓解（TFR）这一目标。耐药主要通过ABL1激酶区突变产生；T315I可被ponatinib和asciminib覆盖。异基因移植仅用于急变期或多种TKI治疗失败的患者。\n\n当前的前沿领域是TFR（约半数获得持续深度分子学反应的患者可以停药，EURO-SKI）、更安全的T315I覆盖、亚洲的olverembatinib，以及少数残余的加速期/急变期疾病，其预后仍然较差。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

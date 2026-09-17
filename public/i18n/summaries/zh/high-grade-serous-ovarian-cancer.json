@@ -1,0 +1,6 @@
+{
+  "source_hash": "ae6f038055476044860e2de1755003896bc8bbe0eec7b0d54c91d10f7993d439",
+  "text": "高级别浆液性癌起源于输卵管伞端，在引起症状之前已经扩散至整个腹膜。每例肿瘤均携带TP53突变；约五分之一存在胚系或体系BRCA1或BRCA2突变，约半数为同源重组缺陷，这使其对铂类药物和PARP抑制剂高度敏感。标准治疗是完全的肿瘤细胞减灭术，在三个周期carboplatin-paclitaxel化疗之前或之后进行，高危患者加用bevacizumab，随后进行维持治疗：BRCA突变肿瘤使用olaparib（SOLO-1），所有患者均可使用niraparib（PRIMA），或HRD阳性肿瘤使用olaparib联合bevacizumab（PAOLA-1）。首次复发时，二次手术对经选择的患者有益（DESKTOP III）；铂耐药患者则新增了mirvetuximab soravtansine，用于叶酸受体α高表达的肿瘤。对每位患者进行胚系检测，以及对携带者实施降低风险的输卵管卵巢切除术，均属于标准治疗的一部分。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

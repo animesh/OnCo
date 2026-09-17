@@ -1,0 +1,6 @@
+{
+  "source_hash": "24360176af48ba27ce362eede1eaea3e2a82343b784a94f577417425a14cba6f",
+  "text": "卵巢癌是一组疾病（每年约320,000例新发病例），以高级别浆液性癌为主，该类型起源于输卵管，几乎均为TP53突变，且四分之三的女性在确诊时已为III-IV期，因为目前没有任何症状或筛查手段能够早期发现它。约半数高级别浆液性肿瘤存在同源重组缺陷，其中约20%携带胚系或体细胞BRCA1/2突变。低级别浆液性癌、子宫内膜样癌、透明细胞癌和黏液性癌在生物学上各不相同，对治疗的反应也不同。\n\n标准治疗是最大程度肿瘤细胞减灭术（初始手术，或在新辅助carboplatin-paclitaxel化疗后行中间性手术），有时联合腹腔热灌注化疗（HIPEC），随后根据生物标志物选择维持治疗：BRCA突变患者使用olaparib（SOLO-1，7年总生存率67%对47%），HRD阳性患者使用olaparib联合bevacizumab（PAOLA-1），其余患者使用niraparib，但在PRIMA研究显示无生存获益后热度有所下降。铂敏感复发采用含铂双药化疗，部分经选择的患者可行二次肿瘤细胞减灭术（DESKTOP III）；由于后线治疗出现安全性信号，PARP抑制剂的再次使用已减少。铂耐药疾病历来是最难治疗的情形，如今有三种带来生存获益的新选择：用于FRα高表达肿瘤的mirvetuximab soravtansine（MIRASOL）、relacorilant联合nab-paclitaxel（ROSELLA，2026年获批），以及用于PD-L1阳性肿瘤的pembrolizumab联合每周方案paclitaxel（KEYNOTE-B96，2026年2月获批，是卵巢癌领域首个免疫治疗）。低级别浆液性癌获得了首个专门疗法，即avutometinib联合defactinib（2025年）。\n\n未来方向：不依赖表达水平即可起效的叶酸受体抗体偶联药物（ADC）（rinatabart sesutecan、luveltamab tazevibulin），处于III期的CDH6 ADC（raludotatug deruxtecan），用于PARP耐药疾病的ATR和WEE1抑制剂，以及在输卵管起源已获公认的背景下通过机会性输卵管切除术进行预防。在UKCTOCS之后，筛查问题仍未解决；多癌种血液检测是目前唯一尚存的希望。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

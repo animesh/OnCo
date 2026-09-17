@@ -1,0 +1,79 @@
+[
+  {
+    "recordId": "aml",
+    "model": {
+      "id": "claude-fable-5-1",
+      "name": "Fable",
+      "provider": "Anthropic",
+      "version": "5.1"
+    },
+    "date": "2026-09-17",
+    "verdicts": [
+      {
+        "claim": "ELN 2022 assigns favourable, intermediate, or adverse risk from NPM1, CEBPA, core-binding-factor fusions, FLT3, TP53, KMT2A, and myelodysplasia-related mutations",
+        "stance": "supports",
+        "note": "The ELN 2022 paper defines the three genetic risk groups on exactly this basis: NPM1 without FLT3-ITD and in-frame bZIP CEBPA and CBF fusions as favourable, FLT3-ITD (regardless of allelic ratio or NPM1) as intermediate, and TP53, KMT2A rearrangements other than MLLT3 and the myelodysplasia-related mutation set as adverse. The record's biomarker line 'NPM1 (favourable risk without FLT3-ITD)' matches the source.",
+        "source": {
+          "label": "ELN 2022 recommendations",
+          "url": "https://ashpublications.org/blood/article/140/12/1345/485817"
+        }
+      },
+      {
+        "claim": "Median age 68; about 20,000 new cases a year in the US; 5-year survival is roughly 30% overall",
+        "stance": "supports",
+        "note": "Wikipedia gives a median age at diagnosis of 68, roughly 20,000 US cases a year and a five-year survival of about 29 to 30% in US registry data, consistent with the record's figures.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Acute_myeloid_leukemia"
+        }
+      },
+      {
+        "claim": "120,000 new cases a year worldwide",
+        "stance": "unclear",
+        "note": "Wikipedia reports global prevalence and death figures (around one million affected and roughly 150,000 deaths in 2015) rather than an annual incidence of 120,000, and neither guideline source gives worldwide incidence. The figure may be right but is not settled by the listed sources.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Acute_myeloid_leukemia"
+        }
+      },
+      {
+        "claim": "7+3 plus fractionated gemtuzumab ozogamicin for fit patients with favourable or intermediate-risk, CD33-positive AML",
+        "stance": "supports",
+        "note": "ELN 2022 recommends adding gemtuzumab ozogamicin to 7+3 induction for CD33-positive AML with favourable or intermediate-risk genetics, in line with the record's induction paradigm.",
+        "source": {
+          "label": "ELN 2022 recommendations",
+          "url": "https://ashpublications.org/blood/article/140/12/1345/485817"
+        }
+      },
+      {
+        "claim": "7+3 plus midostaurin (ITD or TKD) or quizartinib (ITD only), Category 1 in NCCN AML 2026",
+        "stance": "unclear",
+        "note": "ELN 2022 recommends midostaurin with intensive chemotherapy for FLT3-mutated AML but predates quizartinib's frontline approval and does not cover it. The NCCN link is a guideline landing page that requires login, so the Category 1 designation and the '2026' version cannot be read from the sources as listed.",
+        "source": {
+          "label": "NCCN AML guidelines",
+          "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1411"
+        }
+      },
+      {
+        "claim": "Since May 2026 the regimen can be fully oral: decitabine-cedazuridine + venetoclax approved 13 May 2026 (ASCERTAIN-V, CR 41.6%)",
+        "stance": "unclear",
+        "note": "None of the three listed sources mentions ASCERTAIN-V, an approval date of 13 May 2026 or a complete remission rate of 41.6%. The same applies to the menin inhibitor dates given (revumenib NPM1 label October 2025, ziftomenib 13 November 2025). These are the record's most time-sensitive claims and rest on sources not in the list.",
+        "source": {
+          "label": "NCCN AML guidelines",
+          "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1411"
+        }
+      },
+      {
+        "claim": "Causes and risk factors of AML (prior chemotherapy and radiation, benzene, antecedent MDS or MPN, Down syndrome and other germline predispositions)",
+        "stance": "missing",
+        "note": "The record describes therapy-related AML as a subtype but says nothing about aetiology or risk factors, which Wikipedia covers in a dedicated section (radiation, benzene, prior chemotherapy, antecedent haematological disorders, genetic syndromes). A cancer-level record would normally include this, and ELN 2022 also lists germline predisposition testing as part of work-up.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Acute_myeloid_leukemia"
+        }
+      }
+    ],
+    "summary": "The record's account of classification and risk stratification matches ELN 2022 closely: the genetic risk groups, the treatment of FLT3-ITD as intermediate irrespective of NPM1, the myelodysplasia-related mutation set and the gemtuzumab recommendation for CD33-positive favourable and intermediate-risk disease are all supported. Epidemiological figures for the US (median age 68, about 20,000 cases, roughly 30% five-year survival) agree with Wikipedia, though the worldwide incidence figure is not found there. The record's centre of gravity, however, is a series of 2023 to 2026 approvals and trial results (quizartinib frontline, revumenib and ziftomenib label dates, the May 2026 all-oral decitabine-cedazuridine plus venetoclax approval, NCCN 'AML 2026' categories, ESMO-MCBS grades) that none of the three listed sources can confirm; the NCCN link is a login page and ELN 2022 predates most of them. Aetiology and risk factors are absent. Editorially, the history list repeats 1973, 2000, 2017 and 2024 as paired entries, openProblems states the TP53 problem twice alongside a bare 'Older patients.', and stateOfArt opens with two fragments, which suggests unmerged drafts rather than factual error.",
+    "confidence": "low"
+  }
+]

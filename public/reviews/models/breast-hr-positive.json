@@ -1,0 +1,88 @@
+[
+  {
+    "recordId": "breast-hr-positive",
+    "model": {
+      "id": "claude-fable-5-1",
+      "name": "Fable",
+      "provider": "Anthropic",
+      "version": "5.1"
+    },
+    "date": "2026-09-17",
+    "verdicts": [
+      {
+        "claim": "HR-positive disease makes up about 70% of the 2.3 million breast cancers diagnosed each year, and there are 670,000 annual breast cancer deaths.",
+        "stance": "supports",
+        "note": "The incidence and mortality totals match the GLOBOCAN 2022 figures given in the Wikipedia article, which also describes roughly 70% of breast cancers as oestrogen receptor-positive.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Breast_cancer"
+        }
+      },
+      {
+        "claim": "Because it can recur late, it accounts for the majority of the 670,000 annual breast cancer deaths.",
+        "stance": "unclear",
+        "note": "None of the listed sources breaks breast cancer mortality down by receptor subtype. The claim is plausible given the subtype's share of cases, but the record cites nothing that quantifies it.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Breast_cancer"
+        }
+      },
+      {
+        "claim": "Since September 2026 camizestrant is switched in at molecular progression on emergent ESR1 mutation (SERENA-6; accelerated approval 4 Sep 2026), which the FDA endorsed over a negative advisory vote.",
+        "stance": "unclear",
+        "note": "The record itself marks NCCN inclusion as pending, and none of the three listed sources documents a September 2026 approval or an advisory committee vote. The same applies to the 2026 vepdegestrant and gedatolisib approvals and the persevERA result; these rest on linked records rather than on any cited source.",
+        "source": {
+          "label": "Guideline (Screening and diagnosis)",
+          "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1419"
+        }
+      },
+      {
+        "claim": "ESMO-MCBS grades such as 'A (monarchE); A (NATALEE)' and '4-5 (MONALEESA-2, -3, -7); 2 (PALOMA-2); 2 (MONARCH 3)' are given under version 'NCCN Guidelines: Breast Cancer'.",
+        "stance": "unclear",
+        "note": "ESMO-MCBS scores are published by ESMO, not by NCCN. The cited PMC article is an NCCN document and would not carry these grades, so the scores cannot be checked against the record's own sources and appear to be attributed to the wrong document.",
+        "source": {
+          "label": "NCCN Guidelines: Breast Cancer (Early stage)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13114725/"
+        }
+      },
+      {
+        "claim": "Screening and diagnosis: mammography ± tomosynthesis; supplemental MRI for dense breasts or high risk, cited to NCCN 'Breast Cancer Screening'.",
+        "stance": "unclear",
+        "note": "The URL given is the same one used for the treatment settings (category=1&id=1419). NCCN publishes screening and diagnosis as a separate guideline, so the reference as written does not clearly point to the document the guideline field names.",
+        "source": {
+          "label": "Guideline (Screening and diagnosis)",
+          "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1419"
+        }
+      },
+      {
+        "claim": "Metastatic second line: genotype-directed capivasertib, inavolisib, alpelisib, everolimus.",
+        "stance": "unclear",
+        "note": "Inavolisib is listed here as a second-line agent, but a later entry in the same record places it in first line for PIK3CA-mutant relapse on or within 12 months of adjuvant endocrine therapy (INAVO120), consistent with the trial described in the linked record. The two settings contradict each other and the cited NCCN document would need to be checked to settle placement.",
+        "source": {
+          "label": "NCCN Guidelines: Breast Cancer (Early stage)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13114725/"
+        }
+      },
+      {
+        "claim": "NCCN Category 1, preferred: adjuvant abemaciclib (monarchE) and ribociclib (NATALEE) in high-risk disease.",
+        "stance": "supports",
+        "note": "The cited NCCN document is the appropriate source for adjuvant CDK4/6 inhibitor recommendations and both agents carry category 1 listings in high-risk early disease. The 'preferred' qualifier and the exact eligibility criteria should be read against the specific guideline version, which the record does not name.",
+        "source": {
+          "label": "NCCN Guidelines: Breast Cancer (Early stage)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13114725/"
+        }
+      },
+      {
+        "claim": "Prognosis and survival by stage for HR-positive / HER2-negative disease.",
+        "stance": "missing",
+        "note": "The record gives a single metastatic median overall survival figure (MONALEESA-2, 63.9 months) and no survival estimates for early-stage or node-positive disease, despite describing the disease as 'slow-evolving' and late-recurring. The Wikipedia article provides stage-based survival that could anchor this, and a cancer record should state expected outcomes.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Breast_cancer"
+        }
+      }
+    ],
+    "summary": "The record's epidemiology and its account of adjuvant CDK4/6 inhibitors are consistent with the listed sources, and the treatment sequence it describes (endocrine plus CDK4/6 first, genotype-directed second line, ADCs before chemotherapy) hangs together. Most of what makes the record distinctive, however, cannot be checked against its three sources: the September 2026 camizestrant approval and advisory vote, the 2026 vepdegestrant and gedatolisib approvals, the ESMO-MCBS grades (which are attributed to an NCCN document that would not contain them), and the claim that HR-positive disease accounts for most breast cancer deaths. Internal problems include heavy duplication (Beatson, tamoxifen, palbociclib, TAILORx, HER2-low and 2026 each appear twice in the history; subtypes, biomarkers and stateOfArt repeat items; two separate 'metastatic first line' settings exist), inavolisib placed in both first and second line, the same NCCN URL used for both screening and treatment settings, and an unexplained 'spike' tag. Stage-based prognosis is absent.",
+    "confidence": "low"
+  }
+]

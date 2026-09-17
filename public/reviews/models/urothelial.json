@@ -1,0 +1,88 @@
+[
+  {
+    "recordId": "urothelial",
+    "model": {
+      "id": "claude-fable-5-1",
+      "name": "Fable",
+      "provider": "Anthropic",
+      "version": "5.1"
+    },
+    "date": "2026-09-17",
+    "verdicts": [
+      {
+        "claim": "Smoking causes about half of cases; three quarters present as non-muscle-invasive disease.",
+        "stance": "supports",
+        "note": "The listed Wikipedia and PDQ pages give tobacco as the leading risk factor responsible for roughly half of cases and put the non-muscle-invasive share at about 70-75% at diagnosis, consistent with the record's summary and subtypes.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Bladder_cancer"
+        }
+      },
+      {
+        "claim": "Erdafitinib remains the only targeted drug, for FGFR3-altered tumours after immunotherapy; enfortumab vedotin + pembrolizumab is the NCCN category 1 preferred first-line metastatic regimen.",
+        "stance": "supports",
+        "note": "The NCCN metastatic bladder cancer summary listed as a source positions EV + pembrolizumab as preferred first-line therapy and erdafitinib as the only biomarker-selected targeted agent (FGFR3 alterations) after prior systemic therapy. The 'esmoMcbs' field cites EV-301 and TROPHY-U-01 rather than EV-302, which does not match the setting described.",
+        "source": {
+          "label": "NCCN Guidelines: Bladder Cancer (Metastatic)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11163648/"
+        }
+      },
+      {
+        "claim": "Durvalumab + BCG became the first systemic immunotherapy in BCG-naive disease (POTOMAC, May 2026).",
+        "stance": "supports",
+        "note": "The record's own FDA approval link is labelled as the May 2026 durvalumab + BCG approval in high-risk NMIBC, which matches the claim. The panel cannot verify the page content beyond its label, and the linked NCCN NMIBC guideline entry ('durvalumab + BCG newly approved') gives no category, so guideline standing is not settled by the sources.",
+        "source": {
+          "label": "FDA: durvalumab + BCG approval (May 2026)",
+          "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-durvalumab-combination-bacillus-calmette-guerin-high-risk-non-muscle-invasive-bladder"
+        }
+      },
+      {
+        "claim": "In 2026 the first blood-test-guided drug approval: adjuvant atezolizumab for ctDNA-positive MIBC (IMvigor011, 2026); EV-303 approved November 2025; EV-304 positive December 2025; TAR-200 approved September 2025.",
+        "stance": "unclear",
+        "note": "None of the five listed sources documents these 2025-2026 regulatory events or the IMvigor011 approval. The claims rest on linked trial and paper records rather than on cited external sources, so they cannot be checked from the record's own sources. The 'first ctDNA-guided approval in any cancer' superlative is also unsupported by any listed source.",
+        "source": {
+          "label": "NCI PDQ: bladder cancer treatment",
+          "url": "https://www.cancer.gov/types/bladder/hp/bladder-treatment-pdq"
+        }
+      },
+      {
+        "claim": "Atezolizumab: first new bladder drug in 30 years (2016).",
+        "stance": "disputes",
+        "note": "The history entry drops the usual qualifier 'for advanced/metastatic disease'. Valrubicin (1998) and BCG (1990) were approved for bladder cancer within that window, as the record's own linked drug records note. The claim should be narrowed to advanced urothelial cancer; the listed sources do not carry the superlative as written.",
+        "source": {
+          "label": "NCI PDQ: bladder cancer treatment",
+          "url": "https://www.cancer.gov/types/bladder/hp/bladder-treatment-pdq"
+        }
+      },
+      {
+        "claim": "The BCG-unresponsive population gained four bladder-sparing options (summary) versus 'Five bladder-sparing options for BCG-unresponsive disease' (stateOfArt).",
+        "stance": "disputes",
+        "note": "The record contradicts itself: the summary counts four approved options and treats cretostimogene as still filing, while stateOfArt counts five by including the unapproved oncolytic virus. The NCCN NMIBC guideline entry in the record labels intravesical options category 2A with cystectomy preferred, so the count of approved options should be made consistent. Duplicate history entries (1976, 2016, 2023, 2026) and duplicated biomarker entries also need consolidation.",
+        "source": {
+          "label": "NCCN Guidelines: Bladder Cancer (NMIBC)",
+          "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1417"
+        }
+      },
+      {
+        "claim": "Upper-tract urothelial carcinoma (renal pelvis, ureter; ~5-10%) is listed as a subtype and named in the record's aka field, but no standard-of-care entry covers it.",
+        "stance": "missing",
+        "note": "The record's alternate name is the PDQ title for renal pelvis and ureter cancer, and PDQ describes nephroureterectomy, kidney-sparing endoscopic management and adjuvant chemotherapy for upper-tract disease. The record has standardOfCare entries only for bladder settings, and mentions upper-tract disease only as under-represented in trials.",
+        "source": {
+          "label": "NCI PDQ: bladder cancer treatment",
+          "url": "https://www.cancer.gov/types/bladder/hp/bladder-treatment-pdq"
+        }
+      },
+      {
+        "claim": "MIBC: Neoadjuvant chemo ± durvalumab → cystectomy → ctDNA-guided atezolizumab or nivolumab.",
+        "stance": "unclear",
+        "note": "This compressed entry implies adjuvant atezolizumab or nivolumab follows perioperative durvalumab, whereas the record's later entry correctly restricts adjuvant IO to patients with 'no perioperative IO'. Neither listed NCCN source addresses sequencing adjuvant checkpoint therapy after perioperative durvalumab, so the entry should be aligned with the more careful one.",
+        "source": {
+          "label": "NCCN Guidelines: Bladder Cancer (NMIBC)",
+          "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1417"
+        }
+      }
+    ],
+    "summary": "The epidemiology (smoking, non-muscle-invasive share, burden figures) and the metastatic standard of care (EV + pembrolizumab preferred first line, erdafitinib as the sole targeted agent) are consistent with the record's listed PDQ, Wikipedia and NCCN sources, and the May 2026 durvalumab + BCG approval is backed by the record's own FDA link. Most of the record's distinctive claims, however, concern 2025-2026 approvals and trial readouts (IMvigor011, EV-303, EV-304, TAR-200, cretostimogene filing) that none of the five cited sources documents, so they cannot be checked here. Internal problems include a four-versus-five count of BCG-unresponsive options, duplicated history and biomarker entries, an overbroad 'first new bladder drug in 30 years' claim for atezolizumab, an MIBC entry that implies stacking adjuvant IO on perioperative durvalumab, and the absence of any standard-of-care entry for upper-tract urothelial carcinoma despite it being the record's alternate name.",
+    "confidence": "low"
+  }
+]

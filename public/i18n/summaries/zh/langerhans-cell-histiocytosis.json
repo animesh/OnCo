@@ -1,0 +1,6 @@
+{
+  "source_hash": "a9456c47ae84f530c0ee06660b70d63cc3c8388411b5e16324b87bda0cf3499e",
+  "text": "LCH 目前被理解为一种炎性髓系肿瘤：来源于单核吞噬细胞系的克隆性细胞携带激活 MAPK 通路的突变，最常见的是 BRAF V600E（约占半数病例）和 MAP2K1，其余病例则携带其他 RAS-MAPK 病变。起源细胞（骨髓或血液中的髓系前体细胞，还是组织中的树突状细胞）决定了病变范围：突变发生较早时导致累及危险器官（肝、脾、骨髓）的多系统疾病，而发生较晚的病变则导致单发骨或皮肤疾病。垂体受累可引起尿崩症，少数儿童因脑内存在突变细胞而在后期发生神经退行性综合征。\n\n治疗按分层进行。单系统骨或皮肤疾病通常仅需活检或刮除术、观察或局部治疗。多系统疾病采用 vinblastine 联合 prednisone 治疗：Histiocyte Society 的 LCH-I 至 LCH-III 试验显示，早期反应可预测生存，且将疗程延长至 12 个月可减少再激活（LCH-III，Blood 2013）；LCH-IV 正在进一步优化疗程，并对无反应者试验强化治疗。累及危险器官且未能快速获得反应的儿童转入挽救治疗（cladribine 联合 cytarabine，或 clofarabine）。对于难治性 BRAF V600E 疾病，vemurafenib 可在几乎所有儿童中产生快速反应（Donadieu，JCO 2019），dabrafenib 联合或不联合 trametinib 也在使用；MEK 抑制剂可覆盖 MAP2K1 及其他突变。靶向治疗的反应率接近 100%，但停药后再激活很常见，因此长期使用抑制剂在幼儿中的持久性和安全性是核心问题。\n\n成人 LCH，包括与吸烟相关的肺 LCH，采用 cladribine 或 cytarabine 以及 MAPK 抑制剂治疗，目前已纳入同一套 Histiocyte Society 和 NCCN 指南。神经退行性 LCH 曾被认为无法治疗，现已证实对 MAPK 抑制有部分反应，这为通过 MRI 早期发现该病提供了依据。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

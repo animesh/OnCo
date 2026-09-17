@@ -1,0 +1,88 @@
+[
+  {
+    "recordId": "sclc",
+    "model": {
+      "id": "claude-fable-5-1",
+      "name": "Fable",
+      "provider": "Anthropic",
+      "version": "5.1"
+    },
+    "date": "2026-09-17",
+    "verdicts": [
+      {
+        "claim": "the settled question of whether MRI surveillance can replace prophylactic cranial irradiation",
+        "stance": "disputes",
+        "note": "The summary calls this a settled question, but the same record lists 'Prophylactic cranial irradiation versus MRI surveillance remains unresolved until SWOG S1827 reads out' among open problems and says MRI surveillance is displacing PCI 'while the definitive trial reads out'. The record contradicts itself; 'unsettled' appears to be the intended wording. The PDQ summary is the listed source that would frame current PCI evidence.",
+        "source": {
+          "label": "NCI PDQ: small cell lung cancer treatment",
+          "url": "https://www.cancer.gov/types/lung/hp/small-cell-lung-treatment-pdq"
+        }
+      },
+      {
+        "claim": "1980: Platinum-etoposide becomes standard; 1985: Platinum-etoposide becomes the standard regimen",
+        "stance": "disputes",
+        "note": "The history gives two different years for the same milestone, and also duplicates IMpower133 (2018), rovalpituzumab tesirine (2019) and tarlatamab approval (2024) as separate entries. One entry per event with a single date is needed; neither listed source is cited for the 1980 or 1985 dating.",
+        "source": {
+          "label": "NCI PDQ: small cell lung cancer treatment",
+          "url": "https://www.cancer.gov/types/lung/hp/small-cell-lung-treatment-pdq"
+        }
+      },
+      {
+        "claim": "Median survival is nearly five years in limited-stage",
+        "stance": "unclear",
+        "note": "The record's own linked ADRIATIC paper entry describes median survival as extended 'from under three years to over four and a half'. 'Nearly five years' (and 'approaching five years' in stateOfArt) rounds that upward, and the burden section applies it to limited-stage disease generally rather than to trial-eligible patients who completed chemoradiotherapy without progression. None of the listed sources is cited for the figure.",
+        "source": {
+          "label": "NCI PDQ: small cell lung cancer treatment",
+          "url": "https://www.cancer.gov/types/lung/hp/small-cell-lung-treatment-pdq"
+        }
+      },
+      {
+        "claim": "full FDA approval November 2025 (tarlatamab); IMforte, October 2025 (lurbinectedin plus atezolizumab maintenance)",
+        "stance": "unclear",
+        "note": "Both regulatory dates are load-bearing for the record's narrative but neither listed source is a regulatory document. The IASLC release concerns first-line maintenance data, not the DeLLphi-304 approval, and the PDQ and NCCN pages are not cited with a version that would confirm these dates.",
+        "source": {
+          "label": "NCI PDQ: small cell lung cancer treatment",
+          "url": "https://www.cancer.gov/types/lung/hp/small-cell-lung-treatment-pdq"
+        }
+      },
+      {
+        "claim": "maintenance intensification with tarlatamab (DeLLphi-305)",
+        "stance": "supports",
+        "note": "The listed IASLC press release addresses tarlatamab plus anti-PD-L1 as first-line maintenance after chemo-immunotherapy in extensive-stage disease, which is the direction described here and in the linked dellphi-305 and chemo-io-then-maintenance-sclc entries. The record correctly frames it as pending rather than established.",
+        "source": {
+          "label": "IASLC: tarlatamab first-line maintenance data",
+          "url": "https://www.iaslc.org/iaslc-news/press-release/tarlatamab-anti-pd-l1-first-line-maintenance-after-chemo-immunotherapy-es"
+        }
+      },
+      {
+        "claim": "Chemoradiation → durvalumab consolidation up to 2 years (ADRIATIC); NCCN category 1",
+        "stance": "supports",
+        "note": "The limited-stage standard of care is attributed to the NCCN Small Cell Lung Cancer guideline, which is the appropriate source for category designations, and the record's linked ADRIATIC entries are consistent with it. The record does however carry two separate 'Limited stage' entries with overlapping content; these should be merged.",
+        "source": {
+          "label": "NCCN Guidelines: Small Cell Lung Cancer (Limited stage)",
+          "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1462"
+        }
+      },
+      {
+        "claim": "about 15% of lung cancers, roughly 250,000 cases a year worldwide",
+        "stance": "unclear",
+        "note": "The 15% share is consistent with the Wikipedia article and the parent lung-cancer record. The absolute figure of 250,000 cases a year is not traceable to any listed source and its derivation is not stated.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Small-cell_carcinoma"
+        }
+      },
+      {
+        "claim": "Relapsed: Tarlatamab (preferred), lurbinectedin, topotecan",
+        "stance": "missing",
+        "note": "Lurbinectedin is listed as a relapsed-disease option and its 2020 accelerated approval appears in the history, but the record does not mention that its confirmatory trial missed its survival endpoint, which the linked ATLANTIS entry describes. That context bears on how the option should be weighed against tarlatamab and topotecan. The biomarker list also names B7-H3 twice and gives the fourth subtype as 'I' in one line and 'YAP1' in another.",
+        "source": {
+          "label": "NCI PDQ: small cell lung cancer treatment",
+          "url": "https://www.cancer.gov/types/lung/hp/small-cell-lung-treatment-pdq"
+        }
+      }
+    ],
+    "summary": "The record gives a coherent account of the three recent advances in small-cell lung cancer (first-line chemo-immunotherapy, durvalumab consolidation in limited stage, and tarlatamab at relapse) and its limited-stage standard of care and forward-looking maintenance claims line up with the NCCN guideline and the IASLC release it lists. Its weaknesses are editorial rather than substantive: the summary calls the PCI versus MRI surveillance question 'settled' while the rest of the record says it is unresolved; the history dates platinum-etoposide to both 1980 and 1985 and duplicates several other milestones; standard-of-care and biomarker lists repeat entries and are inconsistent on the fourth molecular subtype (I versus YAP1). Several precise figures and dates (nearly five-year median survival, 250,000 cases a year, the October and November 2025 approvals) are not traceable to the four listed sources, and the record omits the failed confirmatory trial context for lurbinectedin that its own linked ATLANTIS entry provides.",
+    "confidence": "medium"
+  }
+]

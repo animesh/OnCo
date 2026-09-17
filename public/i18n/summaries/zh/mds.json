@@ -1,0 +1,6 @@
+{
+  "source_hash": "583b3905ed4cb1db558ed587e9cbba43f5eafc0daae92bb0f22ecd8fe3ae2146",
+  "text": "MDS是一组克隆性髓系肿瘤，表现为无效造血、血细胞减少、病态造血，并有不同程度转化为AML的风险。风险分层采用IPSS-R，以及自2022年起的分子IPSS-M，后者纳入了基因突变（31个基因中包括TP53多重打击、ASXL1、RUNX1、SF3B1）。WHO 2022分类和ICC分类定义了以遗传学特征界定的疾病实体（SF3B1突变型、del(5q)、双等位基因TP53），并将该组疾病更名为“骨髓增生异常肿瘤”。\n\n较低危疾病的治疗以贫血为目标：红细胞生成刺激剂、del(5q)患者使用lenalidomide、luspatercept（MEDALIST 2020，COMMANDS 2023用于一线），以及ESA治疗失败后使用imetelstat（IMerge，2024）。较高危疾病使用去甲基化药物（azacitidine、decitabine、口服decitabine-cedazuridine）治疗；对于体能状况良好且有供者的患者，行异基因移植，这是唯一的治愈手段。2023至2024年，三项在azacitidine基础上联合用药的大型3期试验均告失败（magrolimab ENHANCE、sabatolimab STIMULUS-MDS2、venetoclax VERONA），因此azacitidine单药仍是较高危疾病的标准治疗。\n\n尚待解决的问题：TP53突变型MDS、HMA治疗失败后的处理（中位生存期不足六个月），以及如何利用IPSS-M确定移植时机。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

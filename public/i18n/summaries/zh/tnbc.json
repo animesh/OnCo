@@ -1,0 +1,6 @@
+{
+  "source_hash": "3b20ce4bc8550bd4eb049f68d756b851b6c26a13981dec89787167bc251d3b30",
+  "text": "TNBC的定义在于其所缺乏的特征：ER <1%、PR <1%、HER2 0-1+（或2+/ISH阴性）。它在生物学上具有异质性（基底样1型和2型、间质型、管腔雄激素受体型、免疫调节型等亚型），几乎均为TP53突变，常为HRD阳性（约20%为胚系BRCA1/2突变），并且在所有乳腺癌亚型中TROP2表达最高、免疫浸润最多。复发集中在前三年，且倾向于内脏转移和脑转移。\n\n标准治疗在六年内改变了三次。KEYNOTE-522（2020-21年）确立了pembrolizumab联合含carboplatin化疗术前使用、术后继续，作为II-III期疾病的标准治疗，七年总生存率提高7.9个百分点。OlympiA（2021年）为有残留病灶的胚系BRCA突变携带者增加了辅助olaparib。在转移性疾病中，pembrolizumab联合化疗（CPS ≥10）之外又加入了TROP2 ADC：sacituzumab govitecan（ASCENT，二线，2020年；一线ASCENT-03/04，2026年）和datopotamab deruxtecan（TROPION-Breast02，一线、不适合PD-1治疗的患者，2026年，具有总生存获益），而T-DXd则覆盖约35%属于HER2低表达的TNBC。EGFR×HER3双特异性ADC iza-bren于2026年2月公布了双特异性ADC在经治TNBC中的首个阳性3期研究结果。\n\n尚未解决的问题：KEYNOTE-522治疗后的残留病灶（RCB II-III）仍有约40-50%的复发风险；ADC序贯用药（TOP1载荷交叉耐药）尚未被研究；PD-L1阴性的早期疾病没有免疫治疗选择；脑转移；以及间质型/claudin低表达亚型的生物学特性使其对各类药物均耐药。最有前景的方向包括一线ADC联合免疫治疗、以TILs和pCR为指导的降阶梯治疗、ctDNA指导的升阶梯治疗、TROP2 PET筛选、采用非TOP1或双载荷的新一代ADC，以及辅助治疗阶段的个体化疫苗。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

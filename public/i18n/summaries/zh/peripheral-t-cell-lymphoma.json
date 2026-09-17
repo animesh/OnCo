@@ -1,0 +1,6 @@
+{
+  "source_hash": "b1b0ba373c83858969858bdcb57dc9a4922dc54c17de61106486b81c3e2dd81b",
+  "text": "外周T细胞淋巴瘤（PTCL）是一组异质性疾病：非特指型PTCL（PTCL-NOS）、结内滤泡辅助T细胞淋巴瘤（血管免疫母细胞性）、ALK阳性和ALK阴性间变性大细胞淋巴瘤（ALCL）、成人T细胞白血病/淋巴瘤（HTLV-1）、结外NK/T细胞淋巴瘤（EBV）、肠病相关性和肝脾T细胞淋巴瘤，以及皮肤T细胞淋巴瘤（蕈样肉芽肿、Sézary综合征）。除ALK阳性ALCL外，CHOP方案治疗的五年生存率为30-40%。\n\nCHOP或CHOEP仍是基础方案；ECHELON-2（2018）之后，brentuximab vedotin联合CHP在CD30阳性PTCL中取代了CHOP，并成为ALCL的标准治疗。首次缓解期进行自体移植巩固是常见做法，但缺乏随机对照证据。复发性疾病采用pralatrexate（2009）、HDAC抑制剂romidepsin（2009，美国PTCL适应证于2021年撤回）和belinostat（2014）、brentuximab或异基因移植治疗。NK/T细胞淋巴瘤采用以门冬酰胺酶为基础的方案（SMILE、P-GemOx）和放疗；PD-1阻断有效。皮肤T细胞淋巴瘤先采用皮肤靶向治疗，之后使用mogamulizumab（抗CCR4，MAVORIC 2018）、brentuximab（ALCANZA）、bexarotene、体外光化学疗法和异基因移植。\n\n尚待解决：针对TFH淋巴瘤的表观遗传联合治疗（azacitidine-CHOP，ORACLE）、经自相残杀工程改造的CD30/CD7/CD5 CAR-T，以及JAK/STAT抑制剂。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

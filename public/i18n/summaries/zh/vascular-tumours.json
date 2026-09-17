@@ -1,0 +1,6 @@
+{
+  "source_hash": "add78b264551e1f569c8299e6fd45b5be9b60527b237775a6771e47aca549d2a",
+  "text": "恶性和中间型血管肿瘤具有共同的内皮起源，但生物学行为差异显著。血管肉瘤是一种高级别肉瘤，可发生于老年人头皮和面部的日光损伤皮肤、放疗后的乳腺（伴MYC扩增）、淋巴水肿的肢体（Stewart-Treves综合征）或内脏；具有紫外线突变特征的皮肤肿瘤携带高肿瘤突变负荷。上皮样血管内皮瘤（EHE）以WWTR1-CAMTA1融合（少数为YAP1-TFE3）为特征，该融合持续激活Hippo通路效应分子TAZ；病灶常多发于肝、肺和骨，可多年保持稳定。卡波西样血管内皮瘤（KHE）是一种具有淋巴管特征的婴儿期肿瘤，可引发Kasabach-Merritt现象，即一种消耗性凝血病。婴儿血管瘤虽为良性，但与上述疾病列于同一NCI页面，采用propranolol治疗。\n\n局限期血管肉瘤采用广泛切除加放疗；paclitaxel（ANGIOTAX）是首选的一线化疗药物，doxorubicin和以gemcitabine为基础的方案可作为替代，部分病例系列中还加用了propranolol。免疫检查点抑制剂尤其在皮肤头颈部血管肉瘤中可产生缓解（DART SWOG S1609队列，ipilimumab联合nivolumab），这与其紫外线驱动的突变负荷相符。EHE无症状时采取监测，进展时使用sirolimus（mTOR抑制针对肿瘤对TAZ下游PI3K-mTOR信号通路的依赖），孤立性肝脏病变可考虑肝移植。伴Kasabach-Merritt现象的KHE采用sirolimus治疗，在许多中心它已取代vincristine和糖皮质激素成为一线治疗。\n\n机制研究前沿包括阻断EHE中TAZ-TEAD转录复合物的TEAD抑制剂，以及用于血管肉瘤的免疫治疗联合方案。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

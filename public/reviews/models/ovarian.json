@@ -1,0 +1,79 @@
+[
+  {
+    "recordId": "ovarian",
+    "model": {
+      "id": "claude-fable-5-1",
+      "name": "Fable",
+      "provider": "Anthropic",
+      "version": "5.1"
+    },
+    "date": "2026-09-17",
+    "verdicts": [
+      {
+        "claim": "Ovarian cancer accounts for ~320,000 cases per year worldwide ... ~200,000 deaths per year.",
+        "stance": "supports",
+        "note": "The Wikipedia article's global incidence and mortality figures (roughly 314,000 cases and 207,000 deaths in 2020) are consistent with the rounded numbers the record gives.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Ovarian_cancer"
+        }
+      },
+      {
+        "claim": "Germline testing for all patients ... Germline and HRD testing at diagnosis is standard.",
+        "stance": "supports",
+        "note": "The NCCN ovarian cancer guideline recommends germline and somatic testing for patients with epithelial ovarian cancer, which matches the record's prevention and state-of-the-art statements.",
+        "source": {
+          "label": "NCCN Guidelines: Ovarian Cancer (Newly diagnosed)",
+          "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1453"
+        }
+      },
+      {
+        "claim": "Selected secondary cytoreduction at relapse adds ~8 months (DESKTOP III).",
+        "stance": "unclear",
+        "note": "The record's own linked DESKTOP III entry describes the gain as about seven months, so the two figures do not agree and none of the listed sources gives the trial's survival numbers.",
+        "source": {
+          "label": "Guideline (First-line maintenance, BRCA-mutated)",
+          "url": "https://www.esmo.org/guidelines/esmo-clinical-practice-guidelines-gynaecological-cancers/"
+        }
+      },
+      {
+        "claim": "Platinum-resistant setting guideline: 'NCCN Guidelines: Ovarian Cancer' with URL to a PubMed Central article.",
+        "stance": "unclear",
+        "note": "The URL given for the platinum-resistant guideline is a PMC article, not an NCCN page, so it cannot be confirmed from the record that this is the NCCN document or that it covers relacorilant and pembrolizumab as listed.",
+        "source": {
+          "label": "NCCN Guidelines: Ovarian Cancer (Platinum-resistant)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11163648/"
+        }
+      },
+      {
+        "claim": "Pembrolizumab plus weekly paclitaxel ... the first immunotherapy in ovarian cancer (KEYNOTE-B96, approved February 2026).",
+        "stance": "unclear",
+        "note": "None of the listed sources covers a 2026 approval. The record's own linked pembrolizumab entry also notes a 2017 tumour-agnostic approval for mismatch-repair-deficient tumours, which would already have reached MMR-deficient ovarian cancers, so 'first immunotherapy' needs qualifying as first ovarian-specific checkpoint approval.",
+        "source": {
+          "label": "NCCN Guidelines: Ovarian Cancer (Platinum-resistant)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11163648/"
+        }
+      },
+      {
+        "claim": "HIPEC at interval debulking: NCCN category '2A (HIPEC)'.",
+        "stance": "unclear",
+        "note": "The NCCN link is a gated guideline landing page, so the category assigned to HIPEC cannot be checked from the record's sources; the ~12-month survival figure is at least consistent with the linked OVHIPEC-1 entry.",
+        "source": {
+          "label": "NCCN Guidelines: Ovarian Cancer (Newly diagnosed)",
+          "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1453"
+        }
+      },
+      {
+        "claim": "Risk-reducing salpingo-oophorectomy for BRCA carriers (age 35-45).",
+        "stance": "missing",
+        "note": "The record gives a single age range without distinguishing BRCA1 from BRCA2, a distinction the NCCN high-risk assessment guideline makes; the cited URL is a category landing page rather than the guideline itself, so the version cited cannot be confirmed.",
+        "source": {
+          "label": "Guideline (Prevention and risk)",
+          "url": "https://www.nccn.org/guidelines/category_2"
+        }
+      }
+    ],
+    "summary": "The record's epidemiology and its emphasis on universal germline testing are consistent with the Wikipedia article and the NCCN guideline it cites. Most of the substantive clinical claims (SOLO-1 seven-year survival, MIRASOL, ROSELLA, KEYNOTE-B96 and their 2024-2026 approval dates, the PRIMA survival verdict, narrowed later-line PARP labels) rest on linked OnCo records and on gated or landing-page guideline URLs rather than on sources that can be read from the record, so they remain unverified here. Two internal inconsistencies stand out: the DESKTOP III gain is given as about eight months in the record but about seven months in the linked trial entry, and the 'first immunotherapy in ovarian cancer' wording sits awkwardly with the linked pembrolizumab record's 2017 tumour-agnostic approval. The platinum-resistant guideline is labelled NCCN but points to a PMC article. The record also carries duplicated history entries (1996, 2014, 2022, 2026 each appear twice) and duplicated biomarker lines, and the ESMO-MCBS scores for mirvetuximab differ between two settings without explanation.",
+    "confidence": "low"
+  }
+]

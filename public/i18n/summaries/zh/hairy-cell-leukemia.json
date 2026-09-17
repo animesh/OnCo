@@ -1,0 +1,6 @@
+{
+  "source_hash": "bde8b6ca514f7b86d2940f1ccd3db754a21c0d8eac6676d4bd9438953ed0bf1b",
+  "text": "经典型毛细胞白血病（HCL）是一种成熟B细胞肿瘤，具有独特的形态学和免疫表型（CD11c、CD25、CD103、CD123、annexin A1），且几乎所有病例均存在BRAF V600E（Tiacci 2011）；变异型HCL-v不存在BRAF V600E，CD25阴性，预后较差（常伴MAP2K1突变）。患者表现为全血细胞减少、脾大和感染。\n\n嘌啉类似物（cladribine或pentostatin）单一疗程即可使80-90%的患者获得完全缓解，联合rituximab（同步或延迟给药）可加深缓解，并使大多数患者达到MRD阴性（Chihara等）。复发时采用第二个疗程嘌啉类似物联合rituximab治疗；BRAF抑制（vemurafenib ± rituximab）可使多次复发的疾病获得持久缓解（Tiacci 2021，NEJM），BRAF+MEK联合方案也是一种选择。Moxetumomab pasudotox（抗CD22免疫毒素）于2018年获批，2023年退出市场。Ibrutinib具有一定的活性。目前总生存已接近年龄匹配的对照人群。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

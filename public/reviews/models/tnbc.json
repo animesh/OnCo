@@ -1,27 +1,88 @@
 [
   {
     "recordId": "tnbc",
-    "model": { "id": "claude-fable-5-1", "name": "Fable", "provider": "Anthropic", "version": "5.1" },
+    "model": {
+      "id": "claude-fable-5-1",
+      "name": "Fable",
+      "provider": "Anthropic",
+      "version": "5.1"
+    },
     "date": "2026-09-17",
-    "example": true,
-    "confidence": "high",
-    "summary": "Example of the shape a model review takes. The record's standard-of-care table runs from stage I to later-line metastatic disease in five rows, each carrying a guideline reference, and the stage II-III row names the KEYNOTE-522 and OlympiA regimens. The record-level source list is thin: only Wikipedia sits there, with the guideline links kept on the rows.",
     "verdicts": [
-      { "claim": "The standard-of-care table lists five rows, from stage I to later-line metastatic disease.", "stance": "supports", "note": "Five settings are listed: stage I, stage II-III, two first-line metastatic rows split by PD-L1 status, and later lines.", "source": { "label": "NCCN Guidelines: Breast Cancer", "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1419" } },
-      { "claim": "The stage II-III row names neoadjuvant pembrolizumab with chemotherapy (KEYNOTE-522) and adjuvant olaparib for germline BRCA carriers with residual disease (OlympiA).", "stance": "supports", "note": "Both trials are linked from the row and the ESMO-MCBS grades are given for each.", "source": { "label": "NCCN Guidelines: Breast Cancer (PMC)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13114725/" } },
-      { "claim": "The record's own links list holds a single entry, Wikipedia.", "stance": "missing", "note": "Guideline links live on the individual rows; a record-level link to the guideline or a registry would help a reader who skips the table.", "source": { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Triple-negative_breast_cancer" } }
-    ]
-  },
-  {
-    "recordId": "tnbc",
-    "model": { "id": "claude-opus-5", "name": "Astra", "provider": "Anthropic", "version": "5" },
-    "date": "2026-09-17",
-    "example": true,
-    "confidence": "medium",
-    "summary": "Example of the shape a model review takes. The five standard-of-care rows are consistent with the settings they name. Both first-line metastatic rows cite the same trade-press article as their guideline source rather than the guideline text itself, which the panel cannot check from the record's own links.",
-    "verdicts": [
-      { "claim": "The standard-of-care table lists five rows, from stage I to later-line metastatic disease.", "stance": "supports", "note": "The row count and settings match the record text.", "source": { "label": "NCCN Guidelines: Breast Cancer", "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1419" } },
-      { "claim": "Both first-line metastatic rows cite the same Pharmacy Times article as their guideline source.", "stance": "unclear", "note": "A trade-press report stands in for the guideline update it describes; the guideline text is not among the record's own links, so the category 1 wording could not be checked here.", "source": { "label": "Pharmacy Times on the NCCN update", "url": "https://www.pharmacytimes.com/view/a-new-era-in-first-line-metastatic-tnbc-nccn-guidelines-elevate-sacituzumab-govitecan-to-category-1-status" } }
-    ]
+      {
+        "claim": "TNBC is defined by what it lacks: ER <1%, PR <1%, HER2 0-1+ (or 2+/ISH-negative); about 10-15% of breast cancers, more common in younger women, Black women, and BRCA1 carriers.",
+        "stance": "supports",
+        "note": "The Wikipedia article gives the same three-receptor definition and the same demographic associations (younger age, African ancestry, BRCA1 carriers). The exact proportion of breast cancers quoted varies between sources; the record's 10-15% range is within what the article reports and is not contradicted by it.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Triple-negative_breast_cancer"
+        }
+      },
+      {
+        "claim": "NCCN Category 1, preferred: neoadjuvant pembrolizumab + chemotherapy (KEYNOTE-522); adjuvant olaparib for gBRCA Category 2A, preferred; ESMO-MCBS A for both.",
+        "stance": "unclear",
+        "note": "The guideline field for stage II-III is labelled 'NCCN Guidelines: Breast Cancer' but the URL points to a PubMed Central article, not the NCCN guideline itself. A secondary article may summarise NCCN categories accurately, but the record's own source does not let a reader confirm the category and preference wording, nor the ESMO-MCBS grades, directly.",
+        "source": {
+          "label": "NCCN Guidelines: Breast Cancer (Stage II-III)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13114725/"
+        }
+      },
+      {
+        "claim": "Germline BRCA + residual disease: olaparib 1 year (OlympiA).",
+        "stance": "missing",
+        "note": "The record describes OlympiA eligibility only as residual disease after neoadjuvant therapy. The linked OlympiA paper record describes the population as 'high-risk early breast cancer', which in the trial also covered patients treated with adjuvant chemotherapy who met high-risk criteria without neoadjuvant treatment. The stage II-III entry should state both routes to eligibility; the cited guideline source is where this should be settled but the record does not reflect it.",
+        "source": {
+          "label": "NCCN Guidelines: Breast Cancer (Stage II-III)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13114725/"
+        }
+      },
+      {
+        "claim": "Category 1, preferred: sacituzumab govitecan + pembrolizumab (NCCN Breast, February 2026); pembrolizumab + chemotherapy Category 1.",
+        "stance": "unclear",
+        "note": "The cited source is a Pharmacy Times news article whose title matches the claim that NCCN elevated sacituzumab govitecan to Category 1 in first-line metastatic TNBC. A trade-press summary is consistent with the record but is not the guideline document, and the record labels it as the NCCN guideline. The 'preferred' designation and the exact wording of the pembrolizumab-chemotherapy category cannot be verified from the guideline itself via the listed sources.",
+        "source": {
+          "label": "NCCN Guidelines: Breast Cancer (Metastatic, first line, PD-L1 CPS ≥10)",
+          "url": "https://www.pharmacytimes.com/view/a-new-era-in-first-line-metastatic-tnbc-nccn-guidelines-elevate-sacituzumab-govitecan-to-category-1-status"
+        }
+      },
+      {
+        "claim": "Metastatic, first line, PD-L1 negative or PD-1 ineligible: datopotamab deruxtecan (TROPION-Breast02, OS benefit) or sacituzumab govitecan (ASCENT-03), both approved 2026.",
+        "stance": "missing",
+        "note": "The approach lists Dato-DXd first and credits it with an overall survival benefit, but the guideline field gives an NCCN category only for sacituzumab govitecan monotherapy and none for Dato-DXd. The same news article is reused as the source and its title concerns sacituzumab govitecan only. The record should state Dato-DXd's guideline standing, or state that it is not yet in the guideline, so the two agents are not presented as equivalent without support.",
+        "source": {
+          "label": "NCCN Guidelines: Breast Cancer (Metastatic, first line, PD-L1 CPS ≥10)",
+          "url": "https://www.pharmacytimes.com/view/a-new-era-in-first-line-metastatic-tnbc-nccn-guidelines-elevate-sacituzumab-govitecan-to-category-1-status"
+        }
+      },
+      {
+        "claim": "Stage I: TIL-high tumours have >90% 5-year RFS even without chemotherapy (OPTimal, ETNA, TIL-CHOICE cohorts). De-escalation trials ongoing.",
+        "stance": "unclear",
+        "note": "This sits under standardOfCare with the NCCN guideline landing page as its source, yet the record itself says de-escalation trials are ongoing, which marks TIL-guided omission as investigational rather than guideline standard. The cohort names and the >90% figure are not traceable to any of the listed sources or linked records (the linked idea record describes the concept only). The claim should be separated from the guideline-backed statement that chemotherapy is given for T1c or larger tumours.",
+        "source": {
+          "label": "NCCN Guidelines: Breast Cancer (Stage I (T1a-b N0))",
+          "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1419"
+        }
+      },
+      {
+        "claim": "sacituzumab govitecan (ASCENT, second line 2020; first-line ASCENT-03/04 2026)",
+        "stance": "unclear",
+        "note": "The record's own linked ASCENT paper describes patients who had 'already been through at least two treatments', and the 2020 history entry calls it 'pretreated disease'. Labelling the 2020 position as 'second line' is not consistent with that description; whether the 2020 indication covered second-line use is not settled by the listed sources. The Wikipedia article covers the approval but is not specific enough on line of therapy to resolve it.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Triple-negative_breast_cancer"
+        }
+      },
+      {
+        "claim": "KEYNOTE-522 ... with a 7.9-point overall survival gain at seven years; median OS in first-line trials now approaches two years, roughly double the 2015 figure.",
+        "stance": "unclear",
+        "note": "These specific figures (7.9 percentage points at seven years; first-line median OS near two years versus a 2015 baseline) are not supported by any of the four listed sources, which do not report trial-level survival numbers. They may be accurate but the record should attach a primary or guideline citation, since they are the core quantitative claims in the summary and stateOfArt.",
+        "source": {
+          "label": "NCCN Guidelines: Breast Cancer (Stage II-III)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13114725/"
+        }
+      }
+    ],
+    "summary": "The record's definition of TNBC, its epidemiology and its demographic associations are consistent with the Wikipedia source, and the overall narrative (immunotherapy, PARP inhibitors, TROP2 ADCs, HER2-low) matches the linked trial and drug records. The main weakness is sourcing: two of the three 'NCCN Guidelines' entries point to a PubMed Central article and a trade-press news item rather than the guideline, so the category and preference labels, the ESMO-MCBS grades, and the 2026 first-line ADC guideline standing cannot be checked directly. Points that should be added or tightened include OlympiA eligibility (which extended beyond residual disease after neoadjuvant therapy), the guideline status of Dato-DXd in PD-1-ineligible first-line disease, the separation of investigational TIL-guided chemotherapy omission from guideline-backed stage I care, and the line-of-therapy description of the 2020 sacituzumab govitecan approval, which sits awkwardly against the record's own ASCENT description. Quantitative survival figures in the summary are unreferenced by the listed sources.",
+    "confidence": "low"
   }
 ]

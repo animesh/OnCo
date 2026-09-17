@@ -1,0 +1,6 @@
+{
+  "source_hash": "adfabbedb57a1d7a0137150332530b64d77aa1e17cf69630881fa0098a94fbad",
+  "text": "伯基特淋巴瘤是一种成熟B细胞肿瘤，其定义特征是MYC与免疫球蛋白基因位点发生易位，最常见为t(8;14)，并伴有ID3、TCF3和CCND3的协同突变。它有三种流行病学类型：地方性（赤道非洲和巴布亚新几内亚，几乎均为Epstein-Barr病毒阳性，与恶性疟原虫疟疾相关，典型表现为下颌或腹部病变）、散发性（世界各地，通常累及腹部，少数EBV阳性）和免疫缺陷相关性（HIV）。2022年WHO分类将EBV阳性和EBV阴性伯基特淋巴瘤分开。骨髓和中枢神经系统受累界定了最高危组，且在初诊时常见。\n\n治疗为短程、高剂量强度、针对中枢神经系统的多药联合化疗：儿童采用法国LMB和德国BFM方案（cyclophosphamide、vincristine、prednisone、大剂量methotrexate、cytarabine、etoposide、doxorubicin，联合鞘内治疗），成人采用CODOX-M/IVAC或剂量调整EPOCH-R。Inter-B-NHL Ritux 2010试验（NEJM 2020）显示，在高危儿童和青少年中于LMB化疗基础上加用rituximab可改善无事件生存，使rituximab成为儿科标准治疗的一部分。治疗开始时的肿瘤溶解综合征是主要风险，rasburicase、水化和低强度预治疗阶段是这些方案的组成部分。复发不常见但极难治疗；CD19 CAR-T和双特异性抗体正在探索中。\n\n全球形势严峻：在大多数病例发生的撒哈拉以南非洲，治愈率受到就诊延迟、支持治疗能力和强化方案毒性的限制。以cyclophosphamide为基础的方案以及联合rituximab（在可负担的情况下）的改良LMB方案已在马拉维、乌干达等地改善了预后，AfriBL及其他联盟正在测试风险分层、与资源相适应的方案。因此，伯基特淋巴瘤既是可治愈癌症的典范，也是检验治愈能否推广至各地的试金石。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

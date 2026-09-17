@@ -1,0 +1,6 @@
+{
+  "source_hash": "2b832b8033ca3a98b5ea5c3928b59ebda9e64ff023a683be42ea366fd8c2818b",
+  "text": "横纹肌肉瘤（RMS）有两种主要类型：胚胎型（约70%，多见于年龄较小的儿童，RAS通路突变，预后良好）和腺泡型（约25%，多见于青少年，约80%存在PAX3-或PAX7-FOXO1融合，预后不良）。由于融合阴性的腺泡型RMS的生物学行为与胚胎型相似，融合状态已取代组织学类型用于危险度分层。发病部位包括眼眶、脑膜旁头颈部、泌尿生殖系统和四肢等；危险度分组综合考虑部位、大小、淋巴结状态、转移、年龄和融合状态。\n\n治疗方案为北美采用的VAC（vincristine、actinomycin D、cyclophosphamide）或欧洲采用的IVA（ifosfamide），并在约第13周通过手术和/或放疗进行局部控制。主要试验结果：加用irinotecan（VAC/VI，ARST0531）未改善结局，但减少了cyclophosphamide的暴露量；标准治疗后采用vinorelbine-cyclophosphamide维持治疗改善了高危局限期疾病的生存（EpSSG RMS 2005，Lancet Oncol 2019）；化疗联合temsirolimus改善了中危疾病的无事件生存（ARST1431，2024年报告）。转移性疾病（尤其是骨/骨髓转移、年龄>10岁）的生存率低于30%，是FaR-RMS国际试验的研究目标。除低危病例外，复发通常是致命的。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

@@ -1,0 +1,6 @@
+{
+  "source_hash": "14bf3e4fad251c426ee3ef54c3bca50ede1d44a669dc1de4d0561392d2d113b2",
+  "text": "经典型霍奇金淋巴瘤是一种B细胞肿瘤，其中数量稀少的巨大Reed-Sternberg细胞（约占肿块的1%）招募炎性微环境，并借助PD-L1扩增躲避免疫攻击。它在年轻成人中出现发病高峰，并在55岁后再次出现高峰，采用PET-CT和Lugano系统进行分期，总体治愈率超过85%，早期疾病治愈率超过90%。由于大多数患者年轻且将存活数十年，该领域的核心问题不在于治愈，而在于治愈的代价：蒽环类药物所致心脏病、bleomycin所致肺损伤、不孕不育，以及烷化剂和放疗引起的第二原发肿瘤。\n\n正因如此，霍奇金淋巴瘤率先开创了疗效适应性治疗。两个周期后的中期PET（Deauville评分）用于指导降阶梯治疗（RATHL研究中PET2阴性后停用bleomycin；HD16/HD17/RAPID研究中早期患者省略放疗，代价是PFS略有下降）或升阶梯至BEACOPP类方案。随后，两种基于ADC和免疫治疗的方案取代了ABVD用于晚期疾病：brentuximab vedotin-AVD（ECHELON-1，具有总生存获益），以及自2026年3月起的nivolumab-AVD（SWOG S1826，与BV-AVD相比PFS的HR为0.45，神经病变减半，儿童与成人一并纳入）。在欧洲，GHSG HD21研究的PET引导BrECADD方案达到了与升阶梯BEACOPP相当的约94%的PFS，而毒性大为降低。复发患者采用PD-1阻断（KEYNOTE-204研究中pembrolizumab优于brentuximab）、brentuximab、挽救化疗及自体移植治疗，高危患者接受brentuximab巩固治疗（AETHERA）；对于所有治疗均失败的少数患者，异基因移植和CD30 CAR-T是可选方案。\n\n接下来的问题是化疗能被去除到何种程度。AHOD2131研究在儿童和成人早期患者中检验brentuximab-nivolumab；ctDNA可能取代PET用于指导治疗；老年患者的治愈率仅为年轻患者的一半，需要他们能够耐受的方案（nivolumab-AVD、以brentuximab为基础的方案）。对数十年前治愈的数万名患者的生存者照护，以及从放疗向全身治疗降阶梯的转变，仍是该领域独有的关注点。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

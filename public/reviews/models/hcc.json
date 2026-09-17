@@ -1,0 +1,88 @@
+[
+  {
+    "recordId": "hcc",
+    "model": {
+      "id": "claude-fable-5-1",
+      "name": "Fable",
+      "provider": "Anthropic",
+      "version": "5.1"
+    },
+    "date": "2026-09-17",
+    "verdicts": [
+      {
+        "claim": "Hepatocellular carcinoma is the dominant primary liver cancer (~75-85%) and arises in a diseased organ: chronic hepatitis B, hepatitis C, alcohol-related and metabolic (MASLD) cirrhosis account for most cases.",
+        "stance": "supports",
+        "note": "The Wikipedia article describes HCC as the most common primary liver cancer and lists chronic HBV and HCV infection, alcohol-related cirrhosis and non-alcoholic fatty liver disease as the main causes, with cirrhosis of any cause as the common soil. The 75-85% share is consistent with the description of HCC as the large majority of primary liver cancers.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Hepatocellular_carcinoma"
+        }
+      },
+      {
+        "claim": "Aflatoxin exposure as a cause of hepatocellular carcinoma (not mentioned anywhere in the record).",
+        "stance": "missing",
+        "note": "The Wikipedia article lists aflatoxin B1 (a mould toxin in stored grain and nuts) among the established risk factors, acting synergistically with hepatitis B in parts of Africa and Asia. The record's own linked KEGG pathway and the Hollstein p53 paper also reference the aflatoxin signature. Given the record stresses that ~80% of cases occur in Asia and Africa and that prevention is the priority, omitting aflatoxin from summary, subtypes and prevention is a gap.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Hepatocellular_carcinoma"
+        }
+      },
+      {
+        "claim": "Roughly 900,000 liver cancer cases a year worldwide, deaths ~800,000 a year, and it remains the third leading cause of cancer death worldwide.",
+        "stance": "supports",
+        "note": "The Wikipedia article's epidemiology section gives global liver cancer incidence and mortality of this order (GLOBOCAN figures in the high hundreds of thousands) and ranks liver cancer among the top three causes of cancer death. Note the record uses all-liver-cancer figures under an HCC record; the summary says 'it' (HCC) is the third leading cause, which is a slight conflation, though HCC dominates the total.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Hepatocellular_carcinoma"
+        }
+      },
+      {
+        "claim": "IMbrave150 OS 19.2 vs 13.4 months; HIMALAYA five-year survival 19.6% vs 9.4%; CheckMate 9DW median OS 23.7 months (approved 2025); CARES-310 OS 23.8 vs 15.2 months.",
+        "stance": "unclear",
+        "note": "Neither listed source carries these trial-level figures. The Wikipedia article notes that atezolizumab plus bevacizumab became a first-line option after showing superiority to sorafenib, and mentions durvalumab-tremelimumab, but it does not give these medians or landmark percentages, and the NCCN page is a guideline landing page rather than a results table. The numbers cannot be checked from the record's own sources.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Hepatocellular_carcinoma"
+        }
+      },
+      {
+        "claim": "NCCN Category 1 (preferred) for all three IO regimens first line; Category 2A for second-line agents after immunotherapy.",
+        "stance": "unclear",
+        "note": "The NCCN Hepatocellular Carcinoma guideline is the right source for these category assignments and the panel accepts that it lists atezolizumab-bevacizumab, tremelimumab-durvalumab and nivolumab-ipilimumab as first-line options. However, the record does not state which NCCN version it read, the guideline is behind a login, and category levels change between versions, so the exact 'Category 1 preferred for all three' and '2A after IO' wording is not settled by the listed URL. The Prevention entry also cites 'NCCN Hepatobiliary Cancers', a title NCCN split into separate HCC and biliary guidelines, which suggests mixed versions.",
+        "source": {
+          "label": "NCCN Guidelines: Hepatocellular Carcinoma (Early)",
+          "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1514"
+        }
+      },
+      {
+        "claim": "Camrelizumab plus rivoceranib has received three FDA complete response letters for manufacturing reasons, most recently in July 2026; LEAP-012's final overall-survival hazard ratio is 0.98; EMERALD-3 positive for PFS in 2026; IMbrave050 update negative.",
+        "stance": "unclear",
+        "note": "These are dated 2025-2026 events that neither the Wikipedia article nor the NCCN landing page can be expected to document, and the record supplies no primary citation for them. They are internally consistent with the linked drug record (CRLs in 2024 and 2025 followed by a third) but remain unverifiable from the sources listed. The record should attach a dated reference for each.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Hepatocellular_carcinoma"
+        }
+      },
+      {
+        "claim": "Sorafenib (SHARP, 2007) was the only option for a decade.",
+        "stance": "unclear",
+        "note": "The record dates SHARP to 2007 in the summary and twice in the history, while its own linked SHARP trial record calls it 'the 2008 trial'; sorafenib's approval and the SHARP publication straddle 2007-2008, so the record should pick one convention and say which (approval vs publication). More broadly the history has duplicate 2007 and 2020 entries, standardOfCare has three overlapping tiers for early, intermediate and advanced disease, and AFP appears twice in biomarkers; these should be merged.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Hepatocellular_carcinoma"
+        }
+      },
+      {
+        "claim": "How hepatocellular carcinoma is diagnosed (multiphase CT or MRI with characteristic arterial enhancement and washout, allowing diagnosis without biopsy in cirrhosis).",
+        "stance": "missing",
+        "note": "The record covers surveillance and staging in detail but never states how a diagnosis is made. The Wikipedia article devotes a section to diagnosis by contrast imaging, with biopsy reserved for indeterminate lesions, and this non-invasive pathway is unusual among solid tumours and relevant to the record's own points about surveillance and BCLC allocation.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Hepatocellular_carcinoma"
+        }
+      }
+    ],
+    "summary": "The record's core framing is sound and matches the Wikipedia article: HCC is the dominant primary liver cancer, arises in livers damaged by HBV, HCV, alcohol or fatty liver disease, carries a global burden of roughly 900,000 cases and 800,000 deaths a year, and is treated by stage with resection, ablation, transplant, TACE and, for advanced disease, immunotherapy doublets, in line with the NCCN guideline it cites. What is missing is aflatoxin as an established cause, which matters for a record that stresses African and Asian burden and prevention, and any account of imaging-based diagnosis. What cannot be settled is most of the numeric and dated material: the trial medians and five-year percentages, the specific NCCN category levels and version, and the 2025-2026 events (three FDA complete response letters, LEAP-012 final OS HR 0.98, EMERALD-3, IMbrave050 update) all sit outside the two listed sources and carry no primary citation. There are also internal tidiness problems: duplicate history entries for 2007 and 2020, three overlapping sets of standard-of-care tiers, AFP listed twice, and a SHARP date that conflicts with the record's own linked trial entry.",
+    "confidence": "low"
+  }
+]

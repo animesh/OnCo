@@ -1,0 +1,6 @@
+{
+  "source_hash": "d6a0f81387f8b298f6417ab259cd989bfd6412141dc735dad687778fa5cc8057",
+  "text": "弥漫大B细胞淋巴瘤是最常见的侵袭性淋巴瘤，约占全部非霍奇金淋巴瘤的30%，中位年龄约为65岁。该病可治愈：R-CHOP方案（rituximab联合cyclophosphamide、doxorubicin、vincristine、prednisone）可治愈约60%的患者，IPI低的患者治愈率更高，具有高危特征（IPI 3-5分、MYC/BCL2双打击重排、活化B细胞来源、TP53缺失）的患者治愈率更低。分期采用PET-CT和Lugano分类；生物学特征通过细胞起源以及MYC、BCL2和BCL6的FISH检测来判读，基因分类器（LymphGen）和ctDNA正在兴起。\n\n一线治疗二十年间停滞不前，直到POLARIX研究（2022年）显示，以CD79b抗体药物偶联物（ADC）polatuzumab vedotin替代vincristine可改善无进展生存期（5年无进展生存率64.9%对59.1%）；frontMIND研究（Lancet 2026）显示，在R-CHOP基础上加用tafasitamab联合lenalidomide可改善IPI 3-5分患者的无进展生存期（HR 0.75）；epcoritamab联合R-CHOP（EPCORE DLBCL-2）和golcadomide联合R-CHOP（GOLSEEK-1）紧随其后。对于30%-40%复发的患者，治疗序列已围绕T细胞重定向重新构建：对于一年内复发的患者，CD19 CAR-T（axi-cel、liso-cel）优于挽救化疗加移植（ZUMA-7研究显示总生存获益；TRANSFORM研究），而移植仍适用于较晚发生的化疗敏感复发。现货型CD20×CD3双特异性抗体（glofitamab、epcoritamab、mosunetuzumab、odronextamab）可使约40%经多线治疗的患者获得完全缓解，mosunetuzumab-polatuzumab（SUNMO）等无化疗双药方案优于挽救化疗。CD19 ADC（loncastuximab）、tafasitamab-lenalidomide以及ROR1 ADC zilovertamab vedotin用于更后线的治疗。\n\n尚待解决的问题既是监管层面的，也是科学层面的。EPCORE DLBCL-1研究（2026年）与化疗相比改善了无进展生存期但未改善总生存期；STARGLO研究的生存获益因试验受试者主要在亚洲入组而被FDA拒绝。尚无双特异性抗体与CAR-T的头对头比较。ctDNA（PhasED-seq）对治愈的预测优于PET，是实现基于应答调整的一线治疗的理想工具。原发难治性疾病、中枢神经系统复发、老年及体弱患者，以及大型中心以外CAR-T的可及性，仍是难题。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

@@ -1,0 +1,6 @@
+{
+  "source_hash": "6de74a03d60e72c53cf68be87661744a120a60a42b8ba9b253e78ad18e7b3bd2",
+  "text": "GIST起源于Cajal间质细胞，携带KIT激活突变（约75%，多为第11外显子，部分为第9外显子）或PDGFRA突变（约10%，包括对imatinib耐药的D842V）；其余为SDH缺陷型（年轻患者，Carney-Stratakis综合征）、NF1相关型或BRAF/NTRK驱动型。切除术后的风险根据肿瘤大小、核分裂象计数和部位进行评估（Miettinen/AFIP标准、改良NIH标准）。\n\n手术是唯一的治愈手段；对高危患者，imatinib辅助治疗三年可改善生存（SSGXVIII），五年或更长时间的辅助治疗正在研究中。晚期GIST依次采用imatinib（400 mg；第9外显子突变者800 mg），随后为sunitinib（2006年）、regorafenib（2013年）和ripretinib（INVICTUS，2020年）；avapritinib是针对PDGFRA D842V的药物（2020年）。耐药源于KIT继发突变，位于ATP结合口袋（第13/14外显子）或激活环（第17/18外显子），且在不同病灶之间存在异质性，这正是单药新一代抑制剂进展艰难的原因（INTRIGUE：ripretinib总体上不优于sunitinib，但在ctDNA定义的第11外显子+第17/18外显子突变患者中更优，目前正在INSIGHT研究中验证），也是联合治疗（bezuclastinib + sunitinib，Peak研究）和ctDNA指导下的药物选择成为当前策略的原因。SDH缺陷型GIST对TKI不敏感且生长缓慢；temozolomide对其有一定活性。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

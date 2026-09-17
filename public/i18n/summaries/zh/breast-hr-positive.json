@@ -1,0 +1,6 @@
+{
+  "source_hash": "39b1addbdcc182f902a4c70e07d52e042d9ebae7cc20f8c0c2e1a3909df3f5ee",
+  "text": "激素受体阳性、HER2阴性乳腺癌约占全部乳腺癌的70%，是激素驱动、缓慢演进疾病的典型代表。雌激素受体信号通路驱动增殖，因此自tamoxifen（1977年）和芳香化酶抑制剂（20世纪90年代）以来，内分泌治疗一直是治疗基石；由于复发可发生在诊断后10至20年，治疗持续5至10年，用药依从性是真实世界中影响结局的主要决定因素。基因表达检测（Oncotype DX、MammaPrint）目前可使约70%的淋巴结阴性患者和大多数绝经后淋巴结阳性患者免于化疗，而辅助CDK4/6抑制剂（abemaciclib、ribociclib）可降低高危少数患者的复发风险。\n\n转移性疾病按一系列以内分泌治疗为基础的联合方案序贯治疗。一线治疗为CDK4/6抑制剂联合内分泌治疗，其中ribociclib和abemaciclib显示出总生存获益，而palbociclib未显示。疾病进展后的治疗越来越多地依据基因型：ctDNA中检出的ESR1突变（芳香化酶抑制剂治疗后为30%至40%）提示使用口服SERD（elacestrant、imlunestrant）或PROTAC类药物vepdegestrant，且自2026年9月起可在分子进展时换用camizestrant；PIK3CA/AKT1/PTEN变异（约50%）提示使用inavolisib、capivasertib或alpelisib；gedatolisib（2026年）在PIK3CA野生型疾病中有效。内分泌治疗选择用尽后，抗体药物偶联物先于化疗使用：T-DXd用于约60%的HER2低表达或超低表达患者，以及TROP2 ADC类药物sacituzumab govitecan和datopotamab deruxtecan。\n\n尚待解决的问题包括：在这一漫长的序贯治疗过程中耐药性的演变（先是CDK4/6耐药，然后是内分泌耐药，再是ADC载荷耐药）、缺乏经验证的晚期复发检测方法、多年治疗中的毒性和依从性问题，以及将ctDNA指导的决策转化为经证实的生存获益。近期的研发管线以口服SERD进入辅助治疗（lidERA为阳性结果；CAMBRIA和EMBER-4尚待公布）、CDK4选择性抑制剂、新的HER2低表达和TROP2 ADC，以及ctDNA触发的换药策略为主，后者于2026年获得FDA认可，尽管咨询委员会投票结果为否定。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

@@ -1,0 +1,6 @@
+{
+  "source_hash": "25c6ded28133a64131b211a799b1ddf9e538bcc8241a04cb8a871197f9d8a4a8",
+  "text": "子宫肉瘤包括平滑肌肉瘤（LMS，占大多数）、低级别和高级别子宫内膜间质肉瘤（ESS）、未分化子宫肉瘤、腺肉瘤，以及一组不断增多的分子学定义的类型：低级别ESS中的JAZF1-SUZ12融合，高级别ESS中的YWHAE-NUTM2和BCOR改变，以及罕见的NTRK、ALK或COL1A1-PDGFB重排子宫肉瘤，这些类型有相应的靶向药物。LMS常在因疑似子宫肌瘤而行子宫切除术或子宫肌瘤切除术后才被诊断；对未被察觉的LMS进行电动粉碎术会导致肿瘤播散并使结局恶化，这促使FDA于2014年限制了该操作。\n\n局限性疾病的治疗为全子宫切除术并完整取出；卵巢切除术是ESS（激素敏感）的标准治疗，但对绝经前LMS患者为可选。在随机GOG-0277试验中（gemcitabine-docetaxel序贯doxorubicin对比观察，提前终止），辅助化疗未改善结局；在EORTC 55874中，辅助放疗未改善生存，因此I期LMS完全切除后的标准处理为观察。对于晚期LMS，以doxorubicin为基础的治疗是一线方案（GeDDiS显示gemcitabine-docetaxel并不优于doxorubicin；LMS-04显示doxorubicin联合trabectedin较单用doxorubicin改善了无进展生存期），随后可选用trabectedin、gemcitabine-docetaxel或pazopanib。低级别ESS采用芳香化酶抑制剂或孕激素治疗，而非化疗，并且必须避免使用雌激素。\n\n前沿方向在分子层面：针对NTRK和ALK病例的融合基因导向治疗，以及在存在同源重组缺陷或高突变负荷的LMS亚组中开展的PARP抑制剂和免疫治疗试验。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

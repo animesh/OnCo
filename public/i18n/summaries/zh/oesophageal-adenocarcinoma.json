@@ -1,0 +1,6 @@
+{
+  "source_hash": "548abe0624852f33e2acc5ee0efe753a68691579ab113580f0de17817439dba3",
+  "text": "食管腺癌起源于食管下段和胃食管交界处的Barrett食管，由反流、肥胖和吸烟驱动；TP53突变、染色体不稳定以及HER2、EGFR、MET或KRAS扩增是其典型特征。对Barrett食管进行监测并对异型增生进行内镜下消融或切除可预防进展。局部晚期疾病采用围手术期FLOT化疗，ESOPEC试验显示其生存获益优于CROSS放化疗，随后行食管切除术。晚期疾病按胃癌方案治疗：PD-L1阳性肿瘤采用nivolumab或pembrolizumab联合化疗，HER2阳性肿瘤采用trastuzumab联合化疗，claudin 18.2阳性肿瘤采用zolbetuximab，HER2靶向治疗后采用trastuzumab deruxtecan。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

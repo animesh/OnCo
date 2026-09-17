@@ -1,0 +1,6 @@
+{
+  "source_hash": "115090f6c6bf6de18879a6f859188ebe10627bb4ab55b44fbdd80df428400295",
+  "text": "Wilms瘤（肾母细胞瘤）是一种起源于肾源性残余的胚胎性肾癌，与WT1、CTNNB1、WTX、TP53（间变型）以及microRNA加工基因（DROSHA、DGCR8）突变相关，并与易感综合征（WAGR、Denys-Drash、Beckwith-Wiedemann）相关。目前并存两种协作组的治疗理念：COG（先行肾切除术，然后根据分期、组织学、1p/16q杂合性缺失和1q获得进行风险分层化疗）和SIOP（术前给予vincristine-actinomycin，然后行肾切除术，术后治疗根据组织学反应和分期决定；UMBRELLA方案）。\n\n预后良好型组织学I-II期疾病采用vincristine和actinomycin D治疗（EE-4A），或对于2岁以下、肿瘤<550 g的极低危I期肿瘤患儿，仅行手术治疗；III-IV期加用doxorubicin以及侧腹/全肺放疗，对于无1p/16q LOH的快速完全缓解者可省略肺部照射（AREN0533）。弥漫间变型肿瘤需要采用包含carboplatin、cyclophosphamide和etoposide的强化方案UH-1/UH-2；双侧肿瘤接受新辅助化疗和保留肾单位手术。复发按风险分组治疗（ICE方案，部分患者采用高剂量化疗）。生存者相关问题包括心脏毒性、肾功能、第二肿瘤和生育能力（放疗）。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

@@ -1,0 +1,88 @@
+[
+  {
+    "recordId": "metastatic-cancer",
+    "model": {
+      "id": "claude-fable-5-1",
+      "name": "Fable",
+      "provider": "Anthropic",
+      "version": "5.1"
+    },
+    "date": "2026-09-17",
+    "verdicts": [
+      {
+        "claim": "It keeps the name of where it started, and a breast cancer that has spread to the liver is still breast cancer treated with breast cancer drugs.",
+        "stance": "supports",
+        "note": "The NCI page states that metastatic cancer has the same name and the same type of cancer cells as the original cancer, and that treatment is generally based on the primary type.",
+        "source": {
+          "label": "NCI: Metastatic cancer",
+          "url": "https://www.cancer.gov/types/metastatic-cancer"
+        }
+      },
+      {
+        "claim": "Metastatic cancer spreads most often to the bones, liver, lungs or brain.",
+        "stance": "supports",
+        "note": "The NCI page lists common sites of metastasis by primary cancer, and bone, liver, lung and brain recur across most of the listed primaries. The record's own caveat that the pattern depends on the primary site matches that presentation.",
+        "source": {
+          "label": "NCI: Metastatic cancer",
+          "url": "https://www.cancer.gov/types/metastatic-cancer"
+        }
+      },
+      {
+        "claim": "Most cancer deaths follow metastasis rather than growth of the original tumour.",
+        "stance": "supports",
+        "note": "The Wikipedia article on metastasis describes metastatic spread as the main cause of cancer mortality, consistent with the record's burden statement. The record does not give a figure, so nothing here needs checking against a number.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Metastasis"
+        }
+      },
+      {
+        "claim": "In 1889 Stephen Paget proposed the seed and soil hypothesis, that cancers spread to organs whose environment suits them.",
+        "stance": "supports",
+        "note": "The Wikipedia article covers Paget's seed and soil hypothesis and dates it to 1889. This history entry has no refs in the record, so the Wikipedia link is its only support.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Metastasis"
+        }
+      },
+      {
+        "claim": "In SABR-COMET, adding stereotactic radiotherapy to every metastasis raised five-year overall survival from 17.7 to 42.3 percent.",
+        "stance": "unclear",
+        "note": "Neither listed source reports SABR-COMET or its survival figures, so the numbers cannot be checked from the record's own citations. The linked trial record 'sabr-comet' describes the result only qualitatively. Note also that the 2019 history entry for SABR-COMET refs 'sbrt' rather than 'sabr-comet', while the 2020 entry refs 'sabr-comet'; the two entries would be easier to match if they cited the same record.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Metastasis"
+        }
+      },
+      {
+        "claim": "Pembrolizumab (2017), larotrectinib, entrectinib, dabrafenib with trametinib, selpercatinib and trastuzumab deruxtecan are approved regardless of where the cancer began.",
+        "stance": "unclear",
+        "note": "Neither the NCI page nor the Wikipedia article addresses tissue-agnostic drug approvals, so this list and the 2017 date rest on the linked drug records rather than on the record's cited sources. The linked pembrolizumab, larotrectinib and selpercatinib records are consistent with the record's wording, but they are not among the citable sources here.",
+        "source": {
+          "label": "NCI: Metastatic cancer",
+          "url": "https://www.cancer.gov/types/metastatic-cancer"
+        }
+      },
+      {
+        "claim": "Aliases include 'Advanced cancer', 'Stage 4 cancer' and 'Stage IV cancer'.",
+        "stance": "unclear",
+        "note": "The NCI page equates metastatic cancer with stage IV for most solid tumours, which supports the stage IV aliases. 'Advanced cancer' is broader in common usage and can include locally advanced disease that has not spread to distant sites; the record's sources do not settle whether it should be treated as a straight synonym, and the record could say so.",
+        "source": {
+          "label": "NCI: Metastatic cancer",
+          "url": "https://www.cancer.gov/types/metastatic-cancer"
+        }
+      },
+      {
+        "claim": "Metastasis is the process by which cancer cells leave the original tumour, travel through blood or lymph and grow in another organ.",
+        "stance": "missing",
+        "note": "Both sources distinguish spread to nearby lymph nodes (regional) from spread to distant organs (distant metastasis), and the NCI page explains that only the latter is usually called metastatic or stage IV. The record describes the process but does not make this distinction, which matters for how the aliases and the 'burden' statement are read.",
+        "source": {
+          "label": "NCI: Metastatic cancer",
+          "url": "https://www.cancer.gov/types/metastatic-cancer"
+        }
+      }
+    ],
+    "summary": "The record's core definitions are well supported by its two sources: metastatic cancer keeps the name of the primary, spreads most commonly to bone, liver, lung and brain, is responsible for most cancer deaths, and the Paget seed and soil history is correctly dated. The more specific clinical content, including the SABR-COMET five-year survival figures, the list of tissue-agnostic approvals and the early palliative care trial, is not covered by either the NCI page or the Wikipedia article and rests on linked OnCo records instead, so it cannot be verified from the sources given. The record would benefit from distinguishing regional lymph node spread from distant metastasis, from clarifying that 'advanced cancer' is not strictly synonymous with metastatic disease, and from citing the SABR-COMET history entries consistently. Nothing in the two sources contradicts the record.",
+    "confidence": "medium"
+  }
+]

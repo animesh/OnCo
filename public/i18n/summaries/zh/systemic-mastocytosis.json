@@ -1,0 +1,6 @@
+{
+  "source_hash": "690397ac8e4beea4834cf35b81992eaefd61fb3eda6e6f775fc08dfa24d67cda",
+  "text": "系统性肥大细胞增多症（SM）是一种髓系肿瘤，其定义为骨髓或其他器官中出现多灶性肥大细胞浸润，约十分之九的患者存在KIT D816V。WHO 2022将其分为惰性SM（ISM；占大多数，伴皮肤病变、介质相关症状和严重过敏反应风险，但预期寿命接近正常）、冒烟型SM和进展期SM（AdvSM），后者包括侵袭性SM、肥大细胞白血病以及伴相关血液系统肿瘤的SM（SM-AHN），其中相关的CMML、MDS或AML常决定预后。诊断依据血清类胰蛋白酶（需针对遗传性α-类胰蛋白酶血症进行校正）、外周血高敏KIT D816V PCR，以及骨髓活检并进行CD25/CD30肥大细胞免疫表型分析；其他突变（SRSF2、ASXL1、RUNX1，即S/A/R组合）提示高危疾病。\n\n治疗采取分层策略。在ISM中，用抗组胺药、cromolyn、omalizumab、epinephrine自动注射器以及避免诱发因素来控制介质相关症状；骨质疏松需予以治疗。2023年avapritinib获批用于ISM（PIONEER：每日25 mg改善了总症状评分，并降低了类胰蛋白酶、KIT D816V等位基因负荷和皮肤病变），使其成为惰性型的首个疾病修正治疗。在AdvSM中，midostaurin（2017年；多激酶KIT抑制剂，关键性试验中约60%的患者出现缓解）是首个获批药物，而avapritinib（2021年；PATHFINDER和EXPLORER，选择性抑制KIT D816V，缓解率高，包括完全缓解）现已成为血小板高于50 x 10^9/L患者的首选一线药物。Cladribine仍是一种选择，interferon已属历史用药，异基因移植用于肥大细胞白血病或伴高危相关肿瘤的SM-AHN。新一代KIT D816V抑制剂bezuclastinib（Summit和Apex试验）和elenestinib（Harbor）旨在获得同等疗效，同时减少颅内出血和认知毒性。\n\n尚待解决的问题包括SM-AHN中的相关血液系统肿瘤、avapritinib在低血小板计数时的出血风险，以及惰性疾病中长达数年的诊断延迟。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

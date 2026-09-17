@@ -1,0 +1,6 @@
+{
+  "source_hash": "cde0a61dd4411614a5f28b290a024371dd3e32f1427495d8d9fff1eeb216ebe3",
+  "text": "急性淋巴细胞白血病是最常见的儿童癌症，在成人中较少见且更难治疗。B细胞前体ALL（85%）根据遗传学分为预后良好组（ETV6::RUNX1、高超二倍体）、中等组和预后不良组（KMT2A重排、低二倍体、Ph样/CRLF2、iAMP21、TCF3::HLF）；Ph阳性（BCR::ABL1）疾病占成人病例的四分之一。T-ALL（15%）有其自身的遗传学特征，并且自2023年以来有了自身的靶向治疗选择（nelarabine、临床试验中的BCL-2抑制）。诱导治疗后的微小残留病是所有亚组中复发最强的预测因素。\n\n儿童通过为期两到三年的基于危险度分层的多药联合化疗，治愈率超过90%，并且自2024年以来将blinatumomab纳入巩固治疗（AALL1731：3年无病生存率96%对88%）。成人单用化疗疗效较差，但三种免疫治疗改变了这一局面：blinatumomab（E1910：加入一线治疗后3年总生存率85%对68%；为MRD阳性和复发疾病的标准治疗）、CD22抗体药物偶联物inotuzumab ozogamicin（INO-VATE：复发患者缓解率81%）以及CD19 CAR-T（tisagenlecleucel用于25岁及以下患者；obe-cel用于成人，2024年）。Ph阳性ALL采用BCR::ABL1抑制剂治疗（自PhALLCON以来，2024年，优先选择ponatinib），并且越来越多地采用TKI联合blinatumomab而完全不使用化疗（D-ALBA），而KMT2A重排疾病现在有了menin抑制剂。\n\n异基因移植仍是高危或MRD持续阳性疾病的标准治疗，但正因免疫治疗所实现的MRD阴性缓解而逐渐被推后。尚未解决的问题包括CAR-T和blinatumomab治疗后的CD19阴性复发、T-ALL复发、Ph样ALL、婴儿KMT2A重排ALL、儿童治疗的远期毒性，以及在专科中心以外接受治疗的青少年和成人截然不同的预后。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

@@ -1,0 +1,79 @@
+[
+  {
+    "recordId": "cervical",
+    "model": {
+      "id": "claude-fable-5-1",
+      "name": "Fable",
+      "provider": "Anthropic",
+      "version": "5.1"
+    },
+    "date": "2026-09-17",
+    "verdicts": [
+      {
+        "claim": "Around 660,000 women are diagnosed and 350,000 die each year, nine in ten of them in low- and middle-income countries; it is the fourth most common cancer in women worldwide.",
+        "stance": "supports",
+        "note": "These figures match the GLOBOCAN-derived incidence and mortality estimates and the fourth-place ranking given in the Wikipedia article, which also attributes the large majority of deaths to lower-income countries.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Cervical_cancer"
+        }
+      },
+      {
+        "claim": "WHO elimination threshold (4 per 100,000) and the 90-70-90 targets by 2030.",
+        "stance": "supports",
+        "note": "The WHO global strategy document defines elimination as an incidence below 4 per 100,000 women and sets the 90% vaccination, 70% screening and 90% treatment targets for 2030, as the record states.",
+        "source": {
+          "label": "Guideline (Primary prevention)",
+          "url": "https://www.who.int/publications/i/item/9789240014107"
+        }
+      },
+      {
+        "claim": "Cohorts vaccinated at 12-13 show near-zero invasive cancer (Sweden, Scotland, Australia).",
+        "stance": "unclear",
+        "note": "The record is not consistent with itself: the summary and burden say 'near-zero', the stateOfArt says '~90% to near-total reduction', and the linked Swedish registry paper is summarised as an 88% reduction. 'Near-zero' may hold for the Scottish report but not for Sweden as described. None of the four listed sources settles the country-by-country figures.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Cervical_cancer"
+        }
+      },
+      {
+        "claim": "Recurrent/metastatic: Pembrolizumab-chemotherapy-bevacizumab; tisotumab vedotin (guideline labelled NCCN Guidelines: Cervical Cancer, ESMO-MCBS 2 from innovaTV 204, single-arm).",
+        "stance": "unclear",
+        "note": "The URL given for this row is a PMC article, not the NCCN guideline it is labelled as, so the label and source do not match. The ESMO-MCBS grade quoted is for the single-arm innovaTV 204 study, yet the record elsewhere relies on the phase 3 innovaTV 301 overall-survival result; the grading appears outdated relative to the record's own evidence base.",
+        "source": {
+          "label": "NCCN Guidelines: Cervical Cancer (Recurrent/metastatic)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11163648/"
+        }
+      },
+      {
+        "claim": "Cervical cancer is almost entirely caused by persistent infection with high-risk human papillomavirus.",
+        "stance": "missing",
+        "note": "The record names HPV as the cause but never mentions HIV co-infection, which the WHO strategy treats as a central risk multiplier and reason for adapted screening intervals in women living with HIV, nor smoking, parity or immunosuppression as cofactors. A burden-focused record on a disease concentrated in sub-Saharan Africa should cover the HIV link.",
+        "source": {
+          "label": "Guideline (Primary prevention)",
+          "url": "https://www.who.int/publications/i/item/9789240014107"
+        }
+      },
+      {
+        "claim": "INTERLACE, 5-year OS 80% vs 72%; KEYNOTE-A18, 36-month OS 82.6% vs 74.8%; KEYNOTE-826 26.4 months; BEATcc 32.1 months.",
+        "stance": "unclear",
+        "note": "These precise trial figures, and the 2025-2026 history entries (at-home self-test approval, World Health Assembly call), cannot be checked against any of the four listed sources, none of which is a trial report or a dated regulatory record. The NCCN landing page cited is access-controlled and gives no figures.",
+        "source": {
+          "label": "NCCN Guidelines: Cervical Cancer (Prevention)",
+          "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1426"
+        }
+      },
+      {
+        "claim": "Early disease is treated with open radical hysterectomy or, for the smallest tumours, fertility-sparing surgery.",
+        "stance": "disputes",
+        "note": "The record's own standardOfCare table states that simple hysterectomy is non-inferior to radical hysterectomy for low-risk tumours of 2 cm or less (SHAPE), and the stateOfArt lists this as a headline advance, but the summary omits it and presents radical hysterectomy as the default for early disease. The record also duplicates several entries (Pap smear 1943, HPV vaccine 2006, tisotumab 2021 in history; HPV type, PD-L1 CPS and tissue factor in biomarkers; overlapping prevention and locally advanced rows), which should be consolidated.",
+        "source": {
+          "label": "NCCN Guidelines: Cervical Cancer (Prevention)",
+          "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1426"
+        }
+      }
+    ],
+    "summary": "The record's global burden figures, its account of HPV causation and the WHO elimination threshold and 90-70-90 targets are consistent with the Wikipedia and WHO sources it lists. Its description of treatment by stage is coherent but the summary is out of step with its own standard-of-care table on early-stage surgery (SHAPE), and the record contains duplicated history, biomarker and standard-of-care entries. The claim of 'near-zero' invasive cancer in vaccinated cohorts is stronger than the ~88-90% reductions the record cites elsewhere. HIV co-infection, which the WHO strategy highlights, is absent. Most specific trial statistics, approval dates and 2025-2026 events cannot be verified from the four sources, one of which is mislabelled as NCCN when it points to a PMC article and another of which is an access-controlled landing page.",
+    "confidence": "low"
+  }
+]

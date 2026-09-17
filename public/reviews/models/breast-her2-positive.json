@@ -1,0 +1,79 @@
+[
+  {
+    "recordId": "breast-her2-positive",
+    "model": {
+      "id": "claude-fable-5-1",
+      "name": "Fable",
+      "provider": "Anthropic",
+      "version": "5.1"
+    },
+    "date": "2026-09-17",
+    "verdicts": [
+      {
+        "claim": "HER2-positive breast cancer (15-20% of cases; HER2 IHC 3+ or ISH-amplified) was the most aggressive subtype until trastuzumab (1998) made it one of the most treatable.",
+        "stance": "supports",
+        "note": "The definition, prevalence range and the 1998 trastuzumab turning point are consistent with the encyclopaedic overview the record cites. Two internal points weaken presentation: the history section carries the Slamon 1987, trastuzumab 1998, T-DM1 2013, DESTINY-Breast03 2021 and 2026 entries twice each, and the Slamon note quotes 25-30% amplification while the headline says 15-20%, a gap the record does not explain (older assays versus current ASCO/CAP criteria).",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/HER2-positive_breast_cancer"
+        }
+      },
+      {
+        "claim": "Stage I (≤2-3 cm, node-negative): surgery then weekly paclitaxel × 12 + trastuzumab × 1 year (APT); T-DM1 × 17 cycles is an alternative (ATEMPT).",
+        "stance": "supports",
+        "note": "De-escalated paclitaxel-trastuzumab for small node-negative HER2-positive tumours is the approach the cited NCCN guideline covers, and the NCCN 2A label is plausible. The setting label is loose: a node-negative tumour of 2-3 cm is stage IIA, not stage I, so '≤2-3 cm' and 'Stage I' do not describe the same group.",
+        "source": {
+          "label": "Guideline (Stage I (≤2-3 cm, node-negative))",
+          "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1419"
+        }
+      },
+      {
+        "claim": "T-DXd (DESTINY-Breast05, iDFS HR 0.47 vs T-DM1; approved 2026) replacing T-DM1 (KATHERINE)",
+        "stance": "unclear",
+        "note": "The record's own guideline field for this setting reads 'NCCN 1 (T-DM1); T-DXd pending update', so the cited guideline does not yet back T-DXd here. The Stage II-III neoadjuvant entry claims NCCN category 1 for 'T-DXd × 4 → THP' without the same caveat, which is internally inconsistent. Neither listed source can be shown to cover the 2026 approvals.",
+        "source": {
+          "label": "Guideline (Stage I (≤2-3 cm, node-negative))",
+          "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1419"
+        }
+      },
+      {
+        "claim": "esmoMcbs: A (KATHERINE); A (HERA); C (NeoSphere, APHINITY)",
+        "stance": "unclear",
+        "note": "ESMO-MCBS grades are attached to a guideline object whose only URL is the NCCN early-stage article. NCCN does not issue ESMO-MCBS scores, and no ESMO source is listed, so the grades (here and the '4' scores in the metastatic settings) cannot be checked against the record's sources.",
+        "source": {
+          "label": "NCCN Guidelines: Breast Cancer (Early stage)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13114725/"
+        }
+      },
+      {
+        "claim": "HER2-mutant (activating mutations without amplification; T-DXd tumour-agnostic, HER2 TKIs; more common in lobular and HER2-low)",
+        "stance": "disputes",
+        "note": "The record defines HER2-positive disease as IHC 3+ or ISH-amplified, and this subtype is described as lacking amplification and being commoner in HER2-low tumours. By the record's own definition it is not a subtype of HER2-positive breast cancer; it belongs in a HER2-mutant or HER2-low record.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/HER2-positive_breast_cancer"
+        }
+      },
+      {
+        "claim": "T-DXd + pertuzumab first line (DESTINY-Breast09, PFS 40.7 months; approved 2025) ... palbociclib maintenance (PATINA, approved 2026)",
+        "stance": "unclear",
+        "note": "The record's metastatic standard of care rests on approvals dated 2025 and 2026 and on a PFS figure and NCCN 'category 1, preferred' status that none of the three listed sources is shown to contain. Linked OnCo records repeat the same claims but are not independent sources. Primary regulatory or trial references should be attached.",
+        "source": {
+          "label": "Guideline (Stage I (≤2-3 cm, node-negative))",
+          "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1419"
+        }
+      },
+      {
+        "claim": "Brain metastases, which develop in up to half of patients, are now treatable systemically with tucatinib (HER2CLIMB) and T-DXd (DESTINY-Breast12).",
+        "stance": "unclear",
+        "note": "The 'up to half' figure is stated consistently in the summary and open problems and matches the linked term record, but none of the listed sources is shown to give this incidence, nor the DESTINY-Breast12 intracranial response rate of 72% quoted in the brain metastases setting. The tucatinib triplet's role in brain metastases is well established and plausibly in the NCCN guideline cited.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/HER2-positive_breast_cancer"
+        }
+      }
+    ],
+    "summary": "The record's core narrative is sound and consistent with its cited overview: HER2 amplification as an adverse marker, trastuzumab in 1998, adjuvant dual blockade, response-adapted post-neoadjuvant therapy and de-escalation for small node-negative tumours. Its weaknesses are sourcing and internal consistency. Much of the standard of care now rests on 2025 and 2026 approvals (DESTINY-Breast09, DESTINY-Breast05, DESTINY-Breast11, PATINA) and on figures such as PFS 40.7 months, iDFS HR 0.47, pCR 67% and 400,000 cases a year that none of the three listed sources can be shown to contain, and the record itself admits the NCCN guideline is 'pending update' for T-DXd in one setting while claiming category 1 for it in another. ESMO-MCBS grades are attached to an NCCN URL. The history, biomarkers and state-of-the-art lists contain duplicated entries, the 'Stage I' setting label mixes stage I and IIA tumours, and the inclusion of HER2-mutant, non-amplified disease as a subtype contradicts the record's own IHC 3+/ISH-amplified definition.",
+    "confidence": "low"
+  }
+]

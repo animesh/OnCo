@@ -1,0 +1,6 @@
+{
+  "source_hash": "0729a02d0bcb47d07872384709a5bef3b57385ab66416b54a4e4afc644e3d79c",
+  "text": "骨髓增生异常/骨髓增殖性肿瘤兼具病态造血和血细胞减少与增殖的特征。慢性粒-单核细胞白血病（CMML）是其原型：持续性单核细胞增多（按WHO 2022标准，高于0.5 x 10^9/L且至少占白细胞的10%）伴病态造血，不存在BCR-ABL1以及PDGFRA/B、FGFR1或JAK2重排，并具有特征性的突变谱：约半数患者存在TET2与SRSF2共突变，而ASXL1、RUNX1、SETBP1和RAS通路（NRAS、KRAS、CBL）突变驱动增殖性表型并导致更差的预后。其他成员包括不典型CML（SETBP1、ETNK1；伴病态造血的中性粒细胞增多）、伴SF3B1突变和血小板增多的MDS/MPN（环形铁粒幼细胞，常伴JAK2 V617F）、MDS/MPN非特指型，以及儿童中的幼年型粒-单核细胞白血病（JMML；RAS通路、1型神经纤维瘤病和Noonan综合征）。风险采用CPSS和分子CPSS-Mol评分，纳入原始细胞计数、白细胞计数、输血需求、细胞遗传学以及ASXL1、NRAS、RUNX1和SETBP1突变。\n\n异基因移植是唯一的治愈性治疗，适用于身体状况适合的较高危患者。去甲基化药物是药物治疗的标准：azacitidine和decitabine已获批用于CMML（口服decitabine-cedazuridine的说明书也包含CMML），在少数患者中产生缓解，在更多患者中稳定血细胞计数，但没有明确证据表明它们能改变突变克隆。Hydroxyurea可控制增殖性疾病和脾大，在唯一一项随机试验中与etoposide疗效相当。JMML采用azacitidine治疗作为移植的桥接，而移植是唯一的治愈手段。对于伴环形铁粒幼细胞的MDS/MPN，luspatercept和JAK抑制剂由MDS和MPN的应用外推使用。正在进行的试验在检验RAS通路抑制（MEK抑制剂）、JAK抑制（ruxolitinib用于增殖型CMML）、抗GM-CSF抗体lenzilumab、venetoclax联合方案用于加速期疾病，以及去甲基化药物联合方案。\n\n尚待解决的问题：相当一部分患者转化为AML，缺乏疾病修饰药物，以及试验很少专门招募这类患者。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

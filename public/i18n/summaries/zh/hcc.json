@@ -1,0 +1,6 @@
+{
+  "source_hash": "7f05e5babdfb375f1d01170d7ba6c62e6c12bf92331c322a0d1aad088cd3213c",
+  "text": "肝细胞癌是最主要的原发性肝癌（约占75-85%），也是最可预防的癌症之一：凡是推行了乙型肝炎疫苗接种和丙型肝炎治愈的地区，发病率均已下降。其决定性特征是发生于已患病的器官：慢性乙型肝炎、丙型肝炎、酒精相关性肝硬化及代谢相关（MASLD）肝硬化占了大多数病例，因此肝脏的剩余功能（Child-Pugh、ALBI）与肿瘤分期同等重要。BCLC分期系统将两者整合，并为每一期对应一种治疗：早期为消融、切除或肝移植；中期为TACE或放射性栓塞；晚期为系统治疗。推荐对高危患者每六个月进行一次超声监测，但实际执行率很低，多数患者就诊时仍已超过可根治阶段，这也是肝细胞癌至今仍居全球癌症死亡原因第三位的原因。\n\n系统治疗在2018年至2026年间发生了彻底改变。Sorafenib（SHARP，2007年）在十年间是唯一的选择。Lenvatinib与之疗效相当（REFLECT），随后IMbrave150使atezolizumab联合bevacizumab成为首个在生存上击败sorafenib的方案（OS 19.2个月对比13.4个月）。HIMALAYA的STRIDE方案（单剂tremelimumab联合durvalumab）紧随其后，使五年生存率翻倍（19.6%对比9.4%），CheckMate 9DW的nivolumab联合ipilimumab达到中位OS 23.7个月（2025年获批）。Camrelizumab联合rivoceranib（CARES-310，OS 23.8个月对比15.2个月）已在中国获批，但因生产方面的原因已三次收到FDA完全回复函，最近一次是2026年7月。Sorafenib后的二线选择（regorafenib、cabozantinib，以及用于AFP ≥400的ramucirumab）缺乏免疫治疗之后的数据，而这正是目前大多数患者所处的阶段。\n\n前沿方向是局部治疗与系统治疗的联合。三项3期试验（EMERALD-1、LEAP-012、EMERALD-3）显示，在TACE基础上加用免疫治疗和抗VEGF药物可使无进展生存期延长约30%，但LEAP-012最终的总生存风险比为0.98，说明在此情境下PFS是一个较弱的替代终点，而辅助atezolizumab联合bevacizumab（IMbrave050）的早期获益随随访延长而消失。尚待解决的问题包括一线免疫治疗后的合适治疗、移植前免疫治疗的作用、靶向GPC3的细胞治疗，以及最重要的预防：乙型肝炎疫苗接种和丙型肝炎治愈可以避免大多数病例，而非肝硬化肝脏中由MASLD驱动的肝细胞癌正在增加，且逃脱了监测。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

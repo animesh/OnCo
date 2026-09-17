@@ -1,0 +1,6 @@
+{
+  "source_hash": "045c15ea08025f74cce05d0af872c2864294e2182136b55c532979534b685e06",
+  "text": "膀胱尿路上皮癌是全球第十大常见癌症，也是按每位患者计算治疗管理费用最高的癌症，因为四分之三的病例表现为非肌层浸润性疾病，会在多年内反复复发，需要终身接受膀胱镜检查。约半数病例由吸烟引起。肌层浸润性疾病（25%）自2000年代以来需要在cisplatin新辅助化疗后行根治性膀胱切除术，而转移性疾病在四十年间一直依赖铂类化疗。\n\n2019年至2026年间，该领域被重塑。在转移性疾病中，enfortumab vedotin联合pembrolizumab使生存期较化疗接近翻倍（EV-302，2023年）。随后这一组合进入围手术期：EV-303用于不适合cisplatin治疗的患者（EFS HR 0.40，2025年11月获批），EV-304用于适合cisplatin治疗的患者（2025年12月结果阳性），而在此之前NIAGARA已确立了围手术期durvalumab的地位（2025年3月获批）。辅助nivolumab（CheckMate 274）和ctDNA指导的辅助atezolizumab（IMvigor011，首个基于ctDNA的获批，2026年）覆盖了膀胱切除术后的治疗领域。在非肌层浸润性疾病中，BCG无应答人群获得了四种保留膀胱的选择（pembrolizumab、nadofaragene firadenovec、N-803 + BCG，以及gemcitabine缓释装置TAR-200），溶瘤病毒cretostimogene于2026年递交上市申请，durvalumab + BCG成为未经BCG治疗疾病中的首个全身免疫治疗（POTOMAC，2026年5月）。Erdafitinib仍是唯一的靶向药物，用于免疫治疗后FGFR3变异的肿瘤。\n\n下一步方向：围手术期EV + pembrolizumab达到完全缓解者的保留膀胱策略；EV + pembrolizumab之后的序贯治疗（铂类、HER2 ADC如disitamab vedotin、TROP2 ADC和双特异性ADC、sac-TMT）；利用尿液肿瘤DNA减少膀胱镜检查；以重组菌株和替代方案解决BCG短缺；以及理解为何某些膀胱灌注免疫治疗（durvalumab、sasanlimab）能在BCG基础上增效，而其他（atezolizumab）却不能。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

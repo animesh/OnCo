@@ -1,0 +1,6 @@
+{
+  "source_hash": "64917e85de7ac129079fa536dd77542fff4c6f1b6b6a8299db85850e9e96ecae",
+  "text": "胆道癌包括肝内胆管癌（iCCA，发病率呈上升趋势）、肝门部及远端肝外胆管癌，以及胆囊癌。它们的共同特点是就诊时多已属晚期（黄疸、体重下降），且手术切除是唯一的治愈手段，但仅少数患者可以实现，因此五年生存率始终低于20%。危险因素因地区而异：东亚地区为肝吸虫和肝内胆管结石，西方为原发性硬化性胆管炎，胆囊癌则与胆结石和慢性炎症相关。胆道引流通常是任何治疗的前提。\n\n系统治疗格局自ABC-02（2010年）以来一直仅为吉西他滨联合顺铂（gemcitabine-cisplatin），直到TOPAZ-1（durvalumab，2022年）和KEYNOTE-966（pembrolizumab，2023年）加入PD-(L)1阻断治疗，中位生存获益有限，但两年生存率翻倍。切除术后的辅助治疗标准为capecitabine（BILCAP）。胆道癌的独特之处在于其基因组的可干预性：约40%的肝内肿瘤携带FGFR2融合（pemigatinib、futibatinib）、IDH1突变（ivosidenib）、HER2扩增或过表达（zanidatamab、trastuzumab deruxtecan）、NRG1融合（zenocutuzumab，2026年获批）、BRAF V600E或MSI-H状态，因此指南要求在诊断时进行分子检测。\n\n前沿方向是将靶向药物推进至一线治疗（zanidatamab的HERIZON-BTC-302研究）、克服FGFR抑制剂耐药（FIRST-308研究中的tinengotinib、lirafugratinib）、ctDNA指导的序贯治疗，以及寻找免疫治疗长期获益人群的生物标志物。针对不可切除肝门部肿瘤（Mayo方案）以及经筛选的肝内胆管癌的肝移植正在扩展。尚待解决的问题包括化疗联合免疫治疗后的二线治疗、胆囊癌在临床试验中被忽视，以及在原发性硬化性胆管炎等高危人群中的早期检测。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

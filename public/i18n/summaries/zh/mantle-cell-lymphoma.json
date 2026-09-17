@@ -1,0 +1,6 @@
+{
+  "source_hash": "52afff5bac04073708b7c42eaff754e0fafb7e8ebba7b17fefdb721d1e2bb9b7",
+  "text": "套细胞淋巴瘤（MCL）携带t(11;14)并伴cyclin D1过表达（经典型MCL为SOX11阳性）。风险由MIPI、Ki-67、母细胞样形态和TP53突变决定，其中TP53突变定义了一组对化学免疫治疗和移植均无效的患者。白血病性非淋巴结型变异型表现为惰性病程。\n\n年轻体能状态良好的患者传统上接受含阿糖胞苷的诱导治疗和自体移植，随后以rituximab维持；TRIANGLE（2024）显示在诱导和维持阶段加入ibrutinib至少不劣于移植，移植正逐渐被弃用。老年患者接受bendamustine-rituximab或R-CHOP；ECHO（2024）在一线BR基础上加入了acalabrutinib（2025年获FDA批准）。复发患者采用共价BTK抑制剂治疗（ibrutinib 2013年、acalabrutinib 2017年、zanubrutinib 2019年；SHINE试验后，ibrutinib在美国的MCL适应证于2023年撤回），随后可选择brexucabtagene autoleucel（ZUMA-2，2020）、非共价BTKi pirtobrutinib（2023）或BCL2抑制剂sonrotoclax（2026）；venetoclax-ibrutinib（SYMPATICO）是另一种选择。Lisocabtagene于2024年获批用于MCL。\n\nTP53突变型MCL除CAR-T和双特异性抗体外，对所有治疗的疗效仍然很差；glofitamab和CD20×CD3药物正处于3期临床试验阶段。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

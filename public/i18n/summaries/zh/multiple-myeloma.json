@@ -1,0 +1,6 @@
+{
+  "source_hash": "083f9d4600b84d1d7f045150c49d148740ce81dbf8259a533dd3a107665f39e5",
+  "text": "多发性骨髓瘤是一种起源于骨髓中产生抗体的浆细胞的癌症，可导致贫血、骨质破坏、肾衰竭和感染。其前驱状态为意义未明的单克隆丙种球蛋白血症（MGUS）和冒烟型骨髓瘤，二者较为常见（50岁以上人群中约3%患有MGUS），且大多无害；是否治疗高危冒烟型骨髓瘤（AQUILA，daratumumab）仍是当前争论的焦点，冰岛正在对其全部成年人口进行筛查（iStopMM）。分期（R-ISS/R2-ISS）和细胞遗传学（del17p、t(4;14)、1q获得）决定预后；百万分之一骨髓细胞水平的MRD阴性已成为最佳预后标志物，并自2024年起成为被认可的监管终点。\n\n没有哪种癌症获得的药物类别比它更多：蛋白酶体抑制剂（bortezomib，2003年；carfilzomib）、免疫调节类cereblon调节剂（thalidomide、lenalidomide、pomalidomide；新一代CELMoD类药物iberdomide和mezigdomide）、CD38抗体（daratumumab、isatuximab）、靶向BCMA的CAR-T（ide-cel、cilta-cel；anito-cel审批决定2026年12月）、靶向BCMA和GPRC5D的双特异性T细胞衔接器（teclistamab、elranatamab、linvoseltamab、talquetamab）、一种BCMA抗体药物偶联物（belantamab，2022年撤市，2025年重新获批），以及用于部分亚组的XPO1和BCL-2抑制剂。新诊断患者无论是否接受自体造血干细胞移植，均接受四药联合方案（Dara-VRd或Isa-VRd）（PERSEUS、CEPHEUS、IMROZ），随后进行lenalidomide维持治疗；体能状况良好的患者中位生存期现已超过十年。复发时，cilta-cel（CARTITUDE-4，OS HR 0.55）和teclistamab联合daratumumab（MajesTEC-3，2026年3月获批）为二线选择，并根据既往抗原暴露情况安排治疗顺序。\n\n前沿方向包括：以单次CAR-T输注取代移植和无限期维持治疗（CARTITUDE-5/6）、MRD指导下的停药、可预先阻止抗原逃逸的三特异性抗体和联合方案，以及可在lenalidomide治疗后恢复敏感性的CELMoD类药物。难题在于：高危细胞遗传学异常和髓外病变对所有治疗的应答都短暂；T细胞重定向治疗导致的感染和持续性血细胞减少；BCMA CAR-T后的迟发性神经毒性；费用和生产排产名额；以及该病最终仍几乎在所有患者中复发，因此\"功能性治愈\"仍是一项有待证实的主张。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

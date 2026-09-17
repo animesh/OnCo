@@ -1,0 +1,6 @@
+{
+  "source_hash": "0e5985af9dfca872f6ff18374f722318408d3c3069e945936808ad5413a38a57",
+  "text": "肾细胞癌是起源于肾小管的癌症，越来越多的病例是在因其他原因进行影像学检查时偶然发现的。四分之三为透明细胞癌，其特征是 VHL 基因缺失，这使得感知氧的 HIF-2α 开关持续处于开启状态，导致肿瘤血管高度丰富且有大量免疫细胞浸润。这一生物学特性解释了整个现代治疗的发展历程：抗 VEGF 口服药（2005-2012 年）、免疫治疗（2015 年起）、两者联合（2018 年起），以及首个 HIF-2α 抑制剂 belzutifan（2021 年）。\n\n对于转移性疾病，有四种基于免疫治疗的一线方案具有生存获益：nivolumab-ipilimumab（CheckMate 214，五分之一的中危/高危患者获得持久缓解，在八年时仍可见）以及三种 IO-TKI 双药方案（pembrolizumab-axitinib、nivolumab-cabozantinib、lenvatinib-pembrolizumab）。在一线尝试以三药联合取得更好效果的努力，或在生存终点上失败（COSMIC-313），或未达预期（LITESPARK-012）；两项试验（CONTACT-03、TiNivo-2）显示，免疫治疗失败后重新启用免疫治疗并无帮助。手术后，辅助 pembrolizumab（KEYNOTE-564）是所有实体瘤中首个改善总生存期的辅助免疫治疗，2026 年 belzutifan 联合 pembrolizumab（LITESPARK-022）成为首个辅助联合方案，不过另外三项辅助免疫治疗试验结果为阴性。\n\n未来方向包括：筛选需要辅助治疗的患者（ctDNA 在 RCC 中表现较弱；CAIX PET 和基因特征是候选手段）；采用放射性核素标记 girentuximab 的 CAIX 诊疗一体化；zanzalintinib 及新一代 TKI；在合适场景下的 HIF-2α 联合治疗；CD70 和 CAIX 细胞治疗；将无治疗生存期作为终点；以及更好地管理在诊断中占比日益增加的肾脏小肿块，其中许多完全无需治疗。非透明细胞组织学类型（乳头状、嫌色细胞、易位相关）仍未得到充分关注。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

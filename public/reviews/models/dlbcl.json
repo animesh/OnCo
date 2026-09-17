@@ -1,0 +1,88 @@
+[
+  {
+    "recordId": "dlbcl",
+    "model": {
+      "id": "claude-fable-5-1",
+      "name": "Fable",
+      "provider": "Anthropic",
+      "version": "5.1"
+    },
+    "date": "2026-09-17",
+    "verdicts": [
+      {
+        "claim": "Diffuse large B-cell lymphoma is the most common aggressive lymphoma, about 30% of all non-Hodgkin lymphoma, with a median age around 65.",
+        "stance": "disputes",
+        "note": "Wikipedia gives DLBCL as roughly 25 to 30% of adult non-Hodgkin lymphoma in Western countries, which fits, but describes the typical age at diagnosis as around 70 rather than 65. The record repeats 'median age 65' in the burden field. The gap is modest but the record's own source does not support the lower figure.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Diffuse_large_B-cell_lymphoma"
+        }
+      },
+      {
+        "claim": "R-CHOP cures roughly 60% of patients, more with low IPI and fewer with high-risk features.",
+        "stance": "supports",
+        "note": "Wikipedia reports five-year survival in the United States in the high 50s per cent and describes R-CHOP as the standard first-line regimen with outcomes stratified by the International Prognostic Index, consistent with the record's rounded figure.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Diffuse_large_B-cell_lymphoma"
+        }
+      },
+      {
+        "claim": "Frontline: R-CHOP or Pola-R-CHP; Pola-R-CHP category 1 for IPI 2-5 (NCCN 2026).",
+        "stance": "supports",
+        "note": "The NCCN B-Cell Lymphomas guideline lists both R-CHOP and polatuzumab vedotin plus R-CHP as first-line options for DLBCL, with Pola-R-CHP framed for IPI 2 to 5. The cited URL is a landing page that requires registration, so the category assignment cannot be checked from the link alone, and the record cites 'NCCN 2026' without a version number or date.",
+        "source": {
+          "label": "NCCN Guidelines: B-Cell Lymphomas (Frontline)",
+          "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1480"
+        }
+      },
+      {
+        "claim": "Primary refractory or relapse within 12 months: CD19 CAR-T (axi-cel or liso-cel) preferred over salvage chemotherapy and transplant; NCCN category 1.",
+        "stance": "supports",
+        "note": "NCCN lists axicabtagene ciloleucel and lisocabtagene maraleucel as preferred second-line options for large B-cell lymphoma that is primary refractory or relapses within 12 months of first-line therapy, based on ZUMA-7 and TRANSFORM. Same caveat that the linked page is a gateway rather than the guideline text.",
+        "source": {
+          "label": "NCCN Guidelines: B-Cell Lymphomas (Frontline)",
+          "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1480"
+        }
+      },
+      {
+        "claim": "POLARIX showed 5-year PFS 64.9% vs 59.1%, and frontMIND (Lancet 2026) improved PFS in IPI 3-5 disease with HR 0.75.",
+        "stance": "unclear",
+        "note": "Neither listed source contains these figures. The record's own linked POLARIX paper summary gives only 2-year PFS (76.7% vs 70.2%), so the 5-year numbers and the frontMIND hazard ratio rest on nothing the record cites. A primary reference for each figure should be added.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Diffuse_large_B-cell_lymphoma"
+        }
+      },
+      {
+        "claim": "EPCORE DLBCL-1 (2026) improved PFS but not overall survival against chemotherapy; STARGLO's survival benefit was rejected by the FDA because the trial was mostly enrolled in Asia.",
+        "stance": "unclear",
+        "note": "These regulatory statements are central to the record's 'open questions' section but appear in neither Wikipedia nor the NCCN page. They match the linked trial records within the graph, but the record itself provides no external citation, and the characterisation of the FDA's reasoning is a paraphrase that should be sourced to the agency's letter or the sponsor's statement.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Diffuse_large_B-cell_lymphoma"
+        }
+      },
+      {
+        "claim": "CAR-T cures about 40% of relapsed patients.",
+        "stance": "unclear",
+        "note": "Wikipedia notes CAR-T approvals for relapsed or refractory DLBCL but gives no cure fraction. The 40% figure comes from long-term ZUMA-1 follow-up in a heavily pretreated population and is repeated in the linked axi-cel record, but 'relapsed patients' in the tldr is broader than the population studied; the wording should specify the setting or cite a source.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Diffuse_large_B-cell_lymphoma"
+        }
+      },
+      {
+        "claim": "Subtypes and CAR-T options as listed (no mention of DLBCL not otherwise specified under the WHO classification, nor of tisagenlecleucel).",
+        "stance": "missing",
+        "note": "Wikipedia frames the disease around the WHO classification, with DLBCL not otherwise specified as the largest category and a list of defined variants, and names tisagenlecleucel alongside axi-cel and liso-cel as approved CAR-T products for relapsed disease. The record's subtype list omits the NOS category and the WHO framework, and its standard-of-care and history entries name only axi-cel and liso-cel (tisagenlecleucel appears only via a linked paper). The record also carries duplicated entries in history (1997, 2017, 2023), biomarkers and openProblems that should be merged.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Diffuse_large_B-cell_lymphoma"
+        }
+      }
+    ],
+    "summary": "The record's core clinical scaffold is consistent with its two listed sources: R-CHOP as the curative backbone with roughly 60% cured, Pola-R-CHP as an NCCN-listed frontline option for IPI 2 to 5, and CD19 CAR-T (axi-cel, liso-cel) as the preferred second-line approach for early relapse. The median age of around 65 sits below the figure Wikipedia gives, and the disease framing omits the WHO classification and the DLBCL not otherwise specified category, as well as tisagenlecleucel among approved CAR-T products. Most of the record's distinctive content, including the POLARIX 5-year PFS figures, the frontMIND hazard ratio, the EPCORE DLBCL-1 overall survival miss, the STARGLO rejection and the 40% CAR-T cure figure, is not covered by either listed source and relies on linked graph records or uncited recollection; primary references should be attached. The record also contains duplicated history, biomarker and open-problem entries that need consolidation, and the NCCN link is a registration gateway rather than the guideline text, so category assignments cannot be confirmed from the URL.",
+    "confidence": "low"
+  }
+]

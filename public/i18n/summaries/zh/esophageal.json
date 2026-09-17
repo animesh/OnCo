@@ -1,0 +1,6 @@
+{
+  "source_hash": "6a3727e525923dbf5e359e5a0ebe3e89deef7449a35f1a8c7351ea7aa9abe035",
+  "text": "食管癌是两种疾病：鳞状细胞癌（ESCC，全球约占85%，由烟草、酒精、热饮和营养因素驱动，沿从伊朗经中亚到中国的高发带分布）和腺癌（EAC，在西方占主导，经由反流和肥胖从Barrett食管发展而来）。日本和中国部分地区对高危人群进行内镜筛查，并通过内镜切除治愈早期鳞癌；在其他地区，大多数患者就诊时已出现吞咽困难，处于局部晚期或转移性阶段。食管癌每年约新发510,000例（第七常见的癌症），由于就诊较晚，每年死亡445,000例（居癌症死因第六位）；总体五年生存率约为20%。\n\n局限期疾病采用多学科综合治疗。CROSS方案放化疗后行食管切除术的10年生存率为38%，单纯手术为25%；围手术期FLOT是腺癌的替代方案（ESOPEC研究支持该方案）。根治性放化疗用于颈段食管肿瘤和不适合手术的患者。CheckMate 577为放化疗后仍有残留病灶的患者增加了一年的nivolumab辅助治疗（DFS 22.4个月对11.0个月），SANO研究显示，达到临床完全缓解的患者可以观察随访而不手术，生存非劣效。晚期疾病采用化疗联合PD-1抑制剂治疗：pembrolizumab（KEYNOTE-590，两种组织学类型）、nivolumab ± ipilimumab（CheckMate 648，鳞癌）、tislelizumab（RATIONALE-306，鳞癌PD-L1 ≥1%），以及在中国的camrelizumab或sintilimab。HER2阳性腺癌遵循胃癌的治疗路径（trastuzumab，HERIZON-GEA-01之后的zanidatamab，二线T-DXd）。2026年，EGFR×HER3双特异性抗体偶联药物izalontamab brengitecan成为首个在免疫治疗后二线ESCC中改善总生存的药物（PANKU-Esophagus01）。\n\n尚待解决的问题：在根治性放化疗基础上加用PD-1抑制剂是否能提高治愈率（KEYNOTE-975、SKYSCRAPER-07和中国的试验），器官保留可以推进到何种程度，Barrett食管的非内镜筛查（BEST4），鳞癌除PD-1以及现在的EGFR/HER3之外缺乏靶点，以及亚洲与西方之间持续存在、可由早期发现解释的疗效差距。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

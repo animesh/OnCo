@@ -1,0 +1,6 @@
+{
+  "source_hash": "e084fd6ca624a8c16259129b1a4cb4d9c41ac7c2fadb2553beb57b77a1fe5844",
+  "text": "华氏巨球蛋白血症（WM）是一种分泌IgM的淋巴浆细胞淋巴瘤，约95%的患者存在MYD88 L265P突变，约30-40%存在CXCR4 WHIM样突变，后者预示对BTK抑制剂的应答较慢。症状源于骨髓浸润（血细胞减少）、IgM（高黏滞血症、周围神经病变、冷球蛋白血症、冷凝集素）以及淋巴结肿大。无症状的WM采取观察等待。\n\n有症状疾病的治疗为以rituximab为基础的化学免疫治疗（bendamustine-rituximab、DRC）或共价BTK抑制剂：ibrutinib（2015年首个获批用于WM，iNNOVATE研究中与rituximab联用）、zanubrutinib（ASPEN研究，2021年，心脏事件少于ibrutinib）或acalabrutinib。血浆置换用于在rituximab治疗前处理高黏滞血症，因为rituximab可使IgM一过性升高（燃瘤反应）。复发时的选择包括换用另一类药物、蛋白酶体抑制剂（bortezomib、carfilzomib）、venetoclax、共价BTKi治疗后使用pirtobrutinib，以及年轻、体能状态良好患者的移植。Bing-Neel综合征（中枢神经系统受累）对ibrutinib有应答。\n\n尚待解决的问题：固定疗程治疗与持续治疗的比较、CXCR4突变型疾病（mavorixafor试验）以及向DLBCL转化。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

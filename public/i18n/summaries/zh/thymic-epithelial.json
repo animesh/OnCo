@@ -1,0 +1,6 @@
+{
+  "source_hash": "4f6ef47cd4e909f0654fa4062613afe6816a4980ca5980e2c15c0d7e5b994939",
+  "text": "胸腺上皮肿瘤的范围从惰性的胸腺瘤（WHO A型、AB型、B1-B3型）到胸腺癌（C型，大多为鳞状细胞癌）以及胸腺神经内分泌肿瘤。胸腺瘤的肿瘤突变负荷是所有成人癌症中最低的（约40%的A型/AB型存在GTF2I L424H），并且独特地与副肿瘤性自身免疫相关（约30%合并重症肌无力，以及纯红细胞再生障碍性贫血、低丙种球蛋白血症/Good综合征）。分期采用Masaoka-Koga分期和TNM第8版（ITMIG/IASLC）。\n\n对于可切除的疾病，治疗方法为完全切除；对于伴有高危特征的II-III期胸腺瘤以及胸腺癌，术后行放疗。不可切除的疾病采用诱导化疗（cisplatin-doxorubicin-cyclophosphamide，即CAP方案，或胸腺癌采用carboplatin-paclitaxel），随后进行手术或放疗。复发性疾病的治疗包括：在可能的情况下再次切除，化疗，对octreoscan阳性的胸腺瘤使用octreotide联合prednisone，以及胸腺癌使用sunitinib或lenvatinib（REMORA）。PD-1抑制剂在胸腺癌中显示出活性（pembrolizumab缓解率约20%），但会引起严重的免疫相关不良事件，尤其是心肌炎和肌炎，因此在胸腺瘤中应避免使用。Everolimus和KIT抑制剂（用于约10%存在KIT突变的胸腺癌）也是可选方案。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

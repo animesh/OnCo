@@ -1,0 +1,6 @@
+{
+  "source_hash": "8f9fbb71426e3133b0c40d10d03977cca1592ec810e0f63b44157c7ecfbb9c20",
+  "text": "透明细胞肾细胞癌起源于近端小管，约十分之九的病例存在3p染色体上VHL基因的缺失，导致HIF-2 alpha稳定并驱动VEGF，因此肿瘤血供丰富；PBRM1、SETD2和BAP1突变影响其生物学行为。小肿瘤可行肾部分切除术或消融治疗，部分病例可予观察。肾切除术后使用pembrolizumab辅助治疗可改善较高风险患者的生存（KEYNOTE-564）。转移性疾病的一线治疗采用免疫治疗联合方案：pembrolizumab联合axitinib或lenvatinib，nivolumab联合cabozantinib，或对中危和高危患者采用nivolumab联合ipilimumab；后续可选择cabozantinib、axitinib、tivozanib和belzutifan。Belzutifan是首个HIF-2 alpha抑制剂，于2021年获批用于VHL病，2023年获批用于既往接受过治疗的晚期疾病。CARMENA研究之后，减瘤性肾切除术目前仅用于经选择的患者。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

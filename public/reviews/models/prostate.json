@@ -1,0 +1,88 @@
+[
+  {
+    "recordId": "prostate",
+    "model": {
+      "id": "claude-fable-5-1",
+      "name": "Fable",
+      "provider": "Anthropic",
+      "version": "5.1"
+    },
+    "date": "2026-09-17",
+    "verdicts": [
+      {
+        "claim": "~1.5 million new cases per year worldwide ... ~400,000 deaths per year worldwide",
+        "stance": "supports",
+        "note": "These burden figures are in line with the global incidence and mortality counts given in the Wikipedia article, which draws on the GLOBOCAN estimates. The record does not state which year or estimate it uses, which it should.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Prostate_cancer"
+        }
+      },
+      {
+        "claim": "Prostate cancer is the most common cancer in men in most high-income countries ... the second most common cause of cancer death in men",
+        "stance": "supports",
+        "note": "Wikipedia describes prostate cancer as the most frequently diagnosed cancer in men in many countries and the second leading cause of cancer death in men in the United States and similar settings. The record's qualifier 'most high-income countries' is consistent with that.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Prostate_cancer"
+        }
+      },
+      {
+        "claim": "since 31 July 2026 with 177Lu-PSMA-617 added to ADT + ARPI (PSMAddition, rPFS HR 0.72)",
+        "stance": "unclear",
+        "note": "Neither listed source settles a regulatory action dated 31 July 2026 or the quoted hazard ratio. The NCCN guideline is cited as a live URL without a version or date, so a reader cannot tell whether the guideline at that link includes this indication. The record repeats the date in four places but gives no primary or regulatory reference for it.",
+        "source": {
+          "label": "NCCN Guidelines: Prostate Cancer (Localised)",
+          "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1459"
+        }
+      },
+      {
+        "claim": "PTEN-deficient disease gained capivasertib + abiraterone in 2026",
+        "stance": "unclear",
+        "note": "The listed sources do not settle a 2026 approval or the '~25%' PTEN-deficient prevalence figure in the subtypes list. The claim rests only on linked OnCo records (capivasertib, CAPItello-281), not on either cited source, and no approval date, regulator or label wording is given.",
+        "source": {
+          "label": "NCCN Guidelines: Prostate Cancer (Localised)",
+          "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1459"
+        }
+      },
+      {
+        "claim": "add 177Lu-PSMA-617 if PSMA-positive (PSMAddition, approved 31 Jul 2026)",
+        "stance": "missing",
+        "note": "The record's own linked PSMAddition entry states that severe side effects were more common with the radioligand and that an overall survival benefit is not yet known. The summary and the standard-of-care entry present the addition without either caveat, even though the open-problems section separately notes that survival has been hard to show for PSMA radioligands beyond VISION. The toxicity and survival uncertainty should be stated where the treatment is recommended.",
+        "source": {
+          "label": "NCCN Guidelines: Prostate Cancer (Localised)",
+          "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1459"
+        }
+      },
+      {
+        "claim": "Shared-decision PSA testing from 50 (45 if Black or family history/BRCA), risk-adapted intervals; MRI before biopsy",
+        "stance": "unclear",
+        "note": "The screening entry carries no guideline source. The cited NCCN guideline is the treatment guideline for prostate cancer, not the early detection guideline, and Wikipedia describes screening as contested with differing age thresholds across bodies. The specific ages 50 and 45 are therefore not backed by anything the record cites.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Prostate_cancer"
+        }
+      },
+      {
+        "claim": "PARP inhibitor + ARPI for BRCA/HRR-mutant ... docetaxel; ... pembrolizumab if MSI-high",
+        "stance": "supports",
+        "note": "These mCRPC options (PARP inhibitor combinations for HRR-mutant disease, taxanes, and pembrolizumab for MSI-high or dMMR tumours) are the categories the NCCN prostate cancer guideline lists for castration-resistant disease. The record does not say which NCCN version it is summarising, so the exact wording cannot be checked.",
+        "source": {
+          "label": "NCCN Guidelines: Prostate Cancer (Localised)",
+          "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1459"
+        }
+      },
+      {
+        "claim": "2013: Radium-223: first alpha emitter approved (ALSYMPCA)",
+        "stance": "supports",
+        "note": "Wikipedia records radium-223 as approved in 2013 for bone-predominant castration-resistant prostate cancer on the basis of the ALSYMPCA trial, and as the first alpha-emitting radiopharmaceutical to reach approval.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Prostate_cancer"
+        }
+      }
+    ],
+    "summary": "The record's epidemiology, its account of the diagnostic pathway, and its list of established castration-resistant treatments (taxanes, PARP inhibitor combinations, radium-223, pembrolizumab for MSI-high disease) are consistent with the two sources cited. Most of what makes the record distinctive, however, is dated 2026: the 31 July 2026 approval of 177Lu-PSMA-617 in hormone-sensitive disease, capivasertib for PTEN-deficient disease, and a new FDA nomenclature for mHSPC. None of these can be checked against Wikipedia or an undated NCCN link, and no regulatory or primary reference is given. The summary also omits the toxicity and unknown-survival caveats that the record's own PSMAddition entry attaches to that approval. The screening recommendation has no source at all. Editorially, the history, biomarkers, stateOfArt and openProblems lists contain duplicated entries (Huggins 1941, abiraterone 2011, radium-223 2013, 2020, 2022 and 2025 each appear twice), which should be merged.",
+    "confidence": "low"
+  }
+]

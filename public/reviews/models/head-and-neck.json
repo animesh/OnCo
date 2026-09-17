@@ -1,0 +1,88 @@
+[
+  {
+    "recordId": "head-and-neck",
+    "model": {
+      "id": "claude-fable-5-1",
+      "name": "Fable",
+      "provider": "Anthropic",
+      "version": "5.1"
+    },
+    "date": "2026-09-17",
+    "verdicts": [
+      {
+        "claim": "~900,000 cases per year",
+        "stance": "supports",
+        "note": "The Wikipedia article gives a global incidence figure of the same order (roughly 890,000 new cases in 2018), so the burden line is consistent with the listed source, though the record does not date its estimate.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Head_and_neck_cancer"
+        }
+      },
+      {
+        "claim": "Two epidemics coexist: tobacco- and alcohol-related cancers, and HPV-driven oropharyngeal cancer; nasopharyngeal carcinoma is Epstein-Barr-virus-driven",
+        "stance": "supports",
+        "note": "Wikipedia lists tobacco, alcohol, HPV and EBV as the principal causes and notes the rise of HPV-associated oropharyngeal disease. The more specific claim that it is now the most common HPV cancer in the US is not settled by the listed sources.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Head_and_neck_cancer"
+        }
+      },
+      {
+        "claim": "Recurrent/metastatic guideline: NCCN Guidelines: Head and Neck Cancers",
+        "stance": "unclear",
+        "note": "The URL attached to the recurrent/metastatic guideline entry is a PMC article, not an NCCN page, so the label and the link do not match. The ESMO-MCBS score of 2 for cetuximab sarotalocan placed in the same guideline field also cannot be traced to either NCCN or the PMC link from the record's text.",
+        "source": {
+          "label": "NCCN Guidelines: Head and Neck Cancers (Recurrent/metastatic)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11163648/"
+        }
+      },
+      {
+        "claim": "In June 2025 KEYNOTE-689 delivered the first perioperative approval, doubling event-free survival; NCCN 1 (CPS ≥1), ESMO-MCBS A",
+        "stance": "unclear",
+        "note": "The NCCN guideline landing page is the only source offered and it does not display category assignments or ESMO-MCBS grades without access to the full document. The approval date, the CPS ≥1 restriction and the 'doubling' of event-free survival are stated without a citable primary source in the list.",
+        "source": {
+          "label": "NCCN Guidelines: Head and Neck Cancers (Resectable)",
+          "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1437"
+        }
+      },
+      {
+        "claim": "Immunotherapy concurrent with chemoradiation has failed three times",
+        "stance": "missing",
+        "note": "The record names only two trials (JAVELIN Head and Neck 100 and KEYNOTE-412) and KEYNOTE-412 has no linked record or reference. The third failure should be identified so the count can be checked; as written the claim is stronger than the record's own evidence.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Head_and_neck_cancer"
+        }
+      },
+      {
+        "claim": "De-escalation for HPV-positive disease has failed in every randomised trial (RTOG 1016, De-ESCALaTE, NRG-HN005)",
+        "stance": "unclear",
+        "note": "RTOG 1016 and De-ESCALaTE tested substituting cetuximab for cisplatin at full radiation dose, whereas NRG-HN005 tested reduced radiation; the record groups them as one class of failure. The absolute 'every randomised trial' is not settled by any listed source, and the record's own 'Early HPV-positive oropharynx' entry allows pathology-guided adjuvant reduction after TORS, which sits uneasily with the blanket statement.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Head_and_neck_cancer"
+        }
+      },
+      {
+        "claim": "HPV vaccination (also prevents oropharyngeal cancer in men)",
+        "stance": "unclear",
+        "note": "None of the three listed sources addresses whether HPV vaccination has demonstrated or licensed prevention of oropharyngeal cancer; the statement rests on linked records rather than a cited source.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Head_and_neck_cancer"
+        }
+      },
+      {
+        "claim": "Subtypes: Salivary gland cancers (distinct histologies); Cutaneous SCC of the head and neck",
+        "stance": "unclear",
+        "note": "The record is titled 'squamous cell carcinoma' yet lists salivary gland cancers, which by its own wording are distinct histologies, and cutaneous SCC, which is usually treated as a skin cancer. Wikipedia's head and neck cancer article covers the broader anatomical group, so the scope of this record versus its title is not resolved by the source.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Head_and_neck_cancer"
+        }
+      }
+    ],
+    "summary": "The record's epidemiological framing (global burden of roughly 900,000 cases, the tobacco and alcohol versus HPV split, EBV-driven nasopharyngeal carcinoma) is consistent with the Wikipedia article, and its treatment narrative matches the linked trial records for KEYNOTE-048, CheckMate 141, JUPITER-02 and KEYNOTE-689. However, almost every specific regulatory, grading and numerical claim (June 2025 approval, doubled event-free survival, NCCN category 1, ESMO-MCBS grades, 3-year survival above 80%) has no citable source in the list: the NCCN link is a login-gated landing page and the recurrent/metastatic guideline URL actually points to a PMC article. Internal quality problems include duplicated history entries for 2006, 2016, 2019 and 2025, duplicated biomarker lines for HPV/p16 and PD-L1 CPS, a count of three concurrent-immunotherapy failures with only two trials named, and a subtype list that stretches beyond squamous histology despite the record's title. Nothing is plainly contradicted by the sources, but very little beyond the basics can be verified from them.",
+    "confidence": "low"
+  }
+]

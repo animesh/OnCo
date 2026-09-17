@@ -1,0 +1,88 @@
+[
+  {
+    "recordId": "melanoma",
+    "model": {
+      "id": "claude-fable-5-1",
+      "name": "Fable",
+      "provider": "Anthropic",
+      "version": "5.1"
+    },
+    "date": "2026-09-17",
+    "verdicts": [
+      {
+        "claim": "Most cases are cured by excision when found early, and it is the skin cancer most likely to spread when it is not.",
+        "stance": "supports",
+        "note": "Wikipedia describes melanoma as the most dangerous type of skin cancer, with surgical removal the mainstay for localised disease and outcomes strongly dependent on early detection. Consistent with the record.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Melanoma"
+        }
+      },
+      {
+        "claim": "Risk is driven by ultraviolet exposure and fair skin.",
+        "stance": "supports",
+        "note": "Wikipedia lists ultraviolet light exposure and low skin pigmentation among the primary causes and risk factors, matching the record's framing.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Melanoma"
+        }
+      },
+      {
+        "claim": "Melanoma causes about 330,000 cases per year, and incidence is rising in fair-skinned populations.",
+        "stance": "unclear",
+        "note": "Wikipedia supports rising incidence in populations of European descent, but the annual case count on the Wikipedia page derives from an earlier global estimate and does not settle the 330,000 figure. The record gives no year or registry for the number.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Melanoma"
+        }
+      },
+      {
+        "claim": "Half of advanced patients now live 10 years.",
+        "stance": "unclear",
+        "note": "The tldr states this as survival, but the record's own summary qualifies the ~50% CheckMate 067 figure as melanoma-specific survival, which is not the same as the proportion alive at ten years. Neither listed source resolves the figure; the tldr should carry the same qualifier as the summary.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Melanoma"
+        }
+      },
+      {
+        "claim": "Neoadjuvant immunotherapy is the new standard for resectable stage III disease; NCCN 'Preferred (neoadjuvant IO)'.",
+        "stance": "unclear",
+        "note": "The NCCN link is a guideline landing page and the record does not state a version or date, so the specific category labels (Preferred, 1, 2A) attached to the standard-of-care entries cannot be checked from the listed sources.",
+        "source": {
+          "label": "NCCN Guidelines: Melanoma: Cutaneous (Stage II-III)",
+          "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1492"
+        }
+      },
+      {
+        "claim": "Also the first with an approved TIL therapy, an oncolytic virus.",
+        "stance": "supports",
+        "note": "Wikipedia records talimogene laherparepvec as the first oncolytic virus approved, in 2015, for melanoma, which backs the oncolytic virus half of the claim. The record elsewhere uses the narrower wording 'first TIL therapy' for lifileucel, which is safer than the stateOfArt phrasing 'first cell therapy for a solid tumour', a broader claim the listed sources do not settle.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Melanoma"
+        }
+      },
+      {
+        "claim": "Intismeran autogene plus pembrolizumab became the first personalised mRNA vaccine to pass a phase 3 in August 2026; RP1 with nivolumab approved 2026.",
+        "stance": "unclear",
+        "note": "These 2026 events are asserted with an asOf date of September 2026 but neither listed source is cited for them; they rest entirely on linked records. The record should point to a primary announcement or label them as pending verification.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Melanoma"
+        }
+      },
+      {
+        "claim": "Prevention (sun protection, avoidance of sunbeds) is not covered in the record.",
+        "stance": "missing",
+        "note": "The record names UV exposure as the main risk driver and links a sunbed-ban idea and a prevention bottleneck, yet has no prevention entry in standardOfCare or summary. Wikipedia devotes a section to prevention through sun avoidance and protective measures.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Melanoma"
+        }
+      }
+    ],
+    "summary": "The record's account of melanoma biology, UV-driven risk, surgical cure of early disease and the arrival of checkpoint blockade, BRAF inhibition and the first oncolytic virus is consistent with the Wikipedia source. Its most quantitative claims cannot be checked: the 330,000 annual case figure, the ten-year survival numbers, the toxicity percentages and the NCCN category labels all rely on a guideline landing page or on linked records rather than on the two listed sources, and the tldr's 'half live 10 years' sits awkwardly beside the summary's own 'melanoma-specific survival' qualifier. The 2026 approvals and the intismeran phase 3 result are unsourced within the record. Prevention is absent despite UV being named as the main cause. Editorially, the history has duplicated 2011, 2014, 2015, 2024 and 2026 entries, biomarkers list BRAF V600 and HLA-A*02:01 twice, and standardOfCare has overlapping metastatic first-line and post-PD-1 settings that should be merged.",
+    "confidence": "low"
+  }
+]

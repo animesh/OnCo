@@ -1,0 +1,6 @@
+{
+  "source_hash": "12ec67db702d93a91d74e84b5e6d822cede47cd7e2ace67cc3917e3487c642db",
+  "text": "髓母细胞瘤是一种发生于后颅窝的胚胎性肿瘤，具有四个共识分子亚组（WNT、SHH、Group 3、Group 4），这些亚组在年龄、遗传学、转移倾向和生存方面各不相同：WNT（约10%，CTNNB1突变，生存率>95%）、SHH（约30%，PTCH1/SUFU/SMO，其中TP53突变亚组预后差；见于婴幼儿和成人）、Group 3（约25%，MYC扩增，预后最差）和Group 4（约35%，最常见，预后中等）。WHO 2021分类整合了组织学和分子分组。\n\n标准治疗为最大范围安全切除、全脑全脊髓放疗（CSI；标危23.4 Gy，高危36 Gy）并对后颅窝/瘤床加量，以及以cisplatin为基础的辅助化疗（cisplatin、vincristine、cyclophosphamide、lomustine）。3岁以下婴幼儿接受避免放疗的强化化疗（联合大剂量化疗/自体造血干细胞救援或脑室内methotrexate），因为CSI对发育中的大脑损害极大。风险适应性临床试验（SJMB12、ACNS1422、SIOP PNET5）正在降低WNT肿瘤的CSI剂量，并在骨骼发育成熟的患者中试验SMO抑制剂治疗SHH肿瘤。质子治疗可降低耳蜗、心脏和甲状腺的出射剂量。除婴幼儿外，复发很少可治愈；随访以基于MRI的监测、脑脊液cfDNA以及生存者管理（神经认知、内分泌、听力、第二肿瘤、小脑性缄默症）为主。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

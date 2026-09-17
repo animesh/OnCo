@@ -81,8 +81,9 @@ describe("loader", () => {
         expect(foreignSources(r, e!), `${recordId} / ${r.model.name} sources`).toEqual([]);
         expect(r.summary.includes("—"), "no em-dashes").toBe(false);
         for (const v of r.verdicts) expect(v.source, `${recordId} / ${r.model.name}: "${v.claim}" has a source`).toBeDefined();
-        // No key in this environment: everything shipped so far is a hand-written example.
-        expect(r.example).toBe(true);
+        // Live reviews (written by scripts/model-reviews.ts with a key) must carry a model and a date; examples must say so.
+        if (r.example) expect(r.example).toBe(true);
+        else { expect(r.model.id).toBeTruthy(); expect(r.date).toMatch(/^\d{4}-\d{2}-\d{2}/); }
       }
     }
   });

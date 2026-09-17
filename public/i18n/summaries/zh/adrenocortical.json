@@ -1,0 +1,6 @@
+{
+  "source_hash": "8203d8332162023a9e2d7059e9d84bdc320c1d9a32d3b6cf448a832859df783b",
+  "text": "肾上腺皮质癌（ACC）起源于肾上腺皮质，其常见的复发性分子改变包括 TP53（多数儿童病例为胚系突变；巴西存在 R337H 奠基者突变）、CTNNB1、ZNRF3 以及 IGF2 过表达，分子亚组（CIMP-high、C1A）可预测预后。诊断依赖 Weiss 评分和 Ki-67；分期采用 ENSAT 分期（I-IV 期）。约 60% 的患者存在激素过量，使治疗管理更为复杂。\n\n完整的开放性肾上腺切除术（R0）是唯一的根治性治疗；对于高危的已切除病变（Ki-67 >10%、III 期、R1），推荐辅助 mitotane 治疗，而 ADIUVO 研究（2023 年）显示低危患者无获益。晚期疾病采用依托泊苷-多柔比星-顺铂联合 mitotane（EDP-M，FIRM-ACT 2012 年：缓解率约 23%，与 streptozocin-mitotane 相比总生存期无改善）治疗，惰性疾病则采用 mitotane 单药治疗。PD-1 阻断剂（pembrolizumab，缓解率约 15-23%）和 cabozantinib 在 2 期研究中显示出活性；目前尚无获批的靶向治疗。皮质醇过量可用 metyrapone、osilodrostat 或 mifepristone 控制。I-II 期患者的生存率约为 80%，IV 期约为 15%。",
+  "model": "claude-fable-5-1",
+  "date": "2026-09-17"
+}

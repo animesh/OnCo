@@ -1,0 +1,88 @@
+[
+  {
+    "recordId": "pancreatic",
+    "model": {
+      "id": "claude-fable-5-1",
+      "name": "Fable",
+      "provider": "Anthropic",
+      "version": "5.1"
+    },
+    "date": "2026-09-17",
+    "verdicts": [
+      {
+        "claim": "Pancreatic ductal adenocarcinoma has a near-universal KRAS mutation, only ~20% of patients present resectable, and five-year survival remains ~13% overall.",
+        "stance": "supports",
+        "note": "The Wikipedia article describes KRAS mutation in the large majority of pancreatic adenocarcinomas, states that roughly a fifth of patients have surgically removable disease at diagnosis, and reports overall five-year survival in the low teens. The finer KRAS allele split (G12D ~40%, G12V ~30%, G12R ~15%) is not something either listed source itemises, so those proportions rest on the record alone.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Pancreatic_cancer"
+        }
+      },
+      {
+        "claim": "On current trends it will be the second most common cause of cancer death in the US by 2030.",
+        "stance": "supports",
+        "note": "The Wikipedia article carries the projection that pancreatic cancer is expected to become the second leading cause of cancer death in the United States by around 2030, consistent with the record's burden statement.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Pancreatic_cancer"
+        }
+      },
+      {
+        "claim": "Resectable / borderline: neoadjuvant mFOLFIRINOX, surgery, then adjuvant mFOLFIRINOX to complete ~6 months; gemcitabine/capecitabine if unfit; chemoradiation selectively.",
+        "stance": "supports",
+        "note": "This matches the broad structure of the NCCN pancreatic adenocarcinoma guideline the record cites, which lists mFOLFIRINOX as the preferred adjuvant regimen for fit patients, gemcitabine/capecitabine as an alternative, and neoadjuvant therapy for borderline resectable disease. The NCCN page is registration-gated, so this panel could only check the guideline's headline recommendations, not the exact version wording.",
+        "source": {
+          "label": "NCCN Guidelines: Pancreatic Adenocarcinoma (Resectable / borderline)",
+          "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1455"
+        }
+      },
+      {
+        "claim": "Regulatory filing is expected under a national priority voucher; daraxonrasib once approved is expected to become the standard.",
+        "stance": "unclear",
+        "note": "The record is internally inconsistent on daraxonrasib's status. The summary and second-line entry treat approval as pending, the 2026 history entry says 'daraxonrasib phase 3 enrolled' alongside a separate 2026 entry reporting the phase 3 result, and the linked drug record describes an FDA approval in August 2026, before the record's asOf date of 2026-09-06. Neither listed source settles which is correct, and the record should be reconciled to one position.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Pancreatic_cancer"
+        }
+      },
+      {
+        "claim": "RASolute 302: OS 13.2 vs 6.7 months, HR 0.40; zoldonrasib combinations with 50% response rates in previously treated disease.",
+        "stance": "unclear",
+        "note": "These are the record's central claims, yet neither the Wikipedia article nor the NCCN guideline listed as sources contains the RASolute 302 survival figures, the hazard ratio, or any zoldonrasib response data. The record cites its own trial and drug entries but no primary publication or regulatory document is in the sources list, so the figures cannot be checked here.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Pancreatic_cancer"
+        }
+      },
+      {
+        "claim": "Half of patients are too frail for FOLFIRINOX-class regimens; high-risk surveillance shifts ~3 in 4 detected cancers to stage I in carriers.",
+        "stance": "unclear",
+        "note": "Both proportions are stated as facts without a cited figure in either listed source. The Wikipedia article discusses performance status as a treatment determinant and surveillance of high-risk individuals in general terms, but gives neither the 'half' nor the 'three in four' number, so these should be treated as the record's estimates until a source is attached.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Pancreatic_cancer"
+        }
+      },
+      {
+        "claim": "Risk factors and modifiable causes (smoking, diabetes, obesity, chronic pancreatitis, family history).",
+        "stance": "missing",
+        "note": "The Wikipedia article devotes substantial space to risk factors, including tobacco smoking, obesity, diabetes, chronic pancreatitis, age and inherited syndromes. The record covers germline risk and surveillance but has no section on aetiology or prevention, and the open problems list treats detection as the only upstream issue. Given that smoking is the best established modifiable cause, this is a notable gap for a cancer overview.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Pancreatic_cancer"
+        }
+      },
+      {
+        "claim": "Tumour suppressor losses (TP53, CDKN2A, SMAD4) as defining molecular features alongside KRAS.",
+        "stance": "missing",
+        "note": "The Wikipedia article and the record's own linked KEGG pathway describe pancreatic ductal adenocarcinoma as driven by KRAS mutation followed by loss of CDKN2A, TP53 and SMAD4. The record's summary, subtypes and biomarkers mention CDKN2A only as a germline gene and omit TP53 and SMAD4 entirely, which understates the disease's molecular definition beyond KRAS.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Pancreatic_cancer"
+        }
+      }
+    ],
+    "summary": "The record's epidemiology and standard-of-care skeleton hold up against its two listed sources: the near-universal KRAS mutation, the roughly one-in-five resectability rate, five-year survival in the low teens, the projected rise to second leading cause of US cancer death by 2030, and the resectable-disease pathway built on mFOLFIRINOX are all consistent with the Wikipedia article and the NCCN guideline. The record's headline material, however, is the 2026 RAS inhibitor story, and none of it (RASolute 302 survival figures, hazard ratio, zoldonrasib response rates, the national priority voucher) can be checked against either source; the record is also internally inconsistent on whether daraxonrasib is approved or awaiting filing, and its history timeline duplicates several entries (1997, 2011, 2019, 2023, 2026) and its biomarker list repeats CA 19-9 and CLDN18.2. Substantive omissions are the absence of any risk-factor or prevention content, which Wikipedia covers at length, and the omission of TP53, CDKN2A and SMAD4 loss from the molecular description. Unsourced proportions such as 'half of patients are too frail' and 'three in four surveillance-detected cancers at stage I' should carry citations.",
+    "confidence": "low"
+  }
+]

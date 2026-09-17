@@ -1,0 +1,88 @@
+[
+  {
+    "recordId": "glioblastoma",
+    "model": {
+      "id": "claude-fable-5-1",
+      "name": "Fable",
+      "provider": "Anthropic",
+      "version": "5.1"
+    },
+    "date": "2026-09-17",
+    "verdicts": [
+      {
+        "claim": "IDH-wild-type glioblastoma: median age 65, median survival ~15 months with maximal therapy",
+        "stance": "supports",
+        "note": "The Wikipedia article gives a typical age of onset in the mid-60s and a median survival of roughly 12 to 15 months with treatment, consistent with the record's figures.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Glioblastoma"
+        }
+      },
+      {
+        "claim": "Glioblastoma, newly diagnosed: radiotherapy 60 Gy in 30 fractions with concurrent and adjuvant temozolomide; short-course 40 Gy in 15 fractions with temozolomide from age 65; TTFields with maintenance temozolomide",
+        "stance": "supports",
+        "note": "The NCCN CNS guideline lists standard fractionation chemoradiation with temozolomide, hypofractionated radiotherapy with temozolomide for older patients, and TTFields with maintenance temozolomide as category options, matching the record.",
+        "source": {
+          "label": "NCCN Guidelines: Central Nervous System Cancers (Glioblastoma)",
+          "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1425"
+        }
+      },
+      {
+        "claim": "Glioblastoma's standard has not changed since 2005 ... so median survival has not moved in 20 years",
+        "stance": "disputes",
+        "note": "The record contradicts itself: it lists TTFields (EF-14, 2015) as improving overall survival and as part of the current standard, and CCTG CE.6 (2017) as extending survival in older patients. Wikipedia also records the addition of TTFields to the treatment options after 2005. 'No systemic drug has beaten the 2005 standard' would be defensible; 'standard unchanged' and 'survival has not moved' are not what the record's own history says.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Glioblastoma"
+        }
+      },
+      {
+        "claim": "MGMT-unmethylated glioblastoma (~60%) gains almost nothing from chemotherapy ... the unmethylated-MGMT population where temozolomide adds nothing",
+        "stance": "disputes",
+        "note": "Within the same record the summary says unmethylated tumours 'gain less, though not nothing, and how much remains debated', while openProblems and the final paragraph say 'almost nothing' and 'adds nothing'. The NCCN guideline still includes radiotherapy with concurrent and adjuvant temozolomide as an option for unmethylated or indeterminate MGMT status, alongside clinical trial. The stronger wording should be aligned with the hedged wording.",
+        "source": {
+          "label": "NCCN Guidelines: Central Nervous System Cancers (Glioblastoma)",
+          "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1425"
+        }
+      },
+      {
+        "claim": "Glioblastoma, recurrent: re-resection or LITT if feasible; lomustine; bevacizumab for oedema/steroid sparing; re-irradiation; clinical trial",
+        "stance": "missing",
+        "note": "The NCCN recurrence pathway also lists regorafenib, temozolomide rechallenge, carmustine (including the implanted wafer at re-resection) and TTFields as options. The record links carmustine and GBM AGILE (which tested regorafenib) but does not mention either in its recurrent-disease standard of care.",
+        "source": {
+          "label": "NCCN Guidelines: Central Nervous System Cancers (Glioblastoma)",
+          "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1425"
+        }
+      },
+      {
+        "claim": "Dordaviprone (August 2025) is the first drug approved for H3 K27M diffuse midline glioma; 6 August 2025",
+        "stance": "unclear",
+        "note": "Neither listed source covers dordaviprone or diffuse midline glioma; the Wikipedia page is specific to glioblastoma. The approval and the exact date cannot be checked against the record's own sources.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Glioblastoma"
+        }
+      },
+      {
+        "claim": "2026: ASCO 2026: NeoVax personalised vaccine immune responses; multi-target CAR-T; tovorafenib EU approval",
+        "stance": "unclear",
+        "note": "This history entry, and the 'asOf' date of 2026-09-17, rest on events that neither listed source describes. The linked Ipsen record says only that Ipsen markets tovorafenib in Europe, which does not by itself establish an approval date or an ASCO 2026 presentation.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Glioblastoma"
+        }
+      },
+      {
+        "claim": "2009: Bevacizumab accelerated approval at recurrence; radiographic response without survival benefit",
+        "stance": "supports",
+        "note": "Wikipedia records the 2009 US accelerated approval of bevacizumab for recurrent glioblastoma and that subsequent randomised trials showed longer progression-free survival without an overall survival gain.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Glioblastoma"
+        }
+      }
+    ],
+    "summary": "The glioblastoma core of the record is well supported: survival and age figures, the Stupp chemoradiation backbone, hypofractionation for older patients, TTFields, and the bevacizumab story all match the Wikipedia article and the NCCN guideline. Two internal inconsistencies weaken it: the repeated claim that the standard and survival have been frozen since 2005 sits alongside the record's own history of TTFields (2015) and CE.6 (2017) improving survival, and the statements that temozolomide 'adds nothing' in MGMT-unmethylated disease contradict the summary's more careful 'gains less, though not nothing' and NCCN's continued inclusion of temozolomide for that group. The recurrent-disease standard of care omits regorafenib, carmustine and TTFields, which NCCN lists. Most of the broader glioma content (vorasidenib, tovorafenib, dordaviprone, the 2026 ASCO entries) lies outside both listed sources, which are glioblastoma-specific, so it cannot be checked here.",
+    "confidence": "low"
+  }
+]

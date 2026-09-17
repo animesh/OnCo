@@ -1,0 +1,79 @@
+[
+  {
+    "recordId": "multiple-myeloma",
+    "model": {
+      "id": "claude-fable-5-1",
+      "name": "Fable",
+      "provider": "Anthropic",
+      "version": "5.1"
+    },
+    "date": "2026-09-17",
+    "verdicts": [
+      {
+        "claim": "Dara-VRd ± ASCT → lenalidomide maintenance is the standard for newly diagnosed transplant-eligible patients (NCCN Category 1).",
+        "stance": "supports",
+        "note": "The cited NCCN guideline lists daratumumab-bortezomib-lenalidomide-dexamethasone as a preferred category 1 primary regimen for transplant candidates, followed by lenalidomide-based maintenance, which matches the record's wording.",
+        "source": {
+          "label": "NCCN Guidelines: Multiple Myeloma (Newly diagnosed)",
+          "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1445"
+        }
+      },
+      {
+        "claim": "Multiple myeloma causes ~190,000 new cases and ~120,000 deaths a year worldwide, ~36,000 in the US.",
+        "stance": "unclear",
+        "note": "Wikipedia gives global incidence and mortality figures of the same order but tied to a specific GLOBOCAN year, and the exact numbers depend on which year's estimate is used; the record gives no data year. The US figure is consistent with the range Wikipedia reports.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Multiple_myeloma"
+        }
+      },
+      {
+        "claim": "Median survival in fit patients now exceeds ten years.",
+        "stance": "unclear",
+        "note": "Wikipedia quotes considerably shorter overall survival figures for the whole population, and neither cited source gives a transplant-eligible subgroup estimate. The claim may be reasonable but is not settled by the record's own sources and no trial or registry is named for it.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Multiple_myeloma"
+        }
+      },
+      {
+        "claim": "Teclistamab plus daratumumab approved March 2026 (MajesTEC-3); anito-cel PDUFA December 2026; isatuximab subcutaneous July 2026; NCCN 2026 Category 1 for tec-dara after ≥1 line.",
+        "stance": "unclear",
+        "note": "These 2026 regulatory and guideline statements cannot be checked against the two listed sources, and the NCCN link is to the current guideline landing page rather than a dated 2026 version. Several linked drug and trial records repeat the same dates, but they are not in the sources list.",
+        "source": {
+          "label": "NCCN Guidelines: Multiple Myeloma (Newly diagnosed)",
+          "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1445"
+        }
+      },
+      {
+        "claim": "Ide-cel: first myeloma CAR-T; CARTITUDE-1 shows 98% response (2021).",
+        "stance": "disputes",
+        "note": "The record's own linked CARTITUDE-1 paper and trial entries give a 97% overall response rate, not 98%. Neither listed source reports the CARTITUDE-1 figure, so the discrepancy is internal to the knowledge graph. Several history entries (2003, 2015, 2021, 2022, 2026) are also duplicated.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Multiple_myeloma"
+        }
+      },
+      {
+        "claim": "The 'Newly diagnosed' standard-of-care entry cites only 'whole-body-mri' as its reference for Dara-VRd ± ASCT → lenalidomide maintenance.",
+        "stance": "disputes",
+        "note": "The reference does not support the treatment claim; whole-body MRI is an imaging record, not evidence for a quadruplet regimen. The more detailed transplant-eligible entry below it carries the appropriate PERSEUS and drug references, so this first entry appears to be a stub that duplicates it with the wrong citation.",
+        "source": {
+          "label": "NCCN Guidelines: Multiple Myeloma (Newly diagnosed)",
+          "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1445"
+        }
+      },
+      {
+        "claim": "Epidemiological risk factors, including the roughly two-fold higher incidence in Black people and the association with obesity, are not mentioned.",
+        "stance": "missing",
+        "note": "Wikipedia covers the higher incidence in people of African ancestry, male predominance and obesity as a risk factor. The record links to cancer-health-disparities and obesity-related-cancers records but its text says nothing about who gets the disease beyond median age.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Multiple_myeloma"
+        }
+      }
+    ],
+    "summary": "The record's frontline treatment framework (Dara-VRd with or without transplant, then lenalidomide maintenance) matches the cited NCCN guideline, and its global burden figures are of the right order compared with Wikipedia, though no data year is given. Much of the rest, including the March 2026 tec-dara approval, the December 2026 anito-cel decision, a 2026 NCCN category 1 listing for bispecifics at first relapse, the CARTITUDE-4 OS hazard ratio and the ten-year median survival claim, cannot be checked against the two listed sources, which are a general encyclopaedia page and an undated guideline landing page. Internal problems include a CARTITUDE-1 response rate (98%) that conflicts with the record's own linked paper (97%), repeated history entries for 2003, 2015, 2021, 2022 and 2026, duplicated open problems and state-of-the-art bullets, and a newly diagnosed standard-of-care entry referenced only to whole-body MRI. Risk factors and the racial disparity in incidence, which Wikipedia covers, are absent from the text.",
+    "confidence": "low"
+  }
+]

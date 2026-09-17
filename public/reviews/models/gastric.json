@@ -1,0 +1,79 @@
+[
+  {
+    "recordId": "gastric",
+    "model": {
+      "id": "claude-fable-5-1",
+      "name": "Fable",
+      "provider": "Anthropic",
+      "version": "5.1"
+    },
+    "date": "2026-09-17",
+    "verdicts": [
+      {
+        "claim": "~1 million cases per year, the fifth most common cancer; ~660,000 deaths per year, fifth among cancers",
+        "stance": "supports",
+        "note": "The Wikipedia article's epidemiology section carries GLOBOCAN-derived figures of roughly one million new cases and about 660,000 deaths a year, ranking stomach cancer fifth for both incidence and mortality, and it describes the East Asian concentration and the H. pylori link the summary gives.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Stomach_cancer"
+        }
+      },
+      {
+        "claim": "A cancer with three new targets in five years: Claudin 18.2, FGFR2b, and HER2",
+        "stance": "disputes",
+        "note": "The record's own history dates HER2 to ToGA in 2010, so it is not a new target, and its own open problems say FGFR2b benefit is uncertain after a mixed FORTITUDE-101 with no approved drug. The NCCN guideline lists HER2, PD-L1, MSI/dMMR and CLDN18.2 as the biomarkers directing therapy; FGFR2b is not among them. The tldr overstates what the rest of the record supports.",
+        "source": {
+          "label": "NCCN Gastric Cancer guideline",
+          "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1434"
+        }
+      },
+      {
+        "claim": "1990: Japan and Korea institute endoscopic screening programmes",
+        "stance": "unclear",
+        "note": "This history entry has an empty refs list and a single year for two countries whose programmes began at different times and did not start with endoscopy. None of the listed sources gives start dates that would settle the 1990 date or the 'endoscopic' description; the Wikipedia article only notes that screening exists in Japan and Korea.",
+        "source": {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Stomach_cancer"
+        }
+      },
+      {
+        "claim": "Localised disease is treated with gastrectomy and D2 lymphadenectomy plus perioperative chemotherapy",
+        "stance": "missing",
+        "note": "The standard-of-care table contains no radiotherapy setting at all, although the NCCN guideline still lists postoperative chemoradiation as an option for resected disease that did not receive preoperative therapy, and preoperative chemoradiation for GEJ tumours. The record even links the INT-0116 trial but never says where, if anywhere, chemoradiation now sits.",
+        "source": {
+          "label": "NCCN Gastric Cancer guideline",
+          "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1434"
+        }
+      },
+      {
+        "claim": "Later lines: esmoMcbs 2 (DESTINY-Gastric01 trastuzumab deruxtecan); version NCCN Guidelines: Gastric Cancer",
+        "stance": "unclear",
+        "note": "The guideline block is labelled as the NCCN guideline but points to a PMC article rather than the NCCN site, and it attaches an ESMO-MCBS score of 2 to an NCCN entry. The PMC link as listed does not let a reader confirm either the NCCN category or the ESMO-MCBS grade for DESTINY-Gastric01, so the provenance of this score is not settled.",
+        "source": {
+          "label": "NCCN Guidelines: Gastric Cancer (Later lines)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11163648/"
+        }
+      },
+      {
+        "claim": "Trastuzumab deruxtecan 6.4 mg/kg (DESTINY-Gastric04) if HER2 persists on re-biopsy or ctDNA; NCCN Category 1",
+        "stance": "disputes",
+        "note": "The record contradicts itself: the second-line row makes HER2 persistence on re-biopsy or ctDNA a condition of treatment, while the open problems state that re-biopsy or ctDNA before second-line targeting is not standard. The NCCN guideline is the cited authority for the Category 1 label and for any re-testing requirement, and the record does not show that it imposes one.",
+        "source": {
+          "label": "NCCN Gastric Cancer guideline",
+          "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1434"
+        }
+      },
+      {
+        "claim": "zanidatamab + chemotherapy ± tislelizumab after HERIZON-GEA-01 (PFS 12.4 vs 8.1 months; sBLA 2026); from 2026 the CLDN18.2 ADC sonesitatug vedotin (CLARITY-Gastric 01)",
+        "stance": "unclear",
+        "note": "These 2026 results and the regulatory steps are presented as part of standard care, yet the only sources listed are guideline landing pages and Wikipedia, none of which is shown to incorporate them. The record's own linked trial entries describe announcements, not guideline adoption, so whether either agent is guideline-endorsed first- or second-line therapy cannot be checked from the sources given.",
+        "source": {
+          "label": "ESMO gastric cancer guideline",
+          "url": "https://www.esmo.org/guidelines/guidelines-by-topic/esmo-clinical-practice-guidelines-gastrointestinal-cancers/"
+        }
+      }
+    ],
+    "summary": "The record's burden figures, biomarker framework (HER2, PD-L1 CPS, CLDN18.2, MSI) and the broad shape of first-line stratification match what the Wikipedia article and the NCCN and ESMO guideline pages cover, and the trial-derived numbers it quotes (RAINBOW, TAGS, DESTINY-Gastric04) are internally consistent with its linked trial entries. Weaknesses are mostly internal: the tldr calls HER2 and FGFR2b new targets when the record's own history and open problems say otherwise; the second-line HER2 row requires re-biopsy or ctDNA confirmation while the open problems say this is not standard; the 'Later lines' guideline block mislabels a PMC article as the NCCN guideline and attaches an ESMO-MCBS score that the sources do not confirm; the 1990 screening date has no reference; and the history list carries duplicate entries (ToGA twice in 2010, two 2021 rows, two 2024 zolbetuximab rows, satri-cel twice in 2025) as do the open problems. Radiotherapy and chemoradiation are absent from the standard-of-care table despite still appearing in NCCN. The 2026 claims about zanidatamab and sonesitatug vedotin cannot be checked against any listed source.",
+    "confidence": "low"
+  }
+]
