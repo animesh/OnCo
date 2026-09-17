@@ -25,7 +25,7 @@ const idea = (x: I): IdeaInput => ({ kind: "idea", asOf, ...x });
 
 // ======================= TRIALS =======================
 const trials: TrialInput[] = [
-  t({ id: "keynote-006", name: "KEYNOTE-006", nct: "NCT01866319", phase: "3", status: "positive", yearReported: 2015, sponsor: "Merck", enrolled: 834,
+  t({ id: "keynote-006", keyPapers: ["paper-keynote-006-pembrolizumab-ipilimumab-melanoma-nejm-2015"], name: "KEYNOTE-006", nct: "NCT01866319", phase: "3", status: "positive", yearReported: 2015, sponsor: "Merck", enrolled: 834,
     setting: "Advanced melanoma, ≤1 prior systemic therapy: pembrolizumab (two schedules) vs ipilimumab",
     tldr: "The trial that made PD-1 blockade the first choice over the older CTLA-4 drug, with a third of patients alive at ten years.",
     summary: "Pembrolizumab improved PFS and OS versus ipilimumab with fewer high-grade side effects. The 10-year analysis (Annals of Oncology 2024) reported OS 34.0% versus 23.6%; patients who completed two years of pembrolizumab had durable remissions off treatment. Established anti-PD-1 monotherapy as a first-line standard and the two-year treatment duration.",

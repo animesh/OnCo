@@ -22,7 +22,7 @@ export const targets: TargetInput[] = [
     ], links: [{ label: "UniProt P09758: TACSTD2 (TROP2)", url: "https://www.uniprot.org/uniprotkb/P09758/entry" }],
   },
   {
-    id: "her2", kind: "target", name: "HER2", symbol: "ERBB2", targetClass: "surface-antigen", asOf, wikipedia: W("HER2/neu"),
+    id: "her2", kind: "target", keyPapers: ["paper-slamon-her2-breast-ovarian-science-1989", "paper-yarden-sliwkowski-erbb-network-nrmcb-2001"], name: "HER2", symbol: "ERBB2", targetClass: "surface-antigen", asOf, wikipedia: W("HER2/neu"),
     tldr: "A growth-signal receptor. Some cancers make far too much of it, and drugs that block it or use it as a docking site have transformed those cancers.",
     summary: "Human epidermal growth factor receptor 2 is a receptor tyrosine kinase amplified in ~15-20% of breast cancers and a subset of gastric, colorectal, lung (mutations), and biliary cancers. Trastuzumab (1998) was the first targeted antibody in solid tumours. Trastuzumab deruxtecan redefined the target by working in 'HER2-low' tumours that older drugs ignored, and in 2026 gained approval in early-stage disease.",
     biology: "Ligand-less receptor that heterodimerises with HER3/EGFR to drive PI3K and MAPK signalling. Amplification is a true oncogenic driver; low expression is merely a delivery address for ADCs.",
@@ -799,7 +799,7 @@ export const targets: TargetInput[] = [
     ], drugs: ["nilutamide", "triptorelin", "bms-986365", "azd9750", "ep0062", "qlh12016"], links: [{ label: "Wikipedia", url: W("Androgen_receptor") }], companies: ["oric-pharmaceuticals"],
   },
   {
-    id: "tp53", drugs: ["ose2101", "krt-232"], kind: "target", name: "TP53", symbol: "TP53", targetClass: "tumor-suppressor", asOf, wikipedia: W("P53"),
+    id: "tp53", keyPapers: ["paper-vogelstein-surfing-p53-network-nature-2000"], drugs: ["ose2101", "krt-232"], kind: "target", name: "TP53", symbol: "TP53", targetClass: "tumor-suppressor", asOf, wikipedia: W("P53"),
     tldr: "TP53 is the 'guardian of the genome', broken in half of all cancers. Fixing it directly has so far defeated every attempt, so drugs exploit what its loss makes cancers depend on.",
     summary: "TP53 is the most commonly mutated gene in cancer (~50% overall, ~80% in TNBC and ovarian). Direct reactivators (eprenetapopt/APR-246) failed in phase 3; Y220C-specific correctors (rezatapopt) are in registrational trials. Indirect strategies exploit G2/M checkpoint dependence (WEE1, ATR, PLK1) and MDM2 inhibition in TP53-wild-type tumours.",
     biology: "Transcription factor coordinating cell-cycle arrest, apoptosis, and senescence after DNA damage.",

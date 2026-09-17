@@ -312,7 +312,7 @@ export const technologies: TechnologyInput[] = [
     technologies: ["organoids"], links: [{ label: "Wikipedia", url: W("Precision_medicine") }], companies: ["certis-oncology-solutions", "known-medicine", "notable-labs", "origin-bio", "zpredicta"],
   },
   {
-    id: "organoids", kind: "technology", name: "Patient-derived organoids", sections: ["drug-discovery"], status: "established", asOf, wikipedia: W("Organoid"),
+    id: "organoids", keyPapers: ["paper-sato-lgr5-organoids-nature-2009"], kind: "technology", name: "Patient-derived organoids", sections: ["drug-discovery"], status: "established", asOf, wikipedia: W("Organoid"),
     tldr: "Patient-derived organoids are miniature 3D versions of a patient's tumour grown in the lab.",
     summary: "Patient-derived organoids are grown by stem-cell-driven 3D culture in an extracellular matrix with defined growth factors, so a piece of a patient's tumour becomes a self-renewing miniature that keeps its genotype and drug response. Living biobanks of organoids (HUB, Broad) preserve genotype and drug response across many cancer types. They are used for drug screening, CRISPR studies, and increasingly co-cultured with immune cells for immunotherapy testing. The main limitation is that organoids lack vasculature and the full microenvironment, so stromal and immune effects are only partly captured, and prospective evidence that organoid drug testing improves patient outcomes is still being gathered. For a newcomer, an organoid is a lab-grown copy of one person's tumour that can be tested against drugs before the patient is.",
     principle: "Stem-cell-driven 3D culture in extracellular matrix with defined growth factors.",
@@ -596,7 +596,7 @@ export const technologies: TechnologyInput[] = [
     cancers: ["ovarian", "tnbc", "breast-hr-positive", "prostate", "pancreatic"], links: [{ label: "Wikipedia", url: W("PARP_inhibitor") }],
   },
   {
-    id: "cdk46-inhibitor", kind: "technology", name: "CDK4/6 inhibitors", sections: ["targeted-therapy", "hormonal"], status: "approved", asOf, since: 2015, wikipedia: W("CDK_inhibitor"),
+    id: "cdk46-inhibitor", keyPapers: ["paper-sherr-roberts-cdk-inhibitors-genesdev-1999"], kind: "technology", name: "CDK4/6 inhibitors", sections: ["targeted-therapy", "hormonal"], status: "approved", asOf, since: 2015, wikipedia: W("CDK_inhibitor"),
     tldr: "Pills that stop the cell-division engine, added to hormone therapy for the most common type of breast cancer.",
     summary: "Palbociclib, ribociclib, abemaciclib with endocrine therapy: PFS roughly doubled and, for ribociclib and abemaciclib, overall survival improved in advanced HR+/HER2- disease. Ribociclib (NATALEE) and abemaciclib (monarchE) are approved as adjuvant therapy for high-risk early disease. 2026: palbociclib approved as maintenance in HR+/HER2+ disease (PATINA).",
     principle: "Block RB phosphorylation, arresting cells in G1.",
@@ -750,7 +750,7 @@ export const technologies: TechnologyInput[] = [
 
   // ======================= IMMUNOTHERAPY =======================
   {
-    id: "checkpoint-inhibitor", kind: "technology", name: "Immune checkpoint inhibitors", sections: ["immunotherapy"], status: "standard-of-care", asOf, since: 2011, wikipedia: W("Checkpoint_inhibitor"),
+    id: "checkpoint-inhibitor", keyPapers: ["paper-ribas-wolchok-checkpoint-blockade-science-2018", "paper-chen-mellman-cancer-immunity-cycle-immunity-2013"], kind: "technology", name: "Immune checkpoint inhibitors", sections: ["immunotherapy"], status: "standard-of-care", asOf, since: 2011, wikipedia: W("Checkpoint_inhibitor"),
     tldr: "Immune checkpoint inhibitors are antibodies against CTLA-4, PD-1 or PD-L1 that release the brakes on T cells so they attack the cancer. They are approved in more than 20 tumour types and produce lasting, sometimes curative responses that chemotherapy rarely does, but most patients do not respond and autoimmune side effects are the cost.",
     summary: "Anti-CTLA-4 (ipilimumab), anti-PD-1 (pembrolizumab, nivolumab, cemiplimab, dostarlimab, toripalimab, tislelizumab), anti-PD-L1 (atezolizumab, durvalumab, avelumab), anti-LAG-3 (relatlimab). Approved across >20 tumour types and tumour-agnostically for MSI-H/dMMR and TMB-high. Moving earlier: neoadjuvant/perioperative in melanoma, NSCLC, TNBC (KEYNOTE-522), bladder, and MSI-H colorectal (where dostarlimab produced 100% complete responses in rectal cancer without surgery). Immune-related adverse events are the cost.",
     principle: "Blocking inhibitory receptor-ligand interactions restores T-cell priming (CTLA-4) and effector function (PD-1).",

@@ -160,7 +160,7 @@ const trials: TrialInput[] = [
 
 // ======================= DRUGS =======================
 const drugs: DrugInput[] = [
-  d(supplement<DrugInput>({ id: "bevacizumab", kind: "drug",
+  d(supplement<DrugInput>({ id: "bevacizumab", keyPapers: ["paper-hurwitz-bevacizumab-crc-nejm-2004"], kind: "drug",
     approvals: [{ region: "US", year: 2014, indication: "Platinum-resistant ovarian cancer with chemotherapy; recurrent/metastatic cervical cancer with chemotherapy" }, { region: "US", year: 2018, indication: "First-line stage III-IV ovarian cancer after surgery" }, { region: "US", year: 2020, indication: "First-line maintenance with olaparib in HRD-positive ovarian cancer" }],
     regulatoryEvents: [{ date: "2014-08-14", type: "approval", region: "US", note: "Cervical cancer with chemotherapy (GOG-0240)" }, { date: "2018-06-13", type: "approval", region: "US", note: "First-line ovarian cancer (GOG-0218)" }, { date: "2020-05-08", type: "approval", region: "US", note: "With olaparib as HRD-positive maintenance (PAOLA-1)" }],
     notes: ["In gynaecological oncology bevacizumab is used in first-line and recurrent ovarian cancer (GOG-0218, ICON7, OCEANS, AURELIA), as the partner for olaparib maintenance in HRD-positive disease (PAOLA-1), and in first-line cervical cancer regimens with pembrolizumab (KEYNOTE-826) or atezolizumab (BEATcc); it is given at 15 mg/kg every 3 weeks with chemotherapy and continued as maintenance. In the GOG-0218 concurrent and maintenance arm hypertension affected 42 percent (17 percent grade 3 or higher) and bowel perforation 2.6 percent."],

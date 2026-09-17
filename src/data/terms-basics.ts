@@ -378,7 +378,7 @@ export const termsBasics: TermInput[] = [
     related: ["metastasis", "lesion", "cancer-stage", "tnm-staging", "systemic-vs-local-therapy", "metastatic-cascade"],
   }),
   t({
-    id: "metastasis", name: "Metastasis", category: BIO,
+    id: "metastasis", keyPapers: ["paper-quail-joyce-microenvironment-metastasis-natmed-2013"], name: "Metastasis", category: BIO,
     aka: ["metastases", "metastatic", "metastasise", "metastasize", "metastasised", "metastasized", "metastasising", "metastasizing", "distant spread", "spread to", "secondary cancer", "secondary cancers", "stage IV", "stage 4", "advanced cancer", "advanced disease", "metastatic disease", "advanced cancers"],
     tldr: "Cancer that has spread from where it started to distant parts of the body, travelling through the blood or lymph. Metastasis is why staging scans look at the whole body, and the setting in which most new cancer drugs are approved first.",
     summary: "To metastasise, a cell must break away from the primary, invade through tissue into a blood or lymph vessel, survive the journey, exit at a distant organ, and grow there; each step is inefficient, yet enough cells succeed that around ninety percent of cancer deaths are due to metastases rather than the primary. Common destinations depend on the cancer (bone for prostate and breast, liver for colorectal, brain for lung and melanoma). Metastatic cancer is stage IV and is usually treated with systemic therapy rather than surgery, aiming at long control rather than cure, though a few sites (limited liver metastases in colorectal cancer, oligometastatic disease) can still be treated with curative intent.",
@@ -589,7 +589,7 @@ export const termsBasics: TermInput[] = [
     related: ["immune-system", "t-cell", "inflammation", "crs", "ligand", "receptor", "cachexia"], technologies: ["cytokine-therapy", "car-t", "t-cell-engager"], drugs: ["aldesleukin"],
   }),
   t({
-    id: "inflammation", name: "Inflammation", category: BIO,
+    id: "inflammation", keyPapers: ["paper-balkwill-mantovani-inflammation-virchow-lancet-2001"], name: "Inflammation", category: BIO,
     aka: ["inflammatory", "inflamed", "chronic inflammation", "anti-inflammatory", "pro-inflammatory", "inflammatory response"],
     tldr: "The body's response to injury or infection: immune cells and fluid rush in, causing redness, heat and swelling. Short bursts heal; long-term smouldering inflammation promotes cancer.",
     summary: "Chronic inflammation from infection (hepatitis B and C, H. pylori, HPV), irritation (tobacco, asbestos, acid reflux) or disease (ulcerative colitis) supplies growth factors, free radicals that mutate DNA, and blood-vessel growth, and it is estimated to underlie around a fifth of cancers; 'tumour-promoting inflammation' is a recognised enabling characteristic in the hallmarks of cancer. Yet inflammation is also how the immune system attacks tumours, and an 'inflamed' or 'hot' tumour is one full of T cells that responds well to checkpoint inhibitors. Aspirin and other anti-inflammatory drugs reduce colorectal cancer risk, and the inflammatory markers CRP and IL-6 track cachexia and prognosis.",
@@ -878,7 +878,7 @@ export const termsBasics: TermInput[] = [
     related: ["toxicity-grade", "quality-of-life", "dose", "irae", "placebo", "survivorship-care-plan", "cardio-oncology"],
   }),
   t({
-    id: "quality-of-life", name: "Quality of life", category: CLINIC,
+    id: "quality-of-life", keyPapers: ["paper-cella-fact-g-jco-1993"], name: "Quality of life", category: CLINIC,
     aka: ["QoL", "HRQoL", "health-related quality of life", "patient-reported outcomes", "patient-reported outcome", "PROs", "PRO", "patient-reported", "symptom burden", "functional status", "performance status", "ECOG", "ECOG 0-1", "ECOG performance status", "Karnofsky", "time to deterioration", "wellbeing"],
     tldr: "How a patient actually feels and functions day to day: symptoms, energy, mood, ability to work and live normally. Measured with questionnaires, it is the outcome that matters most alongside survival, and the one trials have historically neglected.",
     summary: "Standard instruments (EORTC QLQ-C30, FACT-G, EQ-5D) ask patients to rate pain, fatigue, nausea, physical and social function, and are collected repeatedly during a trial; results are reported as change from baseline or time until quality of life deteriorates. They matter because a drug that extends progression-free survival by two months while making patients feel worse may not be a good trade, and because regulators and health systems increasingly weigh them in approval and pricing. Performance status (ECOG 0 to 4) is the clinician's brief summary of how well a patient functions and gates who is fit enough for treatment and for trials.",

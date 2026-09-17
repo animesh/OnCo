@@ -45,7 +45,7 @@ const pathways: PathwayInput[] = [
     tags: ["mechanism"],
   }),
   p({
-    id: "tumor-microenvironment", name: "Tumour microenvironment (TME)", wikipedia: W("Tumor_microenvironment"),
+    id: "tumor-microenvironment", keyPapers: ["paper-quail-joyce-microenvironment-metastasis-natmed-2013"], name: "Tumour microenvironment (TME)", wikipedia: W("Tumor_microenvironment"),
     tldr: "A tumour is not just cancer cells. It is a neighbourhood of fibroblasts, immune cells, blood vessels, nerves, and scaffolding that the cancer recruits and corrupts, and that decides whether drugs and immune cells can get in.",
     summary: "Cancer-associated fibroblasts (CAFs; myCAF/iCAF/apCAF subtypes) build desmoplastic stroma and secrete TGF-β, CXCL12, and IL-6; tumour-associated macrophages (TAMs) and myeloid-derived suppressor cells (MDSCs) suppress T cells; regulatory T cells and exhausted CD8 T cells define immune phenotypes (inflamed, excluded, desert); abnormal vasculature creates hypoxia and blocks drug delivery; extracellular matrix stiffness signals through integrins and YAP; nerves and adipocytes add fuel and signals. Single-cell and spatial profiling has turned the TME from a concept into a map with druggable niches (FAP, CSF1R, CXCR4, TGF-β, adenosine).",
     analogy: "A castle under siege from the inside: the cancer conscripts the town's builders (fibroblasts) to raise walls, bribes the guards (macrophages) to look away, and diverts the water supply (vessels) so that reinforcements (T cells, drugs) never arrive.",
@@ -222,7 +222,7 @@ const pathways: PathwayInput[] = [
     tags: ["mechanism"],
   }),
   p({
-    id: "cancer-stem-cells-plasticity", name: "Cancer stem cells & phenotypic plasticity", wikipedia: W("Cancer_stem_cell"),
+    id: "cancer-stem-cells-plasticity", keyPapers: ["paper-singh-brain-tumour-initiating-cells-nature-2004"], name: "Cancer stem cells & phenotypic plasticity", wikipedia: W("Cancer_stem_cell"),
     tldr: "Some cancer cells behave like stem cells: they can regrow the whole tumour, resist treatment, and switch identities. This plasticity explains why tumours come back and why some lung and prostate cancers transform into a different cancer type under therapy.",
     summary: "Cancer stem cells (CSCs; first shown in AML by Dick, 1994-97) are functionally defined by tumour-initiating capacity; in solid tumours stemness is usually a reversible state rather than a fixed population. Lineage plasticity under therapy produces neuroendocrine transformation (EGFR-mutant NSCLC to SCLC; prostate adenocarcinoma to NEPC), basal/mesenchymal switching in breast cancer, and dedifferentiation. Drivers: EMT programmes, Wnt/Notch/Hedgehog, epigenetic remodelling (EZH2, SWI/SNF), TP53/RB1 loss. 'Unlocking phenotypic plasticity' is a 2022 hallmark. Therapeutic routes: differentiation therapy (ATRA in APL), EZH2/LSD1 inhibitors, targeting CSC markers (CD44, LGR5), and MRD-directed therapy.",
     analogy: "A weed that can turn from leaf to root to seed depending on what you spray on it. Kill the leaves and the roots wait; kill the roots and a seed reawakens.",
@@ -312,7 +312,7 @@ const pathways: PathwayInput[] = [
     tags: ["mechanism"],
   }),
   p({
-    id: "jak-stat", name: "JAK-STAT signalling", wikipedia: W("JAK-STAT_signaling_pathway"),
+    id: "jak-stat", keyPapers: ["paper-darnell-jak-stat-science-1994"], name: "JAK-STAT signalling", wikipedia: W("JAK-STAT_signaling_pathway"),
     tldr: "The relay that turns cytokine signals into gene changes. Overactive in blood cancers (JAK2 in myelofibrosis), it is also the wire that carries interferon's cancer-killing message, so tumours cut it to escape immunotherapy.",
     summary: "Cytokine receptors recruit JAK kinases that phosphorylate STAT transcription factors. JAK2 V617F drives myeloproliferative neoplasms (ruxolitinib, fedratinib, momelotinib approved); STAT3 is a hub for IL-6-driven survival, immunosuppression, and cachexia; STAT5 in leukaemias. Interferon-γ signalling via JAK1/2-STAT1 upregulates MHC and PD-L1; JAK1/2 loss-of-function mutations cause acquired resistance to PD-1 blockade. Direct STAT3 inhibitors (degraders, antisense) are in early trials.",
     analogy: "JAK-STAT is a doorbell wired to the house lights. Cytokines ring, JAK flips the switch, STAT turns on the lights. Cancers either jam the switch on (JAK2 mutation) or cut the wire so interferon cannot turn on the 'I am infected' lights.",

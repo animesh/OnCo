@@ -259,7 +259,7 @@ const baseDrugs: DrugInput[] = [
     ],
     targets: ["pd1"], technologies: ["checkpoint-inhibitor"], companies: ["bms"],
     cancers: ["melanoma", "nsclc", "rcc", "hodgkin-lymphoma", "colorectal", "gastric", "hcc", "mesothelioma", "urothelial"],
-    trials: ["checkmate-067"], people: ["tasuku-honjo"], keyPapers: ["paper-niche-2-nejm-2024"],
+    trials: ["checkmate-067"], people: ["tasuku-honjo"], keyPapers: ["paper-niche-2-nejm-2024", "paper-checkmate-017-nejm-2015"],
   },
   {
     id: "ipilimumab", kind: "drug", links: [{ label: "FDA label (DailyMed)", url: "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Ipilimumab" }], name: "Ipilimumab", brand: "Yervoy", modality: "Monoclonal antibody (anti-CTLA-4)", asOf, status: "approved", wikipedia: W("Ipilimumab"),

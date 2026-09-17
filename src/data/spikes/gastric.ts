@@ -22,7 +22,7 @@ const term = (x: Te): TermInput => ({ kind: "term", asOf, ...x });
 
 // ======================= TRIALS =======================
 const trials: TrialInput[] = [
-  t({ id: "toga", name: "ToGA", nct: "NCT01041404", phase: "3", status: "positive", yearReported: 2010, sponsor: "Roche", enrolled: 594,
+  t({ id: "toga", keyPapers: ["paper-toga-trastuzumab-gastric-lancet-2010"], name: "ToGA", nct: "NCT01041404", phase: "3", status: "positive", yearReported: 2010, sponsor: "Roche", enrolled: 594,
     setting: "First-line HER2-positive advanced gastric/GEJ adenocarcinoma: trastuzumab + cisplatin/fluoropyrimidine vs chemotherapy",
     tldr: "The trial that brought the breast-cancer drug Herceptin to stomach cancer, the first targeted therapy to improve survival in this disease.",
     summary: "ToGA, trial NCT01041404 sponsored by Roche and reported in the Lancet in 2010, brought the breast cancer antibody trastuzumab to stomach cancer, the first targeted therapy to improve survival in the disease. It randomised 594 patients with first-line HER2-positive advanced gastric or gastro-oesophageal junction adenocarcinoma to trastuzumab plus cisplatin and a fluoropyrimidine or chemotherapy alone, met its primary overall survival endpoint, and established HER2 testing for all advanced gastric cancers and the trastuzumab-chemotherapy backbone that KEYNOTE-811 and HERIZON-GEA-01 later built on. OnCo links it to gastric and oesophageal cancer, HER2 as a target, trastuzumab, Kohei Shitara, Yung-Jue Bang and the HER2 sequence pairing. With zanidatamab now beating trastuzumab head to head, whether the ToGA backbone has been retired is the open question.",
