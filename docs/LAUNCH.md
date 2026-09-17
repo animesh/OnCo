@@ -336,3 +336,9 @@ The owner's patient-first roadmap (a real-case "For me", persistent cancer choic
 ### Corpus in client JavaScript (17 Sept 2026)
 
 - After the translation tables moved to on-demand loading, one chunk of about 18 MB remained: the whole corpus, bundled because client components imported graph-backed libraries. The 20 guideline pages are fixed (src/lib/guidelines-shared.ts holds the client-safe helpers; the graph stays server-side). The four tool pages (tumor-board, navigator, interactions, explore) are fixed the same way: matchRows, powerRows and validateInteractions moved into server-only files (biomarker-match-rows.ts, relevance-rows.ts, interactions-validate.ts) and the client-safe helpers stay graph-free. Check the largest chunk after each build; no page should reference it.
+
+### Owner requests 17 Sept 2026 (evening)
+
+- Anocca (Södertälje, Sweden; TCR-T) added from its website. Ribodyne (San Diego) could not be added: no website resolves under ribodyne.com, .bio, .ai or .io and no public source was reachable, so it needs a description or link from the owner before a record is written.
+- Biophysics dimension approved: build the "Mathematical and biophysical models" technology group (growth and kill kinetics, radiobiology models, PK/PD and systems pharmacology, evolutionary and adaptive-therapy dynamics, spatial and agent-based models, digital twins) with a third tab on /models/; BioModels, PhysiCell and CancerModels.Org added to the data-sources candidates.
+- The site lists what it connects to at /data-sources/ (in use versus candidates, with licence, access and pipeline for each).

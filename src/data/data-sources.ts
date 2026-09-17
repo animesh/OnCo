@@ -493,4 +493,17 @@ export const DATA_SOURCES: DataSource[] = [
     fuels: ["none: not a data source for OnCo"], licence: "Platform terms; content is personal, often health information about identifiable people", api: true, access: "REST API", effort: "L",
     notes: "Listed to record the decision: OnCo does not ingest, quote or analyse patient forum or social media posts. They contain health information about identifiable people who did not consent to reuse; the site links to patient organisations instead.",
     risks: "Personal health data, consent, platform terms; excluded by policy." },
+  // Biophysics and mathematical modelling (owner request, 17 Sept 2026): sources for the models group.
+  { id: "biomodels", name: "BioModels (EMBL-EBI)", url: "https://www.ebi.ac.uk/biomodels/", status: "candidate", group: T.chemistry,
+    fuels: ["technologies (mathematical and biophysical models)", "pathways"], licence: "CC0 1.0 for curated models", api: true, access: "REST API", effort: "M",
+    notes: "Curated repository of published systems-biology models in SBML, including tumour growth, cell-cycle, apoptosis and pharmacokinetic models with their papers; each model page gives equations, parameters and the DOI of the source.",
+    risks: "Models are heterogeneous in scope and quality; only curated entries should be linked, and a model page needs plain-English framing before it helps a reader." },
+  { id: "physicell-mathcancer", name: "PhysiCell and the MathCancer model library", url: "https://physicell.org/", status: "candidate", group: T.community,
+    fuels: ["technologies (agent-based and multicellular models)"], licence: "BSD 3-Clause (software); model papers under their journal licences", api: false, access: "Web pages", effort: "S",
+    notes: "Open agent-based simulation framework for multicellular cancer systems, with published models of tumour growth, immune infiltration and drug delivery; a natural anchor for the agent-based modelling record.",
+    risks: "Software rather than data; the site links models but does not expose a structured list." },
+  { id: "cancer-models-org", name: "CancerModels.Org (PDX, organoid and cell line models)", url: "https://www.cancermodels.org/", status: "candidate", group: T.genomics,
+    fuels: ["technologies (model systems)", "cancers"], licence: "Model metadata open (EMBL-EBI); provider terms apply to samples", api: true, access: "REST API", effort: "M",
+    notes: "EMBL-EBI catalogue of patient-derived xenograft, organoid and cell line models with molecular data, successor to PDX Finder; would give the model-system records counts per cancer with a source.",
+    risks: "Counts change with each release; provider coverage is uneven across cancers." },
 ];
