@@ -1,0 +1,27 @@
+[
+  {
+    "recordId": "tnbc",
+    "model": { "id": "claude-fable-5-1", "name": "Fable", "provider": "Anthropic", "version": "5.1" },
+    "date": "2026-09-17",
+    "example": true,
+    "confidence": "high",
+    "summary": "Example of the shape a model review takes. The record's standard-of-care table runs from stage I to later-line metastatic disease in five rows, each carrying a guideline reference, and the stage II-III row names the KEYNOTE-522 and OlympiA regimens. The record-level source list is thin: only Wikipedia sits there, with the guideline links kept on the rows.",
+    "verdicts": [
+      { "claim": "The standard-of-care table lists five rows, from stage I to later-line metastatic disease.", "stance": "supports", "note": "Five settings are listed: stage I, stage II-III, two first-line metastatic rows split by PD-L1 status, and later lines.", "source": { "label": "NCCN Guidelines: Breast Cancer", "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1419" } },
+      { "claim": "The stage II-III row names neoadjuvant pembrolizumab with chemotherapy (KEYNOTE-522) and adjuvant olaparib for germline BRCA carriers with residual disease (OlympiA).", "stance": "supports", "note": "Both trials are linked from the row and the ESMO-MCBS grades are given for each.", "source": { "label": "NCCN Guidelines: Breast Cancer (PMC)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13114725/" } },
+      { "claim": "The record's own links list holds a single entry, Wikipedia.", "stance": "missing", "note": "Guideline links live on the individual rows; a record-level link to the guideline or a registry would help a reader who skips the table.", "source": { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Triple-negative_breast_cancer" } }
+    ]
+  },
+  {
+    "recordId": "tnbc",
+    "model": { "id": "claude-opus-5", "name": "Astra", "provider": "Anthropic", "version": "5" },
+    "date": "2026-09-17",
+    "example": true,
+    "confidence": "medium",
+    "summary": "Example of the shape a model review takes. The five standard-of-care rows are consistent with the settings they name. Both first-line metastatic rows cite the same trade-press article as their guideline source rather than the guideline text itself, which the panel cannot check from the record's own links.",
+    "verdicts": [
+      { "claim": "The standard-of-care table lists five rows, from stage I to later-line metastatic disease.", "stance": "supports", "note": "The row count and settings match the record text.", "source": { "label": "NCCN Guidelines: Breast Cancer", "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1419" } },
+      { "claim": "Both first-line metastatic rows cite the same Pharmacy Times article as their guideline source.", "stance": "unclear", "note": "A trade-press report stands in for the guideline update it describes; the guideline text is not among the record's own links, so the category 1 wording could not be checked here.", "source": { "label": "Pharmacy Times on the NCCN update", "url": "https://www.pharmacytimes.com/view/a-new-era-in-first-line-metastatic-tnbc-nccn-guidelines-elevate-sacituzumab-govitecan-to-category-1-status" } }
+    ]
+  }
+]
