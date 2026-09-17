@@ -6,33 +6,43 @@ import { routeFor, type Idea } from "@/lib/schema";
 import { pathwayView } from "@/lib/pathway-products";
 import { valueTone } from "@/lib/valueTone";
 import { Container, GroupKicker, PageHeader } from "@/components/ui";
-import { ValueIcon } from "@/components/ValueIcon";
+import { StartupRequestBoard, type RequestCard } from "@/components/StartupRequestBoard";
+import { COST_TEXT, DIMENSIONS, GLOBOCAN_SOURCE_LABEL, scoreStartupRequests, TYPE_LABEL, type SolutionType } from "@/lib/startup-score";
 
 export const metadata: Metadata = pageMeta({
   title: "Requests for startups",
-  description: "Problems in the corpus with no company working on them: ideas that need an industry, engineering or data builder, druggable targets with no product, and bottlenecks with no market entrant. Each one links to its evidence and to the form for pitching a company.",
+  description: "Problems in the corpus with no company working on them, ranked by patient urgency and commerciality with every input cited: ideas that need an industry, engineering or data builder, druggable targets with no product, and bottlenecks with no market entrant.",
   path: "/startup-requests/",
 });
 
 const cap = (s: string) => s[0].toUpperCase() + s.slice(1).replace(/-/g, " ");
-const MATURITY = ["being-tested-at-scale", "early-clinical", "preclinical-evidence", "speculative"];
-const COST = ["small", "medium", "large"];
-const COST_TIP: Record<string, string> = { small: "Under about one million dollars to try", medium: "One to fifty million dollars", large: "Over fifty million dollars" };
 
-/** Ideas that name industry, engineering or data as the actor and have no company in the corpus attached: the seed list of a request for startups. */
-function openIdeas(): Idea[] {
+/** Ranked cards for the client board: plain data only, every link resolved here. */
+function requestCards(): { cards: RequestCard[]; ideas: Idea[] } {
   const g = graph();
-  return (g.kind("idea") as Idea[])
-    .filter((i) => i.actor && ["industry", "engineering", "data"].includes(i.actor) && !i.companies.length && !(g.incoming(i.id).get("company") ?? []).length)
-    .sort((a, b) => COST.indexOf(a.cost ?? "large") - COST.indexOf(b.cost ?? "large") || MATURITY.indexOf(a.maturity) - MATURITY.indexOf(b.maturity) || a.name.localeCompare(b.name));
+  const rows = scoreStartupRequests(g);
+  const chip = (facet: "maturity" | "cost" | "actor", value: string, title?: string) => ({ label: facet === "cost" ? `${cap(value)} cost` : cap(value), href: `/ideas/?${facet}=${encodeURIComponent(cap(value))}`, className: valueTone(facet, cap(value)) ?? "bg-foreground/5", title });
+  const cards = rows.map((r): RequestCard => {
+    const i = r.input.idea;
+    return {
+      id: i.id, name: i.name, tldr: i.tldr, href: routeFor(i),
+      chips: [chip("maturity", i.maturity), ...(i.cost ? [chip("cost", i.cost, COST_TEXT[i.cost])] : []), ...(i.actor ? [chip("actor", i.actor)] : [])],
+      type: r.input.type, typeLabel: r.input.type ? TYPE_LABEL[r.input.type] : "Type not scored", cost: r.input.cost, namesCancer: i.cancers.length > 0,
+      bottlenecks: i.bottlenecks.map((b) => g.get(b)).filter((b): b is NonNullable<typeof b> => !!b).map((b) => ({ name: b.name, href: routeFor(b) })),
+      urgency: r.urgency.score, commerciality: r.commerciality.score, composite: r.composite,
+      scored: r.urgency.scored + r.commerciality.scored, total: r.urgency.total + r.commerciality.total,
+      dims: r.dimensions.map((d) => ({ key: d.key, axis: d.axis, label: d.label, weight: d.weight, rawText: d.rawText, score: d.score, note: d.note, sources: d.sources })),
+    };
+  });
+  return { cards, ideas: rows.map((r) => r.input.idea) };
 }
 
 export default function StartupRequestsPage() {
   const g = graph();
-  const ideas = openIdeas();
-  const byBottleneck = new Map<string, Idea[]>();
-  for (const i of ideas) for (const b of i.bottlenecks.length ? i.bottlenecks : ["other"]) byBottleneck.set(b, [...(byBottleneck.get(b) ?? []), i]);
-  const groups = [...byBottleneck.entries()].sort((a, b) => b[1].length - a[1].length);
+  const { cards, ideas } = requestCards();
+  const routeOptions = [...(Object.keys(TYPE_LABEL) as SolutionType[]).filter((t) => cards.some((c) => c.type === t)).map((t) => ({ value: t, label: TYPE_LABEL[t] })), ...(cards.some((c) => !c.type) ? [{ value: "none", label: "Type not scored" }] : [])];
+  const capitalOptions = (["small", "medium", "large"] as const).filter((c) => cards.some((x) => x.cost === c)).map((c) => ({ value: c, label: COST_TEXT[c] }));
+  const namesCancer = cards.filter((c) => c.namesCancer).length;
   // Druggable nodes with no product in the corpus, across every pathway.
   const undrugged: Array<{ target: string; targetName: string; pathway: string; pathwayName: string; node: string }> = [];
   for (const p of g.kind("pathway")) {
@@ -48,34 +58,26 @@ export default function StartupRequestsPage() {
   return (
     <>
       <PageHeader kicker={<GroupKicker id="who" />} title="Requests for startups"
-        lede={`Where the corpus sees a problem and no company. ${ideas.length} ideas name industry, engineering or data as the actor and have no company in OnCo working on them; ${undruggedByTarget.size} druggable targets in the pathway maps have no product; ${bottlenecks.length} bottlenecks have no company attached. Each item links to its evidence. Absence from OnCo means no company here names the problem, not that none exists anywhere.`} />
+        lede={`Where the corpus sees a problem and no company. ${ideas.length} ideas name industry, engineering or data as the actor and have no company in OnCo working on them, ranked here by patient urgency and commerciality with every input cited;${undruggedByTarget.size} druggable targets in the pathway maps have no product; ${bottlenecks.length} bottlenecks have no company attached. Each item links to its evidence. Absence from OnCo means no company here names the problem, not that none exists anywhere.`} />
       <Container className="pb-16 space-y-12">
         <section>
-          <h2 className="text-xl font-semibold tracking-tight mb-1">Ideas that need a builder</h2>
-          <p className="text-sm text-muted mb-4 max-w-3xl">Grouped by the bottleneck each idea attacks, cheapest to try first. Maturity and cost come from the idea record; open the idea for the hypothesis, the rationale and the experiment that would confirm or kill it.</p>
-          <div className="space-y-8">
-            {groups.map(([bid, list]) => {
-              const b = bid === "other" ? null : g.get(bid);
-              return (
-                <div key={bid}>
-                  <h3 className="font-semibold mb-2">{b ? <Link href={routeFor(b)} className="hover:underline">{b.name}</Link> : "Other problems"} <span className="text-muted text-sm font-normal">· {list.length} idea{list.length === 1 ? "" : "s"}</span></h3>
-                  <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                    {list.map((i) => (
-                      <li key={i.id} className="card p-4 flex flex-col gap-2">
-                        <Link href={routeFor(i)} className="font-medium leading-snug hover:underline">{i.name}</Link>
-                        <p className="text-sm text-muted leading-relaxed">{i.tldr}</p>
-                        <div className="flex flex-wrap gap-1.5 text-xs mt-auto">
-                          <Link href={`/ideas/?maturity=${encodeURIComponent(cap(i.maturity))}`} className={`chip inline-flex items-center gap-1 ${valueTone("maturity", cap(i.maturity)) ?? "bg-foreground/5"}`}><ValueIcon facet="maturity" value={cap(i.maturity)} />{cap(i.maturity)}</Link>
-                          {i.cost && <Link href={`/ideas/?cost=${cap(i.cost)}`} title={COST_TIP[i.cost]} className={`chip inline-flex items-center gap-1 ${valueTone("cost", cap(i.cost)) ?? "bg-foreground/5"}`}><ValueIcon facet="cost" value={cap(i.cost)} />{cap(i.cost)} cost</Link>}
-                          {i.actor && <Link href={`/ideas/?actor=${cap(i.actor)}`} className={`chip inline-flex items-center gap-1 ${valueTone("actor", cap(i.actor)) ?? "bg-foreground/5"}`}><ValueIcon facet="actor" value={cap(i.actor)} />{cap(i.actor)}</Link>}
-                        </div>
-                      </li>
-                    ))}
+          <h2 className="text-xl font-semibold tracking-tight mb-1">Ideas that need a builder, ranked</h2>
+          <p className="text-sm text-muted mb-3 max-w-3xl">Each idea is scored twice, 0 to 100, and sorted by the composite. Every number is read from a corpus record or a public dataset already in OnCo, and each card says where it came from under &ldquo;How this was scored&rdquo;. Where the corpus has no figure, that dimension is marked not scored and left out of the average rather than guessed at, so an idea scored on two dimensions is easier to move than one scored on ten; the count on each card says how many were used. {namesCancer} of {ideas.length} ideas name a cancer, which is what the patient figures hang off.</p>
+          <details className="card p-4 text-sm mb-4">
+            <summary className="cursor-pointer font-medium">How to read the scores</summary>
+            <div className="mt-3 grid gap-4 md:grid-cols-2">
+              {(["urgency", "commerciality"] as const).map((axis) => (
+                <div key={axis}>
+                  <h3 className="font-semibold mb-1">{axis === "urgency" ? "Urgency: how badly patients need it" : "Commerciality: how buildable a business is"}</h3>
+                  <ul className="space-y-1.5">
+                    {DIMENSIONS.filter((d) => d.axis === axis).map((d) => <li key={d.key}><span className="font-medium">{d.label}</span> <span className="text-muted">(weight {d.weight})</span>: {d.plain}</li>)}
                   </ul>
                 </div>
-              );
-            })}
-          </div>
+              ))}
+            </div>
+            <p className="text-muted mt-3">Each dimension is placed on a 0 to 100 scale against the other ideas on this page (counts on a log scale), the axis score is the weighted mean of the dimensions that could be scored, and the composite is the geometric mean of the two axes, so an idea has to score on both to rise. The solution type behind the payer and route dimensions is read from the idea&apos;s actor field (data actors build software) or its technology records. Survival is US five-year relative survival from SEER; incidence is the {GLOBOCAN_SOURCE_LABEL} world estimate. Weights and rules are in <code>src/lib/startup-score.ts</code>.</p>
+          </details>
+          <StartupRequestBoard cards={cards} routes={routeOptions} capitals={capitalOptions} />
         </section>
 
         <section>
