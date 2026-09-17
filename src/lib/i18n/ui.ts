@@ -150,7 +150,7 @@ export const EN = {
   "footer.wip": "Work in progress.",
   "footer.disclaimer": "Every fact on this site is being built and checked in the open and may be incomplete, out of date, or wrong. You must do your own research and verify anything here at its primary source before relying on it. Nothing on this site is medical advice; decisions belong with you and your clinicians.",
   "footer.commercial": "Commercial licences",
-  "footer.madeBy": "Made by",
+  "footer.madeBy": "Made with heart and soul by",
   "footer.licence": "© 2026 OnCo. Code MIT. The data are free for individual and educational use with the attribution “Data from OnCo (onco.cc)”, under CC BY-NC 4.0. Commercial use must contact us to pay for the data.",
   "footer.aboutLink": "About and methodology",
   "footer.corrections": "Corrections",

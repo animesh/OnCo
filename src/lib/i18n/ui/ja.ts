@@ -119,7 +119,7 @@ export const ja: UiDict = {
   "footer.wip": "制作中です。",
   "footer.disclaimer": "本サイトの情報はすべて公開の場で作成・検証中であり、不完全、古い、または誤っている可能性があります。ご利用の前に必ずご自身で調べ、一次資料で確認してください。本サイトの内容は医療上の助言ではありません。判断はご本人と担当医の間で行ってください。",
   "footer.commercial": "商用ライセンス",
-  "footer.madeBy": "制作",
+  "footer.madeBy": "心と魂を込めて作った：",
   "footer.licence": "© 2026 OnCo。コードは MIT。データは「Data from OnCo (onco.cc)」の出典表記のもと、個人利用と教育利用は無料（CC BY-NC 4.0）。商用利用はデータ利用料についてご連絡ください。",
   "footer.aboutLink": "OnCo についてと方法論",
   "footer.corrections": "訂正履歴",

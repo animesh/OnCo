@@ -66,7 +66,7 @@ export const viewport: Viewport = { themeColor: [{ media: "(prefers-color-scheme
  */
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
+    <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
         <RegionProvider>
         <ThemeScript />
@@ -117,7 +117,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <FooterNav />
             </div>
             <div className="mt-10 pt-6 border-t border-border flex flex-wrap items-center justify-between gap-x-6 gap-y-2 text-xs text-muted">
-              <p><T k="footer.licence" /> <Link href="/about/#licence" className="underline hover:text-foreground"><T k="footer.commercial" /></Link>. <T k="footer.madeBy" /> <a href="https://judegomila.com" rel="noopener author" className="underline hover:text-foreground">Jude Gomila</a>.</p>
+              <p><T k="footer.licence" /> <Link href="/about/#licence" className="underline hover:text-foreground"><T k="footer.commercial" /></Link>. <T k="footer.madeBy" /> <a href="https://judegomila.com" rel="noopener author" className="underline hover:text-foreground">Jude Gomila</a> <span className="inline-flex items-center gap-1.5 align-middle ms-1 text-muted" title="Marin and the Golden Gate"><svg viewBox="0 0 24 12" width="22" height="11" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" aria-label="Mount Tamalpais" role="img"><path d="M1 11 L7 4 L10 7 L14 2 L18 6 L23 11" /><path d="M4 11h16" opacity="0.5" /></svg><svg viewBox="0 0 28 12" width="26" height="11" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" aria-label="Golden Gate Bridge" role="img"><path d="M1 10h26" /><path d="M8 10V2M20 10V2" /><path d="M1 6c2.5-1.5 4.5-4 7-4s4.5 4 6 4 3.5-4 6-4 4.5 2.5 7 4" /><path d="M11 10V7M14 10V6M17 10V7" opacity="0.6" /></svg></span>.</p>
               <p className="flex flex-wrap gap-x-4 gap-y-1">
                 <Link href="/about/" className="hover:text-foreground hover:underline"><T k="footer.aboutLink" /></Link>
                 <Link href="/corrections/" className="hover:text-foreground hover:underline"><T k="footer.corrections" /></Link>

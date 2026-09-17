@@ -10935,5 +10935,9 @@ export const tldr_zh: Record<string, string> = {
   "little-princess-trust": "The Little Princess Trust 为因癌症治疗而脱发的 24 岁及以下儿童和青少年免费提供真发假发。",
   "knitted-knockers": "Knitted Knockers 由志愿编织者制作柔软的针织义乳，免费寄给任何接受过乳腺手术的人。",
   "wigs-for-kids": "Wigs for Kids 为美国因癌症治疗而脱发的儿童免费提供定制发片。",
-  "strata-oncology": "一家精准肿瘤学公司，其 StrataNGS 肿瘤检测专为极小的活检样本设计，并搭配一项用于选择免疫治疗和抗体药物偶联物的基因表达检测。",
+  "i-spy-1": "I-SPY 1 追踪了在乳腺手术前接受化疗的女性，通过反复的 MRI 和活检发现：肿瘤完全消失（病理完全缓解）可预测长期生存，在侵袭性亚型中尤为明显。",
+  "i-spy-2": "I-SPY 2 是一项持续进行的适应性平台试验，在术前测试新的乳腺癌药物，把每种药物引向它起效的肿瘤亚型，并在两年内而非十年内让优胜者“毕业”。其多名毕业药物已成为获批治疗。",
+  "i-spy-2-2": "I-SPY 2.2 更进一步：不再给所有人在相同化疗上叠加新药，而是按肿瘤的预测反应类型分配治疗，用影像和活检确认肿瘤是否消失，并让早期缓解的女性跳过后续化疗。",
+  "wisdom-trial": "WISDOM 试验研究：根据每位女性的基因、乳腺密度和病史定制的乳腺筛查，是否与每年一次的普遍筛查同样安全，同时减少虚惊和活检。",
+  "quantum-leap-healthcare-collaborative": "旧金山的非营利机构，由 Laura Esserman 和 Don Listwin 创立，负责发起 I-SPY 试验，让制药公司参与而非拥有适应性平台试验。",
 };

@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import MiniSearch from "minisearch";
 import type { SearchDoc } from "@/lib/search-index";
 import { KIND_META } from "@/lib/schema";
@@ -35,6 +36,7 @@ type Hit = SearchDoc & { concept?: string[] };
 const FALLBACK_BELOW = 3;
 
 export function SearchBox({ large = false, autoFocus = false }: { large?: boolean; autoFocus?: boolean }) {
+  const router = useRouter();
   const [q, setQ] = useState("");
   const [open, setOpen] = useState(false);
   const [results, setResults] = useState<Hit[]>([]);
@@ -81,6 +83,7 @@ export function SearchBox({ large = false, autoFocus = false }: { large?: boolea
         autoFocus={autoFocus}
         onChange={(e) => { setQ(e.target.value); setOpen(true); runSearch(e.target.value); }}
         onFocus={() => setOpen(true)}
+        onKeyDown={(e) => { if (e.key === "Enter" && q.trim()) { e.preventDefault(); setOpen(false); router.push(`/search/?q=${encodeURIComponent(q.trim())}`); } else if (e.key === "Escape") setOpen(false); }}
         placeholder={placeholder}
         aria-label="Search OnCo"
         className={`w-full rounded-lg border border-border bg-card px-3 ${large ? "py-3 text-base" : "py-1.5 text-sm"} outline-none focus:ring-2 focus:ring-accent/40`}

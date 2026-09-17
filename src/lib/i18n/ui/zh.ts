@@ -119,7 +119,7 @@ export const zh: UiDict = {
   "footer.wip": "持续建设中。",
   "footer.disclaimer": "本站的每一条信息都在公开构建和核查之中，可能不完整、过时或有误。在依赖任何内容之前，您必须自行研究并在原始来源核实。本站内容均非医疗建议；决定权属于您和您的医生。",
   "footer.commercial": "商业许可",
-  "footer.madeBy": "制作者",
+  "footer.madeBy": "用心用魂打造：",
   "footer.licence": "© 2026 OnCo。代码采用 MIT 许可。数据可供个人和教育用途免费使用，须注明“Data from OnCo (onco.cc)”，依 CC BY-NC 4.0 授权。商业用途须与我们联系付费。",
   "footer.aboutLink": "关于与方法",
   "footer.corrections": "更正记录",

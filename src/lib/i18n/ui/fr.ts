@@ -119,7 +119,7 @@ export const fr: UiDict = {
   "footer.wip": "Travail en cours.",
   "footer.disclaimer": "Chaque fait de ce site est construit et vérifié au grand jour et peut être incomplet, dépassé ou faux. Vous devez faire vos propres recherches et vérifier toute information à sa source primaire avant de vous y fier. Rien sur ce site n'est un avis médical ; les décisions vous appartiennent, à vous et à vos médecins.",
   "footer.commercial": "Licences commerciales",
-  "footer.madeBy": "Réalisé par",
+  "footer.madeBy": "Fait avec cœur et âme par",
   "footer.licence": "© 2026 OnCo. Code MIT. Les données sont libres pour un usage individuel et éducatif avec la mention « Data from OnCo (onco.cc) », sous CC BY-NC 4.0. Tout usage commercial doit nous contacter pour payer les données.",
   "footer.aboutLink": "À propos et méthodologie",
   "footer.corrections": "Corrections",

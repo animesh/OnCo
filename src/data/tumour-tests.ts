@@ -125,13 +125,9 @@ export const TUMOUR_TESTS: TumourTest[] = [
     regulatory: { us: "Laboratory-developed test (CLIA laboratory)" }, url: "https://www.labcorp.com/", technologies: ["cgp", "reference-laboratories"] }),
 ];
 
-const asOf = "2026-09-17";
 
 /** Companies named in the table that had no record. */
 export const tumourTestCompanies: CompanyInput[] = [
-  { kind: "company", asOf, id: "strata-oncology", name: "Strata Oncology", hq: "Ann Arbor, MI", country: "US", companyType: "diagnostics", website: "https://www.strataoncology.com", founded: 2015, stage: "growth",
-    links: [{ label: "Official website", url: "https://www.strataoncology.com" }], sections: ["diagnostics"],
-    tldr: "A precision oncology company whose StrataNGS tumour test is built to work on very small biopsies, paired with a gene-expression test for choosing immunotherapy and antibody-drug conjugates.",
-    summary: "Strata Oncology, based in Ann Arbor, Michigan, runs a CLIA laboratory offering StrataNGS, a targeted DNA and RNA tumour profiling test designed for the tiny tissue samples that often fail other panels, and StrataEXP, a quantitative gene-expression test that reports drug-target levels and an immunotherapy response score. The company partners with health systems to profile advanced cancer patients at no charge to the patient under its Strata Trial umbrella, matching them to sponsored trials, and has raised venture funding from healthcare investors. It appears on OnCo's tumour sequencing comparison page alongside the larger laboratories.",
-    technologies: ["cgp", "rna-seq"], tags: ["diagnostics"] },
+  // strata-oncology lives in diagnostics-wave1.ts
+
 ];

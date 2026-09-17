@@ -77,6 +77,7 @@ import { pdacDrugs, pdacTrials, pdacCompanies } from "./pdac-wave";
 import { diagnosticsTechnologies1, diagnosticsCompanies1 } from "./diagnostics-wave1";
 import { freeCollections } from "./free-wave";
 import { tumourTestCompanies } from "./tumour-tests";
+import { ispyTrials, ispyCompanies } from "./ispy-wave";
 import { thyroidSubtypes } from "./thyroid-subtypes";
 import { headNeckSubtypes } from "./head-neck-subtypes";
 import { ovarianSubtypes } from "./ovarian-subtypes";
@@ -152,7 +153,7 @@ const RAW_INPUTS: EntityInput[] = [
   ...companiesSponsors,
   ...drugsPipelineWave1,
   ...pipelineTrialsWave2,
-  ...drugsPipelineWave2, ...drugsPipelineWave6, ...drugsPipelineWave7, ...drugsChinaWave1, pvCancer, ...pvTrials, ...pvTerms, ...pvIdeas, ...pdacDrugs, ...pdacTrials, ...pdacCompanies, ...diagnosticsTechnologies1, ...diagnosticsCompanies1, etCancer, ...etTrials, aspirinDrug, ...radiationTechnologies, ...radiationTerms, ...radiationTrials, ...cancerSubtypes, ...radiationDrugs, ...radiationCompanies, ...cancerParentsWave2, ...radiationTrials4, ...thyroidSubtypes, ...headNeckSubtypes, ...ovarianSubtypes, ...kidneySubtypes, ...testisOesophagusSubtypes, ...bladderSubtypes, ...sarcomaLymphomaSubtypes, ...modelTechnologies,
+  ...drugsPipelineWave2, ...drugsPipelineWave6, ...drugsPipelineWave7, ...drugsChinaWave1, pvCancer, ...pvTrials, ...pvTerms, ...pvIdeas, ...pdacDrugs, ...pdacTrials, ...pdacCompanies, ...diagnosticsTechnologies1, ...diagnosticsCompanies1, ...ispyTrials, ...ispyCompanies, etCancer, ...etTrials, aspirinDrug, ...radiationTechnologies, ...radiationTerms, ...radiationTrials, ...cancerSubtypes, ...radiationDrugs, ...radiationCompanies, ...cancerParentsWave2, ...radiationTrials4, ...thyroidSubtypes, ...headNeckSubtypes, ...ovarianSubtypes, ...kidneySubtypes, ...testisOesophagusSubtypes, ...bladderSubtypes, ...sarcomaLymphomaSubtypes, ...modelTechnologies,
   ...pipelineTrialsWave3,
   ...pipelineTrialsWave4,
   ...pipelineTrialsWave5, ...pipelineTrialsWave6,
