@@ -325,4 +325,5 @@ The owner's patient-first roadmap (a real-case "For me", persistent cancer choic
 - Kidney (clear cell, papillary, chromophobe), testicular (seminoma, non-seminoma) and oesophageal (squamous cell, adenocarcinoma) subtype pages added under their parents, with Chinese TL;DRs.
 - Bladder: non-muscle-invasive and muscle-invasive urothelial cancer pages under the bladder record, with Chinese TL;DRs.
 - Sarcoma and lymphoma: leiomyosarcoma, liposarcoma, synovial sarcoma, marginal zone lymphoma and cutaneous T-cell lymphoma pages under their parents, with Chinese TL;DRs. Cancer pages now number 140.
-- Next: prostate by risk group as a family of stage pages, and Chinese TL;DRs for the remaining people.
+- Chinese: the last 131 people translated (OECI representatives from their fixed sentence, hand translations for the exceptions). Every kind is now fully translated except registry-ingested trials (694 of 3,365) and products (114).
+- Next: prostate by risk group as a family of stage pages.
