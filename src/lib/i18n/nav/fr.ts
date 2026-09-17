@@ -59,6 +59,7 @@ export const navFr: NavDict = {
   "/journals/": ["Revues", "Où les preuves sont publiées : périmètre, modèle d'accès et articles clés publiés par chaque revue."],
   "/key-papers/": ["Articles clés", "Les articles qui ont changé la pratique, chacun expliqué : ce qu'il a trouvé, ce que cela signifie, à quoi faire attention."],
   "/explained/": ["Essais en mots simples", "Chaque résultat d'essai en personnes sur 100, médianes expliquées, critères de substitution signalés."],
+  "/trial-designs/": ["Sélecteur de schémas d'essai", "Chaque schéma d'essai sous forme de fiche : quand l'utiliser, un exemple réel tiré du corpus et son principal risque, avec un guide en langage simple pour savoir quel schéma répond à votre question."],
   "/guidelines/": ["Recommandations", "Où NCCN, ESMO, NICE et ASCO s'accordent et divergent, et ce qui a changé entre versions."],
   "/forest/": ["Graphique en forêt", "Chaque rapport de risque du corpus d'essais sur un axe logarithmique ; filtrez par cancer, contexte et critère."],
   "/evidence/": ["Preuves", "Chaque essai classé par solidité des preuves, critères en personnes sur 100."],

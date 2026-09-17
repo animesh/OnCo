@@ -59,6 +59,7 @@ export const navEs: NavDict = {
   "/journals/": ["Revistas", "Dónde se publica la evidencia: alcance, modelo de acceso y los artículos clave que publicó cada revista."],
   "/key-papers/": ["Artículos clave", "Los artículos que cambiaron la práctica, cada uno explicado: qué encontró, qué significa, con qué tener cuidado."],
   "/explained/": ["Ensayos en palabras sencillas", "Cada resultado de ensayo como personas de cada 100, medianas explicadas, criterios sustitutos señalados."],
+  "/trial-designs/": ["Selector de diseños de ensayo", "Cada diseño de ensayo como una tarjeta: cuándo usarlo, un ejemplo real del corpus y su principal riesgo, con una guía en lenguaje sencillo sobre qué diseño responde a su pregunta."],
   "/guidelines/": ["Guías clínicas", "Dónde coinciden y discrepan NCCN, ESMO, NICE y ASCO, y qué cambió entre versiones."],
   "/forest/": ["Gráfico de bosque", "Cada razón de riesgo del corpus de ensayos en un eje logarítmico; filtra por cáncer, contexto y criterio."],
   "/evidence/": ["Evidencia", "Cada ensayo clasificado por solidez de la evidencia, criterios como personas de cada 100."],

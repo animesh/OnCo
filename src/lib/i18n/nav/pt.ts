@@ -59,6 +59,7 @@ export const navPt: NavDict = {
   "/journals/": ["Revistas", "Onde a evidência é publicada: âmbito, modelo de acesso e os artigos-chave que cada revista publicou."],
   "/key-papers/": ["Artigos-chave", "Os artigos que mudaram a prática, cada um explicado: o que encontrou, o que significa, com o que ter cuidado."],
   "/explained/": ["Ensaios em palavras simples", "Cada resultado de ensaio como pessoas em 100, medianas explicadas, desfechos substitutos assinalados."],
+  "/trial-designs/": ["Seletor de desenhos de ensaio", "Cada desenho de ensaio como um cartão: quando usá-lo, um exemplo real do corpus e o seu principal risco, com um guia em linguagem simples sobre qual desenho responde à sua pergunta."],
   "/guidelines/": ["Guias clínicas", "Onde NCCN, ESMO, NICE e ASCO concordam e discordam, e o que mudou entre versões."],
   "/forest/": ["Gráfico em floresta", "Cada razão de risco do corpus de ensaios num eixo logarítmico; filtre por cancro, contexto e desfecho."],
   "/evidence/": ["Evidência", "Cada ensaio classificado pela solidez da evidência, desfechos como pessoas em 100."],

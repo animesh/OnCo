@@ -43,6 +43,7 @@ const P: Record<string, string> = {
   "/prevalence/": "M4 20V10m5 10V4m5 16v-8m5 8V7M3 20h18",
   // Intel
   "/explained/": "M9 18h6M10 21h4M12 3a6 6 0 0 1 3.5 10.9c-.7.5-1 1.2-1 2.1h-5c0-.9-.3-1.6-1-2.1A6 6 0 0 1 12 3Z",
+  "/trial-designs/": "M4 5h6v6H4zM14 5h6v6h-6zM4 15h6v4H4zM14 15h6v4h-6zM7 11v4M17 11v4M10 8h4",
   "/guidelines/": "M6 3h12v18H6zM9 8h6M9 12h6M9 16h4",
   "/forest/": "M12 3v18M5 7h5M6 7v-1m0 2v-1M5 12h6M8 12v-1.5m0 3v-1.5M13 17h6M16 17v-1.5m0 3v-1.5",
   "/evidence/": "M12 3v18M4 7h16M6 7l-3 6a3 3 0 0 0 6 0l-3-6Zm12 0-3 6a3 3 0 0 0 6 0l-3-6ZM8 21h8",
