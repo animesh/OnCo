@@ -16,6 +16,8 @@ import { loadAskIndex } from "@/lib/ask-index";
 import { answerQuestion, type AskResult } from "@/lib/ask-pipeline";
 import type { Neighbour } from "@/lib/ask-compose";
 import { loadEntityRecord } from "@/lib/entity-client";
+import { pickMyCancer, shortCancerName, useMyCancer, type MyCancerLite } from "@/lib/use-my-cancer";
+import { CancerIcon } from "./CancerIcon";
 import { askHref, FEW_HITS, looksLikeQuestion, normaliseQuery, parseSearchState, searchHref, searchQueryString, searchTerms, usefulSuggestions } from "@/lib/search-query";
 
 type Row = SearchDoc & { lexical?: string[]; concept?: string[]; both: boolean; rank: number };
@@ -95,8 +97,10 @@ function Skeleton() {
  * "Did you mean" from MiniSearch's fuzzy suggestions, an Ask OnCo answer when the query is a question,
  * and the top hit's related records. Every state lives in ?q= and ?kind=, so it is shareable.
  */
-export function SearchResults() {
+export function SearchResults({ cancers = [] }: { cancers?: MyCancerLite[] }) {
   const [q, setQ] = useState("");
+  const [forMine, setForMine] = useState(false);
+  const mine = pickMyCancer(cancers, useMyCancer().id);
   const [query, setQuery] = useState("");
   const [kind, setKind] = useState<string | null>(null);
   const [rows, setRows] = useState<Row[] | null>(null);
@@ -215,7 +219,10 @@ export function SearchResults() {
   const pages = useMemo(() => (rows ?? []).filter((r) => r.kind === "page").slice(0, PAGE_STRIP), [rows]);
   const showPages = pages.length > 0 && (!kind || kind === "page");
   const stripIds = useMemo(() => new Set(showPages && kind !== "page" ? pages.map((p) => p.id) : []), [pages, showPages, kind]);
-  const shown = (rows ?? []).filter((r) => (!kind || r.kind === kind) && !stripIds.has(r.id));
+  // "for <cancer>": records that link to the remembered cancer (or are it). Pages carry no cancers and drop out.
+  const aboutMine = (r: Row) => !!mine && (r.id === mine.id || (r.cancers ?? "").split(" ").includes(mine.id));
+  const mineCount = mine ? (rows ?? []).filter(aboutMine).length : 0;
+  const shown = (rows ?? []).filter((r) => (!kind || r.kind === kind) && !stripIds.has(r.id) && (!forMine || !mine || aboutMine(r)));
   const pickKind = (k: string | null) => setKind((cur) => (cur === k ? null : k));
 
   return (
@@ -238,6 +245,9 @@ export function SearchResults() {
                 <li key={k}><button type="button" onClick={() => pickKind(k)} aria-pressed={kind === k} title={kind === k ? "Show every kind" : `Only ${kindLabel(k).toLowerCase()} results`} className={`chip border ${kind === k ? "bg-foreground text-background border-foreground" : `${kindChipClass(k)} hover:brightness-95 dark:hover:brightness-125`}`}><KindGlyph kind={k} />{kindLabel(k)} <span className="tabular-nums opacity-70">{n}</span></button></li>
               ))}
             </ul>
+          )}
+          {mine && rows.length > 0 && (
+            <button type="button" onClick={() => setForMine((v) => !v)} aria-pressed={forMine} title={forMine ? "Show results for every cancer" : `Only results linked to ${mine.name}`} className={`chip border ${forMine ? "bg-accent text-accent-fg border-accent" : "border-accent/40 bg-accent-soft text-accent hover:border-accent"}`}><CancerIcon cancerId={mine.id} className="h-3 w-3" />for {shortCancerName(mine.name)} <span className="tabular-nums opacity-70">{mineCount}</span></button>
           )}
           {semanticReady === false && <span className="text-xs text-muted">Concept index not built for this deployment; showing word matches only.</span>}
         </div>

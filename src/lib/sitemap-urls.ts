@@ -90,6 +90,7 @@ export function sitemapUrls(): SitemapUrl[] {
   for (const d of digests) add(`/digests/${d.id}/`);
   for (const p of paths) add(`/paths/${p.id}/`);
   for (const e of g.entities) add(routeFor(e), e.asOf);
+  for (const c of g.kind("cancer")) add(`${routeFor(c)}changes/`, c.asOf);
   for (const t of graph().kind("target")) out.push({ url: absoluteUrl(`/dossiers/${t.id}/`), lastModified: t.asOf });
   for (const r of regimens) out.push({ url: absoluteUrl(`/regimens/${r.id}/`), lastModified: r.asOf });
   for (const c of sequencingIndex()) out.push({ url: absoluteUrl(`/sequencing/${c.id}/`) });

@@ -16,6 +16,8 @@ import { logoSrc } from "@/lib/logos";
 import { kindTitle, pageMeta } from "@/lib/seo";
 import { KindName } from "@/components/T";
 import { buildBrowser, cap } from "@/lib/kind-browser";
+import { MyCancerPin, MyCancerTrialsFilter } from "@/components/MyCancer";
+import { myCancerList, myCancerTiles } from "@/lib/my-cancer-list";
 
 const ROUTE_TO_KIND: Record<string, Kind> = Object.fromEntries(KINDS.map((k) => [KIND_META[k].route, k])) as Record<string, Kind>;
 
@@ -49,6 +51,7 @@ export default async function KindIndex({ params }: { params: Promise<{ kind: st
     : k === "drug" ? <Link href="/explore/?kind=drug" className="rounded-lg border border-border bg-card px-4 py-2 text-sm font-medium">Rank by cancer type →</Link>
     : k === "institution" ? <Link href="/universities/" className="rounded-lg border border-border bg-card px-4 py-2 text-sm font-medium">University output →</Link>
     : k === "bottleneck" ? <Link href="/ideas/" className="rounded-lg bg-accent text-white px-4 py-2 text-sm font-medium">All ideas →</Link>
+    : k === "trial" ? <MyCancerTrialsFilter cancers={myCancerList()} />
     : undefined;
 
   return (
@@ -99,6 +102,7 @@ function CancersGrid() {
   const groups = [...new Set(items.map((c) => c.group))];
   return (
     <div className="mb-10 space-y-5">
+      <MyCancerPin cancers={myCancerTiles()} />
       {groups.map((grp) => (
         <div key={grp}>
           <div className="kicker mb-2 capitalize">{grp}</div>

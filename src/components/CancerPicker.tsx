@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { KIND_META, type Kind } from "@/lib/schema";
 import { useT } from "@/lib/i18n/ui";
@@ -9,9 +9,13 @@ import { FacetSelect } from "./filters/FacetSelect";
 import { Tip } from "./Tip";
 import { CancerIcon } from "./CancerIcon";
 import { MoleculeSlot } from "./MoleculeSlot";
+import { RedCards } from "./RedCards";
+import { ChangesGlyph } from "./MyCancer";
+import { useMyCancer } from "@/lib/use-my-cancer";
+import type { RedCard } from "@/lib/red-cards";
 
 export type Lite = { id: string; name: string; tldr: string; route: string; status?: string };
-export type PickerCancer = { id: string; name: string; group: string; tldr: string; route: string; stateOfArt: string[]; pipeline: Lite[]; groups: Partial<Record<Kind, Lite[]>> };
+export type PickerCancer = { id: string; name: string; group: string; tldr: string; route: string; stateOfArt: string[]; redCards: RedCard[]; pipeline: Lite[]; groups: Partial<Record<Kind, Lite[]>> };
 
 const ORDER: Kind[] = ["drug", "technology", "trial", "target", "pairing", "idea", "pathway", "company", "institution", "person", "roadmap", "term", "collection", "section"];
 
@@ -34,6 +38,11 @@ export function CancerPicker({ cancers }: { cancers: PickerCancer[] }) {
   const [q, setQ] = useState("");
   const [onlyApproved, setOnlyApproved] = useState(false);
   const { kind: kindName } = useT();
+  // The remembered cancer (item 102): preselect it once storage has been read, and remember the first cancer chosen here.
+  const my = useMyCancer();
+  const touched = useRef(false);
+  useEffect(() => { if (my.ready && !touched.current && my.id && cancers.some((c) => c.id === my.id)) setSelected([my.id]); }, [my.ready, my.id, cancers]);
+  const choose = (ids: string[]) => { touched.current = true; setSelected(ids); if (ids[0] && ids[0] !== my.id) my.set(ids[0]); if (!ids.length && my.id) my.clear(); };
   const plural = (k: Kind) => kindName(k, "plural") ?? KIND_META[k].plural;
   const chosen = cancers.filter((c) => selected.includes(c.id));
 
@@ -65,11 +74,11 @@ export function CancerPicker({ cancers }: { cancers: PickerCancer[] }) {
     <div>
       {/* Single control row */}
       <div className="sticky top-14 z-30 -mx-4 sm:-mx-6 px-4 sm:px-6 py-2 bg-background/95 backdrop-blur border-b border-border flex flex-wrap items-center gap-2">
-        <FacetSelect label="Cancer type" options={cancerOptions} value={selected} onChange={(v) => setSelected(v as string[])} multi searchable placeholder="Search cancers…" width="w-72" />
+        <FacetSelect label="Cancer type" options={cancerOptions} value={selected} onChange={(v) => choose(v as string[])} multi searchable placeholder="Search cancers…" width="w-72" />
         <input type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search within results…" aria-label="Search within results" disabled={!chosen.length}
           className="rounded-lg border border-border bg-card px-3 py-1.5 text-sm outline-none focus:ring-2 focus:ring-accent/40 w-60 disabled:opacity-50" />
         <label className="text-sm flex items-center gap-2"><input type="checkbox" checked={onlyApproved} onChange={(e) => setOnlyApproved(e.target.checked)} /> approved or standard of care only</label>
-        {(selected.length > 0 || q || kind !== "all") && <button onClick={() => { setSelected([]); setQ(""); setKind("all"); }} className="text-sm underline text-muted">Clear</button>}
+        {(selected.length > 0 || q || kind !== "all") && <button onClick={() => { choose([]); setQ(""); setKind("all"); }} className="text-sm underline text-muted">Clear</button>}
         {chosen.length > 0 && <span className="ml-auto text-sm text-muted tabular-nums">{total} things for {chosen.length === 1 ? chosen[0].name : `${chosen.length} cancers`}</span>}
       </div>
 
@@ -79,7 +88,7 @@ export function CancerPicker({ cancers }: { cancers: PickerCancer[] }) {
           <div className="kicker mt-8 mb-2">Or tap one</div>
           <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
             {cancers.map((c) => (
-              <button key={c.id} onClick={() => setSelected([c.id])} className="card p-3 text-left hover:shadow-md transition flex gap-3">
+              <button key={c.id} onClick={() => choose([c.id])} className="card p-3 text-left hover:shadow-md transition flex gap-3">
                 <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-accent-soft text-accent"><CancerIcon cancerId={c.id} className="h-7 w-7" /></span>
                 <span className="min-w-0"><span className="block text-xs text-muted capitalize">{c.group}</span><span className="block font-medium leading-snug">{c.name}</span><span className="block text-xs text-muted mt-0.5 line-clamp-2">{c.tldr}</span></span>
               </button>
@@ -90,12 +99,13 @@ export function CancerPicker({ cancers }: { cancers: PickerCancer[] }) {
 
       {chosen.map((c) => (
         <div key={c.id} className="card p-5 mt-6">
-          <div className="flex items-center justify-between gap-3"><h2 className="text-xl font-semibold flex items-center gap-3"><span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent-soft text-accent"><CancerIcon cancerId={c.id} className="h-7 w-7" /></span><Link href={c.route} className="hover:underline">{c.name}</Link></h2><Link href={c.route} className="text-sm underline shrink-0">Full page →</Link></div>
+          <div className="flex items-center justify-between gap-3"><h2 className="text-xl font-semibold flex items-center gap-3"><span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent-soft text-accent"><CancerIcon cancerId={c.id} className="h-7 w-7" /></span><Link href={c.route} className="hover:underline">{c.name}</Link></h2><span className="flex flex-wrap items-center gap-3 shrink-0 text-sm"><Link href={`${c.route}changes/`} className="chip border border-border bg-card hover:bg-foreground/5"><ChangesGlyph className="h-3 w-3" />What changed</Link><Link href={c.route} className="underline">Full page →</Link></span></div>
           <p className="text-[15px] mt-1">{c.tldr}</p>
           <div className="grid gap-4 sm:grid-cols-2 mt-4 text-sm">
             <div><div className="kicker mb-1">State of the art</div><ul className="list-disc pl-5 space-y-1">{c.stateOfArt.map((s, i) => <li key={i}>{s}</li>)}</ul></div>
             <div><div className="kicker mb-1">Coming down the pipeline</div><div className="flex flex-wrap gap-1.5">{c.pipeline.map((p) => <Tip key={p.id} title={p.name} text={p.tldr} href={p.route}><Link href={p.route} className="chip border bg-card border-border hover:bg-foreground/5">{p.name}</Link></Tip>)}</div></div>
           </div>
+          {c.redCards.length > 0 && <div className="mt-5"><RedCards cards={c.redCards} cancerName={c.name} compact /></div>}
         </div>
       ))}
 
