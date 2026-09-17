@@ -7,9 +7,16 @@ All notable changes to OnCo are recorded here. The format follows [Keep a Change
 Regenerated from the commit log each time the site ships (`scripts/changelog-sync.ts`); the version sections below are written by hand when a release is cut.
 
 ### 17 September 2026
-- 661 plain-English sentences: every cancer, 201 drugs, 179 technologies, 120 terms, 50 phase 3 trials and 63 targets; 451 reverse links give 126 orphaned drugs and 105 companies their first inbound link, with three maker corrections
+- Company content and sources for 33 makers, 26 sponsor corrections and papers for twelve researchers; 7,065 reverse links take orphaned trials from 2,467 to 279; Wikipedia links for six terms; structured outcomes with sources for 26 trials; 153 new logos; the schematic gauge counts aliased drawings
 - Navigation starts at the top of the page (scroll attribute on the html tag); footer credit Made with heart and soul by Jude Gomila with Mount Tamalpais and Golden Gate icons in nine languages; roadmap rows 130 to 137
 - Every list row has a visual or a designed stand-in (ideas borrow their cancer icon, technology drawing or molecule), with a test so it cannot regress; I-SPY 1, I-SPY 2, I-SPY 2.2, WISDOM and Quantum Leap Healthcare Collaborative linked to Laura Esserman and UCSF; navigation starts at the top of the page; Enter in search opens the results page; roadmap rows 122 to 129
+- Add structured outcomes to 26 reported trials flagged by the trial-outcomes gauge
+- Schematic gauge counts aliased drawings as specific
+- Add Wikipedia links to six terms lacking one
+- Fold a doubled relation line after the sponsor merge
+- Reverse links for orphaned trials: their drugs, companies (or sponsor via alias), technologies and cancers now list them back; orphan floor 2572 to 384
+- Link orphan sponsor companies, repoint AAA trials to Novartis, add Europe PMC papers to twelve people
+- 661 plain-English sentences: every cancer, 201 drugs, 179 technologies, 120 terms, 50 phase 3 trials and 63 targets; 451 reverse links give 126 orphaned drugs and 105 companies their first inbound link, with three maker corrections
 - Reverse links for orphaned drugs and companies: their companies, trials, cancers, technologies and institutions now list them back; orphan floor 2827 to 2572
 - Simple layer: part-o with 661 sentences, layer test
 - Machine translation pipeline for record summaries with hash-checked cache and a report link; 157 Chinese summaries live (every cancer page and nine glossary terms) and two Spanish; model review panel populated for twenty cancers by Fable, each verdict tied to the record's own sources
