@@ -12,9 +12,12 @@ import { TargetThumb } from "./TargetThumb";
 import { TechThumb } from "./TechThumb";
 import { TermThumb } from "./TermThumb";
 import { RowAvatar } from "./RowAvatar";
+import { RowVisualFallback } from "./RowVisualFallback";
 import { CancerIcon } from "./CancerIcon";
 import { FrontIcon } from "./FrontIcon";
 import type { TargetSchematicTarget } from "./TargetSchematic";
+import type { Kind } from "@/lib/schema";
+import { fallbackSlot, visualSource } from "@/lib/row-visual";
 import { STATUS_LABEL, STATUS_TIPS, statusClass } from "@/lib/text";
 import { FacetSelect } from "./filters/FacetSelect";
 import { ResultsTable, Toolbar, type Column, type SortState } from "./filters/ResultsTable";
@@ -66,6 +69,8 @@ export type BrowserRow = {
   round?: boolean;
   /** Organisation or person row: show an initials tile when there is no usable logo or portrait. */
   avatar?: "org" | "person";
+  /** The record's kind: when none of the visuals above apply, the row shows the kind's symbol tile (see RowVisualFallback) instead of a gap. */
+  kind?: Kind;
 };
 
 /** A linked object; `tip` is the object's one-line explanation, shown on hover. */
@@ -161,6 +166,10 @@ export function EntityBrowser({ rows, facets, columns, noun, defaultSort, hideSt
   const [sort, setSort] = useState<SortState>(baseSort);
 
   const allFacets = useMemo(() => (hideStatus ? facets : [STATUS_FACET, ...facets]), [facets, hideStatus]);
+  /** Size of the picture slot for this table (null when no row has a picture); rows without one get the kind's symbol tile at this size. */
+  const slot = useMemo(() => fallbackSlot(rows), [rows]);
+  /** Molecules take the wide slot in tables that also show drawings or organ icons, so the name column starts at one x for every row. */
+  const moleculeClass = slot?.className === "h-10 w-14" ? "h-10 w-14" : "h-10 w-10";
   const facetVals = (r: BrowserRow, k: string) => (k === "status" ? (r.status ? [r.status] : []) : (r.facets[k] ?? []));
   const facetLabel = (key: string) => tl(allFacets.find((f) => f.key === key)?.label ?? key);
 
@@ -293,13 +302,14 @@ export function EntityBrowser({ rows, facets, columns, noun, defaultSort, hideSt
   const tableCols: Column<BrowserRow>[] = [
     { key: "name", label: t("name"), sortable: true, render: (r) => (
       <div className="min-w-[220px] flex items-start gap-2">
-        {r.molecule && <MoleculeSlot drugId={r.molecule} modality={r.modality} name={r.name} className="h-10 w-10" />}
+        {r.molecule && <MoleculeSlot drugId={r.molecule} modality={r.modality} name={r.name} className={moleculeClass} />}
         {r.target && <TargetThumb target={r.target} route={r.route} />}
         {r.schematic && <TechThumb id={r.schematic.id} sections={r.schematic.sections} name={r.name} route={r.route} />}
         {r.term && <TermThumb category={r.term.category} name={r.name} route={r.route} />}
         {r.sectionIcon && <Link href={r.route} aria-label={`${r.name} front icon`} className="inline-flex h-10 w-14 shrink-0 items-center justify-center rounded-md border border-border bg-accent-soft text-accent"><FrontIcon id={r.sectionIcon} className="h-6 w-6" /></Link>}
         {r.cancerIcon && <Link href={r.route} aria-label={`${r.name} organ icon`} className="inline-flex h-10 w-14 shrink-0 items-center justify-center rounded-md border border-border bg-accent-soft text-accent"><CancerIcon cancerId={r.cancerIcon} className="h-7 w-7" /></Link>}
         {(r.logo || r.avatar) && !r.molecule && <RowAvatar src={r.logo} name={r.name} round={r.round || r.avatar === "person"} />}
+        {slot && r.kind && visualSource(r) === "kind" && <RowVisualFallback kind={r.kind} name={r.name} route={r.route} className={slot.className} round={slot.round} />}
         <div><Link href={r.route} data-row className="font-medium hover:underline">{r.name}</Link>{r.sub && <div className="text-xs text-muted">{r.sub}</div>}{!hideTldr && <div className="text-xs text-muted line-clamp-2 max-w-lg">{tldrFor(r.id, r.tldr, lang, tldrTable)}</div>}</div>
       </div>) },
     ...(hideStatus ? [] : [{ key: "status", label: "Phase / status", sortable: true, render: (r: BrowserRow) => r.molecule
