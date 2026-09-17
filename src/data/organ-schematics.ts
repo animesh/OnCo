@@ -344,7 +344,7 @@ export const ORGAN_SCHEMATICS: OrganSchematic[] = [
       add(m, polyline([[0.2, -0.7, 1.2], [0, -1.3, 1.25], [-0.05, -1.95, 1.15], [0, -2.6, 0.9]], "soft")); // jugular chain
       return m;
     } },
-  { id: "haematopoietic", name: "Bone marrow, lymph nodes and spleen", cancers: ["leukaemia", "aml", "all-leukemia", "cll", "cml", "dlbcl", "follicular-lymphoma", "hodgkin-lymphoma", "mantle-cell-lymphoma", "multiple-myeloma", "non-hodgkin-lymphoma", "mds", "myeloproliferative-neoplasms", "polycythaemia-vera", "essential-thrombocythaemia", "waldenstrom", "hairy-cell-leukemia", "peripheral-t-cell-lymphoma", "bpdcn", "burkitt-lymphoma", "hiv-associated-lymphoma", "cmml", "systemic-mastocytosis", "histiocytoses", "langerhans-cell-histiocytosis", "post-transplant-lymphoproliferative-disorder"],
+  { id: "haematopoietic", name: "Bone marrow, lymph nodes and spleen", cancers: ["marginal-zone-lymphoma", "cutaneous-t-cell-lymphoma", "leukaemia", "aml", "all-leukemia", "cll", "cml", "dlbcl", "follicular-lymphoma", "hodgkin-lymphoma", "mantle-cell-lymphoma", "multiple-myeloma", "non-hodgkin-lymphoma", "mds", "myeloproliferative-neoplasms", "polycythaemia-vera", "essential-thrombocythaemia", "waldenstrom", "hairy-cell-leukemia", "peripheral-t-cell-lymphoma", "bpdcn", "burkitt-lymphoma", "hiv-associated-lymphoma", "cmml", "systemic-mastocytosis", "histiocytoses", "langerhans-cell-histiocytosis", "post-transplant-lymphoproliferative-disorder"],
     caption: "Leukaemias, myeloma and MDS live in the marrow and blood; lymphomas grow in lymph nodes and spleen. The node stations are the disease map, not a route of spread, and staging counts them.",
     subsites: [
       { id: "marrow", label: "Bone marrow (leukaemia, MDS, MPN, myeloma)", at: [0, 0, 0], match: ["aml", "all", "leukaemia", "myeloid", "cmml", "mastocytosis", "burkitt", "ptld", "histiocyt", "lch", "lymphoblastic", "mds", "mpn", "myelofibrosis", "polycythaemia", "thrombocythaemia", "cml", "chronic phase", "blast", "myeloma", "plasma", "hairy", "waldenstr", "blastic", "npm1", "flt3", "kmt2a", "tp53", "ipss", "philadelphia", "ph-positive", "ph-negative", "t-cell", "b-cell", "hypercalcaemia", "light chain", "smouldering", "high-risk", "standard-risk", "del(17p)", "ighv", "richter", "jak2", "calr", "mpl"] },
@@ -368,7 +368,7 @@ export const ORGAN_SCHEMATICS: OrganSchematic[] = [
       add(m, ring(0.18, 10, "hot", "z"), { at: [1.25, -0.2, 0.42] }); // lytic lesion
       return m;
     } },
-  { id: "musculoskeletal", name: "Bone and soft tissue (limb cross-section)", cancers: ["sarcoma", "osteosarcoma", "ewing-sarcoma", "rhabdomyosarcoma", "chordoma", "desmoid-tumour", "tenosynovial-giant-cell-tumour", "epithelioid-sarcoma", "vascular-tumours"],
+  { id: "musculoskeletal", name: "Bone and soft tissue (limb cross-section)", cancers: ["leiomyosarcoma", "liposarcoma", "synovial-sarcoma", "sarcoma", "osteosarcoma", "ewing-sarcoma", "rhabdomyosarcoma", "chordoma", "desmoid-tumour", "tenosynovial-giant-cell-tumour", "epithelioid-sarcoma", "vascular-tumours"],
     caption: "Bone sarcomas favour the fast-growing ends of long bones (osteosarcoma) or the shaft (Ewing), soft tissue sarcomas the deep muscle compartments; spread is through the blood to the lungs, rarely via lymph nodes.",
     subsites: [
       { id: "metaphysis", label: "Metaphysis, near the growth plate (osteosarcoma)", at: [0, 1.5, 0.35], match: ["osteosarcoma", "conventional", "osteoblastic", "chondroblastic", "fibroblastic", "telangiectatic", "high-grade", "parosteal", "periosteal"] },

@@ -324,4 +324,5 @@ The owner's patient-first roadmap (a real-case "For me", persistent cancer choic
 - Ovarian: high-grade serous, low-grade serous, clear cell, mucinous and adult granulosa cell tumour pages under the ovarian record, with Chinese TL;DRs.
 - Kidney (clear cell, papillary, chromophobe), testicular (seminoma, non-seminoma) and oesophageal (squamous cell, adenocarcinoma) subtype pages added under their parents, with Chinese TL;DRs.
 - Bladder: non-muscle-invasive and muscle-invasive urothelial cancer pages under the bladder record, with Chinese TL;DRs.
-- Next families to branch: the remaining lymphoma and sarcoma text subtypes, and prostate by risk group.
+- Sarcoma and lymphoma: leiomyosarcoma, liposarcoma, synovial sarcoma, marginal zone lymphoma and cutaneous T-cell lymphoma pages under their parents, with Chinese TL;DRs. Cancer pages now number 140.
+- Next: prostate by risk group as a family of stage pages, and Chinese TL;DRs for the remaining people.

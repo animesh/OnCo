@@ -1,0 +1,121 @@
+/**
+ * Sarcoma and lymphoma subtypes (17 Sept 2026): leiomyosarcoma, liposarcoma and synovial sarcoma under the sarcoma record;
+ * marginal zone lymphoma under non-Hodgkin lymphoma; cutaneous T-cell lymphoma under the peripheral T-cell lymphomas.
+ * Facts follow the WHO 2020 soft tissue and WHO-HAEM5 classifications, ESMO guidelines and the trials named in each record.
+ * Registered in src/data/index.ts as sarcomaLymphomaSubtypes.
+ */
+import type { CancerInput } from "@/lib/schema";
+
+const asOf = "2026-09-17";
+const W = (s: string) => `https://en.wikipedia.org/wiki/${s}`;
+const tags = ["subtype-page"];
+
+export const sarcomaLymphomaSubtypes: CancerInput[] = [
+  { id: "leiomyosarcoma", kind: "cancer", name: "Leiomyosarcoma", group: "sarcoma", parent: "sarcoma", asOf, tags, wikipedia: W("Leiomyosarcoma"),
+    aka: ["LMS", "Uterine leiomyosarcoma", "Smooth muscle sarcoma"],
+    burden: "One of the two commonest soft-tissue sarcomas in adults, arising in the uterus, the retroperitoneum, large veins and limbs; about half of patients with deep tumours eventually develop metastases, most often to the lungs.",
+    tldr: "Leiomyosarcoma is a cancer of smooth muscle, most often in the womb, the abdomen behind the bowel or the wall of a large vein. Surgery is the only cure; for spread disease, doxorubicin-based chemotherapy, trabectedin and gemcitabine-docetaxel are the standards, with no targeted drug yet.",
+    summary: "Leiomyosarcoma arises from smooth muscle and is genomically complex, with TP53, RB1 and ATRX loss and no recurrent fusion. Uterine leiomyosarcoma is usually found unexpectedly after surgery for presumed fibroids, which is why morcellation of unsuspected tumours is avoided; retroperitoneal and vascular tumours present late. Complete surgical resection, with radiotherapy for limb tumours, is the only curative treatment and adjuvant chemotherapy has not proven benefit. Metastatic disease is treated with doxorubicin, alone or with trabectedin (LMS-04) or dacarbazine, gemcitabine-docetaxel, trabectedin and pazopanib; responses are modest and median survival is about two years. Immunotherapy has little activity, and trials target the disease's DNA repair and cell-cycle vulnerabilities.",
+    subtypes: ["Uterine leiomyosarcoma", "Retroperitoneal and intra-abdominal leiomyosarcoma", "Vascular leiomyosarcoma (inferior vena cava, large veins)", "Limb and cutaneous leiomyosarcoma (better outlook)"],
+    biomarkers: ["TP53, RB1 and ATRX alterations", "Grade (FNCLCC) and size", "Smooth muscle markers (desmin, h-caldesmon, SMA)", "Oestrogen and progesterone receptor in uterine tumours (hormone therapy in low-grade disease)"],
+    standardOfCare: [
+      { setting: "Localised", approach: "Wide surgical resection; radiotherapy for limb and trunk tumours; no morcellation of uterine masses that could be sarcoma; adjuvant chemotherapy not standard.", refs: ["imrt-igrt"] },
+      { setting: "Metastatic, first line", approach: "Doxorubicin plus trabectedin (LMS-04) or doxorubicin alone; gemcitabine-docetaxel as an alternative, especially in uterine disease.", refs: ["doxorubicin", "trabectedin", "gemcitabine", "docetaxel"] },
+      { setting: "Later lines", approach: "Trabectedin, pazopanib, dacarbazine-based regimens, aromatase inhibitors in hormone receptor-positive low-grade uterine disease; metastasectomy for limited lung spread.", refs: ["trabectedin", "pazopanib", "letrozole"] },
+    ],
+    stateOfArt: ["LMS-04 gave the first randomised progression-free survival gain in a decade by combining doxorubicin with trabectedin.", "Lung metastasectomy in selected patients produces long survival that chemotherapy alone does not.", "Genomic profiling has defined the disease but not yet yielded a targeted drug."],
+    history: [
+      { year: 1994, title: "Doxorubicin-ifosfamide becomes the reference first-line regimen for soft-tissue sarcoma", refs: ["doxorubicin", "ifosfamide"] },
+      { year: 2007, title: "Trabectedin approved in Europe for soft-tissue sarcoma", refs: ["trabectedin"] },
+      { year: 2014, title: "Morcellation warnings after unsuspected uterine leiomyosarcoma spread" },
+      { year: 2022, title: "LMS-04: doxorubicin plus trabectedin improves progression-free survival", refs: ["trabectedin"] },
+    ],
+    pipeline: [], openProblems: ["No targeted or immune therapy works in most patients.", "Uterine tumours are still discovered by accident after fibroid surgery.", "Adjuvant chemotherapy remains unproven."],
+    links: [{ label: "Wikipedia", url: W("Leiomyosarcoma") }] },
+  { id: "liposarcoma", kind: "cancer", name: "Liposarcoma", group: "sarcoma", parent: "sarcoma", asOf, tags, wikipedia: W("Liposarcoma"),
+    aka: ["Well-differentiated liposarcoma (atypical lipomatous tumour)", "Dedifferentiated liposarcoma", "Myxoid liposarcoma", "Pleomorphic liposarcoma"],
+    burden: "The commonest soft-tissue sarcoma of adults, about a fifth of the total; outcomes range from near-benign well-differentiated tumours of the limbs to dedifferentiated retroperitoneal tumours that recur relentlessly and kill.",
+    tldr: "Liposarcoma is a cancer of fat cells that comes in four different forms: two driven by extra copies of the MDM2 gene, one by a fusion gene that makes it unusually sensitive to radiotherapy and trabectedin, and one that behaves like other aggressive sarcomas. Surgery is the mainstay and MDM2 inhibitors are the most promising drugs in trials.",
+    summary: "Well-differentiated and dedifferentiated liposarcoma share amplification of MDM2 and CDK4 on chromosome 12 and arise mostly in the retroperitoneum and thigh; the well-differentiated form does not metastasise but recurs locally, and the dedifferentiated form is aggressive. Myxoid liposarcoma carries the FUS-DDIT3 fusion, occurs in younger adults, spreads to unusual soft-tissue and bone sites and is strikingly sensitive to radiotherapy and to trabectedin. Pleomorphic liposarcoma is genomically complex and treated like other high-grade sarcomas. Surgery is the mainstay, with radiotherapy for limb tumours and, for retroperitoneal disease, the STRASS trial failed to show a benefit of preoperative radiotherapy overall. Eribulin improved survival in advanced liposarcoma, trabectedin is effective in myxoid disease, and MDM2 inhibitors such as brigimadlin and CDK4/6 inhibitors are in late trials for the MDM2-amplified forms.",
+    subtypes: ["Well-differentiated liposarcoma (atypical lipomatous tumour; MDM2-amplified)", "Dedifferentiated liposarcoma (MDM2-amplified, aggressive)", "Myxoid and round cell liposarcoma (FUS-DDIT3)", "Pleomorphic liposarcoma"],
+    biomarkers: ["MDM2 and CDK4 amplification (FISH; separates from lipoma)", "FUS-DDIT3 fusion (myxoid)", "Round cell component (myxoid prognosis)", "Grade and site (retroperitoneal versus limb)"],
+    standardOfCare: [
+      { setting: "Well-differentiated, limb", approach: "Marginal excision; no radiotherapy or systemic therapy; surveillance for local recurrence.", refs: ["sarcoma"] },
+      { setting: "Retroperitoneal well- and dedifferentiated", approach: "Complete en bloc resection in a sarcoma centre; preoperative radiotherapy not routine after STRASS; repeat surgery for recurrence.", refs: ["sarcoma", "imrt-igrt"] },
+      { setting: "Myxoid liposarcoma", approach: "Surgery with preoperative radiotherapy (highly radiosensitive); trabectedin for advanced disease.", refs: ["imrt-igrt", "trabectedin"] },
+      { setting: "Advanced disease", approach: "Doxorubicin-based chemotherapy, eribulin (overall survival benefit in liposarcoma), trabectedin; MDM2 and CDK4 inhibitors in trials for amplified tumours.", refs: ["doxorubicin", "eribulin", "trabectedin", "mdm2"] },
+    ],
+    stateOfArt: ["MDM2 amplification is both the diagnostic test and the therapeutic target, with brigimadlin in a phase 3 trial against doxorubicin.", "Eribulin was the first drug to lengthen survival specifically in liposarcoma.", "Myxoid liposarcoma's radiosensitivity allows reduced-dose preoperative radiotherapy."],
+    history: [
+      { year: 1962, title: "Enzinger and Winslow classify liposarcoma" },
+      { year: 1993, title: "MDM2 amplification found in well-differentiated and dedifferentiated liposarcoma", refs: ["mdm2"] },
+      { year: 2016, title: "Eribulin approved for liposarcoma after a survival benefit", refs: ["eribulin"] },
+      { year: 2020, title: "STRASS: preoperative radiotherapy does not improve retroperitoneal sarcoma outcomes overall" },
+    ],
+    pipeline: [], openProblems: ["Retroperitoneal dedifferentiated disease recurs in most patients despite complete surgery.", "MDM2 inhibitors cause low platelets that limit dosing.", "No systemic therapy is proven in the adjuvant setting."],
+    links: [{ label: "Wikipedia", url: W("Liposarcoma") }] },
+  { id: "synovial-sarcoma", kind: "cancer", name: "Synovial sarcoma", group: "sarcoma", parent: "sarcoma", asOf, tags, wikipedia: W("Synovial_sarcoma"),
+    aka: ["SS18-SSX sarcoma"],
+    burden: "Five to ten percent of soft-tissue sarcomas, typically in adolescents and young adults near the joints of the limbs; about half eventually metastasise, often to the lungs, and it is one of the few sarcomas where chemotherapy clearly helps.",
+    tldr: "Synovial sarcoma is a young person's sarcoma driven by a single fusion gene, SS18-SSX, that scrambles how genes are switched on. It is treated with surgery, radiotherapy and ifosfamide-based chemotherapy, and in 2024 it became the first solid tumour with an approved engineered T-cell receptor therapy.",
+    summary: "Synovial sarcoma has nothing to do with the synovium; it is defined by the SS18-SSX fusion, which hijacks the BAF chromatin remodelling complex. It presents as a slow-growing deep mass near the knee, ankle or other joints in people aged 15 to 40, and is graded high by default. Treatment is wide resection with radiotherapy, and chemotherapy with ifosfamide and doxorubicin is used more readily than in other sarcomas because responses are frequent, including in the neoadjuvant setting; pazopanib and trabectedin have activity in advanced disease. Most tumours express the cancer-testis antigens MAGE-A4 and NY-ESO-1, and afamitresgene autoleucel, a MAGE-A4-directed T-cell receptor therapy, was approved in the United States in 2024 for advanced disease in HLA-A*02 patients, with letetresgene autoleucel against NY-ESO-1 following in trials.",
+    subtypes: ["Monophasic synovial sarcoma", "Biphasic synovial sarcoma", "Poorly differentiated (round cell) synovial sarcoma"],
+    biomarkers: ["SS18-SSX fusion (FISH or RNA sequencing; SS18-SSX antibody)", "MAGE-A4 and NY-ESO-1 expression with HLA-A*02 typing (TCR therapy eligibility)", "Size over 5 cm and poorly differentiated component (prognosis)"],
+    standardOfCare: [
+      { setting: "Localised", approach: "Wide resection with pre- or postoperative radiotherapy; neoadjuvant or adjuvant ifosfamide-doxorubicin for large high-risk tumours.", refs: ["imrt-igrt", "ifosfamide", "doxorubicin"] },
+      { setting: "Advanced, first line", approach: "Ifosfamide-based chemotherapy, doxorubicin; pazopanib or trabectedin later.", refs: ["ifosfamide", "doxorubicin", "pazopanib", "trabectedin"] },
+      { setting: "Advanced, HLA-A*02 and MAGE-A4-positive", approach: "Afamitresgene autoleucel after chemotherapy; NY-ESO-1 TCR therapy in trials.", refs: ["afamitresgene-autoleucel"] },
+    ],
+    stateOfArt: ["Afamitresgene autoleucel is the first T-cell receptor therapy approved for any solid tumour, with responses in about 40 percent of heavily pretreated patients.", "Chemosensitivity sets synovial sarcoma apart and justifies perioperative chemotherapy in high-risk cases.", "The single fusion driver makes it a model for epigenetic drugs such as BRD9 degraders."],
+    history: [
+      { year: 1994, title: "SS18-SSX fusion identified" },
+      { year: 2012, title: "Pazopanib approved for soft-tissue sarcoma including synovial sarcoma", refs: ["pazopanib"] },
+      { year: 2024, title: "Afamitresgene autoleucel approved: first TCR therapy for a solid tumour", refs: ["afamitresgene-autoleucel"] },
+    ],
+    pipeline: [], openProblems: ["TCR therapy needs a matching HLA type and antigen, excluding most patients.", "Late lung metastases years after treatment.", "Fertility and growth in adolescent patients receiving chemotherapy."],
+    links: [{ label: "Wikipedia", url: W("Synovial_sarcoma") }] },
+  { id: "marginal-zone-lymphoma", kind: "cancer", name: "Marginal zone lymphoma", group: "haematologic", parent: "non-hodgkin-lymphoma", asOf, tags, wikipedia: W("Marginal_zone_B-cell_lymphoma"),
+    aka: ["MZL", "MALT lymphoma", "Extranodal marginal zone lymphoma", "Splenic marginal zone lymphoma", "Nodal marginal zone lymphoma"],
+    burden: "About one in ten non-Hodgkin lymphomas, the second commonest indolent type after follicular lymphoma; most patients live for many years and many are cured by treating the infection or inflammation that drove the disease.",
+    tldr: "Marginal zone lymphoma is a slow B-cell lymphoma that often grows where the body has been fighting a chronic infection: the stomach with Helicobacter pylori, the eye, the skin or the spleen. Curing the infection cures many early cases; the rest are treated with rituximab, chemotherapy or BTK inhibitors.",
+    summary: "Marginal zone lymphomas come in three forms. Extranodal (MALT) lymphoma arises in mucosal tissue chronically stimulated by infection or autoimmunity: gastric MALT lymphoma from Helicobacter pylori, ocular adnexal from Chlamydia in some regions, salivary gland in Sjogren's syndrome and thyroid in Hashimoto's disease; eradicating H. pylori puts most early gastric cases into remission, and localised disease elsewhere is cured with low-dose radiotherapy. Splenic marginal zone lymphoma presents with a large spleen and circulating villous lymphocytes and is linked to hepatitis C, whose treatment can induce remission; rituximab has replaced splenectomy. Nodal marginal zone lymphoma behaves like follicular lymphoma. Systemic treatment when needed is rituximab alone or with bendamustine or chlorambucil, lenalidomide-rituximab, and the BTK inhibitors ibrutinib and zanubrutinib for relapsed disease.",
+    subtypes: ["Extranodal marginal zone lymphoma of MALT (gastric, ocular adnexal, salivary, thyroid, lung, skin)", "Splenic marginal zone lymphoma", "Nodal marginal zone lymphoma", "Paediatric nodal marginal zone lymphoma (indolent)"],
+    biomarkers: ["Helicobacter pylori status (gastric MALT)", "t(11;18) MALT1 translocation (predicts failure of eradication therapy)", "Hepatitis C serology (splenic)", "MYD88 wild-type (distinguishes from Waldenstrom)", "Plasmacytic differentiation and paraprotein"],
+    standardOfCare: [
+      { setting: "Gastric MALT lymphoma, H. pylori-positive", approach: "Eradication therapy and endoscopic follow-up; radiotherapy if the lymphoma persists or carries t(11;18).", refs: ["non-hodgkin-lymphoma"] },
+      { setting: "Localised extranodal disease", approach: "Low-dose involved-site radiotherapy (as little as 4 Gy in two fractions for some sites); surgery rarely.", refs: ["imrt-igrt", "hypofractionated-radiotherapy"] },
+      { setting: "Splenic marginal zone lymphoma", approach: "Watch and wait if asymptomatic; antiviral therapy if hepatitis C-positive; rituximab alone or with chemotherapy; splenectomy now rare.", refs: ["rituximab"] },
+      { setting: "Advanced or relapsed", approach: "Rituximab with bendamustine or chlorambucil, lenalidomide-rituximab; zanubrutinib or ibrutinib for relapsed disease.", refs: ["rituximab", "bendamustine", "chlorambucil", "lenalidomide", "zanubrutinib", "ibrutinib"] },
+    ],
+    stateOfArt: ["Gastric MALT lymphoma is the clearest example of a cancer cured by treating an infection.", "Very low-dose radiotherapy controls localised disease with almost no side effects.", "BTK inhibitors give durable responses in relapsed disease with zanubrutinib's approval in 2021."],
+    history: [
+      { year: 1983, title: "Isaacson and Wright describe MALT lymphoma" },
+      { year: 1993, title: "H. pylori eradication induces regression of gastric MALT lymphoma (Wotherspoon)" },
+      { year: 2021, title: "Zanubrutinib approved for relapsed marginal zone lymphoma", refs: ["zanubrutinib"] },
+    ],
+    pipeline: [], openProblems: ["Transformation to diffuse large B-cell lymphoma in a minority.", "No standard sequence of therapies is proven by randomised trials.", "Rare sites (lung, skin, dura) are managed by extrapolation."],
+    links: [{ label: "Wikipedia", url: W("Marginal_zone_B-cell_lymphoma") }] },
+  { id: "cutaneous-t-cell-lymphoma", kind: "cancer", name: "Cutaneous T-cell lymphoma (mycosis fungoides and Sezary syndrome)", group: "haematologic", parent: "peripheral-t-cell-lymphoma", asOf, tags, wikipedia: W("Mycosis_fungoides"),
+    aka: ["CTCL", "Mycosis fungoides", "Sezary syndrome"],
+    burden: "The commonest lymphoma of the skin, about one new case per 100,000 people a year; most patients have patches and plaques for decades and die of something else, while the minority with tumours, blood involvement or large-cell transformation have a median survival of a few years.",
+    tldr: "Mycosis fungoides is a lymphoma that lives in the skin, looking like eczema or psoriasis for years before it is diagnosed. It is treated with creams, light and skin-directed radiotherapy for as long as possible, then with antibodies such as mogamulizumab and brentuximab vedotin when it spreads to the blood or lymph nodes.",
+    summary: "Mycosis fungoides is an epidermotropic T-cell lymphoma that progresses from patches to plaques to tumours over many years; Sezary syndrome is its leukaemic form with erythroderma and circulating malignant T cells. Staging by skin, node, blood and viscera drives treatment. Early-stage disease is treated with topical steroids, nitrogen mustard, bexarotene gel, phototherapy (narrowband UVB or PUVA), local radiotherapy and total skin electron beam therapy, which controls the whole skin surface. Advanced disease receives extracorporeal photopheresis, interferon, oral bexarotene, methotrexate, the HDAC inhibitors vorinostat and romidepsin, brentuximab vedotin for CD30-positive disease (ALCANZA) and mogamulizumab, an anti-CCR4 antibody that is especially effective in Sezary syndrome (MAVORIC); allogeneic transplant is the only curative option for young patients with advanced disease.",
+    subtypes: ["Mycosis fungoides, early stage (patches and plaques)", "Mycosis fungoides, tumour stage and large-cell transformation", "Folliculotropic mycosis fungoides", "Sezary syndrome (erythroderma with blood involvement)", "Primary cutaneous CD30-positive lymphoproliferative disorders (related)"],
+    biomarkers: ["Stage (skin, node, blood, viscera)", "CD30 expression (brentuximab vedotin)", "CCR4 expression and blood involvement (mogamulizumab)", "Large-cell transformation on biopsy", "T-cell receptor clonality in skin and blood"],
+    standardOfCare: [
+      { setting: "Early stage (patches and plaques)", approach: "Topical steroids, nitrogen mustard or bexarotene gel; narrowband UVB or PUVA phototherapy; local radiotherapy; total skin electron beam therapy for widespread disease.", refs: ["total-skin-electron-therapy", "superficial-radiotherapy", "bexarotene"] },
+      { setting: "Advanced skin or blood disease", approach: "Extracorporeal photopheresis, interferon, oral bexarotene, low-dose methotrexate; mogamulizumab for blood involvement (MAVORIC); brentuximab vedotin for CD30-positive disease (ALCANZA); vorinostat or romidepsin.", refs: ["methoxsalen-ecp", "bexarotene", "methotrexate", "mogamulizumab", "brentuximab-vedotin", "vorinostat", "romidepsin"] },
+      { setting: "Refractory or transformed", approach: "Gemcitabine or liposomal doxorubicin chemotherapy; allogeneic stem cell transplant in fit younger patients.", refs: ["gemcitabine", "allogeneic-hsct"] },
+    ],
+    stateOfArt: ["Mogamulizumab and brentuximab vedotin were the first targeted antibodies to beat standard care in randomised trials of this disease.", "Skin-directed therapy, including total skin electron beam, keeps most patients well for years without systemic drugs.", "Hypericin ointment activated by visible light (HyBryte) completed phase 3 and is under review."],
+    history: [
+      { year: 1806, title: "Alibert describes mycosis fungoides" },
+      { year: 1987, title: "Extracorporeal photopheresis approved for cutaneous T-cell lymphoma", refs: ["methoxsalen-ecp"] },
+      { year: 1999, title: "Bexarotene approved", refs: ["bexarotene"] },
+      { year: 2006, title: "Vorinostat: first HDAC inhibitor approved for any cancer", refs: ["vorinostat"] },
+      { year: 2017, title: "ALCANZA: brentuximab vedotin beats standard therapy in CD30-positive disease", refs: ["brentuximab-vedotin"] },
+      { year: 2018, title: "MAVORIC: mogamulizumab approved", refs: ["mogamulizumab"] },
+    ],
+    pipeline: [], openProblems: ["Diagnosis takes years because early disease mimics eczema.", "No cure without transplant.", "Quality of life with itch and visible disease is under-measured in trials."],
+    links: [{ label: "Wikipedia", url: W("Mycosis_fungoides") }] },
+];

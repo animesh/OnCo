@@ -7924,4 +7924,10 @@ export const tldr_zh: Record<string, string> = {
   // Added 17 Sept 2026: bladder subtype pages.
   "non-muscle-invasive-bladder-cancer": "多数膀胱癌在仍局限于黏膜时被发现。它们经尿道刮除，风险较高者用灌注入膀胱的BCG治疗；难点在于频繁复发，以及肿瘤对BCG不再应答的患者。",
   "muscle-invasive-bladder-cancer": "膀胱癌一旦侵入肌层就不能只靠刮除：需化疗后切除膀胱，或用放化疗保留膀胱。对于已扩散的癌症，抗体药物偶联物enfortumab vedotin联合pembrolizumab已取代铂类化疗成为首选治疗。",
+  // Added 17 Sept 2026: sarcoma and lymphoma subtype pages.
+  leiomyosarcoma: "平滑肌肉瘤是平滑肌的癌症，最常见于子宫、肠后方的腹膜后或大静脉壁。手术是唯一的治愈手段；对于扩散的疾病，以doxorubicin为基础的化疗、trabectedin和gemcitabine-docetaxel是标准，尚无靶向药物。",
+  liposarcoma: "脂肪肉瘤是脂肪细胞的癌症，有四种不同形式：两种由MDM2基因拷贝增多驱动，一种由融合基因驱动、对放疗和trabectedin异常敏感，另一种表现如其他侵袭性肉瘤。手术是主要治疗，MDM2抑制剂是试验中最有希望的药物。",
+  "synovial-sarcoma": "滑膜肉瘤是年轻人的肉瘤，由单一融合基因SS18-SSX驱动，扰乱基因开启方式。治疗为手术、放疗和以ifosfamide为基础的化疗，2024年它成为首个获批工程化T细胞受体疗法的实体瘤。",
+  "marginal-zone-lymphoma": "边缘区淋巴瘤是生长缓慢的B细胞淋巴瘤，常出现在身体对抗慢性感染的部位：幽门螺杆菌感染的胃、眼、皮肤或脾脏。治愈感染可治愈许多早期病例，其余用rituximab、化疗或BTK抑制剂治疗。",
+  "cutaneous-t-cell-lymphoma": "蕈样肉芽肿是寄居于皮肤的淋巴瘤，确诊前多年看起来像湿疹或银屑病。尽可能长期用药膏、光疗和皮肤定向放疗治疗，扩散至血液或淋巴结后使用mogamulizumab和brentuximab vedotin等抗体。",
 };
