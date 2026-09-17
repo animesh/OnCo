@@ -13,7 +13,7 @@ const entities: EntityInput[] = [
     summary: "Oxaliplatin, irinotecan, leucovorin, and 5-fluorouracil. PRODIGE 4/ACCORD 11 (2011): OS 11.1 vs 6.8 months versus gemcitabine in fit metastatic patients. Modified FOLFIRINOX (PRODIGE 24, 2018) became the adjuvant standard after resection with median OS ~54 months, and is the most used neoadjuvant regimen for borderline-resectable disease. Toxicity (neutropenia, diarrhoea, neuropathy) restricts it to ECOG 0-1 patients. NALIRIFOX (liposomal irinotecan) is a 2024 variant for metastatic disease.",
     mechanism: "DNA crosslinking (oxaliplatin), topoisomerase-I inhibition (irinotecan), antimetabolite (5-FU with leucovorin modulation).",
     approvals: [{ region: "Global", year: 2011, indication: "Metastatic PDAC (PRODIGE 4 / ACCORD 11; component drugs generic)" }],
-    technologies: ["cytotoxic-chemotherapy", "platinum", "topoisomerase-inhibitors"], cancers: ["pancreatic"], trials: ["prodige-24", "napoli-3"], links: [{ label: "Wikipedia", url: W("FOLFIRINOX") }],
+    technologies: ["cytotoxic-chemotherapy", "platinum", "topoisomerase-inhibitors"], cancers: ["pancreatic"], trials: ["prodige-24", "napoli-3", "nct06922591", "nct07255404"], links: [{ label: "Wikipedia", url: W("FOLFIRINOX") }],
   },
   {
     id: "nalirifox", kind: "drug", name: "NALIRIFOX (liposomal irinotecan + oxaliplatin + 5-FU/LV)", brand: "Onivyde regimen", modality: "Cytotoxic regimen", asOf, status: "approved",
@@ -30,10 +30,10 @@ const entities: EntityInput[] = [
     summary: "MPACT (2013): OS 8.5 vs 6.7 months versus gemcitabine alone. Preferred for less fit patients; the control or backbone arm in PANOVA-3 (TTFields), zoldonrasib first-line combinations, and CLDN18.2 and other add-on trials. Gemcitabine monotherapy (1997) was the standard for 14 years before FOLFIRINOX.",
     mechanism: "Nucleoside analogue (gemcitabine) plus albumin-bound taxane that may deplete stroma and increase gemcitabine delivery.",
     approvals: [{ region: "US", year: 2013, indication: "First-line metastatic pancreatic adenocarcinoma (nab-paclitaxel label)" }],
-    technologies: ["cytotoxic-chemotherapy"], cancers: ["pancreatic"], drugs: ["paclitaxel"], trials: ["panova-3"], links: [{ label: "Wikipedia", url: W("Gemcitabine") }],
+    technologies: ["cytotoxic-chemotherapy"], cancers: ["pancreatic"], drugs: ["paclitaxel"], trials: ["panova-3", "nct05257993", "nct04589234"], links: [{ label: "Wikipedia", url: W("Gemcitabine") }],
   },
   {
-    id: "zoldonrasib", kind: "drug", name: "Zoldonrasib", code: "RMC-9805", modality: "Small-molecule RAS(ON) G12D-selective inhibitor", asOf, status: "phase-2",
+    id: "zoldonrasib", trials: ["nct07805954", "nct07621718", "nct07777822", "nct06445062", "nct07397338", "nct06922591"], kind: "drug", name: "Zoldonrasib", code: "RMC-9805", modality: "Small-molecule RAS(ON) G12D-selective inhibitor", asOf, status: "phase-2",
     tldr: "The first drug aimed specifically at KRAS G12D, the single most common mutation in pancreatic cancer. Early combination data in 2026 showed half of previously treated patients responding.",
     summary: "Revolution Medicines' covalent tri-complex inhibitor of KRAS G12D(ON). Breakthrough Therapy designation in G12D NSCLC (2025). At ESMO GI 2026, zoldonrasib plus daraxonrasib in previously treated RAS G12D metastatic PDAC (n=60, cutoff 9 Feb 2026): ORR 50% and DCR 97% in second line, median PFS 9.6 months; grade ≥3 treatment-related events 35% (rash, anaemia, stomatitis). First-line combination with gemcitabine/nab-paclitaxel showed high response rates and ctDNA clearance. Phase 3 planning underway.",
     mechanism: "Cyclophilin-A-mediated tri-complex that covalently engages the G12D mutant aspartate and blocks effector binding in the active state.",
@@ -41,7 +41,7 @@ const entities: EntityInput[] = [
     links: [{ label: "Revolution Medicines, ESMO GI 2026", url: "https://ir.revmed.com/news-releases/news-release-details/revolution-medicines-presents-phase-12-clinical-data-zoldonrasib" }, { label: "OncLive report", url: "https://www.onclive.com/view/zoldonrasib-combinations-show-compelling-antitumor-activity-in-ras-g12d-mutant-metastatic-pdac" }],
   },
   {
-    id: "elironrasib", links: [{ label: "ClinicalTrials.gov: trials of Elironrasib", url: "https://clinicaltrials.gov/search?intr=RMC-6291" }], kind: "drug", name: "Elironrasib", code: "RMC-6291", modality: "Small-molecule RAS(ON) G12C-selective inhibitor", asOf, status: "phase-2",
+    id: "elironrasib", trials: ["nct07397338", "nct06162221", "nct06128551"], links: [{ label: "ClinicalTrials.gov: trials of Elironrasib", url: "https://clinicaltrials.gov/search?intr=RMC-6291" }], kind: "drug", name: "Elironrasib", code: "RMC-6291", modality: "Small-molecule RAS(ON) G12C-selective inhibitor", asOf, status: "phase-2",
     tldr: "A next-generation KRAS G12C drug that hits the active form of the protein, from the same company as daraxonrasib.",
     summary: "Elironrasib is a covalent tri-complex inhibitor that binds KRAS G12C in its active, GTP-bound (ON) state, unlike the first-generation drugs sotorasib and adagrasib, which trap the inactive OFF state. Hitting the active protein is intended to produce deeper, more durable responses and to overcome the adaptive RAS reactivation that limits OFF-state inhibitors. It is being tested alone and with daraxonrasib, the pan-RAS(ON) inhibitor from the same company, in non-small-cell lung cancer, colorectal cancer and the roughly 1 to 2% of pancreatic cancers that carry G12C. It is in phase 2 with no approval yet, and whether ON-state inhibition delivers a clinically meaningful advantage over the approved G12C drugs is the open question. For a newcomer, it is a next-generation KRAS G12C drug that hits the switched-on form of the protein.",
     mechanism: "Covalent tri-complex inhibitor of KRAS G12C in the GTP-bound state.",
@@ -159,7 +159,7 @@ const entities: EntityInput[] = [
 
   // ======================= COMPANIES =======================
   {
-    id: "ipsen", links: [{ label: "Official website", url: "https://www.ipsen.com" }], kind: "company", name: "Ipsen", hq: "Paris", country: "FR", companyType: "pharma", website: "https://www.ipsen.com", ticker: "IPN.PA", asOf,
+    id: "ipsen", trials: ["nct04224493", "nct07213830", "nct07213817", "nct06833008", "nct06305247"], links: [{ label: "Official website", url: "https://www.ipsen.com" }], kind: "company", name: "Ipsen", hq: "Paris", country: "FR", companyType: "pharma", website: "https://www.ipsen.com", ticker: "IPN.PA", asOf,
     tldr: "Ipsen is the French pharma behind Onivyde (liposomal irinotecan) and the NALIRIFOX regimen, and marketer of tovorafenib in Europe.",
     summary: "Ipsen is the Paris-based pharmaceutical company, listed as IPN.PA, behind Onivyde, the liposomal irinotecan at the heart of the NALIRIFOX regimen for pancreatic cancer, and the European marketer of tovorafenib for paediatric low-grade glioma under rights from Day One. Its oncology portfolio also includes Cabometyx outside the United States, tazemetostat for epithelioid sarcoma and somatostatin analogues for neuroendocrine tumours, with NAPOLI 3 establishing NALIRIFOX and CLARINET supporting lanreotide. OnCo links it to pancreatic ductal adenocarcinoma, glioma, neuroendocrine tumours and epithelioid sarcoma, and to the cabozantinib, irinotecan, tazemetostat and tovorafenib records. Whether NALIRIFOX becomes the default first-line regimen on value as well as efficacy is the open question. Each product has its own page.",
     drugs: ["nalirifox", "tovorafenib"], cancers: ["pancreatic", "glioblastoma"],

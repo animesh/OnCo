@@ -17,7 +17,7 @@ const W = (s: string) => `https://en.wikipedia.org/wiki/${s}`;
 
 const raw: EntityInput[] = [
   {
-    id: "tiragolumab", kind: "drug", name: "Tiragolumab", code: "RG6058, MTIG7192A", modality: "Monoclonal antibody (anti-TIGIT)", asOf, status: "negative",
+    id: "tiragolumab", trials: ["nct05904886", "nct05009069", "nct05805501", "nct04524871", "nct05645692", "nct04665856"], kind: "drug", name: "Tiragolumab", code: "RG6058, MTIG7192A", modality: "Monoclonal antibody (anti-TIGIT)", asOf, status: "negative",
     tldr: "An immune-brake blocker that looked excellent in a phase 2 lung cancer trial and then failed every phase 3.",
     summary: "CITYSCAPE (phase 2, 2020) showed tiragolumab plus atezolizumab roughly doubled response rate in PD-L1-high NSCLC. Phase 3 SKYSCRAPER-01 (PD-L1-high NSCLC) missed PFS and OS; SKYSCRAPER-02 (extensive-stage SCLC) was negative; SKYSCRAPER-06 (non-squamous NSCLC) was worse than control. Roche discontinued most of the programme in 2024 and 2025. Other anti-TIGIT antibodies (domvanalimab, ociperlimab) showed no clearer benefit.\n\nLesson: a small randomised phase 2 with a surrogate endpoint in a selected population can mislead; redundancy between checkpoints means blocking a second one does not necessarily add to PD-1/PD-L1 blockade.",
     mechanism: "IgG1 anti-TIGIT with intact Fc; blocks TIGIT-PVR interaction on T and NK cells.",

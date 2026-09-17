@@ -129,7 +129,7 @@ export const nciRareOtherCancers: CancerInput[] = [
   }),
   // ======================= Genitourinary =======================
   c({
-    id: "penile", name: "Penile cancer", group: "genitourinary", wikipedia: W("Penile_cancer"),
+    id: "penile", trials: ["nct06465914"], name: "Penile cancer", group: "genitourinary", wikipedia: W("Penile_cancer"),
     aka: ["Penile squamous cell carcinoma", "Carcinoma of the penis"],
     burden: "Rare in high-income countries (well under one per 100,000 men per year) and several times more common in parts of South America, sub-Saharan Africa and South Asia, tracking HPV prevalence, phimosis and low circumcision rates.",
     tldr: "Penile cancer is a squamous skin-type cancer, about half of it caused by HPV. Caught early it is usually cured with organ-sparing surgery that has replaced amputation, and HPV vaccination and circumcision prevent it; the hard cases are those with lymph-node spread, where cisplatin-based chemotherapy plus surgery and now immunotherapy are being tested in the InPACT trial.",
@@ -226,7 +226,7 @@ export const nciRareOtherCancers: CancerInput[] = [
     openProblems: ["No dedicated randomised trials; HPV-basket immunotherapy trials and international rare-tumour registries are filling the gap.", "Optimal brachytherapy technique and dose for vaginal primaries; MRI-guided adaptive brachytherapy series are maturing.", "Late toxicity and sexual function after pelvic radiotherapy; survivorship programmes are the response.", "Surveillance of women treated for CIN 3 to catch VAIN early."],
     targets: ["pd1", "pdl1"], technologies: ["brachytherapy", "imrt-igrt", "cytotoxic-chemotherapy", "checkpoint-inhibitor", "hpv-vaccine", "hpv-testing", "colposcopy-excision"],
     drugs: ["cisplatin", "paclitaxel", "pembrolizumab", "gardasil-9", "fluorouracil"], pathways: ["oncogenic-viruses"],
-    terms: ["hpv-p16", "hpv-status", "chemoradiation", "cin-hsil"], trials: ["keynote-826", "keynote-a18"], related: ["cervical", "vulvar", "rhabdomyosarcoma", "anal"], bottlenecks: ["b-rare-cancers", "b-prevention-adoption"],
+    terms: ["hpv-p16", "hpv-status", "chemoradiation", "cin-hsil"], trials: ["keynote-826", "keynote-a18", "nct04422366", "nct05027776"], related: ["cervical", "vulvar", "rhabdomyosarcoma", "anal"], bottlenecks: ["b-rare-cancers", "b-prevention-adoption"],
     links: [{ label: "NCI PDQ: vaginal cancer", url: PDQ("vaginal") }, { label: "ESGO / ESTRO / ESP rare gynaecological cancers (vaginal cancer) guidance", url: "https://doi.org/10.1016/j.radonc.2023.109590" }, { label: "NCCN: Vulvar Cancer (includes vaginal cancer principles)", url: "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1476" }, { label: "SEER: vaginal cancer", url: SEER("vagina") }],
     tags: ["nci-coverage", "rare", "gynaecologic", "hpv"],
   }),
@@ -262,13 +262,13 @@ export const nciRareOtherCancers: CancerInput[] = [
     pipeline: ["olaparib", "palbociclib", "ribociclib", "trastuzumab-deruxtecan"],
     openProblems: ["Men are still under-enrolled in breast cancer trials; regulatory guidance and label harmonisation are the response.", "Aromatase inhibitor efficacy and the need for GnRH co-treatment rest on small studies; registries are collecting outcomes.", "Later diagnosis from low awareness; education campaigns and rapid referral pathways are the levers.", "Adjuvant endocrine adherence and side effects in men are poorly studied."],
     targets: ["estrogen-receptor", "her2", "brca", "cdk4-6", "parp"], technologies: ["endocrine-therapy", "germline-testing", "sentinel-node", "parp-inhibitor", "cdk46-inhibitor", "mammography"],
-    drugs: ["tamoxifen", "letrozole", "fulvestrant", "goserelin", "palbociclib", "ribociclib", "abemaciclib", "olaparib", "talazoparib", "trastuzumab"], trials: ["olympia"],
+    drugs: ["tamoxifen", "letrozole", "fulvestrant", "goserelin", "palbociclib", "ribociclib", "abemaciclib", "olaparib", "talazoparib", "trastuzumab"], trials: ["olympia", "nct04842617"],
     pathways: ["er-signaling", "homologous-recombination-repair"], terms: ["hormone-receptor-status", "mastectomy", "gbrca-mutation", "hereditary-cancer-syndromes"], related: ["breast-hr-positive", "breast-her2-positive", "tnbc", "ductal-carcinoma-in-situ"], bottlenecks: ["b-trial-diversity", "b-hereditary-risk", "b-rare-cancers"],
     links: [{ label: "NCI PDQ: male breast cancer", url: PDQ("breast/male-breast-cancer") }, { label: "ASCO guideline: management of male breast cancer (JCO 2020)", url: "https://doi.org/10.1200/JCO.19.03120" }, { label: "FDA guidance: Male Breast Cancer, Developing Drugs for Treatment (2020)", url: "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/male-breast-cancer-developing-drugs-treatment" }, { label: "International Male Breast Cancer Program (Ann Oncol 2018)", url: "https://doi.org/10.1093/annonc/mdx651" }],
     tags: ["nci-coverage", "rare", "breast"],
   }),
   c({
-    id: "ductal-carcinoma-in-situ", name: "Ductal carcinoma in situ (DCIS)", group: "breast", wikipedia: W("Ductal_carcinoma_in_situ"),
+    id: "ductal-carcinoma-in-situ", trials: ["nsabp-b39"], name: "Ductal carcinoma in situ (DCIS)", group: "breast", wikipedia: W("Ductal_carcinoma_in_situ"),
     aka: ["DCIS", "Stage 0 breast cancer", "Pre-invasive breast cancer", "Intraductal carcinoma"],
     burden: "About one in five to one in four breast cancers detected by mammographic screening is DCIS; it was rare before screening and is now diagnosed in tens of thousands of women a year in the US alone (SEER; NCI).",
     tldr: "DCIS is abnormal cells confined to the milk ducts; it is not yet invasive cancer and cannot spread, but some would become invasive if left. Lumpectomy with radiotherapy, or mastectomy, halves local recurrence, so the live question is which low-risk DCIS can safely be watched: the COMET trial (2024) found active monitoring no worse at two years.",
@@ -343,7 +343,7 @@ export const nciRareOtherCancers: CancerInput[] = [
     tags: ["nci-coverage", "rare", "haematologic", "virus-associated"],
   }),
   c({
-    id: "cmml", name: "Chronic myelomonocytic leukaemia and MDS/MPN overlap neoplasms", group: "haematologic", wikipedia: W("Chronic_myelomonocytic_leukemia"),
+    id: "cmml", trials: ["nct04256317"], name: "Chronic myelomonocytic leukaemia and MDS/MPN overlap neoplasms", group: "haematologic", wikipedia: W("Chronic_myelomonocytic_leukemia"),
     aka: ["CMML", "MDS/MPN", "Myelodysplastic/myeloproliferative neoplasms", "Atypical CML (BCR-ABL1-negative)", "MDS/MPN with ring sideroblasts and thrombocytosis", "MDS/MPN with SF3B1 mutation and thrombocytosis", "Juvenile myelomonocytic leukaemia (JMML)"],
     burden: "CMML affects roughly four people per million per year, almost all over 60; the overlap neoplasms are together rarer than either MDS or the classical MPNs (SEER; WHO).",
     tldr: "Chronic myelomonocytic leukaemia and its relatives are bone-marrow cancers that behave partly like myelodysplasia (poorly made blood cells) and partly like a proliferative disease (an excess of monocytes or platelets). Hypomethylating agents produce responses in a minority and stabilise counts in more, transplant can cure the fit, and RAS-pathway and JAK inhibitors are in trials.",
