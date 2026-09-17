@@ -1007,7 +1007,7 @@ export const institutionsEurope: InstitutionInput[] = [
     tldr: "The cancer network for the Stockholm and Gotland regions, built on the regional cancer centre RCC Stockholm Gotland, listed by the Organisation of European Cancer Institutes as a linked institution.",
     summary: "The Stockholm Gotland Comprehensive Cancer Network (SGCCN) brings together the hospitals and the regional cancer centre (RCC Stockholm Gotland) serving Region Stockholm and Region Gotland. The Organisation of European Cancer Institutes (OECI) lists it as a linked institution of its Stockholm members.",
     links: [{"label":"Official website","url":"https://cancercentrum.se/omrcc/kontaktochorganisation/rccstockholmgotland.1334.html"},{"label":"OECI membership list","url":"https://www.oeci.eu/Membership.aspx"}],
-    institutions: ["oeci"], related: ["karolinska"] }),
+    institutions: ["oeci", "karolinska"] }),
 
   // ======================= OECI members, wave 7 (15 Sept 2026, Wikidata-verified) =======================
   i({ id: "ramon-y-cajal", people: ["carlos-mingo-rodriguez"], name: "Hospital Universitario Ramón y Cajal", aka: ["Ramón y Cajal University Hospital","Hospital Ramón y Cajal","IRYCIS"], city: "Madrid", country: "ES", lat: 40.487, lng: -3.694, institutionType: "hospital", website: "https://www.comunidad.madrid/hospital/ramonycajal/",

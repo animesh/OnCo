@@ -90,6 +90,7 @@ import { sarcomaLymphomaSubtypes } from "./sarcoma-lymphoma-subtypes";
 import { modelTechnologies } from "./models-wave";
 import { machineTechnologies, machineCompanies } from "./machines-wave";
 import { theoryHub, theoryTerms } from "./theories-wave";
+import { networkInstitutions, networkPeople } from "./institution-networks-wave";
 import { pipelineTrialsWave3 } from "./pipeline-trials-wave3";
 import { pipelineTrialsWave4 } from "./pipeline-trials-wave4";
 import { pipelineTrialsWave5 } from "./pipeline-trials-wave5";
@@ -142,6 +143,7 @@ const RAW_INPUTS: EntityInput[] = [
   ...complementary,
   ...tests,
   ...nciCoverage,
+  ...networkInstitutions, ...networkPeople,
   ...institutionsIndia,
   ...india,
   ...china,
