@@ -50,17 +50,26 @@ const add = (day: string, subject: string) => {
   const s = clean(subject); if (!s) return;
   const list = byDay.get(day) ?? []; if (!list.includes(s)) list.push(s); byDay.set(day, list);
 };
-const pending = process.argv.slice(2).join(" ").split("\n")[0];
-if (pending) add(new Date().toISOString().slice(0, 10), pending);
 for (const line of log.split("\n").filter(Boolean)) { const [day, ...rest] = line.split("\t"); add(day, rest.join("\t")); }
+// Keep bullets already listed under today, so a subject passed by the ship
+// chain survives the argument-free run inside `npm run build`.
+const today = new Date().toISOString().slice(0, 10);
+const startIdx = md.indexOf(unrel[0]);
+const endIdx = md.indexOf("\n## [", startIdx + unrel[0].length);
+const existing = md.slice(startIdx, endIdx);
+const todayBlock = existing.split(/^### /m).find((b) => b.startsWith(longDate(today)));
+// Newest first: the subject about to be committed, then bullets kept from a
+// previous run that are not yet in the log, then the log itself.
+const pending = process.argv.slice(2).join(" ").split("\n")[0];
+const kept = (todayBlock ?? "").split("\n").filter((l) => l.startsWith("- ")).map((l) => clean(l.slice(2)));
+const front = [pending ? clean(pending) : "", ...kept].filter((x) => x && !(byDay.get(today) ?? []).includes(x));
+if (front.length) byDay.set(today, [...new Set([...front, ...(byDay.get(today) ?? [])])]);
 
 const days = [...byDay.keys()].sort().reverse();
 let body = `## [Unreleased]\n\n${NOTE}\n\n`;
 if (!days.length) body += "Nothing yet.\n\n";
 for (const day of days) body += `### ${longDate(day)}\n${byDay.get(day)!.map((s) => `- ${s}`).join("\n")}\n\n`;
 
-const start = md.indexOf(unrel[0]);
-const end = md.indexOf("\n## [", start + unrel[0].length);
-const next = md.slice(0, start) + body + md.slice(end + 1);
+const next = md.slice(0, startIdx) + body + md.slice(endIdx + 1);
 if (next !== md) { writeFileSync(FILE, next); console.log(`changelog-sync: ${[...byDay.values()].reduce((n, l) => n + l.length, 0)} entries across ${days.length} days`); }
 else console.log("changelog-sync: up to date");

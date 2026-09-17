@@ -7,6 +7,8 @@ All notable changes to OnCo are recorded here. The format follows [Keep a Change
 Regenerated from the commit log each time the site ships (`scripts/changelog-sync.ts`); the version sections below are written by hand when a release is cut.
 
 ### 17 September 2026
+- Changelog sync keeps the pending entry through the build
+- Changelog kept current from the commit log; linked from the README
 - Link 51 new technologies back from their drugs, targets and base drawings
 - Point 27 trials, drugs, targets, pathways and terms at their 44 landmark papers
 - Link 28 cancer subtype pages from the drugs and trials that treat them
