@@ -43,7 +43,7 @@ const technologies: TechnologyInput[] = [
 ];
 
 const terms: TermInput[] = [
-  term({ id: "deauville-score", name: "Deauville five-point scale", category: "Imaging",
+  term({ id: "deauville-score", name: "Deauville five-point scale", category: "Imaging", wikipedia: W("Deauville_Criteria"),
     tldr: "A 1-to-5 score for how bright a lymphoma looks on PET compared with the liver; 1-3 is considered a complete metabolic response.",
     summary: "1: no uptake; 2: ≤ mediastinum; 3: > mediastinum but ≤ liver; 4: moderately > liver; 5: markedly > liver or new lesions. Adopted in the Lugano classification (2014); the decision point in PET-adapted Hodgkin and DLBCL trials. Inter-reader agreement is good at the extremes and weaker for score 3 vs 4.",
     cancers: ["hodgkin-lymphoma", "dlbcl"], technologies: ["fdg-pet", "pet-adapted-therapy"], links: [{ label: "Cheson et al., Lugano classification: recommendations for initial evaluation, staging and response assessment of Hodgkin and non-Hodgkin lymphoma (Journal of Clinical Oncology 2014)", url: "https://doi.org/10.1200/JCO.2013.54.8800" }] }),
