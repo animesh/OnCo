@@ -12,13 +12,21 @@ export type Stage = "early" | "locally-advanced" | "metastatic-first-line" | "me
 export type Profile = {
   cancerId?: string;
   stage: Stage;
-  /** Biomarker ids from src/data/biomarkers.ts. */
+  /** Biomarker ids from src/data/biomarkers.ts, or per-cancer keys chosen in For me (slug of the cancer record's biomarker wording, or "not-tested"). */
   biomarkers: string[];
   /** Product or technology ids already received. */
   priorLines: string[];
   country?: string;
   postcode?: string;
   mode: ProfileMode;
+  /** For me situation (roadmap item 101): the decision-section id of the standard-of-care row the reader is in. */
+  setting?: string;
+  /** Drug ids from the standard of care the reader has already had. */
+  hadTreatments: string[];
+  /** Whether the For me page should look for trials. */
+  wantsTrials: boolean;
+  /** Whether the diagnosis is recent (adds the first-60-days guide). */
+  diagnosedRecently: boolean;
 };
 
 export const STAGES: Array<{ id: Stage; label: string; hint: string }> = [
@@ -36,7 +44,7 @@ export const MODES: Array<{ id: ProfileMode; label: string; hint: string }> = [
 ];
 
 const KEY = "onco:profile:v1";
-const EMPTY: Profile = { stage: "unknown", biomarkers: [], priorLines: [], mode: "patient" };
+const EMPTY: Profile = { stage: "unknown", biomarkers: [], priorLines: [], mode: "patient", hadTreatments: [], wantsTrials: true, diagnosedRecently: false };
 
 export function loadProfile(): Profile {
   if (typeof window === "undefined") return EMPTY;
@@ -44,7 +52,7 @@ export function loadProfile(): Profile {
     const raw = window.localStorage.getItem(KEY);
     if (!raw) return EMPTY;
     const p = JSON.parse(raw) as Partial<Profile>;
-    return { ...EMPTY, ...p, biomarkers: p.biomarkers ?? [], priorLines: p.priorLines ?? [] };
+    return { ...EMPTY, ...p, biomarkers: p.biomarkers ?? [], priorLines: p.priorLines ?? [], hadTreatments: p.hadTreatments ?? [], wantsTrials: p.wantsTrials ?? true, diagnosedRecently: p.diagnosedRecently ?? false };
   } catch {
     return EMPTY;
   }
@@ -88,5 +96,5 @@ export function useProfile(): [Profile, (patch: Partial<Profile>) => void, boole
 }
 
 export function isProfileEmpty(p: Profile): boolean {
-  return !p.cancerId && p.stage === "unknown" && p.biomarkers.length === 0 && p.priorLines.length === 0 && !p.country && !p.postcode;
+  return !p.cancerId && p.stage === "unknown" && p.biomarkers.length === 0 && p.priorLines.length === 0 && !p.country && !p.postcode && !p.setting && p.hadTreatments.length === 0 && p.wantsTrials && !p.diagnosedRecently;
 }
