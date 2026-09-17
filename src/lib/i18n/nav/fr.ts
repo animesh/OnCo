@@ -34,6 +34,7 @@ export const navFr: NavDict = {
   "/pathways/": ["Voies", "Circuits de signalisation, dessinés et expliqués."],
   "/dossiers/": ["Dossiers de cibles", "Tout sur une cible en une page : biologie, prévalence, points chauds, produits par phase, essais, résistance, tests, modèles, questions ouvertes, identifiants externes."],
   "/pathway-drugs/": ["Matrice voie-médicament", "Quels nœuds de voie ont un médicament, à quelle phase, et quels nœuds ciblables n'en ont aucun."],
+  "/tumour-testing/": ["Tests de séquençage tumoral", "BostonGene, Tempus, Foundation Medicine, Caris, Guardant et les autres côte à côte : tissu ou sang, panel ou exome, ce que rend le compte rendu, et le statut réglementaire lorsqu'il est certain."],
   "/models/": ["Modèles et jeux de données", "Modèles de fondation et les données sur lesquelles ils s'entraînent, avec paramètres, poids, licence et benchmarks."],
   "/open-questions/": ["Questions ouvertes", "Questions non résolues par cible et technologie : pourquoi ouvertes, ce qui y répondrait, qui agit."],
   "/preclinical-models/": ["Modèles précliniques", "Lignées cellulaires avec identifiants Cellosaurus et DepMap, banques de PDX, modèles murins et organoïdes par cancer et cible."],
@@ -110,6 +111,7 @@ export const navFr: NavDict = {
   "/survivorship/": ["Planificateur de l'après-cancer", "Effets tardifs à surveiller après chaque traitement, le test de dépistage, sa fréquence et la recommandation qui le dit."],
   "/second-opinion/": ["Second avis", "Centres experts pour votre cancer dans votre pays, les personnes qui y travaillent, et comment fonctionne l'orientation là où vous vivez."],
   "/assistance/": ["Aide financière", "Programmes des fabricants, remboursement et génériques par pays et produit, plus dispositifs nationaux et associations."],
+  "/free/": ["Gratuit en oncologie", "Tout ce que l'on peut obtenir sans payer : tests tumoraux et génétiques gratuits, dépistage et vaccination HPV, lignes d'infirmières, trajets et hébergement, second avis, aide au déplacement pour les essais, perruques et prothèses, données ouvertes. Qui y a droit et où."],
   "/fronts/nutrition-lifestyle/": ["Alimentation, exercice et mode de vie", "Ce que les gens mangent, boivent, pèsent et font : ce que disent les preuves et ce qui relève du battage."],
   "/fronts/supportive-care/": ["Soins de support", "Soigner la personne, pas seulement la tumeur : symptômes, effets secondaires, nutrition, santé mentale."],
 

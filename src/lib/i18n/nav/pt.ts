@@ -34,6 +34,7 @@ export const navPt: NavDict = {
   "/pathways/": ["Vias", "Circuitos de sinalização, desenhados e explicados."],
   "/dossiers/": ["Dossiês de alvos", "Tudo sobre um alvo numa página: biologia, prevalência, pontos quentes, produtos por fase, ensaios, resistência, testes, modelos, questões em aberto, identificadores externos."],
   "/pathway-drugs/": ["Matriz via-fármaco", "Que nós de cada via têm um fármaco, em que fase, e que nós acionáveis não têm nenhum."],
+  "/tumour-testing/": ["Testes de sequenciação tumoral", "BostonGene, Tempus, Foundation Medicine, Caris, Guardant e os restantes lado a lado: tecido ou sangue, painel ou exoma, o que o relatório devolve e o estado regulamentar quando é certo."],
   "/models/": ["Modelos e conjuntos de dados", "Modelos de base e os dados em que treinam, com parâmetros, pesos, licença e benchmarks."],
   "/open-questions/": ["Questões em aberto", "Questões por resolver por alvo e tecnologia: porque continuam abertas, o que as responderia, quem age."],
   "/preclinical-models/": ["Modelos pré-clínicos", "Linhas celulares com identificadores Cellosaurus e DepMap, bancos de PDX, modelos de rato e organoides por cancro e alvo."],
@@ -110,6 +111,7 @@ export const navPt: NavDict = {
   "/survivorship/": ["Planeador de sobrevivência", "Efeitos tardios a vigiar após cada tratamento, o teste de rastreio, com que frequência e a guia que o diz."],
   "/second-opinion/": ["Segunda opinião", "Centros de referência para o seu cancro no seu país, as pessoas que trabalham nele e como funciona a referenciação onde vive."],
   "/assistance/": ["Apoio financeiro", "Programas de fabricantes, comparticipação e genéricos por país e produto, mais esquemas nacionais e instituições de solidariedade."],
+  "/free/": ["Grátis em oncologia", "Tudo o que se pode obter sem pagar: testes tumorais e genéticos gratuitos, rastreio e vacinação contra o HPV, linhas de enfermagem, transporte e alojamento, segundas opiniões, apoio a viagens para ensaios, perucas e próteses, e dados abertos. Quem tem direito e onde."],
   "/fronts/nutrition-lifestyle/": ["Dieta, exercício e estilo de vida", "O que as pessoas comem, bebem, pesam e fazem: o que a evidência diz e o que é exagero."],
   "/fronts/supportive-care/": ["Cuidados de suporte", "Tratar a pessoa, não apenas o tumor: sintomas, efeitos secundários, nutrição, saúde mental."],
 

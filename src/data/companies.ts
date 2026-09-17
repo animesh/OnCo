@@ -354,6 +354,7 @@ export const companies: CompanyInput[] = [
 
   // ---- Nonprofits ----
   c({ id: "cancer-commons", links: [{ label: "Official website", url: "https://cancercommons.org" }], name: "Cancer Commons", hq: "Mountain View, CA", country: "US", companyType: "nonprofit", website: "https://cancercommons.org", sections: ["supportive-care"],
+    related: ["thesecondopinion"],
     tldr: "Nonprofit that helps advanced-cancer patients navigate precision-oncology options and trials, free of charge.",
     summary: "Cancer Commons, a nonprofit based in Mountain View, California, helps patients with advanced cancer navigate precision oncology options and trials free of charge. It offers personalised treatment-option analysis, trial matching and access to an expert network for patients with limited options, and Navexio is linked as a related company. OnCo connects it to AI trial matching and clinical decision support, to bottlenecks on patient navigation, misinformation, data silos and secrecy, and to ideas such as a cancer data donor card and a live seats-available feed for trial slots. Whether a nonprofit navigation service can scale to the number of patients who need it, or whether its model has to be built into health systems, is the open question. The trial matching technology page carries the wider picture.",
     technologies: ["ai-trial-matching"] }),
