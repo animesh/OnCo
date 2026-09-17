@@ -559,11 +559,13 @@ export function termSchematicFor(category: string): Mesh {
  */
 import { radiationSchematicAliases } from "./radiation-wave1";
 import { modelSchematicAliases } from "./models-wave";
+import { manufacturingSchematicAliases } from "./manufacturing-wave";
 
 export const SCHEMATIC_ALIAS: Record<string, string> = {
   "stride-dna-break-detection": "wes-wgs",
   ...radiationSchematicAliases,
   ...modelSchematicAliases,
+  ...manufacturingSchematicAliases,
   "spatial-transcriptomics": "spatial-biology-instruments",
   "imaging-mass-cytometry": "spatial-biology-instruments",
   "multiplex-immunofluorescence": "histopathology-ihc",
