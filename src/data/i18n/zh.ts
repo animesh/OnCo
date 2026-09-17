@@ -7912,4 +7912,16 @@ export const tldr_zh: Record<string, string> = {
   "clear-cell-ovarian-cancer": "透明细胞卵巢癌由子宫内膜异位症发展而来，通常早期发现并经手术治愈，但晚期对铂类化疗耐药。其独特的ARID1A和PIK3CA突变遗传学是靶向和免疫治疗研究的焦点。",
   "mucinous-ovarian-cancer": "黏液性卵巢癌罕见，诊断时通常局限于一侧增大的卵巢，可经手术治愈。其遗传学更像肠癌而非卵巢癌，病理医生必须先排除来自消化道的转移才能确诊。",
   "granulosa-cell-tumour": "颗粒细胞瘤分泌雌激素，因此常以异常出血为首发表现，几乎都携带同一个FOXL2突变。手术可治愈多数患者；复发出现较晚，用再次手术、激素阻断药、bevacizumab或化疗治疗。",
+  // Added 17 Sept 2026: kidney subtype pages.
+  "clear-cell-rcc": "透明细胞癌是常见的肾癌类型，由VHL基因缺失驱动，使肿瘤如同缺氧一般大量生成血管。这一生物学特征解释了抗血管生成药物、免疫治疗和HIF-2α阻断剂belzutifan为何都有效。",
+  "papillary-rcc": "乳头状肾癌是第二常见的类型，不具备透明细胞癌的VHL生物学特征，因此药物作用不同：靶向MET的cabozantinib在首个专为该病开展的试验中优于sunitinib，两种遗传综合征占部分病例。",
+  "chromophobe-rcc": "嫌色细胞肾癌来自肾小管的另一种细胞，通常表现温和，手术可治愈。其罕见的转移形式对免疫治疗反应差，因此使用激酶和mTOR抑制剂，并与Birt-Hogg-Dubé综合征家族相关。",
+  // Added 17 Sept 2026: testicular and oesophageal subtype pages.
+  seminoma: "精原细胞瘤是睾丸癌中生长较慢、对放疗更敏感的一半。切除睾丸后多数男性无需进一步治疗、只需监测；复发或就诊时已扩散者可通过短程化疗治愈。",
+  "non-seminoma": "非精原细胞瘤是睾丸癌中生长较快的一半，以血中AFP和hCG为标志。手术治愈多数早期病例，cisplatin化疗治愈其余大部分，化疗后残留病灶由外科切除，因为畸胎瘤对药物无反应。",
+  "oesophageal-squamous-cell-carcinoma": "食管鳞状细胞癌是全球最常见的食管癌类型，与吸烟、饮酒和过热饮品有关，位于食管上段和中段。治疗为放化疗（加或不加手术），免疫治疗最近加入了晚期疾病的化疗方案。",
+  "oesophageal-adenocarcinoma": "食管下段和交界处的腺癌由Barrett食管发展而来，即长期胃酸反流引起的黏膜改变。术前化疗或放化疗是标准，HER2、PD-L1和claudin 18.2如今像在胃癌中一样指导晚期疾病的用药。",
+  // Added 17 Sept 2026: bladder subtype pages.
+  "non-muscle-invasive-bladder-cancer": "多数膀胱癌在仍局限于黏膜时被发现。它们经尿道刮除，风险较高者用灌注入膀胱的BCG治疗；难点在于频繁复发，以及肿瘤对BCG不再应答的患者。",
+  "muscle-invasive-bladder-cancer": "膀胱癌一旦侵入肌层就不能只靠刮除：需化疗后切除膀胱，或用放化疗保留膀胱。对于已扩散的癌症，抗体药物偶联物enfortumab vedotin联合pembrolizumab已取代铂类化疗成为首选治疗。",
 };

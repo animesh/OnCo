@@ -322,4 +322,6 @@ The owner's patient-first roadmap (a real-case "For me", persistent cancer choic
 - Thyroid: papillary, follicular, medullary and anaplastic thyroid cancer as pages under the thyroid record (surveillance of microcarcinomas, no radioactive iodine for low risk after ESTIMABL2 and IoN, selpercatinib for RET-mutant medullary disease, dabrafenib-trametinib for BRAF-mutant anaplastic disease).
 - Head and neck: oropharyngeal (HPV), laryngeal and hypopharyngeal, and oral cavity cancer as pages under the head and neck record, linked to RTOG 91-11, RTOG 1016, De-ESCALaTE, the Bonner trial, KEYNOTE-048 and the Tata Memorial trials. All seven carry Chinese TL;DRs.
 - Ovarian: high-grade serous, low-grade serous, clear cell, mucinous and adult granulosa cell tumour pages under the ovarian record, with Chinese TL;DRs.
-- Next families to branch: kidney (clear cell, papillary, chromophobe), testicular (seminoma, non-seminoma), oesophageal (squamous, adenocarcinoma), and the remaining lymphoma and sarcoma text subtypes.
+- Kidney (clear cell, papillary, chromophobe), testicular (seminoma, non-seminoma) and oesophageal (squamous cell, adenocarcinoma) subtype pages added under their parents, with Chinese TL;DRs.
+- Bladder: non-muscle-invasive and muscle-invasive urothelial cancer pages under the bladder record, with Chinese TL;DRs.
+- Next families to branch: the remaining lymphoma and sarcoma text subtypes, and prostate by risk group.

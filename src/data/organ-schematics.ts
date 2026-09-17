@@ -99,7 +99,7 @@ export const ORGAN_SCHEMATICS: OrganSchematic[] = [
       add(m, polyline([[0, 1.6, -0.3], [0, -0.9, -0.3]], "soft")); // aorta
       return m;
     } },
-  { id: "stomach-oesophagus", name: "Oesophagus and stomach", cancers: ["gastric", "esophageal", "gist"],
+  { id: "stomach-oesophagus", name: "Oesophagus and stomach", cancers: ["gastric", "oesophageal-squamous-cell-carcinoma", "oesophageal-adenocarcinoma", "esophageal", "gist"],
     caption: "Squamous cancers sit in the upper and middle oesophagus, adenocarcinomas at the junction and in the stomach; the stomach wall also gives rise to GIST from its pacemaker cells.",
     subsites: [
       { id: "upper", label: "Upper and middle oesophagus (squamous)", at: [0.2, 2.5, 0], match: ["squamous", "escc"] },
@@ -184,7 +184,7 @@ export const ORGAN_SCHEMATICS: OrganSchematic[] = [
       add(m, ellipsoid(0.55, 0.5, 0.3, 3, 8, "soft"), { at: [0, -0.2, -1.55] }); // rectum
       return m;
     } },
-  { id: "kidney-bladder-adrenal", name: "Kidneys, adrenals, ureters and bladder", cancers: ["urothelial", "rcc", "wilms-tumor", "neuroblastoma", "adrenocortical", "pheochromocytoma-paraganglioma", "urethral", "penile"],
+  { id: "kidney-bladder-adrenal", name: "Kidneys, adrenals, ureters and bladder", cancers: ["non-muscle-invasive-bladder-cancer", "muscle-invasive-bladder-cancer", "urothelial", "clear-cell-rcc", "papillary-rcc", "chromophobe-rcc", "rcc", "wilms-tumor", "neuroblastoma", "adrenocortical", "pheochromocytoma-paraganglioma", "urethral", "penile"],
     caption: "Renal cell carcinoma comes from the kidney's filtering cortex, urothelial cancer from the lining of the collecting system and bladder, and the adrenal on top hosts cortical and medullary (neuroblastoma) tumours.",
     subsites: [
       { id: "cortex", label: "Renal cortex (RCC)", at: [-1.95, 1.75, 0.15], match: ["clear cell", "ccrcc", "papillary", "chromophobe", "vhl", "tfe3", "translocation", "collecting duct", "medullary", "sarcomatoid"] },
@@ -236,10 +236,10 @@ export const ORGAN_SCHEMATICS: OrganSchematic[] = [
       add(m, ring(0.45, 14, undefined, "z"), { at: [0, -2.7, 0.3] }); // vulva
       return m;
     } },
-  { id: "testis", name: "Testis and retroperitoneum", cancers: ["testicular", "paediatric-germ-cell-tumours"],
+  { id: "testis", name: "Testis and retroperitoneum", cancers: ["testicular", "seminoma", "non-seminoma", "paediatric-germ-cell-tumours"],
     caption: "Germ cell tumours drain along the spermatic cord to the para-aortic nodes high in the abdomen, not to the groin, which is why staging scans look at the retroperitoneum.",
     subsites: [
-      { id: "germ", label: "Germinal epithelium", at: [-0.65, -1.0, 0.45], match: ["seminoma", "non-seminoma", "nsgct", "embryonal", "teratoma", "yolk sac", "choriocarcinoma", "mixed", "good-risk", "poor-risk", "intermediate"] },
+      { id: "germ", label: "Germinal epithelium", at: [-0.65, -1.0, 0.45], match: ["nsgct", "embryonal", "teratoma", "yolk sac", "choriocarcinoma", "mixed", "good-risk", "poor-risk", "intermediate"] },
       { id: "epididymis", label: "Epididymis and cord", at: [0.85, -0.55, 0.1] },
     ],
     nodes: [{ label: "para-aortic (retroperitoneal)", at: [0, 1.95, -0.2] }, { label: "left renal hilum (left testis)", at: [-0.95, 2.2, -0.1] }, { label: "inguinal (only after scrotal surgery)", at: [1.5, 0.1, 0.1] }],
