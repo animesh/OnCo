@@ -96,7 +96,7 @@ const frontierRadical: EntityInput[] = [
     links: [{ label: "ClinicalTrials.gov: FAP CAR-T", url: "https://clinicaltrials.gov/search?term=FAP%20CAR-T" }],
   },
   {
-    id: "engineered-bacteria-therapy", kind: "technology", name: "Engineered bacteria as living cancer drugs", sections: ["immunotherapy", "drug-discovery"], status: "phase-2", asOf: RAD,
+    id: "engineered-bacteria-therapy", related: ["bacterial-vector-vaccines"], kind: "technology", name: "Engineered bacteria as living cancer drugs", sections: ["immunotherapy", "drug-discovery"], status: "phase-2", asOf: RAD,
     tldr: "Bacteria that seek out the low-oxygen core of tumours, then manufacture a drug on the spot.",
     summary: "Attenuated Salmonella and other anaerobes colonise hypoxic tumour cores that drugs reach poorly, and can be engineered to secrete cytokines or enzymes. Live programmes on ClinicalTrials.gov in September 2026 include SGN1, an engineered Salmonella expressing methioninase (NCT05038150 and NCT05103345, phase 1/2, recruiting), and Saltikva, a Salmonella carrying IL-2, in phase 2 in metastatic pancreatic cancer (NCT04589234). The field has a long history of tolerable but ineffective results, beginning with VNP20009 in the 2000s.",
     principle: "Attenuated bacteria given intravenously or intratumourally replicate selectively in hypoxic, necrotic tumour regions and express a therapeutic payload locally.",
@@ -338,7 +338,7 @@ const frontierRadical: EntityInput[] = [
     links: [{ label: "ClinicalTrials.gov: AI-designed antibody cancer", url: "https://clinicaltrials.gov/search?term=AI-designed%20antibody%20cancer" }],
   },
   {
-    id: "molecular-glue-platforms", kind: "technology", name: "Molecular glue discovery platforms", sections: ["drug-discovery", "targeted-therapy"], status: "phase-1", asOf: RAD,
+    id: "molecular-glue-platforms", related: ["celmods"], kind: "technology", name: "Molecular glue discovery platforms", sections: ["drug-discovery", "targeted-therapy"], status: "phase-1", asOf: RAD,
     tldr: "Molecular glues are small molecules that stick two proteins together so the cell destroys one of them. They are smaller and more drug-like than bifunctional degraders.",
     summary: "Thalidomide analogues work by gluing neosubstrates to cereblon; the field is now searching systematically for glues against chosen targets using chemoproteomics and machine learning. Monte Rosa, Nurix, C4 Therapeutics and Proxygen have clinical or near-clinical candidates against targets including cyclin K, GSPT1 and transcription factors. No purpose-designed molecular glue has been approved: the approved examples were discovered by accident decades ago.",
     principle: "A small molecule remodels the surface of an E3 ligase so it recognises a protein it would normally ignore, marking that protein for proteasomal destruction.",
@@ -437,7 +437,7 @@ const frontierRadical: EntityInput[] = [
     links: [{ label: "ClinicalTrials.gov: hypoxia-activated prodrug", url: "https://clinicaltrials.gov/search?term=hypoxia-activated%20prodrug" }],
   },
   {
-    id: "digital-twins-trials", kind: "technology", name: "Digital twins and virtual control arms", sections: ["ai-computation", "drug-discovery"], status: "emerging", asOf: RAD,
+    id: "digital-twins-trials", related: ["digital-twin-patient-models"], kind: "technology", name: "Digital twins and virtual control arms", sections: ["ai-computation", "drug-discovery"], status: "emerging", asOf: RAD,
     tldr: "Using a model of what would have happened to a patient on standard treatment, so fewer people have to be randomised to it.",
     summary: "Prognostic models trained on historical trial and registry data generate an expected control trajectory for each enrolled patient, which can shrink the control arm or sharpen its estimate. Regulators have accepted external and synthetic control arms in narrow settings, mainly rare diseases and single-arm oncology submissions; in common cancers the concern is that treatment and supportive care drift faster than the model. Adoption is real but cautious.",
     principle: "A model predicts each participant's counterfactual outcome under control therapy; the prediction is used as a covariate or replaces part of the control arm.",

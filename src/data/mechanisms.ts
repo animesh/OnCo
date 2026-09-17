@@ -288,7 +288,7 @@ const pathways: PathwayInput[] = [
     ],
     edges: [{ from: "shh", to: "ptch", type: "inhibits" }, { from: "ptch", to: "smo", type: "inhibits" }, { from: "smo", to: "gli" }, { from: "sufu", to: "gli", type: "inhibits" }, { from: "gli", to: "out" }],
     interventions: ["SMO inhibitors vismodegib, sonidegib (advanced BCC), glasdegib (AML)", "GLI inhibitors (arsenic trioxide, BET inhibitors) for downstream resistance (investigational)", "Surgery and radiation remain first line for most BCC"],
-    pathways: ["wnt", "notch", "cancer-stem-cells-plasticity"], cancers: ["glioblastoma", "aml"], technologies: ["kinase-inhibitors"],
+    pathways: ["wnt", "notch", "cancer-stem-cells-plasticity"], cancers: ["glioblastoma", "aml"], technologies: ["kinase-inhibitors", "hedgehog-inhibitors"],
     institutions: ["stanford", "dana-farber"],
     notes: ["Leading programmes: Scott (Stanford) and Oro (Stanford) on Hedgehog in skin; Beachy (Stanford, cyclopamine); Rudin/Pomeroy on SHH medulloblastoma."],
     links: [{ label: "Sekulic et al., Vismodegib in advanced basal-cell carcinoma (NEJM 2012)", url: "https://doi.org/10.1056/NEJMoa1113713" }],

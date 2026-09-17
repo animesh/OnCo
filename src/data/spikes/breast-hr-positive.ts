@@ -281,7 +281,7 @@ const drugs: DrugInput[] = [
     dosing: { route: "Oral", schedule: "300 mg once daily with fulvestrant", modifications: "Reduce to 250 then 200 mg for hyperglycaemia/rash", monitoring: "Fasting glucose and HbA1c before and during; antihistamine prophylaxis for rash" },
     toxicity: [{ event: "Hyperglycaemia", anyGradePct: 64, grade3PlusPct: 37 }, { event: "Diarrhoea", anyGradePct: 58, grade3PlusPct: 7 }, { event: "Rash", anyGradePct: 36, grade3PlusPct: 10 }],
     approvals: [{ region: "US", year: 2019, indication: "PIK3CA-mutant HR+/HER2- advanced breast cancer with fulvestrant after endocrine therapy" }],
-    targets: ["pik3ca"], technologies: ["kinase-inhibitors"], companies: ["novartis"], cancers: ["breast-hr-positive"], trials: ["solar-1"], pathways: ["pi3k-akt-mtor"], terms: ["hyperglycaemia"] }),
+    targets: ["pik3ca"], technologies: ["kinase-inhibitors", "pi3k-akt-mtor-inhibitors"], companies: ["novartis"], cancers: ["breast-hr-positive"], trials: ["solar-1"], pathways: ["pi3k-akt-mtor"], terms: ["hyperglycaemia"] }),
   d({ id: "everolimus", name: "Everolimus", brand: "Afinitor", modality: "Small-molecule mTOR inhibitor", status: "approved", wikipedia: W("Everolimus"),
     tldr: "An mTOR-blocking pill that doubled progression-free time with exemestane in 2012 and is now paired with the oral SERD giredestrant.",
     summary: "Everolimus is a rapalog that binds FKBP12 and allosterically inhibits mTORC1, a growth-signalling hub downstream of PI3K and AKT. It is approved in HR-positive breast cancer with exemestane after non-steroidal aromatase inhibitor failure, in progressive pancreatic, lung and GI neuroendocrine tumours, and in advanced RCC after sunitinib or sorafenib. BOLERO-2 showed PFS of 7.8 versus 3.2 months for everolimus plus exemestane versus exemestane alone, with no OS benefit; RADIANT-3 and RADIANT-4 showed PFS of 11.0 versus 4.6 and 3.9 months in NETs. Stomatitis (mitigated by dexamethasone mouthwash, SWISH), pneumonitis and hyperglycaemia are the main toxicities. evERA (2025) revived it as the partner of giredestrant after CDK4/6 inhibitors; it is the comparator beaten in LITESPARK-005 and COMPETE. For a newcomer, it is a growth-pathway pill with several niches rather than one dominant use.",
@@ -311,7 +311,7 @@ const drugs: DrugInput[] = [
     summary: "MammaPrint is Agendia's 70-gene signature. MINDACT (n=6,693): women with high clinical but low genomic risk had 5-year distant metastasis-free survival of 94.7% without chemotherapy; 8-year update showed a small benefit of chemotherapy in women under 50. FDA-cleared (2007), NCCN-listed alongside Oncotype DX; BluePrint adds molecular subtyping. Also used to identify 'ultralow' risk tumours with indolent behaviour.",
     mechanism: "Microarray or NGS expression of 70 genes → dichotomous low/high risk.",
     approvals: [{ region: "US", year: 2007, indication: "FDA 510(k) clearance for recurrence risk in early breast cancer" }],
-    technologies: ["rna-seq", "companion-diagnostic"], cancers: ["breast-hr-positive"], trials: ["mindact", "tailorx"], companies: ["agendia"], links: [{ label: "Wikipedia", url: W("MammaPrint") }] }),
+    technologies: ["rna-seq", "companion-diagnostic", "gene-expression-prognostic-assays"], cancers: ["breast-hr-positive"], trials: ["mindact", "tailorx"], companies: ["agendia"], links: [{ label: "Wikipedia", url: W("MammaPrint") }] }),
 ];
 
 // ======================= TERMS =======================

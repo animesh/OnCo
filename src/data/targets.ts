@@ -22,7 +22,7 @@ export const targets: TargetInput[] = [
     ], links: [{ label: "UniProt P09758: TACSTD2 (TROP2)", url: "https://www.uniprot.org/uniprotkb/P09758/entry" }],
   },
   {
-    id: "her2", kind: "target", keyPapers: ["paper-slamon-her2-breast-ovarian-science-1989", "paper-yarden-sliwkowski-erbb-network-nrmcb-2001"], name: "HER2", symbol: "ERBB2", targetClass: "surface-antigen", asOf, wikipedia: W("HER2/neu"),
+    id: "her2", technologies: ["her2-tyrosine-kinase-inhibitors"], kind: "target", keyPapers: ["paper-slamon-her2-breast-ovarian-science-1989", "paper-yarden-sliwkowski-erbb-network-nrmcb-2001"], name: "HER2", symbol: "ERBB2", targetClass: "surface-antigen", asOf, wikipedia: W("HER2/neu"),
     tldr: "A growth-signal receptor. Some cancers make far too much of it, and drugs that block it or use it as a docking site have transformed those cancers.",
     summary: "Human epidermal growth factor receptor 2 is a receptor tyrosine kinase amplified in ~15-20% of breast cancers and a subset of gastric, colorectal, lung (mutations), and biliary cancers. Trastuzumab (1998) was the first targeted antibody in solid tumours. Trastuzumab deruxtecan redefined the target by working in 'HER2-low' tumours that older drugs ignored, and in 2026 gained approval in early-stage disease.",
     biology: "Ligand-less receptor that heterodimerises with HER3/EGFR to drive PI3K and MAPK signalling. Amplification is a true oncogenic driver; low expression is merely a delivery address for ADCs.",
@@ -452,7 +452,7 @@ export const targets: TargetInput[] = [
     ], links: [{ label: "Wikipedia", url: W("LAG3") }],
   },
   {
-    id: "tigit", drugs: ["rilvegostomig", "hb0036"], kind: "target", name: "TIGIT", symbol: "TIGIT", targetClass: "checkpoint", asOf, wikipedia: W("TIGIT"),
+    id: "tigit", technologies: ["tigit-blockade"], drugs: ["rilvegostomig", "hb0036"], kind: "target", name: "TIGIT", symbol: "TIGIT", targetClass: "checkpoint", asOf, wikipedia: W("TIGIT"),
     tldr: "TIGIT is an inhibitory receptor on T and natural killer cells that binds PVR (CD155) on tumour cells, so blocking it was expected to amplify PD-1 and PD-L1 inhibitors. Tiragolumab, domvanalimab and others then failed to add benefit in phase 3 lung cancer trials despite encouraging phase 2 signals, and the lack of a TIGIT-specific biomarker remains a weakness.",
     summary: "TIGIT is an inhibitory receptor on T and NK cells that binds PVR (CD155) on tumour cells and competes with the activating receptor CD226, so blocking it was expected to amplify PD-1 and PD-L1 inhibitors. That expectation largely failed in phase 3: tiragolumab (SKYSCRAPER-01), domvanalimab and others did not add meaningful benefit to PD-1/PD-L1 blockade in NSCLC or SCLC, despite encouraging phase 2 signals. Because TIGIT sits on immune cells, patient selection relied on PD-L1 rather than a TIGIT-specific biomarker, and this remains a weakness. Fc-enabled versus Fc-silent antibody design, which changes whether regulatory T cells are depleted, is still debated, and some programmes continue. The newcomer's lesson: TIGIT is a cautionary tale about promising early data that did not survive large randomised trials.",
     biology: "Binds PVR (CD155) on tumour cells; competes with the activating receptor CD226.",
@@ -599,7 +599,7 @@ export const targets: TargetInput[] = [
     ], links: [{ label: "Wikipedia", url: W("CD135") }], pathways: ["aml-signalling"], companies: ["cullinan-therapeutics"],
   },
   {
-    id: "pik3ca", kind: "target", name: "PIK3CA / PI3K-alpha", symbol: "PIK3CA", targetClass: "kinase", asOf, wikipedia: W("P110α"),
+    id: "pik3ca", technologies: ["pi3k-akt-mtor-inhibitors"], kind: "target", name: "PIK3CA / PI3K-alpha", symbol: "PIK3CA", targetClass: "kinase", asOf, wikipedia: W("P110α"),
     tldr: "PIK3CA is the most commonly mutated gene in hormone-driven breast cancer. Drugs against it work, but hitting it cleanly without raising blood sugar took years.",
     summary: "PIK3CA mutations occur in ~40% of HR+ breast cancer. Alpelisib (SOLAR-1), inavolisib (INAVO120, mutant-selective, with palbociclib and fulvestrant), and capivasertib (AKT) are approved. Gedatolisib (pan-PI3K/mTOR, Revtorpyk) was approved in 2026. Mutant-selective and allosteric inhibitors (RLY-2608) aim to avoid hyperglycaemia.",
     biology: "PIK3CA encodes the catalytic subunit of PI3K; H1047R and E545K are the hotspots.",
@@ -615,7 +615,7 @@ export const targets: TargetInput[] = [
     ], drugs: ["therascreen-cdx", "tersolisib", "zovegalisib", "serabelisib"], links: [{ label: "Wikipedia", url: W("P110α") }], companies: ["bridgebio-oncology-therapeutics", "cogent-biosciences", "relay-therapeutics", "scorpion-therapeutics"],
   },
   {
-    id: "akt", drugs: ["ipatasertib"], kind: "target", name: "AKT", symbol: "AKT1/2/3", targetClass: "kinase", asOf, wikipedia: W("Protein_kinase_B"),
+    id: "akt", technologies: ["pi3k-akt-mtor-inhibitors"], drugs: ["ipatasertib"], kind: "target", name: "AKT", symbol: "AKT1/2/3", targetClass: "kinase", asOf, wikipedia: W("Protein_kinase_B"),
     tldr: "AKT is a central survival kinase downstream of PI3K, blocked by capivasertib in breast and now prostate cancer.",
     summary: "AKT1, AKT2 and AKT3 are serine/threonine kinases at the centre of the PI3K survival pathway, and the AKT1 E17K hotspot is an activating mutation found in about 3 to 5 percent of hormone-receptor-positive breast cancers. Capivasertib (Truqap), a pan-AKT inhibitor, is approved with fulvestrant in HR-positive breast cancer carrying PIK3CA, AKT1 or PTEN alterations (CAPItello-291), a group that makes up around half of such tumours, and from 2026 with abiraterone in PTEN-deficient metastatic prostate cancer (CAPItello-281). PTEN loss activates the pathway in roughly 15 to 20 percent of prostate cancers and around 40 percent of metastatic castration-resistant disease. Hyperglycaemia, diarrhoea and rash are the class toxicities, and whether unselected patients also benefit is contested. In plain terms, AKT is the survival kinase downstream of PI3K, now blocked in breast and prostate cancer.",
     biology: "Serine/threonine kinase; AKT1 E17K is an activating hotspot.",
@@ -728,7 +728,7 @@ export const targets: TargetInput[] = [
     ], pathways: ["micrornas-in-cancer"], companies: ["oric-pharmaceuticals", "treeline-biosciences"],
   },
   {
-    id: "bcl2", kind: "target", name: "BCL-2", symbol: "BCL2", targetClass: "other", asOf, wikipedia: W("Bcl-2"),
+    id: "bcl2", technologies: ["bcl2-inhibitors"], kind: "target", name: "BCL-2", symbol: "BCL2", targetClass: "other", asOf, wikipedia: W("Bcl-2"),
     tldr: "A protein that stops cells from self-destructing. Venetoclax removes that protection and has transformed leukaemia treatment.",
     summary: "BCL-2 is an anti-apoptotic BH3-domain protein that stops cells from self-destructing; it is overexpressed in more than 90 percent of CLL and, through the t(14;18) translocation, in about 90 percent of follicular lymphomas and 30 to 40 percent of DLBCL. Venetoclax is a BH3 mimetic that occupies the BCL-2 groove and releases the cell-death machinery. It is standard in CLL as fixed-duration therapy with obinutuzumab or ibrutinib and in AML with azacitidine in older patients, where the drug exploits a dependency rather than a measurable expression threshold. Tumour lysis syndrome, managed by ramp-up dosing, and acquired BCL2 mutations are the practical and biological limitations. Next-generation BCL-2 inhibitors (sonrotoclax, lisaftoclax) and MCL-1 inhibitors follow to address resistance. The plain version: venetoclax removes a survival shield and has transformed leukaemia treatment.",
     biology: "BCL-2 is an anti-apoptotic BH3-domain protein, overexpressed via t(14;18) in follicular lymphoma.",
@@ -834,7 +834,7 @@ export const targets: TargetInput[] = [
     ], related: ["platinum-plus-hrd"], links: [{ label: "Wikipedia", url: W("BRCA_mutation") }],
   },
   {
-    id: "cd47", drugs: ["peluntamig", "spevatamig"], kind: "target", name: "CD47", symbol: "CD47", targetClass: "checkpoint", asOf, wikipedia: W("CD47"),
+    id: "cd47", technologies: ["cd47-blockade"], drugs: ["peluntamig", "spevatamig"], kind: "target", name: "CD47", symbol: "CD47", targetClass: "checkpoint", asOf, wikipedia: W("CD47"),
     tldr: "CD47 is the 'don't eat me' signal: it binds SIRP-alpha on macrophages to stop them engulfing the cell, and over 90% of AML blasts and large B-cell lymphoma cells display it. Blocking it should let macrophages eat tumour cells, but red cells carry CD47 too, so anaemia is built in, and the lead antibody magrolimab was dropped after failed trials.",
     summary: "CD47 is the 'don't eat me' signal: it binds SIRPα on macrophages to inhibit phagocytosis, and tumour cells display it broadly, with more than 90 percent of AML blasts and DLBCL cells carrying it. Blocking CD47 should let macrophages engulf tumour cells, particularly when combined with an opsonising antibody such as rituximab or with azacitidine. Because CD47 is also ubiquitous on red cells, anaemia is the built-in on-target toxicity. Magrolimab, the lead antibody, was discontinued after failed trials in MDS and AML (ENHANCE), with excess deaths. The macrophage checkpoint concept persists through SIRPα-targeted agents and bispecifics designed to spare red cells and lower haematological toxicity. For a newcomer: it looked like a promising immune brake on macrophages, but the first drug against it failed.",
     biology: "Binds SIRPα on macrophages to inhibit phagocytosis; ubiquitous on red cells, causing anaemia.",
@@ -877,7 +877,7 @@ export const targets: TargetInput[] = [
     links: [{ label: "UniProt P28074: PSMB5", url: "https://www.uniprot.org/uniprotkb/P28074/entry" }],
   },
   {
-    id: "cereblon", kind: "target", name: "Cereblon (CRBN)", symbol: "CRBN", targetClass: "other", asOf, wikipedia: W("Cereblon"),
+    id: "cereblon", technologies: ["celmods"], kind: "target", name: "Cereblon (CRBN)", symbol: "CRBN", targetClass: "other", asOf, wikipedia: W("Cereblon"),
     tldr: "The protein that lenalidomide and pomalidomide latch onto. Bound drug changes which proteins the cell tags for destruction, degrading the myeloma transcription factors Ikaros and Aiolos.",
     summary: "Cereblon is the substrate receptor of the CRL4 E3 ubiquitin ligase. Thalidomide, lenalidomide and pomalidomide act as molecular glues: bound to cereblon they recruit new substrates, above all the lymphoid transcription factors IKZF1 (Ikaros) and IKZF3 (Aiolos), for ubiquitination and destruction, which kills myeloma cells and stimulates T and natural killer cells. In del(5q) myelodysplastic syndrome lenalidomide degrades casein kinase 1 alpha instead. This mechanism founded the field of targeted protein degradation and is the template for molecular glue degraders.",
     biology: "Substrate receptor of the CRL4 (CUL4, DDB1, RBX1) E3 ubiquitin ligase; immunomodulatory drugs redirect it to degrade IKZF1, IKZF3 and CK1 alpha.",
@@ -1111,7 +1111,7 @@ export const targets: TargetInput[] = [
     links: [{ label: "UniProt P04150: NR3C1", url: "https://www.uniprot.org/uniprotkb/P04150/entry" }],
   },
   {
-    id: "gamma-secretase", kind: "target", name: "Gamma-secretase (PSEN1)", symbol: "PSEN1", targetClass: "enzyme", asOf, wikipedia: W("Gamma_secretase"),
+    id: "gamma-secretase", technologies: ["gamma-secretase-inhibitors"], kind: "target", name: "Gamma-secretase (PSEN1)", symbol: "PSEN1", targetClass: "enzyme", asOf, wikipedia: W("Gamma_secretase"),
     tldr: "The membrane enzyme that releases the active part of Notch. Nirogacestat blocks it and became the first drug approved for desmoid tumours, the aggressive but non-metastasising growths driven by Wnt signalling.",
     summary: "Gamma-secretase is a four-protein complex whose catalytic core, presenilin 1, cleaves membrane proteins including Notch receptors and amyloid precursor protein. Cleaving Notch releases its intracellular domain, so blocking gamma-secretase shuts down Notch signalling, which desmoid tumours depend on alongside their Wnt pathway mutations. Nirogacestat, approved in 2023 after the DeFi trial, shrinks desmoid tumours and reduces pain, at the cost of diarrhoea and ovarian toxicity in women. Earlier gamma-secretase inhibitors failed in Alzheimer disease and in T-cell leukaemia because of gut toxicity, and the same class is now used to unmask BCMA on myeloma cells to improve BCMA-directed therapy.",
     biology: "Intramembrane aspartyl protease complex (PSEN1 or PSEN2, nicastrin, APH1, PEN2) that releases the Notch intracellular domain.",

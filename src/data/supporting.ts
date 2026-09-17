@@ -131,7 +131,7 @@ const technologies: TechnologyInput[] = [
 
   // ---- Radiotherapy software ----
   t({
-    id: "treatment-planning-systems", links: [{ label: "AAPM Task Group 53: quality assurance for clinical radiotherapy treatment planning (Medical Physics 1998)", url: "https://doi.org/10.1118/1.598373" }], name: "Radiotherapy treatment planning and QA software", sections: ["radiation", "ai-computation"], status: "standard-of-care",
+    id: "treatment-planning-systems", related: ["in-vivo-dosimetry", "knowledge-based-planning"], links: [{ label: "AAPM Task Group 53: quality assurance for clinical radiotherapy treatment planning (Medical Physics 1998)", url: "https://doi.org/10.1118/1.598373" }], name: "Radiotherapy treatment planning and QA software", sections: ["radiation", "ai-computation"], status: "standard-of-care",
     tldr: "The software that calculates exactly how radiation beams should be shaped and checks the machine delivered it.",
     summary: "Treatment planning systems (Varian Eclipse, Elekta Monaco, RaySearch RayStation, Philips Pinnacle, Brainlab Elements) compute dose from CT/MR images, optimise beam arrangements for IMRT/VMAT/protons, and export plans; independent QA vendors (Sun Nuclear, IBA Dosimetry, PTW, RadCalc) verify delivered dose. RayStation's multi-vendor support and machine-learning planning are notable; cloud and automated planning are the direction.",
     principle: "Monte Carlo or convolution dose engines plus inverse optimisation of fluence subject to organ-at-risk constraints; deliverable plans checked by phantom measurement or log-file analysis.",
@@ -267,7 +267,7 @@ const technologies: TechnologyInput[] = [
     technologies: ["cytotoxic-chemotherapy"], companies: ["omnicell", "becton-dickinson"], journals: ["journal-of-oncology-pharmacy-practice"],
   }),
   t({
-    id: "ai-compute-platforms", name: "AI compute and model platforms for oncology", sections: ["ai-computation", "drug-discovery"], status: "emerging",
+    id: "ai-compute-platforms", related: ["agent-based-tumour-models", "immune-tumour-dynamics-models"], name: "AI compute and model platforms for oncology", sections: ["ai-computation", "drug-discovery"], status: "emerging",
     tldr: "AI compute platforms are the GPUs, model libraries, and cloud services that pathology, radiology, and drug-design AI run on.",
     summary: "NVIDIA (Clara for imaging and pathology, BioNeMo for molecular models, MONAI open-source medical imaging framework), cloud providers (AWS HealthOmics, Google Cloud Healthcare and Med-PaLM/MedGemma, Microsoft Azure AI for Health and Prov-GigaPath), and open ecosystems (Hugging Face model hubs, OHIF viewer) provide the substrate for foundation models in oncology. Compute access, data governance, and validation frameworks decide who can build and deploy.",
     principle: "GPU clusters and managed services host training and inference; domain frameworks provide pretrained encoders, DICOM/WSI I/O, and deployment tooling.",

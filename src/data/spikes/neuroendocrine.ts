@@ -65,7 +65,7 @@ const drugs: DrugInput[] = [
     toxicity: [{ event: "Diarrhoea/steatorrhoea", anyGradePct: 26, note: "CLARINET" }, { event: "Cholelithiasis", anyGradePct: 10 }, { event: "Hyperglycaemia", anyGradePct: 5 }],
     approvals: [{ region: "US", year: 1988, indication: "Carcinoid syndrome symptoms (octreotide)" }, { region: "US", year: 2014, indication: "Unresectable GEP-NETs to improve PFS (lanreotide)" }],
     targets: ["sstr2"], companies: ["novartis", "ipsen"], cancers: ["neuroendocrine"], trials: ["promid", "clarinet"], terms: ["carcinoid-syndrome", "prrt-term"] }),
-  d(supplement<DrugInput>({ id: "everolimus", kind: "drug", links: [{ label: "FDA label (DailyMed)", url: "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Everolimus" }],
+  d(supplement<DrugInput>({ id: "everolimus", technologies: ["pi3k-akt-mtor-inhibitors"], kind: "drug", links: [{ label: "FDA label (DailyMed)", url: "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Everolimus" }],
     approvals: [{ region: "US", year: 2011, indication: "Progressive pancreatic NETs" }, { region: "US", year: 2016, indication: "Progressive non-functional lung and GI NETs" }],
     notes: ["In neuroendocrine tumours: RADIANT-3 (2011) gave PFS 11.0 versus 4.6 months in pancreatic NETs and RADIANT-4 (2016) PFS 11.0 versus 3.9 months in lung and GI NETs; it is now the comparator that 177Lu-edotreotide beat in COMPETE. In RADIANT-3 stomatitis affected 64 percent (7 percent grade 3 or higher), rash 49 percent and pneumonitis 17 percent; dexamethasone mouthwash (SWISH) prevents most stomatitis."],
     cancers: ["neuroendocrine", "chromophobe-rcc"], targets: ["akt"], trials: ["radiant-3-4", "compete"] })),

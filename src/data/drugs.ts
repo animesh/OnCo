@@ -611,7 +611,7 @@ const baseDrugs: DrugInput[] = [
     summary: "Capivasertib is an ATP-competitive pan-AKT inhibitor given intermittently at 400 mg twice daily for 4 days on and 3 days off, a schedule chosen to limit hyperglycaemia and rash. It was approved in 2023 with fulvestrant for HR-positive, HER2-negative advanced breast cancer carrying PIK3CA, AKT1 or PTEN alterations after CAPItello-291, and in Q2 2026 with abiraterone for PTEN-deficient metastatic hormone-sensitive prostate cancer after CAPItello-281, the first AKT inhibitor in either disease. AstraZeneca markets it. Diarrhoea (77%, 12% grade 3 or higher) and cutaneous reactions (56%, 15%) are the main toxicities. The breast label is limited to tumours with a pathway alteration, and sequencing against PI3K-alpha inhibitors such as inavolisib is unresolved. For a newcomer: a pill that blocks the AKT node of the PI3K pathway in tumours that have switched it on.",
     mechanism: "ATP-competitive pan-AKT inhibitor, intermittent 4-days-on/3-off dosing.",
     approvals: [{ region: "US", year: 2023, indication: "HR+/HER2- breast cancer with PIK3CA/AKT1/PTEN alteration, with fulvestrant" }, { region: "US", year: 2026, indication: "PTEN-deficient metastatic prostate cancer with abiraterone" }, { region: "EU", year: 2024, indication: "ER+/HER2- mBC with PIK3CA/AKT1/PTEN alteration; 17 Jun 2024" }],
-    targets: ["akt", "pik3ca"], technologies: ["kinase-inhibitors"], companies: ["astrazeneca"], cancers: ["breast-hr-positive", "prostate"],
+    targets: ["akt", "pik3ca"], technologies: ["kinase-inhibitors", "pi3k-akt-mtor-inhibitors"], companies: ["astrazeneca"], cancers: ["breast-hr-positive", "prostate"],
   },
   {
     id: "inavolisib", kind: "drug", links: [{ label: "FDA label (DailyMed)", url: "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Inavolisib" }], name: "Inavolisib", brand: "Itovebi", modality: "Small-molecule PI3Kα inhibitor and degrader", asOf, status: "approved", wikipedia: W("Inavolisib"),
@@ -619,7 +619,7 @@ const baseDrugs: DrugInput[] = [
     summary: "Inavolisib is a PI3K-alpha-selective inhibitor that also promotes degradation of the mutant p110-alpha protein, combining enzyme blockade with removal of the target. It is taken as 9 mg once daily with palbociclib and fulvestrant, and was approved in 2024 for PIK3CA-mutant HR-positive, HER2-negative advanced breast cancer on INAVO120, where the triplet improved progression-free survival to 15.0 versus 7.3 months in endocrine-resistant disease, with an overall survival benefit reported in 2025. Roche/Genentech developed it. Hyperglycaemia, stomatitis, neutropenia and rash are the main adverse events. INAVO120 enrolled patients relapsing during or soon after adjuvant endocrine therapy, so its value in other PIK3CA-mutant settings is still being defined. For a newcomer: a PI3K drug that both blocks and destroys the mutant protein.",
     mechanism: "PI3Kα-selective inhibitor that promotes degradation of mutant p110α.",
     approvals: [{ region: "US", year: 2024, indication: "PIK3CA-mutant HR+/HER2- advanced breast cancer with palbociclib and fulvestrant" }, { region: "EU", year: 2025, indication: "PIK3CA-mutant ER+/HER2- mBC with palbociclib + fulvestrant; 18 Jul 2025" }],
-    targets: ["pik3ca"], technologies: ["kinase-inhibitors"], companies: ["roche-genentech"], cancers: ["breast-hr-positive"], terms: ["hyperglycaemia"], related: ["pi3k-pathway-plus-endocrine"],
+    targets: ["pik3ca"], technologies: ["kinase-inhibitors", "pi3k-akt-mtor-inhibitors"], companies: ["roche-genentech"], cancers: ["breast-hr-positive"], terms: ["hyperglycaemia"], related: ["pi3k-pathway-plus-endocrine"],
   },
   {
     id: "gedatolisib", kind: "drug", links: [{ label: "FDA label (DailyMed)", url: "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Gedatolisib" }], name: "Gedatolisib", brand: "Revtorpyk", modality: "Small-molecule pan-PI3K/mTOR inhibitor", asOf, status: "approved",
@@ -675,7 +675,7 @@ const baseDrugs: DrugInput[] = [
     summary: "Vorasidenib is a brain-penetrant dual inhibitor of mutant IDH1 and IDH2 that lowers the oncometabolite 2-hydroxyglutarate (2-HG), which drives the epigenetic block behind IDH-mutant glioma. In INDIGO it extended progression-free survival to 27.7 versus 11.1 months in grade 2 IDH-mutant astrocytoma or oligodendroglioma after surgery, and it was approved in August 2024 for patients aged 12 and over, the first targeted therapy for low-grade brain tumours. Servier markets it; the dose is 40 mg once daily (20 mg below 40 kg), and raised ALT and AST are the main laboratory findings. Its purpose is to delay radiotherapy and chemotherapy and their long-term cognitive cost by years; whether it improves overall survival, and its role in higher-grade IDH-mutant tumours, are open. For a newcomer: a pill that holds slow-growing brain tumours in check and postpones harsher treatment.",
     mechanism: "Brain-penetrant dual IDH1/IDH2 inhibitor reducing 2-HG.",
     approvals: [{ region: "US", year: 2024, indication: "Grade 2 IDH-mutant astrocytoma or oligodendroglioma after surgery, age ≥12" }, { region: "EU", year: 2025, indication: "Grade 2 IDH-mutant glioma ≥12 yrs; 17 Sep 2025" }],
-    targets: ["idh"], technologies: ["epigenetic-drugs"], companies: ["servier"], cancers: ["glioblastoma"],
+    targets: ["idh"], technologies: ["epigenetic-drugs", "idh-inhibitors"], companies: ["servier"], cancers: ["glioblastoma"],
   },
   {
     id: "venetoclax", kind: "drug", links: [{ label: "FDA label (DailyMed)", url: "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Venetoclax" }], name: "Venetoclax", brand: "Venclexta", modality: "Small-molecule BCL-2 inhibitor", asOf, status: "approved", wikipedia: W("Venetoclax"),
@@ -683,7 +683,7 @@ const baseDrugs: DrugInput[] = [
     summary: "Venetoclax is a BH3-mimetic that selectively inhibits BCL-2, removing the survival shield that lets leukaemia cells ignore apoptotic signals. In CLL it enables chemotherapy-free, time-limited treatment: fixed-duration venetoclax with obinutuzumab (CLL14) or with ibrutinib, following approval in 2016 for CLL with 17p deletion. In AML it is combined with azacitidine, decitabine or low-dose cytarabine for patients unfit for intensive chemotherapy (VIALE-A, approved 2018). AbbVie and Genentech co-develop it, and tumour lysis syndrome is the key early risk, managed with a 5-week ramp-up from 20 to 400 mg daily in CLL and a 3-day ramp in AML. Open questions include MRD-guided treatment duration, use in fit AML patients and resistance through BCL-2 mutations or MCL-1. For a newcomer: a pill that reopens the cell's self-destruct switch.",
     mechanism: "BH3-mimetic selective BCL-2 inhibitor.",
     approvals: [{ region: "US", year: 2016, indication: "CLL with 17p deletion" }, { region: "US", year: 2018, indication: "AML with azacitidine/decitabine/LDAC in unfit patients" }],
-    targets: ["bcl2"], technologies: ["kinase-inhibitors"], companies: ["abbvie", "roche-genentech"], cancers: ["cll", "aml"], people: ["peter-hillmen"],
+    targets: ["bcl2"], technologies: ["kinase-inhibitors", "bcl2-inhibitors"], companies: ["abbvie", "roche-genentech"], cancers: ["cll", "aml"], people: ["peter-hillmen"],
   },
   {
     id: "imatinib", kind: "drug", links: [{ label: "FDA label (DailyMed)", url: "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Imatinib" }], name: "Imatinib", brand: "Gleevec", modality: "Small-molecule kinase inhibitor (BCR-ABL, KIT, PDGFRA)", asOf, status: "approved", wikipedia: W("Imatinib"),
@@ -707,7 +707,7 @@ const baseDrugs: DrugInput[] = [
     summary: "Tucatinib is a HER2-selective reversible tyrosine kinase inhibitor that spares EGFR, so it causes less rash and diarrhoea than lapatinib or neratinib, and it penetrates the central nervous system. Taken as 300 mg twice daily, it was approved in 2020 with trastuzumab and capecitabine for HER2-positive metastatic breast cancer after HER2CLIMB, which showed an overall survival benefit that held in patients with active brain metastases, a group usually excluded from trials. In 2023 it was approved with trastuzumab for HER2-positive, RAS-wild-type metastatic colorectal cancer after MOUNTAINEER. Pfizer (via Seagen) markets it. Its place after trastuzumab deruxtecan, which also has brain activity, is the current sequencing question. For a newcomer: the HER2 pill chosen when the cancer has reached the brain.",
     mechanism: "Highly HER2-selective reversible TKI sparing EGFR.",
     approvals: [{ region: "US", year: 2020, indication: "HER2+ metastatic breast cancer including brain metastases, with trastuzumab and capecitabine" }, { region: "US", year: 2023, indication: "HER2+ RAS-wild-type mCRC with trastuzumab" }],
-    targets: ["her2"], technologies: ["kinase-inhibitors"], companies: ["pfizer"], cancers: ["breast-her2-positive", "colorectal"], related: ["tucatinib-triplet-brain-mets"],
+    targets: ["her2"], technologies: ["kinase-inhibitors", "her2-tyrosine-kinase-inhibitors"], companies: ["pfizer"], cancers: ["breast-her2-positive", "colorectal"], related: ["tucatinib-triplet-brain-mets"],
   },
 
   // ======================= VACCINES / VIRUSES =======================
@@ -759,7 +759,7 @@ const baseDrugs: DrugInput[] = [
     tldr: "A blood test screening for more than 50 cancers at once, before the FDA in September 2026.",
     summary: "Galleri is GRAIL's methylation-based MCED. Available as an LDT since 2021 (~$949). PATHFINDER 2 (25,000+ participants) and NHS-Galleri (140,000 randomised) underpin the PMA submitted January 2026; FDA advisory committee 23 September 2026. Cancer signal detected in ~1% of screened adults with PPV ~40-60% in PATHFINDER 2; sensitivity for stage I disease is low.",
     mechanism: "Targeted cfDNA methylation sequencing with machine-learned cancer signal and tissue-of-origin classifier.",
-    technologies: ["mced", "liquid-biopsy", "methylation-profiling"], companies: ["grail"], trials: ["nhs-galleri", "pathfinder-2"],
+    technologies: ["mced", "liquid-biopsy", "methylation-profiling", "cfdna-methylation-testing"], companies: ["grail"], trials: ["nhs-galleri", "pathfinder-2"],
     links: [{ label: "GRAIL PMA announcement", url: "https://grail.com/press-releases/grail-submits-fda-premarket-approval-application-for-the-galleri-multi-cancer-early-detection-test/" }],
   },
   {
@@ -790,7 +790,7 @@ const baseDrugs: DrugInput[] = [
     tldr: "A 21-gene test that tells most women with early hormone-positive breast cancer whether they can safely skip chemotherapy.",
     summary: "Oncotype DX is a gene-expression assay that measures 16 cancer-related and 5 reference genes by RT-PCR in tumour tissue to give a recurrence score estimating both the risk of distant recurrence and the likely benefit from chemotherapy in early hormone-positive, HER2-negative breast cancer. TAILORx (2018) showed that women with a score of 25 or below, if over 50, derive no benefit from adding chemotherapy to endocrine therapy, and RxPONDER extended that finding to postmenopausal women with 1 to 3 positive nodes. Younger women with mid-range scores did show some chemotherapy benefit in TAILORx, which may reflect ovarian suppression rather than cytotoxic effect, and this remains debated. Exact Sciences markets it; MammaPrint (Agendia) and Prosigna/PAM50 are alternatives. For a newcomer: a tumour test that lets most women with early hormone-positive breast cancer safely skip chemotherapy.",
     mechanism: "RT-PCR of 16 cancer and 5 reference genes into a recurrence score.",
-    technologies: ["rna-seq", "companion-diagnostic"], companies: ["exact-sciences"], cancers: ["breast-hr-positive"], trials: ["tailorx", "rxponder"], related: ["mammaprint", "prosigna", "endopredict", "genomic-assay-to-chemo-omission"],
+    technologies: ["rna-seq", "companion-diagnostic", "gene-expression-prognostic-assays"], companies: ["exact-sciences"], cancers: ["breast-hr-positive"], trials: ["tailorx", "rxponder"], related: ["mammaprint", "prosigna", "endopredict", "genomic-assay-to-chemo-omission"],
     links: [{ label: "TAILORx (NEJM 2018)", url: "https://doi.org/10.1056/NEJMoa1804710" }, { label: "NICE DG34: tumour profiling tests for breast cancer", url: "https://www.nice.org.uk/guidance/dg34" }],
   },
   {
