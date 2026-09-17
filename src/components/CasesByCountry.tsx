@@ -175,7 +175,7 @@ function CountryPanel({ c, cancers, onClose }: { c: CountryProfile; cancers: Can
             {sites.map((s, i) => (
               <tr key={`${c.iso3}-${s.code}`}>
                 <td className="tabular-nums text-muted">{i + 1}</td>
-                <td className="font-medium">{s.label}</td>
+                <td className="font-medium">{(() => { const first = s.oncoIds.map((id) => byId.get(id)).find(Boolean); return first ? <Link href={first.route} className="hover:underline">{s.label}</Link> : s.label; })()}</td>
                 <td className="text-sm">{s.oncoIds.length ? s.oncoIds.map((id) => byId.get(id)).filter(Boolean).map((x) => <Link key={x!.id} href={x!.route} className="underline mr-2">{x!.name.replace(/ \(.*\)$/, "")}</Link>) : <span className="text-muted/60 text-xs italic">no OnCo page</span>}</td>
                 <td className="tabular-nums">{s.cases === null ? <NoData /> : fmt(s.cases)}</td>
                 <td className="tabular-nums">{s.incAsr === null ? <NoData /> : fmt(s.incAsr, 1)}</td>
@@ -193,7 +193,7 @@ function CountryPanel({ c, cancers, onClose }: { c: CountryProfile; cancers: Can
               {sites.map((s, i) => (
                 <tr key={`${c.iso3}-${s.code}-m`}>
                   <td className="tabular-nums text-muted">{i + 1}</td>
-                  <td className="font-medium">{s.label}</td>
+                  <td className="font-medium">{(() => { const first = s.oncoIds.map((id) => byId.get(id)).find(Boolean); return first ? <Link href={first.route} className="hover:underline">{s.label}</Link> : s.label; })()}</td>
                   <td className="tabular-nums">{s.cases === null ? <NoData /> : fmt(s.cases)}</td>
                   <td className="tabular-nums">{s.deaths === null ? <NoData /> : fmt(s.deaths)}</td>
                   <td className="tabular-nums">{s.mortAsr === null ? <NoData /> : fmt(s.mortAsr, 1)}</td>
