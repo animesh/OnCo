@@ -2,25 +2,15 @@
 
 import { useLayer, type Lang } from "@/lib/layer";
 import { t } from "@/lib/i18n/ui";
-import { simple } from "@/data/simple";
-import { tldr_es } from "@/data/i18n/es";
-import { tldr_zh } from "@/data/i18n/zh";
-import { tldr_pt } from "@/data/i18n/pt";
-import { tldr_hi } from "@/data/i18n/hi";
-import { tldr_fr } from "@/data/i18n/fr";
-import { tldr_de } from "@/data/i18n/de";
-import { tldr_ja } from "@/data/i18n/ja";
-import { tldr_ar } from "@/data/i18n/ar";
 import { reviewed } from "@/data/i18n/reviewed";
-
-const TABLES = { es: tldr_es, zh: tldr_zh, pt: tldr_pt, hi: tldr_hi, fr: tldr_fr, de: tldr_de, ja: tldr_ja, ar: tldr_ar } as const;
+import { tableKeyFor, useTable, type TldrTable } from "@/lib/tldr-tables";
 
 type Mark = { text: string; title: string; tone: "muted" | "ok" };
 
-/** The TL;DR for `id` in `lang` when a translation exists, else the English text. For tables and cards. */
-export function tldrFor(id: string, tldr: string, lang: Lang): string {
-  if (lang === "en") return tldr;
-  return TABLES[lang][id] ?? tldr;
+/** The TL;DR for `id` in `lang` when the loaded table has one, else the English text. For tables and cards. */
+export function tldrFor(id: string, tldr: string, lang: Lang, table?: TldrTable): string {
+  if (lang === "en" || !table) return tldr;
+  return table[id] ?? tldr;
 }
 
 /** Which mark to show beside a translated TL;DR: reviewed by a named speaker, machine-assisted, or English fallback. */
@@ -41,14 +31,16 @@ export function translationMark(id: string, lang: Lang, hasTranslation: boolean)
  */
 export function TldrText({ id, tldr, simple: simpleProp, className = "" }: { id: string; tldr: string; simple?: string; className?: string }) {
   const [layer] = useLayer();
+  const table = useTable(layer.level === "simple" && simpleProp ? null : tableKeyFor(layer.level, layer.lang));
   let text = tldr;
   let mark: Mark | null = null;
   let hasTranslation = false;
   if (layer.level === "simple") {
-    const s = simpleProp ?? simple[id];
+    const s = simpleProp ?? table?.[id];
     if (s) text = s;
-  } else if (layer.lang !== "en") {
-    const tr = TABLES[layer.lang][id];
+  } else if (layer.lang !== "en" && table) {
+    // Until the language table has loaded the English text shows without a mark, so nothing flashes "EN" and then changes.
+    const tr = table[id];
     if (tr) { text = tr; hasTranslation = true; }
     mark = translationMark(id, layer.lang, !!tr);
   }
@@ -63,11 +55,6 @@ export function TldrText({ id, tldr, simple: simpleProp, className = "" }: { id:
       )}
     </span>
   );
-}
-
-/** True when translations or simplified text exist for an id, for badges and coverage pages. */
-export function coverageFor(id: string) {
-  return { simple: id in simple, es: id in tldr_es, zh: id in tldr_zh, pt: id in tldr_pt, hi: id in tldr_hi, fr: id in tldr_fr, de: id in tldr_de, ja: id in tldr_ja, ar: id in tldr_ar };
 }
 
 /** Languages in which this id's translation has a named review. */

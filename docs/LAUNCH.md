@@ -327,3 +327,8 @@ The owner's patient-first roadmap (a real-case "For me", persistent cancer choic
 - Sarcoma and lymphoma: leiomyosarcoma, liposarcoma, synovial sarcoma, marginal zone lymphoma and cutaneous T-cell lymphoma pages under their parents, with Chinese TL;DRs. Cancer pages now number 140.
 - Chinese: the last 131 people translated (OECI representatives from their fixed sentence, hand translations for the exceptions). Every kind is now fully translated except registry-ingested trials (694 of 3,365) and products (114).
 - Next: prostate by risk group as a family of stage pages.
+
+### Translations load on demand; registry records translated (17 Sept 2026)
+
+- The TL;DR component and the browser tables imported all eight language dictionaries and the simplified-English table statically, so every page shipped about ten megabytes of translations in its JavaScript. They now load per language on demand through src/lib/tldr-tables.ts: English readers download none; a reader who picks Chinese downloads Chinese once. English shows without a mark until a table arrives.
+- Chinese TL;DRs generated for 2,678 registry-ingested trials and products from their record fields (phase, status, sponsor, drugs, cancer ids, modality); 46 remain whose cancers or modality have no Chinese mapping yet.

@@ -8,7 +8,6 @@ import type { CancerInput, DrugInput, TrialInput } from "@/lib/schema";
 
 const asOf = "2026-09-16";
 const W = (s: string) => `https://en.wikipedia.org/wiki/${s}`;
-const ct = (nct: string) => ({ label: `ClinicalTrials.gov ${nct}`, url: `https://clinicaltrials.gov/study/${nct}` });
 const tags = ["essential-thrombocythaemia", "mpn"];
 
 export const etCancer: CancerInput = {

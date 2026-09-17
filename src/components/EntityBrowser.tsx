@@ -23,6 +23,7 @@ import { SaveViewButton } from "./SaveViewButton";
 import type { CsvRow } from "@/lib/csv";
 import { useT } from "@/lib/i18n/ui";
 import { tldrFor } from "./TldrText";
+import { useTable } from "@/lib/tldr-tables";
 
 /**
  * One templated, full-width, sortable and filterable table for any kind of entity.
@@ -125,6 +126,7 @@ export function EntityBrowser({ rows, facets, columns, noun, defaultSort, hideSt
   const [q, setQ] = useState("");
   const [own, setOwn] = useState<Record<string, string[]>>({});
   const { t, tl, status: statusText, noun: nounText, lang } = useT();
+  const tldrTable = useTable(lang === "en" ? null : lang);
   /** True once the URL has been read, so the write-back effect never clobbers a shared link with the empty initial state. */
   const [synced, setSynced] = useState(false);
   /** Effective selection: the internal choice plus whatever the parent set on the controlled key. */
@@ -298,7 +300,7 @@ export function EntityBrowser({ rows, facets, columns, noun, defaultSort, hideSt
         {r.sectionIcon && <Link href={r.route} aria-label={`${r.name} front icon`} className="inline-flex h-10 w-14 shrink-0 items-center justify-center rounded-md border border-border bg-accent-soft text-accent"><FrontIcon id={r.sectionIcon} className="h-6 w-6" /></Link>}
         {r.cancerIcon && <Link href={r.route} aria-label={`${r.name} organ icon`} className="inline-flex h-10 w-14 shrink-0 items-center justify-center rounded-md border border-border bg-accent-soft text-accent"><CancerIcon cancerId={r.cancerIcon} className="h-7 w-7" /></Link>}
         {(r.logo || r.avatar) && !r.molecule && <RowAvatar src={r.logo} name={r.name} round={r.round || r.avatar === "person"} />}
-        <div><Link href={r.route} data-row className="font-medium hover:underline">{r.name}</Link>{r.sub && <div className="text-xs text-muted">{r.sub}</div>}{!hideTldr && <div className="text-xs text-muted line-clamp-2 max-w-lg">{tldrFor(r.id, r.tldr, lang)}</div>}</div>
+        <div><Link href={r.route} data-row className="font-medium hover:underline">{r.name}</Link>{r.sub && <div className="text-xs text-muted">{r.sub}</div>}{!hideTldr && <div className="text-xs text-muted line-clamp-2 max-w-lg">{tldrFor(r.id, r.tldr, lang, tldrTable)}</div>}</div>
       </div>) },
     ...(hideStatus ? [] : [{ key: "status", label: "Phase / status", sortable: true, render: (r: BrowserRow) => r.molecule
       ? <ApprovalChip drugId={r.molecule} status={r.status} />
