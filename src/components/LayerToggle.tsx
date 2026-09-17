@@ -27,8 +27,11 @@ export function LayerToggle({ className = "" }: { className?: string }) {
     <div ref={box} className={`relative ${className}`}>
       <button type="button" onClick={() => setOpen((o) => !o)} aria-haspopup="dialog" aria-expanded={open} aria-label={t("layer.aria")}
         className={`ctl px-2.5 ${nonDefault ? "border-accent bg-accent-soft" : ""}`} title={`${levelLabel(level.code)} · ${lang.native}`}>
-        <span aria-hidden className="font-semibold tracking-tight">Aa</span>
-        <span className="text-xs text-muted font-medium xl:hidden 2xl:inline">{lang.code.toUpperCase()}</span>
+        {/* Both runs of text share one baseline (see .ctl-text), whatever their sizes. */}
+        <span className="ctl-text">
+          <span aria-hidden className="font-semibold tracking-tight">Aa</span>
+          <span className="ctl-label text-muted xl:hidden 2xl:inline">{lang.code.toUpperCase()}</span>
+        </span>
       </button>
       {/* Phones: span the viewport below the header (an end-anchored 18rem panel would run off the far edge). */}
       {open && (

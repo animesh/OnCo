@@ -82,7 +82,7 @@ export function NavMenu() {
         })}
       </nav>
 
-      <button type="button" onClick={() => { setOpenGroup(activeGroup?.id ?? "find"); setDrawer(true); }} className="ctl xl:hidden px-0 sm:px-3" aria-label={t("header.openMenu")} aria-expanded={drawer} aria-controls="site-drawer">
+      <button type="button" onClick={() => { setOpenGroup(activeGroup?.id ?? "find"); setDrawer(true); }} className="ctl ctl-icon xl:hidden sm:w-auto sm:px-3" aria-label={t("header.openMenu")} aria-expanded={drawer} aria-controls="site-drawer">
         <svg aria-hidden viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round"><path d="M3 5.5h14M3 10h14M3 14.5h14" /></svg>
         <span className="hidden sm:inline">{t("menu")}</span>
       </button>
@@ -93,7 +93,7 @@ export function NavMenu() {
           <div id="site-drawer" role="dialog" aria-modal="true" aria-label={t("menu")} className="absolute end-0 top-0 h-full w-[88vw] max-w-sm bg-background border-s border-border overflow-y-auto overscroll-contain shadow-pop flex flex-col">
             <div className="sticky top-0 z-10 flex items-center justify-between gap-3 px-4 h-14 border-b border-border bg-background/95 backdrop-blur">
               <span className="font-semibold tracking-tight">{t("menu")}</span>
-              <button type="button" onClick={() => setDrawer(false)} className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-muted hover:bg-foreground/5 hover:text-foreground" aria-label={t("header.closeMenu")}>
+              <button type="button" onClick={() => setDrawer(false)} className="ctl ctl-icon text-muted hover:text-foreground" aria-label={t("header.closeMenu")}>
                 <svg aria-hidden viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round"><path d="M5 5l10 10M15 5L5 15" /></svg>
               </button>
             </div>

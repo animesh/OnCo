@@ -4,6 +4,10 @@ import { useEffect, useRef, useState } from "react";
 import { REGION_META, REGION_ORDER, useRegion, guessRegion } from "@/lib/region";
 import { useT, type UiKey } from "@/lib/i18n/ui";
 
+function GlobeIcon() {
+  return <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3c2.6 2.6 3.9 5.6 3.9 9s-1.3 6.4-3.9 9c-2.6-2.6-3.9-5.6-3.9-9S9.4 5.6 12 3Z" /></svg>;
+}
+
 /** Header control: which country's regulator decides what "approved" means on this site. Not a language switch. */
 export function RegionToggle() {
   const { region, setRegion } = useRegion();
@@ -18,13 +22,14 @@ export function RegionToggle() {
     return () => { document.removeEventListener("mousedown", onDoc); document.removeEventListener("keydown", onKey); };
   }, [open]);
   const countryName = (r: string) => t(`country.${r}` as UiKey);
-  const meta = region ? { label: countryName(region), regulator: REGION_META[region].regulator, flag: REGION_META[region].flag } : { label: t("region.global"), regulator: t("region.allRegulators"), flag: "🌐" };
+  const meta = region ? { label: countryName(region), regulator: REGION_META[region].regulator, flag: REGION_META[region].flag } : { label: t("region.global"), regulator: t("region.allRegulators"), flag: null };
   return (
     <div ref={box} className="relative">
       <button type="button" onClick={() => setOpen((o) => !o)} aria-haspopup="listbox" aria-expanded={open} aria-label={t("region.aria", { region: meta.label })} title={t("region.title", { region: meta.label, regulator: meta.regulator })}
-        className="ctl px-2 gap-1.5 text-sm">
-        <span aria-hidden className="text-base leading-none">{meta.flag}</span>
-        <span className="hidden sm:inline xl:hidden 2xl:inline text-xs font-medium">{region}</span>
+        className="ctl px-2 gap-1.5">
+        {/* A drawn globe rather than the emoji, so the icon is optically centred in the control like its neighbours. */}
+        {meta.flag ? <span aria-hidden className="ctl-glyph">{meta.flag}</span> : <GlobeIcon />}
+        <span className="ctl-label hidden sm:inline xl:hidden 2xl:inline">{region}</span>
       </button>
       {open && (
         <div role="listbox" aria-label={t("region.listbox")} className="absolute end-0 top-full mt-1.5 z-50 card shadow-pop w-72 p-1.5 max-sm:fixed max-sm:inset-x-3 max-sm:top-[calc(var(--header-h)+0.375rem)] max-sm:w-auto max-sm:max-h-[75vh] max-sm:overflow-y-auto">

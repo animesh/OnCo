@@ -247,7 +247,7 @@ function ShortcutsSheet({ onClose }: { onClose: () => void }) {
             <div className="kicker mb-1">Keyboard</div>
             <h2 id="shortcuts-title" className="text-lg font-semibold">Shortcuts</h2>
           </div>
-          <button ref={first} type="button" onClick={onClose} className="ctl ctl-icon" aria-label="Close">×</button>
+          <button ref={first} type="button" onClick={onClose} className="ctl ctl-icon" aria-label="Close"><svg aria-hidden viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round"><path d="M5 5l10 10M15 5L5 15" /></svg></button>
         </div>
         <table className="mt-4 w-full text-sm">
           <tbody>
@@ -282,8 +282,8 @@ export function PaletteTrigger({ className = "" }: { className?: string }) {
   const { t } = useT();
   useEffect(() => { const id = requestAnimationFrame(() => setMac(/Mac|iPhone|iPad/.test(navigator.platform))); return () => cancelAnimationFrame(id); }, []);
   return (
-    <button type="button" onClick={() => window.dispatchEvent(new Event("onco:open-palette"))} className={`flex items-center justify-center rounded-lg border border-border bg-card px-3 py-1.5 text-sm text-muted hover:bg-foreground/5 min-w-0 overflow-hidden whitespace-nowrap ${className}`} aria-label={t("header.openSearch")}>
-      <span aria-hidden className="text-base leading-none">⌕</span>
+    <button type="button" onClick={() => window.dispatchEvent(new Event("onco:open-palette"))} className={`ctl ctl-icon text-muted min-w-0 overflow-hidden ${className}`} aria-label={t("header.openSearch")}>
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden><circle cx="11" cy="11" r="6.5" /><path d="M16 16l4.5 4.5" /></svg>
       <span className="sr-only">{t("header.search")} ({mac ? "⌘" : "Ctrl"} K)</span>
     </button>
   );
