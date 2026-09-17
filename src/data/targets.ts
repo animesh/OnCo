@@ -853,6 +853,7 @@ export const targets: TargetInput[] = [
     biology: "Cytochrome P450 enzyme of the adrenal cortex, testis and prostate cancer cells; the rate-limiting step of androgen synthesis from pregnenolone.",
     whereFound: ["Prostate cancer, including intratumoral androgen synthesis in castration-resistant disease"],
     drugs: ["abiraterone"], cancers: ["prostate"],
+    prevalence: [{"cancerId":"prostate","pct":"nearly all","measure":"Androgen-driven at diagnosis; abiraterone acts on androgen synthesis in almost every prostate cancer, resistance develops later","source":"https://www.cancer.gov/types/prostate/hp/prostate-treatment-pdq"}],
     links: [{ label: "UniProt P05093: CYP17A1", url: "https://www.uniprot.org/uniprotkb/P05093/entry" }],
   },
   {
@@ -862,6 +863,7 @@ export const targets: TargetInput[] = [
     biology: "Cytochrome P450 enzyme that aromatises the A ring of androgens to form oestrogens; expressed in adipose tissue, muscle, bone, brain and breast tumour stroma.",
     whereFound: ["Hormone receptor-positive breast cancer in post-menopausal women"],
     drugs: ["letrozole","exemestane"], cancers: ["breast-hr-positive"],
+    prevalence: [{"cancerId":"breast-hr-positive","pct":"about 70","measure":"Share of breast cancers that are hormone receptor-positive, the population aromatase inhibitors treat","source":"https://www.cancer.org/cancer/types/breast-cancer/understanding-a-breast-cancer-diagnosis/breast-cancer-hormone-receptor-status.html"}],
     links: [{ label: "UniProt P11511: CYP19A1", url: "https://www.uniprot.org/uniprotkb/P11511/entry" }],
   },
   {
@@ -871,6 +873,7 @@ export const targets: TargetInput[] = [
     biology: "Multi-subunit protease complex that degrades ubiquitinated proteins; PSMB5 carries the chymotrypsin-like catalytic activity targeted by approved inhibitors.",
     whereFound: ["Multiple myeloma","Mantle cell lymphoma"],
     drugs: ["bortezomib","carfilzomib"], cancers: ["multiple-myeloma","mantle-cell-lymphoma"],
+    prevalence: [{"cancerId":"metastatic-cancer","pct":"all","measure":"Housekeeping enzyme present in every dividing cell (protein disposal, on which myeloma cells depend most); not a selection marker, which is why these drugs are given by cancer type rather than by test."}],
     links: [{ label: "UniProt P28074: PSMB5", url: "https://www.uniprot.org/uniprotkb/P28074/entry" }],
   },
   {
@@ -880,6 +883,7 @@ export const targets: TargetInput[] = [
     biology: "Substrate receptor of the CRL4 (CUL4, DDB1, RBX1) E3 ubiquitin ligase; immunomodulatory drugs redirect it to degrade IKZF1, IKZF3 and CK1 alpha.",
     whereFound: ["Multiple myeloma","Myelodysplastic syndrome with del(5q)"],
     drugs: ["lenalidomide","pomalidomide"], cancers: ["multiple-myeloma","mds"],
+    prevalence: [{"cancerId":"multiple-myeloma","pct":"nearly all","measure":"Cereblon expression at diagnosis; required for lenalidomide and pomalidomide activity, lost in a minority of refractory disease","source":"https://doi.org/10.1182/blood-2011-05-356063"}],
     links: [{ label: "UniProt Q96SW2: CRBN", url: "https://www.uniprot.org/uniprotkb/Q96SW2/entry" }],
   },
   {
@@ -889,6 +893,7 @@ export const targets: TargetInput[] = [
     biology: "Type IB topoisomerase that relieves torsional stress during replication and transcription; trapped as a covalent cleavage complex by camptothecins.",
     whereFound: ["Expressed in all dividing cells; relevant wherever camptothecin or topoisomerase I payload drugs are used"],
     drugs: ["irinotecan","topotecan","sacituzumab-govitecan","trastuzumab-deruxtecan"], cancers: ["colorectal","sclc","tnbc","breast-her2-positive"],
+    prevalence: [{"cancerId":"metastatic-cancer","pct":"all","measure":"Housekeeping enzyme present in every dividing cell (DNA unwinding during replication); not a selection marker, which is why these drugs are given by cancer type rather than by test."}],
     links: [{ label: "UniProt P11387: TOP1", url: "https://www.uniprot.org/uniprotkb/P11387/entry" }],
   },
   {
@@ -910,6 +915,7 @@ export const targets: TargetInput[] = [
     biology: "Folate-dependent enzyme converting dUMP to dTMP; inhibited by FdUMP in a ternary complex with 5,10-methylenetetrahydrofolate.",
     whereFound: ["Gastrointestinal cancers treated with fluoropyrimidines","Non-squamous lung cancer and mesothelioma treated with pemetrexed"],
     drugs: ["fluorouracil","capecitabine","pemetrexed"], cancers: ["colorectal","gastric","pancreatic"],
+    prevalence: [{"cancerId":"metastatic-cancer","pct":"all","measure":"Housekeeping enzyme present in every dividing cell (thymidine synthesis); not a selection marker, which is why these drugs are given by cancer type rather than by test."}],
     links: [{ label: "UniProt P04818: TYMS", url: "https://www.uniprot.org/uniprotkb/P04818/entry" }],
   },
   {
@@ -919,6 +925,7 @@ export const targets: TargetInput[] = [
     biology: "NADPH-dependent reductase maintaining the tetrahydrofolate pool; amplified in methotrexate-resistant cells.",
     whereFound: ["Acute lymphoblastic leukaemia","Osteosarcoma","Primary CNS lymphoma"],
     drugs: ["methotrexate","pemetrexed"], cancers: ["all-leukemia","osteosarcoma","primary-cns-lymphoma"],
+    prevalence: [{"cancerId":"metastatic-cancer","pct":"all","measure":"Housekeeping enzyme present in every dividing cell (folate recycling); not a selection marker, which is why these drugs are given by cancer type rather than by test."}],
     links: [{ label: "UniProt P00374: DHFR", url: "https://www.uniprot.org/uniprotkb/P00374/entry" }],
   },
   {
@@ -928,6 +935,7 @@ export const targets: TargetInput[] = [
     biology: "G protein-coupled receptor on pituitary gonadotrophs; agonist-induced desensitisation or antagonist blockade suppresses LH and FSH release.",
     whereFound: ["Prostate cancer (androgen deprivation)","Pre-menopausal hormone receptor-positive breast cancer (ovarian suppression)"],
     drugs: ["leuprolide","goserelin","degarelix"], cancers: ["prostate","breast-hr-positive"],
+    prevalence: [{"cancerId":"prostate","pct":"host","measure":"Host target: pituitary receptor that starts the testosterone chain. Not a tumour alteration, so no prevalence applies; the drug acts on normal tissue or on symptoms."}],
     links: [{ label: "UniProt P30968: GNRHR", url: "https://www.uniprot.org/uniprotkb/P30968/entry" }],
   },
   {
@@ -958,6 +966,7 @@ export const targets: TargetInput[] = [
     biology: "Heterodimeric building block of microtubules; drug binding at the taxane, vinca or maytansine site disrupts spindle dynamics.",
     whereFound: ["Every dividing cell; the basis of taxane, vinca alkaloid, eribulin and tubulin-payload antibody-drug conjugate therapy"],
     drugs: ["paclitaxel","docetaxel","vincristine","eribulin"], cancers: ["breast-hr-positive","nsclc","ovarian","all-leukemia"],
+    prevalence: [{"cancerId":"metastatic-cancer","pct":"all","measure":"Housekeeping enzyme present in every dividing cell (microtubule scaffold for cell division); not a selection marker, which is why these drugs are given by cancer type rather than by test."}],
     links: [{ label: "UniProt P07437: TUBB", url: "https://www.uniprot.org/uniprotkb/P07437/entry" }],
   },
   {
@@ -967,6 +976,7 @@ export const targets: TargetInput[] = [
     biology: "Maintenance DNA methyltransferase acting at hemimethylated CpG sites after replication; covalently trapped by incorporated azacytosine.",
     whereFound: ["Myelodysplastic syndromes","Acute myeloid leukaemia","Chronic myelomonocytic leukaemia"],
     drugs: ["azacitidine","decitabine"], cancers: ["mds","aml","cmml"],
+    prevalence: [{"cancerId":"metastatic-cancer","pct":"all","measure":"Housekeeping enzyme present in every dividing cell (methylation maintenance during replication); not a selection marker, which is why these drugs are given by cancer type rather than by test."}],
     links: [{ label: "UniProt P26358: DNMT1", url: "https://www.uniprot.org/uniprotkb/P26358/entry" }],
   },
   {
@@ -976,6 +986,7 @@ export const targets: TargetInput[] = [
     biology: "Large catalytic subunit of ribonucleotide reductase; target of gemcitabine diphosphate, with the small subunit RRM2 quenched by hydroxyurea.",
     whereFound: ["Pancreatic, lung, bladder, ovarian and breast cancers treated with gemcitabine","Myeloproliferative neoplasms treated with hydroxyurea"],
     drugs: ["gemcitabine","hydroxyurea"], cancers: ["pancreatic","nsclc","urothelial"],
+    prevalence: [{"cancerId":"metastatic-cancer","pct":"all","measure":"Housekeeping enzyme present in every dividing cell (DNA building-block synthesis); not a selection marker, which is why these drugs are given by cancer type rather than by test."}],
     links: [{ label: "UniProt P23921: RRM1", url: "https://www.uniprot.org/uniprotkb/P23921/entry" }],
   },
   {
@@ -1052,6 +1063,7 @@ export const targets: TargetInput[] = [
     biology: "Ligand-gated ion channel for serotonin on vagal afferents and in the brainstem chemoreceptor trigger zone; blocked by setron antiemetics.",
     whereFound: ["Supportive care: prevention of chemotherapy-induced nausea and vomiting"],
     drugs: ["ondansetron","palonosetron", "granisetron"], cancers: [],
+    prevalence: [{"cancerId":"metastatic-cancer","pct":"host","measure":"Host target: serotonin receptor on gut vagal endings and the vomiting centre. Not a tumour alteration, so no prevalence applies; the drug acts on normal tissue or on symptoms."}],
     links: [{ label: "UniProt P46098: HTR3A", url: "https://www.uniprot.org/uniprotkb/P46098/entry" }],
   },
   {
@@ -1061,6 +1073,7 @@ export const targets: TargetInput[] = [
     biology: "G protein-coupled receptor for substance P in the nucleus tractus solitarius and area postrema; blocked by pitant antiemetics.",
     whereFound: ["Supportive care: prevention of delayed chemotherapy-induced nausea and vomiting"],
     drugs: ["aprepitant","netupitant-palonosetron", "rolapitant", "dexamethasone"], cancers: [],
+    prevalence: [{"cancerId":"metastatic-cancer","pct":"host","measure":"Host target: substance P receptor in the vomiting pathway. Not a tumour alteration, so no prevalence applies; the drug acts on normal tissue or on symptoms."}],
     links: [{ label: "UniProt P25103: TACR1", url: "https://www.uniprot.org/uniprotkb/P25103/entry" }],
   },
   {
@@ -1070,6 +1083,7 @@ export const targets: TargetInput[] = [
     biology: "Cytokine receptor on erythroid progenitors signalling through JAK2 and STAT5; agonised by recombinant erythropoiesis-stimulating agents.",
     whereFound: ["Supportive care: chemotherapy-induced anaemia","Expressed on some tumour cells, the basis of the safety concern"],
     drugs: ["epoetin-alfa", "darbepoetin-alfa"], cancers: [],
+    prevalence: [{"cancerId":"metastatic-cancer","pct":"host","measure":"Host target: erythropoietin receptor on marrow red-cell precursors. Not a tumour alteration, so no prevalence applies; the drug acts on normal tissue or on symptoms."}],
     links: [{ label: "UniProt P19235: EPOR", url: "https://www.uniprot.org/uniprotkb/P19235/entry" }],
   },
   {
@@ -1088,6 +1102,7 @@ export const targets: TargetInput[] = [
     biology: "Ligand-activated nuclear receptor; in lymphoid cells its transcriptional programme induces apoptosis, the basis of steroid use in leukaemia, lymphoma and myeloma.",
     whereFound: ["Acute lymphoblastic leukaemia","Multiple myeloma","Hodgkin and non-Hodgkin lymphoma","Supportive care across cancers"],
     drugs: ["dexamethasone","prednisone"], cancers: ["all-leukemia","multiple-myeloma","hodgkin-lymphoma","dlbcl"],
+    prevalence: [{"cancerId":"all-leukemia","pct":"nearly all","measure":"Glucocorticoid receptor expressed in lymphoblasts; prednisone response is a prognostic marker","source":"https://www.cancer.gov/types/leukemia/hp/adult-all-treatment-pdq"}],
     links: [{ label: "UniProt P04150: NR3C1", url: "https://www.uniprot.org/uniprotkb/P04150/entry" }],
   },
   {
@@ -1097,6 +1112,7 @@ export const targets: TargetInput[] = [
     biology: "Intramembrane aspartyl protease complex (PSEN1 or PSEN2, nicastrin, APH1, PEN2) that releases the Notch intracellular domain.",
     whereFound: ["Desmoid tumours","Investigational in T-cell acute lymphoblastic leukaemia and as a BCMA-boosting partner in myeloma"],
     drugs: ["nirogacestat"], cancers: ["desmoid-tumour"],
+    prevalence: [{"cancerId":"desmoid-tumour","pct":"about 85","measure":"CTNNB1 mutation in sporadic desmoid tumours, the Wnt activation that Notch inhibition addresses","source":"https://doi.org/10.2353/ajpath.2008.080475"}],
     links: [{ label: "UniProt P49768: PSEN1", url: "https://www.uniprot.org/uniprotkb/P49768/entry" }],
   },
   {
@@ -1129,6 +1145,7 @@ export const targets: TargetInput[] = [
     biology: "ADA is a zinc-dependent hydrolase expressed in most tissues and at high levels in lymphoid cells. Inhibiting it raises intracellular deoxyadenosine triphosphate, which blocks ribonucleotide reductase and DNA synthesis and triggers apoptosis, an effect most marked in lymphocytes with high deoxynucleoside kinase activity. Pentostatin binds the enzyme almost irreversibly; cladribine, the other purine analogue used in hairy cell leukaemia, is instead a substrate-resistant deoxyadenosine analogue.",
     whereFound: ["Lymphocytes and lymphoid tissue (high)", "Widely expressed in other tissues at lower levels", "Also present in plasma as extracellular ADA"],
     drugs: ["pentostatin"], cancers: ["hairy-cell-leukemia", "cll"], terms: ["apoptosis"],
+    prevalence: [{"cancerId":"metastatic-cancer","pct":"all","measure":"Housekeeping enzyme present in every dividing cell (purine breakdown, highest in lymphocytes); not a selection marker, which is why these drugs are given by cancer type rather than by test."}],
     links: [{ label: "UniProt P00813: ADA", url: "https://www.uniprot.org/uniprotkb/P00813/entry" }, { label: "HGNC:186 ADA", url: "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:186" }],
   },
   {
@@ -1138,6 +1155,7 @@ export const targets: TargetInput[] = [
     biology: "PGR encodes two isoforms, PR-A and PR-B, from alternative promoters; the receptor binds progesterone, dimerises and regulates transcription at progesterone response elements, and it cross-talks with the oestrogen receptor at shared chromatin sites. In breast cancer PR expression is a marker of ER activity and of luminal A biology; loss of PR in an ER-positive tumour predicts a poorer response to endocrine therapy. In the endometrium progesterone opposes oestrogen-driven proliferation, which is why unopposed oestrogen causes endometrial cancer and progestins treat it.",
     whereFound: ["Breast epithelium and most ER-positive breast cancers", "Endometrium and endometrial cancers", "Ovary, uterus and brain"],
     drugs: ["megestrol", "megestrol-progestins"], cancers: ["breast-hr-positive", "endometrial"], related: ["estrogen-receptor"], terms: ["ihc"],
+    prevalence: [{"cancerId":"breast-hr-positive","pct":"about 65-70","measure":"Progesterone receptor-positive by immunohistochemistry","source":"https://www.cancer.org/cancer/types/breast-cancer/understanding-a-breast-cancer-diagnosis/breast-cancer-hormone-receptor-status.html"}],
     links: [{ label: "UniProt P06401: PGR", url: "https://www.uniprot.org/uniprotkb/P06401/entry" }, { label: "HGNC:8910 PGR", url: "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:8910" }],
   },
 
@@ -1149,6 +1167,7 @@ export const targets: TargetInput[] = [
     biology: "A GTPase of the translation machinery; its activity is switched off by phosphorylation from eEF2 kinase under stress and starvation, one of the ways cells throttle protein synthesis.",
     whereFound: ["All nucleated cells (housekeeping translation factor)","Highly active in rapidly dividing leukaemia and lymphoma cells"],
     drugs: ["omacetaxine"], cancers: ["cml"],
+    prevalence: [{"cancerId":"metastatic-cancer","pct":"all","measure":"Housekeeping enzyme present in every dividing cell (protein synthesis); not a selection marker, which is why these drugs are given by cancer type rather than by test."}],
     links: [{"label":"UniProt P13639: EEF2","url":"https://www.uniprot.org/uniprotkb/P13639/entry"},{"label":"HGNC:3214 EEF2","url":"https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:3214"},{"label":"ChEMBL target CHEMBL1795108","url":"https://www.ebi.ac.uk/chembl/explore/target/CHEMBL1795108"}],
   },
   {
@@ -1158,6 +1177,7 @@ export const targets: TargetInput[] = [
     biology: "An abundant cytosolic immunophilin that also regulates ryanodine and TGF-beta receptors; drug binding, not its own enzyme activity, is what matters for the mTOR effect.",
     whereFound: ["Ubiquitous, cytosolic","Required for the action of everolimus, temsirolimus and sirolimus"],
     drugs: ["everolimus","temsirolimus"], cancers: ["rcc","breast-hr-positive"], related: ["mtor"],
+    prevalence: [{"cancerId":"metastatic-cancer","pct":"all","measure":"Housekeeping enzyme present in every dividing cell (rapamycin-binding protein); not a selection marker, which is why these drugs are given by cancer type rather than by test."}],
     links: [{"label":"UniProt P62942: FKBP1A","url":"https://www.uniprot.org/uniprotkb/P62942/entry"},{"label":"HGNC:3711 FKBP1A","url":"https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:3711"},{"label":"ChEMBL target CHEMBL1902","url":"https://www.ebi.ac.uk/chembl/explore/target/CHEMBL1902"}],
   },
   {
@@ -1179,6 +1199,7 @@ export const targets: TargetInput[] = [
     biology: "A cytosolic enzyme of the purine pathway whose activity rises with proliferation; inhibition depletes purine nucleotides needed for DNA and RNA.",
     whereFound: ["Proliferating cells generally","Lung adenocarcinoma and mesothelioma treated with pemetrexed"],
     drugs: ["pemetrexed"], cancers: ["nsclc","mesothelioma"], related: ["tyms","dhfr"],
+    prevalence: [{"cancerId":"metastatic-cancer","pct":"all","measure":"Housekeeping enzyme present in every dividing cell (purine synthesis); not a selection marker, which is why these drugs are given by cancer type rather than by test."}],
     links: [{"label":"UniProt P22102: GART","url":"https://www.uniprot.org/uniprotkb/P22102/entry"},{"label":"HGNC:4163 GART","url":"https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:4163"},{"label":"ChEMBL target CHEMBL3972","url":"https://www.ebi.ac.uk/chembl/explore/target/CHEMBL3972"}],
   },
   {
@@ -1197,6 +1218,7 @@ export const targets: TargetInput[] = [
     biology: "A prostate-restricted phosphatase found in secreted and transmembrane forms; expression persists in most prostate cancers.",
     whereFound: ["Prostate epithelium and prostate cancer (most cases)","Low in other tissues"],
     drugs: ["sipuleucel-t"], cancers: ["prostate"],
+    prevalence: [{"cancerId":"prostate","pct":"nearly all","measure":"Prostatic acid phosphatase expressed by prostate epithelium and most prostate cancers, the antigen sipuleucel-T targets","source":"https://www.cancer.gov/types/prostate/hp/prostate-treatment-pdq"}],
     links: [{"label":"UniProt P15309: ACP3","url":"https://www.uniprot.org/uniprotkb/P15309/entry"},{"label":"HGNC:125 ACP3","url":"https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:125"},{"label":"ChEMBL target CHEMBL2633","url":"https://www.ebi.ac.uk/chembl/explore/target/CHEMBL2633"}],
   },
   {
@@ -1254,6 +1276,7 @@ export const targets: TargetInput[] = [
     biology: "An inducible cyclooxygenase converting arachidonic acid to prostaglandin H2; PGE2 acts through EP receptors on tumour and immune cells.",
     whereFound: ["Colorectal adenomas and carcinomas (overexpressed)","Inflamed tissue, many solid tumours"],
     drugs: [], cancers: ["colorectal"], terms: ["tumor-promoting-inflammation","inducing-angiogenesis"],
+    prevalence: [{"cancerId":"colorectal","pct":"about 85","measure":"COX-2 overexpression by mRNA in colorectal carcinomas","source":"https://doi.org/10.1016/0016-5085(94)90246-1"}],
     links: [{"label":"UniProt P35354: PTGS2","url":"https://www.uniprot.org/uniprotkb/P35354/entry"},{"label":"HGNC:9605 PTGS2","url":"https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:9605"},{"label":"ChEMBL target CHEMBL230","url":"https://www.ebi.ac.uk/chembl/explore/target/CHEMBL230"}],
   },
   {
@@ -1263,6 +1286,7 @@ export const targets: TargetInput[] = [
     biology: "A G protein-coupled receptor signalling through cAMP; activating mutations cause hyperfunctioning nodules.",
     whereFound: ["Thyroid follicular cells and differentiated thyroid cancers","Lost in dedifferentiated, radioiodine-refractory tumours"],
     drugs: ["thyrotropin-alfa"], cancers: ["thyroid"],
+    prevalence: [{"cancerId":"thyroid","pct":"host","measure":"Host target: TSH receptor on thyroid cells, used to drive radioiodine uptake. Not a tumour alteration, so no prevalence applies; the drug acts on normal tissue or on symptoms."}],
     links: [{"label":"UniProt P16473: TSHR","url":"https://www.uniprot.org/uniprotkb/P16473/entry"},{"label":"HGNC:12373 TSHR","url":"https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:12373"},{"label":"ChEMBL target CHEMBL1963","url":"https://www.ebi.ac.uk/chembl/explore/target/CHEMBL1963"}],
   },
   {
@@ -1292,6 +1316,7 @@ export const targets: TargetInput[] = [
     biology: "A cytokine receptor of the IL-6 family; ligand binding recruits gp130 and activates JAK-STAT3 signalling in megakaryocytes, epithelial cells and fibroblasts.",
     whereFound: ["Megakaryocytes and bone marrow stroma","Gastric and colorectal tumour epithelium and fibroblasts"],
     cancers: ["gastric","colorectal"], terms: ["thrombocytopenia"], related: ["jak2"],
+    prevalence: [{"cancerId":"metastatic-cancer","pct":"host","measure":"Host target: IL-11 receptor on platelet precursors. Not a tumour alteration, so no prevalence applies; the drug acts on normal tissue or on symptoms."}],
     links: [{ label: "UniProt Q14626: IL11RA", url: "https://www.uniprot.org/uniprotkb/Q14626/entry" }, { label: "HGNC:5967 IL11RA", url: "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:5967" }, { label: "ChEMBL target CHEMBL2050", url: "https://www.ebi.ac.uk/chembl/explore/target/CHEMBL2050" }],
     tags: ["chembl-gap"],
   },
@@ -1302,6 +1327,7 @@ export const targets: TargetInput[] = [
     biology: "A type I cytokine receptor whose beta chain activates JAK2 and STAT5; it drives proliferation and differentiation of granulocyte and macrophage precursors and activates dendritic cells.",
     whereFound: ["Myeloid progenitors, neutrophils, monocytes and dendritic cells","Juvenile myelomonocytic leukaemia and some AML blasts"],
     drugs: ["talimogene-laherparepvec"], cancers: ["aml","melanoma"], related: ["jak2","csf3r"],
+    prevalence: [{"cancerId":"metastatic-cancer","pct":"host","measure":"Host target: GM-CSF receptor on white-cell precursors. Not a tumour alteration, so no prevalence applies; the drug acts on normal tissue or on symptoms."}],
     links: [{ label: "UniProt P15509: CSF2RA", url: "https://www.uniprot.org/uniprotkb/P15509/entry" }, { label: "HGNC:2435 CSF2RA", url: "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:2435" }, { label: "ChEMBL target CHEMBL2364169", url: "https://www.ebi.ac.uk/chembl/explore/target/CHEMBL2364169" }],
     tags: ["chembl-gap"],
   },
@@ -1352,6 +1378,7 @@ export const targets: TargetInput[] = [
     biology: "A molybdenum-containing enzyme of purine catabolism in liver and gut; its oxidase form also generates reactive oxygen species.",
     whereFound: ["Liver and intestinal epithelium","Relevant during induction chemotherapy for leukaemia and lymphoma"],
     drugs: ["rasburicase"], cancers: ["all-leukemia","aml","burkitt-lymphoma","dlbcl"], terms: ["tumor-lysis-syndrome"],
+    prevalence: [{"cancerId":"metastatic-cancer","pct":"host","measure":"Host target: xanthine oxidase in uric acid formation. Not a tumour alteration, so no prevalence applies; the drug acts on normal tissue or on symptoms."}],
     links: [{ label: "UniProt P47989: XDH", url: "https://www.uniprot.org/uniprotkb/P47989/entry" }, { label: "HGNC:12805 XDH", url: "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:12805" }, { label: "ChEMBL target CHEMBL1929", url: "https://www.ebi.ac.uk/chembl/explore/target/CHEMBL1929" }],
     tags: ["chembl-gap"],
   },
@@ -1362,6 +1389,7 @@ export const targets: TargetInput[] = [
     biology: "A cytosolic flavoenzyme that uses NADPH to reduce thioredoxin; it supports DNA synthesis through ribonucleotide reductase and buffers reactive oxygen species.",
     whereFound: ["All cells, highest in tumours with high oxidative metabolism","Acute promyelocytic leukaemia treated with arsenic trioxide"],
     drugs: ["arsenic-trioxide"], cancers: ["aml","cll","ovarian"], related: ["rrm1"],
+    prevalence: [{"cancerId":"metastatic-cancer","pct":"all","measure":"Housekeeping enzyme present in every dividing cell (antioxidant recycling); not a selection marker, which is why these drugs are given by cancer type rather than by test."}],
     links: [{ label: "UniProt Q16881: TXNRD1", url: "https://www.uniprot.org/uniprotkb/Q16881/entry" }, { label: "HGNC:12437 TXNRD1", url: "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:12437" }, { label: "ChEMBL target CHEMBL1927", url: "https://www.ebi.ac.uk/chembl/explore/target/CHEMBL1927" }],
     tags: ["chembl-gap"],
   },
@@ -1372,6 +1400,7 @@ export const targets: TargetInput[] = [
     biology: "A dimeric flavoenzyme using NADPH to reduce glutathione disulphide; part of the pentose phosphate and antioxidant network in every cell.",
     whereFound: ["All cells, high in liver and red blood cells","Gliomas and lymphomas treated with carmustine"],
     drugs: ["carmustine"], cancers: ["glioblastoma","dlbcl"], related: ["txnrd1"],
+    prevalence: [{"cancerId":"metastatic-cancer","pct":"all","measure":"Housekeeping enzyme present in every dividing cell (antioxidant recycling); not a selection marker, which is why these drugs are given by cancer type rather than by test."}],
     links: [{ label: "UniProt P00390: GSR", url: "https://www.uniprot.org/uniprotkb/P00390/entry" }, { label: "HGNC:4623 GSR", url: "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:4623" }, { label: "ChEMBL target CHEMBL2755", url: "https://www.ebi.ac.uk/chembl/explore/target/CHEMBL2755" }],
     tags: ["chembl-gap"],
   },
@@ -1382,6 +1411,7 @@ export const targets: TargetInput[] = [
     biology: "The catalytic subunit of the polymerase alpha-primase complex, essential for replication initiation and Okazaki fragment synthesis; inhibition arrests S phase.",
     whereFound: ["All dividing cells","Leukaemias and solid tumours treated with nucleoside analogues"],
     drugs: ["cytarabine","fludarabine","gemcitabine","clofarabine","nelarabine"], cancers: ["aml","all-leukemia","pancreatic","nsclc"], related: ["rrm1"],
+    prevalence: [{"cancerId":"metastatic-cancer","pct":"all","measure":"Housekeeping enzyme present in every dividing cell (DNA strand initiation); not a selection marker, which is why these drugs are given by cancer type rather than by test."}],
     links: [{ label: "UniProt P09884: POLA1", url: "https://www.uniprot.org/uniprotkb/P09884/entry" }, { label: "HGNC:9173 POLA1", url: "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:9173" }, { label: "ChEMBL target CHEMBL2363042", url: "https://www.ebi.ac.uk/chembl/explore/target/CHEMBL2363042" }],
     tags: ["chembl-gap"],
   },
@@ -1392,6 +1422,7 @@ export const targets: TargetInput[] = [
     biology: "A mitochondrial cytochrome P450 of adrenal cortex, gonads and placenta; it requires adrenodoxin and adrenodoxin reductase to receive electrons from NADPH.",
     whereFound: ["Adrenal cortex, ovary, testis and placenta","Adrenocortical carcinoma and steroid-producing tumours"],
     cancers: ["breast-hr-positive","prostate"], related: ["cyp17a1","aromatase"],
+    prevalence: [{"cancerId":"breast-hr-positive","pct":"host","measure":"Host target: first enzyme of steroid synthesis. Not a tumour alteration, so no prevalence applies; the drug acts on normal tissue or on symptoms."}],
     links: [{ label: "UniProt P05108: CYP11A1", url: "https://www.uniprot.org/uniprotkb/P05108/entry" }, { label: "HGNC:2590 CYP11A1", url: "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:2590" }, { label: "ChEMBL target CHEMBL2033", url: "https://www.ebi.ac.uk/chembl/explore/target/CHEMBL2033" }],
     tags: ["chembl-gap"],
   },
@@ -1402,6 +1433,7 @@ export const targets: TargetInput[] = [
     biology: "A membrane enzyme of the endoplasmic reticulum in prostate, genital skin and hair follicles; it is NADPH-dependent and genetic loss causes a disorder of sex development.",
     whereFound: ["Prostate epithelium and stroma","Castration-resistant prostate cancer cells making their own androgens"],
     drugs: ["abiraterone"], cancers: ["prostate"], related: ["androgen-receptor","cyp17a1"],
+    prevalence: [{"cancerId":"prostate","pct":"host","measure":"Host enzyme in normal and malignant prostate; finasteride and dutasteride were tested for prevention, not as a tumour marker","source":"https://www.cancer.gov/types/prostate/hp/prostate-prevention-pdq"}],
     links: [{ label: "UniProt P31213: SRD5A2", url: "https://www.uniprot.org/uniprotkb/P31213/entry" }, { label: "HGNC:11285 SRD5A2", url: "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:11285" }, { label: "ChEMBL target CHEMBL1856", url: "https://www.ebi.ac.uk/chembl/explore/target/CHEMBL1856" }],
     tags: ["chembl-gap"],
   },
@@ -1412,6 +1444,7 @@ export const targets: TargetInput[] = [
     biology: "A Gi-coupled G-protein-coupled receptor that lowers cyclic AMP; in the pituitary it suppresses prolactin gene expression and lactotroph proliferation.",
     whereFound: ["Pituitary lactotrophs, striatum and chemoreceptor trigger zone","Prolactinomas, some neuroendocrine tumours and gliomas"],
     drugs: ["dordaviprone"], cancers: ["pituitary-tumours","neuroendocrine","glioblastoma"], related: ["sstr2"],
+    prevalence: [{"cancerId":"metastatic-cancer","pct":"host","measure":"Host target: dopamine receptor; also the target in prolactin-secreting pituitary tumours. Not a tumour alteration, so no prevalence applies; the drug acts on normal tissue or on symptoms."}],
     links: [{ label: "UniProt P14416: DRD2", url: "https://www.uniprot.org/uniprotkb/P14416/entry" }, { label: "HGNC:3023 DRD2", url: "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:3023" }, { label: "ChEMBL target CHEMBL217", url: "https://www.ebi.ac.uk/chembl/explore/target/CHEMBL217" }],
     tags: ["chembl-gap"],
   },
@@ -1422,6 +1455,7 @@ export const targets: TargetInput[] = [
     biology: "A Gi-coupled G-protein-coupled receptor that closes calcium channels and opens potassium channels in neurons, reducing neurotransmitter release; densely expressed in dorsal horn, periaqueductal grey and enteric neurons.",
     whereFound: ["Central and enteric nervous system","Expressed on some tumour cells; significance under study"],
     drugs: ["methylnaltrexone"], terms: ["palliative-care"],
+    prevalence: [{"cancerId":"metastatic-cancer","pct":"host","measure":"Host target: mu-opioid receptor in pain pathways and gut. Not a tumour alteration, so no prevalence applies; the drug acts on normal tissue or on symptoms."}],
     links: [{ label: "UniProt P35372: OPRM1", url: "https://www.uniprot.org/uniprotkb/P35372/entry" }, { label: "HGNC:8156 OPRM1", url: "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:8156" }, { label: "ChEMBL target CHEMBL233", url: "https://www.ebi.ac.uk/chembl/explore/target/CHEMBL233" }],
     tags: ["chembl-gap"],
   },
@@ -1432,6 +1466,7 @@ export const targets: TargetInput[] = [
     biology: "A Gi-coupled G-protein-coupled receptor, among the most abundant in the brain, that reduces neurotransmitter release from presynaptic terminals; also present in gut, fat and liver.",
     whereFound: ["Brain, including the emetic circuitry of the brainstem","Peripheral tissues and some tumour cells"],
     related: ["htr3a","tacr1"],
+    prevalence: [{"cancerId":"metastatic-cancer","pct":"host","measure":"Host target: brain cannabinoid receptor. Not a tumour alteration, so no prevalence applies; the drug acts on normal tissue or on symptoms."}],
     links: [{ label: "UniProt P21554: CNR1", url: "https://www.uniprot.org/uniprotkb/P21554/entry" }, { label: "HGNC:2159 CNR1", url: "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:2159" }, { label: "ChEMBL target CHEMBL218", url: "https://www.ebi.ac.uk/chembl/explore/target/CHEMBL218" }],
     tags: ["chembl-gap"],
   },
@@ -1442,6 +1477,7 @@ export const targets: TargetInput[] = [
     biology: "A cytosolic aromatic amino-acid hydroxylase requiring tetrahydrobiopterin and iron; converts tryptophan to 5-hydroxytryptophan, which is then decarboxylated to serotonin.",
     whereFound: ["Enterochromaffin cells of the gut and pineal gland","Serotonin-secreting neuroendocrine tumours"],
     drugs: ["telotristat-ethyl"], cancers: ["neuroendocrine"], terms: ["carcinoid-syndrome"], related: ["sstr2"],
+    prevalence: [{"cancerId":"neuroendocrine","pct":"host","measure":"Host target: serotonin synthesis in enterochromaffin cells. Not a tumour alteration, so no prevalence applies; the drug acts on normal tissue or on symptoms."}],
     links: [{ label: "UniProt P17752: TPH1", url: "https://www.uniprot.org/uniprotkb/P17752/entry" }, { label: "HGNC:12008 TPH1", url: "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:12008" }, { label: "ChEMBL target CHEMBL3831287", url: "https://www.ebi.ac.uk/chembl/explore/target/CHEMBL3831287" }],
     tags: ["chembl-gap"],
   },
@@ -1452,7 +1488,7 @@ export const targets: TargetInput[] = [
     biology: "A tetrameric NAD-dependent dehydrogenase that oxidises IMP to XMP; lymphocytes rely on this de novo route because they lack an efficient guanine salvage pathway.",
     whereFound: ["Activated lymphocytes","Glioblastoma, small-cell lung cancer and other rapidly dividing tumours"],
     cancers: ["glioblastoma","sclc"], terms: ["gvhd"], related: ["dhfr","gart"],
-    links: [{ label: "UniProt P12268: IMPDH2", url: "https://www.uniprot.org/uniprotkb/P12268/entry" }, { label: "HGNC:6053 IMPDH2", url: "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:6053" }, { label: "ChEMBL target CHEMBL2111369", url: "https://www.ebi.ac.uk/chembl/explore/target/CHEMBL2111369" }],
+    prevalence: [{"cancerId":"prostate","pct":"host","measure":"Host enzyme in normal and malignant prostate; finasteride and dutasteride were tested for prevention, not as a tumour marker","source":"https://www.cancer.gov/types/prostate/hp/prostate-prevention-pdq"}], links: [{ label: "UniProt P12268: IMPDH2", url: "https://www.uniprot.org/uniprotkb/P12268/entry" }, { label: "HGNC:6053 IMPDH2", url: "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:6053" }, { label: "ChEMBL target CHEMBL2111369", url: "https://www.ebi.ac.uk/chembl/explore/target/CHEMBL2111369" }],
     tags: ["chembl-gap"],
   },
 ];
