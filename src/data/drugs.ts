@@ -812,7 +812,7 @@ const baseDrugs: DrugInput[] = [
 
   // ======================= CHEMOTHERAPY BACKBONES (selected) =======================
   {
-    id: "carboplatin", kind: "drug", links: [{ label: "FDA label (DailyMed)", url: "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Carboplatin" }], name: "Carboplatin", modality: "Cytotoxic chemotherapy (platinum)", asOf, status: "approved", wikipedia: W("Carboplatin"),
+    id: "carboplatin", companies: ["bms"], kind: "drug", links: [{ label: "FDA label (DailyMed)", url: "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Carboplatin" }], name: "Carboplatin", modality: "Cytotoxic chemotherapy (platinum)", asOf, status: "approved", wikipedia: W("Carboplatin"),
     tldr: "Carboplatin is a platinum chemotherapy that crosslinks DNA; it is part of the standard pre-surgery regimen for triple-negative breast cancer.",
     summary: "Carboplatin is a platinum chemotherapy that forms intrastrand DNA crosslinks, blocking replication and triggering apoptosis in dividing cells. First approved in 1989 for ovarian cancer and generic since 2004, it is dosed by the Calvert formula to a target AUC of 5 to 6 every 3 weeks or AUC 1.5 to 2 weekly with paclitaxel. It causes less kidney damage than cisplatin but more myelosuppression, with thrombocytopenia dose-limiting and hypersensitivity after 6 or more cycles. In triple-negative breast cancer, adding carboplatin to neoadjuvant chemotherapy raised pathological complete response rates in BrighTNess and GeparSixto, and it is part of the KEYNOTE-522 backbone, where pembrolizumab plus chemotherapy achieved pCR of 64.8% versus 51.2%. For a newcomer: a workhorse chemotherapy that damages DNA and underpins many curative-intent regimens.",
     mechanism: "DNA intrastrand crosslinks.",

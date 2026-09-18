@@ -124,7 +124,7 @@ const trials: TrialInput[] = [
 
 // ======================= DRUGS =======================
 const drugs: DrugInput[] = [
-  d({ id: "toripalimab", name: "Toripalimab", brand: "Loqtorzi", modality: "Monoclonal antibody (anti-PD-1)", status: "approved", wikipedia: W("Toripalimab"),
+  d({ id: "toripalimab", companies: ["junshi", "coherus"], name: "Toripalimab", brand: "Loqtorzi", modality: "Monoclonal antibody (anti-PD-1)", status: "approved", wikipedia: W("Toripalimab"),
     tldr: "A Chinese-developed PD-1 blocker that became the first immunotherapy approved in the US for nasopharyngeal cancer.",
     summary: "Approved by the FDA 27 October 2023 with gemcitabine-cisplatin for first-line recurrent or metastatic NPC and as monotherapy after platinum (JUPITER-02, POLARIS-02); EU approval 2024 for NPC and oesophageal squamous cell carcinoma. Broadly approved in China across lung, oesophageal, urothelial, and other cancers. Junshi Biosciences; Coherus in the US.",
     mechanism: "Humanised IgG4 anti-PD-1 with a distinct epitope and slow off-rate.",
@@ -143,7 +143,7 @@ const drugs: DrugInput[] = [
     regulatoryEvents: [{ date: "2024", type: "designation", region: "US", note: "Breakthrough Therapy designation for HNSCC" }],
     targets: ["egfr", "lgr5"], technologies: ["bispecific-antibody"], companies: ["merus", "genmab"], cancers: ["head-and-neck", "colorectal", "recurrent-metastatic-hnscc"], trials: ["liger-hn1", "nct07775287", "nct06496178", "nct07702032", "nct03526835"], drugs: ["pembrolizumab"],
     links: [ct("NCT06525220")] }),
-  d({ id: "ficerafusp-alfa", name: "Ficerafusp alfa", code: "BCA101", modality: "Bifunctional antibody (EGFR × TGF-β trap)", status: "phase-3",
+  d({ id: "ficerafusp-alfa", companies: ["bicara-therapeutics"], name: "Ficerafusp alfa", code: "BCA101", modality: "Bifunctional antibody (EGFR × TGF-β trap)", status: "phase-3",
     tldr: "Ficerafusp alfa is an EGFR antibody fused to a TGF-beta sponge, designed to remove the immune-suppressing signal that keeps HPV-negative throat cancers cold.",
     summary: "Ficerafusp alfa (Bicara Therapeutics) is a bifunctional antibody: an anti-EGFR IgG1 with the extracellular domain of TGF-beta receptor II fused to its heavy chain, so it blocks EGFR on tumour cells and neutralises TGF-beta locally, removing an immune-suppressing signal that keeps HPV-negative head and neck tumours cold. It is given at 1500 mg every 2 weeks with pembrolizumab in first-line HPV-negative head and neck squamous cell carcinoma. A phase 1/1b study with pembrolizumab showed durable responses at two years (JCO 2025). The FORTIFI-HN01 phase 2/3 trial fixed the dose at 1500 mg, excludes HPV-positive oropharyngeal cancer, and expects an interim analysis in mid-2027. Whether trapping TGF-beta adds meaningfully to EGFR and PD-1 blockade in a randomised setting is the open question. For a newcomer, it is an EGFR antibody fused to a TGF-beta sponge.",
     mechanism: "Anti-EGFR IgG1 with a TGF-βRII extracellular domain fused to the heavy chain, neutralising TGF-β locally.",
@@ -151,7 +151,7 @@ const drugs: DrugInput[] = [
     dosing: { route: "Intravenous", schedule: "1500 mg every 2 weeks with pembrolizumab", source: "https://clinicaltrials.gov/study/NCT06788990" },
     targets: ["egfr"], technologies: ["bispecific-antibody"], cancers: ["head-and-neck", "recurrent-metastatic-hnscc", "hpv-negative-head-and-neck-cancer"], trials: ["fortifi-hn01", "nct07807163"], drugs: ["pembrolizumab"],
     links: [{ label: "JCO 2025 two-year results", url: "https://ascopubs.org/doi/10.1200/JCO-25-02027" }] }),
-  d({ id: "cetuximab-sarotalocan", trials: ["nct06699212"], name: "Cetuximab sarotalocan", brand: "Akalux", code: "ASP-1929, RM-1929", modality: "Photoimmunotherapy conjugate (anti-EGFR antibody-IR700 dye)", status: "approved",
+  d({ id: "cetuximab-sarotalocan", companies: ["rakuten-medical"], trials: ["nct06699212"], name: "Cetuximab sarotalocan", brand: "Akalux", code: "ASP-1929, RM-1929", modality: "Photoimmunotherapy conjugate (anti-EGFR antibody-IR700 dye)", status: "approved",
     tldr: "Cetuximab sarotalocan is an EGFR antibody carrying a light-activated dye: after infusion, a red laser is shone on the tumour and the cells burst. It has been approved in Japan since 2020.",
     summary: "Cetuximab sarotalocan is Rakuten Medical's photoimmunotherapy. It was approved in Japan (September 2020) for unresectable locally advanced or recurrent head and neck cancer with conditional approval; two global phase 3 trials in locally recurrent HNSCC continue without US approval to date. Also being studied in cutaneous squamous cell carcinoma.",
     mechanism: "Cetuximab conjugated to IRDye700DX; 690 nm light triggers photochemical membrane damage in EGFR-bound cells and immunogenic cell death.",

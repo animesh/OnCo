@@ -28,6 +28,7 @@ Regenerated from the commit log each time the site ships (`scripts/changelog-syn
 - 1,024 more plain-English sentences: 279 companies, 104 institutions and 640 phase 3 trials, taking the simple layer to 8,961 records
 
 ### 17 September 2026
+- Thirty-nine drugs named by the new subtype pages now have their own records, from hormone therapies for pituitary tumours to antibody-drug conjugates in trials
 - Add drugs named by the cancer subtype pages (drugs-subtypes-wave)
 - Fifty biomarker glossary terms named by the new subtype pages (molecular groups, risk scores, resistance mutations), each linked from the pages that use it
 - Add 50 biomarker terms named by the cancer subtype pages

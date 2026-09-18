@@ -127,7 +127,7 @@ const trials: TrialInput[] = [
 
 // ======================= DRUGS =======================
 const drugs: DrugInput[] = [
-  d({ id: "cisplatin", links: [{ label: "FDA label (DailyMed)", url: "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Cisplatin" }], name: "Cisplatin", brand: "Platinol (generic)", modality: "Cytotoxic chemotherapy (platinum)", status: "approved", wikipedia: W("Cisplatin"),
+  d({ id: "cisplatin", companies: ["bms"], links: [{ label: "FDA label (DailyMed)", url: "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Cisplatin" }], name: "Cisplatin", brand: "Platinol (generic)", modality: "Cytotoxic chemotherapy (platinum)", status: "approved", wikipedia: W("Cisplatin"),
     tldr: "Cisplatin is the original platinum chemotherapy, discovered by accident in 1965; it cures testicular cancer and makes radiation work better in cervical and head and neck cancer.",
     summary: "Approved 1978. Weekly cisplatin with radiation has been the backbone of curative cervical cancer treatment since five 1999 trials (the NCI alert), and remains so within KEYNOTE-A18 and INTERLACE. Nephrotoxicity, ototoxicity, neuropathy, and emesis limit it; carboplatin substitutes when kidneys or hearing are at risk.",
     mechanism: "Forms intrastrand DNA crosslinks (1,2-GpG) that block replication and transcription; radiosensitises by inhibiting repair of radiation-induced damage.",
