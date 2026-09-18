@@ -7,6 +7,7 @@ All notable changes to OnCo are recorded here. The format follows [Keep a Change
 Regenerated from the commit log each time the site ships (`scripts/changelog-sync.ts`); the version sections below are written by hand when a release is cut.
 
 ### 18 September 2026
+- Head and neck cancers by HPV status and site: HPV-positive and HPV-negative disease, recurrent or metastatic squamous cell carcinoma, hypopharyngeal cancer, three salivary gland histologies and three oral cavity subsites, tied to KEYNOTE-048, RTOG 1016, De-ESCALaTE, ECOG 3311, PATHOS and NIVOPOSTOP
 - Neuroendocrine neoplasms by site and grade: small intestinal, pancreatic and lung neuroendocrine tumours, grade 3 NET and extrapulmonary neuroendocrine carcinoma, tied to NETTER-1 and 2, CLARINET, PROMID, RADIANT and CABINET; NETTER-2 refiled under neuroendocrine cancer
 - Childhood cancers by type and risk: acute lymphoblastic leukaemia by risk group, Philadelphia status, infancy and relapse, paediatric AML, neuroblastoma by risk group, medulloblastoma by molecular group, and a page for adolescents and young adults
 - Sarcomas and bone tumours by type: chondrosarcoma, angiosarcoma, undifferentiated pleomorphic sarcoma, myxofibrosarcoma, alveolar soft part sarcoma, PEComa, epithelioid haemangioendothelioma, nerve sheath tumours, retroperitoneal and extremity soft tissue sarcoma, with STRASS, EORTC 62012, AMPECT and ANGIOTAX
@@ -22,6 +23,8 @@ Regenerated from the commit log each time the site ships (`scripts/changelog-syn
 - 1,024 more plain-English sentences: 279 companies, 104 institutions and 640 phase 3 trials, taking the simple layer to 8,961 records
 
 ### 17 September 2026
+- Head and neck cancers by HPV status and site: HPV-positive oropharyngeal, HPV-negative squamous, recurrent or metastatic state page, hypopharyngeal, adenoid cystic, salivary duct, mucoepidermoid, oral tongue, gingivobuccal (India) and lip, with NIVOPOSTOP, ECOG-ACRIN E3311, PATHOS and CAPTAIN-1st
+- Neuroendocrine neoplasms by site and grade: small intestinal, pancreatic and lung neuroendocrine tumours, grade 3 NET and extrapulmonary neuroendocrine carcinoma, tied to NETTER-1 and 2, CLARINET, PROMID, RADIANT and CABINET; NETTER-2 refiled under neuroendocrine cancer
 - Add neuroendocrine subtypes by site and grade
 - Childhood cancers by type and risk: acute lymphoblastic leukaemia by risk group, Philadelphia status, infancy and relapse, paediatric AML, neuroblastoma by risk group, medulloblastoma by molecular group, and a page for adolescents and young adults
 - Add paediatric cancers by type and risk group
