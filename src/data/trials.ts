@@ -196,7 +196,7 @@ const raw: TrialInput[] = [
     tldr: "CodeBreaK 300 showed that a KRAS drug needs an EGFR antibody partner to work in colorectal cancer.",
     summary: "CodeBreaK 300, trial NCT05198934 sponsored by Amgen and published in the New England Journal of Medicine in 2023, showed that a KRAS G12C inhibitor needs an EGFR antibody partner to work in colorectal cancer. It randomised 160 patients with previously treated KRAS G12C colorectal cancer to sotorasib at two doses with panitumumab or standard trifluridine-tipiracil or regorafenib, met its primary progression-free survival endpoint for the 960 mg dose with responses in about a quarter against none, and led to approval in January 2025. OnCo links it to colorectal cancer, KRAS and EGFR as targets, sotorasib, panitumumab, the pairing of a KRAS G12C inhibitor with an anti-EGFR antibody and the CodeBreaK 200 and 300 papers. Whether the combination can move into first-line treatment is the open question.",
     result: "PFS HR 0.49.",
-    drugs: ["sotorasib"], cancers: ["colorectal"], targets: ["kras", "egfr"], links: [ct("NCT05198934")], keyPapers: ["paper-codebreak-300-nejm-2023"] }),
+    drugs: ["sotorasib"], cancers: ["colorectal", "kras-g12c-colorectal"], targets: ["kras", "egfr"], links: [ct("NCT05198934")], keyPapers: ["paper-codebreak-300-nejm-2023"] }),
   t({ id: "dellphi-304", name: "DeLLphi-304", nct: "NCT05740566", phase: "3", status: "positive", yearReported: 2025, sponsor: "Amgen",
     setting: "Second-line small-cell lung cancer: tarlatamab vs chemotherapy",
     tldr: "DeLLphi-304 was the first trial in which a T-cell engager improved survival in a common solid tumour.",
