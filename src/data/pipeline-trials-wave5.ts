@@ -865,7 +865,7 @@ export const pipelineTrialsWave5: TrialInput[] = [
     setting: "A Randomized, Controlled, Open-Label, Phase 2 Study of Cemiplimab as a Single Agent and in Combination With RP1 in Patients With Advanced Cutaneous Squamous Cell Carcinoma",
     tldr: "A phase 2 trial of Cemiplimab in cutaneous squamous cell carcinoma, run by Replimune, Inc., active and no longer recruiting.",
     summary: "Study Evaluating Cemiplimab Alone and Combined With RP1 in Treating Advanced Squamous Skin Cancer is a phase 2 interventional study registered as NCT04050436 by Replimune, Inc., with 231 participants enrolled, started 2019-10-08 and due to reach its primary completion in 2025-09. Interventions recorded: Cemiplimab, RP1. Conditions listed: Cutaneous Squamous Cell Carcinoma, Advanced Cutaneous Squamous Cell Carcinoma, Metastatic Cutaneous Squamous Cell Carcinoma. No results are recorded here; the registry entry is the source.",
-    drugs: ["cemiplimab"], cancers: ["cutaneous-scc"], companies: ["replimune"], 
+    drugs: ["cemiplimab"], cancers: ["cutaneous-scc","advanced-cutaneous-scc"], companies: ["replimune"], 
     links: [{ label: "ClinicalTrials.gov NCT04050436", url: "https://clinicaltrials.gov/study/NCT04050436" }] },
   { id: "nct02628067", kind: "trial", name: "Study of Pembrolizumab (MK-3475) in Participants With Advanced Solid Tumors (MK-3475-158/KEYNOTE-158)", nct: "NCT02628067", phase: "2", status: "active", sponsor: "Merck Sharp & Dohme LLC", enrolled: 1609, asOf, tags,
     setting: "A Clinical Trial of Pembrolizumab (MK-3475) Evaluating Predictive Biomarkers in Subjects With Advanced Solid Tumors (KEYNOTE 158)",

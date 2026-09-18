@@ -859,7 +859,7 @@ export const technologies: TechnologyInput[] = [
     limitations: ["Requires resectable tumour and 3-4 week manufacturing", "IL-2 toxicity", "Single-centre logistics"],
     drugs: ["lifileucel"],
     companies: ["iovance", "obsidian-therapeutics", "turnstone-biologics"],
-    cancers: ["melanoma", "nsclc", "cervical"], links: [{ label: "Wikipedia", url: W("Tumor-infiltrating_lymphocytes") }],
+    cancers: ["melanoma", "nsclc", "cervical", "advanced-melanoma"], links: [{ label: "Wikipedia", url: W("Tumor-infiltrating_lymphocytes") }],
   },
   {
     id: "tcr-t", dependsOn: ["apheresis-starting-material", "viral-vector-manufacturing", "cell-therapy-cold-chain", "cell-therapy-release-testing"], links: [{ label: "ClinicalTrials.gov NCT03967223: IGNYTE-ESO", url: "https://clinicaltrials.gov/study/NCT03967223" }], kind: "technology", name: "TCR-T cell therapy", sections: ["cell-therapy"], status: "approved", asOf, since: 2024,
@@ -1436,7 +1436,7 @@ export const technologies: TechnologyInput[] = [
     principle: "Small molecules bind the transmembrane protein Smoothened, stopping activation of GLI transcription factors that drive proliferation.",
     strengths: ["High response rates in advanced basal cell carcinoma","Oral","Neoadjuvant and intermittent regimens reduce toxicity"],
     limitations: ["Cramps, dysgeusia and alopecia cause discontinuation","Teratogenic","Acquired SMO resistance"],
-    targets: ["hedgehog"], drugs: ["vismodegib","sonidegib","glasdegib"], cancers: ["basal-cell-carcinoma","aml"],
+    targets: ["hedgehog"], drugs: ["vismodegib","sonidegib","glasdegib"], cancers: ["basal-cell-carcinoma","aml","locally-advanced-bcc"],
     links: [{ label: "Wikipedia", url: W("Hedgehog_signaling_pathway") }],
   },
   {

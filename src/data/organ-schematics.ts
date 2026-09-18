@@ -250,13 +250,13 @@ export const ORGAN_SCHEMATICS: OrganSchematic[] = [
       add(m, ellipsoid(0.4, 0.7, 0.3, 3, 8, "soft"), { at: [-1.3, 2.2, -0.2] }); add(m, ellipsoid(0.4, 0.7, 0.3, 3, 8, "soft"), { at: [1.5, 2.3, -0.2] }); // kidneys
       return m;
     } },
-  { id: "skin", name: "Skin (cross-section)", cancers: ["melanoma", "basal-cell-carcinoma", "cutaneous-scc", "merkel-cell-carcinoma", "kaposi-sarcoma", "skin-cancer"],
+  { id: "skin", name: "Skin (cross-section)", cancers: ["melanoma", "basal-cell-carcinoma", "cutaneous-scc", "merkel-cell-carcinoma", "kaposi-sarcoma", "skin-cancer", "braf-v600-melanoma", "stage-iii-melanoma", "stage-ii-melanoma", "advanced-melanoma", "mucosal-melanoma", "acral-melanoma", "advanced-cutaneous-scc", "locally-advanced-bcc", "dermatofibrosarcoma-protuberans"],
     caption: "Each skin cancer comes from a different cell layer: melanocytes and basal cells at the base of the epidermis, keratinocytes above them, Merkel cells and blood vessels in the dermis; depth of invasion decides the risk.",
     subsites: [
       { id: "insitu", label: "Epidermis (in situ)", at: [-1.25, 1.12, 1.05], match: ["in situ", "lentigo", "superficial spreading", "stage 0"] },
       { id: "basal", label: "Basal layer (melanocytes, basal cells)", at: [-0.3, 0.88, 1.05], match: ["bcc", "basal", "nodular", "infiltrative", "superficial bcc", "morphoeic", "braf", "nras", "nf1", "triple wild"] },
       { id: "keratin", label: "Keratinocytes (squamous)", at: [0.65, 1.08, 1.05], match: ["cscc", "squamous", "keratinocyte", "bowen", "actinic", "immunosuppressed"] },
-      { id: "dermis", label: "Dermis (invasive; Breslow depth)", at: [-0.65, 0.3, 1.05], match: ["breslow", "ulcer", "invasive", "thick", "nodular melanoma", "stage ii", "stage iii"] },
+      { id: "dermis", label: "Dermis (invasive; Breslow depth)", at: [-0.65, 0.3, 1.05], match: ["breslow", "ulcer", "invasive", "thick", "nodular melanoma", "stage ii", "stage iii", "stage iv", "dfsp", "dermatofibrosarcoma"] },
       { id: "merkel", label: "Merkel cells (dermal-epidermal)", at: [1.25, 0.86, 1.05], match: ["merkel", "polyomavirus", "mcpyv", "virus-negative", "uv"] },
       { id: "vessels", label: "Dermal vessels (Kaposi)", at: [1.0, 0.05, 1.05], match: ["kaposi", "kshv", "hhv-8", "endemic", "epidemic", "classic", "iatrogenic"] },
       { id: "acral", label: "Acral and mucosal sites", at: [-1.55, 0.6, 1.05], match: ["acral", "mucosal", "kit", "desmoplastic"] },
