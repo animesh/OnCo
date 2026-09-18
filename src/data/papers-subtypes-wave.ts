@@ -171,7 +171,7 @@ export const papersSubtypesWave: PaperInput[] = [
     whatItMeans: "Azacitidine (and decitabine) became the standard for higher-risk MDS in patients not going straight to transplant, and the backbone for combination trials that have so far failed to beat it.",
     caveats: ["Median time to response is several cycles, so treatment must continue for at least four to six cycles before judging failure.", "Responses are not durable; outcomes after hypomethylating failure are poor."],
     links: [{ label: "Lancet Oncol 2009", url: "https://doi.org/10.1016/S1470-2045(09)70003-8" }, { label: "PubMed", url: "https://pubmed.ncbi.nlm.nih.gov/19230772/" }],
-    cancers: ["mds-higher-risk"], drugs: ["azacitidine"], journals: ["lancet-oncology"] }),
+    cancers: ["mds-higher-risk"], drugs: ["azacitidine"], trials: ["aza-001"], journals: ["lancet-oncology"] }),
 
   p({ id: "paper-ipss-m-bernard-nejm-evidence-2022", name: "IPSS-M: the molecular international prognostic scoring system for myelodysplastic syndromes",
     tldr: "By adding mutations in 31 genes to blood counts and chromosomes, the IPSS-M sorts myelodysplastic syndromes into six risk groups and reclassifies about half of patients compared with the older score.",
@@ -353,7 +353,7 @@ export const papersSubtypesWave: PaperInput[] = [
     whatItMeans: "Early single-agent treatment of high-risk smouldering myeloma is now an option with regulatory approval, though monitoring remains acceptable and the definition of high risk matters.",
     caveats: ["Risk definitions at enrolment predate the 20/2/20 model, so some patients were lower risk than intended.", "Whether early treatment improves survival compared with treating at progression remains unproven."],
     links: [{ label: "N Engl J Med 2025", url: "https://doi.org/10.1056/NEJMoa2409029" }, { label: "PubMed", url: "https://pubmed.ncbi.nlm.nih.gov/39652675/" }],
-    cancers: ["smouldering-myeloma"], drugs: ["daratumumab"], journals: ["nejm"] }),
+    cancers: ["smouldering-myeloma"], drugs: ["daratumumab"], trials: ["aquila"], journals: ["nejm"] }),
 
   p({ id: "paper-e3a06-lenalidomide-smouldering-lonial-jco-2020", name: "E3A06: lenalidomide versus observation in smouldering multiple myeloma",
     tldr: "Lenalidomide alone delayed progression to active myeloma in people with intermediate- or high-risk smouldering disease, but side effects led many to stop, and it did not improve survival.",
@@ -776,7 +776,7 @@ export const papersSubtypesWave: PaperInput[] = [
     whatItMeans: "Together with RTOG 9402, this trial made radiotherapy followed by PCV the standard for 1p/19q-codeleted anaplastic oligodendroglioma; the CODEL trial is now comparing PCV with temozolomide.",
     caveats: ["Codeleted subgroup was small.", "About a third of patients did not complete PCV because of toxicity."],
     links: [{ label: "J Clin Oncol 2013", url: "https://doi.org/10.1200/JCO.2012.43.2229" }, { label: "PubMed", url: "https://pubmed.ncbi.nlm.nih.gov/23071237/" }],
-    cancers: ["oligodendroglioma"], drugs: ["procarbazine", "vincristine"], trials: ["eortc-26951"], journals: ["jco"] }),
+    cancers: ["oligodendroglioma"], drugs: ["procarbazine", "vincristine"], trials: ["eortc-26951", "codel"], journals: ["jco"] }),
 
   p({ id: "paper-mackay-paediatric-hgg-cancer-cell-2017", name: "Integrated molecular meta-analysis of 1,000 paediatric high-grade and diffuse intrinsic pontine gliomas",
     tldr: "Pooling molecular data from a thousand childhood high-grade gliomas showed they are a collection of distinct diseases defined by mutations such as histone H3 K27M and G34R, IDH, and BRAF, with different ages, locations and survival, rather than a single tumour type.",
@@ -2906,7 +2906,7 @@ export const papersSubtypesWave: PaperInput[] = [
     whatItMeans: "Mogamulizumab is a standard for advanced-stage cutaneous T-cell lymphoma with blood involvement, particularly Sezary syndrome.",
     caveats: ["Open-label; vorinostat is a weak comparator.", "Mogamulizumab-associated rash can mimic disease progression."],
     links: [{ label: "Lancet Oncol 2018", url: "https://doi.org/10.1016/S1470-2045(18)30379-6" }, { label: "PubMed", url: "https://pubmed.ncbi.nlm.nih.gov/30100375/" }],
-    cancers: ["cutaneous-t-cell-lymphoma"], drugs: ["mogamulizumab", "vorinostat"], journals: ["lancet-oncology"] }),
+    cancers: ["cutaneous-t-cell-lymphoma"], drugs: ["mogamulizumab", "vorinostat"], trials: ["mavoric"], journals: ["lancet-oncology"] }),
 
   p({ id: "paper-alcanza-brentuximab-vedotin-lancet-2017", name: "ALCANZA: brentuximab vedotin versus physician's choice in CD30-positive cutaneous T-cell lymphoma",
     tldr: "In CD30-expressing mycosis fungoides and primary cutaneous anaplastic large cell lymphoma, the antibody-drug conjugate brentuximab vedotin produced lasting responses in more than half of patients, far more than methotrexate or bexarotene.",
@@ -3267,7 +3267,7 @@ export const papersSubtypesWave: PaperInput[] = [
     whatItMeans: "Nivolumab is a second approved adjuvant option for stage IIB and IIC melanoma with the same trade-offs as pembrolizumab.",
     caveats: ["Short follow-up at primary analysis; no survival data."],
     links: [{ label: "Nat Med 2023", url: "https://doi.org/10.1038/s41591-023-02583-2" }, { label: "PubMed", url: "https://pubmed.ncbi.nlm.nih.gov/37845511/" }],
-    cancers: ["stage-ii-melanoma"], drugs: ["nivolumab"], journals: ["nature-medicine"] }),
+    cancers: ["stage-ii-melanoma"], drugs: ["nivolumab"], trials: ["nct04099251"], journals: ["nature-medicine"] }),
 
   p({ id: "paper-ajcc-8-melanoma-gershenwald-ca-2017", name: "Melanoma staging: evidence-based changes in the AJCC eighth edition cancer staging manual",
     tldr: "The eighth-edition melanoma staging system, derived from over 46,000 patients, refined thickness cut-offs and node categories and created the stage IIIA to IIID subgroups whose very different outlooks now guide adjuvant therapy decisions.",
@@ -3539,7 +3539,7 @@ export const papersSubtypesWave: PaperInput[] = [
     whatItMeans: "Vandetanib is an approved option for progressive medullary thyroid cancer, used less since selpercatinib for RET-mutant disease.",
     caveats: ["Enrolled patients with indolent disease, some not progressing; QT monitoring required."],
     links: [{ label: "J Clin Oncol 2012", url: "https://doi.org/10.1200/JCO.2011.35.5040" }, { label: "PubMed", url: "https://pubmed.ncbi.nlm.nih.gov/22025146/" }],
-    cancers: ["medullary-thyroid-cancer"], drugs: ["vandetanib"], journals: ["jco"] }),
+    cancers: ["medullary-thyroid-cancer"], drugs: ["vandetanib"], trials: ["zeta"], journals: ["jco"] }),
 
   p({ id: "paper-estimabl2-leboulleux-nejm-2022", name: "ESTIMABL2: thyroidectomy without radioiodine in patients with low-risk thyroid cancer",
     tldr: "Skipping radioactive iodine after thyroidectomy for low-risk differentiated thyroid cancer gave the same excellent three-year outcomes as giving it, so most low-risk patients can avoid the treatment.",
@@ -3627,7 +3627,7 @@ export const papersSubtypesWave: PaperInput[] = [
     whatItMeans: "Laparoscopic distal gastrectomy is the standard operation for stage I gastric cancer outside endoscopic criteria in East Asia and increasingly elsewhere.",
     caveats: ["High-volume Korean surgeons; results may not generalise to low-volume settings."],
     links: [{ label: "JAMA Oncol 2019", url: "https://doi.org/10.1001/jamaoncol.2018.6727" }, { label: "PubMed", url: "https://pubmed.ncbi.nlm.nih.gov/30730546/" }],
-    cancers: ["early-gastric-cancer"], journals: ["jama-oncology"] }),
+    cancers: ["early-gastric-cancer"], trials: ["klass-01"], journals: ["jama-oncology"] }),
 
   p({ id: "paper-jcog0912-katai-lancet-gastroenterol-hepatol-2020", name: "JCOG0912: laparoscopy-assisted versus open distal gastrectomy for clinical stage IA or IB gastric cancer",
     tldr: "Japan's randomised trial confirmed that laparoscopy-assisted distal gastrectomy is not inferior to open surgery for relapse-free survival in stage I gastric cancer, cementing the minimally invasive approach.",
@@ -3638,7 +3638,7 @@ export const papersSubtypesWave: PaperInput[] = [
     whatItMeans: "Together with KLASS-01, this trial makes laparoscopic distal gastrectomy the standard for early gastric cancer needing surgery.",
     caveats: ["Applies to distal tumours; total gastrectomy and advanced disease were studied separately."],
     links: [{ label: "Lancet Gastroenterol Hepatol 2020", url: "https://doi.org/10.1016/S2468-1253(19)30332-2" }, { label: "PubMed", url: "https://pubmed.ncbi.nlm.nih.gov/31757656/" }],
-    cancers: ["early-gastric-cancer"] }),
+    cancers: ["early-gastric-cancer"], trials: ["klass-01"] }),
 
   p({ id: "paper-japanese-gastric-cancer-treatment-guidelines-2021-gastric-cancer-2023", name: "Japanese gastric cancer treatment guidelines 2021 (6th edition)",
     tldr: "The Japanese Gastric Cancer Association guideline sets the criteria for endoscopic resection, the extent of gastrectomy and lymph node dissection, adjuvant chemotherapy by stage and systemic therapy for advanced disease, and is the reference for early gastric cancer worldwide.",

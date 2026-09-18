@@ -58,7 +58,7 @@ export const thyroidSubtypes: CancerInput[] = [
     ],
     pipeline: ["dabrafenib","lenvatinib"], openProblems: ["Telling adenoma from carcinoma without surgery.", "Bone metastases respond poorly to iodine.", "Few trials specific to follicular histology."],
     links: [{ label: "Wikipedia", url: W("Follicular_thyroid_cancer") }] },
-  { id: "medullary-thyroid-cancer", kind: "cancer", trials: ["exam"], name: "Medullary thyroid cancer", group: "endocrine", parent: "thyroid", asOf, tags, wikipedia: W("Medullary_thyroid_cancer"),
+  { id: "medullary-thyroid-cancer", kind: "cancer", trials: ["exam", "zeta"], name: "Medullary thyroid cancer", group: "endocrine", parent: "thyroid", asOf, tags, wikipedia: W("Medullary_thyroid_cancer"),
     keyPapers: ["paper-libretto-531-nejm-2023", "paper-ata-medullary-thyroid-guideline-wells-thyroid-2015", "paper-exam-cabozantinib-mtc-elisei-jco-2013", "paper-zeta-vandetanib-mtc-wells-jco-2012"],
     aka: ["Medullary thyroid carcinoma", "MTC"],
     burden: "Two to four percent of thyroid cancers; a quarter are inherited through a RET mutation in the multiple endocrine neoplasia type 2 syndromes; ten-year survival ranges from above 95 percent for disease confined to the thyroid to under half once distant spread has occurred.",

@@ -244,7 +244,7 @@ export const gynaecologicalSubtypes: CancerInput[] = [
     openProblems: ["Whether induction chemotherapy and pembrolizumab should be combined.", "Access to brachytherapy and PET-CT where most patients live.", "Why durvalumab (CALLA) failed where pembrolizumab succeeded."],
     links: [{ label: "Wikipedia", url: W("Cervical_cancer") }] },
 
-  { id: "recurrent-metastatic-cervical-cancer", kind: "cancer", trials: ["innovatv-301"], name: "Recurrent or metastatic cervical cancer", group: "gynaecologic", parent: "cervical", asOf, tags, wikipedia: W("Cervical_cancer"),
+  { id: "recurrent-metastatic-cervical-cancer", kind: "cancer", trials: ["innovatv-301", "empower-cervical-1"], name: "Recurrent or metastatic cervical cancer", group: "gynaecologic", parent: "cervical", asOf, tags, wikipedia: W("Cervical_cancer"),
     keyPapers: ["paper-keynote-826-nejm-2021", "paper-innovatv-301-tisotumab-nejm-2024", "paper-empower-cervical-1-cemiplimab-nejm-2022", "paper-gog-240-bevacizumab-cervical-nejm-2014"],
     aka: ["Persistent, recurrent or metastatic cervical cancer", "Stage IVB cervical cancer", "Advanced cervical cancer"],
     burden: "Around one in ten cervical cancers present with distant spread and a third of locally advanced cases relapse; median survival was about a year before 2014, and first-line chemo-immunotherapy has now more than doubled it for many women.",
