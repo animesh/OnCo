@@ -1556,7 +1556,7 @@ export const drugsPipelineWave1: DrugInput[] = [
     mechanism: "Bispecific antibody directed at CD47 and DLL3, as stated in the ClinicalTrials.gov intervention record; the detailed mechanism is not stated.",
     tldr: "Peluntamig is an experimental bispecific antibody from Phanes Therapeutics in phase 2 trials for non-small-cell lung cancer and neuroendocrine tumours, aimed at CD47 and DLL3.",
     summary: "Peluntamig (PT217) is a bispecific antibody developed by Phanes Therapeutics. Its targets are CD47 and DLL3. ClinicalTrials.gov describes the intervention as: A bispecific antibody (bsAb) against DLL3 and CD47. It is the investigational product in 1 recruiting or active industry-led phase 2 and phase 3 interventional cancer trial, in non-small-cell lung cancer and neuroendocrine tumours. The largest, NCT05652686, plans to enrol 203 participants with primary completion expected 2027-12. Status reflects the highest phase registered on ClinicalTrials.gov; no efficacy results are recorded here.",
-    targets: ["cd47", "dll3"], cancers: ["nsclc", "neuroendocrine"], companies: [], trials: ["nct05652686"],
+    targets: ["cd47", "dll3"], cancers: ["nsclc", "neuroendocrine", "extrapulmonary-nec"], companies: [], trials: ["nct05652686"],
     links: [{ label: "ClinicalTrials.gov: trials of Peluntamig", url: "https://clinicaltrials.gov/search?intr=PT217" }] },
   { id: "azd4512", kind: "drug", name: "AZD4512", aka: [], modality: "ADC", status: "phase-2", asOf, tags, provenance,
     mechanism: "An antibody-drug conjugate targeting CD22, administered by intravenous infusion; specific payload/mechanism detail beyond CD22 targeting was not stated on the fetched page.",

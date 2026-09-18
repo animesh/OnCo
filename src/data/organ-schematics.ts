@@ -55,7 +55,7 @@ export const ORGAN_SCHEMATICS: OrganSchematic[] = [
       add(m, polyline([[1.3, 0.6, -0.4], [2.0, 0.9, 0.1], [2.6, 1.5, -0.1], [2.2, 2.3, 0]], "soft")); // lymphatic route
       return m;
     } },
-  { id: "lung", name: "Lungs, pleura and mediastinum", cancers: ["nsclc", "lung-cancer", "sclc", "mesothelioma", "pleural-mesothelioma", "thymic-epithelial", "pleuropulmonary-blastoma", "inflammatory-myofibroblastic-tumour", "egfr-mutant-nsclc", "alk-positive-nsclc", "kras-g12c-nsclc", "ros1-positive-nsclc", "met-altered-nsclc", "ret-fusion-nsclc", "braf-v600e-nsclc", "her2-mutant-nsclc", "ntrk-fusion-nsclc", "pdl1-high-nsclc", "resectable-nsclc", "stage-iii-unresectable-nsclc", "limited-stage-sclc", "extensive-stage-sclc"],
+  { id: "lung", name: "Lungs, pleura and mediastinum", cancers: ["nsclc", "lung-cancer", "sclc", "mesothelioma", "pleural-mesothelioma", "thymic-epithelial", "pleuropulmonary-blastoma", "inflammatory-myofibroblastic-tumour", "egfr-mutant-nsclc", "alk-positive-nsclc", "kras-g12c-nsclc", "ros1-positive-nsclc", "met-altered-nsclc", "ret-fusion-nsclc", "braf-v600e-nsclc", "her2-mutant-nsclc", "ntrk-fusion-nsclc", "pdl1-high-nsclc", "resectable-nsclc", "stage-iii-unresectable-nsclc", "limited-stage-sclc", "extensive-stage-sclc", "lung-net"],
     caption: "Central tumours arise in the large airways, peripheral ones in the alveoli; both drain to hilar then mediastinal nodes, and the pleural lining is a separate cancer site.",
     subsites: [
       { id: "central", label: "Central airways (squamous, small-cell)", at: [-0.75, 0.55, 0.05], match: ["squamous", "small-cell", "small cell", "sclc", "neuroendocrine", "pleuropulmonary", "tracheobronchial", "bronchus", "myofibroblastic"] },
@@ -77,7 +77,7 @@ export const ORGAN_SCHEMATICS: OrganSchematic[] = [
       add(m, ellipsoid(0.45, 0.35, 0.2, 3, 8, "soft"), { at: [0, 1.05, 0.75] }); // thymus
       return m;
     } },
-  { id: "colorectum", name: "Colon, rectum, anus and appendix", cancers: ["peritoneal-mesothelioma", "colorectal", "rectal-cancer", "msi-high-colorectal", "braf-v600e-colorectal", "her2-amplified-colorectal", "kras-g12c-colorectal", "early-onset-colorectal", "anal", "appendiceal", "small-bowel"],
+  { id: "colorectum", name: "Colon, rectum, anus and appendix", cancers: ["peritoneal-mesothelioma", "colorectal", "rectal-cancer", "msi-high-colorectal", "braf-v600e-colorectal", "her2-amplified-colorectal", "kras-g12c-colorectal", "early-onset-colorectal", "anal", "appendiceal", "small-bowel", "small-intestinal-net"],
     caption: "Right-sided tumours behave differently from left-sided and rectal ones; the colon drains along its mesenteric vessels, the rectum into the mesorectum and pelvic side wall.",
     subsites: [
       { id: "right", label: "Right colon (MSI-high, BRAF commoner)", at: [-1.7, 0.3, 0], match: ["msi", "mmr", "braf", "right", "cms1", "mucinous", "serrated", "duodenal", "jejunal", "ileal", "small bowel"] },
@@ -120,7 +120,7 @@ export const ORGAN_SCHEMATICS: OrganSchematic[] = [
       add(m, ellipsoid(0.5, 0.35, 0.3, 3, 8, "soft"), { at: [-1.6, 0.4, -0.5] }); // spleen
       return m;
     } },
-  { id: "pancreas-biliary", name: "Pancreas and bile ducts", cancers: ["pancreatic", "cholangiocarcinoma", "intrahepatic-cholangiocarcinoma", "extrahepatic-cholangiocarcinoma", "biliary-tract-cancer", "neuroendocrine", "gallbladder", "ampullary"],
+  { id: "pancreas-biliary", name: "Pancreas and bile ducts", cancers: ["pancreatic", "cholangiocarcinoma", "intrahepatic-cholangiocarcinoma", "extrahepatic-cholangiocarcinoma", "biliary-tract-cancer", "neuroendocrine", "pancreatic-net", "grade-3-net", "extrapulmonary-nec", "gallbladder", "ampullary"],
     caption: "Most pancreatic cancers arise in the head next to the bile duct, which is why jaundice is the presenting sign; bile duct cancers are named by where along the tree they sit.",
     subsites: [
       { id: "head", label: "Pancreatic head (most PDAC)", at: [-1.3, -0.15, 0.05], match: ["classical", "basal", "pdac", "ductal", "kras", "brca", "msi"] },
