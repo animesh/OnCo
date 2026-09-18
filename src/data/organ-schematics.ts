@@ -77,7 +77,7 @@ export const ORGAN_SCHEMATICS: OrganSchematic[] = [
       add(m, ellipsoid(0.45, 0.35, 0.2, 3, 8, "soft"), { at: [0, 1.05, 0.75] }); // thymus
       return m;
     } },
-  { id: "colorectum", name: "Colon, rectum, anus and appendix", cancers: ["peritoneal-mesothelioma", "colorectal", "anal", "appendiceal", "small-bowel"],
+  { id: "colorectum", name: "Colon, rectum, anus and appendix", cancers: ["peritoneal-mesothelioma", "colorectal", "rectal-cancer", "msi-high-colorectal", "braf-v600e-colorectal", "her2-amplified-colorectal", "kras-g12c-colorectal", "early-onset-colorectal", "anal", "appendiceal", "small-bowel"],
     caption: "Right-sided tumours behave differently from left-sided and rectal ones; the colon drains along its mesenteric vessels, the rectum into the mesorectum and pelvic side wall.",
     subsites: [
       { id: "right", label: "Right colon (MSI-high, BRAF commoner)", at: [-1.7, 0.3, 0], match: ["msi", "mmr", "braf", "right", "cms1", "mucinous", "serrated", "duodenal", "jejunal", "ileal", "small bowel"] },
@@ -344,7 +344,7 @@ export const ORGAN_SCHEMATICS: OrganSchematic[] = [
       add(m, polyline([[0.2, -0.7, 1.2], [0, -1.3, 1.25], [-0.05, -1.95, 1.15], [0, -2.6, 0.9]], "soft")); // jugular chain
       return m;
     } },
-  { id: "haematopoietic", name: "Bone marrow, lymph nodes and spleen", cancers: ["marginal-zone-lymphoma", "cutaneous-t-cell-lymphoma", "leukaemia", "aml", "all-leukemia", "cll", "cml", "dlbcl", "follicular-lymphoma", "hodgkin-lymphoma", "mantle-cell-lymphoma", "multiple-myeloma", "non-hodgkin-lymphoma", "mds", "myeloproliferative-neoplasms", "polycythaemia-vera", "essential-thrombocythaemia", "waldenstrom", "hairy-cell-leukemia", "peripheral-t-cell-lymphoma", "bpdcn", "burkitt-lymphoma", "hiv-associated-lymphoma", "cmml", "systemic-mastocytosis", "histiocytoses", "langerhans-cell-histiocytosis", "post-transplant-lymphoproliferative-disorder"],
+  { id: "haematopoietic", name: "Bone marrow, lymph nodes and spleen", cancers: ["marginal-zone-lymphoma", "cutaneous-t-cell-lymphoma", "primary-mediastinal-b-cell-lymphoma", "leukaemia", "aml", "all-leukemia", "cll", "cml", "dlbcl", "follicular-lymphoma", "hodgkin-lymphoma", "mantle-cell-lymphoma", "multiple-myeloma", "non-hodgkin-lymphoma", "mds", "myeloproliferative-neoplasms", "polycythaemia-vera", "essential-thrombocythaemia", "waldenstrom", "hairy-cell-leukemia", "peripheral-t-cell-lymphoma", "bpdcn", "burkitt-lymphoma", "hiv-associated-lymphoma", "cmml", "systemic-mastocytosis", "histiocytoses", "langerhans-cell-histiocytosis", "post-transplant-lymphoproliferative-disorder"],
     caption: "Leukaemias, myeloma and MDS live in the marrow and blood; lymphomas grow in lymph nodes and spleen. The node stations are the disease map, not a route of spread, and staging counts them.",
     subsites: [
       { id: "marrow", label: "Bone marrow (leukaemia, MDS, MPN, myeloma)", at: [0, 0, 0], match: ["aml", "all", "leukaemia", "myeloid", "cmml", "mastocytosis", "burkitt", "ptld", "histiocyt", "lch", "lymphoblastic", "mds", "mpn", "myelofibrosis", "polycythaemia", "thrombocythaemia", "cml", "chronic phase", "blast", "myeloma", "plasma", "hairy", "waldenstr", "blastic", "npm1", "flt3", "kmt2a", "tp53", "ipss", "philadelphia", "ph-positive", "ph-negative", "t-cell", "b-cell", "hypercalcaemia", "light chain", "smouldering", "high-risk", "standard-risk", "del(17p)", "ighv", "richter", "jak2", "calr", "mpl"] },

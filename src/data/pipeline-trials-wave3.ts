@@ -73,7 +73,7 @@ export const pipelineTrialsWave3: TrialInput[] = [
     setting: "A Multicenter, Randomized, Open-label, Phase 3 Study to Evaluate the Efficacy and Safety of Tunlametinib Plus Vemurafenib in Patients With BRAF V600E-mutant Metastatic Colorectal Cancer",
     tldr: "A phase 3 trial of Tunlametinib run by Shanghai Kechow Pharma, Inc. in colorectal cancer, now recruiting.",
     summary: "Efficacy and Safety of Tunlametinib Plus Vemurafenib in Patients With BRAF V600E-mutant Metastatic Colorectal Cancer is a phase 3 interventional study registered as NCT06008119 by Shanghai Kechow Pharma, Inc., with 165 participants planned, started 2023-10-25. Conditions listed: Colorectal Cancer Metastatic. No results are recorded here; the registry entry is the source.",
-    drugs: ["tunlametinib"], cancers: ["colorectal"], companies: ["shanghai-kechow-pharma"],
+    drugs: ["tunlametinib"], cancers: ["colorectal", "braf-v600e-colorectal"], companies: ["shanghai-kechow-pharma"],
     links: [{ label: "ClinicalTrials.gov NCT06008119", url: "https://clinicaltrials.gov/study/NCT06008119" }] },
   { id: "nct06829459", kind: "trial", name: "A Study to Evaluate the Efficacy and Safety of Glumetinib Combined With Osimertinib Mesylate Versus Platinum-based Doublet Chemotherapy in N", nct: "NCT06829459", phase: "3", status: "recruiting", sponsor: "Shanghai JMT-Bio Inc.", enrolled: 350, asOf, tags,
     setting: "A Randomized, Controlled, Open-label Phase III Clinical Study to Evaluate the Efficacy and Safety of Glumetinib Combined With Osimertinib Mesylate Versus Platinum-based Doublet Chemotherapy in Non-Small Cell Lung Cancer Patients With MET Amplification and/or Overexpression After Resistance to EGFR-TKIs",
