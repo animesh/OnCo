@@ -312,7 +312,7 @@ export const headNeckHpvSubtypes: CancerInput[] = [
     openProblems: ["Late presentation and rising incidence as areca nut and gutka use spread.", "Access to pembrolizumab, cetuximab and radiotherapy machines outside big cities.", "Whether low-dose immunotherapy matches full-dose treatment.", "Trismus and eating after cheek and jaw resection."],
     institutions: ["tata-memorial", "actrec", "homi-bhabha-cancer-hospital-varanasi"],
     links: [{ label: "Wikipedia", url: W("Oral_cancer") }] },
-  { id: "lip-cancer", kind: "cancer", name: "Lip cancer", group: "head and neck", parent: "oral-cavity-cancer", asOf, tags, wikipedia: W("Lip_cancer"),
+  { id: "lip-cancer", kind: "cancer", trials: ["empower-cscc-1"], name: "Lip cancer", group: "head and neck", parent: "oral-cavity-cancer", asOf, tags, wikipedia: W("Lip_cancer"),
     keyPapers: ["paper-keynote-048-lancet-2019", "paper-bonner-cetuximab-radiotherapy-nejm-2006", "paper-bernier-eortc-22931-nejm-2004", "paper-empower-cscc-1-cemiplimab-migden-nejm-2018"],
     aka: ["Lower lip squamous cell carcinoma", "Cancer of the lip vermilion"],
     burden: "Mostly squamous cell carcinoma of the lower lip in fair-skinned outdoor workers and smokers; it is caught early because it is visible, and excision or radiotherapy cures the great majority.",

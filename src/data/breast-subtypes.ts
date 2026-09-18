@@ -115,7 +115,7 @@ export const breastSubtypes: CancerInput[] = [
   // ---------------------------------------------------------------------------------------------------------------------
   // HER2-positive disease by state
   // ---------------------------------------------------------------------------------------------------------------------
-  { id: "her2-positive-early-breast-cancer", kind: "cancer", trials: ["atempt"], name: "Early HER2-positive breast cancer", group: "breast", parent: "breast-her2-positive", asOf, tags, wikipedia: W("HER2-positive_breast_cancer"),
+  { id: "her2-positive-early-breast-cancer", kind: "cancer", trials: ["atempt", "neosphere"], name: "Early HER2-positive breast cancer", group: "breast", parent: "breast-her2-positive", asOf, tags, wikipedia: W("HER2-positive_breast_cancer"),
     keyPapers: ["paper-katherine-nejm-2019", "paper-aphinity-nejm-2017", "paper-apt-tolaney-nejm-2015", "paper-train-2-lancet-oncol-2018"],
     aka: ["Stage I to III HER2-positive breast cancer", "Operable HER2-positive breast cancer", "HER2-positive breast cancer treated with curative intent"],
     burden: "Around 15 to 20 percent of breast cancers overexpress HER2 and most are diagnosed at an operable stage; once the subtype with the worst outlook, it now has some of the highest cure rates after a year of HER2-directed therapy.",
@@ -181,7 +181,7 @@ export const breastSubtypes: CancerInput[] = [
   // ---------------------------------------------------------------------------------------------------------------------
   // Triple-negative disease by state
   // ---------------------------------------------------------------------------------------------------------------------
-  { id: "tnbc-early", kind: "cancer", trials: ["geparsixto"], name: "Early triple-negative breast cancer", group: "breast", parent: "tnbc", asOf, tags, wikipedia: W("Triple-negative_breast_cancer"),
+  { id: "tnbc-early", kind: "cancer", trials: ["geparsixto", "brightness"], name: "Early triple-negative breast cancer", group: "breast", parent: "tnbc", asOf, tags, wikipedia: W("Triple-negative_breast_cancer"),
     aka: ["Stage I to III triple-negative breast cancer", "Operable triple-negative breast cancer", "Curable TNBC"],
     burden: "Most of the roughly 200,000 triple-negative breast cancers diagnosed each year are found before they have spread; relapses cluster in the first three years, so what happens around surgery decides most outcomes.",
     tldr: "Early triple-negative breast cancer is treated to cure. For tumours over 2 cm or with node involvement, chemotherapy plus the immunotherapy pembrolizumab before and after surgery has raised cure rates; BRCA carriers with cancer left at surgery add a year of olaparib, and others with residual cancer are offered capecitabine. Whether the tumour has vanished by surgery guides what comes next.",

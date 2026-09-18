@@ -383,7 +383,7 @@ export const gapCancers: CancerInput[] = [
   }),
   // ======================= Skin and eye =======================
   c({
-    id: "merkel-cell-carcinoma", trials: ["nct06947928", "stamp-merkel"], name: "Merkel cell carcinoma", group: "skin", wikipedia: W("Merkel-cell_carcinoma"),
+    id: "merkel-cell-carcinoma", trials: ["nct06947928", "stamp-merkel", "checkmate-358"], name: "Merkel cell carcinoma", group: "skin", wikipedia: W("Merkel-cell_carcinoma"),
     burden: "Merkel cell carcinoma causes about 3,000 cases per year in the US and rising; median age is ~75; it is roughly 40 times rarer than melanoma and more likely to spread stage for stage, which is why immunotherapy's durable responses mattered so much.",
     tldr: "Merkel cell carcinoma is a rare, fast-growing skin cancer, usually caused by a common virus (Merkel cell polyomavirus) or by sun damage. It was almost untreatable once it spread; PD-1/PD-L1 immunotherapy now gives lasting responses in about half of patients.",
     summary: "Merkel cell carcinoma (MCC) is a neuroendocrine skin cancer of older, fair-skinned and immunosuppressed people. About 80% of cases in the Northern Hemisphere are driven by clonally integrated Merkel cell polyomavirus (MCPyV, discovered 2008); the remainder are UV-induced with a very high tumour mutational burden. Both forms are immunogenic, which explains why MCC responded to checkpoint blockade when chemotherapy gave only brief responses.\n\nLocalised disease is treated with wide excision, sentinel node biopsy and adjuvant radiotherapy; the STAMP and ADMEC-O trials tested adjuvant PD-1 blockade, with ADMEC-O (nivolumab) showing a disease-free survival benefit in 2023. Metastatic disease is treated first line with avelumab (JAVELIN Merkel 200, first approval 2017), pembrolizumab (KEYNOTE-017, 2018) or retifanlimab (POD1UM-201, 2023); durable responses occur in about half, and chemotherapy is reserved for immunotherapy failure. Circulating MCPyV oncoprotein antibodies (AMERK) allow surveillance in seropositive patients.\n\nUnsolved: primary and acquired immunotherapy resistance (about half of patients), immunosuppressed patients (transplant, CLL) who cannot receive checkpoint blockade safely, and the adjuvant standard.",
@@ -413,7 +413,7 @@ export const gapCancers: CancerInput[] = [
     tags: ["gap-fill", "skin", "rare"],
   }),
   c({
-    id: "cutaneous-scc", trials: ["nct06585410"], name: "Cutaneous squamous cell carcinoma", group: "skin", wikipedia: W("Squamous-cell_carcinoma_of_the_skin"),
+    id: "cutaneous-scc", trials: ["nct06585410", "empower-cscc-1"], name: "Cutaneous squamous cell carcinoma", group: "skin", wikipedia: W("Squamous-cell_carcinoma_of_the_skin"),
     aka: ["cSCC", "Squamous Cell Carcinoma of the Skin"],
     burden: "Second most common skin cancer; over one million cases per year in the US, almost all cured by removal; about 2-5% metastasise, which still amounts to several thousand deaths a year and is where PD-1 immunotherapy now helps.",
     tldr: "Cutaneous squamous cell carcinoma is a sun-related skin cancer with over a million US cases a year, almost all cured by removing them. The 2 to 5% that grow deep or spread respond to PD-1 immunotherapy (cemiplimab, pembrolizumab), which is now also given after surgery in high-risk cases; transplant recipients cannot safely receive it.",

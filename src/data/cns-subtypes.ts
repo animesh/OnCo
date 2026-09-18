@@ -75,7 +75,7 @@ export const cnsSubtypes: CancerInput[] = [
     ],
     pipeline: ["vorasidenib", "safusidenib", "methylation-profiling"],
     openProblems: ["Whether temozolomide can replace PCV without losing survival (CODEL).", "How to sequence vorasidenib, chemotherapy and radiotherapy over a disease course of decades.", "Late cognitive effects of radiotherapy in long survivors.", "No effective treatment for the rare tumours that acquire CDKN2A/B loss or hypermutation."],
-    targets: ["idh"], drugs: ["procarbazine", "lomustine", "vincristine", "vorasidenib", "temozolomide"], trials: ["rtog-9402", "eortc-26951", "indigo"], technologies: ["methylation-profiling", "imrt-igrt", "extent-of-resection"], terms: ["re-irradiation", "1p19q-codeletion", "cdkn2a-homozygous-deletion"], pathways: ["glioma-signalling"],
+    targets: ["idh"], drugs: ["procarbazine", "lomustine", "vincristine", "vorasidenib", "temozolomide"], trials: ["rtog-9402", "eortc-26951", "indigo", "codel"], technologies: ["methylation-profiling", "imrt-igrt", "extent-of-resection"], terms: ["re-irradiation", "1p19q-codeletion", "cdkn2a-homozygous-deletion"], pathways: ["glioma-signalling"],
     related: ["glioblastoma", "idh-mutant-astrocytoma", "brain-tumours"],
     links: [{ label: "Wikipedia", url: W("Oligodendroglioma") }, { label: "RTOG 9402 long-term results (JCO 2013)", url: "https://doi.org/10.1200/JCO.2012.43.2674" }, { label: "EORTC 26951 long-term results (JCO 2013)", url: "https://doi.org/10.1200/JCO.2012.43.2229" }] },
 
@@ -145,7 +145,7 @@ export const cnsSubtypes: CancerInput[] = [
     related: ["brain-tumours", "metastatic-cancer", "nsclc", "breast-her2-positive", "melanoma"],
     links: [{ label: "Wikipedia", url: W("Brain_metastasis") }, { label: "Alliance N0574: radiosurgery with or without whole-brain radiotherapy (JAMA 2016)", url: "https://doi.org/10.1001/jama.2016.9839" }, { label: "QUARTZ (Lancet 2016)", url: "https://doi.org/10.1016/S0140-6736(16)30825-X" }] },
 
-  { id: "paediatric-high-grade-glioma", kind: "cancer", name: "Paediatric high-grade glioma (excluding diffuse midline glioma)", group: "paediatric", parent: "glioblastoma", asOf, tags: [...tags, "paediatric"], wikipedia: W("Glioma"),
+  { id: "paediatric-high-grade-glioma", kind: "cancer", trials: ["herby"], name: "Paediatric high-grade glioma (excluding diffuse midline glioma)", group: "paediatric", parent: "glioblastoma", asOf, tags: [...tags, "paediatric"], wikipedia: W("Glioma"),
     keyPapers: ["paper-who-2021-cns-louis-neuro-oncology-2021", "paper-mackay-paediatric-hgg-cancer-cell-2017", "paper-hargrave-dabrafenib-trametinib-paediatric-hgg-jco-2023"],
     aka: ["pHGG", "Childhood high-grade glioma", "Paediatric glioblastoma", "Diffuse hemispheric glioma, H3 G34-mutant", "Infant-type hemispheric glioma"],
     burden: "A minority of childhood brain tumours but a leading cause of death among them; most children with hemispheric high-grade glioma die within a few years of diagnosis, while infants with fusion-driven tumours can do far better.",

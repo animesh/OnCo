@@ -17,7 +17,7 @@ export const upperGiLiverSubtypes: CancerInput[] = [
   // ---------------------------------------------------------------------------------------------------------------------
   // Gastric cancer by biomarker state
   // ---------------------------------------------------------------------------------------------------------------------
-  { id: "gastric-her2-positive", kind: "cancer", trials: ["destiny-gastric01", "destiny-gastric02", "keynote-811"], name: "HER2-positive gastric cancer", group: "gastrointestinal", parent: "gastric", asOf, tags, wikipedia: W("Stomach_cancer"),
+  { id: "gastric-her2-positive", kind: "cancer", trials: ["destiny-gastric01", "destiny-gastric02", "keynote-811", "gatsby"], name: "HER2-positive gastric cancer", group: "gastrointestinal", parent: "gastric", asOf, tags, wikipedia: W("Stomach_cancer"),
     keyPapers: ["paper-toga-trastuzumab-gastric-lancet-2010", "paper-flot4-lancet-2019", "paper-keynote-811-janjigian-lancet-2023", "paper-destiny-gastric01-nejm-2020"],
     aka: ["HER2-positive gastro-oesophageal adenocarcinoma", "ERBB2-amplified gastric cancer", "HER2+ GEA"],
     burden: "About one in six advanced gastric and junctional adenocarcinomas, commoner in intestinal-type and junctional tumours than in diffuse-type disease; it was the first molecular subgroup of stomach cancer to get its own treatment.",
@@ -67,7 +67,7 @@ export const upperGiLiverSubtypes: CancerInput[] = [
     openProblems: ["Whether zolbetuximab or PD-1 blockade should come first when both PD-L1 and claudin 18.2 are positive.", "Tumours below the 75 percent threshold have no approved claudin 18.2 therapy.", "Nausea and vomiting lead some patients to stop early."],
     links: [{ label: "SPOTLIGHT (Lancet 2023)", url: "https://pubmed.ncbi.nlm.nih.gov/37068504/" }, { label: "GLOW (Nature Medicine 2023)", url: "https://pubmed.ncbi.nlm.nih.gov/37524953/" }, { label: "Wikipedia", url: W("Zolbetuximab") }] },
 
-  { id: "gastric-pdl1-high", kind: "cancer", trials: ["keynote-062"], name: "PD-L1-high gastric cancer", group: "gastrointestinal", parent: "gastric", asOf, tags, wikipedia: W("Stomach_cancer"),
+  { id: "gastric-pdl1-high", kind: "cancer", trials: ["keynote-062", "attraction-2"], name: "PD-L1-high gastric cancer", group: "gastrointestinal", parent: "gastric", asOf, tags, wikipedia: W("Stomach_cancer"),
     keyPapers: ["paper-checkmate-649-lancet-2021", "paper-flot4-lancet-2019", "paper-keynote-859-lancet-oncol-2023", "paper-matterhorn-nejm-2025"],
     aka: ["PD-L1 CPS 5 or above gastric cancer", "PD-L1-positive gastro-oesophageal adenocarcinoma", "EBV-positive gastric cancer (PD-L1 high)"],
     burden: "Roughly six in ten advanced gastric adenocarcinomas have a PD-L1 combined positive score of 1 or above and about half score 5 or above; the higher the score, the larger the survival gain from adding a PD-1 antibody to chemotherapy.",
@@ -118,7 +118,7 @@ export const upperGiLiverSubtypes: CancerInput[] = [
     openProblems: ["Whether surgery can be omitted after a complete response to neoadjuvant immunotherapy.", "Whether chemotherapy should be dropped altogether in metastatic disease.", "A minority of MSI-high tumours do not respond, and the reasons are unclear."],
     links: [{ label: "Pietrantonio meta-analysis (JCO 2019)", url: "https://pubmed.ncbi.nlm.nih.gov/31513484/" }, { label: "NEONIPIGA (JCO 2023)", url: "https://pubmed.ncbi.nlm.nih.gov/36179271/" }, { label: "Wikipedia", url: W("Microsatellite_instability") }] },
 
-  { id: "early-gastric-cancer", kind: "cancer", name: "Early gastric cancer", group: "gastrointestinal", parent: "gastric", asOf, tags, wikipedia: W("Stomach_cancer"),
+  { id: "early-gastric-cancer", kind: "cancer", trials: ["klass-01"], name: "Early gastric cancer", group: "gastrointestinal", parent: "gastric", asOf, tags, wikipedia: W("Stomach_cancer"),
     keyPapers: ["paper-gotoda-endoscopic-resection-criteria-gastric-cancer-2000", "paper-klass-01-kim-jama-oncol-2019", "paper-jcog0912-katai-lancet-gastroenterol-hepatol-2020", "paper-japanese-gastric-cancer-treatment-guidelines-2021-gastric-cancer-2023"],
     aka: ["T1 gastric cancer", "Intramucosal gastric cancer", "Submucosal gastric cancer", "Screen-detected gastric cancer"],
     burden: "More than half of gastric cancers diagnosed in Japan and Korea, where endoscopic screening finds them, but a small minority in Western countries; five-year survival above 90 percent when the tumour is confined to the mucosa or submucosa.",

@@ -100,7 +100,7 @@ export const sarcomaLymphomaSubtypes: CancerInput[] = [
     ],
     pipeline: ["zanubrutinib","lenalidomide"], openProblems: ["Transformation to diffuse large B-cell lymphoma in a minority.", "No standard sequence of therapies is proven by randomised trials.", "Rare sites (lung, skin, dura) are managed by extrapolation."],
     links: [{ label: "Wikipedia", url: W("Marginal_zone_B-cell_lymphoma") }] },
-  { id: "cutaneous-t-cell-lymphoma", kind: "cancer", trials: ["alcanza"], name: "Cutaneous T-cell lymphoma (mycosis fungoides and Sezary syndrome)", group: "haematologic", parent: "peripheral-t-cell-lymphoma", asOf, tags, wikipedia: W("Mycosis_fungoides"),
+  { id: "cutaneous-t-cell-lymphoma", kind: "cancer", trials: ["alcanza", "mavoric"], name: "Cutaneous T-cell lymphoma (mycosis fungoides and Sezary syndrome)", group: "haematologic", parent: "peripheral-t-cell-lymphoma", asOf, tags, wikipedia: W("Mycosis_fungoides"),
     keyPapers: ["paper-who-2022-lymphoid-alaggio-leukemia-2022", "paper-mavoric-mogamulizumab-lancet-oncol-2018", "paper-alcanza-brentuximab-vedotin-lancet-2017", "paper-olsen-mycosis-fungoides-staging-blood-2007"], drugs: ["hypericin-sgx301"],
     aka: ["CTCL", "Mycosis fungoides", "Sezary syndrome"],
     burden: "The commonest lymphoma of the skin, about one new case per 100,000 people a year; most patients have patches and plaques for decades and die of something else, while the minority with tumours, blood involvement or large-cell transformation have a median survival of a few years.",
