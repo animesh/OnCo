@@ -6,10 +6,12 @@ All notable changes to OnCo are recorded here. The format follows [Keep a Change
 
 Regenerated from the commit log each time the site ships (`scripts/changelog-sync.ts`); the version sections below are written by hand when a release is cut.
 
+### 18 September 2026
+- 1,024 more plain-English sentences: 279 companies, 104 institutions and 640 phase 3 trials, taking the simple layer to 8,961 records
+
 ### 17 September 2026
 - Papers for 36 more researchers matched by institution; trial snapshots refreshed for all 1,024 products with 136 registry changes detected; paper snapshots refreshed for all 1,924 records
-- Navigation starts at the top of the page (scroll attribute on the html tag); footer credit Made with heart and soul by Jude Gomila with Mount Tamalpais and Golden Gate icons in nine languages; roadmap rows 130 to 137
-- Every list row has a visual or a designed stand-in (ideas borrow their cancer icon, technology drawing or molecule), with a test so it cannot regress; I-SPY 1, I-SPY 2, I-SPY 2.2, WISDOM and Quantum Leap Healthcare Collaborative linked to Laura Esserman and UCSF; navigation starts at the top of the page; Enter in search opens the results page; roadmap rows 122 to 129
+- Add simple part-p: 1024 plain sentences for companies, institutions, the theories pathway and phase 3 trials
 - One papers block per person after the two paper waves met
 - People papers: 36 more research-trained people via OpenAlex and Europe PMC
 - Company content and sources for 33 makers, 26 sponsor corrections and papers for twelve researchers; 7,065 reverse links take orphaned trials from 2,467 to 279; Wikipedia links for six terms; structured outcomes with sources for 26 trials; 153 new logos; the schematic gauge counts aliased drawings
