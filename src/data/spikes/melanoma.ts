@@ -289,7 +289,7 @@ const ideas: IdeaInput[] = [
 
 // ======================= TARGET (PRAME) =======================
 const prame: EntityInput = {
-  id: "prame", kind: "target", name: "PRAME", symbol: "PRAME", targetClass: "other", asOf, wikipedia: W("PRAME"),
+  id: "prame", trials: ["nct05958121"], kind: "target", name: "PRAME", symbol: "PRAME", targetClass: "other", asOf, wikipedia: W("PRAME"),
   tldr: "PRAME is a cancer-testis antigen: a protein normally confined to the testis that about 90% of cutaneous melanomas and substantial fractions of ovarian, lung, endometrial and uveal cancers switch on. Because it sits inside the cell, drugs reach it only as peptide fragments displayed on HLA, through T-cell receptor bispecifics such as brenetafusp and TCR-T cells such as IMA203.",
   summary: "Preferentially Expressed Antigen in Melanoma is a cancer-testis antigen expressed in ~90% of cutaneous melanomas and in substantial fractions of ovarian, lung, endometrial, and uveal cancers. Intracellular, so reachable only via peptide-HLA recognition: brenetafusp (ImmTAC), IMA203 (Immatics TCR-T, phase 3 in melanoma), and other TCR programmes. PRAME immunohistochemistry is also a diagnostic aid for distinguishing melanoma from naevi.",
   biology: "Represses retinoic acid receptor signalling; drives proliferation and blocks differentiation; presented on HLA class I as peptides such as PRAME 425-433 on A*02:01.",

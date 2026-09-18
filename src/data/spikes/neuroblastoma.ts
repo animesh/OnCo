@@ -30,7 +30,7 @@ const companies: CompanyInput[] = [
 
 // ======================= TARGET =======================
 const targets: TargetInput[] = [
-  tg({ id: "gd2", aka: ["Disialoganglioside GD2"], name: "GD2 (disialoganglioside)", symbol: "GD2 (B4GALNT1 product)", targetClass: "surface-antigen", wikipedia: W("GD2"),
+  tg({ id: "gd2", trials: ["nct07744256", "nct07480213"], aka: ["Disialoganglioside GD2"], name: "GD2 (disialoganglioside)", symbol: "GD2 (B4GALNT1 product)", targetClass: "surface-antigen", wikipedia: W("GD2"),
     tldr: "GD2 is a sugar-fat molecule on the surface of neuroblastoma cells (and some other childhood and adult tumours) with almost none on normal tissue except nerves, which is why anti-GD2 drugs cause pain.",
     summary: "Disialoganglioside GD2 is expressed at high density on nearly all neuroblastomas, most osteosarcomas and melanomas, and diffuse midline gliomas, with normal expression restricted to peripheral nerves, melanocytes and CNS. Anti-GD2 antibodies (dinutuximab, dinutuximab beta, naxitamab) improved high-risk neuroblastoma survival; GD2 CAR-T (GD2-CART01, Italian phase 1/2) gives durable complete responses in relapsed disease and shows activity in diffuse midline glioma (Stanford). Neuropathic pain from nerve GD2 binding is the class toxicity.",
     biology: "Glycosphingolipid synthesised by GD2 synthase (B4GALNT1); not internalised efficiently, so antibodies act by ADCC/CDC rather than as ADC carriers.",

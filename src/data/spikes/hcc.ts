@@ -44,7 +44,7 @@ const companies: CompanyInput[] = [
 
 // ======================= TECHNOLOGIES =======================
 const technologies: TechnologyInput[] = [
-  tech({ id: "tace", name: "Transarterial chemoembolisation (TACE)", sections: ["surgery", "chemotherapy"], status: "standard-of-care", since: 1980, wikipedia: W("Transarterial_chemoembolization"),
+  tech({ id: "tace", trials: ["nct06844357", "nct03812874"], name: "Transarterial chemoembolisation (TACE)", sections: ["surgery", "chemotherapy"], status: "standard-of-care", since: 1980, wikipedia: W("Transarterial_chemoembolization"),
     tldr: "A catheter threaded into the artery feeding a liver tumour delivers chemotherapy and then blocks the vessel, starving the tumour from inside.",
     summary: "Standard of care for intermediate-stage (BCLC B) HCC for four decades (Llovet 2002, Lo 2002). Conventional TACE uses lipiodol-chemotherapy emulsion; DEB-TACE uses drug-eluting beads. Since 2024 three phase 3 trials (EMERALD-1, LEAP-012, EMERALD-3) show that adding systemic immunotherapy and anti-VEGF therapy to TACE prolongs progression-free survival, though overall-survival benefit is unproven (LEAP-012 final OS HR 0.98). Selection matters: TACE-refractory disease should move to systemic therapy.",
     principle: "Selective hepatic arterial catheterisation; tumours are ~90% arterially supplied while normal liver is portal-supplied, so embolisation plus chemotherapy hits tumour preferentially.",
