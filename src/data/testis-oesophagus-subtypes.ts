@@ -62,14 +62,14 @@ export const testisOesophagusSubtypes: CancerInput[] = [
     biomarkers: ["PD-L1 combined positive score or tumour proportion score", "TP53 and NOTCH1 mutations", "Endoscopic Lugol staining for early lesions", "Pathological response after chemoradiation"],
     standardOfCare: [
       { setting: "Early (T1a)", approach: "Endoscopic submucosal dissection; oesophagectomy or chemoradiation if deeper invasion is found.", refs: ["endoscopic-resection"] },
-      { setting: "Locally advanced", approach: "Neoadjuvant carboplatin-paclitaxel chemoradiation and surgery (CROSS), or definitive cisplatin-fluorouracil chemoradiation with surgery reserved for persistent disease; adjuvant nivolumab after incomplete response (CheckMate 577).", refs: ["cross-trial", "carboplatin", "paclitaxel", "cisplatin", "fluorouracil", "nivolumab", "checkmate-577"] },
+      { setting: "Locally advanced", approach: "Neoadjuvant carboplatin-paclitaxel chemoradiation and surgery (CROSS), or definitive cisplatin-fluorouracil chemoradiation with surgery reserved for persistent disease; adjuvant nivolumab after incomplete response (CheckMate 577).", refs: ["cross", "carboplatin", "paclitaxel", "cisplatin", "fluorouracil", "nivolumab", "checkmate-577"] },
       { setting: "Metastatic, first line", approach: "Nivolumab plus chemotherapy or nivolumab plus ipilimumab (CheckMate 648), or pembrolizumab plus chemotherapy (KEYNOTE-590).", refs: ["nivolumab", "ipilimumab", "pembrolizumab", "checkmate-648", "keynote-590"] },
       { setting: "Prevention and screening", approach: "Smoking cessation, alcohol reduction, avoiding very hot drinks; endoscopic screening in high-incidence regions of China.", refs: ["smoking-cessation-after-diagnosis", "alcohol-reduction-labelling"] },
     ],
     stateOfArt: ["Immunotherapy added to chemotherapy improved survival in every first-line trial, including several run entirely in China.", "Organ preservation with definitive chemoradiation and surveillance is an accepted alternative to surgery in this histology.", "Endoscopic screening in China detects a large share of cancers at a curable stage."],
     history: [
       { year: 1992, title: "RTOG 85-01: chemoradiation beats radiotherapy alone" },
-      { year: 2012, title: "CROSS: chemoradiation before surgery doubles survival", refs: ["cross-trial"] },
+      { year: 2012, title: "CROSS: chemoradiation before surgery doubles survival", refs: ["cross"] },
       { year: 2021, title: "CheckMate 577 and KEYNOTE-590 bring immunotherapy to oesophageal cancer", refs: ["checkmate-577", "keynote-590"] },
       { year: 2022, title: "CheckMate 648: nivolumab combinations first line", refs: ["checkmate-648"] },
     ],
@@ -84,7 +84,7 @@ export const testisOesophagusSubtypes: CancerInput[] = [
     biomarkers: ["HER2 amplification", "PD-L1 combined positive score", "Claudin 18.2 expression", "Mismatch repair and microsatellite instability", "Barrett's dysplasia grade on surveillance"],
     standardOfCare: [
       { setting: "Barrett's oesophagus", approach: "Endoscopic surveillance; radiofrequency ablation or endoscopic resection for dysplasia and early cancer.", refs: ["endoscopic-resection"] },
-      { setting: "Locally advanced", approach: "Perioperative FLOT (docetaxel, oxaliplatin, fluorouracil, leucovorin) and oesophagectomy, preferred over CROSS after ESOPEC; chemoradiation where chemotherapy is not tolerated.", refs: ["flot", "docetaxel", "oxaliplatin", "fluorouracil", "cross-trial"] },
+      { setting: "Locally advanced", approach: "Perioperative FLOT (docetaxel, oxaliplatin, fluorouracil, leucovorin) and oesophagectomy, preferred over CROSS after ESOPEC; chemoradiation where chemotherapy is not tolerated.", refs: ["flot", "docetaxel", "oxaliplatin", "fluorouracil", "cross"] },
       { setting: "Advanced, first line", approach: "Nivolumab or pembrolizumab with platinum-fluoropyrimidine chemotherapy for PD-L1-positive tumours; trastuzumab with chemotherapy (and pembrolizumab) for HER2-positive tumours; zolbetuximab with chemotherapy for claudin 18.2-positive tumours.", refs: ["nivolumab", "pembrolizumab", "trastuzumab", "zolbetuximab", "her2", "pdl1", "cldn18-2"] },
       { setting: "Later lines", approach: "Trastuzumab deruxtecan for HER2-positive disease; ramucirumab with paclitaxel; trifluridine-tipiracil.", refs: ["trastuzumab-deruxtecan", "ramucirumab", "paclitaxel"] },
     ],
@@ -92,7 +92,7 @@ export const testisOesophagusSubtypes: CancerInput[] = [
     history: [
       { year: 1950, title: "Norman Barrett describes the columnar-lined oesophagus" },
       { year: 2010, title: "ToGA: trastuzumab for HER2-positive gastro-oesophageal cancer", refs: ["trastuzumab"] },
-      { year: 2012, title: "CROSS chemoradiation before surgery", refs: ["cross-trial"] },
+      { year: 2012, title: "CROSS chemoradiation before surgery", refs: ["cross"] },
       { year: 2019, title: "FLOT4: perioperative FLOT beats ECF", refs: ["flot"] },
       { year: 2024, title: "ESOPEC: FLOT better than CROSS in adenocarcinoma", refs: ["flot"] },
       { year: 2024, title: "Zolbetuximab approved for claudin 18.2-positive disease", refs: ["zolbetuximab"] },

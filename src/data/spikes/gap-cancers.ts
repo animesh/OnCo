@@ -94,7 +94,7 @@ export const gapCancers: CancerInput[] = [
     tags: ["gap-fill", "haematologic"], people: ["uwe-platzbecker", "pierre-fenaux"], related: ["systemic-mastocytosis"], journals: ["leukemia-research"],
   }),
   c({
-    id: "myeloproliferative-neoplasms", trials: ["nct06093672", "nct06351631", "nct04468984", "nct06468033", "nct04717414", "nct04562389", "nct05210790", "nct07429266", "nct05481151", "nct06033586", "nct04064060", "nct04576156", "nct04285086", "nct04655092"], name: "Myeloproliferative neoplasms (PV, ET, myelofibrosis)", group: "haematologic", wikipedia: W("Myeloproliferative_neoplasm"),
+    id: "myeloproliferative-neoplasms", trials: ["nct06093672", "nct06351631", "nct04468984", "nct06468033", "nct04717414", "nct04562389", "verify", "nct07429266", "nct05481151", "nct06033586", "nct04064060", "nct04576156", "nct04285086", "nct04655092"], name: "Myeloproliferative neoplasms (PV, ET, myelofibrosis)", group: "haematologic", wikipedia: W("Myeloproliferative_neoplasm"),
     aka: ["MPN", "Polycythaemia vera", "Essential thrombocythaemia", "Primary myelofibrosis"],
     burden: "Combined incidence around 2-3 per 100,000 per year; PV and ET are chronic diseases lived with for decades, myelofibrosis has a median survival of about six years.",
     tldr: "Myeloproliferative neoplasms are slow-growing blood cancers in which the marrow overproduces red cells (polycythaemia vera), platelets (essential thrombocythaemia) or scar tissue (myelofibrosis). Almost all carry a mutation in JAK2, CALR or MPL; treatment aims to prevent clots and control symptoms, and only transplant cures myelofibrosis.",

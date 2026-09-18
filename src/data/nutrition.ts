@@ -493,7 +493,7 @@ const trials: TrialInput[] = [
     replication: "Phase 2/3 in pancreatic cancer cachexia underway (NCT06989437).",
     cancers: ["nsclc", "pancreatic", "colorectal"], technologies: ["cachexia-therapy", "cachexia-appetite-pharmacotherapy"], terms: ["cachexia", "body-composition"], pathways: ["cachexia-biology"], companies: ["pfizer"], sections: [SEC, "supportive-care"],
     bottlenecks: ["b-cachexia-supportive"], related: ["idea-cachexia-gdf15-prevention", "idea-bio2-gdf15-plus-exercise", "idea-bio2-gdf15-stratified-enrolment"],
-    links: [ct("NCT05546476"), doi("Groarke et al. (NEJM 2024)", "10.1056/NEJMoa2409515"), ct("NCT06989437")] }),
+    trials: ["nct06989437"], links: [ct("NCT05546476"), doi("Groarke et al. (NEJM 2024)", "10.1056/NEJMoa2409515")] }),
 
   trial({ id: "olanzapine-appetite-tmh", name: "Low-dose olanzapine for cancer anorexia (Tata Memorial)", phase: "3", status: "positive", yearReported: 2023, enrolled: 124, sponsor: "Tata Memorial Centre",
     setting: "Untreated, locally advanced or metastatic gastric, hepatopancreaticobiliary or lung cancer starting chemotherapy: olanzapine 2.5 mg daily vs placebo for 12 weeks, plus standard nutritional advice",

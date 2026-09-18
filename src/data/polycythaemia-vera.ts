@@ -110,7 +110,7 @@ export const pvTrials: TrialInput[] = [
     result: "Complete response within 1 year: 43% vs 26%; complete response associated with better event-free survival.",
     outcomes: [{ endpoint: "Complete response within 1 year", primary: true, unit: "%", arms: [{ name: "Ruxolitinib", n: 93, value: 43 }, { name: "Best available therapy", n: 87, value: 26 }] }],
     drugs: ["ruxolitinib"], cancers: ["polycythaemia-vera"], links: [{ label: "ISRCTN61925716", url: "https://www.isrctn.com/ISRCTN61925716" }, { label: "JCO 2023", url: "https://doi.org/10.1200/JCO.22.01935" }] }),
-  t({ id: "verify", name: "VERIFY", nct: "NCT05210790", phase: "3", status: "positive", yearReported: 2025, sponsor: "Protagonist Therapeutics and Takeda", enrolled: 293,
+  t({ id: "verify", name: "VERIFY", aka: ["nct05210790"], nct: "NCT05210790", phase: "3", status: "positive", yearReported: 2025, sponsor: "Protagonist Therapeutics and Takeda", enrolled: 293,
     setting: "Phlebotomy-dependent polycythaemia vera: rusfertide versus placebo added to standard care",
     tldr: "VERIFY showed that weekly rusfertide, a hepcidin mimetic, freed most PV patients from phlebotomy and improved their symptoms, leading to the drug's approval in 2026.",
     summary: "VERIFY randomised 293 patients with PV who needed frequent phlebotomies to weekly subcutaneous rusfertide or placebo on top of their usual treatment. Over weeks 20 to 32, 77 percent on rusfertide were responders (no phlebotomy needed) versus 33 percent on placebo, with fewer phlebotomies, sustained haematocrit control and better patient-reported fatigue and itch; the results were presented at ASCO 2025 and published the same year. The FDA approved rusfertide in 2026.",
