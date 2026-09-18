@@ -55,7 +55,7 @@ export const ORGAN_SCHEMATICS: OrganSchematic[] = [
       add(m, polyline([[1.3, 0.6, -0.4], [2.0, 0.9, 0.1], [2.6, 1.5, -0.1], [2.2, 2.3, 0]], "soft")); // lymphatic route
       return m;
     } },
-  { id: "lung", name: "Lungs, pleura and mediastinum", cancers: ["nsclc", "lung-cancer", "sclc", "mesothelioma", "pleural-mesothelioma", "thymic-epithelial", "pleuropulmonary-blastoma", "inflammatory-myofibroblastic-tumour"],
+  { id: "lung", name: "Lungs, pleura and mediastinum", cancers: ["nsclc", "lung-cancer", "sclc", "mesothelioma", "pleural-mesothelioma", "thymic-epithelial", "pleuropulmonary-blastoma", "inflammatory-myofibroblastic-tumour", "egfr-mutant-nsclc", "alk-positive-nsclc", "kras-g12c-nsclc", "ros1-positive-nsclc", "met-altered-nsclc", "ret-fusion-nsclc", "braf-v600e-nsclc", "her2-mutant-nsclc", "ntrk-fusion-nsclc", "pdl1-high-nsclc", "resectable-nsclc", "stage-iii-unresectable-nsclc", "limited-stage-sclc", "extensive-stage-sclc"],
     caption: "Central tumours arise in the large airways, peripheral ones in the alveoli; both drain to hilar then mediastinal nodes, and the pleural lining is a separate cancer site.",
     subsites: [
       { id: "central", label: "Central airways (squamous, small-cell)", at: [-0.75, 0.55, 0.05], match: ["squamous", "small-cell", "small cell", "sclc", "neuroendocrine", "pleuropulmonary", "tracheobronchial", "bronchus", "myofibroblastic"] },
