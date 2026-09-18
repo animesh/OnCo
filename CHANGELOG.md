@@ -7,6 +7,7 @@ All notable changes to OnCo are recorded here. The format follows [Keep a Change
 Regenerated from the commit log each time the site ships (`scripts/changelog-sync.ts`); the version sections below are written by hand when a release is cut.
 
 ### 18 September 2026
+- Blood cancers by state: acute myeloid leukaemia by driver and fitness, acute promyelocytic leukaemia, myeloma from smouldering to relapsed, MDS by risk, CLL by line and Richter transformation, CML by phase and primary myelofibrosis, nineteen pages tied to 111 drugs and trials
 - Upper gastrointestinal and liver cancers by state: gastric cancer by HER2, CLDN18.2, PD-L1 and MSI status and early gastric cancer, hepatocellular carcinoma by BCLC stage, intrahepatic and extrahepatic cholangiocarcinoma, and GIST by mutation, each tied to its landmark trials and drugs
 - Colorectal cancer by state: rectal, MSI-high, BRAF V600E, HER2-amplified, KRAS G12C and early-onset pages with OPRA, PROSPECT, BEACON and other landmark trials; primary mediastinal B-cell lymphoma
 - Brain tumour subtypes: IDH-mutant astrocytoma, oligodendroglioma, meningioma, brain metastases, paediatric high-grade glioma, spinal cord tumours, vestibular schwannoma and CNS germ cell tumours, each linked from the drugs and trials that treat them
@@ -17,6 +18,8 @@ Regenerated from the commit log each time the site ships (`scripts/changelog-syn
 - 1,024 more plain-English sentences: 279 companies, 104 institutions and 640 phase 3 trials, taking the simple layer to 8,961 records
 
 ### 17 September 2026
+- Blood cancers by driver, state and phase: nineteen subtype pages
+- Upper gastrointestinal and liver cancers by state: gastric cancer by HER2, CLDN18.2, PD-L1 and MSI status and early gastric cancer, hepatocellular carcinoma by BCLC stage, intrahepatic and extrahepatic cholangiocarcinoma, and GIST by mutation, each tied to its landmark trials and drugs
 - Colorectal cancer by state: rectal, MSI-high, BRAF V600E, HER2-amplified, KRAS G12C and early-onset pages with OPRA, PROSPECT, BEACON and other landmark trials; primary mediastinal B-cell lymphoma
 - Add upper GI and liver subtypes: gastric by biomarker, early gastric, HCC by BCLC stage, cholangiocarcinoma by site, GIST by mutation
 - Brain tumour subtypes: IDH-mutant astrocytoma, oligodendroglioma, meningioma, brain metastases, paediatric high-grade glioma, spinal cord tumours, vestibular schwannoma and CNS germ cell tumours, each linked from the drugs and trials that treat them
