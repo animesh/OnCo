@@ -56,7 +56,7 @@ const terms: TermInput[] = [
 
 // ======================= PRODUCTS =======================
 const drugs: DrugInput[] = [
-  d({ id: "octreotide-lanreotide", links: [{ label: "FDA label (DailyMed)", url: "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Somatostatin%20analogues" }], name: "Somatostatin analogues (octreotide, lanreotide)", brand: "Sandostatin LAR, Somatuline Depot", modality: "Peptide hormone analogue (SSTR2 agonist)", status: "approved", wikipedia: W("Octreotide"),
+  d({ id: "octreotide-lanreotide", links: [{ label: "FDA label (DailyMed)", url: "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Somatostatin%20analogues" }], name: "Somatostatin analogues (octreotide, lanreotide)", aka: ["Octreotide", "Lanreotide", "Octreotide LAR", "Somatostatin analogue"], brand: "Sandostatin LAR, Somatuline Depot", modality: "Peptide hormone analogue (SSTR2 agonist)", status: "approved", wikipedia: W("Octreotide"),
     tldr: "Monthly injections of a synthetic hormone that both quiets tumour hormone symptoms and slows tumour growth, the first treatment for most neuroendocrine tumours.",
     summary: "Octreotide (1988) controls carcinoid syndrome; PROMID (2009) showed octreotide LAR delays progression in midgut NETs (TTP 14.3 vs 6.0 months); CLARINET (2014) showed lanreotide improves PFS across enteropancreatic NETs (median not reached vs 18 months, HR 0.47). Standard first-line antiproliferative therapy for SSTR-positive grade 1-2 disease; also premedication against carcinoid crisis.",
     mechanism: "SSTR2/5 agonism suppresses hormone secretion and proliferation; PROMID and CLARINET established the antiproliferative effect.",

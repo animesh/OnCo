@@ -102,7 +102,7 @@ export const cnsSubtypes: CancerInput[] = [
     ],
     pipeline: ["prrt", "bevacizumab", "everolimus", "methylation-profiling"],
     openProblems: ["No approved systemic therapy; grade 3 and recurrent unresectable tumours have few options.", "Whether completely resected grade 2 meningiomas need radiotherapy (ROAM, NRG BN003).", "Which incidental meningiomas will grow; most never do.", "Long-term cognitive and endocrine effects of radiotherapy to the skull base."],
-    targets: ["mtor"], technologies: ["radiosurgery-srs", "gamma-knife", "cyberknife", "imrt-igrt", "proton-therapy", "methylation-profiling", "prrt", "active-surveillance", "mri"], drugs: ["bevacizumab", "sunitinib", "everolimus"], terms: ["stereotactic-radiosurgery", "cdkn2a-homozygous-deletion"],
+    targets: ["mtor"], technologies: ["radiosurgery-srs", "gamma-knife", "cyberknife", "imrt-igrt", "proton-therapy", "methylation-profiling", "prrt", "active-surveillance", "mri"], drugs: ["bevacizumab", "sunitinib", "everolimus", "gsk2256098", "mifepristone"], terms: ["stereotactic-radiosurgery", "cdkn2a-homozygous-deletion"],
     related: ["brain-tumours", "vestibular-schwannoma", "spinal-cord-tumours"],
     links: [{ label: "Wikipedia", url: W("Meningioma") }, { label: "EANO guideline on meningiomas (Neuro-Oncology 2021)", url: "https://doi.org/10.1093/neuonc/noab150" }] },
 
@@ -137,7 +137,7 @@ export const cnsSubtypes: CancerInput[] = [
     ],
     pipeline: ["trastuzumab-deruxtecan", "tucatinib", "lorlatinib", "bbb-focused-ultrasound", "radiosurgery-srs"],
     openProblems: ["Trials still often exclude patients with brain metastases, so drug activity in the brain is learned late.", "Leptomeningeal disease has no standard treatment and a survival of months.", "Radionecrosis after radiosurgery is hard to tell from progression and hard to treat.", "Few drugs are designed from the start to cross the blood-brain barrier."],
-    technologies: ["radiosurgery-srs", "gamma-knife", "cyberknife", "imrt-igrt", "mri", "bbb-focused-ultrasound"], drugs: ["dexamethasone", "osimertinib", "lorlatinib", "alectinib", "tucatinib", "trastuzumab-deruxtecan", "nivolumab", "ipilimumab", "dabrafenib-trametinib"], trials: ["alliance-n0574", "nrg-cc001", "quartz", "her2climb", "destiny-breast12", "crown"], terms: ["brain-metastases", "wbrt", "stereotactic-radiosurgery", "blood-brain-barrier", "her2-brain-metastases", "leptomeningeal-disease", "graded-prognostic-assessment"],
+    technologies: ["radiosurgery-srs", "gamma-knife", "cyberknife", "imrt-igrt", "mri", "bbb-focused-ultrasound"], drugs: ["dexamethasone", "osimertinib", "lorlatinib", "alectinib", "tucatinib", "trastuzumab-deruxtecan", "nivolumab", "ipilimumab", "dabrafenib-trametinib", "memantine"], trials: ["alliance-n0574", "nrg-cc001", "quartz", "her2climb", "destiny-breast12", "crown"], terms: ["brain-metastases", "wbrt", "stereotactic-radiosurgery", "blood-brain-barrier", "her2-brain-metastases", "leptomeningeal-disease", "graded-prognostic-assessment"],
     related: ["brain-tumours", "metastatic-cancer", "nsclc", "breast-her2-positive", "melanoma"],
     links: [{ label: "Wikipedia", url: W("Brain_metastasis") }, { label: "Alliance N0574: radiosurgery with or without whole-brain radiotherapy (JAMA 2016)", url: "https://doi.org/10.1001/jama.2016.9839" }, { label: "QUARTZ (Lancet 2016)", url: "https://doi.org/10.1016/S0140-6736(16)30825-X" }] },
 

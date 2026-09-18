@@ -59,6 +59,7 @@ export const headNeckSubtypes: CancerInput[] = [
     pipeline: ["pembrolizumab","adaptive-radiotherapy"], openProblems: ["Hypopharyngeal cancer survival has barely improved.", "Choosing between preservation and laryngectomy in T4 disease.", "Long-term swallowing and airway function after chemoradiation.", "Persistently high incidence where smoking remains common."],
     links: [{ label: "Wikipedia", url: W("Laryngeal_cancer") }] },
   { id: "oral-cavity-cancer", kind: "cancer", name: "Oral cavity cancer (mouth and tongue)", group: "head and neck", parent: "head-and-neck", asOf, tags, wikipedia: W("Oral_cancer"),
+    drugs: ["celecoxib"],
     aka: ["Oral cancer", "Mouth cancer", "Tongue cancer", "Oral squamous cell carcinoma"],
     burden: "About 390,000 new cases a year worldwide, with the highest rates in South Asia from betel quid and tobacco chewing; it is the commonest cancer among men in India, and five-year survival is around 60 percent overall but far lower for late-stage disease.",
     tldr: "Cancer of the mouth and tongue is caused mainly by tobacco, alcohol and betel quid and is usually visible or feelable early, yet often diagnosed late. Surgery is the mainstay, with radiotherapy or chemoradiation after operation for higher-risk disease, and reconstruction to restore speech and swallowing.",

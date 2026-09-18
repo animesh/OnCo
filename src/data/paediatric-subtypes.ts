@@ -26,6 +26,7 @@ const AYA = { version: "NCI: Adolescents and Young Adults with Cancer", url: "ht
 export const paediatricSubtypes: CancerInput[] = [
   // ======================= ACUTE LYMPHOBLASTIC LEUKAEMIA IN CHILDREN =======================
   { id: "all-paediatric-standard-risk", kind: "cancer", name: "Standard-risk B-cell acute lymphoblastic leukaemia in children", group: "paediatric", parent: "all-leukemia", asOf, tags, wikipedia: W("Acute_lymphoblastic_leukemia"),
+    drugs: ["aminopterin"],
     aka: ["NCI standard-risk B-ALL", "Average-risk childhood ALL", "Low-risk childhood ALL"],
     burden: "Acute lymphoblastic leukaemia is the commonest childhood cancer, and roughly two thirds of children with the B-cell form fall into the standard-risk group at diagnosis: aged one to nine with a white cell count below 50 x 10^9/L.",
     tldr: "Standard-risk acute lymphoblastic leukaemia is the commonest and most curable childhood cancer: a child aged one to nine with a modest white cell count and favourable genetics. Two to three years of chemotherapy cures about nine in ten, and adding the immune drug blinatumomab to the chemotherapy in the AALL1731 trial cut relapses further.",
@@ -257,6 +258,7 @@ export const paediatricSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia: Neuroblastoma", url: W("Neuroblastoma") }, { label: "NCI PDQ: Neuroblastoma Treatment", url: NBL.url }] },
 
   { id: "neuroblastoma-high-risk", kind: "cancer", name: "High-risk neuroblastoma", group: "paediatric", parent: "neuroblastoma", asOf, tags, wikipedia: W("Neuroblastoma"),
+    drugs: ["isotretinoin"],
     aka: ["INRG high-risk neuroblastoma", "Metastatic neuroblastoma", "MYCN-amplified neuroblastoma", "Stage 4 neuroblastoma"],
     burden: "About half of children with neuroblastoma have high-risk disease, metastatic at over 18 months of age or MYCN-amplified at any age; it accounts for around one in eight childhood cancer deaths, and only about half of children are cured despite the most intensive treatment given to any child.",
     tldr: "High-risk neuroblastoma has spread widely in a child over 18 months old or carries extra copies of the MYCN gene. Treatment lasts about 18 months and uses every tool: chemotherapy, surgery, high-dose chemotherapy with stem cell rescue, radiotherapy, and the anti-GD2 antibody dinutuximab, which raised survival in ANBL0032; eflornithine, given afterwards, was approved in 2023 to lower relapse.",
@@ -341,6 +343,7 @@ export const paediatricSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia: Medulloblastoma", url: W("Medulloblastoma") }, { label: "NCI PDQ: Childhood Medulloblastoma Treatment", url: MB.url }] },
 
   { id: "medulloblastoma-group-3-4", kind: "cancer", name: "Group 3 and group 4 medulloblastoma (non-WNT/non-SHH)", group: "paediatric", parent: "medulloblastoma", asOf, tags: [...tags, "cns"], wikipedia: W("Medulloblastoma"),
+    drugs: ["isotretinoin"],
     aka: ["Non-WNT/non-SHH medulloblastoma", "Group 3 medulloblastoma", "Group 4 medulloblastoma", "MYC-amplified medulloblastoma"],
     burden: "Groups 3 and 4 together make up about 60 to 65 percent of medulloblastoma: group 4 is the commonest single group and group 3, often MYC-amplified and metastatic in young children, the most lethal.",
     tldr: "Group 3 and group 4 medulloblastoma are the two commonest forms of this cerebellar brain tumour and the ones without a druggable driver. Group 3 strikes young children, often with extra copies of MYC and spread through the spinal fluid; group 4 affects older boys. Both get surgery, craniospinal radiotherapy and chemotherapy; trials showed the radiation dose cannot be cut for young children.",

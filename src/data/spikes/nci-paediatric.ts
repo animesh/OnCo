@@ -233,7 +233,7 @@ export const nciPaediatricCancers: CancerInput[] = [
       "How long BRAF/MEK inhibition should continue in papillary tumours and whether radiotherapy can be omitted after response.",
       "Recurrence after subtotal resection in children too young for radiotherapy.",
     ],
-    targets: ["braf"], pathways: ["wnt", "ras-mapk", "inflammation-nfkb"], drugs: ["dabrafenib-trametinib", "vemurafenib", "cobimetinib", "interferon-alfa", "bleomycin"],
+    targets: ["braf"], pathways: ["wnt", "ras-mapk", "inflammation-nfkb"], drugs: ["dabrafenib-trametinib", "vemurafenib", "cobimetinib", "interferon-alfa", "bleomycin", "setmelanotide"],
     technologies: ["proton-therapy", "imrt-igrt", "mri", "survivorship-care-plan"], institutions: ["st-jude", "childrens-oncology-group", "alliance-oncology"], terms: ["late-effects"], bottlenecks: ["b-survivorship", "b-rare-cancers"],
     related: ["pituitary-tumours", "paediatric-low-grade-glioma"],
     links: [

@@ -324,6 +324,7 @@ export const bloodSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia", url: W("Myelodysplastic_syndrome") }, { label: "NCCN Guidelines: Myelodysplastic Syndromes", url: MDS.url }] },
 
   { id: "mds-higher-risk", kind: "cancer", name: "Higher-risk myelodysplastic syndromes", group: "haematologic", parent: "mds", asOf, tags, wikipedia: W("Myelodysplastic_syndrome"),
+    drugs: ["pevonedistat"],
     aka: ["High-risk MDS", "IPSS-R high and very high MDS", "MDS with increased blasts", "Higher-risk myelodysplastic neoplasms"],
     burden: "About a third of myelodysplastic syndromes are higher risk; without treatment median survival is around a year and a half or less, and most progress to acute myeloid leukaemia.",
     tldr: "Higher-risk myelodysplastic syndromes behave like a slow leukaemia and often become one. Azacitidine lengthens life and a donor stem cell transplant is the only cure; every attempt to improve on azacitidine in a large trial, including the venetoclax combination tested in VERONA, has so far failed.",
@@ -480,6 +481,7 @@ export const bloodSubtypes: CancerInput[] = [
 
   // ======================= MYELOPROLIFERATIVE NEOPLASMS =======================
   { id: "primary-myelofibrosis", kind: "cancer", name: "Primary myelofibrosis", group: "haematologic", parent: "myeloproliferative-neoplasms", asOf, tags, wikipedia: W("Primary_myelofibrosis"),
+    drugs: ["danazol"],
     aka: ["PMF", "Myelofibrosis", "Chronic idiopathic myelofibrosis", "Agnogenic myeloid metaplasia", "Post-PV and post-ET myelofibrosis (secondary myelofibrosis)"],
     burden: "The rarest and most serious of the classic myeloproliferative neoplasms, about one new case per 100,000 people a year, mostly over 60; median survival is around six years but ranges from under two to more than fifteen depending on risk score.",
     tldr: "Primary myelofibrosis is a blood cancer in which the marrow scars over, the spleen swells and patients become anaemic and exhausted. JAK inhibitors, ruxolitinib first (COMFORT) and then fedratinib, pacritinib and momelotinib (MOMENTUM), shrink the spleen and relieve symptoms; only a donor stem cell transplant can cure it.",
