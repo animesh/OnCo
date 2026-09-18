@@ -30,6 +30,7 @@ Regenerated from the commit log each time the site ships (`scripts/changelog-syn
 - 1,024 more plain-English sentences: 279 companies, 104 institutions and 640 phase 3 trials, taking the simple layer to 8,961 records
 
 ### 17 September 2026
+- Seventy-four drug makers added and 210 drug-to-company links filled, so pipeline drugs now show who is developing them
 - Link 193 company-less drugs to their makers and add 74 maker records
 - Key papers for 147 subtype pages: 364 pivotal trial, classification and guideline papers, each checked against Europe PMC
 - Add key papers to 147 cancer subtype pages
