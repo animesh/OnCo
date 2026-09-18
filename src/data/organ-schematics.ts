@@ -295,7 +295,7 @@ export const ORGAN_SCHEMATICS: OrganSchematic[] = [
       add(m, polyline([[0.3, 0.9, -0.55], [0.8, 0.5, -0.65]], "soft")); // choroidal vessel hint
       return m;
     } },
-  { id: "brain", name: "Brain", cancers: ["glioblastoma", "primary-cns-lymphoma", "medulloblastoma", "paediatric-low-grade-glioma", "dipg-dmg", "atrt", "ependymoma", "craniopharyngioma", "pituitary-tumours", "brain-tumours"],
+  { id: "brain", name: "Brain", cancers: ["glioblastoma", "primary-cns-lymphoma", "medulloblastoma", "paediatric-low-grade-glioma", "dipg-dmg", "atrt", "ependymoma", "craniopharyngioma", "pituitary-tumours", "brain-tumours", "idh-mutant-astrocytoma", "oligodendroglioma", "paediatric-high-grade-glioma", "meningioma", "secondary-brain-tumours", "vestibular-schwannoma", "cns-germ-cell-tumours", "spinal-cord-tumours"],
     caption: "Gliomas infiltrate along white matter and can cross the corpus callosum, medulloblastoma sits in the cerebellum, and CNS lymphoma favours deep periventricular tissue; none spread through lymph nodes.",
     subsites: [
       { id: "frontal", label: "Frontal lobe (glioblastoma commonest)", at: [0.95, 0.65, 1.15], match: ["idh-wildtype", "gbm", "glioblastoma", "mgmt", "egfr", "tert", "grade 4", "mesenchymal", "proneural"] },
@@ -303,10 +303,14 @@ export const ORGAN_SCHEMATICS: OrganSchematic[] = [
       { id: "callosum", label: "Corpus callosum (butterfly glioma)", at: [0, 0.5, 0], match: ["butterfly", "corpus callosum", "multifocal"] },
       { id: "idh", label: "Lower-grade IDH-mutant glioma", at: [-1.25, 0.75, 0.9], match: ["idh-mutant", "oligodendroglioma", "astrocytoma", "1p/19q", "codeleted", "grade 2", "grade 3", "cdkn2a"] },
       { id: "cerebellum", label: "Cerebellum (medulloblastoma)", at: [0, -0.95, -1.25], match: ["wnt", "shh", "group 3", "group 4", "medulloblastoma", "desmoplastic", "large cell"] },
-      { id: "brainstem", label: "Brainstem (diffuse midline glioma)", at: [0, -1.45, -0.6], match: ["dipg", "h3 k27", "h3.3 k27m", "h3.1 k27m", "k27m", "diffuse midline", "brainstem", "midline"] },
+      { id: "brainstem", label: "Brainstem and spinal cord (diffuse midline glioma, cord tumours)", at: [0, -1.45, -0.6], match: ["dipg", "h3 k27", "h3.3 k27m", "h3.1 k27m", "k27m", "diffuse midline", "brainstem", "midline", "spinal", "intramedullary", "intradural", "filum terminale", "cauda equina", "haemangioblastoma"] },
       { id: "ventricle", label: "Ventricles and ependymal lining (ependymoma)", at: [0.5, 0.05, -0.2], match: ["ependymoma", "posterior fossa", "pf-a", "pf-b", "zfta", "yap1", "subependymoma", "myxopapillary"] },
       { id: "sella", label: "Sella and pituitary (pituitary tumours, craniopharyngioma)", at: [0, -1.1, 0.45], match: ["pituitary", "prolactinoma", "somatotroph", "corticotroph", "gonadotroph", "thyrotroph", "pit1", "adamantinomatous", "craniopharyngioma", "papillary (braf"] },
       { id: "deep", label: "Deep periventricular tissue (CNS lymphoma)", at: [-0.6, 0.15, -0.25], match: ["pcnsl", "cns lymphoma", "abc", "mcd", "myd88", "cd79b", "vitreoretinal"] },
+      { id: "meninges", label: "Meninges and convexity (meningioma)", at: [0.4, 1.55, 0.3], match: ["meningioma", "meningeal", "convexity", "parasagittal", "skull base meningioma"] },
+      { id: "grey-white", label: "Grey-white junction (brain metastases)", at: [-1.75, 0.1, -0.5], match: ["brain metastases", "brain metastasis", "leptomeningeal metastases"] },
+      { id: "cpa", label: "Cerebellopontine angle and eighth nerve (vestibular schwannoma)", at: [1.0, -1.25, -0.85], match: ["schwannoma", "nf2-related", "cerebellopontine", "intracanalicular", "acoustic"] },
+      { id: "pineal", label: "Pineal and suprasellar midline (germ cell tumours)", at: [0, 0.05, -0.75], match: ["germinoma", "germ cell", "pineal", "teratoma", "bifocal"] },
     ],
     nodes: [], nodeNote: "No conventional lymphatics: gliomas spread along white matter tracts and, rarely, through cerebrospinal fluid; medulloblastoma can seed the spine.",
     build: () => {

@@ -75,7 +75,7 @@ const drugs: DrugInput[] = [
     dosing: { route: "IV", schedule: "9-10 g/m2 per cycle over 3-5 days with mesna (sarcoma); 1.8 g/m2 × 5 days with etoposide (Ewing)", monitoring: "Urinalysis for haematuria, renal function, encephalopathy (methylene blue), counts" },
     toxicity: [{ event: "Febrile neutropenia (with doxorubicin)", grade3PlusPct: 46, note: "EORTC 62012 AIM arm" }, { event: "Encephalopathy", anyGradePct: 10 }, { event: "Haemorrhagic cystitis", anyGradePct: 5, note: "with mesna" }],
     approvals: [{ region: "US", year: 1988, indication: "Germ cell testicular cancer; widely used off-label in sarcoma" }],
-    technologies: ["cytotoxic-chemotherapy"], cancers: ["sarcoma"], related: ["mesna"], trials: ["euramos-1", "nct06230224", "nct05533775", "nct06277154"] }),
+    technologies: ["cytotoxic-chemotherapy"], cancers: ["sarcoma", "cns-germ-cell-tumours"], related: ["mesna"], trials: ["euramos-1", "nct06230224", "nct05533775", "nct06277154"] }),
   d(supplement<DrugInput>({ id: "trabectedin", kind: "drug",
     approvals: [{ region: "EU", year: 2007, indication: "Advanced soft-tissue sarcoma after anthracycline/ifosfamide" }],
     notes: ["In sarcoma: ET743-SAR-3007 gave PFS 4.2 versus 1.5 months against dacarbazine (HR 0.55) with no OS difference, and US approval followed in October 2015 for liposarcoma and leiomyosarcoma; it is particularly active in myxoid liposarcoma (FUS-DDIT3), where it displaces the FUS-CHOP oncoprotein. Given as a 24-hour infusion of 1.5 mg/m2 every 3 weeks with dexamethasone premedication through a central line; grade 3 or higher ALT elevation in 26 percent and neutropenia in 37 percent, with rare rhabdomyolysis."],
