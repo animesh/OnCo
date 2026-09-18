@@ -16,7 +16,7 @@ const entities: EntityInput[] = [
     summary: "Stupp/EORTC 26981-NCIC (2005): adding concurrent and adjuvant temozolomide to radiotherapy raised median OS from 12.1 to 14.6 months and 2-year survival from 10% to 27%. Benefit concentrates in MGMT-promoter-methylated tumours (median OS ~23 months vs ~13 months unmethylated). Also standard with radiotherapy in grade 3 astrocytoma (CATNON) and, with PCV as an alternative, in oligodendroglioma. Oral, well tolerated; lymphopenia and hypermutation at recurrence are the costs.",
     mechanism: "Prodrug of MTIC; methylates O6-guanine; cytotoxicity depends on unrepaired lesions when MGMT is silenced.",
     approvals: [{ region: "US", year: 1999, indication: "Refractory anaplastic astrocytoma" }, { region: "US", year: 2005, indication: "Newly diagnosed glioblastoma with radiotherapy" }, { region: "EU", year: 1999, indication: "Temodal; malignant glioma (recurrent 1999; newly diagnosed glioblastoma with radiotherapy 2005); 26 Jan 1999" }],
-    technologies: ["cytotoxic-chemotherapy", "imrt-igrt"], cancers: ["glioblastoma"], trials: ["eortc-26981", "catnon", "eortc-22033", "nct06703398", "nct03709680", "nct07326566", "nct07310784", "nct04478279", "nct06595186", "nct04752813", "nct07569042", "nct06703255", "nct04485949", "nct06413706", "nct05765812", "nct05440786", "nct04587830", "nct04121455", "nct07297212", "nct07492680", "nct06012695", "nct05902169", "nct05417594", "nct07015242", "nct04443010", "nct07195591", "nct06556563", "nct04910022", "nct03491683", "nct04919226", "nct05768919", "nct05664243", "nct03862430"], terms: ["mgmt"], links: [{ label: "Wikipedia", url: W("Temozolomide") }],
+    technologies: ["cytotoxic-chemotherapy", "imrt-igrt"], cancers: ["glioblastoma", "idh-mutant-astrocytoma", "paediatric-high-grade-glioma"], trials: ["eortc-26981", "catnon", "eortc-22033", "nct06703398", "nct03709680", "nct07326566", "nct07310784", "nct04478279", "nct06595186", "nct04752813", "nct07569042", "nct06703255", "nct04485949", "nct06413706", "nct05765812", "nct05440786", "nct04587830", "nct04121455", "nct07297212", "nct07492680", "nct06012695", "nct05902169", "nct05417594", "nct07015242", "nct04443010", "nct07195591", "nct06556563", "nct04910022", "nct03491683", "nct04919226", "nct05768919", "nct05664243", "nct03862430"], terms: ["mgmt"], links: [{ label: "Wikipedia", url: W("Temozolomide") }],
   },
   {
     id: "lomustine", trials: ["rtog-9402", "eortc-26951", "nct03678883", "nct04762069"], kind: "drug", name: "Lomustine (CCNU)", brand: "Gleostine", modality: "Oral nitrosourea chemotherapy", asOf, status: "standard-of-care", wikipedia: W("Lomustine"),
@@ -24,7 +24,7 @@ const entities: EntityInput[] = [
     summary: "Standard second-line agent in Europe and the control in EORTC 26101 (lomustine ± bevacizumab), REGOMA, and most recurrent-glioblastoma trials; median OS ~8-9 months at recurrence. CeTeG/NOA-09 suggested lomustine-temozolomide improves OS in MGMT-methylated newly diagnosed disease. Delayed, cumulative myelosuppression limits cycles.",
     mechanism: "Lipophilic nitrosourea; DNA alkylation and crosslinking; crosses the blood-brain barrier.",
     approvals: [{ region: "US", year: 1976, indication: "Brain tumours after surgery/radiation; Hodgkin lymphoma" }],
-    technologies: ["cytotoxic-chemotherapy"], cancers: ["glioblastoma"], terms: ["blood-brain-barrier"], links: [{ label: "Wikipedia", url: W("Lomustine") }],
+    technologies: ["cytotoxic-chemotherapy"], cancers: ["glioblastoma", "idh-mutant-astrocytoma", "oligodendroglioma"], terms: ["blood-brain-barrier"], links: [{ label: "Wikipedia", url: W("Lomustine") }],
   },
   {
     id: "bevacizumab-glioma", kind: "drug", links: [{ label: "FDA label (DailyMed)", url: "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Bevacizumab" }], name: "Bevacizumab (glioblastoma use)", brand: "Avastin", modality: "Monoclonal antibody (anti-VEGF)", asOf, status: "approved", wikipedia: W("Bevacizumab"),
@@ -49,7 +49,7 @@ const entities: EntityInput[] = [
     summary: "FDA accelerated approval 23 April 2024 for relapsed/refractory paediatric low-grade glioma (age ≥6 months) with BRAF fusion/rearrangement or V600 mutation (FIREFLY-1: ORR ~51% by RANO-HGG). European conditional approval April 2026 (Ipsen, regardless of BRAF alteration type). Type II RAF inhibitor active against KIAA1549-BRAF fusions where type I inhibitors cause paradoxical activation. Phase 3 LOGGIPY-2 in first line versus chemotherapy. Day One Biopharmaceuticals.",
     mechanism: "Pan-RAF type II inhibitor binding the DFG-out conformation; blocks monomeric and dimeric BRAF signalling.",
     approvals: [{ region: "US", year: 2024, indication: "Relapsed/refractory BRAF-altered paediatric low-grade glioma (accelerated)" }, { region: "EU", year: 2026, indication: "Relapsed/refractory paediatric low-grade glioma (conditional)" }],
-    targets: ["braf"], technologies: ["kinase-inhibitors"], companies: ["day-one-biopharmaceuticals", "ipsen"], cancers: ["glioblastoma"], pathways: ["ras-mapk"],
+    targets: ["braf"], technologies: ["kinase-inhibitors"], companies: ["day-one-biopharmaceuticals", "ipsen"], cancers: ["glioblastoma", "paediatric-low-grade-glioma"], pathways: ["ras-mapk"],
     links: [{ label: "FDA approval", url: "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-tovorafenib-patients-relapsed-or-refractory-braf-altered-pediatric" }],
   },
   {
@@ -92,7 +92,7 @@ const entities: EntityInput[] = [
     tldr: "The first targeted-therapy win in low-grade brain tumours: a pill that more than doubled the time before the tumour grew, delaying radiation and chemotherapy by years.",
     summary: "INDIGO, trial NCT04164901 sponsored by Servier and reported in 2023, delivered the first targeted-therapy win in low-grade brain tumours: the IDH inhibitor vorasidenib more than doubled the time before residual or recurrent grade 2 IDH-mutant glioma grew, delaying radiotherapy and chemotherapy by years. It randomised 331 patients with astrocytoma or oligodendroglioma after surgery and no prior radiotherapy or chemotherapy to vorasidenib or placebo, met its primary progression-free survival endpoint by blinded review with a large effect, sharply reduced the need for the next intervention, and led to FDA approval in August 2024. OnCo links it to IDH1 and IDH2 as targets, the mutant IDH pathway, Ingo K. Mellinghoff, Patrick Y. Wen and the brain as a bottleneck. Its long-term effect on survival and on malignant transformation is pending, which is the open question.",
     result: "PFS 27.7 vs 11.1 months, HR 0.39.",
-    drugs: ["vorasidenib"], cancers: ["glioblastoma"], targets: ["idh"], links: [ct("NCT04164901")], people: ["ingo-mellinghoff", "patrick-wen"],
+    drugs: ["vorasidenib"], cancers: ["glioblastoma", "idh-mutant-astrocytoma", "oligodendroglioma"], targets: ["idh"], links: [ct("NCT04164901")], people: ["ingo-mellinghoff", "patrick-wen"],
   },
   {
     id: "checkmate-143", kind: "trial", name: "CheckMate 143", nct: "NCT02017717", phase: "3", status: "negative", yearReported: 2020, sponsor: "BMS", asOf: asOfChecked,
