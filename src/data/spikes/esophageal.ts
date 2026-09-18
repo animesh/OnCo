@@ -130,7 +130,7 @@ const technologies: TechnologyInput[] = [
     principle: "Submucosal injection lifts the lesion; a snare (EMR) or electrosurgical knife (ESD) resects it en bloc for histologic assessment of depth and margins.",
     strengths: ["Organ preservation, low morbidity", "Curative for T1a disease", "Provides definitive staging"],
     limitations: ["Operator-dependent, long learning curve for ESD", "Not curative for deeper invasion or nodal disease", "Requires endoscopic surveillance afterwards"],
-    cancers: ["esophageal", "gastric"], terms: ["barretts-esophagus", "endoscopic-resection-term"], technologies: ["thermal-ablation"], links: [{ label: "Wikipedia", url: W("Endoscopic_submucosal_dissection") }] },
+    cancers: ["esophageal", "gastric", "early-gastric-cancer"], terms: ["barretts-esophagus", "endoscopic-resection-term"], technologies: ["thermal-ablation"], links: [{ label: "Wikipedia", url: W("Endoscopic_submucosal_dissection") }] },
 ];
 
 // ======================= TERMS =======================

@@ -199,7 +199,7 @@ const drugs: DrugInput[] = [
     summary: "Tremelimumab is a human IgG2 antibody against CTLA-4, the checkpoint that restrains T-cell priming; a limited number of priming doses alongside a PD-L1 antibody keeps toxicity lower than continuous CTLA-4 blockade. It is used with durvalumab and platinum chemotherapy in first-line metastatic NSCLC without EGFR or ALK alterations, and with durvalumab in unresectable hepatocellular carcinoma. POSEIDON showed tremelimumab plus durvalumab plus chemotherapy improved overall survival versus chemotherapy (HR 0.77), with the largest benefit in STK11/KEAP1/KRAS-mutant and PD-L1-negative disease. Approved November 2022 (NSCLC) and October 2022 (HCC with durvalumab, HIMALAYA). Whether the CTLA-4 component justifies its extra immune toxicity remains debated. For a newcomer, it is the second checkpoint antibody in AstraZeneca's combinations, given briefly to kick-start the immune response.",
     mechanism: "Human IgG2 anti-CTLA-4; limited priming doses reduce toxicity.",
     approvals: [{ region: "US", year: 2022, indication: "Metastatic NSCLC without EGFR/ALK, with durvalumab and platinum chemotherapy; unresectable HCC with durvalumab" }],
-    targets: ["ctla4"], technologies: ["checkpoint-inhibitor"], companies: ["astrazeneca"], cancers: ["nsclc", "hcc"], drugs: ["durvalumab"] }),
+    targets: ["ctla4"], technologies: ["checkpoint-inhibitor"], companies: ["astrazeneca"], cancers: ["nsclc", "hcc", "hcc-advanced"], drugs: ["durvalumab"] }),
 ];
 
 // ======================= TARGETS =======================
