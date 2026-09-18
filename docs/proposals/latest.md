@@ -1,10 +1,10 @@
-# Change proposals 2026-09-17
+# Change proposals 2026-09-18
 
-Drafted by scripts/propose-updates.ts from: factcheck 2026-09-13, trialChanges 2026-09-14, fda 2026-09-16, regional 2026-09-16.
+Drafted by scripts/propose-updates.ts from: factcheck 2026-09-13, trialChanges 2026-09-17, fda 2026-09-16, regional 2026-09-16.
 
 Review each line against its source. Apply by editing the file named; nothing is applied automatically.
 
-## High confidence (89)
+## High confidence (79)
 
 - [ ] **Dorocubicel (UM171-expanded cord blood)** ([page](https://onco-umber.vercel.app/drugs/dorocubicel/)) · regional-row · `EU`
   - current: (no EU entry)
@@ -306,41 +306,16 @@ Review each line against its source. Apply by editing the file named; nothing is
   - proposed: EU: A(<year>, "https://www.ema.europa.eu/en/medicines/human/EPAR/vorinostat-msd", "")
   - evidence: EMA register: Vorinostat MSD () Application withdrawn. ([source](https://www.ema.europa.eu/en/medicines/human/EPAR/vorinostat-msd))
   - file: `src/data/regional-approvals.ts`
-- [ ] **Sevabertinib** ([page](https://onco-umber.vercel.app/drugs/sevabertinib/)) · regulatory-event · `regulatoryEvents`
-  - current: 0 events; none dated 2026-09-09
-  - proposed: { date: "2026-09-09", type: "approval", region: "US", note: "grants accelerated approval to sevabertinib for locally advanced or metastatic non-squamous non-small cell lung cancer (accelerated)", source: "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-sevabertinib-locally-advanced-or-metastatic-non-squamous-non-small" }
-  - evidence: On September 9, 2026, the Food and Drug Administration granted accelerated approval to sevabertinib (Hyrnuo, Bayer Healthcare Pharmaceuticals Inc.), a kinase inhibitor, for adult patients with locally advanced or metastatic non-squamous non-small cell lung cancer (NSCLC) whose tumors have HER2 (ERBB ([source](https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-sevabertinib-locally-advanced-or-metastatic-non-squamous-non-small))
-  - file: `src/data/spikes/nsclc.ts:172`
 - [ ] **Daraxonrasib** ([page](https://onco-umber.vercel.app/drugs/daraxonrasib/)) · regulatory-event · `regulatoryEvents`
   - current: 2 events; none dated 2026-08-26
   - proposed: { date: "2026-08-26", type: "approval", region: "US", note: "approves daraxonrasib for metastatic pancreatic adenocarcinoma", source: "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-daraxonrasib-metastatic-pancreatic-adenocarcinoma" }
   - evidence: On August 26, 2026, the Food and Drug Administration approved daraxonrasib (RASONQUE, Revolution Medicines, Inc.), an inhibitor of the RAS GTPase family, for adults with metastatic pancreatic adenocarcinoma who have received at least one prior systemic therapy or who are not candidates for multiagen ([source](https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-daraxonrasib-metastatic-pancreatic-adenocarcinoma))
   - file: `src/data/drugs.ts:520`
-- [ ] **Tislelizumab** ([page](https://onco-umber.vercel.app/drugs/tislelizumab/)) · regulatory-event · `regulatoryEvents`
-  - current: 3 events; none dated 2026-08-25
-  - proposed: { date: "2026-08-25", type: "approval", region: "US", note: "approves zanidatamab-hrii and tislelizumab-jsgr for HER2-positive gastric, gastroesophageal junction, or esophageal adenocarcinoma", source: "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-zanidatamab-hrii-and-tislelizumab-jsgr-her2-positive-gastric-gastroesophageal-junction" }
-  - evidence: On August 25, 2026, the Food and Drug Administration approved zanidatamab-hrii (Ziihera, Jazz Pharmaceuticals) in combination with fluoropyrimidine- and platinum-containing chemotherapy and tislelizumab-jsgr (Tevimbra, BeOne Medicines USA, Inc.), as first-line treatment for adults with HER2-positive ([source](https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-zanidatamab-hrii-and-tislelizumab-jsgr-her2-positive-gastric-gastroesophageal-junction))
-  - file: `src/data/spikes/esophageal.ts:101`
 - [ ] **Zanidatamab** ([page](https://onco-umber.vercel.app/drugs/zanidatamab/)) · regulatory-event · `regulatoryEvents`
   - current: 3 events; none dated 2026-08-25
   - proposed: { date: "2026-08-25", type: "approval", region: "US", note: "approves zanidatamab-hrii and tislelizumab-jsgr for HER2-positive gastric, gastroesophageal junction, or esophageal adenocarcinoma", source: "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-zanidatamab-hrii-and-tislelizumab-jsgr-her2-positive-gastric-gastroesophageal-junction" }
   - evidence: On August 25, 2026, the Food and Drug Administration approved zanidatamab-hrii (Ziihera, Jazz Pharmaceuticals) in combination with fluoropyrimidine- and platinum-containing chemotherapy and tislelizumab-jsgr (Tevimbra, BeOne Medicines USA, Inc.), as first-line treatment for adults with HER2-positive ([source](https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-zanidatamab-hrii-and-tislelizumab-jsgr-her2-positive-gastric-gastroesophageal-junction))
   - file: `src/data/drugs.ts:373`
-- [ ] **Dexamethasone** ([page](https://onco-umber.vercel.app/drugs/dexamethasone/)) · regulatory-event · `regulatoryEvents`
-  - current: 0 events; none dated 2026-08-13
-  - proposed: { date: "2026-08-13", type: "approval", region: "US", note: "grants accelerated approval to iberdomide with daratumumab and hyaluronidase-fihj and dexamethasone for multiple myeloma (accelerated)", source: "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-iberdomide-daratumumab-and-hyaluronidase-fihj-and-dexamethasone" }
-  - evidence: On August 13, 2026, the Food and Drug Administration granted accelerated approval to iberdomide (Zenbexus, Bristol-Myers Squibb Company) in combination with daratumumab and hyaluronidase-fihj and dexamethasone for adults with multiple myeloma who have received at least one prior line of therapy incl ([source](https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-iberdomide-daratumumab-and-hyaluronidase-fihj-and-dexamethasone))
-  - file: `src/data/drugs-approved-wave1.ts:197`
-- [ ] **Daratumumab** ([page](https://onco-umber.vercel.app/drugs/daratumumab/)) · regulatory-event · `regulatoryEvents`
-  - current: 4 events; none dated 2026-08-13
-  - proposed: { date: "2026-08-13", type: "approval", region: "US", note: "grants accelerated approval to iberdomide with daratumumab and hyaluronidase-fihj and dexamethasone for multiple myeloma (accelerated)", source: "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-iberdomide-daratumumab-and-hyaluronidase-fihj-and-dexamethasone" }
-  - evidence: On August 13, 2026, the Food and Drug Administration granted accelerated approval to iberdomide (Zenbexus, Bristol-Myers Squibb Company) in combination with daratumumab and hyaluronidase-fihj and dexamethasone for adults with multiple myeloma who have received at least one prior line of therapy incl ([source](https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-iberdomide-daratumumab-and-hyaluronidase-fihj-and-dexamethasone))
-  - file: `src/data/spikes/multiple-myeloma.ts:78`
-- [ ] **Iberdomide** ([page](https://onco-umber.vercel.app/drugs/iberdomide/)) · regulatory-event · `regulatoryEvents`
-  - current: 0 events; none dated 2026-08-13
-  - proposed: { date: "2026-08-13", type: "approval", region: "US", note: "grants accelerated approval to iberdomide with daratumumab and hyaluronidase-fihj and dexamethasone for multiple myeloma (accelerated)", source: "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-iberdomide-daratumumab-and-hyaluronidase-fihj-and-dexamethasone" }
-  - evidence: On August 13, 2026, the Food and Drug Administration granted accelerated approval to iberdomide (Zenbexus, Bristol-Myers Squibb Company) in combination with daratumumab and hyaluronidase-fihj and dexamethasone for adults with multiple myeloma who have received at least one prior line of therapy incl ([source](https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-iberdomide-daratumumab-and-hyaluronidase-fihj-and-dexamethasone))
-  - file: `src/data/spikes/multiple-myeloma.ts:132`
 - [ ] **Nivolumab** ([page](https://onco-umber.vercel.app/drugs/nivolumab/)) · regulatory-event · `regulatoryEvents`
   - current: 8 events; none dated 2026-08-06
   - proposed: { date: "2026-08-06", type: "approval", region: "US", note: "grants accelerated approval to vusolimogene oderparepvec-wtpg in combination with nivolumab for melanoma (accelerated)", source: "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-vusolimogene-oderparepvec-wtpg-combination-nivolumab-melanoma" }
@@ -356,11 +331,6 @@ Review each line against its source. Apply by editing the file named; nothing is
   - proposed: { date: "2026-07-22", type: "approval", region: "US", note: "approves zidesamtinib for ROS1 -positive non-small cell lung cancer", source: "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-zidesamtinib-ros1-positive-non-small-cell-lung-cancer" }
   - evidence: On July 22, 2026, the Food and Drug Administration approved zidesamtinib (Jideytro, Nuvalent, Inc.) for adults with locally advanced or metastatic ROS1 -positive non-small cell lung cancer (NSCLC) who received at least one prior ROS1 tyrosine kinase inhibitor (TKI). ([source](https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-zidesamtinib-ros1-positive-non-small-cell-lung-cancer))
   - file: `src/data/drugs.ts:553`
-- [ ] **Fulvestrant** ([page](https://onco-umber.vercel.app/drugs/fulvestrant/)) · regulatory-event · `regulatoryEvents`
-  - current: 0 events; none dated 2026-07-14
-  - proposed: { date: "2026-07-14", type: "approval", region: "US", note: "approves gedatolisib with fulvestrant, with or without palbociclib, for HR-positive, HER2-negative locally advanced or metastatic breast cancer", source: "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-gedatolisib-fulvestrant-or-without-palbociclib-hr-positive-her2-negative-locally" }
-  - evidence: On July 14, 2026, the Food and Drug Administration approved gedatolisib (Revtorpyk, Celcuity Inc.) in combination with fulvestrant, with or without palbociclib, for adults with hormone receptor (HR)-positive, human epidermal growth factor receptor 2 (HER2)-negative locally advanced or metastatic bre ([source](https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-gedatolisib-fulvestrant-or-without-palbociclib-hr-positive-her2-negative-locally))
-  - file: `src/data/spikes/breast-hr-positive.ts:243`
 - [ ] **Palbociclib** ([page](https://onco-umber.vercel.app/drugs/palbociclib/)) · regulatory-event · `regulatoryEvents`
   - current: 5 events; none dated 2026-07-14
   - proposed: { date: "2026-07-14", type: "approval", region: "US", note: "approves gedatolisib with fulvestrant, with or without palbociclib, for HR-positive, HER2-negative locally advanced or metastatic breast cancer", source: "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-gedatolisib-fulvestrant-or-without-palbociclib-hr-positive-her2-negative-locally" }
@@ -386,11 +356,6 @@ Review each line against its source. Apply by editing the file named; nothing is
   - proposed: { date: "2026-07-10", type: "approval", region: "US", note: "approves pembrolizumab or pembrolizumab and berahyaluronidase alfa-pmph each with enfortumab vedotin-ejfv for muscle invasive bladder cancer", source: "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-or-pembrolizumab-and-berahyaluronidase-alfa-pmph-each-enfortumab-vedotin" }
   - evidence: On July 10, 2026, the Food and Drug Administration approved pembrolizumab (Keytruda, Merck) or pembrolizumab and berahyaluronidase alfa-pmph (Keytruda Qlex, Merck) each in combination with enfortumab vedotin-ejfv (Padcev, Astellas Pharma) as neoadjuvant treatment (before surgery) followed by adjuvan ([source](https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pembrolizumab-or-pembrolizumab-and-berahyaluronidase-alfa-pmph-each-enfortumab-vedotin))
   - file: `src/data/drugs.ts:236`
-- [ ] **Isatuximab** ([page](https://onco-umber.vercel.app/drugs/isatuximab/)) · regulatory-event · `regulatoryEvents`
-  - current: 2 events; none dated 2026-07-09
-  - proposed: { date: "2026-07-09", type: "approval", region: "US", note: "approves isatuximab-irfc for subcutaneous injection for multiple myeloma indications", source: "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-isatuximab-irfc-subcutaneous-injection-multiple-myeloma-indications" }
-  - evidence: On July 9, 2026, the Food and Drug Administration approved isatuximab-irfc (Sarclisa Escena, Sanofi-Aventis U.S. LLC) for subcutaneous injection for multiple myeloma indications. ([source](https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-isatuximab-irfc-subcutaneous-injection-multiple-myeloma-indications))
-  - file: `src/data/spikes/multiple-myeloma.ts:88`
 - [ ] **Sacituzumab govitecan** ([page](https://onco-umber.vercel.app/drugs/sacituzumab-govitecan/)) · regulatory-event · `regulatoryEvents`
   - current: 7 events; none dated 2026-06-24
   - proposed: { date: "2026-06-24", type: "approval", region: "US", note: "approves sacituzumab govitecan-hziy as monotherapy and in combination with pembrolizumab for first-line treatment of triple-negative breast cancer", source: "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-sacituzumab-govitecan-hziy-monotherapy-and-combination-pembrolizumab-first-line" }
@@ -411,21 +376,11 @@ Review each line against its source. Apply by editing the file named; nothing is
   - proposed: { date: "2026-06-24", type: "approval", region: "US", note: "approves palbociclib with trastuzumab, with or without pertuzumab, and endocrine therapy for the maintenance treatment of HR-positive, HER2-positive metastatic breast cancer", source: "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-palbociclib-trastuzumab-or-without-pertuzumab-and-endocrine-therapy-maintenance" }
   - evidence: On June 24, 2026, the Food and Drug Administration approved palbociclib (Ibrance, Pfizer Inc.) in combination with trastuzumab, with or without pertuzumab, and endocrine therapy for the maintenance treatment of adults with HR-positive, HER2-positive locally advanced or metastatic breast cancer follo ([source](https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-palbociclib-trastuzumab-or-without-pertuzumab-and-endocrine-therapy-maintenance))
   - file: `src/data/drugs.ts:697`
-- [ ] **Pertuzumab** ([page](https://onco-umber.vercel.app/drugs/pertuzumab/)) · regulatory-event · `regulatoryEvents`
-  - current: 4 events; none dated 2026-06-24
-  - proposed: { date: "2026-06-24", type: "approval", region: "US", note: "approves palbociclib with trastuzumab, with or without pertuzumab, and endocrine therapy for the maintenance treatment of HR-positive, HER2-positive metastatic breast cancer", source: "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-palbociclib-trastuzumab-or-without-pertuzumab-and-endocrine-therapy-maintenance" }
-  - evidence: On June 24, 2026, the Food and Drug Administration approved palbociclib (Ibrance, Pfizer Inc.) in combination with trastuzumab, with or without pertuzumab, and endocrine therapy for the maintenance treatment of adults with HR-positive, HER2-positive locally advanced or metastatic breast cancer follo ([source](https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-palbociclib-trastuzumab-or-without-pertuzumab-and-endocrine-therapy-maintenance))
-  - file: `src/data/spikes/breast-her2-positive.ts:168`
 - [ ] **Capivasertib** ([page](https://onco-umber.vercel.app/drugs/capivasertib/)) · regulatory-event · `regulatoryEvents`
   - current: 2 events; none dated 2026-06-12
   - proposed: { date: "2026-06-12", type: "approval", region: "US", note: "approves capivasertib with abiraterone and prednisone for PTEN-deficient androgen pathway modulation-naïve or -sensitive prostate cancer", source: "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-capivasertib-abiraterone-and-prednisone-pten-deficient-androgen-pathway-modulation" }
   - evidence: On June 12, 2026, the Food and Drug Administration approved capivasertib (Truqap, AstraZeneca) in combination with abiraterone and prednisone for adults with metastatic androgen pathway modulation-naïve or -sensitive (mAPMN/S) prostate cancer (previously referred to as metastatic hormone-sensitive p ([source](https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-capivasertib-abiraterone-and-prednisone-pten-deficient-androgen-pathway-modulation))
   - file: `src/data/drugs.ts:609`
-- [ ] **Prednisone** ([page](https://onco-umber.vercel.app/drugs/prednisone/)) · regulatory-event · `regulatoryEvents`
-  - current: 0 events; none dated 2026-06-12
-  - proposed: { date: "2026-06-12", type: "approval", region: "US", note: "approves capivasertib with abiraterone and prednisone for PTEN-deficient androgen pathway modulation-naïve or -sensitive prostate cancer", source: "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-capivasertib-abiraterone-and-prednisone-pten-deficient-androgen-pathway-modulation" }
-  - evidence: On June 12, 2026, the Food and Drug Administration approved capivasertib (Truqap, AstraZeneca) in combination with abiraterone and prednisone for adults with metastatic androgen pathway modulation-naïve or -sensitive (mAPMN/S) prostate cancer (previously referred to as metastatic hormone-sensitive p ([source](https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-capivasertib-abiraterone-and-prednisone-pten-deficient-androgen-pathway-modulation))
-  - file: `src/data/drugs-approved-wave1.ts:202`
 - [ ] **Pembrolizumab** ([page](https://onco-umber.vercel.app/drugs/pembrolizumab/)) · regulatory-event · `regulatoryEvents`
   - current: 10 events; none dated 2026-06-12
   - proposed: { date: "2026-06-12", type: "approval", region: "US", note: "approves belzutifan with pembrolizumab for adjuvant treatment of renal cell carcinoma", source: "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-belzutifan-pembrolizumab-adjuvant-treatment-renal-cell-carcinoma" }
@@ -441,18 +396,13 @@ Review each line against its source. Apply by editing the file named; nothing is
   - proposed: { date: "2026-05-28", type: "approval", region: "US", note: "approves durvalumab in combination with Bacillus Calmette-Guerin for high-risk non-muscle invasive bladder cancer", source: "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-durvalumab-combination-bacillus-calmette-guerin-high-risk-non-muscle-invasive-bladder" }
   - evidence: On May 28, 2026, the Food and Drug Administration approved durvalumab (Imfinzi, AstraZeneca) in combination with Bacillus Calmette-Guerin (BCG) for the treatment of adult patients with BCG-naïve, high-risk non-muscle invasive bladder cancer (NMIBC). ([source](https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-durvalumab-combination-bacillus-calmette-guerin-high-risk-non-muscle-invasive-bladder))
   - file: `src/data/drugs.ts:286`
-- [ ] **Pivekimab sunirine** ([page](https://onco-umber.vercel.app/drugs/pivekimab-sunirine/)) · regulatory-event · `regulatoryEvents`
-  - current: 0 events; none dated 2026-05-27
-  - proposed: { date: "2026-05-27", type: "approval", region: "US", note: "approves pivekimab sunirine-pvzy for blastic plasmacytoid dendritic cell neoplasm, an ultra-rare hematologic malignancy", source: "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pivekimab-sunirine-pvzy-blastic-plasmacytoid-dendritic-cell-neoplasm-ultra-rare" }
-  - evidence: On May 27, 2026, the Food and Drug Administration approved pivekimab sunirine-pvzy (Decnupaz, AbbVie, Inc.), a CD123-directed antibody and alkylating agent conjugate, for adults with blastic plasmacytoid dendritic cell neoplasm (BPDCN). ([source](https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pivekimab-sunirine-pvzy-blastic-plasmacytoid-dendritic-cell-neoplasm-ultra-rare))
-  - file: `src/data/gap-fill.ts:178`
 - [ ] **Datopotamab deruxtecan** ([page](https://onco-umber.vercel.app/drugs/datopotamab-deruxtecan/)) · regulatory-event · `regulatoryEvents`
   - current: 4 events; none dated 2026-05-22
   - proposed: { date: "2026-05-22", type: "approval", region: "US", note: "approves datopotamab deruxtecan-dlnk for unresectable or metastatic triple-negative breast cancer", source: "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-datopotamab-deruxtecan-dlnk-unresectable-or-metastatic-triple-negative-breast-cancer" }
   - evidence: On May 22, 2026, the Food and Drug Administration approved datopotamab deruxtecan-dlnk (Datroway, Daiichi Sankyo, Inc.) for adult patients with unresectable or metastatic triple-negative breast cancer (TNBC) who are not candidates for PD-1/PD-L1 inhibitor therapy. ([source](https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-datopotamab-deruxtecan-dlnk-unresectable-or-metastatic-triple-negative-breast-cancer))
   - file: `src/data/drugs.ts:41`
 
-## Medium confidence (5)
+## Medium confidence (14)
 
 - [ ] **TOWER** ([page](https://onco-umber.vercel.app/trials/tower/)) · trial-status · `status`
   - current: positive
@@ -464,6 +414,51 @@ Review each line against its source. Apply by editing the file named; nothing is
   - proposed: add { region: "US", year: <from label>, indication: <from label> } and set status to approved
   - evidence: openFDA has a label for "Givinostat" ([source](https://open.fda.gov/apis/drug/label/))
   - file: `src/data/drugs-pipeline-wave1.ts:541`
+- [ ] **A Study of BGB-11417 in Participants With Myeloid Malignancies** ([page](https://onco-umber.vercel.app/trials/nct04771130/)) · trial-completion · `yearReported / calendar`
+  - current: 2028-02-08
+  - proposed: 2028-08-31
+  - evidence: Primary completion date moved from 2028-02-08 to 2028-08-31; check the readout calendar entry. ([source](https://clinicaltrials.gov/study/NCT04771130))
+  - file: `src/data/pipeline-trials-wave6.ts:2455`
+- [ ] **A Study to Learn About the Study Medicine (Called PF-07220060 in Combination With PF-07104091) In Participants With Breast Cancer and Solid Tumors** ([page](https://onco-umber.vercel.app/trials/nct05262400/)) · trial-completion · `yearReported / calendar`
+  - current: 2026-08-23
+  - proposed: 2027-02-26
+  - evidence: Primary completion date moved from 2026-08-23 to 2027-02-26; check the readout calendar entry. ([source](https://clinicaltrials.gov/study/NCT05262400))
+  - file: `src/data/pipeline-trials-wave6.ts:6055`
+- [ ] **A Study to Evaluate Efficacy and Safety of Giredestrant Compared With Fulvestrant (Plus a CDK4/6 Inhibitor), in Participants With ER-Positive, HER2-Negative Advanced Breast Cancer Resistant to Adjuvant Endocrine Therapy (pionERA Breast Cancer)** ([page](https://onco-umber.vercel.app/trials/nct06065748/)) · trial-completion · `yearReported / calendar`
+  - current: 2027-02-19
+  - proposed: 2028-04-20
+  - evidence: Primary completion date moved from 2027-02-19 to 2028-04-20; check the readout calendar entry. ([source](https://clinicaltrials.gov/study/NCT06065748))
+  - file: `src/data/pipeline-trials-wave6.ts:1243`
+- [ ] **Study of Arlocabtagene Autoleucel (BMS-986393) a GPRC5D-directed CAR T Cell Therapy in Adult Participants With Relapsed or Refractory Multiple Myeloma** ([page](https://onco-umber.vercel.app/trials/nct06297226/)) · trial-completion · `yearReported / calendar`
+  - current: 2027-06-30
+  - proposed: 2026-07-31
+  - evidence: Primary completion date moved from 2027-06-30 to 2026-07-31; check the readout calendar entry. ([source](https://clinicaltrials.gov/study/NCT06297226))
+  - file: `src/data/pipeline-trials-wave5.ts:2088`
+- [ ] **Study of Olverembatinib (HQP1351) in Patients With CML-CP** ([page](https://onco-umber.vercel.app/trials/nct06423911/)) · trial-completion · `yearReported / calendar`
+  - current: 2025-12
+  - proposed: 2027-06-30
+  - evidence: Primary completion date moved from 2025-12 to 2027-06-30; check the readout calendar entry. ([source](https://clinicaltrials.gov/study/NCT06423911))
+  - file: `src/data/pipeline-trials-wave3.ts:12`
+- [ ] **A Study of Zolbetuximab Together With Pembrolizumab and Chemotherapy in Adults With Gastric Cancer** ([page](https://onco-umber.vercel.app/trials/nct06901531/)) · trial-completion · `yearReported / calendar`
+  - current: 2027-03-31
+  - proposed: 2028-09-30
+  - evidence: Primary completion date moved from 2027-03-31 to 2028-09-30; check the readout calendar entry. ([source](https://clinicaltrials.gov/study/NCT06901531))
+  - file: `src/data/pipeline-trials-wave6.ts:1759`
+- [ ] **A Biomarker Study in Men With Localized Prostate Cancer Treated With Aglatimagene Besadenovec** ([page](https://onco-umber.vercel.app/trials/nct07332000/)) · trial-completion · `yearReported / calendar`
+  - current: 2026-08
+  - proposed: 2027-02
+  - evidence: Primary completion date moved from 2026-08 to 2027-02; check the readout calendar entry. ([source](https://clinicaltrials.gov/study/NCT07332000))
+  - file: `src/data/pipeline-trials-wave5.ts:354`
+- [ ] **Clinical Trial Evaluating TQB6411 Injection in Participant s With Esophageal Cancer** ([page](https://onco-umber.vercel.app/trials/nct07367516/)) · trial-completion · `yearReported / calendar`
+  - current: 2026-09
+  - proposed: 2027-02
+  - evidence: Primary completion date moved from 2026-09 to 2027-02; check the readout calendar entry. ([source](https://clinicaltrials.gov/study/NCT07367516))
+  - file: `src/data/pipeline-trials-wave6.ts:6001`
+- [ ] **A Study to Assess Adverse Events and Change in Disease Activity When Intravenous (IV) Pivekimab Sunirine is Given in Combination With Oral Venetoclax and IV or Subcutaneous Azacitidine in Adult Participants With Acute Myeloid Leukemia (AML)** ([page](https://onco-umber.vercel.app/trials/nct07581002/)) · trial-completion · `yearReported / calendar`
+  - current: 2032-05
+  - proposed: 2032-06
+  - evidence: Primary completion date moved from 2032-05 to 2032-06; check the readout calendar entry. ([source](https://clinicaltrials.gov/study/NCT07581002))
+  - file: `src/data/pipeline-trials-wave6.ts:5743`
 - [ ] **Study of Sacituzumab Govitecan Combinations in First-line Treatment of Participants With Advanced or Metastatic Non-Small-Cell Lung Cancer (NSCLC)** ([page](https://onco-umber.vercel.app/trials/nct05186974/)) · trial-completion · `yearReported / calendar`
   - current: 2026-09
   - proposed: 2027-03
@@ -479,7 +474,7 @@ Review each line against its source. Apply by editing the file named; nothing is
   - proposed: add product (see notice) with a US approval dated 2026-06-30
   - evidence: FDA approves allogeneic regulatory T cell-based immunotherapy with HSPC and T cells-vldq for use in matched donor hematopoietic stem cell transplantation for adults with hematologic malignancies ([source](https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-allogeneic-regulatory-t-cell-based-immunotherapy-hspc-and-t-cells-vldq-use-matched))
 
-## Low confidence (9)
+## Low confidence (10)
 
 - [ ] **ALKOVE-1** ([page](https://onco-umber.vercel.app/trials/alkove-1/)) · trial-status · `status`
   - current: positive
@@ -526,3 +521,7 @@ Review each line against its source. Apply by editing the file named; nothing is
   - proposed: recruiting
   - evidence: ClinicalTrials.gov overall status is RECRUITING; recorded positive. Editorial statuses (positive, negative, mixed) need the result, so this is a floor, not a verdict. ([source](https://clinicaltrials.gov/study/NCT05099172))
   - file: `src/data/spikes/nsclc.ts:126`
+- [ ] **A Study of Atezolizumab With or Without Tiragolumab in Participants With Unresectable Esophageal Squamous Cell Carcinoma Whose Cancers Have Not Progressed Following Definitive Concurrent Chemoradiotherapy (NCT04543617)** ([page](https://onco-umber.vercel.app/drugs/tiragolumab/)) · trial-status · `new trial record`
+  - current: (not in corpus)
+  - proposed: add phase 3 trial NCT04543617 for Tiragolumab with status completed
+  - evidence: A phase 3 study of Tiragolumab moved from ACTIVE_NOT_RECRUITING to COMPLETED (detected 2026-09-17). ([source](https://clinicaltrials.gov/study/NCT04543617))
