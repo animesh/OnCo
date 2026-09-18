@@ -16,6 +16,7 @@ const NCCN_CNS = { version: "NCCN Guidelines: Central Nervous System Cancers", u
 
 export const cnsSubtypes: CancerInput[] = [
   { id: "idh-mutant-astrocytoma", kind: "cancer", name: "Astrocytoma, IDH-mutant (grades 2 to 4)", group: "central nervous system", parent: "glioblastoma", asOf, tags, wikipedia: W("Astrocytoma"),
+    keyPapers: ["paper-indigo-nejm-2023", "paper-who-2021-cns-louis-neuro-oncology-2021", "paper-rtog-9802-buckner-nejm-2016", "paper-catnon-lancet-2017"],
     aka: ["IDH-mutant astrocytoma", "Diffuse astrocytoma, IDH-mutant", "Anaplastic astrocytoma, IDH-mutant", "Lower-grade glioma", "Low-grade glioma (adult)"],
     burden: "A minority of adult diffuse gliomas, presenting mostly in people in their twenties to forties, often with a seizure; it grows slowly for years and then transforms, so patients live with it for a long time and treatment is timed as much as chosen.",
     tldr: "IDH-mutant astrocytoma is the slow-growing form of adult glioma, defined by a mutation in the IDH1 or IDH2 gene that makes the tumour produce a chemical which rewires its own cells. Surgery first, and then either watchful waiting, the new pill vorasidenib, or radiotherapy with chemotherapy, depending on grade and how much tumour is left.",
@@ -48,6 +49,7 @@ export const cnsSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia", url: W("Astrocytoma") }, { label: "INDIGO: vorasidenib in IDH-mutant grade 2 glioma (NEJM 2023)", url: "https://doi.org/10.1056/NEJMoa2304194" }, { label: "RTOG 9802: radiation plus PCV in low-grade glioma (NEJM 2016)", url: "https://doi.org/10.1056/NEJMoa1500925" }] },
 
   { id: "oligodendroglioma", kind: "cancer", name: "Oligodendroglioma, IDH-mutant and 1p/19q-codeleted", group: "central nervous system", parent: "glioblastoma", asOf, tags, wikipedia: W("Oligodendroglioma"),
+    keyPapers: ["paper-indigo-nejm-2023", "paper-who-2021-cns-louis-neuro-oncology-2021", "paper-rtog-9402-cairncross-jco-2013", "paper-eortc-26951-van-den-bent-jco-2013"],
     aka: ["Oligodendroglioma", "Anaplastic oligodendroglioma", "1p/19q codeleted glioma"],
     burden: "A small share of adult gliomas, typically found in the frontal lobes of people in their thirties and forties; it has the best outlook of any diffuse adult glioma, with survival often measured in decades.",
     tldr: "Oligodendroglioma is the adult brain tumour most responsive to chemotherapy. It is recognised by an IDH mutation together with loss of parts of chromosomes 1 and 19, and after surgery it is treated with radiotherapy plus the PCV drug combination, or, for small grade 2 tumours, with vorasidenib or watchful waiting.",
@@ -78,6 +80,7 @@ export const cnsSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia", url: W("Oligodendroglioma") }, { label: "RTOG 9402 long-term results (JCO 2013)", url: "https://doi.org/10.1200/JCO.2012.43.2674" }, { label: "EORTC 26951 long-term results (JCO 2013)", url: "https://doi.org/10.1200/JCO.2012.43.2229" }] },
 
   { id: "meningioma", kind: "cancer", name: "Meningioma", group: "central nervous system", parent: "brain-tumours", asOf, tags, wikipedia: W("Meningioma"),
+    keyPapers: ["paper-who-2021-cns-louis-neuro-oncology-2021", "paper-eano-meningioma-goldbrunner-neuro-oncology-2021", "paper-sahm-meningioma-methylation-lancet-oncol-2017"],
     aka: ["Meningeal tumour", "Atypical meningioma", "Anaplastic meningioma", "Malignant meningioma"],
     burden: "The commonest primary intracranial tumour, found in about one in a hundred adults on imaging, mostly women; the great majority are grade 1 and never threaten life, while grade 3 tumours behave like cancers and have no approved drug.",
     tldr: "Meningiomas grow from the membranes covering the brain and spinal cord rather than from the brain itself. Most are slow and benign and are either watched or removed; radiotherapy or radiosurgery treats what surgery cannot reach or what grows back, and no drug has yet been approved for them.",
@@ -107,6 +110,7 @@ export const cnsSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia", url: W("Meningioma") }, { label: "EANO guideline on meningiomas (Neuro-Oncology 2021)", url: "https://doi.org/10.1093/neuonc/noab150" }] },
 
   { id: "secondary-brain-tumours", kind: "cancer", name: "Brain metastases (secondary brain tumours)", group: "central nervous system", parent: "brain-tumours", asOf, tags, wikipedia: W("Brain_metastasis"),
+    keyPapers: ["paper-alliance-n0574-brown-jama-2016", "paper-n107c-brown-lancet-oncol-2017", "paper-nrg-cc001-brown-jco-2020", "paper-quartz-lancet-2016"],
     aka: ["Brain metastases", "Secondary brain cancer", "Intracranial metastases", "Cerebral metastases", "Brain mets"],
     burden: "The commonest intracranial tumour in adults, many times more frequent than primary brain tumours; lung cancer, breast cancer, melanoma, kidney cancer and bowel cancer account for most, and incidence is rising as people live longer with systemic disease.",
     tldr: "Brain metastases are cancers that have spread to the brain from elsewhere, most often from the lung, breast or skin. Focused radiation aimed at each spot (radiosurgery) has largely replaced radiation to the whole brain, and for some cancers modern targeted drugs and immunotherapy reach the brain well enough to shrink the deposits on their own.",
@@ -142,6 +146,7 @@ export const cnsSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia", url: W("Brain_metastasis") }, { label: "Alliance N0574: radiosurgery with or without whole-brain radiotherapy (JAMA 2016)", url: "https://doi.org/10.1001/jama.2016.9839" }, { label: "QUARTZ (Lancet 2016)", url: "https://doi.org/10.1016/S0140-6736(16)30825-X" }] },
 
   { id: "paediatric-high-grade-glioma", kind: "cancer", name: "Paediatric high-grade glioma (excluding diffuse midline glioma)", group: "paediatric", parent: "glioblastoma", asOf, tags: [...tags, "paediatric"], wikipedia: W("Glioma"),
+    keyPapers: ["paper-who-2021-cns-louis-neuro-oncology-2021", "paper-mackay-paediatric-hgg-cancer-cell-2017", "paper-hargrave-dabrafenib-trametinib-paediatric-hgg-jco-2023"],
     aka: ["pHGG", "Childhood high-grade glioma", "Paediatric glioblastoma", "Diffuse hemispheric glioma, H3 G34-mutant", "Infant-type hemispheric glioma"],
     burden: "A minority of childhood brain tumours but a leading cause of death among them; most children with hemispheric high-grade glioma die within a few years of diagnosis, while infants with fusion-driven tumours can do far better.",
     tldr: "High-grade gliomas in children look like adult glioblastoma under the microscope but are driven by different genes, so they are now classified separately. Surgery and radiotherapy remain the mainstay and chemotherapy adds little; the real gains are in small subsets with a targetable gene change, such as BRAF V600E tumours and the fusion-driven tumours of infants.",
@@ -171,6 +176,7 @@ export const cnsSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia", url: W("Glioma") }, { label: "NCI PDQ: childhood astrocytomas, other gliomas and glioneuronal tumours", url: "https://www.cancer.gov/types/brain/hp/child-astrocytoma-treament-pdq" }] },
 
   { id: "spinal-cord-tumours", kind: "cancer", name: "Spinal cord tumours (intramedullary and intradural)", group: "central nervous system", parent: "brain-tumours", asOf, tags, wikipedia: W("Spinal_tumor"),
+    keyPapers: ["paper-who-2021-cns-louis-neuro-oncology-2021", "paper-belzutifan-vhl-jonasch-nejm-2021"],
     aka: ["Intramedullary spinal cord tumour", "Spinal ependymoma", "Spinal astrocytoma", "Intradural extramedullary tumour", "Spinal cord glioma"],
     burden: "A small fraction of central nervous system tumours, mostly benign or low grade; ependymoma is the commonest intramedullary tumour in adults and astrocytoma in children, and meningioma and schwannoma dominate the intradural extramedullary space.",
     tldr: "Tumours inside or around the spinal cord are rare and usually slow growing, but they press on the cord and threaten walking and bladder control. Most are removed by a surgeon watching nerve signals during the operation; radiotherapy is used when a tumour cannot be fully removed or is high grade, and there are few drugs.",
@@ -198,6 +204,7 @@ export const cnsSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia", url: W("Spinal_tumor") }, { label: "NCI: adult central nervous system tumours treatment (PDQ)", url: "https://www.cancer.gov/types/brain/hp/adult-brain-treatment-pdq" }] },
 
   { id: "vestibular-schwannoma", kind: "cancer", name: "Vestibular schwannoma (acoustic neuroma)", group: "central nervous system", parent: "brain-tumours", asOf, tags, wikipedia: W("Vestibular_schwannoma"),
+    keyPapers: ["paper-plotkin-bevacizumab-nf2-nejm-2009", "paper-carlson-link-vestibular-schwannomas-nejm-2021"],
     aka: ["Acoustic neuroma", "Vestibular schwannoma", "NF2-related schwannomatosis", "Eighth nerve tumour"],
     burden: "A benign tumour found in roughly one in a thousand people over a lifetime, presenting with one-sided hearing loss; sporadic tumours are single, while NF2-related schwannomatosis causes bilateral tumours from young adulthood and is the hard form of the disease.",
     tldr: "A vestibular schwannoma is a benign growth on the balance and hearing nerve, deep in the skull. It is rarely dangerous, so many are simply watched with scans; growing tumours are treated with either an operation or a single precisely focused dose of radiation, and people with the inherited condition NF2, who develop tumours on both sides, can be helped by the drug bevacizumab.",
@@ -228,6 +235,7 @@ export const cnsSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia", url: W("Vestibular_schwannoma") }, { label: "Bevacizumab in NF2 vestibular schwannomas (NEJM 2009)", url: "https://doi.org/10.1056/NEJMoa0902579" }] },
 
   { id: "cns-germ-cell-tumours", kind: "cancer", name: "Central nervous system germ cell tumours (germinoma and non-germinomatous)", group: "central nervous system", parent: "brain-tumours", asOf, tags: [...tags, "paediatric"], wikipedia: W("Germinoma"),
+    keyPapers: ["paper-who-2021-cns-louis-neuro-oncology-2021", "paper-siop-cns-gct-96-calaminus-neuro-oncology-2013", "paper-acns1123-germinoma-neuro-oncology-2022"],
     aka: ["Intracranial germ cell tumour", "CNS germinoma", "Pineal germinoma", "Suprasellar germinoma", "Non-germinomatous germ cell tumour (NGGCT)", "Intracranial teratoma"],
     burden: "A few percent of childhood and adolescent brain tumours in Western countries and several times commoner in East Asia; peak age is the second decade with a male excess, and germinoma is one of the most curable brain tumours.",
     tldr: "Germ cell tumours of the brain grow near the pineal gland or above the pituitary in teenagers. The commonest kind, germinoma, is so sensitive to radiation and chemotherapy that most patients are cured; the other kinds need stronger chemotherapy and radiotherapy, and doctors measure two proteins in the blood and spinal fluid to tell them apart and to follow treatment.",

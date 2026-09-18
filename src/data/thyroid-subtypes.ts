@@ -12,6 +12,7 @@ const tags = ["subtype-page"];
 
 export const thyroidSubtypes: CancerInput[] = [
   { id: "papillary-thyroid-cancer", kind: "cancer", name: "Papillary thyroid cancer", group: "endocrine", parent: "thyroid", asOf, tags, wikipedia: W("Papillary_thyroid_cancer"),
+    keyPapers: ["paper-ata-2015-thyroid-nodules-dtc-haugen-thyroid-2016", "paper-select-lenvatinib-nejm-2015", "paper-estimabl2-leboulleux-nejm-2022", "paper-ito-kuma-active-surveillance-microcarcinoma-thyroid-2014"],
     aka: ["Papillary thyroid carcinoma", "PTC", "Papillary microcarcinoma (under 1 cm)"],
     burden: "About four in five thyroid cancers; incidence tripled over three decades in many countries mainly through ultrasound detection of small tumours, while deaths barely changed; more than nine in ten patients are alive at ten years.",
     tldr: "Papillary thyroid cancer is the commonest and most curable thyroid cancer. Most people are treated with surgery, some with radioactive iodine afterwards, and many small tumours can simply be watched. Only the rare tumours that stop taking up iodine need targeted drugs.",
@@ -36,6 +37,7 @@ export const thyroidSubtypes: CancerInput[] = [
     pipeline: ["dabrafenib","selpercatinib","larotrectinib"], openProblems: ["Overdiagnosis and overtreatment of small tumours found by imaging.", "Which intermediate-risk patients truly benefit from radioactive iodine.", "Resistance to kinase inhibitors in refractory disease."],
     links: [{ label: "Wikipedia", url: W("Papillary_thyroid_cancer") }, { label: "American Thyroid Association guidelines", url: "https://www.thyroid.org/professionals/ata-professional-guidelines/" }] },
   { id: "follicular-thyroid-cancer", kind: "cancer", name: "Follicular thyroid cancer", group: "endocrine", parent: "thyroid", asOf, tags, wikipedia: W("Follicular_thyroid_cancer"),
+    keyPapers: ["paper-ata-2015-thyroid-nodules-dtc-haugen-thyroid-2016", "paper-select-lenvatinib-nejm-2015", "paper-decision-sorafenib-lancet-2014"],
     aka: ["Follicular thyroid carcinoma", "FTC", "Oncocytic (Hurthle cell) carcinoma"],
     burden: "About one in ten thyroid cancers, commoner where iodine is scarce; it spreads through the blood to bone and lung rather than to neck nodes, and survival is somewhat lower than for papillary cancer but still high.",
     tldr: "Follicular thyroid cancer looks like a benign nodule on a needle biopsy, so the diagnosis is usually made only after surgery. It spreads through the bloodstream rather than to neck nodes, is treated like papillary cancer with surgery and radioactive iodine, and has a good outlook when caught early.",
@@ -57,6 +59,7 @@ export const thyroidSubtypes: CancerInput[] = [
     pipeline: ["dabrafenib","lenvatinib"], openProblems: ["Telling adenoma from carcinoma without surgery.", "Bone metastases respond poorly to iodine.", "Few trials specific to follicular histology."],
     links: [{ label: "Wikipedia", url: W("Follicular_thyroid_cancer") }] },
   { id: "medullary-thyroid-cancer", kind: "cancer", name: "Medullary thyroid cancer", group: "endocrine", parent: "thyroid", asOf, tags, wikipedia: W("Medullary_thyroid_cancer"),
+    keyPapers: ["paper-libretto-531-nejm-2023", "paper-ata-medullary-thyroid-guideline-wells-thyroid-2015", "paper-exam-cabozantinib-mtc-elisei-jco-2013", "paper-zeta-vandetanib-mtc-wells-jco-2012"],
     aka: ["Medullary thyroid carcinoma", "MTC"],
     burden: "Two to four percent of thyroid cancers; a quarter are inherited through a RET mutation in the multiple endocrine neoplasia type 2 syndromes; ten-year survival ranges from above 95 percent for disease confined to the thyroid to under half once distant spread has occurred.",
     tldr: "Medullary thyroid cancer comes from the calcitonin-making C cells, not the thyroid hormone cells, so radioactive iodine does not work. Surgery is the only cure, a quarter of cases run in families through the RET gene, and the RET-selective drug selpercatinib has transformed treatment of advanced disease.",
@@ -81,6 +84,7 @@ export const thyroidSubtypes: CancerInput[] = [
     pipeline: ["selpercatinib"], openProblems: ["No cure once the disease has spread beyond the neck.", "Resistance mutations to RET inhibitors (G810) are emerging.", "RET-negative sporadic disease has no targeted option."],
     links: [{ label: "Wikipedia", url: W("Medullary_thyroid_cancer") }] },
   { id: "anaplastic-thyroid-cancer", kind: "cancer", name: "Anaplastic thyroid cancer", group: "endocrine", parent: "thyroid", asOf, tags, wikipedia: W("Anaplastic_thyroid_cancer"),
+    keyPapers: ["paper-subbiah-dabrafenib-trametinib-atc-jco-2018", "paper-ata-anaplastic-thyroid-guideline-bible-thyroid-2021", "paper-maniakas-neoadjuvant-braf-atc-jama-oncol-2020"],
     aka: ["Anaplastic thyroid carcinoma", "ATC", "Undifferentiated thyroid carcinoma"],
     burden: "One to two percent of thyroid cancers but a large share of thyroid cancer deaths; median survival has historically been about six months, and every case is stage IV by definition.",
     tldr: "Anaplastic thyroid cancer is the rare, fast-growing form that presents as a rapidly enlarging neck mass threatening the airway. It was almost uniformly fatal within months; combining BRAF-targeted drugs, immunotherapy, surgery and radiotherapy has lifted survival for the first time.",

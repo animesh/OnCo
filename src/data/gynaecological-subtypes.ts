@@ -20,6 +20,7 @@ export const gynaecologicalSubtypes: CancerInput[] = [
   // Endometrial cancer by molecular class
   // ---------------------------------------------------------------------------------------------------------------------
   { id: "endometrial-pole-ultramutated", kind: "cancer", name: "POLE-ultramutated endometrial cancer", group: "gynaecologic", parent: "endometrial", asOf, tags, wikipedia: W("Endometrial_cancer"),
+    keyPapers: ["paper-promise-talhouk-cancer-2017", "paper-esgo-estro-esp-endometrial-concin-ijgc-2021", "paper-portec-3-molecular-leon-castillo-jco-2020", "paper-church-pole-endometrial-jnci-2015"],
     aka: ["POLEmut endometrial cancer", "POLE exonuclease domain mutant endometrial carcinoma", "Ultramutated endometrial cancer"],
     burden: "Roughly one in fourteen endometrial cancers, typically in younger women with high-grade endometrioid tumours; almost none recur after surgery, so the class matters mainly because it identifies women who can safely be spared adjuvant treatment.",
     tldr: "POLE-ultramutated endometrial cancer carries a fault in the proofreading part of a DNA-copying enzyme, so its cells pile up enormous numbers of mutations. It looks aggressive under the microscope yet almost never comes back after surgery, so trials are testing whether radiotherapy and chemotherapy can be dropped altogether.",
@@ -45,6 +46,7 @@ export const gynaecologicalSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia", url: W("Endometrial_cancer") }] },
 
   { id: "endometrial-mmr-deficient", kind: "cancer", name: "Mismatch-repair-deficient endometrial cancer", group: "gynaecologic", parent: "endometrial", asOf, tags, wikipedia: W("Endometrial_cancer"),
+    keyPapers: ["paper-ruby-nejm-2023", "paper-nrg-gy018-nejm-2023", "paper-promise-talhouk-cancer-2017", "paper-garnet-dostarlimab-oaknin-jama-oncol-2020"],
     aka: ["dMMR endometrial cancer", "MSI-high endometrial cancer", "MMRd endometrial cancer", "Lynch-associated endometrial cancer"],
     burden: "About a quarter to three in ten endometrial cancers, the largest molecular class after no specific molecular profile; most are sporadic and caused by MLH1 promoter methylation, and about three percent of all endometrial cancers arise in Lynch syndrome carriers.",
     tldr: "Mismatch-repair-deficient endometrial cancer has lost the machinery that corrects copying errors in DNA, so it accumulates thousands of mutations that make it visible to the immune system. Adding dostarlimab or pembrolizumab to chemotherapy in advanced disease cut the risk of progression by about seventy percent, and many patients remain in remission years later.",
@@ -72,6 +74,7 @@ export const gynaecologicalSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia", url: W("Endometrial_cancer") }] },
 
   { id: "endometrial-p53-abnormal", kind: "cancer", name: "p53-abnormal endometrial cancer, including uterine serous carcinoma", group: "gynaecologic", parent: "endometrial", asOf, tags, wikipedia: W("Uterine_serous_carcinoma"),
+    keyPapers: ["paper-promise-talhouk-cancer-2017", "paper-tcga-endometrial-nature-2013", "paper-portec-3-lancet-oncol-2018", "paper-fader-trastuzumab-uterine-serous-jco-2018"],
     aka: ["p53abn endometrial cancer", "Copy-number-high endometrial cancer", "Uterine serous carcinoma", "Uterine papillary serous carcinoma", "Serous-like endometrial cancer"],
     burden: "About fifteen percent of endometrial cancers but more than half of the deaths; the class includes most serous carcinomas, most carcinosarcomas and a share of grade 3 endometrioid and clear cell tumours, and it recurs distantly even when caught at an early stage.",
     tldr: "p53-abnormal endometrial cancer is the aggressive class, dominated by serous carcinoma, whose cells have lost the p53 guardian gene and carry scrambled chromosomes. It is the one group that clearly gains from adding chemotherapy to radiotherapy after surgery, and about a quarter of serous tumours overexpress HER2, which trastuzumab and trastuzumab deruxtecan can target.",
@@ -98,6 +101,7 @@ export const gynaecologicalSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia", url: W("Uterine_serous_carcinoma") }] },
 
   { id: "endometrial-nsmp", kind: "cancer", name: "Endometrial cancer with no specific molecular profile", group: "gynaecologic", parent: "endometrial", asOf, tags, wikipedia: W("Endometrial_cancer"),
+    keyPapers: ["paper-nrg-gy018-nejm-2023", "paper-promise-talhouk-cancer-2017", "paper-portec-2-lancet-2010", "paper-esgo-estro-esp-endometrial-concin-ijgc-2021"],
     aka: ["NSMP endometrial cancer", "p53-wild-type, MMR-proficient, POLE-wild-type endometrial cancer", "Copy-number-low endometrial cancer"],
     burden: "About half of all endometrial cancers, mostly low-grade endometrioid tumours in postmenopausal women with obesity or oestrogen excess; the great majority are cured by surgery alone, and the challenge is finding the minority that will recur.",
     tldr: "Endometrial cancer with no specific molecular profile is the default class: no POLE mutation, intact mismatch repair and normal p53. Most are low-grade, oestrogen-driven tumours cured by hysterectomy, and hormone-blocking drugs are their most natural treatment when they do recur.",
@@ -125,6 +129,7 @@ export const gynaecologicalSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia", url: W("Endometrial_cancer") }] },
 
   { id: "advanced-recurrent-endometrial-cancer", kind: "cancer", name: "Advanced or recurrent endometrial cancer", group: "gynaecologic", parent: "endometrial", asOf, tags, wikipedia: W("Endometrial_cancer"),
+    keyPapers: ["paper-ruby-nejm-2023", "paper-nrg-gy018-nejm-2023", "paper-keynote-775-nejm-2022", "paper-duo-e-jco-2023"],
     aka: ["Stage III to IV endometrial cancer", "Metastatic endometrial cancer", "Relapsed endometrial cancer", "Primary advanced endometrial cancer"],
     burden: "Around one in five endometrial cancers present at stage III or IV or relapse after treatment; this is the group in which mortality from the disease is rising in many countries, and the group that immunotherapy has transformed since 2023.",
     tldr: "Advanced or recurrent endometrial cancer has spread beyond the uterus or come back after treatment. Chemotherapy plus an immune checkpoint antibody is now the first treatment for everyone, with the biggest gains in mismatch-repair-deficient tumours, and lenvatinib with pembrolizumab is the standard when platinum chemotherapy stops working.",
@@ -152,6 +157,7 @@ export const gynaecologicalSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia", url: W("Endometrial_cancer") }] },
 
   { id: "uterine-carcinosarcoma", kind: "cancer", name: "Uterine carcinosarcoma", group: "gynaecologic", parent: "endometrial", asOf, tags, wikipedia: W("Uterine_carcinosarcoma"),
+    keyPapers: ["paper-ruby-nejm-2023", "paper-destiny-pantumor02-jco-2024", "paper-gog-0261-carcinosarcoma-powell-jco-2022"],
     aka: ["Malignant mixed Mullerian tumour", "MMMT", "Endometrial carcinosarcoma"],
     burden: "About five percent of uterine cancers but a far larger share of deaths; most patients are older women, half present with disease beyond the uterus, and even stage I tumours recur in a third of cases.",
     tldr: "Uterine carcinosarcoma is a two-faced cancer with a carcinoma part and a sarcoma-like part that both come from the same faulty epithelial cell. It is treated as a high-grade endometrial cancer, with surgery, carboplatin-paclitaxel and often radiotherapy, and its frequent HER2 expression is opening a route to antibody-drug conjugates.",
@@ -179,6 +185,7 @@ export const gynaecologicalSubtypes: CancerInput[] = [
   // Cervical cancer by stage
   // ---------------------------------------------------------------------------------------------------------------------
   { id: "early-cervical-cancer", kind: "cancer", name: "Early cervical cancer and fertility-sparing surgery", group: "gynaecologic", parent: "cervical", asOf, tags, wikipedia: W("Cervical_cancer"),
+    keyPapers: ["paper-lacc-nejm-2018", "paper-shape-nejm-2024"],
     aka: ["Stage IA to IB2 cervical cancer", "Early-stage cervical cancer", "Fertility-sparing cervical cancer surgery", "Radical trachelectomy candidates"],
     burden: "In screened populations about half of cervical cancers are found at stage I, often in women in their thirties and forties who have not completed their families; cure rates exceed ninety percent, so the questions are how little surgery is safe and how to preserve fertility.",
     tldr: "Early cervical cancer is confined to the cervix and is usually cured by surgery. Recent trials have shown that open surgery is safer than keyhole surgery for radical hysterectomy, that a simple hysterectomy is enough for the smallest tumours, and that young women with small tumours can keep their uterus with a trachelectomy.",
@@ -207,6 +214,7 @@ export const gynaecologicalSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia", url: W("Cervical_cancer") }] },
 
   { id: "locally-advanced-cervical-cancer", kind: "cancer", name: "Locally advanced cervical cancer", group: "gynaecologic", parent: "cervical", asOf, tags, wikipedia: W("Cervical_cancer"),
+    keyPapers: ["paper-keynote-a18-lancet-2024", "paper-interlace-lancet-2024", "paper-outback-lancet-oncol-2023", "paper-rose-cisplatin-chemoradiation-cervical-nejm-1999"],
     aka: ["Stage IB3 to IVA cervical cancer", "LACC (disease state, not the surgical trial)", "Node-positive cervical cancer", "Bulky cervical cancer"],
     burden: "Most cervical cancers worldwide present at this stage because screening is absent; even with chemoradiation about a third of women relapse, so it is the stage where the disease kills most of its victims and where the newest trials have made the largest gains.",
     tldr: "Locally advanced cervical cancer has grown beyond the cervix or into the pelvic lymph nodes but not to distant organs. It is treated with cisplatin chemotherapy given alongside external radiotherapy and brachytherapy, and two recent trials have improved on that: adding pembrolizumab, and giving six weeks of chemotherapy before the radiotherapy starts.",
@@ -235,6 +243,7 @@ export const gynaecologicalSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia", url: W("Cervical_cancer") }] },
 
   { id: "recurrent-metastatic-cervical-cancer", kind: "cancer", name: "Recurrent or metastatic cervical cancer", group: "gynaecologic", parent: "cervical", asOf, tags, wikipedia: W("Cervical_cancer"),
+    keyPapers: ["paper-keynote-826-nejm-2021", "paper-innovatv-301-tisotumab-nejm-2024", "paper-empower-cervical-1-cemiplimab-nejm-2022", "paper-gog-240-bevacizumab-cervical-nejm-2014"],
     aka: ["Persistent, recurrent or metastatic cervical cancer", "Stage IVB cervical cancer", "Advanced cervical cancer"],
     burden: "Around one in ten cervical cancers present with distant spread and a third of locally advanced cases relapse; median survival was about a year before 2014, and first-line chemo-immunotherapy has now more than doubled it for many women.",
     tldr: "Recurrent or metastatic cervical cancer has spread beyond the pelvis or come back where it cannot be cured by surgery or radiotherapy. Pembrolizumab added to chemotherapy and bevacizumab is the first treatment, and the antibody-drug conjugate tisotumab vedotin or the PD-1 antibody cemiplimab extend life when it progresses.",
@@ -265,6 +274,7 @@ export const gynaecologicalSubtypes: CancerInput[] = [
   // Ovarian cancer by platinum sensitivity
   // ---------------------------------------------------------------------------------------------------------------------
   { id: "platinum-sensitive-ovarian-cancer", kind: "cancer", name: "Platinum-sensitive ovarian cancer", group: "gynaecologic", parent: "ovarian", asOf, tags, wikipedia: W("Ovarian_cancer"),
+    keyPapers: ["paper-solo-1-nejm-2018", "paper-paola-1-nejm-2019", "paper-prima-niraparib-nejm-2019", "paper-desktop-iii-nejm-2021"],
     aka: ["Platinum-sensitive relapsed ovarian cancer", "Newly diagnosed ovarian cancer in response to platinum", "Platinum-free interval over six months"],
     burden: "Most advanced ovarian cancers respond to first-line platinum, and the majority of relapses occur more than six months after the last platinum dose; this state covers the largest group of women on treatment and is where PARP inhibitor maintenance has changed the natural history.",
     tldr: "Platinum-sensitive ovarian cancer is disease that responded to carboplatin and either has not relapsed or relapses more than six months after the last dose. It is treated with further platinum chemotherapy, sometimes repeat surgery, and above all with maintenance PARP inhibitors, which keep BRCA-mutant tumours away for years and have raised long-term survival.",
@@ -294,6 +304,7 @@ export const gynaecologicalSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia", url: W("Ovarian_cancer") }] },
 
   { id: "platinum-resistant-ovarian-cancer", kind: "cancer", name: "Platinum-resistant ovarian cancer", group: "gynaecologic", parent: "ovarian", asOf, tags, wikipedia: W("Ovarian_cancer"),
+    keyPapers: ["paper-mirasol-nejm-2023", "paper-aurelia-jco-2014", "paper-rosella-relacorilant-lancet-2025"],
     aka: ["Platinum-resistant recurrent ovarian cancer", "Platinum-refractory ovarian cancer", "Platinum-free interval under six months", "PROC"],
     burden: "Every woman who relapses repeatedly eventually reaches this state, and about a quarter of advanced ovarian cancers are resistant from the start; median survival was around a year with single-agent chemotherapy, and it is where the first antibody-drug conjugate and the first new drug classes in a decade have arrived.",
     tldr: "Platinum-resistant ovarian cancer grows back within six months of platinum chemotherapy, or during it, and used to be treated with single chemotherapy drugs that shrink a tumour one time in ten. The antibody-drug conjugate mirvetuximab soravtansine, the cortisol-blocking drug relacorilant and pembrolizumab in PD-L1-positive tumours have each extended survival in phase 3 trials since 2023.",

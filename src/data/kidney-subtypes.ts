@@ -12,6 +12,7 @@ const tags = ["subtype-page"];
 
 export const kidneySubtypes: CancerInput[] = [
   { id: "clear-cell-rcc", kind: "cancer", name: "Clear cell renal cell carcinoma", group: "genitourinary", parent: "rcc", asOf, tags, wikipedia: W("Clear-cell_renal_cell_carcinoma"),
+    keyPapers: ["paper-keynote-564-nejm-2021", "paper-clear-nejm-2021", "paper-keynote-426-nejm-2019", "paper-checkmate-214-nejm-2018"],
     aka: ["ccRCC", "Conventional renal cell carcinoma"],
     burden: "About three quarters of kidney cancers and most of the deaths; a third of patients present with or develop metastases, and immunotherapy combinations have lifted median survival in advanced disease to around four years.",
     tldr: "Clear cell is the common kidney cancer, driven by loss of the VHL gene that leaves the tumour behaving as if starved of oxygen and flooding itself with blood vessels. That biology explains why anti-angiogenic drugs, immunotherapy and the HIF-2 alpha blocker belzutifan all work.",
@@ -37,6 +38,7 @@ export const kidneySubtypes: CancerInput[] = [
     pipeline: ["belzutifan","hif2a"], openProblems: ["No validated biomarker chooses between immunotherapy doublets.", "Most metastatic patients still progress within two to three years.", "Overtreatment of small renal masses versus the risk of surveillance."],
     links: [{ label: "Wikipedia", url: W("Clear-cell_renal_cell_carcinoma") }] },
   { id: "papillary-rcc", kind: "cancer", name: "Papillary renal cell carcinoma", group: "genitourinary", parent: "rcc", asOf, tags, wikipedia: W("Papillary_renal_cell_carcinomas"),
+    keyPapers: ["paper-who-2022-gu-moch-eur-urol-2022", "paper-aspen-armstrong-lancet-oncol-2016", "paper-papmet-pal-lancet-2021", "paper-tcga-papillary-rcc-nejm-2016"],
     aka: ["pRCC", "Papillary RCC"],
     burden: "Ten to fifteen percent of kidney cancers, commoner in men, in Black patients and in end-stage kidney disease; localised tumours do well after surgery, while metastatic disease has fared worse than clear cell cancer on the same drugs.",
     tldr: "Papillary kidney cancer is the second commonest type and does not share the VHL biology of clear cell cancer, so the drugs work differently: the MET-targeting drug cabozantinib beat sunitinib in the first trial run just for this disease, and two hereditary syndromes account for some cases.",
@@ -58,6 +60,7 @@ export const kidneySubtypes: CancerInput[] = [
     pipeline: ["savolitinib","cabozantinib"], openProblems: ["Small trials; most evidence is extrapolated from clear cell disease.", "No approved therapy specific to FH-deficient cancer.", "Which patients benefit from immunotherapy."],
     links: [{ label: "Wikipedia", url: W("Papillary_renal_cell_carcinomas") }] },
   { id: "chromophobe-rcc", kind: "cancer", name: "Chromophobe renal cell carcinoma", group: "genitourinary", parent: "rcc", asOf, tags, wikipedia: W("Chromophobe_renal_cell_carcinoma")
+    , keyPapers: ["paper-who-2022-gu-moch-eur-urol-2022", "paper-tcga-chromophobe-davis-cancer-cell-2014", "paper-aspen-armstrong-lancet-oncol-2016"]
     , aka: ["chRCC"],
     burden: "About five percent of kidney cancers, with the best outlook of the common types: fewer than one in ten spread, and those that do are often slow, but sarcomatoid change turns it deadly.",
     tldr: "Chromophobe kidney cancer comes from a different cell of the kidney's tubules, usually behaves gently and is cured by surgery. Its rare metastatic form responds poorly to immunotherapy, so kinase and mTOR inhibitors are used, and it runs in families with Birt-Hogg-Dube syndrome.",

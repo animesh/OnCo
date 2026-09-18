@@ -16,6 +16,7 @@ const tags = ["subtype-page"];
 
 export const sarcomaBoneSubtypes: CancerInput[] = [
   { id: "chondrosarcoma", kind: "cancer", name: "Chondrosarcoma", group: "sarcoma", parent: "sarcoma", asOf, tags, wikipedia: W("Chondrosarcoma"),
+    keyPapers: ["paper-amary-idh-cartilaginous-tumours-j-pathol-2011", "paper-esmo-bone-sarcoma-guideline-strauss-ann-oncol-2021"],
     aka: ["Cartilage sarcoma", "Atypical cartilaginous tumour (grade 1, limbs)", "Dedifferentiated chondrosarcoma", "Mesenchymal chondrosarcoma"],
     burden: "The commonest primary bone sarcoma of adults, typically diagnosed between 40 and 70 in the pelvis, proximal femur, shoulder girdle and ribs; low-grade tumours are cured by surgery alone, while dedifferentiated tumours are among the most lethal of all sarcomas.",
     tldr: "Chondrosarcoma is a cancer of cartilage-forming cells in bone. It is nearly immune to chemotherapy and radiotherapy, so complete surgery is the treatment, with proton or carbon-ion beams for skull base and spine tumours that cannot be fully removed. Half of conventional tumours carry an IDH mutation, and the IDH1 blocker ivosidenib is in a phase 3 trial.",
@@ -41,6 +42,7 @@ export const sarcomaBoneSubtypes: CancerInput[] = [
     related: ["osteosarcoma", "chordoma"], links: [{ label: "Wikipedia", url: W("Chondrosarcoma") }] },
 
   { id: "angiosarcoma", kind: "cancer", name: "Angiosarcoma", group: "sarcoma", parent: "vascular-tumours", asOf, tags, wikipedia: W("Angiosarcoma"),
+    keyPapers: ["paper-angiotax-paclitaxel-angiosarcoma-penel-jco-2008", "paper-young-angiosarcoma-review-lancet-oncol-2010"],
     aka: ["Haemangiosarcoma", "Lymphangiosarcoma", "Stewart-Treves syndrome (lymphoedema-associated angiosarcoma)", "Radiation-associated angiosarcoma"],
     burden: "About one to two percent of soft tissue sarcomas; arises in the sun-damaged scalp and face of older people, in the irradiated breast, in chronically swollen limbs and in the liver, heart and spleen. It spreads early and median survival with metastatic disease is under a year in most series.",
     tldr: "Angiosarcoma is an aggressive cancer of the cells that line blood and lymph vessels. It grows as bruise-like patches on the scalp of older people, in breasts treated years earlier with radiotherapy, or inside organs. Surgery and radiotherapy are used where possible, weekly paclitaxel is the most active drug, and immunotherapy helps a minority with the sun-damaged scalp form.",
@@ -66,6 +68,7 @@ export const sarcomaBoneSubtypes: CancerInput[] = [
     related: ["vascular-tumours", "kaposi-sarcoma", "epithelioid-haemangioendothelioma"], links: [{ label: "Wikipedia", url: W("Angiosarcoma") }] },
 
   { id: "undifferentiated-pleomorphic-sarcoma", kind: "cancer", name: "Undifferentiated pleomorphic sarcoma (UPS)", group: "sarcoma", parent: "sarcoma", asOf, tags, wikipedia: W("Undifferentiated_pleomorphic_sarcoma"),
+    keyPapers: ["paper-eortc-62012-doxorubicin-ifosfamide-judson-lancet-oncol-2014", "paper-esmo-sts-guideline-gronchi-ann-oncol-2021", "paper-isg-sts-1001-gronchi-lancet-oncol-2017", "paper-sarc028-pembrolizumab-sarcoma-tawbi-lancet-oncol-2017"],
     aka: ["UPS", "Malignant fibrous histiocytoma (historic)", "MFH", "Pleomorphic sarcoma, not otherwise specified"],
     burden: "One of the commonest soft tissue sarcomas of older adults, usually a deep, fast-growing mass in the thigh or upper arm; about a third of patients with high-grade limb tumours develop lung metastases despite surgery and radiotherapy.",
     tldr: "Undifferentiated pleomorphic sarcoma is the diagnosis for a high-grade soft tissue sarcoma whose cells show no recognisable line of differentiation. It is treated with surgery and radiotherapy, with doxorubicin-based chemotherapy for high-risk or spread disease, and it is one of the few sarcomas in which the immunotherapy drug pembrolizumab has clear activity.",
@@ -90,6 +93,7 @@ export const sarcomaBoneSubtypes: CancerInput[] = [
     related: ["extremity-soft-tissue-sarcoma", "liposarcoma", "myxofibrosarcoma"], links: [{ label: "Wikipedia", url: W("Undifferentiated_pleomorphic_sarcoma") }] },
 
   { id: "myxofibrosarcoma", kind: "cancer", name: "Myxofibrosarcoma", group: "sarcoma", parent: "sarcoma", asOf, tags, wikipedia: W("Myxofibrosarcoma"),
+    keyPapers: ["paper-eortc-62012-doxorubicin-ifosfamide-judson-lancet-oncol-2014", "paper-esmo-sts-guideline-gronchi-ann-oncol-2021", "paper-myxofibrosarcoma-mentzel-ajsp-1996"],
     aka: ["MFS", "Myxoid malignant fibrous histiocytoma (historic)"],
     burden: "A common sarcoma of the elderly, typically a slow-growing lump just under the skin of the leg or arm; it recurs locally in a large minority of patients because of finger-like spread along tissue planes, and higher-grade tumours metastasise to the lungs.",
     tldr: "Myxofibrosarcoma is a sarcoma of older people that grows just beneath the skin of the limbs and sends invisible tails along the tissue planes, so it comes back after surgery more often than any other sarcoma. Wide surgery guided by MRI, usually with radiotherapy, is the treatment; chemotherapy is reserved for spread disease.",
@@ -111,6 +115,7 @@ export const sarcomaBoneSubtypes: CancerInput[] = [
     related: ["undifferentiated-pleomorphic-sarcoma", "extremity-soft-tissue-sarcoma"], links: [{ label: "Wikipedia", url: W("Myxofibrosarcoma") }] },
 
   { id: "alveolar-soft-part-sarcoma", kind: "cancer", name: "Alveolar soft part sarcoma", group: "sarcoma", parent: "sarcoma", asOf, tags, wikipedia: W("Alveolar_soft_part_sarcoma"),
+    keyPapers: ["paper-atezolizumab-alveolar-soft-part-sarcoma-chen-nejm-2023", "paper-ladanyi-aspl-tfe3-oncogene-2001"],
     aka: ["ASPS", "ASPSCR1-TFE3 sarcoma"],
     burden: "Under one percent of soft tissue sarcomas, arising in adolescents and young adults, usually in the thigh or buttock and in children in the head and neck; it grows slowly but has often already spread to the lungs, bone or brain at diagnosis, and patients live for years with metastatic disease.",
     tldr: "Alveolar soft part sarcoma is a rare, slow-growing cancer of young adults driven by a single fusion gene, ASPSCR1-TFE3, that switches on blood vessel growth. Chemotherapy does not work, but drugs that block the tumour's blood supply shrink it, and in 2023 the immunotherapy atezolizumab became the first drug approved for it.",
@@ -134,6 +139,7 @@ export const sarcomaBoneSubtypes: CancerInput[] = [
     related: ["extremity-soft-tissue-sarcoma", "synovial-sarcoma"], links: [{ label: "Wikipedia", url: W("Alveolar_soft_part_sarcoma") }] },
 
   { id: "pecoma", kind: "cancer", name: "Perivascular epithelioid cell tumour (PEComa)", group: "sarcoma", parent: "sarcoma", asOf, tags, wikipedia: W("Perivascular_epithelioid_cell_tumour"),
+    keyPapers: ["paper-esmo-sts-guideline-gronchi-ann-oncol-2021", "paper-ampect-nab-sirolimus-pecoma-wagner-jco-2021", "paper-wagner-sirolimus-pecoma-jco-2010"],
     aka: ["PEComa", "Malignant PEComa", "Angiomyolipoma and lymphangioleiomyomatosis (PEComa family)"],
     burden: "A very rare family of tumours, a few hundred malignant cases reported worldwide, arising in the uterus, retroperitoneum, gut and soft tissue of adults, more often women; most are benign, and malignant PEComa was untreatable by chemotherapy until mTOR inhibitors.",
     tldr: "PEComa is a rare tumour of cells that sit around blood vessels and share features of muscle and pigment cells. Most are benign, but malignant ones spread and resist chemotherapy. They usually have lost the TSC1 or TSC2 brake on the growth signal mTOR, and in 2021 the mTOR blocker nab-sirolimus became the first approved treatment.",
@@ -156,6 +162,7 @@ export const sarcomaBoneSubtypes: CancerInput[] = [
     related: ["uterine-sarcoma", "retroperitoneal-sarcoma"], links: [{ label: "Wikipedia", url: W("Perivascular_epithelioid_cell_tumour") }] },
 
   { id: "epithelioid-haemangioendothelioma", kind: "cancer", name: "Epithelioid haemangioendothelioma", group: "sarcoma", parent: "vascular-tumours", asOf, tags, wikipedia: W("Epithelioid_hemangioendothelioma"),
+    keyPapers: ["paper-errani-wwtr1-camta1-ehe-gcc-2011", "paper-ehe-consensus-stacchiotti-esmo-open-2021", "paper-sirolimus-ehe-stacchiotti-cancer-2021"],
     aka: ["EHE", "WWTR1-CAMTA1 sarcoma", "YAP1-TFE3 haemangioendothelioma"],
     burden: "Roughly one case per million people a year, in adults of any age, arising in the liver, lungs, bone and soft tissue and often multifocal at diagnosis; its course ranges from years of stability to rapid progression, and no drug is approved.",
     tldr: "Epithelioid haemangioendothelioma is a rare vascular cancer driven by a fusion gene, usually WWTR1-CAMTA1, that behaves unpredictably: some tumours sit unchanged for years while others spread quickly. Stable disease is watched, localised tumours are removed, liver-only disease can be transplanted, and mTOR blockers such as sirolimus are the most used drugs when treatment is needed.",
@@ -179,6 +186,7 @@ export const sarcomaBoneSubtypes: CancerInput[] = [
     related: ["vascular-tumours", "angiosarcoma"], links: [{ label: "Wikipedia", url: W("Epithelioid_hemangioendothelioma") }] },
 
   { id: "malignant-peripheral-nerve-sheath-tumour", kind: "cancer", name: "Malignant peripheral nerve sheath tumour (MPNST)", group: "sarcoma", parent: "sarcoma", asOf, tags, wikipedia: W("Malignant_peripheral_nerve_sheath_tumor"),
+    keyPapers: ["paper-kroep-mpnst-first-line-chemotherapy-ann-oncol-2011", "paper-lee-prc2-mpnst-nat-genet-2014", "paper-eortc-62012-doxorubicin-ifosfamide-judson-lancet-oncol-2014", "paper-esmo-sts-guideline-gronchi-ann-oncol-2021"],
     aka: ["MPNST", "Neurofibrosarcoma (historic)", "Malignant schwannoma (historic)"],
     burden: "About five percent of soft tissue sarcomas; half occur in people with neurofibromatosis type 1, whose lifetime risk is around one in ten, and it is the leading cause of death in that condition. Outcomes are poor, with five-year survival below half in most series.",
     tldr: "Malignant peripheral nerve sheath tumour is a sarcoma that grows from the covering of a nerve, most often in people with neurofibromatosis type 1 when a benign plexiform neurofibroma turns malignant. Surgery with radiotherapy is the only cure; chemotherapy with doxorubicin and ifosfamide shrinks some tumours, and drugs targeting the tumour's lost NF1 and PRC2 brakes are in trials.",
@@ -203,6 +211,7 @@ export const sarcomaBoneSubtypes: CancerInput[] = [
     related: ["extremity-soft-tissue-sarcoma", "desmoid-tumour"], links: [{ label: "Wikipedia", url: W("Malignant_peripheral_nerve_sheath_tumor") }] },
 
   { id: "retroperitoneal-sarcoma", kind: "cancer", name: "Retroperitoneal sarcoma", group: "sarcoma", parent: "sarcoma", asOf, tags, wikipedia: W("Sarcoma"),
+    keyPapers: ["paper-esmo-sts-guideline-gronchi-ann-oncol-2021", "paper-strass-lancet-oncol-2020", "paper-tarpswg-retroperitoneal-sarcoma-gronchi-ann-surg-2016", "paper-bonvalot-retroperitoneal-sarcoma-compartmental-jco-2009"],
     aka: ["Retroperitoneal soft tissue sarcoma", "RPS", "Abdominal sarcoma"],
     burden: "About 15 percent of soft tissue sarcomas, mostly well-differentiated and dedifferentiated liposarcoma and leiomyosarcoma, diagnosed as very large masses in the space behind the bowel; local recurrence, not metastasis, kills most patients with liposarcoma, and outcomes depend heavily on treatment in a specialist centre.",
     tldr: "Retroperitoneal sarcomas grow silently at the back of the abdomen until they are the size of a melon. The treatment is one carefully planned operation in a sarcoma centre that removes the tumour with the neighbouring organs it touches. The STRASS trial showed radiotherapy before surgery does not help overall; a second trial is testing chemotherapy before surgery in the most aggressive types.",
@@ -225,6 +234,7 @@ export const sarcomaBoneSubtypes: CancerInput[] = [
     related: ["liposarcoma", "leiomyosarcoma", "sarcoma"], links: [{ label: "TARPSWG", url: "https://www.tarpswg.org" }] },
 
   { id: "extremity-soft-tissue-sarcoma", kind: "cancer", name: "Soft tissue sarcoma of the extremity (localised and advanced)", group: "sarcoma", parent: "sarcoma", asOf, tags, wikipedia: W("Soft-tissue_sarcoma"),
+    keyPapers: ["paper-eortc-62012-doxorubicin-ifosfamide-judson-lancet-oncol-2014", "paper-esmo-sts-guideline-gronchi-ann-oncol-2021", "paper-ncic-sr2-preoperative-vs-postoperative-radiotherapy-osullivan-lancet-2002", "paper-isg-sts-1001-gronchi-lancet-oncol-2017"],
     aka: ["Limb sarcoma", "Extremity STS", "Localised soft tissue sarcoma", "Advanced soft tissue sarcoma"],
     burden: "About 60 percent of soft tissue sarcomas arise in the limbs, most often the thigh, across dozens of histologies; deep, high-grade tumours over five centimetres metastasise to the lungs in roughly a third to a half of patients, and advanced disease has a median survival of one to two years with chemotherapy.",
     tldr: "Most soft tissue sarcomas arise in an arm or leg. Limb-saving surgery with radiotherapy cures most localised tumours and is as safe as amputation. For spread disease doxorubicin is the backbone: adding ifosfamide shrinks more tumours without lengthening life, and in leiomyosarcoma adding trabectedin doubles the time the disease stays controlled.",

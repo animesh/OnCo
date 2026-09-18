@@ -24,6 +24,7 @@ const MPN = G("Myeloproliferative Neoplasms", 1477);
 export const bloodSubtypes: CancerInput[] = [
   // ======================= ACUTE MYELOID LEUKAEMIA =======================
   { id: "aml-flt3", kind: "cancer", name: "FLT3-mutated acute myeloid leukaemia", group: "haematologic", parent: "aml", asOf, tags, wikipedia: W("CD135"),
+    keyPapers: ["paper-admiral-gilteritinib-flt3-nejm-2019", "paper-quantum-first-quizartinib-lancet-2023", "paper-eln-2022-aml-dohner-blood-2022", "paper-ratify-midostaurin-nejm-2017"],
     aka: ["FLT3-ITD AML", "FLT3-TKD AML", "FLT3-positive AML"],
     burden: "About three in ten adults with acute myeloid leukaemia carry a FLT3 mutation, most often the internal tandem duplication, which used to mark one of the worst outlooks in the disease.",
     tldr: "FLT3-mutated acute myeloid leukaemia carries a mutation in a growth-signal receptor that makes the leukaemia relapse quickly. Adding a FLT3 blocker to chemotherapy, midostaurin or quizartinib, lengthens life, and gilteritinib is the standard when the disease comes back.",
@@ -48,6 +49,7 @@ export const bloodSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia: FLT3", url: W("CD135") }, { label: "NCCN Guidelines: Acute Myeloid Leukemia", url: AML.url }] },
 
   { id: "aml-idh", kind: "cancer", name: "IDH1- and IDH2-mutated acute myeloid leukaemia", group: "haematologic", parent: "aml", asOf, tags, wikipedia: W("Isocitrate_dehydrogenase"),
+    keyPapers: ["paper-agile-ivosidenib-azacitidine-nejm-2022", "paper-eln-2022-aml-dohner-blood-2022", "paper-ivosidenib-idh1-dinardo-nejm-2018", "paper-enasidenib-idh2-stein-blood-2017"],
     aka: ["IDH-mutant AML", "IDH1-mutated AML", "IDH2-mutated AML"],
     burden: "About one in five adults with acute myeloid leukaemia carries a mutation in IDH1 or IDH2, more often in older patients and in leukaemia arising from a prior marrow disorder.",
     tldr: "IDH-mutated acute myeloid leukaemia has a faulty metabolic enzyme that floods cells with a chemical that blocks maturation. Pills that shut the enzyme off, ivosidenib for IDH1 and enasidenib or olutasidenib for IDH2 and IDH1, let the leukaemia cells mature, and ivosidenib with azacitidine tripled survival in older patients.",
@@ -71,6 +73,7 @@ export const bloodSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia: Isocitrate dehydrogenase", url: W("Isocitrate_dehydrogenase") }, { label: "NCCN Guidelines: Acute Myeloid Leukemia", url: AML.url }] },
 
   { id: "aml-npm1-kmt2a", kind: "cancer", name: "NPM1-mutated and KMT2A-rearranged acute myeloid leukaemia", group: "haematologic", parent: "aml", asOf, tags, wikipedia: W("Nucleophosmin"),
+    keyPapers: ["paper-augment-101-revumenib-menin-nature-2023", "paper-eln-2022-aml-dohner-blood-2022", "paper-falini-npm1-nejm-2005", "paper-ivey-npm1-mrd-nejm-2016"],
     aka: ["NPM1-mutated AML", "KMT2A-rearranged AML", "MLL-rearranged AML", "Menin-dependent AML"],
     burden: "NPM1 is the commonest mutation in adult acute myeloid leukaemia, in about three in ten patients; KMT2A rearrangements are found in about one in twenty adults, in most infants with leukaemia, and in leukaemia that follows chemotherapy.",
     tldr: "NPM1-mutated and KMT2A-rearranged leukaemias depend on a protein called menin to keep leukaemia genes switched on. Menin inhibitors, revumenib and ziftomenib, are the first drugs to exploit this, and they produce remissions in patients whose leukaemia had come back after everything else.",
@@ -95,6 +98,7 @@ export const bloodSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia: Nucleophosmin", url: W("Nucleophosmin") }, { label: "NCCN Guidelines: Acute Myeloid Leukemia", url: AML.url }] },
 
   { id: "aml-secondary", kind: "cancer", name: "Secondary and therapy-related acute myeloid leukaemia", group: "haematologic", parent: "aml", asOf, tags, wikipedia: W("Acute_myeloid_leukemia"),
+    keyPapers: ["paper-viale-a-venetoclax-azacitidine-nejm-2020", "paper-eln-2022-aml-dohner-blood-2022", "paper-who-2022-myeloid-khoury-leukemia-2022", "paper-cpx-351-study-301-lancet-je-jco-2018"],
     aka: ["Therapy-related AML", "t-AML", "Secondary AML", "AML with myelodysplasia-related changes", "AML arising from MDS or MPN"],
     burden: "Roughly a quarter of adult acute myeloid leukaemia arises from a prior marrow disorder or after chemotherapy or radiotherapy for another cancer; it strikes older people and has always done worse than leukaemia arising on its own.",
     tldr: "Secondary acute myeloid leukaemia grows out of an earlier marrow disorder or follows chemotherapy or radiotherapy for another cancer. It resists standard treatment more than other leukaemias; a liposomal form of the two classic chemotherapy drugs, CPX-351, lengthens life in fit older patients, and transplant is the only route to cure.",
@@ -118,6 +122,7 @@ export const bloodSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia: Acute myeloid leukaemia", url: W("Acute_myeloid_leukemia") }, { label: "NCCN Guidelines: Acute Myeloid Leukemia", url: AML.url }] },
 
   { id: "apl", kind: "cancer", name: "Acute promyelocytic leukaemia", group: "haematologic", parent: "aml", asOf, tags, wikipedia: W("Acute_promyelocytic_leukemia"),
+    keyPapers: ["paper-apl0406-lo-coco-nejm-2013", "paper-tallman-atra-apl-nejm-1997", "paper-eln-apl-sanz-blood-2019"],
     aka: ["APL", "AML-M3", "PML::RARA acute leukaemia", "Promyelocytic leukaemia"],
     burden: "About one in ten cases of acute myeloid leukaemia; once the most rapidly fatal, it is now the most curable, with more than nine in ten patients cured when early bleeding is prevented.",
     tldr: "Acute promyelocytic leukaemia is caused by a single fused gene that freezes blood cells at an immature stage and triggers dangerous bleeding. Two non-chemotherapy drugs, a vitamin A derivative and arsenic trioxide, make the cells mature and cure more than nine in ten patients.",
@@ -144,6 +149,7 @@ export const bloodSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia", url: W("Acute_promyelocytic_leukemia") }, { label: "NCCN Guidelines: Acute Myeloid Leukemia", url: AML.url }] },
 
   { id: "aml-older-unfit", kind: "cancer", name: "Acute myeloid leukaemia in older or unfit patients", group: "haematologic", parent: "aml", asOf, tags, wikipedia: W("Acute_myeloid_leukemia"),
+    keyPapers: ["paper-viale-a-venetoclax-azacitidine-nejm-2020", "paper-agile-ivosidenib-azacitidine-nejm-2022", "paper-aza-aml-001-dombret-blood-2015", "paper-eln-2022-aml-dohner-blood-2022"],
     aka: ["Unfit AML", "AML in the elderly", "AML ineligible for intensive chemotherapy", "Low-intensity AML therapy"],
     burden: "The median age at diagnosis of acute myeloid leukaemia is about 68, and roughly half of patients are judged unable to withstand intensive chemotherapy because of age, frailty or other illnesses.",
     tldr: "Most people with acute myeloid leukaemia are over 65, and many cannot take intensive chemotherapy. Venetoclax with azacitidine, two gentler drugs, doubled remission rates and lengthened life in this group, replacing the old choice between supportive care and low-dose chemotherapy.",
@@ -169,6 +175,7 @@ export const bloodSubtypes: CancerInput[] = [
 
   // ======================= MULTIPLE MYELOMA =======================
   { id: "smouldering-myeloma", kind: "cancer", name: "Smouldering multiple myeloma", group: "haematologic", parent: "multiple-myeloma", asOf, tags, wikipedia: W("Smouldering_myeloma"),
+    keyPapers: ["paper-aquila-daratumumab-smouldering-nejm-2025", "paper-e3a06-lenalidomide-smouldering-lonial-jco-2020", "paper-imwg-criteria-rajkumar-lancet-oncol-2014", "paper-mateos-20-2-20-smouldering-bcj-2020"],
     aka: ["Smoldering multiple myeloma", "SMM", "High-risk smouldering myeloma", "Asymptomatic myeloma"],
     burden: "Found in about one in seven people diagnosed with a plasma cell cancer, usually by chance on a blood test; about one in ten progress to active myeloma each year for the first five years, and the high-risk half progress much faster.",
     tldr: "Smouldering myeloma is myeloma that has not yet damaged bones, kidneys or blood counts. Most people are watched, but those at high risk of progressing can now be treated: the AQUILA trial showed daratumumab alone delays active myeloma, and it was approved for this use in 2025.",
@@ -194,6 +201,7 @@ export const bloodSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia", url: W("Smouldering_myeloma") }, { label: "NCCN Guidelines: Multiple Myeloma", url: MM.url }] },
 
   { id: "myeloma-transplant-eligible", kind: "cancer", name: "Newly diagnosed multiple myeloma, transplant-eligible", group: "haematologic", parent: "multiple-myeloma", asOf, tags, wikipedia: W("Multiple_myeloma"),
+    keyPapers: ["paper-perseus-dara-vrd-transplant-nejm-2024", "paper-cassiopeia-lancet-2019", "paper-ifm-2009-attal-nejm-2017", "paper-r-iss-palumbo-jco-2015"],
     aka: ["Transplant-eligible myeloma", "TE NDMM", "Newly diagnosed myeloma, fit for autologous transplant"],
     burden: "Roughly four in ten people with newly diagnosed myeloma are fit enough for high-dose melphalan with an autologous stem cell transplant, generally those under about 70 without major organ disease.",
     tldr: "Fit patients with newly diagnosed myeloma receive four drugs at once, then their own stem cells are collected, they are given high-dose chemotherapy, the cells are returned and they continue on maintenance. Adding the CD38 antibody daratumumab to the three-drug backbone, tested in PERSEUS and CASSIOPEIA, means most patients now reach a state where no myeloma can be detected.",
@@ -247,6 +255,7 @@ export const bloodSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia", url: W("Multiple_myeloma") }, { label: "NCCN Guidelines: Multiple Myeloma", url: MM.url }] },
 
   { id: "myeloma-relapsed-refractory", kind: "cancer", name: "Relapsed or refractory multiple myeloma", group: "haematologic", parent: "multiple-myeloma", asOf, tags, wikipedia: W("Multiple_myeloma"),
+    keyPapers: ["paper-cartitude-4-cilta-cel-nejm-2023", "paper-karmma-3-ide-cel-nejm-2023", "paper-majestec-1-teclistamab-nejm-2022", "paper-monumental-1-talquetamab-nejm-2022"],
     aka: ["RRMM", "Relapsed myeloma", "Triple-class refractory myeloma", "Penta-refractory myeloma"],
     burden: "Almost everyone with myeloma relapses eventually; with each line of treatment remissions shorten, and until 2021 patients whose disease resisted the three main drug classes survived about a year.",
     tldr: "Myeloma almost always returns, and each return is harder to treat. Two kinds of immune therapy aimed at the BCMA protein on myeloma cells, CAR-T cells (KarMMa-3, CARTITUDE-4) and off-the-shelf bispecific antibodies (MajesTEC), now give deep remissions after other drugs fail, and a second target, GPRC5D, gives another option.",
@@ -274,6 +283,7 @@ export const bloodSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia", url: W("Multiple_myeloma") }, { label: "NCCN Guidelines: Multiple Myeloma", url: MM.url }] },
 
   { id: "plasma-cell-leukaemia", kind: "cancer", name: "Plasma cell leukaemia", group: "haematologic", parent: "multiple-myeloma", asOf, tags, wikipedia: W("Plasma_cell_leukemia"),
+    keyPapers: ["paper-r-iss-palumbo-jco-2015", "paper-imwg-plasma-cell-leukaemia-definition-bcj-2021", "paper-royer-plasma-cell-leukaemia-ifm-jco-2016", "paper-imwg-criteria-rajkumar-lancet-oncol-2014"],
     aka: ["PCL", "Primary plasma cell leukaemia", "Secondary plasma cell leukaemia", "Leukaemic myeloma"],
     burden: "A rare and aggressive form of plasma cell cancer, a few percent of myeloma presentations at most; historically fatal within a year, now often controlled for several years with multi-drug induction and transplant.",
     tldr: "Plasma cell leukaemia is myeloma in which the cancerous plasma cells spill into the bloodstream in large numbers. It is the most aggressive plasma cell cancer and is treated urgently with several myeloma drugs at once followed by a stem cell transplant.",
@@ -324,6 +334,7 @@ export const bloodSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia", url: W("Myelodysplastic_syndrome") }, { label: "NCCN Guidelines: Myelodysplastic Syndromes", url: MDS.url }] },
 
   { id: "mds-higher-risk", kind: "cancer", name: "Higher-risk myelodysplastic syndromes", group: "haematologic", parent: "mds", asOf, tags, wikipedia: W("Myelodysplastic_syndrome"),
+    keyPapers: ["paper-aza-001-fenaux-lancet-oncol-2009", "paper-ipss-m-bernard-nejm-evidence-2022", "paper-who-2022-myeloid-khoury-leukemia-2022", "paper-icc-2022-arber-blood-2022"],
     aka: ["High-risk MDS", "IPSS-R high and very high MDS", "MDS with increased blasts", "Higher-risk myelodysplastic neoplasms"],
     burden: "About a third of myelodysplastic syndromes are higher risk; without treatment median survival is around a year and a half or less, and most progress to acute myeloid leukaemia.",
     tldr: "Higher-risk myelodysplastic syndromes behave like a slow leukaemia and often become one. Azacitidine lengthens life and a donor stem cell transplant is the only cure; every attempt to improve on azacitidine in a large trial, including the venetoclax combination tested in VERONA, has so far failed.",
@@ -402,6 +413,7 @@ export const bloodSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia", url: W("Chronic_lymphocytic_leukemia") }, { label: "NCCN Guidelines: CLL/SLL", url: CLL.url }] },
 
   { id: "richter-transformation-cll", kind: "cancer", name: "Richter transformation of chronic lymphocytic leukaemia", group: "haematologic", parent: "cll", asOf, tags, wikipedia: W("Richter%27s_transformation"),
+    keyPapers: ["paper-rossi-richter-syndrome-blood-2018", "paper-who-2022-lymphoid-alaggio-leukemia-2022"],
     aka: ["Richter syndrome", "Richter's transformation", "CLL transformed to diffuse large B-cell lymphoma", "Transformed CLL"],
     burden: "Between two and ten percent of people with chronic lymphocytic leukaemia develop Richter transformation, an aggressive lymphoma arising from the leukaemia; when the lymphoma is clonally related to the CLL, median survival has historically been under a year.",
     tldr: "Richter transformation is the sudden change of slow chronic lymphocytic leukaemia into a fast-growing lymphoma, usually of the diffuse large B-cell type. It is treated with lymphoma chemotherapy followed by a donor transplant where possible, and newer drugs such as pirtobrutinib, venetoclax combinations and bispecific antibodies are being tested because standard chemotherapy rarely cures it.",
@@ -454,6 +466,7 @@ export const bloodSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia", url: W("Chronic_myelogenous_leukemia") }, { label: "NCCN Guidelines: Chronic Myeloid Leukemia", url: CML.url }] },
 
   { id: "cml-advanced-phase", kind: "cancer", name: "Chronic myeloid leukaemia, accelerated and blast phase", group: "haematologic", parent: "cml", asOf, tags, wikipedia: W("Chronic_myelogenous_leukemia"),
+    keyPapers: ["paper-iris-imatinib-nejm-2003", "paper-pace-ponatinib-nejm-2013", "paper-eln-2020-cml-hochhaus-leukemia-2020", "paper-who-2022-myeloid-khoury-leukemia-2022"],
     aka: ["CML-AP", "CML-BP", "Blast crisis", "Advanced-phase CML", "Accelerated-phase CML"],
     burden: "Fewer than one in twenty patients now present in accelerated or blast phase, and progression from chronic phase on treatment has fallen to around one percent a year; blast phase remains the most dangerous form of the disease, with survival historically under a year.",
     tldr: "Chronic myeloid leukaemia can accelerate and then transform into an acute leukaemia called blast crisis. Tyrosine kinase inhibitors are given at full strength, combined with acute leukaemia chemotherapy in blast phase, to bring the disease back to chronic phase quickly enough for a donor stem cell transplant, the only treatment that cures it.",
