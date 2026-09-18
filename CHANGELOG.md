@@ -7,9 +7,14 @@ All notable changes to OnCo are recorded here. The format follows [Keep a Change
 Regenerated from the commit log each time the site ships (`scripts/changelog-sync.ts`); the version sections below are written by hand when a release is cut.
 
 ### 18 September 2026
+- Orphan trials given content: ten drug matches, 17 sponsor aliases, 36 sponsor companies and 130 trials tied to their makers, two non-cancer records removed; backlinks round: 303 weakly linked records gain true relations from their own text; orphans down to 214
 - 1,024 more plain-English sentences: 279 companies, 104 institutions and 640 phase 3 trials, taking the simple layer to 8,961 records
 
 ### 17 September 2026
+- After the trial removals: no dangling references, floor re-run, sponsor wave three Chinese folded
+- Backlink fill: text-supported relations for 303 weakly connected records
+- 1,024 more plain-English sentences: 279 companies, 104 institutions and 640 phase 3 trials, taking the simple layer to 8,961 records
+- Orphan trials: link sponsor-only trial records to drugs, companies, institutions and cancers; 36 new sponsor companies (wave 3); remove two myasthenia gravis records
 - Papers for 36 more researchers matched by institution; trial snapshots refreshed for all 1,024 products with 136 registry changes detected; paper snapshots refreshed for all 1,924 records
 - Add simple part-p: 1024 plain sentences for companies, institutions, the theories pathway and phase 3 trials
 - One papers block per person after the two paper waves met
