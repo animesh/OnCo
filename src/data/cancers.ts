@@ -727,7 +727,7 @@ export const cancers: CancerInput[] = [
     tags: ["umbrella"],
   }),
   c({
-    id: "childhood-cancers", trials: ["nct05491525", "nct06607627", "nct04851717", "nct05948943", "nct06055959", "nct05644561", "nct06149559"], name: "Childhood cancers (all types)", group: "paediatric", wikipedia: W("Childhood_cancer"),
+    id: "childhood-cancers", trials: ["nct05491525", "nct04851717", "nct05948943", "nct06055959", "nct06149559"], name: "Childhood cancers (all types)", group: "paediatric", wikipedia: W("Childhood_cancer"),
     aka: ["Childhood Cancers", "Paediatric cancers", "Pediatric cancers", "Cancer in children", "Young Adults, Cancer in", "Adolescent and young adult cancer"],
     burden: "About 400,000 children and adolescents aged 0 to 19 develop cancer each year worldwide (WHO); leukaemias, brain tumours and lymphomas are the commonest, and the chance of cure depends heavily on where a child lives.",
     tldr: "Cancer in children is rare and different from adult cancer: the common types are leukaemias, brain tumours, lymphomas and embryonal tumours such as neuroblastoma and Wilms tumour, most are curable in well-resourced health systems, and the great challenge is bringing the same cures to the majority of children who live where they are not available.",
