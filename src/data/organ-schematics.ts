@@ -99,7 +99,7 @@ export const ORGAN_SCHEMATICS: OrganSchematic[] = [
       add(m, polyline([[0, 1.6, -0.3], [0, -0.9, -0.3]], "soft")); // aorta
       return m;
     } },
-  { id: "stomach-oesophagus", name: "Oesophagus and stomach", cancers: ["gastric", "oesophageal-squamous-cell-carcinoma", "oesophageal-adenocarcinoma", "esophageal", "gist"],
+  { id: "stomach-oesophagus", name: "Oesophagus and stomach", cancers: ["gastric", "gastric-her2-positive", "gastric-cldn18-2-positive", "gastric-pdl1-high", "gastric-msi-high", "early-gastric-cancer", "oesophageal-squamous-cell-carcinoma", "oesophageal-adenocarcinoma", "esophageal", "gist", "gist-kit-exon-11", "gist-pdgfra-d842v", "gist-imatinib-resistant"],
     caption: "Squamous cancers sit in the upper and middle oesophagus, adenocarcinomas at the junction and in the stomach; the stomach wall also gives rise to GIST from its pacemaker cells.",
     subsites: [
       { id: "upper", label: "Upper and middle oesophagus (squamous)", at: [0.2, 2.5, 0], match: ["squamous", "escc"] },
@@ -120,7 +120,7 @@ export const ORGAN_SCHEMATICS: OrganSchematic[] = [
       add(m, ellipsoid(0.5, 0.35, 0.3, 3, 8, "soft"), { at: [-1.6, 0.4, -0.5] }); // spleen
       return m;
     } },
-  { id: "pancreas-biliary", name: "Pancreas and bile ducts", cancers: ["pancreatic", "cholangiocarcinoma", "biliary-tract-cancer", "neuroendocrine", "gallbladder", "ampullary"],
+  { id: "pancreas-biliary", name: "Pancreas and bile ducts", cancers: ["pancreatic", "cholangiocarcinoma", "intrahepatic-cholangiocarcinoma", "extrahepatic-cholangiocarcinoma", "biliary-tract-cancer", "neuroendocrine", "gallbladder", "ampullary"],
     caption: "Most pancreatic cancers arise in the head next to the bile duct, which is why jaundice is the presenting sign; bile duct cancers are named by where along the tree they sit.",
     subsites: [
       { id: "head", label: "Pancreatic head (most PDAC)", at: [-1.3, -0.15, 0.05], match: ["classical", "basal", "pdac", "ductal", "kras", "brca", "msi"] },
@@ -145,7 +145,7 @@ export const ORGAN_SCHEMATICS: OrganSchematic[] = [
       add(m, polyline([[-1.2, 0.05, -0.15], [0.2, 0.1, -0.15], [1.7, 0.2, -0.1]], "soft")); // pancreatic duct
       return m;
     } },
-  { id: "liver", name: "Liver", cancers: ["hcc", "hepatoblastoma"],
+  { id: "liver", name: "Liver", cancers: ["hcc", "hcc-early", "hcc-intermediate", "hcc-advanced", "hepatoblastoma"],
     caption: "Hepatocellular carcinoma grows in a cirrhotic liver and spreads first inside it and into the portal vein, so staging depends on liver function and vascular invasion as much as on size.",
     subsites: [
       { id: "right", label: "Right lobe (segments V-VIII)", at: [-0.95, 0.15, 0.4], match: ["hbv", "hcv", "viral", "nash", "masld", "alcohol", "cirrhotic", "non-cirrhotic", "fibrolamellar", "hepatoblastoma", "fetal", "embryonal"] },
