@@ -258,6 +258,41 @@
       "source": "/companies/kheiron/:path*",
       "destination": "/companies/kheiron-medical-technologies/:path*",
       "permanent": true
+    },
+    {
+      "source": "/trials/nct03678883/:path*",
+      "destination": "/trials/actuate-1801/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/trials/nct05210790/:path*",
+      "destination": "/trials/verify/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/trials/nct06203210/:path*",
+      "destination": "/trials/ideate-lung02/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/trials/nct05253651/:path*",
+      "destination": "/trials/mountaineer/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/trials/nct03653507/:path*",
+      "destination": "/trials/spotlight-glow/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/trials/nct05740566/:path*",
+      "destination": "/trials/dellphi-304/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/trials/cross-trial/:path*",
+      "destination": "/trials/cross/:path*",
+      "permanent": true
     }
   ]
 }

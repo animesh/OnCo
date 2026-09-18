@@ -84,7 +84,6 @@ export const simpleQ: Record<string, string> = {
   "nct03634540": "Peloton Therapeutics, part of Merck, runs this phase 2 trial of belzutifan and cabozantinib in advanced clear cell kidney cancer, and it is no longer recruiting.",
   "nct03667170": "3D Medicines (Sichuan) runs this phase 2 trial of envafolimab in advanced solid tumours, and it is now recruiting.",
   "nct03669965": "Kartos Therapeutics runs this randomised phase 2 trial of KRT-232 and ruxolitinib in phlebotomy-dependent polycythaemia vera, and it is no longer recruiting.",
-  "nct03678883": "Actuate Therapeutics runs this phase 2 trial of elraglusib, alone or with chemotherapy, in blood cancers and solid tumours that have stopped responding to treatment, and it is no longer recruiting.",
   "nct03709680": "Pfizer runs this phase 2 trial of palbociclib combined with chemotherapy in children and young people with Ewing sarcoma or rhabdomyosarcoma that has come back, no longer recruiting.",
   "nct03731260": "Blueprint Medicines runs this randomised phase 2 trial of avapritinib or a placebo in systemic mastocytosis, and it is no longer recruiting.",
   "nct03736889": "BeiGene runs this phase 2 trial of tislelizumab in advanced solid tumours, and it is now recruiting.",

@@ -14,13 +14,6 @@ const t = (x: T): TrialInput => ({ kind: "trial", asOf, tags, ...x });
 const BREAST = ["breast-hr-positive", "breast-her2-positive", "tnbc"];
 
 export const radiationTrials4: TrialInput[] = [
-  t({ id: "cross-trial", name: "CROSS", phase: "3", status: "positive", yearReported: 2012, sponsor: "Dutch CROSS study group", enrolled: 368,
-    setting: "Resectable oesophageal or junctional cancer: neoadjuvant carboplatin-paclitaxel with 41.4 Gy radiotherapy then surgery, versus surgery alone",
-    tldr: "CROSS made chemoradiation before surgery the standard for oesophageal cancer: five weeks of weekly chemotherapy with radiotherapy nearly doubled median survival compared with surgery alone.",
-    summary: "CROSS randomised 368 patients with resectable oesophageal or gastro-oesophageal junction cancer to surgery alone or five weekly cycles of carboplatin-paclitaxel with 41.4 Gy in 23 fractions followed by surgery. Median overall survival was 49.4 months with chemoradiation versus 24.0 months with surgery alone (hazard ratio 0.66), 29 percent had a pathological complete response, and surgical complications were not increased (van Hagen and colleagues, New England Journal of Medicine 2012). Ten-year follow-up confirmed the benefit; the CROSS regimen is a worldwide standard.",
-    result: "Median overall survival 49.4 vs 24.0 months (hazard ratio 0.66); pathological complete response 29%.",
-    outcomes: [{ endpoint: "Median overall survival", primary: true, unit: "months", arms: [{ name: "Chemoradiation then surgery", n: 178, value: 49.4 }, { name: "Surgery alone", n: 188, value: 24.0 }] }],
-    drugs: ["carboplatin", "paclitaxel"], cancers: ["esophageal", "gastric", "oesophageal-squamous-cell-carcinoma", "oesophageal-adenocarcinoma"], technologies: ["imrt-igrt", "radiosensitisers"], terms: ["chemoradiation"], links: [{ label: "NEJM 2012", url: "https://doi.org/10.1056/NEJMoa1112088" }] }),
   t({ id: "int-0116", institutions: ["swog"], name: "INT-0116 (Macdonald trial)", phase: "3", status: "positive", yearReported: 2001, sponsor: "Southwest Oncology Group (US Intergroup)", enrolled: 556,
     setting: "Resected gastric or gastro-oesophageal junction adenocarcinoma: postoperative fluorouracil-leucovorin with 45 Gy radiotherapy versus observation",
     tldr: "The Macdonald trial made postoperative chemoradiation the US standard for resected stomach cancer in 2001, though later trials with better surgery and chemotherapy have largely replaced it.",

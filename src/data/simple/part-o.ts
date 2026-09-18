@@ -252,7 +252,6 @@ export const simpleO: Record<string, string> = {
   catnon: "CATNON showed that a year of temozolomide after radiotherapy lengthens survival in anaplastic gliomas without the 1p/19q co-deletion, mainly in tumours with an IDH mutation.",
   chhip: "CHHiP showed that four weeks of prostate radiotherapy in larger daily doses works as well as seven and a half weeks of standard treatment, and 60 Gy in 20 fractions became the standard.",
   chisel: "CHISEL proved that stereotactic radiotherapy beats conventional radiotherapy for early lung cancer in people who cannot have surgery, with better local control and longer survival.",
-  "cross-trial": "CROSS made chemoradiation before surgery the standard for oesophageal cancer, as five weeks of weekly chemotherapy with radiotherapy nearly doubled survival compared with surgery alone.",
   "cyto-pv": "CYTO-PV showed that keeping the haematocrit under 45 percent in polycythaemia vera gives far fewer serious clots and heart deaths than a looser target.",
   "dahanca-5": "DAHANCA 5 showed that the drug nimorazole, given during radiotherapy to help kill oxygen-starved cells, improved control of head and neck cancer, and Denmark has used it ever since.",
   "dbcg-82bc": "The Danish postmastectomy trials proved that radiotherapy to the chest wall and lymph nodes after mastectomy both prevents local recurrence and saves lives when the nodes are involved.",

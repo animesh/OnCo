@@ -190,7 +190,7 @@ export const colorectalLymphomaSubtypes: CancerInput[] = [
     standardOfCare: [
       { setting: "Metastatic, RAS wild-type, previously treated", approach: "Tucatinib plus trastuzumab (MOUNTAINEER); trastuzumab plus pertuzumab or lapatinib where tucatinib is unavailable.", refs: ["mountaineer", "tucatinib", "trastuzumab", "pertuzumab", "her2-tyrosine-kinase-inhibitors"], guideline: colon },
       { setting: "After HER2 antibodies, or with RAS mutation", approach: "Trastuzumab deruxtecan (DESTINY-CRC02; tumour-agnostic approval for immunohistochemistry 3+), watching for pneumonitis.", refs: ["destiny-crc02", "trastuzumab-deruxtecan", "adc"], guideline: colon },
-      { setting: "Metastatic, first line", approach: "Standard doublet chemotherapy with bevacizumab; anti-EGFR antibodies are less effective in HER2-amplified tumours; tucatinib-trastuzumab-FOLFOX is under test in MOUNTAINEER-03.", refs: ["folfox", "folfiri", "bevacizumab", "nct05253651"], guideline: colon },
+      { setting: "Metastatic, first line", approach: "Standard doublet chemotherapy with bevacizumab; anti-EGFR antibodies are less effective in HER2-amplified tumours; tucatinib-trastuzumab-FOLFOX is under test in MOUNTAINEER-03.", refs: ["folfox", "folfiri", "bevacizumab", "mountaineer"], guideline: colon },
     ],
     stateOfArt: ["Tucatinib plus trastuzumab is the first HER2-directed approval in colorectal cancer (2023).", "Trastuzumab deruxtecan works after other HER2 drugs and in RAS-mutant tumours.", "HER2 testing is now routine in metastatic disease, alongside RAS, BRAF and mismatch repair."],
     history: [
@@ -201,10 +201,10 @@ export const colorectalLymphomaSubtypes: CancerInput[] = [
       { year: 2023, title: "FDA accelerated approval of tucatinib with trastuzumab, the first HER2 approval in colorectal cancer", refs: ["tucatinib"] },
       { year: 2024, title: "Tumour-agnostic approval of trastuzumab deruxtecan for HER2 3+ solid tumours after DESTINY-CRC02", refs: ["trastuzumab-deruxtecan", "destiny-crc02"] },
     ],
-    pipeline: ["nct05253651", "zanidatamab", "nct06695845", "nct06589830", "nct06434597", "trastuzumab-deruxtecan"],
+    pipeline: ["mountaineer", "zanidatamab", "nct06695845", "nct06589830", "nct06434597", "trastuzumab-deruxtecan"],
     openProblems: ["No randomised evidence yet for HER2 blockade in first line.", "RAS co-mutation blunts dual HER2 blockade and the best option for those patients is unclear.", "Optimal sequence of tucatinib-trastuzumab and trastuzumab deruxtecan is untested.", "HER2 mutations without amplification have no proven therapy."],
     targets: ["her2", "egfr", "vegf"], technologies: ["her2-tyrosine-kinase-inhibitors", "monoclonal-antibody", "adc", "histopathology-ihc", "bispecific-antibody"], terms: ["sidedness", "tumour-agnostic", "ihc"], pathways: ["ras-mapk", "colorectal-cancer-signalling"],
-    trials: ["mountaineer", "destiny-crc02", "mypathway", "nct05253651", "nct06695845", "nct06589830", "nct06434597"], drugs: ["tucatinib", "trastuzumab", "trastuzumab-deruxtecan", "pertuzumab", "zanidatamab"],
+    trials: ["mountaineer", "destiny-crc02", "mypathway", "nct06695845", "nct06589830", "nct06434597"], drugs: ["tucatinib", "trastuzumab", "trastuzumab-deruxtecan", "pertuzumab", "zanidatamab"],
     people: ["tanios-bekaii-saab"],
     links: [{ label: "Wikipedia", url: W("HER2/neu") }, { label: "NCCN Guidelines: Colon Cancer", url: NCCN_COLON }] },
 
