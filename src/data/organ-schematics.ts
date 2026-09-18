@@ -210,7 +210,7 @@ export const ORGAN_SCHEMATICS: OrganSchematic[] = [
       add(m, dots([[-0.45, 2.4, -0.3], [-0.45, 2.0, -0.3], [-0.45, 1.6, -0.3], [-0.45, 1.2, -0.3]], "soft")); // sympathetic chain
       return m;
     } },
-  { id: "female-pelvis", name: "Uterus, cervix, ovaries, tubes and vulva", cancers: ["high-grade-serous-ovarian-cancer", "low-grade-serous-ovarian-cancer", "clear-cell-ovarian-cancer", "mucinous-ovarian-cancer", "granulosa-cell-tumour", "ovarian", "endometrial", "cervical", "vulvar", "gestational-trophoblastic", "uterine-sarcoma", "vaginal"],
+  { id: "female-pelvis", name: "Uterus, cervix, ovaries, tubes and vulva", cancers: ["high-grade-serous-ovarian-cancer", "low-grade-serous-ovarian-cancer", "clear-cell-ovarian-cancer", "mucinous-ovarian-cancer", "granulosa-cell-tumour", "ovarian", "endometrial", "cervical", "vulvar", "gestational-trophoblastic", "uterine-sarcoma", "vaginal", "endometrial-pole-ultramutated", "endometrial-mmr-deficient", "endometrial-p53-abnormal", "endometrial-nsmp", "advanced-recurrent-endometrial-cancer", "uterine-carcinosarcoma", "early-cervical-cancer", "locally-advanced-cervical-cancer", "recurrent-metastatic-cervical-cancer", "platinum-sensitive-ovarian-cancer", "platinum-resistant-ovarian-cancer"],
     caption: "Most high-grade ovarian cancers begin at the tip of the fallopian tube; endometrial cancer lines the uterus, cervical cancer starts at the transformation zone; each drains to a different node group.",
     subsites: [
       { id: "fimbria", label: "Fallopian tube fimbria (origin of high-grade serous)", at: [1.65, 0.8, 0], match: ["high-grade serous", "hgsoc", "serous", "brca", "hrd", "platinum"] },
