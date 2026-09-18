@@ -159,7 +159,7 @@ const entities: EntityInput[] = [
 
   // ======================= COMPANIES =======================
   {
-    id: "ipsen", links: [{ label: "Official website", url: "https://www.ipsen.com" }], kind: "company", name: "Ipsen", hq: "Paris", country: "FR", companyType: "pharma", website: "https://www.ipsen.com", ticker: "IPN.PA", asOf,
+    id: "ipsen", trials: ["nct04243499"], links: [{ label: "Official website", url: "https://www.ipsen.com" }], kind: "company", name: "Ipsen", hq: "Paris", country: "FR", companyType: "pharma", website: "https://www.ipsen.com", ticker: "IPN.PA", asOf,
     tldr: "Ipsen is the French pharma behind Onivyde (liposomal irinotecan) and the NALIRIFOX regimen, and marketer of tovorafenib in Europe.",
     summary: "Ipsen is the Paris-based pharmaceutical company, listed as IPN.PA, behind Onivyde, the liposomal irinotecan at the heart of the NALIRIFOX regimen for pancreatic cancer, and the European marketer of tovorafenib for paediatric low-grade glioma under rights from Day One. Its oncology portfolio also includes Cabometyx outside the United States, tazemetostat for epithelioid sarcoma and somatostatin analogues for neuroendocrine tumours, with NAPOLI 3 establishing NALIRIFOX and CLARINET supporting lanreotide. OnCo links it to pancreatic ductal adenocarcinoma, glioma, neuroendocrine tumours and epithelioid sarcoma, and to the cabozantinib, irinotecan, tazemetostat and tovorafenib records. Whether NALIRIFOX becomes the default first-line regimen on value as well as efficacy is the open question. Each product has its own page.",
     drugs: ["nalirifox", "tovorafenib"], cancers: ["pancreatic", "glioblastoma"],

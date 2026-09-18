@@ -446,7 +446,7 @@ export const gapCancers: CancerInput[] = [
     tags: ["gap-fill", "skin"],
   }),
   c({
-    id: "basal-cell-carcinoma", name: "Basal cell carcinoma", group: "skin", wikipedia: W("Basal-cell_carcinoma"),
+    id: "basal-cell-carcinoma", trials: ["nct06050122"], name: "Basal cell carcinoma", group: "skin", wikipedia: W("Basal-cell_carcinoma"),
     aka: ["BCC", "Basal Cell Carcinoma of the Skin"],
     burden: "The most common human cancer: several million cases per year in the US alone; metastasis is exceptionally rare (<0.1%), but locally advanced disease can be destructive.",
     tldr: "Basal cell carcinoma is the most common cancer of all, caused by sun exposure and almost never life-threatening. Nearly all are removed surgically; the rare advanced cases are treated with drugs that block the hedgehog signalling pathway, and with immunotherapy if those fail.",
