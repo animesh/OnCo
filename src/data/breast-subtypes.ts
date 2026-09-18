@@ -317,20 +317,20 @@ export const breastSubtypes: CancerInput[] = [
 /** Chinese TL;DRs for the records above, folded into src/data/i18n/zh.ts by scripts/fold-zh.ts. */
 export const tldrZh: Record<string, string> = {
   "hr-positive-early-high-risk": "大多数激素驱动的乳腺癌通过手术、放疗和五到十年的内分泌药物治愈。肿瘤较大、级别较高或已累及淋巴结的女性复发风险更高，在内分泌治疗基础上加用两到三年CDK4/6抑制剂可减少复发，而Oncotype DX和MammaPrint等基因检测决定谁还需要化疗。",
-  "hr-positive-metastatic-post-cdk46": "当激素受体阳性乳腺癌在CDK4/6抑制剂和芳香化酶抑制剂治疗中进展时，下一种药物由血液检测决定。获得ESR1突变的肿瘤对新型雌激素受体降解剂elacestrant、camizestrant和imlunestrant有效；携带PIK3CA、AKT1或PTEN改变的肿瘤对capivasertib、inavolisib或alpelisib联合fulvestrant有效；内分泌治疗用尽后，抗体偶联药物先于化疗使用。",
-  "her2-low-metastatic-breast-cancer": "HER2低表达不是一种新的乳腺癌，而是对旧检测的新解读：曾被称为HER2阴性、但细胞表面带有少量HER2蛋白的肿瘤。这点微量表达足以让抗体偶联药物trastuzumab deruxtecan递送其化疗载荷，自2022年起它成为这类患者在内分泌治疗或一线化疗后的标准治疗，使肿瘤再次生长前的时间大约延长一倍。",
-  "her2-positive-early-breast-cancer": "在扩散前发现的HER2阳性乳腺癌通常可以治愈。治疗从术前化疗联合HER2抗体trastuzumab和pertuzumab开始；如果手术时肿瘤已消失，则单用抗体完成一年治疗，若仍有癌残留，则改用抗体偶联药物trastuzumab emtansine或trastuzumab deruxtecan。很小的肿瘤采用更温和的方案，目前研究的重点是可以省去多少治疗。",
-  "her2-positive-breast-brain-metastases": "脑是HER2阳性乳腺癌的薄弱环节：抗体能控制身体其他部位的病灶，却很难进入脑内，因此多达一半的晚期患者会出现脑转移。口服药tucatinib联合trastuzumab和capecitabine是第一种被证实有效的药物，trastuzumab deruxtecan能使大多数患者的脑部病灶缩小，因此全身治疗如今与手术和精准放疗并列，而不再排在其后。",
-  "tnbc-early": "早期发现的三阴性乳腺癌以治愈为目标。对于超过两厘米或累及淋巴结的肿瘤，术前化疗联合免疫药物pembrolizumab并在术后继续使用已提高治愈率，成为标准治疗；携带遗传性BRCA突变且手术时仍有癌残留的女性加用一年olaparib，其他有残留的患者可用capecitabine。手术时肿瘤是否已消失是决定后续治疗的最重要依据。",
-  "tnbc-metastatic": "已扩散的三阴性乳腺癌无法治愈，但其治疗在过去五年的变化超过此前三十年。根据肿瘤的PD-L1评分，一线治疗现为pembrolizumab联合化疗或联合sacituzumab govitecan，或单用抗体偶联药物datopotamab deruxtecan或sacituzumab govitecan；携带遗传性BRCA突变的女性可口服PARP抑制剂；trastuzumab deruxtecan则可用于三分之一HER2低表达的肿瘤。",
+  "hr-positive-metastatic-post-cdk46": "当激素受体阳性乳腺癌在CDK4/6抑制剂治疗中进展时，下一种药物由血液检测决定。获得ESR1突变的肿瘤对口服雌激素受体降解剂elacestrant、camizestrant和imlunestrant有效；携带PIK3CA、AKT1或PTEN改变的肿瘤对卡匹色替（capivasertib）、inavolisib或阿培利司（alpelisib）有效；内分泌治疗用尽后，抗体偶联药物先于化疗使用。",
+  "her2-low-metastatic-breast-cancer": "HER2低表达不是一种新的乳腺癌，而是对旧检测的新解读：曾被称为HER2阴性、但细胞表面带有少量HER2蛋白的肿瘤。这点微量表达足以让抗体偶联药物德曲妥珠单抗递送其化疗载荷，自2022年起它成为这类患者在内分泌治疗或一线化疗后的标准治疗。",
+  "her2-positive-early-breast-cancer": "早期发现的HER2阳性乳腺癌通常可以治愈。治疗从术前化疗联合曲妥珠单抗和帕妥珠单抗两种抗体开始；如果手术时肿瘤已消失，则单用抗体完成一年治疗，若仍有癌残留，则改用恩美曲妥珠单抗或德曲妥珠单抗。小肿瘤采用更温和的方案，目前的试验在研究可以省去多少治疗。",
+  "her2-positive-breast-brain-metastases": "脑是HER2阳性乳腺癌的薄弱环节：抗体能控制身体其他部位的病灶，却很难进入脑内，因此多达一半的晚期患者会出现脑转移。图卡替尼联合曲妥珠单抗和卡培他滨是第一种被证实有效的药物，德曲妥珠单抗能使大多数患者的脑部病灶缩小。",
+  "tnbc-early": "早期三阴性乳腺癌以治愈为目标。对于超过2厘米或累及淋巴结的肿瘤，术前和术后化疗联合免疫药物帕博利珠单抗已提高治愈率；携带BRCA突变且手术时仍有癌残留的患者加用一年奥拉帕利，其他有残留的患者可用卡培他滨。手术时肿瘤是否已消失决定后续治疗。",
+  "tnbc-metastatic": "已扩散的三阴性乳腺癌无法治愈，但其治疗自2020年以来发生了根本变化。根据PD-L1评分，一线治疗为帕博利珠单抗联合化疗或联合戈沙妥珠单抗，或单用德达博妥单抗或戈沙妥珠单抗；携带BRCA突变者可口服PARP抑制剂；德曲妥珠单抗则可用于三分之一HER2低表达的肿瘤。",
   "inflammatory-breast-cancer": "炎性乳腺癌通常不形成肿块。乳房在数周内变红、肿胀、发热、沉重，皮肤增厚如橘皮，原因是癌细胞阻塞了皮肤内的淋巴管。它常被误认为感染，一律按至少III期处理，需要先化疗，再行乳房切除和放疗，并按亚型加用HER2或免疫药物。",
-  "paget-disease-of-the-nipple": "乳头Paget病看起来像湿疹：乳头上有鳞屑、发红、瘙痒或渗液的斑块，用药膏无法愈合。它由癌细胞沿乳管扩散至乳头皮肤引起，多数病例下方存在导管原位癌或浸润性乳腺癌。治疗是连同下方病灶一起切除乳头和乳晕，可采用乳房切除术或中央区保乳手术加放疗，预后取决于下方的癌。",
-  "phyllodes-tumour": "叶状肿瘤是一种生长迅速、通常无痛的乳房肿块，由腺体和结缔组织构成，显微镜下呈叶片状。多数为良性，部分为交界性，少数为恶性，后者表现如肉瘤，经血液而非淋巴结扩散。治疗是带一圈正常组织的手术切除；交界性和恶性肿瘤可考虑放疗，化疗几乎没有被证实的作用。",
-  "train-2": "TRAIN-2试验显示，对于HER2阳性早期乳腺癌，术前使用carboplatin和paclitaxel联合两种HER2抗体的方案在使肿瘤完全消退方面与含蒽环类的方案相当，且对心脏的损伤更少，使无蒽环类方案成为常规。",
-  kristine: "KRISTINE试验用trastuzumab emtansine加pertuzumab取代术前化疗，结果肿瘤完全消退的患者更少，手术前进展的患者更多，提示单靠抗体偶联药物降阶治疗并不安全。",
-  olympiad: "OlympiAD试验显示，对于携带遗传性BRCA突变的HER2阴性转移性乳腺癌，口服PARP抑制剂olaparib比化疗延缓进展约三个月，副作用更少，但未显著延长总生存。",
-  embraca: "EMBRACA试验显示，对于携带遗传性BRCA突变的晚期乳腺癌，PARP抑制剂talazoparib比化疗延缓进展约三个月，患者报告的生活质量更好，但未显著延长总生存。",
-  impassion031: "IMpassion031试验显示，在早期三阴性乳腺癌的术前化疗中加入免疫药物atezolizumab可使手术时肿瘤完全消失的比例从41%提高到58%，无论PD-L1状态如何，但该方案未成为标准治疗。",
+  "paget-disease-of-the-nipple": "乳头Paget病看起来像湿疹：乳头上有鳞屑、发红、瘙痒或渗液的斑块，用药膏无法愈合。它由癌细胞沿乳管扩散至乳头皮肤引起，多数病例下方存在导管原位癌或浸润性乳腺癌。治疗是连同下方病灶一起切除乳头和乳晕，可采用乳房切除术或中央区保乳手术加放疗。",
+  "phyllodes-tumour": "叶状肿瘤是一种生长迅速、通常无痛的乳房肿块，由腺体和结缔组织构成，形成叶片状结构。多数为良性，部分为交界性，少数为恶性，后者表现如肉瘤，经血液扩散。治疗是带一圈正常组织的手术切除；较高级别者可考虑放疗，化疗几乎没有被证实的作用。",
+  "train-2": "TRAIN-2试验显示，HER2阳性乳腺癌术前治疗可以不用蒽环类药物：卡铂和紫杉醇联合两种HER2抗体使肿瘤完全消退的比例与含蒽环类方案相当，且对心脏的损伤更少。",
+  kristine: "KRISTINE试验检验了抗体偶联药物能否在HER2阳性乳腺癌术前取代化疗，结果表明不能：肿瘤完全消退的患者更少，手术前进展的患者更多。",
+  olympiad: "OlympiAD是首个显示口服PARP抑制剂在乳腺癌中胜过化疗的试验：对于携带遗传性BRCA突变的女性，奥拉帕利延缓进展约三个月，副作用更少，但未延长总生存期。",
+  embraca: "EMBRACA试验显示，对于携带遗传性BRCA突变的晚期乳腺癌，PARP抑制剂他拉唑帕利比化疗延缓进展约三个月，生活质量更好，但未延长总生存期。",
+  impassion031: "IMpassion031试验显示，在早期三阴性乳腺癌的术前化疗中加入免疫药物阿替利珠单抗，使手术时肿瘤完全消失的比例从41%提高到58%，无论PD-L1状态如何。",
 };
 
 export const breastSubtypeTrials: TrialInput[] = [
