@@ -316,7 +316,7 @@ const drugs: DrugInput[] = [
 
 // ======================= TERMS =======================
 const terms: TermInput[] = [
-  term({ id: "esr1-mutation", name: "ESR1 mutation", category: "Biomarkers", wikipedia: W("Estrogen_receptor_alpha"),
+  term({ id: "esr1-mutation", name: "ESR1 mutation", category: "Biomarkers", aka: ["ESR1", "ESR1 mutations", "ESR1-mutant", "ESR1-mutated", "ESR1m", "ESR1 mutation on ctDNA", "ESR1 ctDNA testing", "oestrogen receptor gene mutation", "estrogen receptor gene mutation", "Y537S", "D538G", "ESR1 ligand-binding domain mutation"], wikipedia: W("Estrogen_receptor_alpha"),
     tldr: "A change in the oestrogen receptor gene that lets the cancer grow without oestrogen, so aromatase inhibitors stop working. Found in the blood in about a third of patients after hormone therapy.",
     summary: "Ligand-binding-domain mutations (Y537S, D538G, E380Q and others) arise under aromatase-inhibitor pressure in 30-40% of endocrine-resistant tumours and are rare at diagnosis (<5%). Detected by ctDNA (Guardant360 CDx is the companion diagnostic). Predicts resistance to AIs but retained sensitivity to SERDs, oral SERDs, and PROTAC degraders; the basis for elacestrant, imlunestrant, vepdegestrant, and camizestrant labels.",
     targets: ["estrogen-receptor"], drugs: ["elacestrant", "imlunestrant", "vepdegestrant", "camizestrant"], technologies: ["liquid-biopsy"], cancers: ["breast-hr-positive"], links: [{ label: "Wikipedia", url: W("Estrogen_receptor_alpha") }] }),

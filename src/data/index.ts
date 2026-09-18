@@ -35,6 +35,7 @@ import { termsModalities } from "./terms-modalities";
 import { trialDesignTerms } from "./trial-design-wave";
 import { lawTerms } from "./law-wave";
 import { termsJargon } from "./terms-jargon";
+import { biomarkerTerms } from "./terms-biomarkers-wave";
 import { institutionsUs } from "./institutions/us";
 import { institutionsWorld } from "./institutions/world";
 import { institutionsBodies } from "./institutions/bodies";
@@ -151,6 +152,7 @@ const RAW_INPUTS: EntityInput[] = [
   ...trialDesignTerms,
   ...lawTerms,
   ...termsJargon,
+  ...biomarkerTerms,
   ...institutionsUs,
   ...institutionsWorld,
   ...institutionsBodies,

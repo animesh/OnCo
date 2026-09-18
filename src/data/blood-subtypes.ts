@@ -114,7 +114,7 @@ export const bloodSubtypes: CancerInput[] = [
       { year: 2023, title: "Magrolimab with azacitidine fails in TP53-mutated AML", refs: ["magrolimab"] },
     ],
     pipeline: ["cpx-351", "venetoclax", "myelomatch", "idea-chip-risk-modifiers"], openProblems: ["No regimen produces durable remissions in TP53-mutated AML.", "Whether CPX-351 helps patients under 60 or those fit enough for transplant regardless of induction.", "Predicting and preventing therapy-related leukaemia in cancer survivors with clonal haematopoiesis."],
-    targets: ["tp53", "cd47"], pathways: ["clonal-haematopoiesis"], terms: ["secondary-malignancy", "tp53-mutated", "eln-risk", "hma"], technologies: ["allogeneic-hsct", "cd47-blockade"],
+    targets: ["tp53", "cd47"], pathways: ["clonal-haematopoiesis"], terms: ["secondary-malignancy", "tp53-mutated", "eln-risk", "hma", "aml-myelodysplasia-related"], technologies: ["allogeneic-hsct", "cd47-blockade"],
     links: [{ label: "Wikipedia: Acute myeloid leukaemia", url: W("Acute_myeloid_leukemia") }, { label: "NCCN Guidelines: Acute Myeloid Leukemia", url: AML.url }] },
 
   { id: "apl", kind: "cancer", name: "Acute promyelocytic leukaemia", group: "haematologic", parent: "aml", asOf, tags, wikipedia: W("Acute_promyelocytic_leukemia"),
@@ -190,7 +190,7 @@ export const bloodSubtypes: CancerInput[] = [
       { year: 2025, title: "Daratumumab approved for high-risk smouldering myeloma in the United States", refs: ["daratumumab"] },
     ],
     pipeline: ["daratumumab", "linvoseltamab", "isatuximab", "istopmm", "nct07393282", "nct05955508"], openProblems: ["No trial has shown that treating smouldering myeloma lengthens life rather than delaying the label of active disease.", "Risk models still misclassify many patients in both directions.", "Whether curative-intent treatment of a precursor is justified, and for whom."],
-    targets: ["cd38"], terms: ["smoldering-myeloma", "high-risk-myeloma", "r-iss"], technologies: ["whole-body-mri", "pet-ct"],
+    targets: ["cd38"], terms: ["smoldering-myeloma", "high-risk-myeloma", "r-iss", "m-protein-free-light-chains"], technologies: ["whole-body-mri", "pet-ct"],
     links: [{ label: "Wikipedia", url: W("Smouldering_myeloma") }, { label: "NCCN Guidelines: Multiple Myeloma", url: MM.url }] },
 
   { id: "myeloma-transplant-eligible", kind: "cancer", name: "Newly diagnosed multiple myeloma, transplant-eligible", group: "haematologic", parent: "multiple-myeloma", asOf, tags, wikipedia: W("Multiple_myeloma"),
@@ -217,7 +217,7 @@ export const bloodSubtypes: CancerInput[] = [
       { year: 2024, title: "PERSEUS: daratumumab-VRd around transplant approved as standard induction", refs: ["perseus", "daratumumab"] },
     ],
     pipeline: ["daratumumab", "isatuximab", "ciltacabtagene-autoleucel", "cartitude-5", "idea-car-t-replaces-transplant", "idea-mrd-guided-stop-myeloma"], openProblems: ["Whether high-dose melphalan is still necessary after a quadruplet that produces MRD negativity.", "Whether MRD-negative patients can stop maintenance safely.", "High-risk cytogenetic disease still relapses early despite quadruplets."],
-    targets: ["cd38", "proteasome", "cereblon"], terms: ["vrd", "autologous-transplant", "mrd-negativity-myeloma", "high-risk-myeloma", "r-iss", "maintenance-therapy", "proteasome-inhibitor", "imid"], technologies: ["autologous-stem-cell-transplant", "ngs-mrd-clonoseq"],
+    targets: ["cd38", "proteasome", "cereblon"], terms: ["vrd", "autologous-transplant", "mrd-negativity-myeloma", "high-risk-myeloma", "r-iss", "maintenance-therapy", "proteasome-inhibitor", "imid", "m-protein-free-light-chains"], technologies: ["autologous-stem-cell-transplant", "ngs-mrd-clonoseq"],
     links: [{ label: "Wikipedia", url: W("Multiple_myeloma") }, { label: "NCCN Guidelines: Multiple Myeloma", url: MM.url }] },
 
   { id: "myeloma-transplant-ineligible", kind: "cancer", name: "Newly diagnosed multiple myeloma, transplant-ineligible", group: "haematologic", parent: "multiple-myeloma", asOf, tags, wikipedia: W("Multiple_myeloma"),
@@ -292,7 +292,7 @@ export const bloodSubtypes: CancerInput[] = [
       { year: 2021, title: "IMWG lowers the diagnostic threshold to 5 percent circulating plasma cells", refs: ["flow-cytometry"] },
     ],
     pipeline: ["teclistamab", "ciltacabtagene-autoleucel", "daratumumab", "carfilzomib"], openProblems: ["No randomised trials; treatment is extrapolated from high-risk myeloma.", "Secondary plasma cell leukaemia has no effective standard.", "Whether front-line BCMA immunotherapy or allogeneic transplant improves long-term survival."],
-    targets: ["cd38", "bcma", "proteasome", "tp53"], terms: ["high-risk-myeloma", "tp53-mutated", "autologous-transplant", "leukaemia-type", "proteasome-inhibitor"], technologies: ["autologous-stem-cell-transplant", "allogeneic-hsct", "flow-cytometry-mrd"],
+    targets: ["cd38", "bcma", "proteasome", "tp53"], terms: ["high-risk-myeloma", "tp53-mutated", "autologous-transplant", "leukaemia-type", "proteasome-inhibitor", "m-protein-free-light-chains", "cyclin-d1-t11-14"], technologies: ["autologous-stem-cell-transplant", "allogeneic-hsct", "flow-cytometry-mrd"],
     links: [{ label: "Wikipedia", url: W("Plasma_cell_leukemia") }, { label: "NCCN Guidelines: Multiple Myeloma", url: MM.url }] },
 
   // ======================= MYELODYSPLASTIC SYNDROMES =======================
@@ -320,7 +320,7 @@ export const bloodSubtypes: CancerInput[] = [
       { year: 2024, title: "Imetelstat approved after IMerge: the first telomerase inhibitor", refs: ["imetelstat"] },
     ],
     pipeline: ["luspatercept", "imetelstat", "nct06499285", "nct05308264", "nct06243458", "nct05320198"], openProblems: ["No approved treatment for thrombocytopenia or neutropenia in lower-risk disease.", "Whether early disease-modifying treatment changes the natural history rather than the transfusion count.", "Iron overload management and quality of life are under-studied."],
-    terms: ["anaemia", "staging-systems", "ageing-tissue-field-theory"], technologies: ["transfusion-support"], keyPapers: ["paper-commands-luspatercept-mds-lancet-2023", "paper-imerge-imetelstat-mds-lancet-2024"],
+    terms: ["anaemia", "staging-systems", "ageing-tissue-field-theory", "ipss-m-ipss-r", "del5q", "sf3b1-mutation"], technologies: ["transfusion-support"], keyPapers: ["paper-commands-luspatercept-mds-lancet-2023", "paper-imerge-imetelstat-mds-lancet-2024"],
     links: [{ label: "Wikipedia", url: W("Myelodysplastic_syndrome") }, { label: "NCCN Guidelines: Myelodysplastic Syndromes", url: MDS.url }] },
 
   { id: "mds-higher-risk", kind: "cancer", name: "Higher-risk myelodysplastic syndromes", group: "haematologic", parent: "mds", asOf, tags, wikipedia: W("Myelodysplastic_syndrome"),
@@ -345,7 +345,7 @@ export const bloodSubtypes: CancerInput[] = [
       { year: 2024, title: "VERONA: venetoclax plus azacitidine does not lengthen life", refs: ["venetoclax", "azacitidine"] },
     ],
     pipeline: ["allogeneic-hsct", "venetoclax", "revumenib", "tuspetinib", "nct05732103", "nct07216443", "tregzi"], openProblems: ["Nothing has beaten azacitidine alone in a phase 3 trial.", "TP53 multi-hit disease relapses after transplant and responds to no drug durably.", "Post-transplant maintenance to prevent relapse is unproven."],
-    targets: ["tp53", "cd47", "tim3"], terms: ["hma", "tp53-mutated", "staging-systems", "allogeneic-transplant", "conditioning-regimen"], technologies: ["allogeneic-hsct", "cd47-blockade", "tim3-blockade"],
+    targets: ["tp53", "cd47", "tim3"], terms: ["hma", "tp53-mutated", "staging-systems", "allogeneic-transplant", "conditioning-regimen", "ipss-m-ipss-r"], technologies: ["allogeneic-hsct", "cd47-blockade", "tim3-blockade"],
     links: [{ label: "Wikipedia", url: W("Myelodysplastic_syndrome") }, { label: "NCCN Guidelines: Myelodysplastic Syndromes", url: MDS.url }] },
 
   // ======================= CHRONIC LYMPHOCYTIC LEUKAEMIA =======================
@@ -373,7 +373,7 @@ export const bloodSubtypes: CancerInput[] = [
       { year: 2025, title: "AMPLIFY: acalabrutinib-venetoclax fixed duration in fit patients", refs: ["amplify", "acalabrutinib", "venetoclax"] },
     ],
     pipeline: ["sonrotoclax", "nemtabrutinib", "celestial-tncll", "cadance-304", "bellwave-011", "idea-mrd-guided-stop-cll", "idea-btk-degrader-frontline"], openProblems: ["Continuous BTK inhibitor or fixed-duration venetoclax first: no head-to-head survival data.", "Whether MRD should decide how long fixed-duration therapy lasts.", "Cardiac toxicity, cost and interactions of indefinite BTK inhibition in patients in their seventies and eighties."],
-    targets: ["btk", "bcl2", "cd20"], pathways: ["bcr-signalling", "apoptosis-bcl2"], terms: ["ighv-status", "del17p-tp53", "tp53-mutated", "umrd", "tumor-lysis-syndrome"], technologies: ["bcl2-inhibitors", "cytogenetics-fish", "flow-cytometry-mrd"], keyPapers: ["paper-cll14-venetoclax-obinutuzumab-nejm-2019", "paper-elevate-tn-acalabrutinib-lancet-2020", "paper-amplify-acalabrutinib-venetoclax-nejm-2025"],
+    targets: ["btk", "bcl2", "cd20"], pathways: ["bcr-signalling", "apoptosis-bcl2"], terms: ["ighv-status", "del17p-tp53", "tp53-mutated", "umrd", "tumor-lysis-syndrome", "cll-ipi"], technologies: ["bcl2-inhibitors", "cytogenetics-fish", "flow-cytometry-mrd"], keyPapers: ["paper-cll14-venetoclax-obinutuzumab-nejm-2019", "paper-elevate-tn-acalabrutinib-lancet-2020", "paper-amplify-acalabrutinib-venetoclax-nejm-2025"],
     links: [{ label: "Wikipedia", url: W("Chronic_lymphocytic_leukemia") }, { label: "NCCN Guidelines: CLL/SLL", url: CLL.url }] },
 
   { id: "cll-relapsed", kind: "cancer", name: "Relapsed or refractory chronic lymphocytic leukaemia", group: "haematologic", parent: "cll", asOf, tags, wikipedia: W("Chronic_lymphocytic_leukemia"),
@@ -398,7 +398,7 @@ export const bloodSubtypes: CancerInput[] = [
       { year: 2024, title: "BRUIN CLL-321 reads out; lisocabtagene maraleucel approved for double-refractory CLL", refs: ["bruin-cll-321", "lisocabtagene-maraleucel", "transcend-cll-004"] },
     ],
     pipeline: ["pirtobrutinib", "sonrotoclax", "nemtabrutinib", "lisocabtagene-maraleucel", "bellwave-011", "cadance-304"], openProblems: ["Double-refractory disease after BTK inhibitor and venetoclax has no durable option.", "Whether venetoclax retreatment works as well the second time, and after how long an interval.", "Distinguishing CLL progression from Richter transformation early enough."],
-    targets: ["btk", "bcl2", "cd19", "cd20"], pathways: ["bcr-signalling", "apoptosis-bcl2"], terms: ["del17p-tp53", "resistance", "umrd", "richter-transformation"], technologies: ["car-t", "bcl2-inhibitors", "flow-cytometry-mrd"], keyPapers: ["paper-murano-venetoclax-rituximab-nejm-2018"],
+    targets: ["btk", "bcl2", "cd19", "cd20"], pathways: ["bcr-signalling", "apoptosis-bcl2"], terms: ["del17p-tp53", "resistance", "umrd", "richter-transformation", "btki-bcl2i-resistance-mutations"], technologies: ["car-t", "bcl2-inhibitors", "flow-cytometry-mrd"], keyPapers: ["paper-murano-venetoclax-rituximab-nejm-2018"],
     links: [{ label: "Wikipedia", url: W("Chronic_lymphocytic_leukemia") }, { label: "NCCN Guidelines: CLL/SLL", url: CLL.url }] },
 
   { id: "richter-transformation-cll", kind: "cancer", name: "Richter transformation of chronic lymphocytic leukaemia", group: "haematologic", parent: "cll", asOf, tags, wikipedia: W("Richter%27s_transformation"),
@@ -450,7 +450,7 @@ export const bloodSubtypes: CancerInput[] = [
       { year: 2024, title: "ASC4FIRST: asciminib approved for newly diagnosed chronic phase", refs: ["asciminib", "nct04971226"] },
     ],
     pipeline: ["asciminib", "olverembatinib", "radotinib", "nct04971226", "nct05456191", "nct06423911", "nct06163430"], openProblems: ["The leukaemic stem cells that survive kinase inhibition and cause relapse after stopping.", "Cardiovascular toxicity over decades on second- and third-generation inhibitors.", "Access to any tyrosine kinase inhibitor, and to PCR monitoring, in low-income countries."],
-    targets: ["bcr-abl"], pathways: ["bcr-abl1-signalling", "cml-signalling"], terms: ["molecular-response", "philadelphia-chromosome", "tki-term", "mrd"], technologies: ["kinase-inhibitors", "mrd-kinetics-models", "cytogenetics-fish"], keyPapers: ["paper-iris-imatinib-nejm-2003", "paper-druker-imatinib-phase1-nejm-2001"],
+    targets: ["bcr-abl"], pathways: ["bcr-abl1-signalling", "cml-signalling"], terms: ["molecular-response", "philadelphia-chromosome", "tki-term", "mrd", "sokal-elts-scores", "abl1-kinase-domain-mutations"], technologies: ["kinase-inhibitors", "mrd-kinetics-models", "cytogenetics-fish"], keyPapers: ["paper-iris-imatinib-nejm-2003", "paper-druker-imatinib-phase1-nejm-2001"],
     links: [{ label: "Wikipedia", url: W("Chronic_myelogenous_leukemia") }, { label: "NCCN Guidelines: Chronic Myeloid Leukemia", url: CML.url }] },
 
   { id: "cml-advanced-phase", kind: "cancer", name: "Chronic myeloid leukaemia, accelerated and blast phase", group: "haematologic", parent: "cml", asOf, tags, wikipedia: W("Chronic_myelogenous_leukemia"),
@@ -475,7 +475,7 @@ export const bloodSubtypes: CancerInput[] = [
       { year: 2022, title: "ICC and WHO redefine accelerated and blast phase thresholds" },
     ],
     pipeline: ["ponatinib", "asciminib", "olverembatinib", "blinatumomab", "nct04233346", "nct06514534", "allogeneic-hsct"], openProblems: ["Blast phase remains largely fatal without transplant, and few patients reach it in remission.", "Trials are tiny because progression has become rare.", "The mutations that drive progression are known but not targetable."],
-    targets: ["bcr-abl"], pathways: ["bcr-abl1-signalling"], terms: ["blasts", "philadelphia-chromosome", "allogeneic-transplant", "tki-term", "resistance"], technologies: ["allogeneic-hsct", "kinase-inhibitors", "cytogenetics-fish"],
+    targets: ["bcr-abl"], pathways: ["bcr-abl1-signalling"], terms: ["blasts", "philadelphia-chromosome", "allogeneic-transplant", "tki-term", "resistance", "abl1-kinase-domain-mutations"], technologies: ["allogeneic-hsct", "kinase-inhibitors", "cytogenetics-fish"],
     links: [{ label: "Wikipedia", url: W("Chronic_myelogenous_leukemia") }, { label: "NCCN Guidelines: Chronic Myeloid Leukemia", url: CML.url }] },
 
   // ======================= MYELOPROLIFERATIVE NEOPLASMS =======================
@@ -505,7 +505,7 @@ export const bloodSubtypes: CancerInput[] = [
       { year: 2023, title: "Momelotinib approved for anaemic myelofibrosis after MOMENTUM", refs: ["momelotinib"] },
     ],
     pipeline: ["momelotinib", "pacritinib", "navitoclax", "pelabresib", "imetelstat", "luspatercept", "nct04468984", "nct04717414", "nct04576156", "nct04562389", "allogeneic-hsct"], openProblems: ["No drug has been shown to change the course of the disease rather than its symptoms.", "Transplant timing: too early risks a fatal procedure in someone with years to live, too late loses the window.", "Blast phase myelofibrosis has no effective treatment."],
-    targets: ["jak2"], terms: ["jak2-v617f", "post-pv-myelofibrosis", "anaemia", "allogeneic-transplant"], technologies: ["kinase-inhibitors", "allogeneic-hsct", "transfusion-support"], keyPapers: ["paper-comfort-1-ruxolitinib-myelofibrosis-nejm-2012", "paper-momentum-momelotinib-lancet-2023"],
+    targets: ["jak2"], terms: ["jak2-v617f", "post-pv-myelofibrosis", "anaemia", "allogeneic-transplant", "mpn-driver-mutations", "dipss-mipss70"], technologies: ["kinase-inhibitors", "allogeneic-hsct", "transfusion-support"], keyPapers: ["paper-comfort-1-ruxolitinib-myelofibrosis-nejm-2012", "paper-momentum-momelotinib-lancet-2023"],
     links: [{ label: "Wikipedia", url: W("Primary_myelofibrosis") }, { label: "NCCN Guidelines: Myeloproliferative Neoplasms", url: MPN.url }] },
 ];
 

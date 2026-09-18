@@ -43,7 +43,7 @@ export const cnsSubtypes: CancerInput[] = [
     ],
     pipeline: ["vorasidenib", "safusidenib", "olutasidenib", "methylation-profiling"],
     openProblems: ["Whether vorasidenib should replace radiotherapy and chemotherapy or only defer them, and what to do at progression on it.", "No IDH inhibitor has yet shown benefit in grade 3 or 4 IDH-mutant astrocytoma.", "Cognitive decline after radiotherapy in people who live decades with the disease.", "Temozolomide-induced hypermutation at recurrence has no specific treatment."],
-    targets: ["idh", "tp53"], drugs: ["vorasidenib", "temozolomide", "lomustine", "procarbazine", "vincristine"], trials: ["indigo", "catnon", "eortc-22033", "nct05303519"], technologies: ["methylation-profiling", "imrt-igrt", "extent-of-resection"], terms: ["mgmt", "re-irradiation", "blood-brain-barrier"], pathways: ["glioma-signalling"], companies: ["servier"],
+    targets: ["idh", "tp53"], drugs: ["vorasidenib", "temozolomide", "lomustine", "procarbazine", "vincristine"], trials: ["indigo", "catnon", "eortc-22033", "nct05303519"], technologies: ["methylation-profiling", "imrt-igrt", "extent-of-resection"], terms: ["mgmt", "re-irradiation", "blood-brain-barrier", "1p19q-codeletion", "cdkn2a-homozygous-deletion"], pathways: ["glioma-signalling"], companies: ["servier"],
     related: ["glioblastoma", "oligodendroglioma", "brain-tumours"],
     links: [{ label: "Wikipedia", url: W("Astrocytoma") }, { label: "INDIGO: vorasidenib in IDH-mutant grade 2 glioma (NEJM 2023)", url: "https://doi.org/10.1056/NEJMoa2304194" }, { label: "RTOG 9802: radiation plus PCV in low-grade glioma (NEJM 2016)", url: "https://doi.org/10.1056/NEJMoa1500925" }] },
 
@@ -73,7 +73,7 @@ export const cnsSubtypes: CancerInput[] = [
     ],
     pipeline: ["vorasidenib", "safusidenib", "methylation-profiling"],
     openProblems: ["Whether temozolomide can replace PCV without losing survival (CODEL).", "How to sequence vorasidenib, chemotherapy and radiotherapy over a disease course of decades.", "Late cognitive effects of radiotherapy in long survivors.", "No effective treatment for the rare tumours that acquire CDKN2A/B loss or hypermutation."],
-    targets: ["idh"], drugs: ["procarbazine", "lomustine", "vincristine", "vorasidenib", "temozolomide"], trials: ["rtog-9402", "eortc-26951", "indigo"], technologies: ["methylation-profiling", "imrt-igrt", "extent-of-resection"], terms: ["re-irradiation"], pathways: ["glioma-signalling"],
+    targets: ["idh"], drugs: ["procarbazine", "lomustine", "vincristine", "vorasidenib", "temozolomide"], trials: ["rtog-9402", "eortc-26951", "indigo"], technologies: ["methylation-profiling", "imrt-igrt", "extent-of-resection"], terms: ["re-irradiation", "1p19q-codeletion", "cdkn2a-homozygous-deletion"], pathways: ["glioma-signalling"],
     related: ["glioblastoma", "idh-mutant-astrocytoma", "brain-tumours"],
     links: [{ label: "Wikipedia", url: W("Oligodendroglioma") }, { label: "RTOG 9402 long-term results (JCO 2013)", url: "https://doi.org/10.1200/JCO.2012.43.2674" }, { label: "EORTC 26951 long-term results (JCO 2013)", url: "https://doi.org/10.1200/JCO.2012.43.2229" }] },
 
@@ -102,7 +102,7 @@ export const cnsSubtypes: CancerInput[] = [
     ],
     pipeline: ["prrt", "bevacizumab", "everolimus", "methylation-profiling"],
     openProblems: ["No approved systemic therapy; grade 3 and recurrent unresectable tumours have few options.", "Whether completely resected grade 2 meningiomas need radiotherapy (ROAM, NRG BN003).", "Which incidental meningiomas will grow; most never do.", "Long-term cognitive and endocrine effects of radiotherapy to the skull base."],
-    targets: ["mtor"], technologies: ["radiosurgery-srs", "gamma-knife", "cyberknife", "imrt-igrt", "proton-therapy", "methylation-profiling", "prrt", "active-surveillance", "mri"], drugs: ["bevacizumab", "sunitinib", "everolimus"], terms: ["stereotactic-radiosurgery"],
+    targets: ["mtor"], technologies: ["radiosurgery-srs", "gamma-knife", "cyberknife", "imrt-igrt", "proton-therapy", "methylation-profiling", "prrt", "active-surveillance", "mri"], drugs: ["bevacizumab", "sunitinib", "everolimus"], terms: ["stereotactic-radiosurgery", "cdkn2a-homozygous-deletion"],
     related: ["brain-tumours", "vestibular-schwannoma", "spinal-cord-tumours"],
     links: [{ label: "Wikipedia", url: W("Meningioma") }, { label: "EANO guideline on meningiomas (Neuro-Oncology 2021)", url: "https://doi.org/10.1093/neuonc/noab150" }] },
 
@@ -137,7 +137,7 @@ export const cnsSubtypes: CancerInput[] = [
     ],
     pipeline: ["trastuzumab-deruxtecan", "tucatinib", "lorlatinib", "bbb-focused-ultrasound", "radiosurgery-srs"],
     openProblems: ["Trials still often exclude patients with brain metastases, so drug activity in the brain is learned late.", "Leptomeningeal disease has no standard treatment and a survival of months.", "Radionecrosis after radiosurgery is hard to tell from progression and hard to treat.", "Few drugs are designed from the start to cross the blood-brain barrier."],
-    technologies: ["radiosurgery-srs", "gamma-knife", "cyberknife", "imrt-igrt", "mri", "bbb-focused-ultrasound"], drugs: ["dexamethasone", "osimertinib", "lorlatinib", "alectinib", "tucatinib", "trastuzumab-deruxtecan", "nivolumab", "ipilimumab", "dabrafenib-trametinib"], trials: ["alliance-n0574", "nrg-cc001", "quartz", "her2climb", "destiny-breast12", "crown"], terms: ["brain-metastases", "wbrt", "stereotactic-radiosurgery", "blood-brain-barrier", "her2-brain-metastases", "leptomeningeal-disease"],
+    technologies: ["radiosurgery-srs", "gamma-knife", "cyberknife", "imrt-igrt", "mri", "bbb-focused-ultrasound"], drugs: ["dexamethasone", "osimertinib", "lorlatinib", "alectinib", "tucatinib", "trastuzumab-deruxtecan", "nivolumab", "ipilimumab", "dabrafenib-trametinib"], trials: ["alliance-n0574", "nrg-cc001", "quartz", "her2climb", "destiny-breast12", "crown"], terms: ["brain-metastases", "wbrt", "stereotactic-radiosurgery", "blood-brain-barrier", "her2-brain-metastases", "leptomeningeal-disease", "graded-prognostic-assessment"],
     related: ["brain-tumours", "metastatic-cancer", "nsclc", "breast-her2-positive", "melanoma"],
     links: [{ label: "Wikipedia", url: W("Brain_metastasis") }, { label: "Alliance N0574: radiosurgery with or without whole-brain radiotherapy (JAMA 2016)", url: "https://doi.org/10.1001/jama.2016.9839" }, { label: "QUARTZ (Lancet 2016)", url: "https://doi.org/10.1016/S0140-6736(16)30825-X" }] },
 
@@ -193,7 +193,7 @@ export const cnsSubtypes: CancerInput[] = [
     ],
     pipeline: ["belzutifan", "proton-therapy", "methylation-profiling"],
     openProblems: ["Almost no trial evidence; treatment is extrapolated from brain tumours and case series.", "Infiltrating cord astrocytomas cannot be removed and have no effective drug.", "Radiotherapy to the cord is limited by myelopathy risk.", "Neurological deficit at presentation, not treatment, decides most outcomes, so diagnosis is often too late."],
-    technologies: ["mri", "imrt-igrt", "proton-therapy", "radiosurgery-srs", "methylation-profiling"], drugs: ["belzutifan", "temozolomide"], terms: ["h3k27m"],
+    technologies: ["mri", "imrt-igrt", "proton-therapy", "radiosurgery-srs", "methylation-profiling"], drugs: ["belzutifan", "temozolomide"], terms: ["h3k27m", "ependymoma-molecular-groups"],
     related: ["brain-tumours", "ependymoma", "meningioma", "vestibular-schwannoma", "dipg-dmg", "metastatic-cancer"],
     links: [{ label: "Wikipedia", url: W("Spinal_tumor") }, { label: "NCI: adult central nervous system tumours treatment (PDQ)", url: "https://www.cancer.gov/types/brain/hp/adult-brain-treatment-pdq" }] },
 
