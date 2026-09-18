@@ -19,5 +19,6 @@ import { simpleN } from "./simple/part-n";
 import { simpleN2 } from "./simple/part-n2";
 import { simpleO } from "./simple/part-o";
 import { simpleP } from "./simple/part-p";
+import { simpleQ } from "./simple/part-q";
 
-export const simple: Record<string, string> = { ...simpleA, ...simpleB, ...simpleD, ...simpleE, ...simpleF, ...simpleG, ...simpleH, ...simpleI, ...simpleJ, ...simpleK, ...simpleK2, ...simpleL, ...simpleL2, ...simpleM, ...simpleM2, ...simpleN, ...simpleN2, ...simpleO, ...simpleP };
+export const simple: Record<string, string> = { ...simpleA, ...simpleB, ...simpleD, ...simpleE, ...simpleF, ...simpleG, ...simpleH, ...simpleI, ...simpleJ, ...simpleK, ...simpleK2, ...simpleL, ...simpleL2, ...simpleM, ...simpleM2, ...simpleN, ...simpleN2, ...simpleO, ...simpleP, ...simpleQ };
