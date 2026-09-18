@@ -371,7 +371,7 @@ export const lungSubtypes: CancerInput[] = [
     pipeline: ["nct06151574", "sevabertinib", "soho-01", "zongertinib", "trastuzumab-deruxtecan"],
     openProblems: ["No trial yet compares an oral HER2 inhibitor with an antibody-drug conjugate or settles the sequence.", "Interstitial lung disease from trastuzumab deruxtecan is unpredictable and occasionally fatal.", "HER2-amplified and HER2-overexpressing lung cancers without a mutation lack a defined standard."],
     targets: ["her2", "pd1"], technologies: ["adc", "her2-tyrosine-kinase-inhibitors", "kinase-inhibitors", "topoisomerase-inhibitors", "cgp"], terms: ["driver-mutation", "ild", "hepatotoxicity", "brain-metastases", "her2-positive"],
-    trials: ["destiny-lung02", "beamion-lung-1", "soho-01", "nct06151574"], drugs: ["trastuzumab-deruxtecan", "zongertinib", "sevabertinib", "pembrolizumab", "afatinib", "neratinib"],
+    trials: ["destiny-lung02", "beamion-lung-1", "soho-01", "nct06151574"], drugs: ["trastuzumab-deruxtecan", "zongertinib", "sevabertinib", "pembrolizumab", "afatinib", "neratinib", "poziotinib"],
     people: ["john-heymach", "pasi-janne"], companies: ["daiichi-sankyo", "astrazeneca", "boehringer-ingelheim", "bayer"], pathways: ["nsclc-signalling", "rtk-activation", "pi3k-akt-mtor"],
     links: [{ label: "Wikipedia", url: W("HER2") }, { label: "NCCN Guidelines: Non-Small Cell Lung Cancer", url: NCCN_NSCLC }] },
 

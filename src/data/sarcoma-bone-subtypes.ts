@@ -41,6 +41,7 @@ export const sarcomaBoneSubtypes: CancerInput[] = [
     related: ["osteosarcoma", "chordoma"], links: [{ label: "Wikipedia", url: W("Chondrosarcoma") }] },
 
   { id: "angiosarcoma", kind: "cancer", name: "Angiosarcoma", group: "sarcoma", parent: "vascular-tumours", asOf, tags, wikipedia: W("Angiosarcoma"),
+    drugs: ["carotuximab"],
     aka: ["Haemangiosarcoma", "Lymphangiosarcoma", "Stewart-Treves syndrome (lymphoedema-associated angiosarcoma)", "Radiation-associated angiosarcoma"],
     burden: "About one to two percent of soft tissue sarcomas; arises in the sun-damaged scalp and face of older people, in the irradiated breast, in chronically swollen limbs and in the liver, heart and spleen. It spreads early and median survival with metastatic disease is under a year in most series.",
     tldr: "Angiosarcoma is an aggressive cancer of the cells that line blood and lymph vessels. It grows as bruise-like patches on the scalp of older people, in breasts treated years earlier with radiotherapy, or inside organs. Surgery and radiotherapy are used where possible, weekly paclitaxel is the most active drug, and immunotherapy helps a minority with the sun-damaged scalp form.",
@@ -111,6 +112,7 @@ export const sarcomaBoneSubtypes: CancerInput[] = [
     related: ["undifferentiated-pleomorphic-sarcoma", "extremity-soft-tissue-sarcoma"], links: [{ label: "Wikipedia", url: W("Myxofibrosarcoma") }] },
 
   { id: "alveolar-soft-part-sarcoma", kind: "cancer", name: "Alveolar soft part sarcoma", group: "sarcoma", parent: "sarcoma", asOf, tags, wikipedia: W("Alveolar_soft_part_sarcoma"),
+    drugs: ["cediranib"],
     aka: ["ASPS", "ASPSCR1-TFE3 sarcoma"],
     burden: "Under one percent of soft tissue sarcomas, arising in adolescents and young adults, usually in the thigh or buttock and in children in the head and neck; it grows slowly but has often already spread to the lungs, bone or brain at diagnosis, and patients live for years with metastatic disease.",
     tldr: "Alveolar soft part sarcoma is a rare, slow-growing cancer of young adults driven by a single fusion gene, ASPSCR1-TFE3, that switches on blood vessel growth. Chemotherapy does not work, but drugs that block the tumour's blood supply shrink it, and in 2023 the immunotherapy atezolizumab became the first drug approved for it.",
