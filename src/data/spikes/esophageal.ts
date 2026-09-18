@@ -118,7 +118,7 @@ const drugs: DrugInput[] = [
     toxicity: [{ event: "Reactive cutaneous capillary endothelial proliferation (RCCEP)", note: "Very common; benign, resolves after stopping" }, { event: "Immune-related adverse events" }],
     approvals: [{ region: "China", year: 2019, indication: "Classical Hodgkin lymphoma; subsequently HCC, NSCLC, ESCC (second line 2020, first line with chemotherapy 2021), nasopharyngeal" }],
     regulatoryEvents: [{ date: "2024-05", type: "crl", region: "US", note: "Complete response letter for camrelizumab + rivoceranib in HCC (manufacturing/inspection)" }, { date: "2025-03", type: "crl", region: "US", note: "Second complete response letter" }],
-    targets: ["pd1"], technologies: ["checkpoint-inhibitor"], cancers: ["esophageal", "hcc", "nsclc"], trials: ["escort-1st", "nct04639180", "nct05320692", "nct05841472", "nct06361888", "nct04906993", "nct04342910"], terms: ["irae"],
+    targets: ["pd1"], technologies: ["checkpoint-inhibitor"], cancers: ["esophageal", "hcc", "nsclc", "nasopharyngeal"], trials: ["escort-1st", "captain-1st", "nct04639180", "nct05320692", "nct05841472", "nct06361888", "nct04906993", "nct04342910"], terms: ["irae"],
     links: [{ label: "ESCORT-1st final analysis", url: "https://pubmed.ncbi.nlm.nih.gov/38870932/" }] }),
 ];
 
