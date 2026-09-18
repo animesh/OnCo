@@ -131,7 +131,7 @@ const companies: CompanyInput[] = [
 
 // ======================= TERMS =======================
 const terms: TermInput[] = [
-  tm({ id: "endometrial-molecular-classes", wikipedia: W("Endometrial_cancer"), name: "Endometrial cancer molecular classes (POLEmut, MMRd, p53abn, NSMP)", category: "Cancer biology",
+  tm({ id: "endometrial-molecular-classes", aka: ["ProMisE", "ProMisE classifier", "molecular classification of endometrial cancer", "TCGA endometrial subtypes", "WHO 2020 endometrial molecular classification", "endometrial molecular class", "molecular class"], wikipedia: W("Endometrial_cancer"), name: "Endometrial cancer molecular classes (POLEmut, MMRd, p53abn, NSMP)", category: "Cancer biology",
     tldr: "Four groups defined by a few tests that predict outcome better than the microscope: POLE-mutated (excellent), mismatch-repair deficient, p53-abnormal (worst), and 'no specific profile'.",
     summary: "From TCGA (Nature 2013) via the ProMisE classifier (Talhouk 2015) into the WHO 2020 classification and ESGO/ESTRO/ESP 2021 guidelines. POLE-ultramutated (~7%) almost never relapses and may need no adjuvant therapy; MMRd (~25-30%) responds to immunotherapy; p53abn (~15%; includes most serous) benefits from chemotherapy (PORTEC-3) and often carries HER2 amplification; NSMP (~50%) is heterogeneous, with L1CAM and ER status refining risk. Molecular-class-directed adjuvant trials (RAINBO programme, PORTEC-4a) are ongoing.",
     cancers: ["endometrial"], targets: ["tp53", "her2"], terms: ["msi"], trials: ["portec-3"], links: [{ label: "TCGA, Nature 2013", url: "https://www.nature.com/articles/nature12113" }] }),

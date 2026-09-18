@@ -190,7 +190,7 @@ export const nciPaediatricCancers: CancerInput[] = [
     ],
     targets: ["cdk4-6"], pathways: ["epigenetic-reprogramming", "inflammation-nfkb", "hippo-yap"], drugs: ["vincristine", "carboplatin", "cyclophosphamide", "etoposide"],
     technologies: ["imrt-igrt", "proton-therapy", "methylation-profiling", "mri", "survivorship-care-plan"], trials: ["pediatric-match"], institutions: ["childrens-oncology-group", "siop-europe", "st-jude", "dkfz"],
-    terms: ["late-effects"], bottlenecks: ["b-rare-cancers", "b-survivorship"], related: ["medulloblastoma", "paediatric-low-grade-glioma"],
+    terms: ["late-effects", "ependymoma-molecular-groups"], bottlenecks: ["b-rare-cancers", "b-survivorship"], related: ["medulloblastoma", "paediatric-low-grade-glioma"],
     links: [
       { label: "NCI PDQ: childhood ependymoma", url: PDQ("brain/hp/child-ependymoma-treatment-pdq") },
       { label: "Pajtler 2015: molecular classification of ependymal tumours (Cancer Cell)", url: "https://doi.org/10.1016/j.ccell.2015.04.002" },

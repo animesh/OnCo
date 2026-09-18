@@ -38,7 +38,7 @@ const companies: CompanyInput[] = [
 
 // ======================= TARGETS =======================
 const targets: TargetInput[] = [
-  tg({ id: "kmt2a", name: "KMT2A (MLL) rearrangement", symbol: "KMT2A", targetClass: "transcription", wikipedia: W("KMT2A"),
+  tg({ id: "kmt2a", name: "KMT2A (MLL) rearrangement", symbol: "KMT2A", aka: ["KMT2A rearrangement", "KMT2A-rearranged", "KMT2A-r", "KMT2Ar", "KMT2A fusion", "MLL-rearranged", "MLL rearrangement", "MLLr", "MLL-r", "11q23 rearrangement", "KMT2A partner gene"], targetClass: "transcription", wikipedia: W("KMT2A"),
     tldr: "A gene fusion that drives an aggressive leukaemia in infants and adults. It cannot be blocked directly, but the scaffold protein it depends on (menin) can.",
     summary: "KMT2A (formerly MLL) rearrangements with >80 partner genes occur in ~5-10% of adult AML (higher in therapy-related AML), ~80% of infant ALL, and a subset of adult B-ALL. The fusion protein needs menin to bind chromatin and sustain HOXA9/MEIS1 expression. Menin inhibitors revumenib (approved 2024) and ziftomenib (in trials for KMT2Ar) release the differentiation block. Resistance emerges through MEN1 mutations at the drug-binding site.",
     biology: "Histone H3K4 methyltransferase; fusions lose the SET domain and gain partner-driven transcriptional elongation activity. Menin binds the N-terminus and is required for leukaemogenesis.",
@@ -116,7 +116,7 @@ const technologies: TechnologyInput[] = [
 
 // ======================= TERMS =======================
 const terms: TermInput[] = [
-  term({ id: "eln-risk", wikipedia: W("Acute_myeloid_leukemia"), name: "ELN 2022 risk classification", category: "Clinical",
+  term({ id: "eln-risk", wikipedia: W("Acute_myeloid_leukemia"), name: "ELN 2022 risk classification", category: "Clinical", aka: ["ELN 2022 risk group", "ELN 2022 genetic risk group", "ELN genetic risk", "ELN risk group", "ELN favourable risk", "ELN intermediate risk", "ELN adverse risk", "European LeukemiaNet risk", "ELN 2017"],
     tldr: "The three-tier system (favourable, intermediate, adverse) that decides how aggressively an adult with AML is treated and whether a transplant is recommended.",
     summary: "The European LeukemiaNet 2022 update classifies AML by genetics: favourable (t(8;21), inv(16), NPM1 without FLT3-ITD, bZIP in-frame CEBPA); intermediate (NPM1 with FLT3-ITD, FLT3-ITD without NPM1, t(9;11)); adverse (TP53, complex/monosomal karyotype, myelodysplasia-related mutations, KMT2A rearrangements other than t(9;11), inv(3), t(6;9)). FLT3-ITD allelic ratio was dropped in 2022 because FLT3 inhibitors changed the outlook. Companion ELN MRD recommendations define molecular and flow thresholds.",
     links: [{ label: "ELN 2022 (Döhner et al., Blood 2022)", url: "https://ashpublications.org/blood/article/140/12/1345/485817" }], cancers: ["aml"], technologies: ["cytogenetics-fish", "cgp"], targets: ["npm1", "flt3", "tp53", "kmt2a"] }),

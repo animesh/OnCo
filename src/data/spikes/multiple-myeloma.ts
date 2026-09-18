@@ -29,7 +29,7 @@ const technologies: TechnologyInput[] = [
 ];
 
 const terms: TermInput[] = [
-  term({ id: "r-iss", name: "R-ISS / R2-ISS staging", category: "Clinical", wikipedia: W("Multiple_myeloma#Staging"),
+  term({ id: "r-iss", name: "R-ISS / R2-ISS staging", category: "Clinical", aka: ["ISS", "International Staging System", "Revised International Staging System", "R-ISS stage", "ISS stage I", "ISS stage II", "ISS stage III", "R-ISS stage III", "beta-2 microglobulin", "β2-microglobulin", "beta-2-microglobulin", "B2M", "myeloma staging"], wikipedia: W("Multiple_myeloma#Staging"),
     tldr: "R-ISS is the myeloma staging system, combining blood markers with high-risk chromosome changes to predict outcome.",
     summary: "Revised International Staging System (2015): β2-microglobulin, albumin, LDH and high-risk FISH (del17p, t(4;14), t(14;16)). R2-ISS (2022) adds 1q gain/amplification and weights factors. Median OS is not reached for stage I and ~4-5 years for stage III in older cohorts; modern quadruplets shift all groups.",
     cancers: ["multiple-myeloma"], links: [{ label: "Wikipedia", url: W("Multiple_myeloma#Staging") }] }),
@@ -44,7 +44,7 @@ const terms: TermInput[] = [
   term({ id: "smoldering-myeloma", name: "Smouldering myeloma / MGUS", category: "Clinical", wikipedia: W("Monoclonal_gammopathy_of_undetermined_significance"),
     tldr: "Early plasma-cell conditions with no organ damage; most never progress, but high-risk smouldering disease is now sometimes treated.",
     summary: "MGUS progresses at ~1% per year; smouldering myeloma at ~10% per year for five years, higher with the 20/2/20 criteria (M-protein >2 g/dL, >20% plasma cells, free light chain ratio >20). Lenalidomide (E3A06) and daratumumab (AQUILA, 2024: progression HR 0.49) delay progression in high-risk smouldering disease; whether to treat remains debated. iStopMM (Iceland) is screening a whole population.",
-    cancers: ["multiple-myeloma"], links: [{ label: "Wikipedia", url: W("Monoclonal_gammopathy_of_undetermined_significance") }], aka: ["MGUS", "monoclonal gammopathy", "monoclonal gammopathy of undetermined significance", "smouldering", "smouldering myeloma", "smoldering myeloma", "smoldering", "M-protein", "paraprotein", "monoclonal protein", "free light chains", "light chain", "light chains", "serum free light chain", "plasma cell dyscrasia", "free light chain", "mgus-smouldering"], related: ["dysplasia", "active-surveillance", "tumour-markers"], drugs: ["lenalidomide", "daratumumab"], sections: ["early-detection"] }),
+    cancers: ["multiple-myeloma"], links: [{ label: "Wikipedia", url: W("Monoclonal_gammopathy_of_undetermined_significance") }], aka: ["MGUS", "monoclonal gammopathy", "monoclonal gammopathy of undetermined significance", "smouldering", "smouldering myeloma", "smoldering myeloma", "smoldering", "plasma cell dyscrasia", "mgus-smouldering", "Mayo 20/2/20", "20/2/20 criteria", "IMWG 2/20/20 risk score", "evolving M-protein", "high-risk smouldering myeloma"], related: ["dysplasia", "active-surveillance", "tumour-markers"], drugs: ["lenalidomide", "daratumumab"], sections: ["early-detection"] }),
 ];
 
 // ======================= PRODUCTS =======================
