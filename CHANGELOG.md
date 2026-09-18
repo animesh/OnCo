@@ -7,6 +7,7 @@ All notable changes to OnCo are recorded here. The format follows [Keep a Change
 Regenerated from the commit log each time the site ships (`scripts/changelog-sync.ts`); the version sections below are written by hand when a release is cut.
 
 ### 18 September 2026
+- Key papers for 147 subtype pages: 364 pivotal trial, classification and guideline papers, each checked against Europe PMC
 - Thirty-nine drugs named by the new subtype pages now have their own records, from hormone therapies for pituitary tumours to antibody-drug conjugates in trials
 - Fifty biomarker glossary terms named by the new subtype pages (molecular groups, risk scores, resistance mutations), each linked from the pages that use it
 - Registry trials linked to 109 subtype pages by driver and stage (1,018 links), with a re-runnable matcher script
@@ -28,6 +29,8 @@ Regenerated from the commit log each time the site ships (`scripts/changelog-syn
 - 1,024 more plain-English sentences: 279 companies, 104 institutions and 640 phase 3 trials, taking the simple layer to 8,961 records
 
 ### 17 September 2026
+- Add key papers to 147 cancer subtype pages
+- Thirty-nine drugs named by the new subtype pages now have their own records, from hormone therapies for pituitary tumours to antibody-drug conjugates in trials
 - Add drugs named by the cancer subtype pages (drugs-subtypes-wave)
 - Fifty biomarker glossary terms named by the new subtype pages (molecular groups, risk scores, resistance mutations), each linked from the pages that use it
 - Add 50 biomarker terms named by the cancer subtype pages
