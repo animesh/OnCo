@@ -27,6 +27,7 @@ import { frontierRoadmaps } from "./frontier-roadmap";
 import { supporting } from "./supporting";
 import { gapFill } from "./gap-fill";
 import { keyPapers } from "./key-papers";
+import { papersSubtypesWave } from "./papers-subtypes-wave";
 import { nutrition } from "./nutrition";
 import { adcChemistry } from "./adc-chemistry";
 import { journals } from "./journals";
@@ -145,6 +146,7 @@ const RAW_INPUTS: EntityInput[] = [
   ...supporting,
   ...gapFill,
   ...keyPapers,
+  ...papersSubtypesWave,
   ...nutrition,
   ...adcChemistry,
   ...journals,

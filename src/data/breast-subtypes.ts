@@ -20,6 +20,7 @@ export const breastSubtypes: CancerInput[] = [
   // HR-positive, HER2-negative disease by state
   // ---------------------------------------------------------------------------------------------------------------------
   { id: "hr-positive-early-high-risk", kind: "cancer", name: "High-risk early HR-positive breast cancer", group: "breast", parent: "breast-hr-positive", asOf, tags, wikipedia: W("Breast_cancer"),
+    keyPapers: ["paper-monarche-jco-2020", "paper-natalee-nejm-2024", "paper-olympia-nejm-2021", "paper-tailorx-nejm-2018"],
     aka: ["High-risk early hormone receptor-positive, HER2-negative breast cancer", "Node-positive luminal breast cancer", "Stage II to III HR-positive breast cancer"],
     burden: "Hormone receptor-positive, HER2-negative tumours are about seven in ten breast cancers and most are cured; the high-risk minority with node involvement, large size or high grade account for most of the relapses, which in this subtype can arrive ten or twenty years after diagnosis.",
     tldr: "Most hormone-driven breast cancers are cured with surgery, radiotherapy and five to ten years of endocrine tablets. Women whose tumours are larger, higher grade or have reached the lymph nodes face a higher risk of relapse: two to three years of a CDK4/6 inhibitor added to endocrine therapy cuts recurrence, and genomic tests such as Oncotype DX and MammaPrint decide who also needs chemotherapy.",
@@ -52,6 +53,7 @@ export const breastSubtypes: CancerInput[] = [
     links: [{ label: "TAILORx (NEJM 2018)", url: "https://doi.org/10.1056/NEJMoa1804710" }, { label: "monarchE (JCO 2020)", url: "https://doi.org/10.1200/JCO.20.02514" }, { label: "NATALEE (NEJM 2024)", url: "https://doi.org/10.1056/NEJMoa2305488" }, { label: "Wikipedia", url: W("Breast_cancer") }] },
 
   { id: "hr-positive-metastatic-post-cdk46", kind: "cancer", name: "HR-positive metastatic breast cancer after CDK4/6 inhibitors", group: "breast", parent: "breast-hr-positive", asOf, tags, wikipedia: W("Breast_cancer"),
+    keyPapers: ["paper-destiny-breast06-nejm-2024", "paper-emerald-elacestrant-jco-2022", "paper-capitello-291-nejm-2023", "paper-solar-1-alpelisib-nejm-2019"],
     aka: ["Endocrine-resistant metastatic breast cancer", "ESR1-mutant breast cancer", "PIK3CA-mutant breast cancer", "AKT pathway-altered breast cancer", "Second-line HR-positive metastatic breast cancer"],
     burden: "Nearly every patient treated with a CDK4/6 inhibitor and endocrine therapy for metastatic hormone receptor-positive disease eventually progresses, typically after two to three years; about four in ten tumours carry a PIK3CA mutation and a third or more acquire an ESR1 mutation under aromatase inhibitor pressure.",
     tldr: "When hormone-positive breast cancer grows through a CDK4/6 inhibitor, a blood test picks the next drug. Tumours with an acquired ESR1 mutation respond to the oral degraders elacestrant, camizestrant and imlunestrant; tumours with PIK3CA, AKT1 or PTEN changes to capivasertib, inavolisib or alpelisib; and once endocrine options run out, antibody-drug conjugates come before chemotherapy.",
@@ -114,6 +116,7 @@ export const breastSubtypes: CancerInput[] = [
   // HER2-positive disease by state
   // ---------------------------------------------------------------------------------------------------------------------
   { id: "her2-positive-early-breast-cancer", kind: "cancer", name: "Early HER2-positive breast cancer", group: "breast", parent: "breast-her2-positive", asOf, tags, wikipedia: W("HER2-positive_breast_cancer"),
+    keyPapers: ["paper-katherine-nejm-2019", "paper-aphinity-nejm-2017", "paper-apt-tolaney-nejm-2015", "paper-train-2-lancet-oncol-2018"],
     aka: ["Stage I to III HER2-positive breast cancer", "Operable HER2-positive breast cancer", "HER2-positive breast cancer treated with curative intent"],
     burden: "Around 15 to 20 percent of breast cancers overexpress HER2 and most are diagnosed at an operable stage; once the subtype with the worst outlook, it now has some of the highest cure rates after a year of HER2-directed therapy.",
     tldr: "HER2-positive breast cancer caught early is usually cured. Chemotherapy with the antibodies trastuzumab and pertuzumab comes before surgery; if the tumour has gone by then, antibodies alone finish the year, and if cancer remains, trastuzumab emtansine or trastuzumab deruxtecan take over. Small tumours get a gentler regimen, and trials now ask how much treatment can be left out.",
@@ -145,6 +148,7 @@ export const breastSubtypes: CancerInput[] = [
     links: [{ label: "KATHERINE (NEJM 2019)", url: "https://doi.org/10.1056/NEJMoa1814017" }, { label: "APHINITY (NEJM 2017)", url: "https://doi.org/10.1056/NEJMoa1703643" }, { label: "TRAIN-2 (Lancet Oncology 2018)", url: "https://doi.org/10.1016/S1470-2045(18)30570-9" }, { label: "Wikipedia", url: W("HER2-positive_breast_cancer") }] },
 
   { id: "her2-positive-breast-brain-metastases", kind: "cancer", name: "HER2-positive breast cancer with brain metastases", group: "breast", parent: "breast-her2-positive", asOf, tags, wikipedia: W("Brain_metastasis"),
+    keyPapers: ["paper-her2climb-nejm-2020", "paper-her2climb-brain-lin-jco-2020", "paper-tuxedo-1-trastuzumab-deruxtecan-brain-metastases-nat-med-2022"],
     aka: ["HER2-positive brain metastases", "Central nervous system metastases from HER2-positive breast cancer", "Intracranial HER2-positive disease"],
     burden: "Up to half of women with metastatic HER2-positive breast cancer develop brain metastases during their illness, more than in any other breast subtype, partly because HER2 antibodies control disease elsewhere while the brain remains a sanctuary.",
     tldr: "The brain is the weak point of HER2-positive breast cancer: antibodies control the rest of the body but cross poorly into the brain, so up to half of patients with advanced disease develop brain metastases. Tucatinib with trastuzumab and capecitabine was the first drug proven to help, and trastuzumab deruxtecan shrinks brain lesions in most patients.",
@@ -206,6 +210,7 @@ export const breastSubtypes: CancerInput[] = [
     links: [{ label: "KEYNOTE-522 (NEJM 2020)", url: "https://doi.org/10.1056/NEJMoa1910549" }, { label: "KEYNOTE-522 overall survival (NEJM 2024)", url: "https://doi.org/10.1056/NEJMoa2409932" }, { label: "OlympiA (NEJM 2021)", url: "https://doi.org/10.1056/NEJMoa2105215" }, { label: "CREATE-X (NEJM 2017)", url: "https://doi.org/10.1056/NEJMoa1612645" }] },
 
   { id: "tnbc-metastatic", kind: "cancer", name: "Metastatic triple-negative breast cancer", group: "breast", parent: "tnbc", asOf, tags, wikipedia: W("Triple-negative_breast_cancer"),
+    keyPapers: ["paper-ascent-nejm-2021", "paper-destiny-breast04-nejm-2022", "paper-keynote-355-nejm-2022", "paper-olympiad-nejm-2017"],
     aka: ["Advanced triple-negative breast cancer", "Stage IV TNBC", "Recurrent triple-negative breast cancer"],
     burden: "Many women with early triple-negative disease relapse, most within three years, joining those diagnosed with spread from the outset; median survival was about a year to eighteen months on chemotherapy alone and now approaches two years in first-line trials.",
     tldr: "Triple-negative breast cancer that has spread is not curable, but its treatment has been transformed since 2020. By PD-L1 score, first treatment is pembrolizumab with chemotherapy or with sacituzumab govitecan, or datopotamab deruxtecan or sacituzumab govitecan alone; BRCA carriers can take a PARP inhibitor tablet; and trastuzumab deruxtecan reaches the third of tumours with low HER2.",
@@ -238,6 +243,7 @@ export const breastSubtypes: CancerInput[] = [
   // Rarer presentations under the breast cancer overview
   // ---------------------------------------------------------------------------------------------------------------------
   { id: "inflammatory-breast-cancer", kind: "cancer", name: "Inflammatory breast cancer", group: "breast", parent: "breast-cancer", asOf, tags, wikipedia: W("Inflammatory_breast_cancer"),
+    keyPapers: ["paper-keynote-522-nejm-2022", "paper-dawood-inflammatory-breast-consensus-ann-oncol-2011", "paper-rueth-inflammatory-breast-trimodality-jco-2014"],
     aka: ["IBC", "T4d breast cancer", "Inflammatory carcinoma of the breast"],
     burden: "A rare form, about one to five percent of breast cancers in most series but commoner in younger women and in Black women, and responsible for a disproportionate share of breast cancer deaths.",
     tldr: "Inflammatory breast cancer does not usually form a lump. The breast becomes red, swollen, warm and heavy over weeks, with skin thickened like orange peel, because cancer cells have blocked the lymph channels in the skin. It is often mistaken for infection, is always at least stage III, and needs chemotherapy first, then mastectomy and radiotherapy, with HER2 or immune drugs added by subtype.",
@@ -266,6 +272,7 @@ export const breastSubtypes: CancerInput[] = [
     links: [{ label: "NCI: inflammatory breast cancer", url: "https://www.cancer.gov/types/breast/ibc-fact-sheet" }, { label: "International expert panel consensus (Annals of Oncology 2011)", url: "https://doi.org/10.1093/annonc/mdq345" }, { label: "Wikipedia", url: W("Inflammatory_breast_cancer") }] },
 
   { id: "paget-disease-of-the-nipple", kind: "cancer", name: "Paget disease of the nipple", group: "breast", parent: "breast-cancer", asOf, tags, wikipedia: W("Paget%27s_disease_of_the_breast"),
+    keyPapers: ["paper-kothari-paget-disease-nipple-multifocal-cancer-2002"],
     aka: ["Mammary Paget disease", "Paget's disease of the breast", "Paget disease of the nipple-areola complex"],
     burden: "Rare, about one to three percent of breast cancers, mostly in women in their fifties and sixties; in the large majority an underlying ductal carcinoma in situ or invasive cancer sits behind the nipple change.",
     tldr: "Paget disease of the nipple looks like eczema: a scaly, red, itchy or weeping patch on the nipple that creams do not heal. Cancer cells have spread along the milk ducts into the nipple skin, and in most cases a ductal carcinoma in situ or invasive cancer lies underneath. Surgery removes the nipple and areola with the disease beneath, by mastectomy or central breast conservation with radiotherapy.",
@@ -290,6 +297,7 @@ export const breastSubtypes: CancerInput[] = [
     links: [{ label: "NCI: Paget disease of the breast", url: "https://www.cancer.gov/types/breast/paget-breast-fact-sheet" }, { label: "Wikipedia", url: W("Paget%27s_disease_of_the_breast") }] },
 
   { id: "phyllodes-tumour", kind: "cancer", name: "Phyllodes tumour of the breast", group: "breast", parent: "breast-cancer", asOf, tags, wikipedia: W("Phyllodes_tumor"),
+    keyPapers: ["paper-tan-phyllodes-consensus-histopathology-2016", "paper-barth-phyllodes-adjuvant-radiotherapy-ann-surg-oncol-2009"],
     aka: ["Cystosarcoma phyllodes (historical)", "Fibroepithelial tumour of the breast", "Malignant phyllodes tumour"],
     burden: "Under one percent of breast tumours, typically in women in their forties, a decade later than fibroadenoma; most are benign, and only the malignant minority behave as sarcomas and spread.",
     tldr: "A phyllodes tumour is a fast-growing, usually painless breast lump of gland and connective tissue that forms leaf-like fronds. Most are benign, some borderline and a few malignant, behaving like a sarcoma and spreading through the blood. Treatment is surgery with a rim of normal tissue; radiotherapy is considered for higher grades, and chemotherapy has little proven role.",

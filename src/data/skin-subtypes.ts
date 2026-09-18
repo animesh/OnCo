@@ -155,6 +155,7 @@ export const skinSubtypes: CancerInput[] = [
   // Melanoma by mutation, stage and site
   // ---------------------------------------------------------------------------------------------------------------------
   { id: "braf-v600-melanoma", kind: "cancer", name: "BRAF V600-mutant melanoma", group: "skin", parent: "melanoma", asOf, tags, wikipedia: W("BRAF_(gene)"),
+    keyPapers: ["paper-dreamseq-jco-2023", "paper-combi-d-long-lancet-2015", "paper-columbus-lancet-oncol-2018", "paper-combi-ad-nejm-2017", "paper-chapman-vemurafenib-nejm-2011"],
     aka: ["BRAF-mutant melanoma", "BRAF V600E melanoma", "BRAF V600K melanoma", "BRAF-positive melanoma"],
     burden: "About half of cutaneous melanomas carry a BRAF V600 mutation, most often V600E, less often V600K; it is commoner in younger patients and in melanomas on skin without chronic sun damage, and rare in acral and mucosal melanoma.",
     tldr: "BRAF V600-mutant melanoma has a single faulty switch that drives it to grow, and two pills, a BRAF inhibitor with a MEK inhibitor, can shut that switch off and shrink the cancer within weeks. Immunotherapy is usually given first because its effect lasts longer, and the pills are kept for later or given for a year after surgery to prevent relapse.",
@@ -185,6 +186,7 @@ export const skinSubtypes: CancerInput[] = [
     links: [{ label: "COMBI-d final analysis (Lancet 2015)", url: "https://doi.org/10.1016/S0140-6736(15)60898-4" }, { label: "DREAMseq (JCO 2023)", url: "https://ascopubs.org/doi/10.1200/JCO.22.01763" }, { label: "Wikipedia", url: W("BRAF_(gene)") }] },
 
   { id: "stage-iii-melanoma", kind: "cancer", name: "Stage III melanoma (after surgery)", group: "skin", parent: "melanoma", asOf, tags, wikipedia: W("Melanoma"),
+    keyPapers: ["paper-nadina-nejm-2024", "paper-mslt-ii-faries-nejm-2017", "paper-checkmate-238-nejm-2017", "paper-keynote-054-eggermont-nejm-2018"],
     aka: ["Resected stage III melanoma", "Node-positive melanoma", "Regional melanoma", "Adjuvant melanoma setting"],
     burden: "Stage III means the melanoma has reached the regional lymph nodes or produced satellite or in-transit deposits in the skin; in the eighth edition of the staging system five-year melanoma-specific survival ranges from 93 percent for stage IIIA to 32 percent for stage IIID, so it is the stage where preventing relapse matters most.",
     tldr: "Stage III melanoma has spread to nearby lymph nodes but not further, and after surgery a year of immunotherapy, or of targeted pills if the cancer has a BRAF mutation, roughly halves the chance of it coming back. The newest trials show that giving immunotherapy before the operation instead of after works even better and lets most people stop treatment early.",
@@ -215,6 +217,7 @@ export const skinSubtypes: CancerInput[] = [
     links: [{ label: "CheckMate 238 (NEJM 2017)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa1709030" }, { label: "KEYNOTE-054 (NEJM 2018)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa1802357" }, { label: "NADINA (NEJM 2024)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2402604" }, { label: "Wikipedia", url: W("Melanoma") }] },
 
   { id: "stage-ii-melanoma", kind: "cancer", name: "Stage IIB and IIC melanoma", group: "skin", parent: "melanoma", asOf, tags, wikipedia: W("Melanoma"),
+    keyPapers: ["paper-keynote-716-lancet-2022", "paper-checkmate-76k-nat-med-2023", "paper-ajcc-8-melanoma-gershenwald-ca-2017"],
     aka: ["High-risk stage II melanoma", "Thick node-negative melanoma", "Stage IIB/IIC melanoma"],
     burden: "Stage IIB and IIC melanomas are thick or ulcerated primaries with a negative sentinel node; in the eighth staging edition five-year melanoma-specific survival is about 87 percent for IIB and 82 percent for IIC, worse than stage IIIA, and because stage II is far commoner than stage III it accounts for a large share of melanoma deaths.",
     tldr: "Stage IIB and IIC melanomas are thick or ulcerated skin melanomas that have not reached the lymph nodes but still carry a real risk of coming back. A year of pembrolizumab or nivolumab after surgery lowers that risk, though most people in this group would have been cured by surgery alone, so the decision weighs a modest benefit against a year of treatment.",
@@ -240,6 +243,7 @@ export const skinSubtypes: CancerInput[] = [
     links: [{ label: "KEYNOTE-716 (Lancet 2022)", url: "https://doi.org/10.1016/S0140-6736(22)00562-1" }, { label: "CheckMate 76K (Nature Medicine 2023)", url: "https://doi.org/10.1038/s41591-023-02583-2" }, { label: "Wikipedia", url: W("Melanoma") }] },
 
   { id: "advanced-melanoma", kind: "cancer", name: "Advanced melanoma (unresectable stage III and stage IV)", group: "skin", parent: "melanoma", asOf, tags, wikipedia: W("Melanoma"),
+    keyPapers: ["paper-checkmate-067-10-year-nejm-2025", "paper-relativity-047-nejm-2022", "paper-keynote-006-pembrolizumab-ipilimumab-melanoma-nejm-2015", "paper-c-144-01-lifileucel-melanoma-jco-2021"],
     aka: ["Metastatic melanoma", "Stage IV melanoma", "Unresectable melanoma", "First-line advanced melanoma"],
     burden: "Roughly one in ten melanomas presents with or progresses to unresectable or metastatic disease; before 2011 median survival was under a year, and about half of patients treated with the nivolumab and ipilimumab combination are now alive at ten years.",
     tldr: "Advanced melanoma has spread beyond what surgery can remove, and it is the cancer in which immunotherapy first proved it could cure some people: about half of those given nivolumab with ipilimumab are alive ten years later. If immunotherapy fails, options include a cell therapy grown from the patient's own immune cells, a virus injected into the tumour, and targeted pills for BRAF-mutant disease.",
@@ -273,6 +277,7 @@ export const skinSubtypes: CancerInput[] = [
     links: [{ label: "CheckMate 067 ten-year results (NEJM 2025)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2407417" }, { label: "KEYNOTE-006 ten-year follow-up (Annals of Oncology 2024)", url: "https://www.annalsofoncology.org/article/S0923-7534(24)03910-3/fulltext" }, { label: "Dutch TIL trial (NEJM 2022)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2210233" }, { label: "Wikipedia", url: W("Melanoma") }] },
 
   { id: "mucosal-melanoma", kind: "cancer", name: "Mucosal melanoma", group: "skin", parent: "melanoma", asOf, tags, wikipedia: W("Mucosal_melanoma"),
+    keyPapers: ["paper-dangelo-mucosal-melanoma-pooled-jco-2017", "paper-hodi-imatinib-kit-melanoma-jco-2013", "paper-curtin-kit-melanoma-jco-2006", "paper-lian-adjuvant-temozolomide-cisplatin-mucosal-melanoma-ccr-2013"],
     aka: ["Melanoma of mucous membranes", "Sinonasal melanoma", "Oral mucosal melanoma", "Anorectal melanoma", "Vulvovaginal melanoma"],
     burden: "Mucosal melanoma is about one in a hundred melanomas in Europe and North America but roughly a fifth of melanomas in China, where it is the second commonest subtype; it arises in the nose and sinuses, mouth, anus and rectum, and vulva and vagina, and is usually found late.",
     tldr: "Mucosal melanoma grows on the moist linings of the nose, mouth, anus or genital tract rather than on sun-exposed skin, so it is found late and carries fewer of the mutations that make skin melanoma visible to the immune system. Immunotherapy helps less often than in skin melanoma; a minority of tumours has a KIT mutation that the pill imatinib can target.",
@@ -301,6 +306,7 @@ export const skinSubtypes: CancerInput[] = [
     links: [{ label: "Pooled nivolumab analysis in mucosal melanoma (JCO 2017)", url: "https://ascopubs.org/doi/10.1200/JCO.2016.67.9258" }, { label: "Toripalimab plus axitinib (JCO 2019)", url: "https://ascopubs.org/doi/10.1200/JCO.19.00210" }, { label: "Wikipedia", url: W("Mucosal_melanoma") }] },
 
   { id: "acral-melanoma", kind: "cancer", name: "Acral melanoma", group: "skin", parent: "melanoma", asOf, tags, wikipedia: W("Acral_lentiginous_melanoma"),
+    keyPapers: ["paper-nadina-nejm-2024", "paper-hayward-melanoma-whole-genome-nature-2017", "paper-curtin-melanoma-genetic-alterations-nejm-2005", "paper-nakamura-anti-pd1-acral-melanoma-ann-oncol-2020"],
     aka: ["Acral lentiginous melanoma", "Melanoma of the palms, soles and nail beds", "Subungual melanoma"],
     burden: "Acral melanoma arises on the palms, soles and under the nails; its absolute incidence is similar in every population, so it is a small minority of melanomas in people with fair skin but the commonest melanoma subtype in people of African and Asian ancestry, accounting for about four in ten melanomas in China.",
     tldr: "Acral melanoma grows on the soles, palms or under a nail, places without sun exposure, and it is the commonest melanoma in people with darker skin. It is often mistaken for a wart, bruise or fungal nail and so found late; treatment follows skin melanoma, but immunotherapy works less often because the tumour carries fewer mutations.",
@@ -330,6 +336,7 @@ export const skinSubtypes: CancerInput[] = [
   // Keratinocyte cancers by state
   // ---------------------------------------------------------------------------------------------------------------------
   { id: "advanced-cutaneous-scc", kind: "cancer", name: "Advanced cutaneous squamous cell carcinoma", group: "skin", parent: "cutaneous-scc", asOf, tags, wikipedia: W("Squamous-cell_carcinoma_of_the_skin"),
+    keyPapers: ["paper-empower-cscc-1-cemiplimab-migden-nejm-2018", "paper-keynote-629-pembrolizumab-cscc-grob-jco-2020", "paper-c-post-adjuvant-cemiplimab-nejm-2025", "paper-gross-neoadjuvant-cemiplimab-cscc-nejm-2022"],
     aka: ["Locally advanced cutaneous squamous cell carcinoma", "Metastatic cutaneous squamous cell carcinoma", "Advanced cSCC", "Unresectable skin squamous cell carcinoma"],
     burden: "Cutaneous squamous cell carcinoma is the second commonest skin cancer and most are cured by excision, but a few percent recur locally beyond surgical control or spread to lymph nodes and distant sites; the risk is highest in organ-transplant recipients and other immunosuppressed people, in whom the disease is many times commoner and more aggressive.",
     tldr: "Advanced cutaneous squamous cell carcinoma is a skin cancer that has grown beyond what surgery or radiotherapy can remove or has spread to lymph nodes or organs. Because sun damage gives it more mutations than almost any other cancer, immunotherapy works well: cemiplimab or pembrolizumab shrinks about half of tumours, often for years, and cemiplimab before surgery can make large tumours vanish.",
@@ -358,6 +365,7 @@ export const skinSubtypes: CancerInput[] = [
     links: [{ label: "EMPOWER-CSCC-1 (NEJM 2018)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa1805131" }, { label: "Neoadjuvant cemiplimab (NEJM 2022)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2209813" }, { label: "C-POST (NEJM 2025)", url: "https://doi.org/10.1056/NEJMoa2502449" }, { label: "Wikipedia", url: W("Squamous-cell_carcinoma_of_the_skin") }] },
 
   { id: "locally-advanced-bcc", kind: "cancer", name: "Locally advanced and metastatic basal cell carcinoma", group: "skin", parent: "basal-cell-carcinoma", asOf, tags, wikipedia: W("Basal-cell_carcinoma"),
+    keyPapers: ["paper-erivance-vismodegib-sekulic-nejm-2012", "paper-bolt-sonidegib-migden-lancet-oncol-2015", "paper-cemiplimab-bcc-stratigos-lancet-oncol-2021"],
     aka: ["Advanced basal cell carcinoma", "Unresectable basal cell carcinoma", "Metastatic basal cell carcinoma", "Hedgehog inhibitor-treated basal cell carcinoma"],
     burden: "Basal cell carcinoma is the commonest human cancer, with millions of cases a year, but fewer than one in a hundred becomes locally advanced beyond surgery and radiotherapy and metastasis is rarer still; most advanced cases are neglected or repeatedly recurrent tumours of the head and neck, or arise in Gorlin syndrome.",
     tldr: "Locally advanced basal cell carcinoma is a skin cancer that has grown so large or deep, usually on the face, that surgery or radiotherapy can no longer remove it without unacceptable damage. Almost all these tumours depend on the hedgehog growth pathway, and the pills vismodegib and sonidegib shrink about four in ten of them; cemiplimab is used when the pills fail or cannot be tolerated.",
@@ -390,6 +398,7 @@ export const skinSubtypes: CancerInput[] = [
   // Dermal sarcoma
   // ---------------------------------------------------------------------------------------------------------------------
   { id: "dermatofibrosarcoma-protuberans", kind: "cancer", name: "Dermatofibrosarcoma protuberans", group: "skin", parent: "sarcoma", asOf, tags, wikipedia: W("Dermatofibrosarcoma_protuberans"),
+    keyPapers: ["paper-imatinib-dfsp-eortc-swog-rutkowski-jco-2010", "paper-simon-col1a1-pdgfb-dfsp-nat-genet-1997"],
     aka: ["DFSP", "Bednar tumour (pigmented dermatofibrosarcoma protuberans)", "Fibrosarcomatous dermatofibrosarcoma protuberans"],
     burden: "Dermatofibrosarcoma protuberans is a rare sarcoma of the skin, about four cases per million people a year, commonest in adults aged 20 to 50 and roughly twice as common in Black people; it is slow-growing and rarely spreads, but it recurs locally if not excised with wide margins.",
     tldr: "Dermatofibrosarcoma protuberans is a rare, slow-growing cancer of the deeper skin that usually appears as a firm plaque or lump on the trunk and is often mistaken for a scar or cyst for years. Surgery with wide margins cures most people; for the few whose tumour cannot be removed or has spread, the pill imatinib works because almost every one is driven by a single gene fusion it blocks.",

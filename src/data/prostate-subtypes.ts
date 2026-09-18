@@ -15,6 +15,7 @@ const NCCN = { version: "NCCN Guidelines: Prostate Cancer", url: "https://www.nc
 
 export const prostateSubtypes: CancerInput[] = [
   { id: "prostate-low-risk", kind: "cancer", name: "Localised prostate cancer, very low and low risk", group: "genitourinary", parent: "prostate", asOf, tags, wikipedia: W("Active_surveillance_of_prostate_cancer"),
+    keyPapers: ["paper-damico-risk-groups-jama-1998", "paper-protect-15-year-nejm-2023", "paper-klotz-active-surveillance-jco-2015", "paper-precision-mri-targeted-biopsy-nejm-2018"],
     aka: ["Low-risk prostate cancer", "Very low risk prostate cancer", "Grade Group 1 prostate cancer", "NCCN very low and low risk"],
     burden: "Roughly a third of prostate cancers diagnosed in screened populations; fewer than one in a hundred men with low-risk disease die of it within fifteen years whether monitored or treated.",
     tldr: "Low-risk prostate cancer is Grade Group 1 disease confined to the gland with a PSA under 10. It grows so slowly that watching it closely is the recommended first choice, and most men who choose surveillance never need treatment.",
@@ -39,6 +40,7 @@ export const prostateSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia", url: W("Active_surveillance_of_prostate_cancer") }, { label: "NCCN Guidelines: Prostate Cancer", url: "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1459" }] },
 
   { id: "prostate-intermediate-risk", kind: "cancer", name: "Localised prostate cancer, intermediate risk", group: "genitourinary", parent: "prostate", asOf, tags, wikipedia: W("Prostate_cancer_staging"),
+    keyPapers: ["paper-damico-risk-groups-jama-1998", "paper-protect-nejm-2016", "paper-chhip-lancet-oncol-2016", "paper-rtog-9408-short-term-adt-jones-nejm-2011"],
     aka: ["Intermediate-risk prostate cancer", "Favourable intermediate risk", "Unfavourable intermediate risk", "Grade Group 2 and 3 prostate cancer"],
     burden: "About four in ten newly diagnosed localised prostate cancers; ten-year cancer-specific survival is above 95 percent with treatment.",
     tldr: "Intermediate-risk prostate cancer has Grade Group 2 or 3 disease, a PSA between 10 and 20 or a tumour that fills more of the gland. Surgery or radiotherapy cure most men; the favourable half can sometimes be watched, and the unfavourable half is given a few months of hormone therapy with radiotherapy.",
@@ -62,6 +64,7 @@ export const prostateSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia", url: W("Prostate_cancer_staging") }, { label: "NCCN Guidelines: Prostate Cancer", url: "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1459" }] },
 
   { id: "prostate-high-risk", kind: "cancer", name: "Localised prostate cancer, high and very high risk", group: "genitourinary", parent: "prostate", asOf, tags, wikipedia: W("Prostate_cancer_staging"),
+    keyPapers: ["paper-stampede-abiraterone-nejm-2017", "paper-propsma-hofman-lancet-2020", "paper-stampede-abiraterone-high-risk-attard-lancet-2022", "paper-bolla-eortc-22863-nejm-1997"],
     aka: ["High-risk prostate cancer", "Very high risk prostate cancer", "Locally advanced prostate cancer", "Grade Group 4 and 5 prostate cancer", "Non-metastatic high-risk prostate cancer"],
     burden: "About one in five newly diagnosed localised cancers and most of the deaths from disease found before it spreads; ten-year cancer-specific survival is around 85 percent with combined treatment.",
     tldr: "High-risk prostate cancer has Grade Group 4 or 5 disease, a PSA above 20 or a tumour growing beyond the gland. It is still curable, but needs radiotherapy with two to three years of hormone therapy, or surgery followed by radiotherapy, and adding abiraterone to hormone therapy now lengthens life in the highest-risk men.",
@@ -84,6 +87,7 @@ export const prostateSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia", url: W("Prostate_cancer_staging") }, { label: "NCCN Guidelines: Prostate Cancer", url: "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1459" }] },
 
   { id: "prostate-bcr", kind: "cancer", name: "Biochemical recurrence of prostate cancer", group: "genitourinary", parent: "prostate", asOf, tags, wikipedia: W("Biochemical_recurrence"),
+    keyPapers: ["paper-embark-nejm-2023", "paper-radicals-rt-lancet-2020", "paper-propsma-hofman-lancet-2020"],
     aka: ["Biochemically recurrent prostate cancer", "PSA recurrence", "Rising PSA after local therapy", "nmHSPC"],
     burden: "A rising PSA follows a quarter to a third of prostatectomies and radiotherapy courses; only a minority of these men develop metastases on scans within ten years, and the PSA doubling time tells the two apart.",
     tldr: "Biochemical recurrence is a rising PSA after surgery or radiotherapy with nothing yet visible on scans. Salvage radiotherapy can still cure it after surgery, and for a fast-doubling PSA the EMBARK trial showed that enzalutamide with or without hormone therapy delays spread.",
@@ -109,6 +113,7 @@ export const prostateSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia", url: W("Biochemical_recurrence") }, { label: "NCCN Guidelines: Prostate Cancer", url: "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1459" }] },
 
   { id: "prostate-mhspc", kind: "cancer", name: "Metastatic hormone-sensitive prostate cancer", group: "genitourinary", parent: "prostate", asOf, tags, wikipedia: W("Prostate_cancer#Metastatic_disease"),
+    keyPapers: ["paper-stampede-abiraterone-nejm-2017", "paper-latitude-nejm-2017", "paper-arasens-nejm-2022", "paper-chaarted-nejm-2015"],
     aka: ["mHSPC", "Metastatic castration-sensitive prostate cancer", "mCSPC", "De novo metastatic prostate cancer", "Hormone-naive metastatic prostate cancer"],
     burden: "About one in twenty prostate cancers are metastatic at diagnosis in high-income countries and far more elsewhere; median survival has risen from under four years to more than five with combination therapy.",
     tldr: "Metastatic hormone-sensitive prostate cancer is disease that has spread but still responds to lowering testosterone. Hormone therapy alone is no longer enough: adding an androgen receptor inhibitor, and docetaxel for high-volume disease, lengthens life by years.",
@@ -137,6 +142,7 @@ export const prostateSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia", url: W("Prostate_cancer") }, { label: "NCCN Guidelines: Prostate Cancer", url: "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1459" }] },
 
   { id: "prostate-nmcrpc", kind: "cancer", name: "Non-metastatic castration-resistant prostate cancer", group: "genitourinary", parent: "prostate", asOf, tags, wikipedia: W("Castration-resistant_prostate_cancer"),
+    keyPapers: ["paper-spartan-nejm-2018", "paper-prosper-nejm-2018", "paper-aramis-nejm-2019"],
     aka: ["nmCRPC", "M0 CRPC", "Non-metastatic CRPC", "Rising PSA on hormone therapy without metastases"],
     burden: "A shrinking group, because PSMA PET reveals metastases in most men once called non-metastatic; about a third with a PSA doubling time under ten months developed visible metastases within two years on hormone therapy alone.",
     tldr: "Non-metastatic castration-resistant prostate cancer is a PSA that keeps rising on hormone therapy while scans still show nothing. Three androgen receptor blockers, apalutamide, enzalutamide and darolutamide, each delay metastasis by about two years and lengthen life, and darolutamide is the gentlest.",
@@ -160,6 +166,7 @@ export const prostateSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia", url: W("Castration-resistant_prostate_cancer") }, { label: "NCCN Guidelines: Prostate Cancer", url: "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1459" }] },
 
   { id: "prostate-mcrpc", kind: "cancer", name: "Metastatic castration-resistant prostate cancer", group: "genitourinary", parent: "prostate", asOf, tags, wikipedia: W("Castration-resistant_prostate_cancer"),
+    keyPapers: ["paper-vision-nejm-2021", "paper-profound-nejm-2020", "paper-cou-aa-301-abiraterone-de-bono-nejm-2011", "paper-alsympca-radium-223-nejm-2013"],
     aka: ["mCRPC", "Metastatic CRPC", "Castration-resistant metastatic prostate cancer", "Hormone-refractory prostate cancer (older term)"],
     burden: "The state in which nearly all prostate cancer deaths occur, about 400,000 a year worldwide; median survival from first treatment is now around three years, longer for men who have not had an androgen receptor inhibitor.",
     tldr: "Metastatic castration-resistant prostate cancer is disease that grows despite castrate testosterone. Sequenced treatments now include androgen receptor inhibitors, docetaxel and cabazitaxel, PARP inhibitors for men with BRCA-type mutations, the radioligand 177Lu-PSMA-617 and radium-223 for bone-predominant disease.",
@@ -191,6 +198,7 @@ export const prostateSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia", url: W("Castration-resistant_prostate_cancer") }, { label: "NCCN Guidelines: Prostate Cancer", url: "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1459" }] },
 
   { id: "prostate-nepc", kind: "cancer", name: "Neuroendocrine and small-cell prostate cancer", group: "genitourinary", parent: "prostate", asOf, tags, wikipedia: W("Prostate_cancer"),
+    keyPapers: ["paper-beltran-nepc-divergent-evolution-nat-med-2016", "paper-aggarwal-t-sccpc-jco-2018", "paper-aparicio-aggressive-variant-ccr-2013"],
     aka: ["NEPC", "Treatment-emergent neuroendocrine prostate cancer", "t-NEPC", "Small-cell carcinoma of the prostate", "Aggressive variant prostate cancer"],
     burden: "Pure small-cell prostate cancer is under 1 percent of new diagnoses, but neuroendocrine features emerge in 10 to 20 percent of men treated with potent androgen receptor inhibitors; median survival after diagnosis is about a year.",
     tldr: "Neuroendocrine prostate cancer is a form that has stopped depending on the androgen receptor, either from the start or after years of hormone therapy. It no longer shows up on PSA, spreads to the liver and brain, and is treated with the platinum chemotherapy used for small-cell lung cancer.",

@@ -53,6 +53,7 @@ export const paediatricSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia: Acute lymphoblastic leukaemia", url: W("Acute_lymphoblastic_leukemia") }, { label: "NCI PDQ: Childhood ALL Treatment", url: ALL.url }] },
 
   { id: "all-paediatric-high-risk", kind: "cancer", name: "High-risk acute lymphoblastic leukaemia in children (high-risk B-ALL and T-ALL)", group: "paediatric", parent: "all-leukemia", asOf, tags, wikipedia: W("Acute_lymphoblastic_leukemia"),
+    keyPapers: ["paper-aall0232-larsen-jco-2016", "paper-aall0434-nelarabine-t-all-dunsmore-jco-2020", "paper-hunger-mullighan-all-children-nejm-2015"],
     aka: ["NCI high-risk B-ALL", "Very high-risk childhood ALL", "Childhood T-cell ALL", "T-ALL in children"],
     burden: "About a third of children with B-cell ALL are high risk by age or white count, and T-cell ALL adds about 15 percent of childhood ALL; together they account for most of the relapses and deaths in a disease that is otherwise usually cured.",
     tldr: "High-risk childhood leukaemia means a child aged ten or over, a very high white cell count, T-cell disease, spread to the brain or testes, or adverse genetics, and it is treated with longer and more intensive chemotherapy. Most children are still cured; the T-cell form gained the drug nelarabine after the AALL0434 trial, and cranial radiotherapy has been dropped for almost everyone.",
@@ -79,6 +80,7 @@ export const paediatricSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia: Acute lymphoblastic leukaemia", url: W("Acute_lymphoblastic_leukemia") }, { label: "NCI PDQ: Childhood ALL Treatment", url: ALL.url }] },
 
   { id: "all-paediatric-ph-positive", kind: "cancer", name: "Philadelphia chromosome-positive acute lymphoblastic leukaemia in children (Ph-positive ALL)", group: "paediatric", parent: "all-leukemia", asOf, tags, wikipedia: W("Philadelphia_chromosome"),
+    keyPapers: ["paper-aall0031-imatinib-ph-positive-all-schultz-jco-2009", "paper-esphall-imatinib-biondi-lancet-oncol-2012", "paper-dasatinib-vs-imatinib-ph-positive-all-shen-jama-oncol-2020"],
     aka: ["Ph+ ALL in children", "BCR::ABL1-positive childhood ALL", "Paediatric Ph-positive ALL"],
     burden: "About 3 to 5 percent of childhood acute lymphoblastic leukaemia carries the Philadelphia chromosome, a proportion that rises with age to a quarter of adult cases.",
     tldr: "Philadelphia chromosome-positive leukaemia carries the same faulty BCR::ABL1 gene as chronic myeloid leukaemia. Until 2000 most children with it needed a bone marrow transplant; adding the targeted pill imatinib to chemotherapy, and then dasatinib, means most are now cured without one.",
@@ -105,6 +107,7 @@ export const paediatricSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia: Philadelphia chromosome", url: W("Philadelphia_chromosome") }, { label: "NCI PDQ: Childhood ALL Treatment", url: ALL.url }] },
 
   { id: "all-ph-like", kind: "cancer", name: "Philadelphia chromosome-like acute lymphoblastic leukaemia (Ph-like or BCR::ABL1-like ALL)", group: "paediatric", parent: "all-leukemia", asOf, tags, wikipedia: W("Acute_lymphoblastic_leukemia"),
+    keyPapers: ["paper-hunger-mullighan-all-children-nejm-2015", "paper-roberts-ph-like-all-nejm-2014", "paper-den-boer-bcr-abl1-like-all-lancet-oncol-2009", "paper-mullighan-ikzf1-nejm-2009"],
     aka: ["Ph-like ALL", "BCR::ABL1-like ALL", "B-ALL with BCR::ABL1-like features"],
     burden: "About one in ten children with standard-risk B-cell ALL, one in seven with high-risk disease and around a quarter of adolescents and young adults with B-ALL have a Ph-like signature, making it one of the commonest high-risk subtypes.",
     tldr: "Ph-like leukaemia behaves like Philadelphia chromosome-positive leukaemia, with the same kind of overactive growth signalling, but lacks the BCR::ABL1 gene itself. It is caused by a scattered set of gene fusions and mutations, many of them blockable by existing kinase pills such as dasatinib or ruxolitinib, and it is now screened for at diagnosis so those drugs can be tried.",
@@ -129,6 +132,7 @@ export const paediatricSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia: Acute lymphoblastic leukaemia", url: W("Acute_lymphoblastic_leukemia") }, { label: "NCI PDQ: Childhood ALL Treatment", url: ALL.url }] },
 
   { id: "all-infant", kind: "cancer", name: "Infant acute lymphoblastic leukaemia (KMT2A-rearranged, under one year)", group: "paediatric", parent: "all-leukemia", asOf, tags, wikipedia: W("Acute_lymphoblastic_leukemia"),
+    keyPapers: ["paper-augment-101-revumenib-menin-nature-2023", "paper-interfant-06-pieters-jco-2019", "paper-blinatumomab-infant-all-van-der-sluis-nejm-2023", "paper-interfant-99-lancet-2007"],
     aka: ["Infant ALL", "KMT2A-rearranged infant leukaemia", "MLL-rearranged infant ALL"],
     burden: "Infants under one year make up 2 to 4 percent of childhood ALL; about three quarters of them carry a KMT2A rearrangement, and their cure rate has lagged the rest of childhood leukaemia for decades.",
     tldr: "Leukaemia diagnosed in the first year of life is a different disease from leukaemia in older children: most cases carry a broken KMT2A gene and respond poorly to chemotherapy, and fewer than half of infants were cured for twenty years. One course of the immune drug blinatumomab after induction raised two-year disease-free survival from about half to over 80 percent in a pilot study.",
@@ -182,6 +186,7 @@ export const paediatricSubtypes: CancerInput[] = [
 
   // ======================= ACUTE MYELOID LEUKAEMIA IN CHILDREN =======================
   { id: "aml-paediatric", kind: "cancer", name: "Acute myeloid leukaemia in children", group: "paediatric", parent: "aml", asOf, tags, wikipedia: W("Acute_myeloid_leukemia"),
+    keyPapers: ["paper-aaml0531-gemtuzumab-gamis-jco-2014", "paper-aaml1031-sorafenib-flt3-pollard-jco-2022", "paper-bolouri-paediatric-aml-genomics-nat-med-2018"],
     aka: ["Childhood AML", "Paediatric AML", "Pediatric acute myeloid leukemia"],
     burden: "Acute myeloid leukaemia is about one in five childhood leukaemias, a few hundred children a year in the United Kingdom and United States; cure rates have climbed from under a third in the 1970s to around two thirds through more intensive chemotherapy and better supportive care.",
     tldr: "Acute myeloid leukaemia in children carries gene fusions rather than the mutations of ageing, is treated with four or five intensive courses of chemotherapy, and cures around two thirds of children. Adding gemtuzumab ozogamicin lowered relapse in the AAML0531 trial, and the menin inhibitor revumenib is the first targeted drug approved for the KMT2A-rearranged form common in young children.",
@@ -211,6 +216,7 @@ export const paediatricSubtypes: CancerInput[] = [
 
   // ======================= NEUROBLASTOMA BY RISK GROUP =======================
   { id: "neuroblastoma-low-risk", kind: "cancer", name: "Low-risk neuroblastoma (INRG very low and low risk, including stage MS)", group: "paediatric", parent: "neuroblastoma", asOf, tags, wikipedia: W("Neuroblastoma"),
+    keyPapers: ["paper-inrg-cohn-jco-2009", "paper-anbl00p2-expectant-observation-nuchtern-ann-surg-2012", "paper-p9641-low-risk-neuroblastoma-strother-jco-2012"],
     aka: ["Very low-risk neuroblastoma", "Stage MS neuroblastoma", "Stage 4S neuroblastoma", "Localised neuroblastoma in infants"],
     burden: "Roughly a third of neuroblastoma, mostly in infants, is low risk: localised disease or the special metastatic pattern of infancy, without MYCN amplification, and cured in almost every case with little or no treatment.",
     tldr: "Low-risk neuroblastoma is the form found in infants and young children whose tumour has not spread beyond its site or, in the special stage MS pattern, has spread only to the liver, skin and a little marrow. Many of these tumours shrink and disappear on their own, so treatment is surgery, or simply watching, and almost every child survives.",
@@ -235,6 +241,7 @@ export const paediatricSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia: Neuroblastoma", url: W("Neuroblastoma") }, { label: "NCI PDQ: Neuroblastoma Treatment", url: NBL.url }] },
 
   { id: "neuroblastoma-intermediate-risk", kind: "cancer", name: "Intermediate-risk neuroblastoma", group: "paediatric", parent: "neuroblastoma", asOf, tags, wikipedia: W("Neuroblastoma"),
+    keyPapers: ["paper-inrg-cohn-jco-2009", "paper-a3961-intermediate-risk-neuroblastoma-baker-nejm-2010", "paper-anbl0531-twist-jco-2019"],
     aka: ["INRG intermediate-risk neuroblastoma", "Unresectable localised neuroblastoma", "Stage M neuroblastoma in infants"],
     burden: "About one neuroblastoma in ten is intermediate risk: unresectable localised disease or metastatic disease in infants, without MYCN amplification, cured in about nine in ten children with a few cycles of moderate chemotherapy.",
     tldr: "Intermediate-risk neuroblastoma sits between the tumours that go away on their own and the high-risk disease that needs everything. A few cycles of moderate chemotherapy followed by surgery cure most children, and trials have spent twenty years showing how few cycles are enough.",
@@ -258,7 +265,7 @@ export const paediatricSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia: Neuroblastoma", url: W("Neuroblastoma") }, { label: "NCI PDQ: Neuroblastoma Treatment", url: NBL.url }] },
 
   { id: "neuroblastoma-high-risk", kind: "cancer", name: "High-risk neuroblastoma", group: "paediatric", parent: "neuroblastoma", asOf, tags, wikipedia: W("Neuroblastoma"),
-    drugs: ["isotretinoin"],
+    keyPapers: ["paper-inrg-cohn-jco-2009", "paper-yu-anti-gd2-neuroblastoma-nejm-2010", "paper-hr-nbl1-busulfan-melphalan-ladenstein-lancet-oncol-2017", "paper-anbl0532-tandem-transplant-park-jama-2019"], drugs: ["isotretinoin"],
     aka: ["INRG high-risk neuroblastoma", "Metastatic neuroblastoma", "MYCN-amplified neuroblastoma", "Stage 4 neuroblastoma"],
     burden: "About half of children with neuroblastoma have high-risk disease, metastatic at over 18 months of age or MYCN-amplified at any age; it accounts for around one in eight childhood cancer deaths, and only about half of children are cured despite the most intensive treatment given to any child.",
     tldr: "High-risk neuroblastoma has spread widely in a child over 18 months old or carries extra copies of the MYCN gene. Treatment lasts about 18 months and uses every tool: chemotherapy, surgery, high-dose chemotherapy with stem cell rescue, radiotherapy, and the anti-GD2 antibody dinutuximab, which raised survival in ANBL0032; eflornithine, given afterwards, was approved in 2023 to lower relapse.",
@@ -290,6 +297,7 @@ export const paediatricSubtypes: CancerInput[] = [
 
   // ======================= MEDULLOBLASTOMA MOLECULAR GROUPS =======================
   { id: "medulloblastoma-wnt", kind: "cancer", name: "WNT-activated medulloblastoma", group: "paediatric", parent: "medulloblastoma", asOf, tags: [...tags, "cns"], wikipedia: W("Medulloblastoma"),
+    keyPapers: ["paper-who-2021-cns-louis-neuro-oncology-2021", "paper-taylor-medulloblastoma-consensus-acta-neuropathol-2012", "paper-cavalli-medulloblastoma-subtypes-cancer-cell-2017", "paper-acns0331-michalski-jco-2021"],
     aka: ["WNT medulloblastoma", "WNT-subgroup medulloblastoma", "CTNNB1-mutant medulloblastoma"],
     burden: "About one medulloblastoma in ten is WNT-activated; it affects older children and adolescents and has the best outlook of the four molecular groups, with almost every child cured in trial cohorts.",
     tldr: "WNT-activated medulloblastoma is the rarest and most curable of the four molecular groups of medulloblastoma, a brain tumour of the cerebellum. It is driven by a mutation in the beta-catenin gene that switches the WNT growth pathway on. Almost every child is cured with standard therapy, so current trials are asking how much radiotherapy and chemotherapy can be taken away.",
@@ -315,6 +323,7 @@ export const paediatricSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia: Medulloblastoma", url: W("Medulloblastoma") }, { label: "NCI PDQ: Childhood Medulloblastoma Treatment", url: MB.url }] },
 
   { id: "medulloblastoma-shh", kind: "cancer", name: "SHH-activated medulloblastoma", group: "paediatric", parent: "medulloblastoma", asOf, tags: [...tags, "cns"], wikipedia: W("Medulloblastoma"),
+    keyPapers: ["paper-who-2021-cns-louis-neuro-oncology-2021", "paper-taylor-medulloblastoma-consensus-acta-neuropathol-2012", "paper-robinson-vismodegib-shh-medulloblastoma-jco-2015", "paper-zhukova-tp53-medulloblastoma-jco-2013"],
     aka: ["SHH medulloblastoma", "Sonic hedgehog medulloblastoma", "Desmoplastic/nodular medulloblastoma", "SHH-activated TP53-mutant medulloblastoma"],
     burden: "About three medulloblastomas in ten are SHH-activated; they cluster in infants under three and in adults, and the TP53-mutant form in older children is among the deadliest childhood brain tumours.",
     tldr: "SHH-activated medulloblastoma is driven by the sonic hedgehog growth pathway, the signal that normally tells the developing cerebellum to grow. In infants it is often cured with chemotherapy alone and no radiotherapy; in adults it responds for a time to hedgehog-blocking pills such as vismodegib; and when it carries a TP53 mutation in an older child, often inherited, it resists everything.",
@@ -343,7 +352,7 @@ export const paediatricSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia: Medulloblastoma", url: W("Medulloblastoma") }, { label: "NCI PDQ: Childhood Medulloblastoma Treatment", url: MB.url }] },
 
   { id: "medulloblastoma-group-3-4", kind: "cancer", name: "Group 3 and group 4 medulloblastoma (non-WNT/non-SHH)", group: "paediatric", parent: "medulloblastoma", asOf, tags: [...tags, "cns"], wikipedia: W("Medulloblastoma"),
-    drugs: ["isotretinoin"],
+    keyPapers: ["paper-who-2021-cns-louis-neuro-oncology-2021", "paper-taylor-medulloblastoma-consensus-acta-neuropathol-2012", "paper-cavalli-medulloblastoma-subtypes-cancer-cell-2017", "paper-acns0332-leary-jama-oncol-2021"], drugs: ["isotretinoin"],
     aka: ["Non-WNT/non-SHH medulloblastoma", "Group 3 medulloblastoma", "Group 4 medulloblastoma", "MYC-amplified medulloblastoma"],
     burden: "Groups 3 and 4 together make up about 60 to 65 percent of medulloblastoma: group 4 is the commonest single group and group 3, often MYC-amplified and metastatic in young children, the most lethal.",
     tldr: "Group 3 and group 4 medulloblastoma are the two commonest forms of this cerebellar brain tumour and the ones without a druggable driver. Group 3 strikes young children, often with extra copies of MYC and spread through the spinal fluid; group 4 affects older boys. Both get surgery, craniospinal radiotherapy and chemotherapy; trials showed the radiation dose cannot be cut for young children.",

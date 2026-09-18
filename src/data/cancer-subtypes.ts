@@ -12,6 +12,7 @@ const tags = ["subtype-page"];
 
 export const cancerSubtypes: CancerInput[] = [
   { id: "pleural-mesothelioma", kind: "cancer", name: "Pleural mesothelioma", group: "thoracic", parent: "mesothelioma", asOf, tags, wikipedia: W("Mesothelioma"),
+    keyPapers: ["paper-checkmate-743-lancet-2021", "paper-vogelzang-pemetrexed-mesothelioma-jco-2003", "paper-mars-2-lancet-respir-med-2024", "paper-keynote-483-lancet-2023"],
     aka: ["Malignant pleural mesothelioma", "MPM"],
     burden: "About four in five mesotheliomas arise in the pleura; roughly 2,500 cases a year in the UK and 3,000 in the US, almost all decades after asbestos exposure, with incidence still rising in countries that banned asbestos late.",
     tldr: "Pleural mesothelioma grows in the lining of the lung after asbestos exposure and causes breathlessness and chest pain from fluid and thickening. It is rarely curable; the first-line choice is nivolumab with ipilimumab or pembrolizumab with chemotherapy, and surgery to remove the lining is no longer recommended outside trials.",
@@ -38,6 +39,7 @@ export const cancerSubtypes: CancerInput[] = [
     openProblems: ["No curative treatment for the majority; median survival with the best regimens is about 18 months.", "Sarcomatoid disease responds poorly to everything except immunotherapy.", "No screening test for exposed workers, though BAP1 germline carriers and asbestos cohorts are being followed."],
     links: [{ label: "Wikipedia", url: W("Mesothelioma") }, { label: "Mesothelioma UK", url: "https://www.mesothelioma.uk.com/" }] },
   { id: "peritoneal-mesothelioma", kind: "cancer", name: "Peritoneal mesothelioma", group: "gastrointestinal", parent: "mesothelioma", asOf, tags, wikipedia: W("Peritoneal_mesothelioma"),
+    keyPapers: ["paper-yan-peritoneal-mesothelioma-crs-hipec-jco-2009", "paper-raghav-atezolizumab-bevacizumab-peritoneal-mesothelioma-cancer-discov-2021", "paper-checkmate-743-lancet-2021", "paper-vogelzang-pemetrexed-mesothelioma-jco-2003"],
     aka: ["Malignant peritoneal mesothelioma", "MPeM", "Diffuse malignant peritoneal mesothelioma"],
     burden: "About one in ten mesotheliomas; a few hundred cases a year in the US. The asbestos link is weaker than in the pleura, it affects more women and younger people, and selected patients live many years after surgery.",
     tldr: "Peritoneal mesothelioma grows in the lining of the abdomen, causing swelling, pain and fluid. Unlike its pleural cousin it is often treated with major surgery to strip the lining followed by heated chemotherapy washed through the abdomen, which can give long survival in fit patients with epithelioid disease.",

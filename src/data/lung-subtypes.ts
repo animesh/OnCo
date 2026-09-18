@@ -246,6 +246,7 @@ export const lungSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia", url: W("KRAS") }, { label: "NCCN Guidelines: Non-Small Cell Lung Cancer", url: NCCN_NSCLC }] },
 
   { id: "ros1-positive-nsclc", kind: "cancer", name: "ROS1-positive non-small-cell lung cancer", group: "lung", parent: "nsclc", asOf, tags, wikipedia: W("ROS1"),
+    keyPapers: ["paper-trident-1-repotrectinib-nejm-2024", "paper-shaw-crizotinib-ros1-nejm-2014", "paper-drilon-entrectinib-ros1-lancet-oncol-2020"],
     aka: ["ROS1-rearranged lung cancer", "ROS1 fusion NSCLC", "CD74-ROS1 lung cancer"],
     burden: "About 1 to 2 percent of non-small-cell lung cancers carry a ROS1 fusion, typically adenocarcinoma in younger patients who have never smoked; about a third have brain metastases at some point.",
     tldr: "ROS1-positive lung cancer is a rare fusion-driven adenocarcinoma treated with a pill. Crizotinib was the first, and the newer drugs repotrectinib and taletrectinib control the disease for about three years, reach the brain and work against the resistance mutation that defeated the older drugs.",
@@ -274,6 +275,7 @@ export const lungSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia", url: W("ROS1") }, { label: "NCCN Guidelines: Non-Small Cell Lung Cancer", url: NCCN_NSCLC }] },
 
   { id: "met-altered-nsclc", kind: "cancer", name: "MET exon 14 and MET-amplified non-small-cell lung cancer", group: "lung", parent: "nsclc", asOf, tags, wikipedia: W("C-Met"),
+    keyPapers: ["paper-geometry-mono-1-capmatinib-nejm-2020", "paper-vision-tepotinib-paik-nejm-2020", "paper-frampton-met-exon-14-cancer-discov-2015"],
     aka: ["MET exon 14 skipping lung cancer", "METex14 NSCLC", "MET-amplified lung cancer", "c-Met overexpressing NSCLC"],
     burden: "MET exon 14 skipping mutations occur in 3 to 4 percent of non-small-cell lung cancers, typically in older patients and enriched in sarcomatoid tumours; de novo high-level MET amplification in 1 to 2 percent; and MET amplification appears as a resistance mechanism in about 15 percent of EGFR-mutated cancers after osimertinib. About a quarter of non-squamous lung cancers overexpress the c-Met protein.",
     tldr: "MET-driven lung cancer comes in three forms: an exon 14 skipping mutation treated with the pills capmatinib or tepotinib, MET amplification that often arises as an escape route from EGFR drugs, and high c-Met protein levels that the antibody-drug conjugate telisotuzumab vedotin targets.",
@@ -301,6 +303,7 @@ export const lungSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia", url: W("C-Met") }, { label: "NCCN Guidelines: Non-Small Cell Lung Cancer", url: NCCN_NSCLC }] },
 
   { id: "ret-fusion-nsclc", kind: "cancer", name: "RET fusion-positive non-small-cell lung cancer", group: "lung", parent: "nsclc", asOf, tags, wikipedia: W("RET_proto-oncogene"),
+    keyPapers: ["paper-libretto-001-selpercatinib-nsclc-nejm-2020", "paper-libretto-431-nejm-2023", "paper-arrow-pralsetinib-gainor-lancet-oncol-2021"],
     aka: ["RET-rearranged lung cancer", "KIF5B-RET lung cancer", "RET+ NSCLC"],
     burden: "About 1 to 2 percent of non-small-cell lung cancers carry a RET fusion, most often KIF5B-RET, in adenocarcinomas of younger patients who have never smoked; brain metastases are common.",
     tldr: "RET fusion lung cancer is a rare adenocarcinoma driven by a fused RET gene. The selective pill selpercatinib shrinks most tumours and more than doubles the time to progression compared with chemotherapy and immunotherapy, and pralsetinib is a second option.",
@@ -325,6 +328,7 @@ export const lungSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia", url: W("RET_proto-oncogene") }, { label: "NCCN Guidelines: Non-Small Cell Lung Cancer", url: NCCN_NSCLC }] },
 
   { id: "braf-v600e-nsclc", kind: "cancer", name: "BRAF V600E-mutant non-small-cell lung cancer", group: "lung", parent: "nsclc", asOf, tags, wikipedia: W("BRAF_(gene)"),
+    keyPapers: ["paper-planchard-dabrafenib-trametinib-braf-nsclc-lancet-oncol-2016", "paper-planchard-dabrafenib-trametinib-first-line-lancet-oncol-2017", "paper-pharos-encorafenib-binimetinib-riely-jco-2023"],
     aka: ["BRAF-mutant lung cancer", "BRAF V600E NSCLC", "BRAF V600-mutated lung adenocarcinoma"],
     burden: "BRAF mutations occur in 2 to 4 percent of non-small-cell lung cancers, about half of them V600E; unlike most drivers they are found in current or former smokers as often as in never-smokers.",
     tldr: "BRAF V600E lung cancer carries the same mutation as many melanomas and is treated with the same pairs of pills that block BRAF and MEK together. Dabrafenib with trametinib and encorafenib with binimetinib each shrink about two thirds to three quarters of untreated tumours.",
@@ -350,6 +354,7 @@ export const lungSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia", url: W("BRAF_(gene)") }, { label: "NCCN Guidelines: Non-Small Cell Lung Cancer", url: NCCN_NSCLC }] },
 
   { id: "her2-mutant-nsclc", kind: "cancer", name: "HER2-mutant non-small-cell lung cancer", group: "lung", parent: "nsclc", asOf, tags, wikipedia: W("HER2"),
+    keyPapers: ["paper-destiny-lung01-nejm-2022", "paper-destiny-lung02-goto-jco-2023", "paper-beamion-lung-1-zongertinib-nejm-2025"],
     aka: ["ERBB2-mutant lung cancer", "HER2 exon 20 insertion NSCLC", "HER2-positive lung adenocarcinoma"],
     burden: "HER2 (ERBB2) activating mutations, mostly exon 20 insertions such as A775_G776insYVMA, occur in 2 to 3 percent of lung adenocarcinomas, more often in women and never-smokers; brain metastases develop in about half. HER2 amplification and protein overexpression without mutation are separate and less well defined groups.",
     tldr: "HER2-mutant lung cancer carries a mutation in the same receptor that drives HER2-positive breast cancer, but the breast cancer antibodies alone did little here. The antibody-drug conjugate trastuzumab deruxtecan shrinks about half of tumours after chemotherapy, and the pill zongertinib about seven in ten, and both are approved.",
@@ -376,6 +381,7 @@ export const lungSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia", url: W("HER2") }, { label: "NCCN Guidelines: Non-Small Cell Lung Cancer", url: NCCN_NSCLC }] },
 
   { id: "ntrk-fusion-nsclc", kind: "cancer", name: "NTRK fusion-positive non-small-cell lung cancer", group: "lung", parent: "nsclc", asOf, tags, wikipedia: W("Trk_receptor"),
+    keyPapers: ["paper-drilon-larotrectinib-nejm-2018", "paper-doebele-entrectinib-ntrk-lancet-oncol-2020", "paper-trident-1-repotrectinib-nejm-2024"],
     aka: ["NTRK-rearranged lung cancer", "TRK fusion lung cancer", "NTRK1, NTRK2 or NTRK3 fusion NSCLC"],
     burden: "NTRK fusions occur in well under 1 percent of non-small-cell lung cancers, in adenocarcinoma regardless of smoking history; they are found mainly when broad RNA-based panels are used.",
     tldr: "NTRK fusion lung cancer is very rare and is treated with the same TRK-blocking pills approved for any cancer with the fusion: larotrectinib, entrectinib or repotrectinib shrink most tumours, including in the brain, so the point is to test broadly enough to find it.",

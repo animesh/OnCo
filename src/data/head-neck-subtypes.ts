@@ -12,6 +12,7 @@ const tags = ["subtype-page"];
 
 export const headNeckSubtypes: CancerInput[] = [
   { id: "oropharyngeal-cancer", kind: "cancer", name: "Oropharyngeal cancer (tonsil and base of tongue)", group: "head and neck", parent: "head-and-neck", asOf, tags, wikipedia: W("Oropharyngeal_cancer"),
+    keyPapers: ["paper-keynote-048-lancet-2019", "paper-ang-hpv-oropharyngeal-nejm-2010", "paper-rtog-1016-lancet-2019", "paper-checkmate-141-ferris-nejm-2016"],
     aka: ["Oropharynx cancer", "Tonsil cancer", "Base of tongue cancer", "HPV-positive head and neck cancer"],
     burden: "The fastest-rising head and neck cancer in high-income countries, now driven mainly by human papillomavirus in men in their fifties and sixties; HPV-positive disease is cured in most cases, HPV-negative disease in far fewer.",
     tldr: "Cancer of the tonsils and back of the tongue now comes mostly from HPV infection rather than smoking, and behaves like a different disease: it responds well to chemoradiation, most patients are cured, and the research question is how much treatment can safely be removed.",
@@ -36,6 +37,7 @@ export const headNeckSubtypes: CancerInput[] = [
     pipeline: ["de-escalate","adaptive-radiotherapy","hpv-vaccine"], openProblems: ["How far treatment can be reduced in HPV-positive disease without losing cures.", "HPV-negative oropharyngeal cancer still has poor outcomes.", "Long-term swallowing and dry mouth after chemoradiation.", "HPV vaccination uptake in boys and in low-income countries."],
     links: [{ label: "Wikipedia", url: W("Oropharyngeal_cancer") }] },
   { id: "laryngeal-cancer", kind: "cancer", name: "Laryngeal and hypopharyngeal cancer", group: "head and neck", parent: "head-and-neck", asOf, tags, wikipedia: W("Laryngeal_cancer"),
+    keyPapers: ["paper-keynote-048-lancet-2019", "paper-rtog-91-11-forastiere-nejm-2003", "paper-rtog-91-11-long-term-forastiere-jco-2013", "paper-va-larynx-induction-chemotherapy-nejm-1991"],
     aka: ["Larynx cancer", "Voice box cancer", "Glottic cancer", "Supraglottic cancer", "Hypopharynx cancer"],
     burden: "About 190,000 new cases a year worldwide, overwhelmingly in smokers and heavy drinkers; early vocal cord cancers are cured in more than nine in ten patients, while hypopharyngeal cancer has among the worst outlooks in head and neck oncology.",
     tldr: "Cancer of the voice box announces itself with hoarseness and is highly curable when caught early, by laser surgery or radiotherapy that preserve the voice. Advanced disease is treated with chemoradiation to keep the larynx where possible, with total laryngectomy for the most extensive tumours or when other treatment fails.",
@@ -59,7 +61,7 @@ export const headNeckSubtypes: CancerInput[] = [
     pipeline: ["pembrolizumab","adaptive-radiotherapy"], openProblems: ["Hypopharyngeal cancer survival has barely improved.", "Choosing between preservation and laryngectomy in T4 disease.", "Long-term swallowing and airway function after chemoradiation.", "Persistently high incidence where smoking remains common."],
     links: [{ label: "Wikipedia", url: W("Laryngeal_cancer") }] },
   { id: "oral-cavity-cancer", kind: "cancer", name: "Oral cavity cancer (mouth and tongue)", group: "head and neck", parent: "head-and-neck", asOf, tags, wikipedia: W("Oral_cancer"),
-    drugs: ["celecoxib"],
+    keyPapers: ["paper-dcruz-elective-neck-dissection-nejm-2015", "paper-sankaranarayanan-oral-screening-lancet-2005", "paper-keynote-048-lancet-2019", "paper-bernier-eortc-22931-nejm-2004"], drugs: ["celecoxib"],
     aka: ["Oral cancer", "Mouth cancer", "Tongue cancer", "Oral squamous cell carcinoma"],
     burden: "About 390,000 new cases a year worldwide, with the highest rates in South Asia from betel quid and tobacco chewing; it is the commonest cancer among men in India, and five-year survival is around 60 percent overall but far lower for late-stage disease.",
     tldr: "Cancer of the mouth and tongue is caused mainly by tobacco, alcohol and betel quid and is usually visible or feelable early, yet often diagnosed late. Surgery is the mainstay, with radiotherapy or chemoradiation after operation for higher-risk disease, and reconstruction to restore speech and swallowing.",

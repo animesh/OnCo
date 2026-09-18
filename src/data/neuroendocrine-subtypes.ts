@@ -21,6 +21,7 @@ export const neuroendocrineSubtypes: CancerInput[] = [
   // Small intestinal (midgut) NET
   // ---------------------------------------------------------------------------------------------------------------------
   { id: "small-intestinal-net", kind: "cancer", name: "Small intestinal neuroendocrine tumours", group: "endocrine", parent: "neuroendocrine", asOf, tags, wikipedia: W("Neuroendocrine_tumor"),
+    keyPapers: ["paper-netter-2-lancet-2024", "paper-clarinet-lanreotide-nejm-2014", "paper-netter-1-nejm-2017", "paper-promid-rinke-jco-2009"],
     aka: ["Midgut neuroendocrine tumour", "Small bowel NET", "Ileal carcinoid", "Jejunoileal neuroendocrine tumour", "SI-NET"],
     burden: "The commonest neuroendocrine tumour of the gut in Western series and now the commonest cancer of the small intestine; most are grade 1 or 2 and many are found only after they have reached the mesenteric nodes or the liver.",
     tldr: "Small intestinal neuroendocrine tumours are slow-growing hormone-producing tumours of the ileum and jejunum, often found only after they have spread to lymph nodes and the liver. Monthly somatostatin analogue injections control symptoms and growth, lutetium-177 dotatate is the main second treatment, and everolimus, cabozantinib and surgery fill in.",
@@ -57,6 +58,7 @@ export const neuroendocrineSubtypes: CancerInput[] = [
   // Pancreatic NET
   // ---------------------------------------------------------------------------------------------------------------------
   { id: "pancreatic-net", kind: "cancer", name: "Pancreatic neuroendocrine tumours", group: "endocrine", parent: "neuroendocrine", asOf, tags, wikipedia: W("Pancreatic_neuroendocrine_tumor"),
+    keyPapers: ["paper-netter-2-lancet-2024", "paper-cabinet-cabozantinib-nejm-2024", "paper-radiant-3-everolimus-pnet-yao-nejm-2011", "paper-raymond-sunitinib-pnet-nejm-2011"],
     aka: ["pNET", "Islet cell tumour", "Pancreatic NET", "Insulinoma", "Gastrinoma", "Non-functioning pancreatic neuroendocrine tumour"],
     burden: "A small minority of pancreatic cancers but the site with the most approved drugs of any neuroendocrine tumour; most are non-functioning and found on imaging, while insulinomas and gastrinomas announce themselves through their hormones.",
     tldr: "Pancreatic neuroendocrine tumours arise from the hormone-producing islet cells of the pancreas and behave very differently from ordinary pancreatic cancer, often growing for years. Surgery cures localised tumours; advanced disease is treated in sequence with somatostatin analogues, lutetium-177 dotatate, targeted tablets and oral chemotherapy, and a minority secrete insulin or gastrin.",
@@ -94,6 +96,7 @@ export const neuroendocrineSubtypes: CancerInput[] = [
   // Lung NET (typical and atypical carcinoid)
   // ---------------------------------------------------------------------------------------------------------------------
   { id: "lung-net", kind: "cancer", name: "Lung neuroendocrine tumours (typical and atypical carcinoid)", group: "lung", parent: "neuroendocrine", asOf, tags: ["subtype-page", "endocrine", "lung"], wikipedia: W("Neuroendocrine_tumor"),
+    keyPapers: ["paper-radiant-4-everolimus-lancet-2016", "paper-cabinet-cabozantinib-nejm-2024", "paper-enets-lung-net-consensus-caplin-ann-oncol-2015"],
     aka: ["Bronchial carcinoid", "Pulmonary carcinoid", "Typical carcinoid", "Atypical carcinoid", "Lung NET", "Bronchopulmonary neuroendocrine tumour"],
     burden: "A small minority of lung cancers, occurring in younger patients and non-smokers more often than other lung cancers; typical carcinoids are usually cured by surgery, atypical carcinoids recur more often.",
     tldr: "Lung neuroendocrine tumours, called typical and atypical carcinoids, are slow-growing tumours of the airways that are usually cured by surgery. When they spread, everolimus is the one drug tested in a randomised trial for this site, cabozantinib was approved in 2025, and somatostatin analogues and lutetium radioligand therapy are borrowed from gut tumours.",
@@ -125,6 +128,7 @@ export const neuroendocrineSubtypes: CancerInput[] = [
   // Extrapulmonary neuroendocrine carcinoma
   // ---------------------------------------------------------------------------------------------------------------------
   { id: "extrapulmonary-nec", kind: "cancer", name: "Extrapulmonary neuroendocrine carcinoma", group: "endocrine", parent: "neuroendocrine", asOf, tags, wikipedia: W("Neuroendocrine_tumor"),
+    keyPapers: ["paper-nordic-nec-sorbye-ann-oncol-2013", "paper-rindi-common-classification-framework-mod-pathol-2018", "paper-dart-nivolumab-ipilimumab-nec-patel-ccr-2020"],
     aka: ["Extrapulmonary NEC", "Gastroenteropancreatic neuroendocrine carcinoma", "GEP-NEC", "Extrapulmonary small-cell carcinoma", "Large-cell neuroendocrine carcinoma of the gut", "Poorly differentiated neuroendocrine carcinoma"],
     burden: "A minority of neuroendocrine neoplasms but the deadliest; the gastrointestinal tract (colon and rectum, oesophagus, stomach, pancreas) and unknown primary are the commonest sites, most patients present with metastases, and survival is measured in months rather than years.",
     tldr: "Extrapulmonary neuroendocrine carcinoma is the fast-growing, poorly differentiated form of neuroendocrine cancer arising outside the lung, most often in the bowel, oesophagus, stomach or pancreas. It behaves like small-cell lung cancer and is treated the same way, with platinum and etoposide chemotherapy, and drugs against the DLL3 protein are now in phase 3 trials.",
@@ -157,6 +161,7 @@ export const neuroendocrineSubtypes: CancerInput[] = [
   // Grade 3 well-differentiated NET
   // ---------------------------------------------------------------------------------------------------------------------
   { id: "grade-3-net", kind: "cancer", name: "Grade 3 well-differentiated neuroendocrine tumour", group: "endocrine", parent: "neuroendocrine", asOf, tags, wikipedia: W("Neuroendocrine_tumor"),
+    keyPapers: ["paper-netter-2-lancet-2024", "paper-rindi-common-classification-framework-mod-pathol-2018", "paper-heetfeld-grade-3-net-erc-2015"],
     aka: ["NET G3", "Grade 3 NET", "Well-differentiated grade 3 neuroendocrine tumour", "High-grade well-differentiated NET"],
     burden: "A small fraction of neuroendocrine neoplasms, most often pancreatic; recognised as a separate entity by the WHO in 2017 for the pancreas and 2019 for the whole digestive system after series showed it outlives neuroendocrine carcinoma and responds less to platinum.",
     tldr: "Grade 3 well-differentiated neuroendocrine tumours divide fast enough to be called grade 3 yet still look and behave like their slower relatives rather than like neuroendocrine carcinoma. Recognised as separate since 2017, they keep the somatostatin receptor, respond less well to platinum chemotherapy, and in the NETTER-2 trial were among the first treated with lutetium-177 dotatate up front.",
