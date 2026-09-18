@@ -11,7 +11,7 @@ const doi = (label: string, id: string) => ({ label, url: `https://doi.org/${id}
 const entities: EntityInput[] = [
   // ======================= DRUGS =======================
   {
-    id: "temozolomide", kind: "drug", name: "Temozolomide", brand: "Temodar", modality: "Oral alkylating chemotherapy", asOf, status: "standard-of-care", wikipedia: W("Temozolomide"),
+    id: "temozolomide", companies: ["merck"], kind: "drug", name: "Temozolomide", brand: "Temodar", modality: "Oral alkylating chemotherapy", asOf, status: "standard-of-care", wikipedia: W("Temozolomide"),
     tldr: "The only chemotherapy proven to extend life in glioblastoma, given during and after radiation. It works best when the tumour has switched off a repair gene called MGMT.",
     summary: "Stupp/EORTC 26981-NCIC (2005): adding concurrent and adjuvant temozolomide to radiotherapy raised median OS from 12.1 to 14.6 months and 2-year survival from 10% to 27%. Benefit concentrates in MGMT-promoter-methylated tumours (median OS ~23 months vs ~13 months unmethylated). Also standard with radiotherapy in grade 3 astrocytoma (CATNON) and, with PCV as an alternative, in oligodendroglioma. Oral, well tolerated; lymphopenia and hypermutation at recurrence are the costs.",
     mechanism: "Prodrug of MTIC; methylates O6-guanine; cytotoxicity depends on unrepaired lesions when MGMT is silenced.",
@@ -19,7 +19,7 @@ const entities: EntityInput[] = [
     technologies: ["cytotoxic-chemotherapy", "imrt-igrt"], cancers: ["glioblastoma", "idh-mutant-astrocytoma", "paediatric-high-grade-glioma"], trials: ["eortc-26981", "catnon", "eortc-22033", "nct06703398", "nct03709680", "nct07326566", "nct07310784", "nct04478279", "nct06595186", "nct04752813", "nct07569042", "nct06703255", "nct04485949", "nct06413706", "nct05765812", "nct05440786", "nct04587830", "nct04121455", "nct07297212", "nct07492680", "nct06012695", "nct05902169", "nct05417594", "nct07015242", "nct04443010", "nct07195591", "nct06556563", "nct04910022", "nct03491683", "nct04919226", "nct05768919", "nct05664243", "nct03862430"], terms: ["mgmt"], links: [{ label: "Wikipedia", url: W("Temozolomide") }],
   },
   {
-    id: "lomustine", trials: ["rtog-9402", "eortc-26951", "actuate-1801", "nct04762069"], kind: "drug", name: "Lomustine (CCNU)", brand: "Gleostine", modality: "Oral nitrosourea chemotherapy", asOf, status: "standard-of-care", wikipedia: W("Lomustine"),
+    id: "lomustine", companies: ["nextsource-biotechnology"], trials: ["rtog-9402", "eortc-26951", "actuate-1801", "nct04762069"], kind: "drug", name: "Lomustine (CCNU)", brand: "Gleostine", modality: "Oral nitrosourea chemotherapy", asOf, status: "standard-of-care", wikipedia: W("Lomustine"),
     tldr: "An old chemotherapy pill used when glioblastoma comes back, and the control arm most new glioblastoma drugs must beat.",
     summary: "Standard second-line agent in Europe and the control in EORTC 26101 (lomustine ± bevacizumab), REGOMA, and most recurrent-glioblastoma trials; median OS ~8-9 months at recurrence. CeTeG/NOA-09 suggested lomustine-temozolomide improves OS in MGMT-methylated newly diagnosed disease. Delayed, cumulative myelosuppression limits cycles.",
     mechanism: "Lipophilic nitrosourea; DNA alkylation and crosslinking; crosses the blood-brain barrier.",
@@ -62,7 +62,7 @@ const entities: EntityInput[] = [
     notes: ["Listed at phase 3 rather than approved; the external-control design and endpoint change are the reasons this remains contested."],
   },
   {
-    id: "rindopepimut", links: [{ label: "ClinicalTrials.gov NCT01480479 (ACT IV)", url: "https://clinicaltrials.gov/study/NCT01480479" }], kind: "drug", name: "Rindopepimut", code: "CDX-110", modality: "Peptide vaccine (EGFRvIII)", asOf, status: "negative",
+    id: "rindopepimut", companies: ["celldex"], links: [{ label: "ClinicalTrials.gov NCT01480479 (ACT IV)", url: "https://clinicaltrials.gov/study/NCT01480479" }], kind: "drug", name: "Rindopepimut", code: "CDX-110", modality: "Peptide vaccine (EGFRvIII)", asOf, status: "negative",
     tldr: "Rindopepimut is a peptide vaccine against EGFRvIII, a mutant protein found only on some glioblastomas. After a phase 2 that beat historical controls, the 745-patient double-blind phase 3 ACT IV found no benefit in 2016, and tumours in both arms had lost EGFRvIII at recurrence, a lesson in antigen escape.",
     summary: "EGFRvIII peptide conjugated to KLH with GM-CSF. Phase 2 (ACT III) suggested prolonged survival versus historical controls; the double-blind phase 3 ACT IV (n=745, EGFRvIII-positive newly diagnosed glioblastoma with minimal residual disease) showed no OS benefit (20.1 vs 20.0 months). Loss of EGFRvIII expression at recurrence in both arms illustrated antigen escape. Celldex discontinued the programme.",
     mechanism: "Induces humoral and cellular immunity against the EGFRvIII neoepitope.",

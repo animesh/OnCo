@@ -110,7 +110,7 @@ const raw: EntityInput[] = [
     links: [{ label: "ECHO-301/KEYNOTE-252 (Lancet Oncol 2019)", url: "https://www.thelancet.com/journals/lanonc/article/PIIS1470-2045(19)30274-8/fulltext" }],
   },
   {
-    id: "trastuzumab-duocarmazine", kind: "drug", name: "Trastuzumab duocarmazine", code: "SYD985", modality: "ADC", asOf, status: "withdrawn",
+    id: "trastuzumab-duocarmazine", companies: ["byondis"], kind: "drug", name: "Trastuzumab duocarmazine", code: "SYD985", modality: "ADC", asOf, status: "withdrawn",
     tldr: "A HER2 ADC with a DNA-alkylating payload that beat chemotherapy in a phase 3 trial yet never reached the market, because eye and lung toxicity and a stronger rival arrived first.",
     summary: "Byondis' duocarmycin-payload HER2 ADC improved PFS over physician's choice in pretreated HER2+ metastatic breast cancer (TULIP, 2021; PFS 7.0 vs 4.9 months) but with frequent ocular toxicity (~78%) and ILD. The FDA issued a complete response letter in 2023; the EMA application was withdrawn in 2024. Trastuzumab deruxtecan's DESTINY-Breast03 result made its niche disappear.\n\nLesson: statistical significance is not enough when a competitor redefines the standard; payload toxicity profile decides whether an ADC survives.",
     mechanism: "Trastuzumab with seco-DUBA duocarmycin via cleavable Val-Cit linker; DNA alkylation.",

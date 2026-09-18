@@ -33,7 +33,7 @@ const companies: CompanyInput[] = [
   co({ id: "rigel-pharmaceuticals", trials: ["nct06161974", "nct05308264"], links: [{ label: "Official website", url: "https://www.rigel.com" }], name: "Rigel Pharmaceuticals", hq: "South San Francisco, CA", country: "US", companyType: "biotech", website: "https://www.rigel.com", ticker: "RIGL", sections: ["targeted-therapy"],
     tldr: "Commercialises olutasidenib (Rezlidhia), an IDH1 inhibitor for relapsed AML, alongside fostamatinib.",
     summary: "Rigel Pharmaceuticals, based in South San Francisco and listed as RIGL, commercialises olutasidenib, sold as Rezlidhia, an IDH1 inhibitor for relapsed acute myeloid leukaemia, alongside fostamatinib. Olutasidenib was approved on 1 December 2022 for relapsed or refractory IDH1-mutated AML, and Rigel licensed it from Forma Therapeutics, later part of Novo Nordisk, in 2022. OnCo links it to acute myeloid leukaemia and to the olutasidenib drug record. Whether a second IDH1 inhibitor can take share from the first on durability or tolerability is the open question for a company that did not discover the drug it sells. Olutasidenib has its own page.",
-    drugs: ["olutasidenib"], cancers: ["aml"] }),
+    drugs: ["olutasidenib", "fostamatinib", "pralsetinib"], cancers: ["aml"] }),
 ];
 
 // ======================= TARGETS =======================
