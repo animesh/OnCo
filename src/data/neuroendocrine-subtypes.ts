@@ -121,7 +121,7 @@ export const neuroendocrineSubtypes: CancerInput[] = [
     ],
     pipeline: ["cabinet", "nct06943755", "prrt", "sstr-pet"],
     openProblems: ["No randomised trial has tested somatostatin analogues or radioligand therapy specifically in lung neuroendocrine tumours.", "Lung and gastroenteropancreatic grading systems disagree, so trial eligibility and guideline advice do not map cleanly.", "Atypical carcinoids relapse late and there is no proven adjuvant therapy."],
-    drugs: ["everolimus", "cabozantinib", "octreotide-lanreotide", "lutathera", "ga68-dotatate", "pasireotide"], trials: ["radiant-3-4", "cabinet"], technologies: ["sstr-pet", "prrt", "bronchoscopy", "ct"], terms: ["lobectomy", "net-grade-ki67", "carcinoid-syndrome", "chromogranin-a"], targets: ["sstr2", "mtor"],
+    drugs: ["everolimus", "cabozantinib", "octreotide-lanreotide", "lutathera", "ga68-dotatate", "pasireotide"], trials: ["radiant-3-4", "cabinet", "nct03972488", "spinet"], technologies: ["sstr-pet", "prrt", "bronchoscopy", "ct"], terms: ["lobectomy", "net-grade-ki67", "carcinoid-syndrome", "chromogranin-a"], targets: ["sstr2", "mtor"],
     links: [{ label: "RADIANT-4 (Lancet 2016)", url: "https://doi.org/10.1016/S0140-6736(15)00817-X" }, { label: "CABINET (NEJM 2024)", url: "https://doi.org/10.1056/NEJMoa2403991" }, { label: "Wikipedia", url: W("Neuroendocrine_tumor") }] },
 
   // ---------------------------------------------------------------------------------------------------------------------

@@ -48,7 +48,7 @@ export const bloodSubtypes: CancerInput[] = [
     targets: ["flt3"], terms: ["flt3-itd-allelic-ratio", "eln-risk", "seven-plus-three"], technologies: ["kinase-inhibitors", "ngs-mrd-clonoseq"],
     links: [{ label: "Wikipedia: FLT3", url: W("CD135") }, { label: "NCCN Guidelines: Acute Myeloid Leukemia", url: AML.url }] },
 
-  { id: "aml-idh", kind: "cancer", name: "IDH1- and IDH2-mutated acute myeloid leukaemia", group: "haematologic", parent: "aml", asOf, tags, wikipedia: W("Isocitrate_dehydrogenase"),
+  { id: "aml-idh", kind: "cancer", trials: ["viale-a"], name: "IDH1- and IDH2-mutated acute myeloid leukaemia", group: "haematologic", parent: "aml", asOf, tags, wikipedia: W("Isocitrate_dehydrogenase"),
     keyPapers: ["paper-agile-ivosidenib-azacitidine-nejm-2022", "paper-eln-2022-aml-dohner-blood-2022", "paper-ivosidenib-idh1-dinardo-nejm-2018", "paper-enasidenib-idh2-stein-blood-2017"],
     aka: ["IDH-mutant AML", "IDH1-mutated AML", "IDH2-mutated AML"],
     burden: "About one in five adults with acute myeloid leukaemia carries a mutation in IDH1 or IDH2, more often in older patients and in leukaemia arising from a prior marrow disorder.",
@@ -121,7 +121,7 @@ export const bloodSubtypes: CancerInput[] = [
     targets: ["tp53", "cd47"], pathways: ["clonal-haematopoiesis"], terms: ["secondary-malignancy", "tp53-mutated", "eln-risk", "hma", "aml-myelodysplasia-related"], technologies: ["allogeneic-hsct", "cd47-blockade"],
     links: [{ label: "Wikipedia: Acute myeloid leukaemia", url: W("Acute_myeloid_leukemia") }, { label: "NCCN Guidelines: Acute Myeloid Leukemia", url: AML.url }] },
 
-  { id: "apl", kind: "cancer", name: "Acute promyelocytic leukaemia", group: "haematologic", parent: "aml", asOf, tags, wikipedia: W("Acute_promyelocytic_leukemia"),
+  { id: "apl", kind: "cancer", trials: ["apl0406"], name: "Acute promyelocytic leukaemia", group: "haematologic", parent: "aml", asOf, tags, wikipedia: W("Acute_promyelocytic_leukemia"),
     keyPapers: ["paper-apl0406-lo-coco-nejm-2013", "paper-tallman-atra-apl-nejm-1997", "paper-eln-apl-sanz-blood-2019"],
     aka: ["APL", "AML-M3", "PML::RARA acute leukaemia", "Promyelocytic leukaemia"],
     burden: "About one in ten cases of acute myeloid leukaemia; once the most rapidly fatal, it is now the most curable, with more than nine in ten patients cured when early bleeding is prevented.",
@@ -148,7 +148,7 @@ export const bloodSubtypes: CancerInput[] = [
     targets: ["rara"], terms: ["differentiation-syndrome", "mrd"], technologies: ["cytogenetics-fish", "transfusion-support"],
     links: [{ label: "Wikipedia", url: W("Acute_promyelocytic_leukemia") }, { label: "NCCN Guidelines: Acute Myeloid Leukemia", url: AML.url }] },
 
-  { id: "aml-older-unfit", kind: "cancer", name: "Acute myeloid leukaemia in older or unfit patients", group: "haematologic", parent: "aml", asOf, tags, wikipedia: W("Acute_myeloid_leukemia"),
+  { id: "aml-older-unfit", kind: "cancer", trials: ["viale-a"], name: "Acute myeloid leukaemia in older or unfit patients", group: "haematologic", parent: "aml", asOf, tags, wikipedia: W("Acute_myeloid_leukemia"),
     keyPapers: ["paper-viale-a-venetoclax-azacitidine-nejm-2020", "paper-agile-ivosidenib-azacitidine-nejm-2022", "paper-aza-aml-001-dombret-blood-2015", "paper-eln-2022-aml-dohner-blood-2022"],
     aka: ["Unfit AML", "AML in the elderly", "AML ineligible for intensive chemotherapy", "Low-intensity AML therapy"],
     burden: "The median age at diagnosis of acute myeloid leukaemia is about 68, and roughly half of patients are judged unable to withstand intensive chemotherapy because of age, frailty or other illnesses.",
@@ -200,7 +200,7 @@ export const bloodSubtypes: CancerInput[] = [
     targets: ["cd38"], terms: ["smoldering-myeloma", "high-risk-myeloma", "r-iss", "m-protein-free-light-chains"], technologies: ["whole-body-mri", "pet-ct"],
     links: [{ label: "Wikipedia", url: W("Smouldering_myeloma") }, { label: "NCCN Guidelines: Multiple Myeloma", url: MM.url }] },
 
-  { id: "myeloma-transplant-eligible", kind: "cancer", name: "Newly diagnosed multiple myeloma, transplant-eligible", group: "haematologic", parent: "multiple-myeloma", asOf, tags, wikipedia: W("Multiple_myeloma"),
+  { id: "myeloma-transplant-eligible", kind: "cancer", trials: ["cartitude-6", "cassiopeia", "ifm-2009"], name: "Newly diagnosed multiple myeloma, transplant-eligible", group: "haematologic", parent: "multiple-myeloma", asOf, tags, wikipedia: W("Multiple_myeloma"),
     keyPapers: ["paper-perseus-dara-vrd-transplant-nejm-2024", "paper-cassiopeia-lancet-2019", "paper-ifm-2009-attal-nejm-2017", "paper-r-iss-palumbo-jco-2015"],
     aka: ["Transplant-eligible myeloma", "TE NDMM", "Newly diagnosed myeloma, fit for autologous transplant"],
     burden: "Roughly four in ten people with newly diagnosed myeloma are fit enough for high-dose melphalan with an autologous stem cell transplant, generally those under about 70 without major organ disease.",
@@ -254,7 +254,7 @@ export const bloodSubtypes: CancerInput[] = [
     targets: ["cd38", "proteasome", "cereblon"], terms: ["vrd", "mrd-negativity-myeloma", "r-iss", "maintenance-therapy", "proteasome-inhibitor", "imid"], technologies: ["geriatric-assessment", "ngs-mrd-clonoseq"], keyPapers: ["paper-maia-daratumumab-rd-nejm-2019", "paper-cepheus-dara-vrd-natmed-2025"],
     links: [{ label: "Wikipedia", url: W("Multiple_myeloma") }, { label: "NCCN Guidelines: Multiple Myeloma", url: MM.url }] },
 
-  { id: "myeloma-relapsed-refractory", kind: "cancer", name: "Relapsed or refractory multiple myeloma", group: "haematologic", parent: "multiple-myeloma", asOf, tags, wikipedia: W("Multiple_myeloma"),
+  { id: "myeloma-relapsed-refractory", kind: "cancer", trials: ["majestec-1"], name: "Relapsed or refractory multiple myeloma", group: "haematologic", parent: "multiple-myeloma", asOf, tags, wikipedia: W("Multiple_myeloma"),
     keyPapers: ["paper-cartitude-4-cilta-cel-nejm-2023", "paper-karmma-3-ide-cel-nejm-2023", "paper-majestec-1-teclistamab-nejm-2022", "paper-monumental-1-talquetamab-nejm-2022"],
     aka: ["RRMM", "Relapsed myeloma", "Triple-class refractory myeloma", "Penta-refractory myeloma"],
     burden: "Almost everyone with myeloma relapses eventually; with each line of treatment remissions shorten, and until 2021 patients whose disease resisted the three main drug classes survived about a year.",
@@ -306,7 +306,7 @@ export const bloodSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia", url: W("Plasma_cell_leukemia") }, { label: "NCCN Guidelines: Multiple Myeloma", url: MM.url }] },
 
   // ======================= MYELODYSPLASTIC SYNDROMES =======================
-  { id: "mds-lower-risk", kind: "cancer", name: "Lower-risk myelodysplastic syndromes", group: "haematologic", parent: "mds", asOf, tags, wikipedia: W("Myelodysplastic_syndrome"),
+  { id: "mds-lower-risk", kind: "cancer", trials: ["commands", "imerge", "medalist"], name: "Lower-risk myelodysplastic syndromes", group: "haematologic", parent: "mds", asOf, tags, wikipedia: W("Myelodysplastic_syndrome"),
     aka: ["Low-risk MDS", "IPSS-R very low, low and intermediate MDS", "Lower-risk myelodysplastic neoplasms", "Transfusion-dependent lower-risk MDS"],
     burden: "About two-thirds of people with myelodysplastic syndromes have lower-risk disease by IPSS-R; most are over 70, and anaemia rather than leukaemia is what shapes their lives, with many needing regular transfusions.",
     tldr: "Lower-risk myelodysplastic syndromes rarely turn into leukaemia quickly; the problem is anaemia and the transfusions it demands. Erythropoietin, then luspatercept (COMMANDS) and the telomerase blocker imetelstat (IMerge), free many patients from transfusions for months or years, and lenalidomide does the same for the del(5q) subtype.",
@@ -333,7 +333,7 @@ export const bloodSubtypes: CancerInput[] = [
     terms: ["anaemia", "staging-systems", "ageing-tissue-field-theory", "ipss-m-ipss-r", "del5q", "sf3b1-mutation"], technologies: ["transfusion-support"], keyPapers: ["paper-commands-luspatercept-mds-lancet-2023", "paper-imerge-imetelstat-mds-lancet-2024"],
     links: [{ label: "Wikipedia", url: W("Myelodysplastic_syndrome") }, { label: "NCCN Guidelines: Myelodysplastic Syndromes", url: MDS.url }] },
 
-  { id: "mds-higher-risk", kind: "cancer", name: "Higher-risk myelodysplastic syndromes", group: "haematologic", parent: "mds", asOf, tags, wikipedia: W("Myelodysplastic_syndrome"),
+  { id: "mds-higher-risk", kind: "cancer", trials: ["verona"], name: "Higher-risk myelodysplastic syndromes", group: "haematologic", parent: "mds", asOf, tags, wikipedia: W("Myelodysplastic_syndrome"),
     keyPapers: ["paper-aza-001-fenaux-lancet-oncol-2009", "paper-ipss-m-bernard-nejm-evidence-2022", "paper-who-2022-myeloid-khoury-leukemia-2022", "paper-icc-2022-arber-blood-2022"], drugs: ["pevonedistat"],
     aka: ["High-risk MDS", "IPSS-R high and very high MDS", "MDS with increased blasts", "Higher-risk myelodysplastic neoplasms"],
     burden: "About a third of myelodysplastic syndromes are higher risk; without treatment median survival is around a year and a half or less, and most progress to acute myeloid leukaemia.",
@@ -387,7 +387,7 @@ export const bloodSubtypes: CancerInput[] = [
     targets: ["btk", "bcl2", "cd20"], pathways: ["bcr-signalling", "apoptosis-bcl2"], terms: ["ighv-status", "del17p-tp53", "tp53-mutated", "umrd", "tumor-lysis-syndrome", "cll-ipi"], technologies: ["bcl2-inhibitors", "cytogenetics-fish", "flow-cytometry-mrd"], keyPapers: ["paper-cll14-venetoclax-obinutuzumab-nejm-2019", "paper-elevate-tn-acalabrutinib-lancet-2020", "paper-amplify-acalabrutinib-venetoclax-nejm-2025"],
     links: [{ label: "Wikipedia", url: W("Chronic_lymphocytic_leukemia") }, { label: "NCCN Guidelines: CLL/SLL", url: CLL.url }] },
 
-  { id: "cll-relapsed", kind: "cancer", name: "Relapsed or refractory chronic lymphocytic leukaemia", group: "haematologic", parent: "cll", asOf, tags, wikipedia: W("Chronic_lymphocytic_leukemia"),
+  { id: "cll-relapsed", kind: "cancer", trials: ["murano"], name: "Relapsed or refractory chronic lymphocytic leukaemia", group: "haematologic", parent: "cll", asOf, tags, wikipedia: W("Chronic_lymphocytic_leukemia"),
     aka: ["Relapsed CLL", "Refractory CLL", "Double-refractory CLL (after BTK and BCL-2 inhibitors)", "CLL after BTK inhibitor failure"],
     burden: "Most patients treated for chronic lymphocytic leukaemia relapse eventually, though often after many years; the small group whose disease resists both a BTK inhibitor and venetoclax has the poorest outlook and the most active research.",
     tldr: "When chronic lymphocytic leukaemia returns, the usual move is to switch drug class: venetoclax-based therapy after a BTK inhibitor, or a BTK inhibitor after venetoclax. Pirtobrutinib (BRUIN) works after the older BTK inhibitors fail, and CAR-T is approved for patients who have run out of both classes.",
@@ -438,7 +438,7 @@ export const bloodSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia", url: W("Richter%27s_transformation") }, { label: "NCCN Guidelines: CLL/SLL", url: CLL.url }] },
 
   // ======================= CHRONIC MYELOID LEUKAEMIA =======================
-  { id: "cml-chronic-phase", kind: "cancer", name: "Chronic myeloid leukaemia, chronic phase", group: "haematologic", parent: "cml", asOf, tags, wikipedia: W("Chronic_myelogenous_leukemia"),
+  { id: "cml-chronic-phase", kind: "cancer", trials: ["dasision"], name: "Chronic myeloid leukaemia, chronic phase", group: "haematologic", parent: "cml", asOf, tags, wikipedia: W("Chronic_myelogenous_leukemia"),
     aka: ["CML-CP", "Chronic-phase CML", "Newly diagnosed Ph-positive CML", "BCR::ABL1-positive chronic phase"],
     burden: "About 95 percent of people with chronic myeloid leukaemia are diagnosed in chronic phase; on a tyrosine kinase inhibitor their life expectancy is close to that of the general population, and about half of those who reach a deep, stable molecular response can stop treatment.",
     tldr: "Chronic-phase chronic myeloid leukaemia is the disease that imatinib turned from fatal into manageable: a daily pill blocks the BCR::ABL1 protein that drives it. Blood tests track the leukaemia gene to a millionth, newer pills such as asciminib (ASC4FIRST) reach deeper responses faster, and patients with years of undetectable disease can try stopping.",
@@ -492,7 +492,7 @@ export const bloodSubtypes: CancerInput[] = [
     links: [{ label: "Wikipedia", url: W("Chronic_myelogenous_leukemia") }, { label: "NCCN Guidelines: Chronic Myeloid Leukemia", url: CML.url }] },
 
   // ======================= MYELOPROLIFERATIVE NEOPLASMS =======================
-  { id: "primary-myelofibrosis", kind: "cancer", name: "Primary myelofibrosis", group: "haematologic", parent: "myeloproliferative-neoplasms", asOf, tags, wikipedia: W("Primary_myelofibrosis"),
+  { id: "primary-myelofibrosis", kind: "cancer", trials: ["manifest-2", "momentum"], name: "Primary myelofibrosis", group: "haematologic", parent: "myeloproliferative-neoplasms", asOf, tags, wikipedia: W("Primary_myelofibrosis"),
     drugs: ["danazol"],
     aka: ["PMF", "Myelofibrosis", "Chronic idiopathic myelofibrosis", "Agnogenic myeloid metaplasia", "Post-PV and post-ET myelofibrosis (secondary myelofibrosis)"],
     burden: "The rarest and most serious of the classic myeloproliferative neoplasms, about one new case per 100,000 people a year, mostly over 60; median survival is around six years but ranges from under two to more than fifteen depending on risk score.",

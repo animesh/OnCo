@@ -52,7 +52,7 @@ export const paediatricSubtypes: CancerInput[] = [
     targets: ["cd19"], terms: ["mrd", "efs", "b-all-cytogenetic-risk"], technologies: ["flow-cytometry-mrd", "t-cell-engager"], institutions: ["childrens-oncology-group", "st-jude"], keyPapers: ["paper-aall1731-blinatumomab-children-nejm-2025"], related: ["all-paediatric-high-risk", "all-paediatric-relapsed"],
     links: [{ label: "Wikipedia: Acute lymphoblastic leukaemia", url: W("Acute_lymphoblastic_leukemia") }, { label: "NCI PDQ: Childhood ALL Treatment", url: ALL.url }] },
 
-  { id: "all-paediatric-high-risk", kind: "cancer", name: "High-risk acute lymphoblastic leukaemia in children (high-risk B-ALL and T-ALL)", group: "paediatric", parent: "all-leukemia", asOf, tags, wikipedia: W("Acute_lymphoblastic_leukemia"),
+  { id: "all-paediatric-high-risk", kind: "cancer", trials: ["aall0434"], name: "High-risk acute lymphoblastic leukaemia in children (high-risk B-ALL and T-ALL)", group: "paediatric", parent: "all-leukemia", asOf, tags, wikipedia: W("Acute_lymphoblastic_leukemia"),
     keyPapers: ["paper-aall0232-larsen-jco-2016", "paper-aall0434-nelarabine-t-all-dunsmore-jco-2020", "paper-hunger-mullighan-all-children-nejm-2015"],
     aka: ["NCI high-risk B-ALL", "Very high-risk childhood ALL", "Childhood T-cell ALL", "T-ALL in children"],
     burden: "About a third of children with B-cell ALL are high risk by age or white count, and T-cell ALL adds about 15 percent of childhood ALL; together they account for most of the relapses and deaths in a disease that is otherwise usually cured.",
@@ -351,7 +351,7 @@ export const paediatricSubtypes: CancerInput[] = [
     targets: ["smoothened", "tp53"], pathways: ["hedgehog"], terms: ["li-fraumeni", "late-effects", "secondary-malignancy", "medulloblastoma-molecular-groups"], technologies: ["proton-therapy", "methylation-profiling", "autologous-stem-cell-transplant"], institutions: ["st-jude", "childrens-oncology-group", "siop-europe"], related: ["medulloblastoma-wnt", "medulloblastoma-group-3-4", "basal-cell-carcinoma"],
     links: [{ label: "Wikipedia: Medulloblastoma", url: W("Medulloblastoma") }, { label: "NCI PDQ: Childhood Medulloblastoma Treatment", url: MB.url }] },
 
-  { id: "medulloblastoma-group-3-4", kind: "cancer", name: "Group 3 and group 4 medulloblastoma (non-WNT/non-SHH)", group: "paediatric", parent: "medulloblastoma", asOf, tags: [...tags, "cns"], wikipedia: W("Medulloblastoma"),
+  { id: "medulloblastoma-group-3-4", kind: "cancer", trials: ["acns0332"], name: "Group 3 and group 4 medulloblastoma (non-WNT/non-SHH)", group: "paediatric", parent: "medulloblastoma", asOf, tags: [...tags, "cns"], wikipedia: W("Medulloblastoma"),
     keyPapers: ["paper-who-2021-cns-louis-neuro-oncology-2021", "paper-taylor-medulloblastoma-consensus-acta-neuropathol-2012", "paper-cavalli-medulloblastoma-subtypes-cancer-cell-2017", "paper-acns0332-leary-jama-oncol-2021"], drugs: ["isotretinoin"],
     aka: ["Non-WNT/non-SHH medulloblastoma", "Group 3 medulloblastoma", "Group 4 medulloblastoma", "MYC-amplified medulloblastoma"],
     burden: "Groups 3 and 4 together make up about 60 to 65 percent of medulloblastoma: group 4 is the commonest single group and group 3, often MYC-amplified and metastatic in young children, the most lethal.",

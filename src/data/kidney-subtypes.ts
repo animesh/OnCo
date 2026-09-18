@@ -11,7 +11,7 @@ const W = (s: string) => `https://en.wikipedia.org/wiki/${s}`;
 const tags = ["subtype-page"];
 
 export const kidneySubtypes: CancerInput[] = [
-  { id: "clear-cell-rcc", kind: "cancer", name: "Clear cell renal cell carcinoma", group: "genitourinary", parent: "rcc", asOf, tags, wikipedia: W("Clear-cell_renal_cell_carcinoma"),
+  { id: "clear-cell-rcc", kind: "cancer", trials: ["carmena", "checkmate-025"], name: "Clear cell renal cell carcinoma", group: "genitourinary", parent: "rcc", asOf, tags, wikipedia: W("Clear-cell_renal_cell_carcinoma"),
     keyPapers: ["paper-keynote-564-nejm-2021", "paper-clear-nejm-2021", "paper-keynote-426-nejm-2019", "paper-checkmate-214-nejm-2018"],
     aka: ["ccRCC", "Conventional renal cell carcinoma"],
     burden: "About three quarters of kidney cancers and most of the deaths; a third of patients present with or develop metastases, and immunotherapy combinations have lifted median survival in advanced disease to around four years.",
@@ -38,7 +38,7 @@ export const kidneySubtypes: CancerInput[] = [
     ],
     pipeline: ["belzutifan","hif2a"], openProblems: ["No validated biomarker chooses between immunotherapy doublets.", "Most metastatic patients still progress within two to three years.", "Overtreatment of small renal masses versus the risk of surveillance."],
     links: [{ label: "Wikipedia", url: W("Clear-cell_renal_cell_carcinoma") }] },
-  { id: "papillary-rcc", kind: "cancer", name: "Papillary renal cell carcinoma", group: "genitourinary", parent: "rcc", asOf, tags, wikipedia: W("Papillary_renal_cell_carcinomas"),
+  { id: "papillary-rcc", kind: "cancer", trials: ["papmet"], name: "Papillary renal cell carcinoma", group: "genitourinary", parent: "rcc", asOf, tags, wikipedia: W("Papillary_renal_cell_carcinomas"),
     keyPapers: ["paper-who-2022-gu-moch-eur-urol-2022", "paper-aspen-armstrong-lancet-oncol-2016", "paper-papmet-pal-lancet-2021", "paper-tcga-papillary-rcc-nejm-2016"],
     aka: ["pRCC", "Papillary RCC"],
     burden: "Ten to fifteen percent of kidney cancers, commoner in men, in Black patients and in end-stage kidney disease; localised tumours do well after surgery, while metastatic disease has fared worse than clear cell cancer on the same drugs.",

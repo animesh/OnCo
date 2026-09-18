@@ -11,7 +11,7 @@ const W = (s: string) => `https://en.wikipedia.org/wiki/${s}`;
 const tags = ["subtype-page"];
 
 export const bladderSubtypes: CancerInput[] = [
-  { id: "non-muscle-invasive-bladder-cancer", kind: "cancer", name: "Non-muscle-invasive bladder cancer", group: "genitourinary", parent: "urothelial", asOf, tags, wikipedia: W("Bladder_cancer"),
+  { id: "non-muscle-invasive-bladder-cancer", kind: "cancer", trials: ["keynote-057"], name: "Non-muscle-invasive bladder cancer", group: "genitourinary", parent: "urothelial", asOf, tags, wikipedia: W("Bladder_cancer"),
     keyPapers: ["paper-keynote-057-lancet-oncol-2021", "paper-nadofaragene-firadenovec-lancet-oncol-2021", "paper-sylvester-eortc-risk-tables-eur-urol-2006", "paper-eau-nmibc-guideline-eur-urol-2022"],
     aka: ["NMIBC", "Superficial bladder cancer", "Ta, T1 and carcinoma in situ of the bladder"],
     burden: "About three quarters of new bladder cancers; rarely fatal at this stage but it recurs in half of patients and progresses to muscle invasion in a fifth of the high-risk group, so years of cystoscopic surveillance make it one of the most expensive cancers to manage.",

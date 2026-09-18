@@ -112,7 +112,7 @@ export const prostateSubtypes: CancerInput[] = [
     pipeline: ["psma-pet", "enzalutamide", "sbrt", "idea-psma-pet-guided-mdt"], openProblems: ["Whether treating PSMA PET-detected metastases early lengthens life or only lowers PSA.", "How to spare men with slow doubling times from years of hormone therapy.", "The trials that defined recurrence used conventional imaging; PSMA PET restages many of these men as metastatic."],
     links: [{ label: "Wikipedia", url: W("Biochemical_recurrence") }, { label: "NCCN Guidelines: Prostate Cancer", url: "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1459" }] },
 
-  { id: "prostate-mhspc", kind: "cancer", name: "Metastatic hormone-sensitive prostate cancer", group: "genitourinary", parent: "prostate", asOf, tags, wikipedia: W("Prostate_cancer#Metastatic_disease"),
+  { id: "prostate-mhspc", kind: "cancer", trials: ["aranote", "enzamet", "nct02489318"], name: "Metastatic hormone-sensitive prostate cancer", group: "genitourinary", parent: "prostate", asOf, tags, wikipedia: W("Prostate_cancer#Metastatic_disease"),
     keyPapers: ["paper-stampede-abiraterone-nejm-2017", "paper-latitude-nejm-2017", "paper-arasens-nejm-2022", "paper-chaarted-nejm-2015"],
     aka: ["mHSPC", "Metastatic castration-sensitive prostate cancer", "mCSPC", "De novo metastatic prostate cancer", "Hormone-naive metastatic prostate cancer"],
     burden: "About one in twenty prostate cancers are metastatic at diagnosis in high-income countries and far more elsewhere; median survival has risen from under four years to more than five with combination therapy.",
@@ -141,7 +141,7 @@ export const prostateSubtypes: CancerInput[] = [
     pipeline: ["capivasertib", "pluvicto", "psmaddition", "relugolix", "psma-pet"], openProblems: ["Who needs triplet therapy and who is overtreated by it.", "Whether intermittent or de-escalated therapy is safe after a deep PSA response.", "PSMA PET restages many men the trials called non-metastatic, and the evidence has not caught up."],
     links: [{ label: "Wikipedia", url: W("Prostate_cancer") }, { label: "NCCN Guidelines: Prostate Cancer", url: "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1459" }] },
 
-  { id: "prostate-nmcrpc", kind: "cancer", name: "Non-metastatic castration-resistant prostate cancer", group: "genitourinary", parent: "prostate", asOf, tags, wikipedia: W("Castration-resistant_prostate_cancer"),
+  { id: "prostate-nmcrpc", kind: "cancer", trials: ["aramis", "nct01946204", "prosper"], name: "Non-metastatic castration-resistant prostate cancer", group: "genitourinary", parent: "prostate", asOf, tags, wikipedia: W("Castration-resistant_prostate_cancer"),
     keyPapers: ["paper-spartan-nejm-2018", "paper-prosper-nejm-2018", "paper-aramis-nejm-2019"],
     aka: ["nmCRPC", "M0 CRPC", "Non-metastatic CRPC", "Rising PSA on hormone therapy without metastases"],
     burden: "A shrinking group, because PSMA PET reveals metastases in most men once called non-metastatic; about a third with a PSA doubling time under ten months developed visible metastases within two years on hormone therapy alone.",

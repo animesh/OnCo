@@ -11,7 +11,7 @@ const W = (s: string) => `https://en.wikipedia.org/wiki/${s}`;
 const tags = ["subtype-page"];
 
 export const ovarianSubtypes: CancerInput[] = [
-  { id: "high-grade-serous-ovarian-cancer", kind: "cancer", name: "High-grade serous ovarian cancer", group: "gynaecologic", parent: "ovarian", asOf, tags, wikipedia: W("Ovarian_cancer"),
+  { id: "high-grade-serous-ovarian-cancer", kind: "cancer", trials: ["soraya"], name: "High-grade serous ovarian cancer", group: "gynaecologic", parent: "ovarian", asOf, tags, wikipedia: W("Ovarian_cancer"),
     keyPapers: ["paper-solo-1-nejm-2018", "paper-paola-1-nejm-2019", "paper-mirasol-nejm-2023", "paper-tcga-ovarian-nature-2011"],
     aka: ["HGSOC", "High-grade serous carcinoma of the ovary, fallopian tube and peritoneum"],
     burden: "About seven in ten ovarian cancers and most of the deaths; three quarters present at stage III or IV, most respond to platinum chemotherapy and most relapse, but PARP inhibitor maintenance now keeps a growing share of BRCA-mutant patients disease-free for years.",

@@ -78,7 +78,7 @@ export const testisOesophagusSubtypes: CancerInput[] = [
     ],
     pipeline: ["nivolumab","tislelizumab"], openProblems: ["Whether surgery can be omitted after a complete response to chemoradiation.", "Most cases worldwide present late without access to endoscopy.", "Nutrition, swallowing and quality of life during and after treatment."],
     links: [{ label: "Wikipedia", url: W("Esophageal_cancer") }] },
-  { id: "oesophageal-adenocarcinoma", kind: "cancer", name: "Oesophageal and junctional adenocarcinoma", group: "gastrointestinal", parent: "esophageal", asOf, tags, wikipedia: W("Esophageal_cancer"),
+  { id: "oesophageal-adenocarcinoma", kind: "cancer", trials: ["esopec", "flot4"], name: "Oesophageal and junctional adenocarcinoma", group: "gastrointestinal", parent: "esophageal", asOf, tags, wikipedia: W("Esophageal_cancer"),
     keyPapers: ["paper-checkmate-649-lancet-2021", "paper-flot4-lancet-2019", "paper-cross-nejm-2012", "paper-keynote-590-lancet-2021"],
     aka: ["Esophageal adenocarcinoma", "EAC", "Gastro-oesophageal junction adenocarcinoma", "Barrett's cancer"],
     burden: "The dominant oesophageal cancer in Western countries, where its incidence has risen several-fold since the 1970s with reflux and obesity; it affects men six times more than women, and five-year survival is about 20 percent overall.",
