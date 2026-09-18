@@ -2599,7 +2599,7 @@ export const pipelineTrialsWave5: TrialInput[] = [
     setting: "A Phase 2 Multi-center Open-label Basket Trial of Nab-sirolimus for Adult and Adolescent Patients With Malignant Solid Tumors Harboring Pathogenic Inactivating Alterations in TSC1 or TSC2 Genes.",
     tldr: "A phase 2 trial of Sirolimus protein-bound particles in metastatic cancer, run by Aadi Bioscience, Inc., active and no longer recruiting.",
     summary: "Phase 2 Basket Trial of Nab-sirolimus in Patients With Malignant Solid Tumors With Pathogenic Alterations in TSC1/TSC2 Genes (PRECISION 1) is a phase 2 interventional study registered as NCT05103358 by Aadi Bioscience, Inc., with 120 participants planned, started 2022-02-15 and due to reach its primary completion in 2024-12-31. Interventions recorded: nab-sirolimus. Conditions listed: Tumor, Tumor, Solid, Metastasis, Metastatic Cancer. No results are recorded here; the registry entry is the source.",
-    drugs: ["sirolimus-albumin-bound"], cancers: ["metastatic-cancer"], 
+    drugs: ["sirolimus-albumin-bound"], cancers: ["metastatic-cancer", "pecoma"], 
     links: [{ label: "ClinicalTrials.gov NCT05103358", url: "https://clinicaltrials.gov/study/NCT05103358" }] },
   { id: "nct06437509", kind: "trial", name: "A Study of BL-B01D1+PD-1 Monoclonal Antibody in Patients With Extensive-stage Small Cell Lung Cancer", nct: "NCT06437509", phase: "2", status: "recruiting", sponsor: "Sichuan Baili Pharmaceutical Co., Ltd.", enrolled: 66, asOf, tags,
     setting: "A Phase II Clinical Trial to Evaluate the Efficacy and Safety of BL-B01D1+PD-1 Monoclonal Antibody in Patients With Extensive-stage Small Cell Lung Cancer",

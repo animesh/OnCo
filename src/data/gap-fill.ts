@@ -1125,7 +1125,7 @@ export const gapTechnologies: TechnologyInput[] = [
     principle: "Vascular isolation permits regional drug concentrations far above systemic limits, with hyperthermia and TNF-α (which selectively destroys tumour vasculature) enhancing cytotoxicity and drug penetration.",
     strengths: ["Limb salvage in otherwise unresectable sarcoma", "High complete response in melanoma in-transit disease", "Minimal systemic toxicity when leak is controlled"],
     limitations: ["Major operation; regional toxicity (Wieberdink grade)", "TNF-α not approved in the US", "Displaced in melanoma by systemic immunotherapy"],
-    sections: ["surgery"], technologies: ["hyperthermia", "limb-salvage-surgery", "percutaneous-hepatic-perfusion"], cancers: ["melanoma", "sarcoma"], drugs: ["melphalan", "dactinomycin", "talimogene-laherparepvec"],
+    sections: ["surgery"], technologies: ["hyperthermia", "limb-salvage-surgery", "percutaneous-hepatic-perfusion"], cancers: ["melanoma", "sarcoma", "extremity-soft-tissue-sarcoma"], drugs: ["melphalan", "dactinomycin", "talimogene-laherparepvec"],
     links: [{ label: "TNF-melphalan ILP in sarcoma (Ann Surg 2006)", url: "https://doi.org/10.1097/01.sla.0000234786.09312.53" }], tags: ["gap-fill"] }),
   tech({ id: "percutaneous-hepatic-perfusion", name: "Percutaneous hepatic perfusion (chemosaturation)", status: "approved", since: 2010, wikipedia: W("Hepatic_arterial_infusion"),
     tldr: "Isolating the liver's circulation with catheters and balloons so that high-dose melphalan can be pumped through it and filtered out before it reaches the rest of the body; approved in 2023 for eye melanoma that has spread to the liver.",
