@@ -7,7 +7,7 @@ All notable changes to OnCo are recorded here. The format follows [Keep a Change
 Regenerated from the commit log each time the site ships (`scripts/changelog-sync.ts`); the version sections below are written by hand when a release is cut.
 
 ### 18 September 2026
-- Seventy-three trials named on subtype pages now have their own records with confirmed registry ids, plus logos for the new drug makers
+- Third Chinese quality pass: 19 corrections to new drug, company and trial summaries, including wrong drug names and Korean text left in Chinese sentences
 - Seventy-four drug makers added and 210 drug-to-company links filled, so pipeline drugs now show who is developing them
 - Key papers for 147 subtype pages: 364 pivotal trial, classification and guideline papers, each checked against Europe PMC
 - Thirty-nine drugs named by the new subtype pages now have their own records, from hormone therapies for pituitary tumours to antibody-drug conjugates in trials
@@ -29,6 +29,8 @@ Regenerated from the commit log each time the site ships (`scripts/changelog-syn
 - 969 more plain-English sentences for early-phase trials, key papers and collections, taking the simple layer to 9,930 records; one non-cancer registry record removed
 - Orphan trials given content: ten drug matches, 17 sponsor aliases, 36 sponsor companies and 130 trials tied to their makers, two non-cancer records removed; backlinks round: 303 weakly linked records gain true relations from their own text; orphans down to 214
 - 1,024 more plain-English sentences: 279 companies, 104 institutions and 640 phase 3 trials, taking the simple layer to 8,961 records
+- Third Chinese quality pass: 19 of 236 TL;DRs from the biomarker, drug, maker and trial waves corrected, and the 73 trial TL;DRs folded into zh.ts
+- Seventy-three trials named on subtype pages now have their own records with confirmed registry ids, plus logos for the new drug makers
 - Add 73 trials named by the cancer subtype pages (trials-subtypes-wave)
 
 ### 17 September 2026
