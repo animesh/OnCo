@@ -7,6 +7,7 @@ All notable changes to OnCo are recorded here. The format follows [Keep a Change
 Regenerated from the commit log each time the site ships (`scripts/changelog-sync.ts`); the version sections below are written by hand when a release is cut.
 
 ### 18 September 2026
+- Plain-English sentences for the 170 new subtype pages and trials, so every record carries one again
 - Seven duplicate trial records folded into their named trials with redirects; second Chinese quality pass corrects 64 TL;DRs from tonight's new pages, including one inverted meaning, and adopts NMPA drug names
 - Head and neck cancers by HPV status and site: HPV-positive and HPV-negative disease, recurrent or metastatic squamous cell carcinoma, hypopharyngeal cancer, three salivary gland histologies and three oral cavity subsites, tied to KEYNOTE-048, RTOG 1016, De-ESCALaTE, ECOG 3311, PATHOS and NIVOPOSTOP
 - Neuroendocrine neoplasms by site and grade: small intestinal, pancreatic and lung neuroendocrine tumours, grade 3 NET and extrapulmonary neuroendocrine carcinoma, tied to NETTER-1 and 2, CLARINET, PROMID, RADIANT and CABINET; NETTER-2 refiled under neuroendocrine cancer
@@ -24,6 +25,8 @@ Regenerated from the commit log each time the site ships (`scripts/changelog-syn
 - 1,024 more plain-English sentences: 279 companies, 104 institutions and 640 phase 3 trials, taking the simple layer to 8,961 records
 
 ### 17 September 2026
+- Add simple sentences for the subtype-wave cancer pages and trials (part-s)
+- Seven duplicate trial records folded into their named trials with redirects; second Chinese quality pass corrects 64 TL;DRs from tonight's new pages, including one inverted meaning, and adopts NMPA drug names
 - Review Chinese TL;DRs of the subtype waves: standard drug names, terms and alignment with the English
 - Merge duplicate trial records onto their named keepers
 - Head and neck cancers by HPV status and site: HPV-positive and HPV-negative disease, recurrent or metastatic squamous cell carcinoma, hypopharyngeal cancer, three salivary gland histologies and three oral cavity subsites, tied to KEYNOTE-048, RTOG 1016, De-ESCALaTE, ECOG 3311, PATHOS and NIVOPOSTOP
