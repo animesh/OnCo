@@ -20,8 +20,8 @@ describe("organ schematics", () => {
       if (!o.nodes.length) expect(o.nodeNote, `${o.id} explains missing nodes`).toBeTruthy();
     }
     const uncovered = g.kind("cancer").filter((c) => !seen.has(c.id)).map((c) => c.id);
-    // Unknown primary has no organ by definition; the NCI "rare cancers of childhood" umbrella spans a dozen organs.
-    expect(uncovered, "cancers without an organ drawing").toEqual(["cancer-of-unknown-primary", "childhood-cancers", "extragonadal-germ-cell-tumour", "metastatic-cancer", "rare-childhood-cancers"]);
+    // Unknown primary has no organ by definition; the NCI "rare cancers of childhood" umbrella and the adolescent and young adult family page span a dozen organs.
+    expect(uncovered, "cancers without an organ drawing").toEqual(["aya-cancers", "cancer-of-unknown-primary", "childhood-cancers", "extragonadal-germ-cell-tumour", "metastatic-cancer", "rare-childhood-cancers"]);
   });
 
   it("every drawn cancer with subtypes links at least one subtype to a subsite", () => {

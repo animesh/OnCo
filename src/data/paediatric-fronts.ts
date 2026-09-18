@@ -90,7 +90,7 @@ const trials: TrialInput[] = [
       { endpoint: "5-year event-free survival: CSI dose (age 3-7)", primary: true, unit: "%", arms: [{ name: "18 Gy CSI", value: 71.4 }, { name: "23.4 Gy CSI", value: 82.9 }], hr: 1.67, source: "https://doi.org/10.1200/JCO.20.02730" },
     ],
     replication: "Consistent with the earlier CCG 9892 and A9961 experience that 23.4 Gy with chemotherapy is safe for average risk; SIOP PNET5 is testing subgroup-directed reduction.",
-    cancers: ["medulloblastoma"], technologies: ["proton-therapy", "imrt-igrt"], institutions: ["childrens-oncology-group"], drugs: ["cisplatin", "vincristine", "cyclophosphamide", "lomustine"], terms: ["late-effects", "de-escalation"], bottlenecks: ["b-survivorship", "b-toxicity-qol"],
+    cancers: ["medulloblastoma", "medulloblastoma-wnt", "medulloblastoma-group-3-4"], technologies: ["proton-therapy", "imrt-igrt"], institutions: ["childrens-oncology-group"], drugs: ["cisplatin", "vincristine", "cyclophosphamide", "lomustine"], terms: ["late-effects", "de-escalation"], bottlenecks: ["b-survivorship", "b-toxicity-qol"],
     links: [ct("NCT00085735"), doi("Michalski et al., JCO 2021", "10.1200/JCO.20.02730")],
     tags: [...PAEDIATRIC_TAGS, "cns", "de-escalation"] }),
 
@@ -130,7 +130,7 @@ const trials: TrialInput[] = [
       { endpoint: "3-year event-free survival", primary: true, unit: "%", arms: [{ name: "Chemotherapy + gemtuzumab ozogamicin", value: 53.1 }, { name: "Chemotherapy", value: 46.9 }], hr: 0.83, ci: [0.70, 0.99], source: "https://doi.org/10.1200/JCO.2014.55.3628" },
     ],
     replication: "Adult ALFA-0701 (fractionated GO) and the MRC AML15/16 meta-analysis showed the same relapse reduction; the CD33 splicing biomarker was confirmed in AAML0531 and AAML1031 correlative studies.",
-    cancers: ["aml"], drugs: ["gemtuzumab-ozogamicin", "cytarabine-7-3"], targets: ["cd33"], technologies: ["adc"], institutions: ["childrens-oncology-group"], trials: ["alfa-0701"],
+    cancers: ["aml", "aml-paediatric"], drugs: ["gemtuzumab-ozogamicin", "cytarabine-7-3"], targets: ["cd33"], technologies: ["adc"], institutions: ["childrens-oncology-group"], trials: ["alfa-0701"],
     links: [ct("NCT00372593"), doi("Gamis et al., JCO 2014", "10.1200/JCO.2014.55.3628")],
     tags: [...PAEDIATRIC_TAGS, "haematologic"] }),
 
