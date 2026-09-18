@@ -7,6 +7,7 @@ All notable changes to OnCo are recorded here. The format follows [Keep a Change
 Regenerated from the commit log each time the site ships (`scripts/changelog-sync.ts`); the version sections below are written by hand when a release is cut.
 
 ### 18 September 2026
+- Colorectal cancer by state: rectal, MSI-high, BRAF V600E, HER2-amplified, KRAS G12C and early-onset pages with OPRA, PROSPECT, BEACON and other landmark trials; primary mediastinal B-cell lymphoma
 - Brain tumour subtypes: IDH-mutant astrocytoma, oligodendroglioma, meningioma, brain metastases, paediatric high-grade glioma, spinal cord tumours, vestibular schwannoma and CNS germ cell tumours, each linked from the drugs and trials that treat them
 - Plain-English sentences for every remaining record: 1,167 early-phase trials, 138 people, 65 companies, 8 institutions and 3 ideas, so all 11,306 records now carry one
 - Websites for 15 organisations and nine more logos, with archived addresses replaced by live sites; roadmap row 139 records the open dependency map hydration mismatch
@@ -15,6 +16,8 @@ Regenerated from the commit log each time the site ships (`scripts/changelog-syn
 - 1,024 more plain-English sentences: 279 companies, 104 institutions and 640 phase 3 trials, taking the simple layer to 8,961 records
 
 ### 17 September 2026
+- Brain tumour subtypes: IDH-mutant astrocytoma, oligodendroglioma, meningioma, brain metastases, paediatric high-grade glioma, spinal cord tumours, vestibular schwannoma and CNS germ cell tumours, each linked from the drugs and trials that treat them
+- Add colorectal subtype pages and primary mediastinal B-cell lymphoma
 - Add brain and spinal tumour subtype pages
 - Plain-English sentences for every remaining record: 1,167 early-phase trials, 138 people, 65 companies, 8 institutions and 3 ideas, so all 11,306 records now carry one
 - Simple layer: part-r, fourth and final wave to full coverage
