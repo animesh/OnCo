@@ -7,6 +7,7 @@ All notable changes to OnCo are recorded here. The format follows [Keep a Change
 Regenerated from the commit log each time the site ships (`scripts/changelog-sync.ts`); the version sections below are written by hand when a release is cut.
 
 ### 18 September 2026
+- Childhood cancers by type and risk: acute lymphoblastic leukaemia by risk group, Philadelphia status, infancy and relapse, paediatric AML, neuroblastoma by risk group, medulloblastoma by molecular group, and a page for adolescents and young adults
 - Sarcomas and bone tumours by type: chondrosarcoma, angiosarcoma, undifferentiated pleomorphic sarcoma, myxofibrosarcoma, alveolar soft part sarcoma, PEComa, epithelioid haemangioendothelioma, nerve sheath tumours, retroperitoneal and extremity soft tissue sarcoma, with STRASS, EORTC 62012, AMPECT and ANGIOTAX
 - Cancer pages by state for the common cancers: gynaecological cancers by molecular class and stage, skin cancers by state, lung cancer by driver and stage, breast cancer by state, 44 pages tied to their landmark trials and drugs; the My cancer chip leaves the header until accounts are on
 - Blood cancers by state: acute myeloid leukaemia by driver and fitness, acute promyelocytic leukaemia, myeloma from smouldering to relapsed, MDS by risk, CLL by line and Richter transformation, CML by phase and primary myelofibrosis, nineteen pages tied to 111 drugs and trials
@@ -20,6 +21,8 @@ Regenerated from the commit log each time the site ships (`scripts/changelog-syn
 - 1,024 more plain-English sentences: 279 companies, 104 institutions and 640 phase 3 trials, taking the simple layer to 8,961 records
 
 ### 17 September 2026
+- Add paediatric cancers by type and risk group
+- Sarcomas and bone tumours by type: chondrosarcoma, angiosarcoma, undifferentiated pleomorphic sarcoma, myxofibrosarcoma, alveolar soft part sarcoma, PEComa, epithelioid haemangioendothelioma, nerve sheath tumours, retroperitoneal and extremity soft tissue sarcoma, with STRASS, EORTC 62012, AMPECT and ANGIOTAX
 - Add sarcoma and bone tumour subtype pages with landmark trials
 - Cancer pages by state for the common cancers: gynaecological cancers by molecular class and stage, skin cancers by state, lung cancer by driver and stage, breast cancer by state, 44 pages tied to their landmark trials and drugs; the My cancer chip leaves the header until accounts are on
 - Breast cancer by state: high-risk early and post-CDK4/6 HR-positive, HER2-low, early HER2-positive and HER2-positive brain metastases, early and metastatic triple-negative, inflammatory breast cancer, Paget disease of the nipple and phyllodes tumour, each linked from the trials and drugs that treat them
