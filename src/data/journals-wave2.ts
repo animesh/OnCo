@@ -412,7 +412,7 @@ export const journalsWave2: JournalInput[] = [
     links: [{ label: "Homepage", url: "https://etj.bioscientifica.com/" }, { label: "NLM Catalog", url: "https://www.ncbi.nlm.nih.gov/nlmcatalog/101604579" }, { label: "DOAJ record", url: "https://doaj.org/toc/2235-0802" }],
     cancers: ["thyroid"], related: ["pubmed-europepmc"] }),
 
-  j({ id: "experimental-oncology", name: "Experimental oncology",
+  j({ id: "experimental-oncology", institutions: ["kavetsky-institute-kyiv"], name: "Experimental oncology",
     aka: ["Exp Oncol"],
     matchNames: ["Exp Oncol", "Experimental oncology", "Experimental Oncology"],
     publisher: "Akademperiodyka (National Academy of Sciences of Ukraine)",
@@ -621,7 +621,7 @@ export const journalsWave2: JournalInput[] = [
     tldr: "ASCO's journal for the data side of cancer care: electronic health records, real-world data, machine learning, clinical decision support and data sharing. Read by oncologists, informaticians and health-data scientists.",
     summary: "JCO Clinical Cancer Informatics is one of the JCO family of journals published by the American Society of Clinical Oncology in the United States. NLM catalogues it from 2017, indexed for MEDLINE under the subject headings Medical Informatics and Medical Oncology, and notes that articles are published as they become available and compiled into annual volumes. Crossref lists the American Society of Clinical Oncology as publisher.",
     links: [{ label: "Homepage", url: "https://ascopubs.org/journal/cci" }, { label: "NLM Catalog", url: "https://www.ncbi.nlm.nih.gov/nlmcatalog/101708809" }], related: ["pubmed-europepmc"] }),
-  j({ id: "jco-global-oncology", name: "JCO global oncology", aka: ["JCO Glob Oncol", "JCO GO", "Journal of Global Oncology"], matchNames: ["JCO Glob Oncol", "JCO global oncology", "JCO Global Oncology", "Journal of Global Oncology", "J Glob Oncol"],
+  j({ id: "jco-global-oncology", institutions: ["asco"], name: "JCO global oncology", aka: ["JCO Glob Oncol", "JCO GO", "Journal of Global Oncology"], matchNames: ["JCO Glob Oncol", "JCO global oncology", "JCO Global Oncology", "Journal of Global Oncology", "J Glob Oncol"],
     publisher: "American Society of Clinical Oncology", society: "American Society of Clinical Oncology", url: "https://ascopubs.org/journal/go", issn: "2687-8941", scope: "global oncology", access: "open-access", founded: 2019,
     tldr: "ASCO's open access journal for cancer care and research in low- and middle-income countries and other resource-limited settings. Read by oncologists and public-health researchers working on cancer worldwide.",
     summary: "JCO Global Oncology is published by the American Society of Clinical Oncology in the United States. NLM records that it continues the Journal of Global Oncology (ISSN 2378-9506), that some volume 6 articles appeared electronically in 2019, and that articles are published as they are accepted and compiled into annual volumes. The Directory of Open Access Journals lists it as a fully open access journal from 2020 with anonymous peer review, an article processing charge, and articles published under CC BY or CC BY-NC-ND licences. Indexed for MEDLINE under Medical Oncology and Neoplasms.",
@@ -933,7 +933,7 @@ export const journalsWave2: JournalInput[] = [
     links: [{ label: "Homepage", url: "https://www.sciencedirect.com/journal/neoplasia" }, { label: "NLM Catalog", url: "https://www.ncbi.nlm.nih.gov/nlmcatalog/100886622" }, { label: "DOAJ record", url: "https://doaj.org/toc/1522-8002" }],
     related: ["pubmed-europepmc"] }),
 
-  j({ id: "neoplasma", name: "Neoplasma",
+  j({ id: "neoplasma", institutions: ["biomedical-research-center-sas"], name: "Neoplasma",
     aka: [],
     matchNames: ["Neoplasma"],
     publisher: "AEPress, s.r.o.", url: "https://www.elis.sk/index.php?option=com_content&view=article&id=4:neoplasma&catid=4:journals", issn: "0028-2685", scope: "experimental and clinical oncology", founded: 1957,
