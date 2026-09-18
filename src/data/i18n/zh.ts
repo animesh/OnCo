@@ -9610,7 +9610,6 @@ export const tldr_zh: Record<string, string> = {
   nct06926075: "一项在前列腺癌、卵巢癌、胶质瘤和胶质母细胞瘤、胰腺癌、皮肤癌中评估一种在研治疗的1/2期试验，由Filamon LTD开展，正在招募。",
   nct07455734: "一项在晚期实体瘤中评估一种在研治疗的1/2期试验，由BioNTech SE开展，正在招募。",
   nct06556563: "一项在胶质瘤和胶质母细胞瘤中评估Temozolomide、Pembrolizumab的3期试验，由NovoCure GmbH开展，正在招募。",
-  nct06963840: "一项在卵巢癌中评估一种在研治疗的2期试验，由Wellizen Australia开展，进行中、不再招募。",
   nct07473128: "一项在小细胞肺癌中评估Trilaciclib的3期试验，由Pharmacosmos A/S开展，正在招募。",
   nct04099251: "一项在黑色素瘤中评估Nivolumab的3期试验，由Bristol-Myers Squibb开展，进行中、不再招募。",
   nct06463665: "一项在非小细胞肺癌、小细胞肺癌中评估Olvimulogene nanivacirepvec、Nivolumab、Cemiplimab的2期试验，由Genelux Corporation开展，正在招募。",

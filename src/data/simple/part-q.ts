@@ -628,7 +628,6 @@ export const simpleQ: Record<string, string> = {
   "nct06962267": "Chia Tai Tianqing runs this phase 2 trial of TQB2916 with gemcitabine and albumin bound paclitaxel as first treatment for advanced pancreatic cancer, and it is now recruiting.",
   "nct06962787": "Sichuan Baili Pharmaceutical runs this phase 2 trial of BL-B01D1 with a kinase inhibitor such as axitinib or lenvatinib, with or without pembrolizumab, in advanced kidney cancer, now recruiting.",
   "nct06962865": "RemeGen runs this randomised phase 2 trial of RC108 with furmonertinib against furmonertinib alone as first treatment for EGFR mutated, MET positive advanced lung cancer, and it is now recruiting.",
-  "nct06963840": "Wellizen Australia runs this study of Theronomic Ova-All Care on markers of ovarian health in adult women with polycystic ovarian syndrome, and it is no longer recruiting.",
   "nct06971614": "ImmVira Pharma runs this phase 2 trial of T3011 put into the bladder for bladder cancer that has not reached the muscle and no longer responds to BCG, and it is now recruiting.",
   "nct06978114": "Sichuan Baili Pharmaceutical runs this phase 2 trial of BL-B01D1 with a PD-1 or PD-L1 antibody in advanced biliary tract cancer, and it is now recruiting.",
   "nct06979596": "Merck runs this phase 2 basket trial of opevesostat (MK-5684), with the steroid replacements it needs, in selected solid tumours, and it is now recruiting.",
