@@ -32,7 +32,7 @@ export const cancerParentsWave2: CancerInput[] = [
       { year: 2015, title: "CDK4/6 inhibitors approved", refs: ["palbociclib"] },
       { year: 2022, title: "Trastuzumab deruxtecan in HER2-low disease", refs: ["trastuzumab-deruxtecan"] },
     ],
-    pipeline: ["trastuzumab-deruxtecan","datopotamab-deruxtecan","oral-serds"], openProblems: ["Metastatic disease remains incurable for almost everyone.", "Triple-negative and inflammatory breast cancer still have the worst outlook.", "Overdiagnosis from screening and overtreatment of low-risk DCIS.", "Survival gaps between countries and between Black and white women in the same country."],
+    pipeline: ["trastuzumab-deruxtecan","datopotamab-deruxtecan","oral-serds"], related: ["her2-low-metastatic-breast-cancer", "inflammatory-breast-cancer", "paget-disease-of-the-nipple", "phyllodes-tumour", "male-breast-cancer", "ductal-carcinoma-in-situ"], openProblems: ["Metastatic disease remains incurable for almost everyone.", "Triple-negative and inflammatory breast cancer still have the worst outlook.", "Overdiagnosis from screening and overtreatment of low-risk DCIS.", "Survival gaps between countries and between Black and white women in the same country."],
     links: [{ label: "Wikipedia", url: W("Breast_cancer") }, { label: "NCI PDQ", url: "https://www.cancer.gov/types/breast" }] },
   { id: "lung-cancer", kind: "cancer", name: "Lung cancer (all types)", group: "thoracic", asOf, tags, wikipedia: W("Lung_cancer"),
     aka: ["Bronchogenic carcinoma", "Lung carcinoma"],

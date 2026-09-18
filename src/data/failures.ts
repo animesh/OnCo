@@ -96,7 +96,7 @@ const raw: EntityInput[] = [
     tldr: "IMpassion131 was the sister trial to the first immunotherapy success in breast cancer. It failed, and the approval it was meant to confirm was withdrawn.",
     summary: "IMpassion130 (nab-paclitaxel partner) had shown a PFS benefit in PD-L1-positive metastatic TNBC and won accelerated approval in 2019. IMpassion131 used conventional paclitaxel (which requires steroid premedication) and showed no PFS or OS benefit; OS trended worse in the atezolizumab arm. Roche withdrew the US TNBC indication in 2021. Pembrolizumab with chemotherapy (KEYNOTE-355) became the standard instead.\n\nLesson: the chemotherapy partner (steroid premedication, immunogenic cell death profile) and the PD-L1 assay (SP142 vs 22C3) can decide an immunotherapy trial; confirmatory trials must replicate the winning design.",
     result: "PFS HR 0.82 (not significant); OS trend unfavourable; US indication withdrawn 2021.",
-    drugs: ["atezolizumab", "paclitaxel", "pembrolizumab"], cancers: ["tnbc"], trials: ["impassion130", "keynote-355"], terms: ["cps", "accelerated-approval"],
+    drugs: ["atezolizumab", "paclitaxel", "pembrolizumab"], cancers: ["tnbc", "tnbc-metastatic"], trials: ["impassion130", "keynote-355"], terms: ["cps", "accelerated-approval"],
     tags: ["failure", "lesson:partner-and-biomarker"],
     links: [{ label: "ClinicalTrials.gov NCT03125902", url: "https://clinicaltrials.gov/study/NCT03125902" }, { label: "Annals of Oncology 2021", url: "https://www.annalsofoncology.org/article/S0923-7534(21)02073-7/fulltext" }],
   },

@@ -490,7 +490,7 @@ const trials: TrialInput[] = [
     result: "5-year distant metastasis-free survival 94.7% without chemotherapy in clinical-high, genomic-low risk women.",
     outcomes: [{ endpoint: "5-year distant metastasis-free survival, clinical-high / genomic-low risk, no chemotherapy", primary: true, unit: "%", arms: [{ name: "No chemotherapy (genomic risk)", value: 94.7 }], source: "https://doi.org/10.1056/NEJMoa1602253" }],
     replication: "TAILORx and RxPONDER reached parallel conclusions with the 21-gene Oncotype DX assay.",
-    drugs: ["mammaprint"], cancers: ["breast-hr-positive"], technologies: ["rna-seq"], links: [CT("NCT00433589"), DOI("MINDACT (NEJM 2016)", "10.1056/NEJMoa1602253"), DOI("8-year update (Lancet Oncol 2021)", "10.1016/S1470-2045(21)00007-3")] }),
+    drugs: ["mammaprint"], cancers: ["breast-hr-positive", "hr-positive-early-high-risk"], technologies: ["rna-seq"], links: [CT("NCT00433589"), DOI("MINDACT (NEJM 2016)", "10.1056/NEJMoa1602253"), DOI("8-year update (Lancet Oncol 2021)", "10.1016/S1470-2045(21)00007-3")] }),
   t({ id: "nordicc", name: "NordICC (Nordic-European Initiative on Colorectal Cancer)", nct: "NCT00883792", phase: "3", status: "mixed", yearReported: 2022, sponsor: "University of Oslo and partners", enrolled: 84585,
     setting: "Population-based randomised trial of invitation to a single screening colonoscopy versus no invitation in Poland, Norway and Sweden, adults aged 55 to 64",
     tldr: "The first randomised trial of colonoscopy screening: being invited cut the risk of bowel cancer by about a fifth, but fewer than half of those invited attended, so the effect on deaths was small.",

@@ -246,6 +246,8 @@ const MAP = {
   "breast-her2-positive": "breast",
   "male-breast-cancer": "breast",
   "ductal-carcinoma-in-situ": "breast",
+  "hr-positive-early-high-risk": "breast", "hr-positive-metastatic-post-cdk46": "breast", "her2-low-metastatic-breast-cancer": "breast", "her2-positive-early-breast-cancer": "breast", "her2-positive-breast-brain-metastases": "breast",
+  "tnbc-early": "breast", "tnbc-metastatic": "breast", "inflammatory-breast-cancer": "breast", "paget-disease-of-the-nipple": "breast", "phyllodes-tumour": "breast",
   // lung / thoracic
   nsclc: "lung",
   sclc: "lung",

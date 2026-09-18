@@ -36,11 +36,11 @@ export function organMesh(o: OrganSchematic): Mesh {
 }
 
 export const ORGAN_SCHEMATICS: OrganSchematic[] = [
-  { id: "breast", name: "Breast", cancers: ["tnbc", "breast-cancer", "breast-hr-positive", "breast-her2-positive", "male-breast-cancer", "ductal-carcinoma-in-situ"],
+  { id: "breast", name: "Breast", cancers: ["tnbc", "breast-cancer", "breast-hr-positive", "breast-her2-positive", "male-breast-cancer", "ductal-carcinoma-in-situ", "hr-positive-early-high-risk", "hr-positive-metastatic-post-cdk46", "her2-low-metastatic-breast-cancer", "her2-positive-early-breast-cancer", "her2-positive-breast-brain-metastases", "tnbc-early", "tnbc-metastatic", "inflammatory-breast-cancer", "paget-disease-of-the-nipple", "phyllodes-tumour"],
     caption: "Most cancers start in the ducts and drain first to the axillary nodes, which is why the armpit is checked and a sentinel node is sampled.",
     subsites: [
       { id: "ducts", label: "Ducts (most cancers start here)", at: [0.35, 0.15, 0.85], match: ["ductal", "dcis", "no special type", "nst", "luminal", "basal", "her2", "claudin"] },
-      { id: "lobules", label: "Lobules (lobular carcinoma)", at: [-0.7, -0.45, 0.5], match: ["lobular"] },
+      { id: "lobules", label: "Lobules (lobular carcinoma; phyllodes tumours arise from the surrounding stroma)", at: [-0.7, -0.45, 0.5], match: ["lobular", "phyllodes"] },
       { id: "uoq", label: "Upper outer quadrant (commonest site)", at: [0.8, 0.7, 0.55] },
       { id: "nipple", label: "Nipple-areola", at: [0, 0, 1.08], match: ["paget"] },
     ],
