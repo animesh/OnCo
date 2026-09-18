@@ -7,6 +7,7 @@ All notable changes to OnCo are recorded here. The format follows [Keep a Change
 Regenerated from the commit log each time the site ships (`scripts/changelog-sync.ts`); the version sections below are written by hand when a release is cut.
 
 ### 18 September 2026
+- Fifty biomarker glossary terms named by the new subtype pages (molecular groups, risk scores, resistance mutations), each linked from the pages that use it
 - Registry trials linked to 109 subtype pages by driver and stage (1,018 links), with a re-runnable matcher script
 - Plain-English sentences for the 170 new subtype pages and trials, so every record carries one again
 - Seven duplicate trial records folded into their named trials with redirects; second Chinese quality pass corrects 64 TL;DRs from tonight's new pages, including one inverted meaning, and adopts NMPA drug names
@@ -26,6 +27,8 @@ Regenerated from the commit log each time the site ships (`scripts/changelog-syn
 - 1,024 more plain-English sentences: 279 companies, 104 institutions and 640 phase 3 trials, taking the simple layer to 8,961 records
 
 ### 17 September 2026
+- Add 50 biomarker terms named by the cancer subtype pages
+- Registry trials linked to 109 subtype pages by driver and stage (1,018 links), with a re-runnable matcher script
 - Link 1,018 registry trials to cancer subtype pages by driver and disease-state tokens
 - Plain-English sentences for the 170 new subtype pages and trials, so every record carries one again
 - Add simple sentences for the subtype-wave cancer pages and trials (part-s)
