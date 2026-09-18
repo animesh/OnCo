@@ -1065,7 +1065,7 @@ export const technologies: TechnologyInput[] = [
     principle: "Heat impairs DNA repair and increases perfusion and drug delivery.",
     strengths: ["Radiosensitiser without added toxicity"],
     limitations: ["Equipment and expertise scarce"],
-    cancers: ["cervical", "sarcoma", "glioblastoma"], links: [{ label: "Wikipedia", url: W("Hyperthermia_therapy") }], journals: ["international-journal-of-hyperthermia"],
+    cancers: ["cervical", "sarcoma", "extremity-soft-tissue-sarcoma", "glioblastoma"], links: [{ label: "Wikipedia", url: W("Hyperthermia_therapy") }], journals: ["international-journal-of-hyperthermia"],
   },
 
   // ======================= Areas from the Prometheus technology map that OnCo lacked (15 Sept 2026) =======================
@@ -1386,7 +1386,7 @@ export const technologies: TechnologyInput[] = [
     principle: "Allosteric inhibitors lock the mutant enzyme in an inactive state, lowering 2-hydroxyglutarate and restoring differentiation.",
     strengths: ["Oral, well tolerated","First targeted therapy for IDH-mutant glioma","Approved across leukaemia and solid tumours"],
     limitations: ["Differentiation syndrome","Isoform switching and second-site resistance","Responses in solid tumours are cytostatic"],
-    drugs: ["ivosidenib","enasidenib","olutasidenib","vorasidenib"], cancers: ["aml","cholangiocarcinoma","glioblastoma"],
+    drugs: ["ivosidenib","enasidenib","olutasidenib","vorasidenib"], cancers: ["aml","cholangiocarcinoma","glioblastoma","chondrosarcoma"],
     links: [{ label: "Wikipedia", url: W("Isocitrate_dehydrogenase") }],
   },
   {
@@ -1406,7 +1406,7 @@ export const technologies: TechnologyInput[] = [
     principle: "Inhibitors occupy the p53-binding pocket of MDM2, stabilising p53 so it can trigger apoptosis or senescence in cells with wild-type TP53.",
     strengths: ["Reactivates a non-mutated tumour suppressor","Biomarker-defined populations"],
     limitations: ["Thrombocytopenia and gut toxicity","Only in TP53 wild-type tumours","No approval after several phase 3 trials"],
-    targets: ["mdm2"], cancers: ["aml","sarcoma"],
+    targets: ["mdm2"], cancers: ["aml","sarcoma","retroperitoneal-sarcoma"],
     links: [{ label: "Wikipedia", url: W("Mdm2") }],
   },
   {

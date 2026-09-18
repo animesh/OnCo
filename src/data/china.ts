@@ -218,7 +218,7 @@ export const chinaDrugs: DrugInput[] = [
       { region: "China", year: 2019, indication: "Advanced soft tissue sarcoma after chemotherapy; small cell lung cancer after at least two lines" },
       { region: "China", year: 2020, indication: "Advanced medullary thyroid cancer" },
     ],
-    targets: ["vegf", "fgfr2", "kit"], technologies: ["kinase-inhibitors", "antiangiogenic"], pathways: ["vegf-angiogenesis"], companies: ["sino-biopharm"], cancers: ["nsclc", "sclc", "sarcoma", "thyroid"], trials: ["alter-0303", "nct04854668", "nct05862337", "nct03016819", "nct05913089", "nct07548177", "nct07562581"],
+    targets: ["vegf", "fgfr2", "kit"], technologies: ["kinase-inhibitors", "antiangiogenic"], pathways: ["vegf-angiogenesis"], companies: ["sino-biopharm"], cancers: ["nsclc", "sclc", "sarcoma", "alveolar-soft-part-sarcoma", "thyroid"], trials: ["alter-0303", "nct04854668", "nct05862337", "nct03016819", "nct05913089", "nct07548177", "nct07562581"],
     links: [{ label: "Sino Biopharmaceutical / Chia Tai Tianqing (archived copy)", url: "https://web.archive.org/web/20251122085435/https://www.sinobiopharm.com/en/" }, doi("ALTER 0303 (JAMA Oncol 2018)", "10.1001/jamaoncol.2018.3039"), NMPA], tags: ["china"] }),
   d({ id: "rivoceranib", name: "Rivoceranib (apatinib)", brand: "Aitan", code: "apatinib, YN968D1", aka: ["Apatinib"], modality: "Small-molecule VEGFR2 TKI", status: "approved", wikipedia: W("Apatinib"),
     mechanism: "Selective ATP-competitive inhibitor of VEGFR2 (KDR) with weaker activity on RET, KIT and SRC; blocks tumour angiogenesis.",
