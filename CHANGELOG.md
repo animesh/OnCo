@@ -7,6 +7,7 @@ All notable changes to OnCo are recorded here. The format follows [Keep a Change
 Regenerated from the commit log each time the site ships (`scripts/changelog-sync.ts`); the version sections below are written by hand when a release is cut.
 
 ### 18 September 2026
+- Cancer pages by state for the common cancers: gynaecological cancers by molecular class and stage, skin cancers by state, lung cancer by driver and stage, breast cancer by state, 44 pages tied to their landmark trials and drugs; the My cancer chip leaves the header until accounts are on
 - Blood cancers by state: acute myeloid leukaemia by driver and fitness, acute promyelocytic leukaemia, myeloma from smouldering to relapsed, MDS by risk, CLL by line and Richter transformation, CML by phase and primary myelofibrosis, nineteen pages tied to 111 drugs and trials
 - Upper gastrointestinal and liver cancers by state: gastric cancer by HER2, CLDN18.2, PD-L1 and MSI status and early gastric cancer, hepatocellular carcinoma by BCLC stage, intrahepatic and extrahepatic cholangiocarcinoma, and GIST by mutation, each tied to its landmark trials and drugs
 - Colorectal cancer by state: rectal, MSI-high, BRAF V600E, HER2-amplified, KRAS G12C and early-onset pages with OPRA, PROSPECT, BEACON and other landmark trials; primary mediastinal B-cell lymphoma
@@ -18,6 +19,11 @@ Regenerated from the commit log each time the site ships (`scripts/changelog-syn
 - 1,024 more plain-English sentences: 279 companies, 104 institutions and 640 phase 3 trials, taking the simple layer to 8,961 records
 
 ### 17 September 2026
+- Breast cancer by state: high-risk early and post-CDK4/6 HR-positive, HER2-low, early HER2-positive and HER2-positive brain metastases, early and metastatic triple-negative, inflammatory breast cancer, Paget disease of the nipple and phyllodes tumour, each linked from the trials and drugs that treat them
+- Lung cancer by driver and stage: 14 subtype pages and 10 landmark trials
+- Add skin cancers by state: melanoma by mutation, stage and site, advanced cSCC, advanced BCC, DFSP
+- Gynaecological cancers by molecular class and stage: endometrial cancer by POLE, MMR, p53 and NSMP class, advanced or recurrent endometrial cancer, uterine carcinosarcoma, cervical cancer by stage (early and fertility-sparing, locally advanced, recurrent or metastatic) and ovarian cancer by platinum sensitivity, each tied to its landmark trials and drugs
+- Blood cancers by state: acute myeloid leukaemia by driver and fitness, acute promyelocytic leukaemia, myeloma from smouldering to relapsed, MDS by risk, CLL by line and Richter transformation, CML by phase and primary myelofibrosis, nineteen pages tied to 111 drugs and trials
 - Blood cancers by driver, state and phase: nineteen subtype pages
 - Upper gastrointestinal and liver cancers by state: gastric cancer by HER2, CLDN18.2, PD-L1 and MSI status and early gastric cancer, hepatocellular carcinoma by BCLC stage, intrahepatic and extrahepatic cholangiocarcinoma, and GIST by mutation, each tied to its landmark trials and drugs
 - Colorectal cancer by state: rectal, MSI-high, BRAF V600E, HER2-amplified, KRAS G12C and early-onset pages with OPRA, PROSPECT, BEACON and other landmark trials; primary mediastinal B-cell lymphoma
