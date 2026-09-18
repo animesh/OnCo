@@ -322,7 +322,7 @@ export const ORGAN_SCHEMATICS: OrganSchematic[] = [
       add(m, ring(0.35, 12, "soft", "x"), { at: [-0.6, 0.15, -0.25] }); add(m, ring(0.35, 12, "soft", "x"), { at: [0.6, 0.15, -0.25] }); // ventricles
       return m;
     } },
-  { id: "head-neck", name: "Head and neck, salivary glands and thyroid", cancers: ["oropharyngeal-cancer", "laryngeal-cancer", "oral-cavity-cancer", "head-and-neck", "nasopharyngeal", "salivary-gland", "papillary-thyroid-cancer", "follicular-thyroid-cancer", "medullary-thyroid-cancer", "anaplastic-thyroid-cancer", "thyroid", "sinonasal", "nut-carcinoma", "parathyroid-carcinoma", "multiple-endocrine-neoplasia"],
+  { id: "head-neck", name: "Head and neck, salivary glands and thyroid", cancers: ["oropharyngeal-cancer", "laryngeal-cancer", "oral-cavity-cancer", "head-and-neck", "nasopharyngeal", "salivary-gland", "papillary-thyroid-cancer", "follicular-thyroid-cancer", "medullary-thyroid-cancer", "anaplastic-thyroid-cancer", "thyroid", "sinonasal", "nut-carcinoma", "parathyroid-carcinoma", "multiple-endocrine-neoplasia", "hpv-positive-oropharyngeal-cancer", "hpv-negative-head-and-neck-cancer", "recurrent-metastatic-hnscc", "hypopharyngeal-cancer", "adenoid-cystic-carcinoma", "salivary-duct-carcinoma", "mucoepidermoid-carcinoma", "oral-tongue-cancer", "buccal-mucosa-cancer", "lip-cancer"],
     caption: "Site decides cause and behaviour: HPV drives oropharyngeal cancer, EBV drives nasopharyngeal cancer, tobacco drives oral and laryngeal cancer; all drain into the neck node levels that surgeons and radiotherapists map.",
     subsites: [
       { id: "oral", label: "Oral cavity and tongue", at: [1.15, -0.6, 0.35], match: ["oral", "tongue", "oral cavity", "hpv-negative", "hpv negative", "tobacco", "tp53"] },
