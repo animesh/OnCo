@@ -208,7 +208,7 @@ export const colorectalLymphomaSubtypes: CancerInput[] = [
     pipeline: ["mountaineer", "zanidatamab", "nct06695845", "nct06589830", "nct06434597", "trastuzumab-deruxtecan"],
     openProblems: ["No randomised evidence yet for HER2 blockade in first line.", "RAS co-mutation blunts dual HER2 blockade and the best option for those patients is unclear.", "Optimal sequence of tucatinib-trastuzumab and trastuzumab deruxtecan is untested.", "HER2 mutations without amplification have no proven therapy."],
     targets: ["her2", "egfr", "vegf"], technologies: ["her2-tyrosine-kinase-inhibitors", "monoclonal-antibody", "adc", "histopathology-ihc", "bispecific-antibody"], terms: ["sidedness", "tumour-agnostic", "ihc"], pathways: ["ras-mapk", "colorectal-cancer-signalling"],
-    trials: ["mountaineer", "destiny-crc02", "mypathway", "nct06695845", "nct06589830", "nct06434597"], drugs: ["tucatinib", "trastuzumab", "trastuzumab-deruxtecan", "pertuzumab", "zanidatamab"],
+    trials: ["mountaineer", "destiny-crc02", "mypathway", "nct06695845", "nct06589830", "nct06434597", "heracles"], drugs: ["tucatinib", "trastuzumab", "trastuzumab-deruxtecan", "pertuzumab", "zanidatamab"],
     people: ["tanios-bekaii-saab"],
     links: [{ label: "Wikipedia", url: W("HER2/neu") }, { label: "NCCN Guidelines: Colon Cancer", url: NCCN_COLON }] },
 
@@ -298,7 +298,7 @@ export const colorectalLymphomaSubtypes: CancerInput[] = [
     pipeline: ["ielsg37", "keynote-170", "ctdna-lymphoma-monitoring", "glofitamab", "epcoritamab", "lisocabtagene-maraleucel"],
     openProblems: ["No validated way to identify the 10 to 15 percent who will fail first-line therapy before they do.", "Checkpoint blockade in first line is untested in randomised trials.", "Late cardiac and second-cancer effects of anthracyclines and radiotherapy fall on patients in their thirties.", "Grey zone lymphoma has no trial-defined standard."],
     targets: ["cd20", "cd30", "cd19", "pd1", "pdl1", "jak2", "cd79b"], technologies: ["fdg-pet", "pet-adapted-therapy", "checkpoint-inhibitor", "car-t", "autologous-stem-cell-transplant", "adc", "imrt-igrt", "ctdna-lymphoma-monitoring"], terms: ["r-chop", "lugano-classification", "deauville-score", "autologous-transplant", "crs", "icans"],
-    trials: ["keynote-170", "ielsg37", "zuma-7", "transform"], drugs: ["rituximab", "doxorubicin", "cyclophosphamide", "etoposide", "vincristine", "prednisone", "pembrolizumab", "nivolumab", "brentuximab-vedotin", "axicabtagene-ciloleucel", "lisocabtagene-maraleucel"],
+    trials: ["keynote-170", "ielsg37", "zuma-7", "transform", "zuma-1"], drugs: ["rituximab", "doxorubicin", "cyclophosphamide", "etoposide", "vincristine", "prednisone", "pembrolizumab", "nivolumab", "brentuximab-vedotin", "axicabtagene-ciloleucel", "lisocabtagene-maraleucel"],
     people: ["wyndham-wilson"],
     links: [{ label: "Wikipedia", url: W("Primary_mediastinal_B-cell_lymphoma") }, { label: "NCCN Guidelines: B-Cell Lymphomas", url: NCCN_BCELL }] },
 ];

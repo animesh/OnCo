@@ -28,8 +28,9 @@ import { tldrZh as neuroendocrine } from "../src/data/neuroendocrine-subtypes";
 import { tldrZh as headNeckHpv } from "../src/data/head-neck-hpv-subtypes";
 import { tldrZh as biomarkers } from "../src/data/terms-biomarkers-wave";
 import { tldrZh as subtypeDrugs } from "../src/data/drugs-subtypes-wave";
+import { tldrZh as subtypeTrials } from "../src/data/trials-subtypes-wave";
 
-const WAVES: Record<string, string>[] = [manufacturing, theories, platform, trialDesign, law, diagnostics2, networks, prostate, machines2, sponsors3, cns, colorectalLymphoma, upperGiLiver, blood, gynaecological, skin, lung, breast, sarcomaBone, paediatric, neuroendocrine, headNeckHpv, biomarkers, subtypeDrugs];
+const WAVES: Record<string, string>[] = [manufacturing, theories, platform, trialDesign, law, diagnostics2, networks, prostate, machines2, sponsors3, cns, colorectalLymphoma, upperGiLiver, blood, gynaecological, skin, lung, breast, sarcomaBone, paediatric, neuroendocrine, headNeckHpv, biomarkers, subtypeDrugs, subtypeTrials];
 const path = "src/data/i18n/zh.ts";
 let z = readFileSync(path, "utf8");
 const have = new Set([...z.matchAll(/^\s*(?:"([^"]+)"|([A-Za-z_$][\w$]*)):\s/mg)].map((m) => m[1] ?? m[2]));

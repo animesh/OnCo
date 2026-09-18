@@ -63,7 +63,7 @@ export const headNeckHpvTrials: TrialInput[] = [
 ];
 
 export const headNeckHpvSubtypes: CancerInput[] = [
-  { id: "hpv-positive-oropharyngeal-cancer", kind: "cancer", name: "HPV-positive oropharyngeal cancer", group: "head and neck", parent: "oropharyngeal-cancer", asOf, tags, wikipedia: W("HPV-positive_oropharyngeal_cancer"),
+  { id: "hpv-positive-oropharyngeal-cancer", kind: "cancer", trials: ["de-escalate", "orator"], name: "HPV-positive oropharyngeal cancer", group: "head and neck", parent: "oropharyngeal-cancer", asOf, tags, wikipedia: W("HPV-positive_oropharyngeal_cancer"),
     keyPapers: ["paper-ang-hpv-oropharyngeal-nejm-2010", "paper-rtog-1016-lancet-2019", "paper-de-escalate-lancet-2019", "paper-e3311-transoral-surgery-ferris-jco-2022"],
     aka: ["p16-positive oropharyngeal cancer", "HPV-associated oropharyngeal squamous cell carcinoma", "HPV-driven throat cancer"],
     burden: "Now the majority of oropharyngeal cancers in North America and Western Europe, typically in men in their fifties and sixties who never smoked heavily; in the RTOG 0129 analysis three-year survival was 82 percent against 57 percent for HPV-negative disease.",
@@ -94,7 +94,7 @@ export const headNeckHpvSubtypes: CancerInput[] = [
     pipeline: ["cthpv-dna", "pathos", "nrg-hn002-hn005", "idea-cthpv-adapted-deescalation", "bnt113", "nct04534205", "hpv-vaccine"],
     openProblems: ["Which patients can safely have less treatment, and by what test.", "Long-term dry mouth, swallowing difficulty and fibrosis in people cured in their fifties.", "Whether therapeutic HPV vaccines add to immunotherapy in recurrent disease.", "HPV vaccination uptake in boys and in countries where the epidemic is beginning."],
     links: [{ label: "Wikipedia", url: W("HPV-positive_oropharyngeal_cancer") }] },
-  { id: "hpv-negative-head-and-neck-cancer", kind: "cancer", name: "HPV-negative head and neck squamous cell carcinoma (including HPV-negative oropharyngeal cancer)", group: "head and neck", parent: "head-and-neck", asOf, tags, wikipedia: W("Head_and_neck_cancer"),
+  { id: "hpv-negative-head-and-neck-cancer", kind: "cancer", trials: ["keynote-412"], name: "HPV-negative head and neck squamous cell carcinoma (including HPV-negative oropharyngeal cancer)", group: "head and neck", parent: "head-and-neck", asOf, tags, wikipedia: W("Head_and_neck_cancer"),
     keyPapers: ["paper-bonner-cetuximab-radiotherapy-nejm-2006", "paper-bernier-eortc-22931-nejm-2004", "paper-cooper-rtog-9501-nejm-2004", "paper-keynote-689-nejm-2025"], drugs: ["celecoxib", "xevinapant"],
     aka: ["Tobacco-related head and neck cancer", "HPV-negative oropharyngeal cancer", "p16-negative head and neck cancer"],
     burden: "Most of the close to 900,000 head and neck cancers diagnosed each year worldwide are HPV-negative: oral cavity, laryngeal and hypopharyngeal cancers in smokers and drinkers, and areca-nut related oral cancer in South Asia; in the RTOG 0129 analysis three-year survival for HPV-negative oropharyngeal cancer was 57 percent.",
@@ -125,7 +125,7 @@ export const headNeckHpvSubtypes: CancerInput[] = [
     pipeline: ["ficerafusp-alfa", "fortifi-hn01", "nct06064877", "nct06256588", "petosemtamab", "mrg003", "cetuximab-sarotalocan", "nivopostop"],
     openProblems: ["Cure rates for locally advanced HPV-negative disease have barely moved in twenty years.", "No predictive biomarker beyond PD-L1, which is imperfect.", "Function after laryngectomy, glossectomy and high-dose radiotherapy.", "Second primaries and continued smoking after treatment.", "Incidence still rising where tobacco and areca nut use are common."],
     links: [{ label: "Wikipedia", url: W("Head_and_neck_cancer") }] },
-  { id: "recurrent-metastatic-hnscc", kind: "cancer", name: "Recurrent or metastatic head and neck squamous cell carcinoma", group: "head and neck", parent: "head-and-neck", asOf, tags: [...tags, "state-page"], wikipedia: W("Head_and_neck_cancer"),
+  { id: "recurrent-metastatic-hnscc", kind: "cancer", trials: ["tpextreme"], name: "Recurrent or metastatic head and neck squamous cell carcinoma", group: "head and neck", parent: "head-and-neck", asOf, tags: [...tags, "state-page"], wikipedia: W("Head_and_neck_cancer"),
     keyPapers: ["paper-keynote-048-lancet-2019", "paper-patil-low-dose-nivolumab-jco-2023", "paper-extreme-vermorken-nejm-2008", "paper-tpextreme-lancet-oncol-2021"], drugs: ["celecoxib", "hb-200"],
     aka: ["R/M HNSCC", "Advanced head and neck cancer", "Platinum-refractory head and neck cancer"],
     burden: "A large share of patients treated for locally advanced head and neck cancer relapse, most within two years; median survival was 7.4 months on platinum-fluorouracil in the EXTREME control arm and 13.0 months with pembrolizumab and chemotherapy in KEYNOTE-048.",

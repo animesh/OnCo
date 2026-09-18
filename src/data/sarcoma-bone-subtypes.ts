@@ -15,7 +15,7 @@ const ct = (nct: string) => ({ label: `ClinicalTrials.gov ${nct}`, url: `https:/
 const tags = ["subtype-page"];
 
 export const sarcomaBoneSubtypes: CancerInput[] = [
-  { id: "chondrosarcoma", kind: "cancer", name: "Chondrosarcoma", group: "sarcoma", parent: "sarcoma", asOf, tags, wikipedia: W("Chondrosarcoma"),
+  { id: "chondrosarcoma", kind: "cancer", trials: ["regobone"], name: "Chondrosarcoma", group: "sarcoma", parent: "sarcoma", asOf, tags, wikipedia: W("Chondrosarcoma"),
     keyPapers: ["paper-amary-idh-cartilaginous-tumours-j-pathol-2011", "paper-esmo-bone-sarcoma-guideline-strauss-ann-oncol-2021"],
     aka: ["Cartilage sarcoma", "Atypical cartilaginous tumour (grade 1, limbs)", "Dedifferentiated chondrosarcoma", "Mesenchymal chondrosarcoma"],
     burden: "The commonest primary bone sarcoma of adults, typically diagnosed between 40 and 70 in the pelvis, proximal femur, shoulder girdle and ribs; low-grade tumours are cured by surgery alone, while dedifferentiated tumours are among the most lethal of all sarcomas.",
@@ -41,7 +41,7 @@ export const sarcomaBoneSubtypes: CancerInput[] = [
     pipeline: ["ivosidenib", "nct06127407", "idh-inhibitors", "carbon-ion"], openProblems: ["No systemic therapy has ever been proven to help.", "Dedifferentiated chondrosarcoma kills most patients within two years.", "Distinguishing enchondroma from grade 1 chondrosarcoma remains unreliable."],
     related: ["osteosarcoma", "chordoma"], links: [{ label: "Wikipedia", url: W("Chondrosarcoma") }] },
 
-  { id: "angiosarcoma", kind: "cancer", name: "Angiosarcoma", group: "sarcoma", parent: "vascular-tumours", asOf, tags, wikipedia: W("Angiosarcoma"),
+  { id: "angiosarcoma", kind: "cancer", trials: ["tappas"], name: "Angiosarcoma", group: "sarcoma", parent: "vascular-tumours", asOf, tags, wikipedia: W("Angiosarcoma"),
     keyPapers: ["paper-angiotax-paclitaxel-angiosarcoma-penel-jco-2008", "paper-young-angiosarcoma-review-lancet-oncol-2010"], drugs: ["carotuximab"],
     aka: ["Haemangiosarcoma", "Lymphangiosarcoma", "Stewart-Treves syndrome (lymphoedema-associated angiosarcoma)", "Radiation-associated angiosarcoma"],
     burden: "About one to two percent of soft tissue sarcomas; arises in the sun-damaged scalp and face of older people, in the irradiated breast, in chronically swollen limbs and in the liver, heart and spleen. It spreads early and median survival with metastatic disease is under a year in most series.",
@@ -67,7 +67,7 @@ export const sarcomaBoneSubtypes: CancerInput[] = [
     pipeline: ["checkpoint-inhibitor", "nivolumab", "ipilimumab", "pazopanib"], openProblems: ["Multifocal scalp disease escapes even wide surgery and radiotherapy.", "Median survival with metastases remains under a year.", "Immunotherapy benefit is limited to the ultraviolet-driven subset and has not been confirmed in a randomised trial."],
     related: ["vascular-tumours", "kaposi-sarcoma", "epithelioid-haemangioendothelioma"], links: [{ label: "Wikipedia", url: W("Angiosarcoma") }] },
 
-  { id: "undifferentiated-pleomorphic-sarcoma", kind: "cancer", name: "Undifferentiated pleomorphic sarcoma (UPS)", group: "sarcoma", parent: "sarcoma", asOf, tags, wikipedia: W("Undifferentiated_pleomorphic_sarcoma"),
+  { id: "undifferentiated-pleomorphic-sarcoma", kind: "cancer", trials: ["sarc028"], name: "Undifferentiated pleomorphic sarcoma (UPS)", group: "sarcoma", parent: "sarcoma", asOf, tags, wikipedia: W("Undifferentiated_pleomorphic_sarcoma"),
     keyPapers: ["paper-eortc-62012-doxorubicin-ifosfamide-judson-lancet-oncol-2014", "paper-esmo-sts-guideline-gronchi-ann-oncol-2021", "paper-isg-sts-1001-gronchi-lancet-oncol-2017", "paper-sarc028-pembrolizumab-sarcoma-tawbi-lancet-oncol-2017"],
     aka: ["UPS", "Malignant fibrous histiocytoma (historic)", "MFH", "Pleomorphic sarcoma, not otherwise specified"],
     burden: "One of the commonest soft tissue sarcomas of older adults, usually a deep, fast-growing mass in the thigh or upper arm; about a third of patients with high-grade limb tumours develop lung metastases despite surgery and radiotherapy.",

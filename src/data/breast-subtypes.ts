@@ -19,7 +19,7 @@ export const breastSubtypes: CancerInput[] = [
   // ---------------------------------------------------------------------------------------------------------------------
   // HR-positive, HER2-negative disease by state
   // ---------------------------------------------------------------------------------------------------------------------
-  { id: "hr-positive-early-high-risk", kind: "cancer", name: "High-risk early HR-positive breast cancer", group: "breast", parent: "breast-hr-positive", asOf, tags, wikipedia: W("Breast_cancer"),
+  { id: "hr-positive-early-high-risk", kind: "cancer", trials: ["penelope-b"], name: "High-risk early HR-positive breast cancer", group: "breast", parent: "breast-hr-positive", asOf, tags, wikipedia: W("Breast_cancer"),
     keyPapers: ["paper-monarche-jco-2020", "paper-natalee-nejm-2024", "paper-olympia-nejm-2021", "paper-tailorx-nejm-2018"],
     aka: ["High-risk early hormone receptor-positive, HER2-negative breast cancer", "Node-positive luminal breast cancer", "Stage II to III HR-positive breast cancer"],
     burden: "Hormone receptor-positive, HER2-negative tumours are about seven in ten breast cancers and most are cured; the high-risk minority with node involvement, large size or high grade account for most of the relapses, which in this subtype can arrive ten or twenty years after diagnosis.",
@@ -52,7 +52,7 @@ export const breastSubtypes: CancerInput[] = [
     openProblems: ["No test yet identifies the women whose relapse will come after ten years, when endocrine therapy has stopped.", "Two to three years of a CDK4/6 inhibitor is costly and its overall survival benefit is not yet proven.", "Adherence to endocrine therapy falls to about half by five years because of joint pain, hot flushes and sexual side effects.", "Premenopausal women with node-positive disease still gain from chemotherapy in RxPONDER, and whether ovarian suppression could replace it is unanswered."],
     links: [{ label: "TAILORx (NEJM 2018)", url: "https://doi.org/10.1056/NEJMoa1804710" }, { label: "monarchE (JCO 2020)", url: "https://doi.org/10.1200/JCO.20.02514" }, { label: "NATALEE (NEJM 2024)", url: "https://doi.org/10.1056/NEJMoa2305488" }, { label: "Wikipedia", url: W("Breast_cancer") }] },
 
-  { id: "hr-positive-metastatic-post-cdk46", kind: "cancer", name: "HR-positive metastatic breast cancer after CDK4/6 inhibitors", group: "breast", parent: "breast-hr-positive", asOf, tags, wikipedia: W("Breast_cancer"),
+  { id: "hr-positive-metastatic-post-cdk46", kind: "cancer", trials: ["bolero-2"], name: "HR-positive metastatic breast cancer after CDK4/6 inhibitors", group: "breast", parent: "breast-hr-positive", asOf, tags, wikipedia: W("Breast_cancer"),
     keyPapers: ["paper-destiny-breast06-nejm-2024", "paper-emerald-elacestrant-jco-2022", "paper-capitello-291-nejm-2023", "paper-solar-1-alpelisib-nejm-2019"],
     aka: ["Endocrine-resistant metastatic breast cancer", "ESR1-mutant breast cancer", "PIK3CA-mutant breast cancer", "AKT pathway-altered breast cancer", "Second-line HR-positive metastatic breast cancer"],
     burden: "Nearly every patient treated with a CDK4/6 inhibitor and endocrine therapy for metastatic hormone receptor-positive disease eventually progresses, typically after two to three years; about four in ten tumours carry a PIK3CA mutation and a third or more acquire an ESR1 mutation under aromatase inhibitor pressure.",
@@ -115,7 +115,7 @@ export const breastSubtypes: CancerInput[] = [
   // ---------------------------------------------------------------------------------------------------------------------
   // HER2-positive disease by state
   // ---------------------------------------------------------------------------------------------------------------------
-  { id: "her2-positive-early-breast-cancer", kind: "cancer", name: "Early HER2-positive breast cancer", group: "breast", parent: "breast-her2-positive", asOf, tags, wikipedia: W("HER2-positive_breast_cancer"),
+  { id: "her2-positive-early-breast-cancer", kind: "cancer", trials: ["atempt"], name: "Early HER2-positive breast cancer", group: "breast", parent: "breast-her2-positive", asOf, tags, wikipedia: W("HER2-positive_breast_cancer"),
     keyPapers: ["paper-katherine-nejm-2019", "paper-aphinity-nejm-2017", "paper-apt-tolaney-nejm-2015", "paper-train-2-lancet-oncol-2018"],
     aka: ["Stage I to III HER2-positive breast cancer", "Operable HER2-positive breast cancer", "HER2-positive breast cancer treated with curative intent"],
     burden: "Around 15 to 20 percent of breast cancers overexpress HER2 and most are diagnosed at an operable stage; once the subtype with the worst outlook, it now has some of the highest cure rates after a year of HER2-directed therapy.",
@@ -147,7 +147,7 @@ export const breastSubtypes: CancerInput[] = [
     openProblems: ["Which women can skip chemotherapy entirely without losing cure.", "Interstitial lung disease from trastuzumab deruxtecan in women who would otherwise have been cured.", "Hormone receptor-positive HER2-positive tumours respond less and the right endocrine and HER2 maintenance is unsettled.", "Cardiac safety of longer and stronger HER2 regimens over decades of survivorship."],
     links: [{ label: "KATHERINE (NEJM 2019)", url: "https://doi.org/10.1056/NEJMoa1814017" }, { label: "APHINITY (NEJM 2017)", url: "https://doi.org/10.1056/NEJMoa1703643" }, { label: "TRAIN-2 (Lancet Oncology 2018)", url: "https://doi.org/10.1016/S1470-2045(18)30570-9" }, { label: "Wikipedia", url: W("HER2-positive_breast_cancer") }] },
 
-  { id: "her2-positive-breast-brain-metastases", kind: "cancer", name: "HER2-positive breast cancer with brain metastases", group: "breast", parent: "breast-her2-positive", asOf, tags, wikipedia: W("Brain_metastasis"),
+  { id: "her2-positive-breast-brain-metastases", kind: "cancer", trials: ["nala", "tuxedo-1"], name: "HER2-positive breast cancer with brain metastases", group: "breast", parent: "breast-her2-positive", asOf, tags, wikipedia: W("Brain_metastasis"),
     keyPapers: ["paper-her2climb-nejm-2020", "paper-her2climb-brain-lin-jco-2020", "paper-tuxedo-1-trastuzumab-deruxtecan-brain-metastases-nat-med-2022"],
     aka: ["HER2-positive brain metastases", "Central nervous system metastases from HER2-positive breast cancer", "Intracranial HER2-positive disease"],
     burden: "Up to half of women with metastatic HER2-positive breast cancer develop brain metastases during their illness, more than in any other breast subtype, partly because HER2 antibodies control disease elsewhere while the brain remains a sanctuary.",
@@ -181,7 +181,7 @@ export const breastSubtypes: CancerInput[] = [
   // ---------------------------------------------------------------------------------------------------------------------
   // Triple-negative disease by state
   // ---------------------------------------------------------------------------------------------------------------------
-  { id: "tnbc-early", kind: "cancer", name: "Early triple-negative breast cancer", group: "breast", parent: "tnbc", asOf, tags, wikipedia: W("Triple-negative_breast_cancer"),
+  { id: "tnbc-early", kind: "cancer", trials: ["geparsixto"], name: "Early triple-negative breast cancer", group: "breast", parent: "tnbc", asOf, tags, wikipedia: W("Triple-negative_breast_cancer"),
     aka: ["Stage I to III triple-negative breast cancer", "Operable triple-negative breast cancer", "Curable TNBC"],
     burden: "Most of the roughly 200,000 triple-negative breast cancers diagnosed each year are found before they have spread; relapses cluster in the first three years, so what happens around surgery decides most outcomes.",
     tldr: "Early triple-negative breast cancer is treated to cure. For tumours over 2 cm or with node involvement, chemotherapy plus the immunotherapy pembrolizumab before and after surgery has raised cure rates; BRCA carriers with cancer left at surgery add a year of olaparib, and others with residual cancer are offered capecitabine. Whether the tumour has vanished by surgery guides what comes next.",

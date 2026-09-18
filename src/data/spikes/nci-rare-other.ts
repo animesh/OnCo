@@ -50,7 +50,7 @@ export const nciRareOtherCancers: CancerInput[] = [
     openProblems: ["Most patients present too late for surgery; ultrasound-based surveillance in high-incidence regions and cholecystectomy policies are being evaluated.", "Gallbladder cancer is under-represented and rarely analysed separately in biliary trials; HERIZON-BTC-302 and registry efforts are starting to report it as its own disease.", "Which incidentally found T1b tumours truly need re-resection; prospective staging studies are addressing this.", "Resistance to HER2 blockade and the small size of other actionable subsets."],
     targets: ["her2", "pd1", "pdl1", "braf", "ntrk"], technologies: ["cytotoxic-chemotherapy", "checkpoint-inhibitor", "monoclonal-antibody", "cgp", "robotic-surgery"],
     drugs: ["gemcitabine-cisplatin", "durvalumab", "pembrolizumab", "zanidatamab", "folfox", "dabrafenib-trametinib", "larotrectinib", "entrectinib", "trastuzumab-deruxtecan"],
-    trials: ["bilcap", "topaz-1", "keynote-966", "abc-02", "herizon-btc-302"], pathways: ["inflammation-nfkb", "rtk-activation"],
+    trials: ["bilcap", "topaz-1", "keynote-966", "abc-02", "herizon-btc-302", "abc-06"], pathways: ["inflammation-nfkb", "rtk-activation"],
     companies: ["astrazeneca", "merck", "jazz"], terms: ["ca19-9", "biliary-anatomy-subtypes", "obstructive-jaundice", "hepatectomy", "lymphadenectomy"], related: ["cholangiocarcinoma"], bottlenecks: ["b-rare-cancers", "b-early-detection"],
     links: [{ label: "NCI PDQ: gallbladder cancer", url: PDQ("gallbladder") }, { label: "TOPAZ-1 (NEJM Evidence 2022)", url: "https://doi.org/10.1056/EVIDoa2200015" }, { label: "KEYNOTE-966 (Lancet 2023)", url: "https://doi.org/10.1016/S0140-6736(23)00727-4" }, { label: "HERIZON-BTC-01 (Lancet Oncol 2023)", url: "https://doi.org/10.1016/S1470-2045(23)00242-5" }, { label: "NCCN: Biliary Tract Cancers", url: "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1517" }],
     tags: ["nci-coverage", "rare", "gastrointestinal", "biliary"],
@@ -268,7 +268,7 @@ export const nciRareOtherCancers: CancerInput[] = [
     tags: ["nci-coverage", "rare", "breast"],
   }),
   c({
-    id: "ductal-carcinoma-in-situ", trials: ["nsabp-b39"], name: "Ductal carcinoma in situ (DCIS)", group: "breast", wikipedia: W("Ductal_carcinoma_in_situ"),
+    id: "ductal-carcinoma-in-situ", trials: ["nsabp-b39", "comet-dcis", "tam-01"], name: "Ductal carcinoma in situ (DCIS)", group: "breast", wikipedia: W("Ductal_carcinoma_in_situ"),
     aka: ["DCIS", "Stage 0 breast cancer", "Pre-invasive breast cancer", "Intraductal carcinoma"],
     burden: "About one in five to one in four breast cancers detected by mammographic screening is DCIS; it was rare before screening and is now diagnosed in tens of thousands of women a year in the US alone (SEER; NCI).",
     tldr: "DCIS is abnormal cells confined to the milk ducts; it is not yet invasive cancer and cannot spread, but some would become invasive if left. Lumpectomy with radiotherapy, or mastectomy, halves local recurrence, so the live question is which low-risk DCIS can safely be watched: the COMET trial (2024) found active monitoring no worse at two years.",

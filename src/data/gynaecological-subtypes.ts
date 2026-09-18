@@ -19,7 +19,7 @@ export const gynaecologicalSubtypes: CancerInput[] = [
   // ---------------------------------------------------------------------------------------------------------------------
   // Endometrial cancer by molecular class
   // ---------------------------------------------------------------------------------------------------------------------
-  { id: "endometrial-pole-ultramutated", kind: "cancer", name: "POLE-ultramutated endometrial cancer", group: "gynaecologic", parent: "endometrial", asOf, tags, wikipedia: W("Endometrial_cancer"),
+  { id: "endometrial-pole-ultramutated", kind: "cancer", trials: ["portec-2"], name: "POLE-ultramutated endometrial cancer", group: "gynaecologic", parent: "endometrial", asOf, tags, wikipedia: W("Endometrial_cancer"),
     keyPapers: ["paper-promise-talhouk-cancer-2017", "paper-esgo-estro-esp-endometrial-concin-ijgc-2021", "paper-portec-3-molecular-leon-castillo-jco-2020", "paper-church-pole-endometrial-jnci-2015"],
     aka: ["POLEmut endometrial cancer", "POLE exonuclease domain mutant endometrial carcinoma", "Ultramutated endometrial cancer"],
     burden: "Roughly one in fourteen endometrial cancers, typically in younger women with high-grade endometrioid tumours; almost none recur after surgery, so the class matters mainly because it identifies women who can safely be spared adjuvant treatment.",
@@ -46,7 +46,7 @@ export const gynaecologicalSubtypes: CancerInput[] = [
     openProblems: ["Deciding which non-hotspot POLE variants are pathogenic.", "Whether stage III and IV disease can also be de-escalated.", "Making molecular classification universal outside a few countries."],
     links: [{ label: "Wikipedia", url: W("Endometrial_cancer") }] },
 
-  { id: "endometrial-mmr-deficient", kind: "cancer", name: "Mismatch-repair-deficient endometrial cancer", group: "gynaecologic", parent: "endometrial", asOf, tags, wikipedia: W("Endometrial_cancer"),
+  { id: "endometrial-mmr-deficient", kind: "cancer", trials: ["garnet"], name: "Mismatch-repair-deficient endometrial cancer", group: "gynaecologic", parent: "endometrial", asOf, tags, wikipedia: W("Endometrial_cancer"),
     keyPapers: ["paper-ruby-nejm-2023", "paper-nrg-gy018-nejm-2023", "paper-promise-talhouk-cancer-2017", "paper-garnet-dostarlimab-oaknin-jama-oncol-2020"],
     aka: ["dMMR endometrial cancer", "MSI-high endometrial cancer", "MMRd endometrial cancer", "Lynch-associated endometrial cancer"],
     burden: "About a quarter to three in ten endometrial cancers, the largest molecular class after no specific molecular profile; most are sporadic and caused by MLH1 promoter methylation, and about three percent of all endometrial cancers arise in Lynch syndrome carriers.",
@@ -101,7 +101,7 @@ export const gynaecologicalSubtypes: CancerInput[] = [
     openProblems: ["Distant relapse after early-stage disease despite chemotherapy.", "Whether PARP inhibition helps p53-abnormal tumours as it does ovarian cancer.", "Low response to immunotherapy in a class that accounts for most deaths."],
     links: [{ label: "Wikipedia", url: W("Uterine_serous_carcinoma") }] },
 
-  { id: "endometrial-nsmp", kind: "cancer", name: "Endometrial cancer with no specific molecular profile", group: "gynaecologic", parent: "endometrial", asOf, tags, wikipedia: W("Endometrial_cancer"),
+  { id: "endometrial-nsmp", kind: "cancer", trials: ["portec-2"], name: "Endometrial cancer with no specific molecular profile", group: "gynaecologic", parent: "endometrial", asOf, tags, wikipedia: W("Endometrial_cancer"),
     keyPapers: ["paper-nrg-gy018-nejm-2023", "paper-promise-talhouk-cancer-2017", "paper-portec-2-lancet-2010", "paper-esgo-estro-esp-endometrial-concin-ijgc-2021"],
     aka: ["NSMP endometrial cancer", "p53-wild-type, MMR-proficient, POLE-wild-type endometrial cancer", "Copy-number-low endometrial cancer"],
     burden: "About half of all endometrial cancers, mostly low-grade endometrioid tumours in postmenopausal women with obesity or oestrogen excess; the great majority are cured by surgery alone, and the challenge is finding the minority that will recur.",
@@ -186,7 +186,7 @@ export const gynaecologicalSubtypes: CancerInput[] = [
   // ---------------------------------------------------------------------------------------------------------------------
   // Cervical cancer by stage
   // ---------------------------------------------------------------------------------------------------------------------
-  { id: "early-cervical-cancer", kind: "cancer", name: "Early cervical cancer and fertility-sparing surgery", group: "gynaecologic", parent: "cervical", asOf, tags, wikipedia: W("Cervical_cancer"),
+  { id: "early-cervical-cancer", kind: "cancer", trials: ["shape"], name: "Early cervical cancer and fertility-sparing surgery", group: "gynaecologic", parent: "cervical", asOf, tags, wikipedia: W("Cervical_cancer"),
     keyPapers: ["paper-lacc-nejm-2018", "paper-shape-nejm-2024"],
     aka: ["Stage IA to IB2 cervical cancer", "Early-stage cervical cancer", "Fertility-sparing cervical cancer surgery", "Radical trachelectomy candidates"],
     burden: "In screened populations about half of cervical cancers are found at stage I, often in women in their thirties and forties who have not completed their families; cure rates exceed ninety percent, so the questions are how little surgery is safe and how to preserve fertility.",
@@ -215,7 +215,7 @@ export const gynaecologicalSubtypes: CancerInput[] = [
     openProblems: ["Whether sentinel node biopsy alone can replace lymphadenectomy (SENTICOL III).", "Safe fertility-sparing options for tumours of two to four centimetres.", "Why minimally invasive surgery did harm, and whether protective techniques can restore it."],
     links: [{ label: "Wikipedia", url: W("Cervical_cancer") }] },
 
-  { id: "locally-advanced-cervical-cancer", kind: "cancer", name: "Locally advanced cervical cancer", group: "gynaecologic", parent: "cervical", asOf, tags, wikipedia: W("Cervical_cancer"),
+  { id: "locally-advanced-cervical-cancer", kind: "cancer", trials: ["calla"], name: "Locally advanced cervical cancer", group: "gynaecologic", parent: "cervical", asOf, tags, wikipedia: W("Cervical_cancer"),
     keyPapers: ["paper-keynote-a18-lancet-2024", "paper-interlace-lancet-2024", "paper-outback-lancet-oncol-2023", "paper-rose-cisplatin-chemoradiation-cervical-nejm-1999"],
     aka: ["Stage IB3 to IVA cervical cancer", "LACC (disease state, not the surgical trial)", "Node-positive cervical cancer", "Bulky cervical cancer"],
     burden: "Most cervical cancers worldwide present at this stage because screening is absent; even with chemoradiation about a third of women relapse, so it is the stage where the disease kills most of its victims and where the newest trials have made the largest gains.",
@@ -244,7 +244,7 @@ export const gynaecologicalSubtypes: CancerInput[] = [
     openProblems: ["Whether induction chemotherapy and pembrolizumab should be combined.", "Access to brachytherapy and PET-CT where most patients live.", "Why durvalumab (CALLA) failed where pembrolizumab succeeded."],
     links: [{ label: "Wikipedia", url: W("Cervical_cancer") }] },
 
-  { id: "recurrent-metastatic-cervical-cancer", kind: "cancer", name: "Recurrent or metastatic cervical cancer", group: "gynaecologic", parent: "cervical", asOf, tags, wikipedia: W("Cervical_cancer"),
+  { id: "recurrent-metastatic-cervical-cancer", kind: "cancer", trials: ["innovatv-301"], name: "Recurrent or metastatic cervical cancer", group: "gynaecologic", parent: "cervical", asOf, tags, wikipedia: W("Cervical_cancer"),
     keyPapers: ["paper-keynote-826-nejm-2021", "paper-innovatv-301-tisotumab-nejm-2024", "paper-empower-cervical-1-cemiplimab-nejm-2022", "paper-gog-240-bevacizumab-cervical-nejm-2014"],
     aka: ["Persistent, recurrent or metastatic cervical cancer", "Stage IVB cervical cancer", "Advanced cervical cancer"],
     burden: "Around one in ten cervical cancers present with distant spread and a third of locally advanced cases relapse; median survival was about a year before 2014, and first-line chemo-immunotherapy has now more than doubled it for many women.",
@@ -306,7 +306,7 @@ export const gynaecologicalSubtypes: CancerInput[] = [
     openProblems: ["Whether HRD-negative tumours gain enough from PARP inhibitors to justify two to three years of treatment.", "Resistance through BRCA reversion and restored homologous recombination.", "How long to continue maintenance, and whether circulating tumour DNA can tell."],
     links: [{ label: "Wikipedia", url: W("Ovarian_cancer") }] },
 
-  { id: "platinum-resistant-ovarian-cancer", kind: "cancer", name: "Platinum-resistant ovarian cancer", group: "gynaecologic", parent: "ovarian", asOf, tags, wikipedia: W("Ovarian_cancer"),
+  { id: "platinum-resistant-ovarian-cancer", kind: "cancer", trials: ["soraya"], name: "Platinum-resistant ovarian cancer", group: "gynaecologic", parent: "ovarian", asOf, tags, wikipedia: W("Ovarian_cancer"),
     keyPapers: ["paper-mirasol-nejm-2023", "paper-aurelia-jco-2014", "paper-rosella-relacorilant-lancet-2025"],
     aka: ["Platinum-resistant recurrent ovarian cancer", "Platinum-refractory ovarian cancer", "Platinum-free interval under six months", "PROC"],
     burden: "Every woman who relapses repeatedly eventually reaches this state, and about a quarter of advanced ovarian cancers are resistant from the start; median survival was around a year with single-agent chemotherapy, and it is where the first antibody-drug conjugate and the first new drug classes in a decade have arrived.",

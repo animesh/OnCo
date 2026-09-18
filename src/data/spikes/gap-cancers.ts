@@ -18,7 +18,7 @@ const SEER = (s: string) => `https://seer.cancer.gov/statfacts/html/${s}.html`;
 export const gapCancers: CancerInput[] = [
   // ======================= Haematologic =======================
   c({
-    id: "cml", trials: ["nct04971226", "nct03459534", "nct05456191"], name: "Chronic myeloid leukaemia (CML)", group: "haematologic", wikipedia: W("Chronic_myelogenous_leukemia"),
+    id: "cml", trials: ["nct04971226", "nct03459534", "nct05456191", "dasision"], name: "Chronic myeloid leukaemia (CML)", group: "haematologic", wikipedia: W("Chronic_myelogenous_leukemia"),
     burden: "About 1-2 cases per 100,000 per year; because patients now live near-normal lifespans, prevalence keeps rising (SEER).",
     tldr: "Chronic myeloid leukaemia is a blood cancer driven by a single fused gene, BCR-ABL1, and the model for oncogene-targeted treatment: imatinib in 2001 and the tyrosine kinase inhibitors that followed turned it into a condition most people live with long-term. About half of patients with a sustained deep molecular response can now stop treatment altogether.",
     summary: "CML is defined by the Philadelphia chromosome t(9;22) and its product, the constitutively active BCR-ABL1 tyrosine kinase. It is the paradigm of oncogene addiction: tyrosine kinase inhibitors (TKIs) restore near-normal life expectancy in chronic phase, and treatment response is tracked by quantitative BCR-ABL1 PCR on the International Scale (IS), with milestones at 3, 6 and 12 months (ELN 2020).\n\nFirst-line options are imatinib, the second-generation TKIs dasatinib, nilotinib and bosutinib, and since 2024 asciminib (ASC4FIRST), the first allosteric STAMP inhibitor. Second-generation drugs achieve deeper responses faster but have not improved overall survival over imatinib; choice is driven by comorbidity (cardiovascular risk with nilotinib and ponatinib, pleural effusions with dasatinib) and by the goal of treatment-free remission (TFR). Resistance is largely through ABL1 kinase-domain mutations; T315I is covered by ponatinib and asciminib. Allogeneic transplant is reserved for blast phase or multi-TKI failure.\n\nThe frontier is TFR (about half of patients with sustained deep molecular response can stop, EURO-SKI), safer T315I coverage, olverembatinib in Asia, and the small residue of accelerated/blast-phase disease, where outcomes remain poor.",
@@ -134,7 +134,7 @@ export const gapCancers: CancerInput[] = [
     tags: ["gap-fill", "haematologic"],
   }),
   c({
-    id: "follicular-lymphoma", trials: ["nct07634471", "nct07562022", "nct06097364", "nct04712097", "nct06549595", "nct06149286", "nct06191744", "nct06911502", "nct04224493", "nct01804686", "nct04680052", "nct06091254", "nct05100862", "nct05888493", "nct05409066", "nct05371093"], name: "Follicular lymphoma", group: "haematologic", wikipedia: W("Follicular_lymphoma"),
+    id: "follicular-lymphoma", trials: ["nct07634471", "nct07562022", "nct06097364", "nct04712097", "nct06549595", "nct06149286", "nct06191744", "nct06911502", "nct04224493", "nct01804686", "nct04680052", "nct06091254", "nct05100862", "nct05888493", "nct05409066", "nct05371093", "augment", "zuma-5"], name: "Follicular lymphoma", group: "haematologic", wikipedia: W("Follicular_lymphoma"),
     burden: "Follicular lymphoma is the second most common non-Hodgkin lymphoma in the West (~20% of NHL; about 3-4 per 100,000 per year), median age ~65.",
     tldr: "Follicular lymphoma is the most common slow-growing lymphoma, defined in about 85% of cases by a BCL2 translocation. Most people live with it for decades, treated only when it causes problems; it can be controlled repeatedly with anti-CD20 antibodies, chemotherapy, bispecifics or CAR-T but rarely cured, and a small share transform into an aggressive lymphoma each year.",
     summary: "Follicular lymphoma (FL) is an indolent germinal-centre B-cell lymphoma defined by t(14;18) BCL2 overexpression in ~85% and frequent CREBBP, KMT2D and EZH2 mutations. Median survival now exceeds 15-20 years, so the questions are when to treat, how to avoid over-treatment, and how to manage the ~20% who progress within 24 months (POD24) and the 2-3% per year who transform to DLBCL.\n\nAsymptomatic low-burden disease is watched or given rituximab monotherapy; symptomatic or high-burden disease receives anti-CD20 (rituximab or obinutuzumab) with bendamustine, CHOP or CVP, or with lenalidomide (R², RELEVANCE), usually followed by anti-CD20 maintenance (PRIMA). Relapsed disease has the richest menu in lymphoma: lenalidomide-rituximab (AUGMENT), CD20×CD3 bispecifics (mosunetuzumab 2022, epcoritamab 2024, odronextamab EU), CD19 CAR-T (axicabtagene 2021, tisagenlecleucel 2022, lisocabtagene 2024), zanubrutinib-obinutuzumab (ROSEWOOD, 2024) and radioimmunotherapy historically. Tazemetostat (EZH2) was withdrawn worldwide in March 2026.\n\nOpen questions: whether bispecifics or CAR-T should move to second line or even first line (EPCORE FL-1, MorningSun), PET/ctDNA-guided de-escalation, and biology-based prediction of POD24 and transformation.",
@@ -173,7 +173,7 @@ export const gapCancers: CancerInput[] = [
     tags: ["gap-fill", "haematologic"], related: ["lymphoma-research-foundation"], journals: ["hematological-oncology"],
   }),
   c({
-    id: "mantle-cell-lymphoma", trials: ["nct07377578", "nct04002297", "nct01804686", "nct06742996", "nct06363994", "nct04662255", "nct02972840"], name: "Mantle cell lymphoma", group: "haematologic", wikipedia: W("Mantle_cell_lymphoma"),
+    id: "mantle-cell-lymphoma", trials: ["nct07377578", "nct04002297", "nct01804686", "nct06742996", "nct06363994", "nct04662255", "nct02972840", "zuma-2"], name: "Mantle cell lymphoma", group: "haematologic", wikipedia: W("Mantle_cell_lymphoma"),
     burden: "Mantle cell lymphoma makes up about 5-7% of non-Hodgkin lymphomas; incidence ~1 per 100,000 per year, median age ~68, 3:1 male.",
     tldr: "An uncommon B-cell lymphoma driven by cyclin D1 that used to behave badly in almost everyone. BTK inhibitors, CAR-T and now BCL2 drugs have changed it from chemotherapy-plus-transplant to targeted combinations.",
     summary: "Mantle cell lymphoma (MCL) carries t(11;14) with cyclin D1 overexpression (SOX11-positive in classical MCL). Risk is set by MIPI, Ki-67, blastoid morphology and TP53 mutation, the last defining a group that fails chemo-immunotherapy and transplant. A leukaemic non-nodal variant behaves indolently.\n\nYounger fit patients traditionally received cytarabine-containing induction and autologous transplant with rituximab maintenance; TRIANGLE (2024) showed adding ibrutinib to induction and maintenance is at least as good as transplant, and transplant is being abandoned. Older patients receive bendamustine-rituximab or R-CHOP; ECHO (2024) added acalabrutinib to BR first line (FDA approval 2025). Relapse is treated with covalent BTK inhibitors (ibrutinib 2013, acalabrutinib 2017, zanubrutinib 2019; ibrutinib's US MCL approval was withdrawn in 2023 after SHINE), then brexucabtagene autoleucel (ZUMA-2, 2020), the non-covalent BTKi pirtobrutinib (2023), or the BCL2 inhibitor sonrotoclax (2026); venetoclax-ibrutinib (SYMPATICO) is another option. Lisocabtagene was approved for MCL in 2024.\n\nTP53-mutant MCL still does poorly with everything except CAR-T and bispecifics; glofitamab and CD20×CD3 agents are in phase 3.",
@@ -211,7 +211,7 @@ export const gapCancers: CancerInput[] = [
     tags: ["gap-fill", "haematologic"],
   }),
   c({
-    id: "peripheral-t-cell-lymphoma", trials: ["nct06561048", "nct06776952", "nct06072131", "nct04668690"], name: "Peripheral T-cell lymphomas (including cutaneous T-cell lymphoma)", group: "haematologic", wikipedia: W("Peripheral_T-cell_lymphoma"),
+    id: "peripheral-t-cell-lymphoma", trials: ["nct06561048", "nct06776952", "nct06072131", "nct04668690", "alcanza", "echelon-2"], name: "Peripheral T-cell lymphomas (including cutaneous T-cell lymphoma)", group: "haematologic", wikipedia: W("Peripheral_T-cell_lymphoma"),
     aka: ["PTCL", "CTCL", "Mycosis fungoides", "Anaplastic large-cell lymphoma"],
     burden: "Peripheral T-cell lymphomas make up about 10-15% of non-Hodgkin lymphomas in the West, more in Asia; there are over 30 WHO subtypes, most individually rare.",
     tldr: "Peripheral T-cell lymphomas are lymphomas of T cells rather than B cells. They are rarer, more varied and, apart from a few subtypes, harder to treat than B-cell lymphomas; several new drugs help only defined subtypes.",
@@ -286,7 +286,7 @@ export const gapCancers: CancerInput[] = [
     tags: ["gap-fill", "haematologic", "cns"],
   }),
   c({
-    id: "waldenstrom", name: "Waldenström macroglobulinaemia", group: "haematologic", wikipedia: W("Waldenstr%C3%B6m_macroglobulinemia"),
+    id: "waldenstrom", trials: ["aspen-wm"], name: "Waldenström macroglobulinaemia", group: "haematologic", wikipedia: W("Waldenstr%C3%B6m_macroglobulinemia"),
     aka: ["Lymphoplasmacytic lymphoma", "WM"],
     burden: "About 3-4 per million per year; median age ~70; median survival now exceeds 10 years.",
     tldr: "A slow lymphoma that makes an abnormal IgM antibody, causing thick blood, anaemia and nerve damage. Nearly all cases share one mutation (MYD88 L265P), and BTK inhibitors control it for years.",
@@ -383,7 +383,7 @@ export const gapCancers: CancerInput[] = [
   }),
   // ======================= Skin and eye =======================
   c({
-    id: "merkel-cell-carcinoma", trials: ["nct06947928"], name: "Merkel cell carcinoma", group: "skin", wikipedia: W("Merkel-cell_carcinoma"),
+    id: "merkel-cell-carcinoma", trials: ["nct06947928", "stamp-merkel"], name: "Merkel cell carcinoma", group: "skin", wikipedia: W("Merkel-cell_carcinoma"),
     burden: "Merkel cell carcinoma causes about 3,000 cases per year in the US and rising; median age is ~75; it is roughly 40 times rarer than melanoma and more likely to spread stage for stage, which is why immunotherapy's durable responses mattered so much.",
     tldr: "Merkel cell carcinoma is a rare, fast-growing skin cancer, usually caused by a common virus (Merkel cell polyomavirus) or by sun damage. It was almost untreatable once it spread; PD-1/PD-L1 immunotherapy now gives lasting responses in about half of patients.",
     summary: "Merkel cell carcinoma (MCC) is a neuroendocrine skin cancer of older, fair-skinned and immunosuppressed people. About 80% of cases in the Northern Hemisphere are driven by clonally integrated Merkel cell polyomavirus (MCPyV, discovered 2008); the remainder are UV-induced with a very high tumour mutational burden. Both forms are immunogenic, which explains why MCC responded to checkpoint blockade when chemotherapy gave only brief responses.\n\nLocalised disease is treated with wide excision, sentinel node biopsy and adjuvant radiotherapy; the STAMP and ADMEC-O trials tested adjuvant PD-1 blockade, with ADMEC-O (nivolumab) showing a disease-free survival benefit in 2023. Metastatic disease is treated first line with avelumab (JAVELIN Merkel 200, first approval 2017), pembrolizumab (KEYNOTE-017, 2018) or retifanlimab (POD1UM-201, 2023); durable responses occur in about half, and chemotherapy is reserved for immunotherapy failure. Circulating MCPyV oncoprotein antibodies (AMERK) allow surveillance in seropositive patients.\n\nUnsolved: primary and acquired immunotherapy resistance (about half of patients), immunosuppressed patients (transplant, CLL) who cannot receive checkpoint blockade safely, and the adjuvant standard.",
@@ -576,7 +576,7 @@ export const gapCancers: CancerInput[] = [
     tags: ["gap-fill", "gastrointestinal", "hpv"], related: ["urethral"],
   }),
   c({
-    id: "gist", trials: ["nct07585266", "nct05208047", "nct07218926", "nct07379047", "nct03673501"], name: "Gastrointestinal stromal tumour (GIST)", group: "gastrointestinal", wikipedia: W("Gastrointestinal_stromal_tumor"),
+    id: "gist", trials: ["nct07585266", "nct05208047", "nct07218926", "nct07379047", "nct03673501", "grid", "navigator"], name: "Gastrointestinal stromal tumour (GIST)", group: "gastrointestinal", wikipedia: W("Gastrointestinal_stromal_tumor"),
     burden: "GIST affects about 10-15 per million per year (the most common sarcoma); stomach 60%, small bowel 30%; median age ~65.",
     tldr: "GIST is a sarcoma of the gut wall driven almost always by a KIT or PDGFRA mutation. It was the proof that a pill can control a solid tumour: imatinib turned a median survival of about a year into one of eight years or more, and the mutation now dictates which drug to use.",
     summary: "GIST arises from interstitial cells of Cajal and carries activating KIT mutations (~75%, mostly exon 11, some exon 9) or PDGFRA mutations (~10%, including the imatinib-resistant D842V); the remainder are SDH-deficient (young patients, Carney-Stratakis), NF1-associated, or BRAF/NTRK-driven. Risk after resection is estimated from size, mitotic rate and site (Miettinen/AFIP, modified NIH).\n\nSurgery is the only cure; adjuvant imatinib for three years improves survival in high-risk disease (SSGXVIII), with five years or longer under study. Advanced disease is treated with imatinib (400 mg; 800 mg for exon 9), then sunitinib (2006), regorafenib (2013) and ripretinib (INVICTUS, 2020) in sequence; avapritinib is the drug for PDGFRA D842V (2020). Resistance comes from secondary KIT mutations in the ATP-binding pocket (exon 13/14) or activation loop (exon 17/18) and is heterogeneous across lesions, which is why single next-generation inhibitors have struggled (INTRIGUE: ripretinib not superior to sunitinib overall, but better in ctDNA-defined exon 11 + 17/18 disease, now tested in INSIGHT) and why combinations (bezuclastinib + sunitinib, Peak) and ctDNA-guided selection are the current strategy. SDH-deficient GIST is TKI-insensitive and slow-growing; temozolomide has activity.",
@@ -731,7 +731,7 @@ export const gapCancers: CancerInput[] = [
     drugs: ["cisplatin", "carboplatin", "vincristine", "cyclophosphamide", "lomustine", "methotrexate", "temozolomide", "irinotecan", "vismodegib", "carmustine"],
     pathways: ["wnt", "p53-cell-cycle"], companies: ["roche-genentech"], institutions: ["childrens-oncology-group"], terms: ["blood-brain-barrier"],
     links: [{ label: "NCI PDQ: childhood medulloblastoma", url: PDQ("brain/patient/child-medulloblastoma-treatment-pdq") }, { label: "Taylor 2012 consensus subgroups", url: "https://doi.org/10.1007/s00401-011-0922-z" }, { label: "Children's Oncology Group", url: "https://childrensoncologygroup.org/" }],
-    tags: ["gap-fill", "paediatric", "cns"], trials: ["ccss"], related: ["national-brain-tumor-society", "atrt", "ependymoma"],
+    tags: ["gap-fill", "paediatric", "cns"], trials: ["ccss", "acns0332"], related: ["national-brain-tumor-society", "atrt", "ependymoma"],
   }),
   c({
     id: "osteosarcoma", name: "Osteosarcoma", group: "paediatric", wikipedia: W("Osteosarcoma"),
@@ -762,7 +762,7 @@ export const gapCancers: CancerInput[] = [
     drugs: ["methotrexate", "doxorubicin", "cisplatin", "ifosfamide", "etoposide", "mifamurtide", "regorafenib", "cabozantinib", "docetaxel", "radium-223"],
     pathways: ["p53-cell-cycle", "vegf-angiogenesis"], companies: ["bayer", "exelixis", "takeda"], institutions: ["childrens-oncology-group"], terms: ["fnclcc-grade", "limb-salvage-term", "histological-response-induction"],
     links: [{ label: "NCCN Guidelines: Bone Cancer", url: "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1418" }, { label: "EURAMOS-1 (Lancet Oncol 2016)", url: "https://doi.org/10.1016/S1470-2045(16)30214-5" }, { label: "NCI PDQ: osteosarcoma", url: PDQ("bone/patient/osteosarcoma-treatment-pdq") }],
-    tags: ["gap-fill", "paediatric", "sarcoma", "aya"], people: ["stefan-bielack"], trials: ["euramos-1", "ccss", "nct06935409"], journals: ["journal-of-adolescent-and-young-adult-oncology"],
+    tags: ["gap-fill", "paediatric", "sarcoma", "aya"], people: ["stefan-bielack"], trials: ["euramos-1", "ccss", "nct06935409", "cabone", "regobone", "sarc028"], journals: ["journal-of-adolescent-and-young-adult-oncology"],
   }),
   c({
     id: "ewing-sarcoma", name: "Ewing sarcoma", group: "paediatric", wikipedia: W("Ewing_sarcoma"),
@@ -794,7 +794,7 @@ export const gapCancers: CancerInput[] = [
     drugs: ["vincristine", "doxorubicin", "cyclophosphamide", "ifosfamide", "etoposide", "irinotecan", "temozolomide", "topotecan", "lurbinectedin", "docetaxel", "tk216"],
     pathways: ["p53-cell-cycle"], companies: ["pharmamar", "jazz"], institutions: ["childrens-oncology-group"], terms: ["gene-fusion", "histological-response-induction"],
     links: [{ label: "NCCN Guidelines: Bone Cancer", url: "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1418" }, { label: "NCI PDQ: Ewing sarcoma", url: PDQ("bone/patient/ewing-treatment-pdq") }],
-    tags: ["gap-fill", "paediatric", "sarcoma", "aya"], trials: ["ccss"], journals: ["journal-of-adolescent-and-young-adult-oncology"],
+    tags: ["gap-fill", "paediatric", "sarcoma", "aya"], trials: ["ccss", "cabone", "regobone", "sarc028"], journals: ["journal-of-adolescent-and-young-adult-oncology"],
   }),
   c({
     id: "wilms-tumor", name: "Wilms tumour (nephroblastoma)", group: "paediatric", wikipedia: W("Wilms%27_tumor"),
@@ -825,7 +825,7 @@ export const gapCancers: CancerInput[] = [
     drugs: ["vincristine", "dactinomycin", "doxorubicin", "cyclophosphamide", "carboplatin", "etoposide", "ifosfamide"],
     pathways: ["wnt", "p53-cell-cycle"], institutions: ["childrens-oncology-group"], terms: ["germline-vs-somatic", "nephrectomy", "wilms-risk-markers"],
     links: [{ label: "NCI PDQ: Wilms tumour", url: PDQ("kidney/patient/wilms-treatment-pdq") }, { label: "SIOP-RTSG UMBRELLA protocol (Nat Rev Urol 2017)", url: "https://doi.org/10.1038/nrurol.2017.163" }, { label: "Children's Oncology Group", url: "https://childrensoncologygroup.org/" }],
-    tags: ["gap-fill", "paediatric"], people: ["jeffrey-dome"], trials: ["ccss"], journals: ["journal-of-pediatric-hematology-oncology", "pediatric-hematology-and-oncology"], related: ["paediatric-oncology-roadmap"],
+    tags: ["gap-fill", "paediatric"], people: ["jeffrey-dome"], trials: ["ccss", "aren0532"], journals: ["journal-of-pediatric-hematology-oncology", "pediatric-hematology-and-oncology"], related: ["paediatric-oncology-roadmap"],
   }),
   c({
     id: "retinoblastoma", name: "Retinoblastoma", group: "paediatric", wikipedia: W("Retinoblastoma"),

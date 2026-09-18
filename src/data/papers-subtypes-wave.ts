@@ -43,7 +43,7 @@ export const papersSubtypesWave: PaperInput[] = [
     whatItMeans: "Patients facing cystectomy for BCG-unresponsive disease have a bladder-sparing option, though most will eventually relapse and need close cystoscopic surveillance. The choice is a trade between keeping the bladder and the risk of progression while waiting.",
     caveats: ["No randomised comparator; cystectomy remains the curative standard.", "Progression to muscle-invasive disease occurred in a minority during follow-up."],
     links: [{ label: "Lancet Oncol 2021", url: "https://doi.org/10.1016/S1470-2045(21)00147-9" }, { label: "PubMed", url: "https://pubmed.ncbi.nlm.nih.gov/34051177/" }],
-    cancers: ["non-muscle-invasive-bladder-cancer"], drugs: ["pembrolizumab"], journals: ["lancet-oncology"] }),
+    cancers: ["non-muscle-invasive-bladder-cancer"], trials: ["keynote-057"], drugs: ["pembrolizumab"], journals: ["lancet-oncology"] }),
 
   p({ id: "paper-nadofaragene-firadenovec-lancet-oncol-2021", name: "Nadofaragene firadenovec gene therapy for BCG-unresponsive non-muscle-invasive bladder cancer",
     tldr: "A single instillation of a virus carrying the interferon gene into the bladder every three months cleared carcinoma in situ in about half of patients who had failed BCG, and became the first gene therapy approved for bladder cancer.",
@@ -107,7 +107,7 @@ export const papersSubtypesWave: PaperInput[] = [
     whatItMeans: "Low- and intermediate-risk APL is now treated without cytotoxic chemotherapy. The regimen has become the standard worldwide and made APL the most curable adult acute leukaemia.",
     caveats: ["High-risk patients (white count over 10,000) were excluded and still receive added chemotherapy or gemtuzumab.", "Differentiation syndrome remains a risk with either regimen."],
     links: [{ label: "N Engl J Med 2013", url: "https://doi.org/10.1056/NEJMoa1300874" }, { label: "PubMed", url: "https://pubmed.ncbi.nlm.nih.gov/23841729/" }],
-    cancers: ["apl"], drugs: ["arsenic-trioxide"], journals: ["nejm"] }),
+    cancers: ["apl"], trials: ["apl0406"], drugs: ["arsenic-trioxide"], journals: ["nejm"] }),
 
   p({ id: "paper-tallman-atra-apl-nejm-1997", name: "North American Intergroup: all-trans retinoic acid in acute promyelocytic leukaemia",
     tldr: "This randomised trial showed that the vitamin A derivative retinoic acid, used in induction and as maintenance, sharply improved survival in acute promyelocytic leukaemia compared with chemotherapy alone.",
@@ -235,7 +235,7 @@ export const papersSubtypesWave: PaperInput[] = [
     whatItMeans: "Quadruplet induction with a CD38 antibody became the standard for transplant-eligible patients in Europe. PERSEUS later did the same with the lenalidomide-based backbone used elsewhere.",
     caveats: ["Thalidomide-based backbone is used less in the United States.", "The second randomisation to daratumumab maintenance showed benefit mainly in those who had not received daratumumab induction."],
     links: [{ label: "Lancet 2019", url: "https://doi.org/10.1016/S0140-6736(19)31240-1" }, { label: "PubMed", url: "https://pubmed.ncbi.nlm.nih.gov/31171419/" }],
-    cancers: ["myeloma-transplant-eligible"], drugs: ["bortezomib", "daratumumab", "dexamethasone", "thalidomide"], journals: ["lancet"] }),
+    cancers: ["myeloma-transplant-eligible"], trials: ["cassiopeia"], drugs: ["bortezomib", "daratumumab", "dexamethasone", "thalidomide"], journals: ["lancet"] }),
 
   p({ id: "paper-ifm-2009-attal-nejm-2017", name: "IFM 2009: lenalidomide, bortezomib and dexamethasone with or without upfront transplantation for myeloma",
     tldr: "Adding an early autologous stem cell transplant to modern three-drug therapy delayed relapse in newly diagnosed myeloma, though overall survival was similar because patients in the drug-only arm could have a transplant later.",
@@ -246,7 +246,7 @@ export const papersSubtypesWave: PaperInput[] = [
     whatItMeans: "Upfront transplant remains standard for fit patients because it lengthens the first remission, but deferring it to first relapse is a reasonable choice for some, particularly with deeper modern induction.",
     caveats: ["Lenalidomide maintenance was limited to one year, shorter than current practice.", "Quadruplet induction with daratumumab was not used."],
     links: [{ label: "N Engl J Med 2017", url: "https://doi.org/10.1056/NEJMoa1611750" }, { label: "PubMed", url: "https://pubmed.ncbi.nlm.nih.gov/28379796/" }],
-    cancers: ["myeloma-transplant-eligible"], drugs: ["bortezomib", "dexamethasone", "lenalidomide"], journals: ["nejm"] }),
+    cancers: ["myeloma-transplant-eligible"], trials: ["ifm-2009"], drugs: ["bortezomib", "dexamethasone", "lenalidomide"], journals: ["nejm"] }),
 
   p({ id: "paper-r-iss-palumbo-jco-2015", name: "Revised International Staging System (R-ISS) for multiple myeloma",
     tldr: "The revised staging system for myeloma combines the older albumin and beta-2 microglobulin stage with high-risk chromosome changes and a raised lactate dehydrogenase, giving three groups with very different survival.",
@@ -451,7 +451,7 @@ export const papersSubtypesWave: PaperInput[] = [
     whatItMeans: "Trastuzumab deruxtecan is an option for active HER2-positive brain metastases, complementing tucatinib-based therapy, and challenges the assumption that antibody-drug conjugates cannot reach the brain.",
     caveats: ["Very small single-centre study.", "Patients with lesions needing urgent local treatment were excluded."],
     links: [{ label: "Nat Med 2022", url: "https://doi.org/10.1038/s41591-022-01935-8" }, { label: "PubMed", url: "https://pubmed.ncbi.nlm.nih.gov/35941372/" }],
-    cancers: ["her2-positive-breast-brain-metastases"], drugs: ["trastuzumab", "trastuzumab-deruxtecan"], journals: ["nature-medicine"] }),
+    cancers: ["her2-positive-breast-brain-metastases"], trials: ["tuxedo-1"], drugs: ["trastuzumab", "trastuzumab-deruxtecan"], journals: ["nature-medicine"] }),
 
   p({ id: "paper-tailorx-nejm-2018", name: "TAILORx: adjuvant chemotherapy guided by the 21-gene recurrence score in hormone receptor-positive, node-negative breast cancer",
     tldr: "Women with hormone receptor-positive, HER2-negative, node-negative breast cancer and a mid-range 21-gene recurrence score did just as well with endocrine therapy alone as with chemotherapy added, sparing most of them chemotherapy.",
@@ -905,7 +905,7 @@ export const papersSubtypesWave: PaperInput[] = [
     whatItMeans: "HERACLES opened HER2 as a target in colorectal cancer and set the immunohistochemistry and in situ hybridisation criteria later studies used; tucatinib and trastuzumab deruxtecan built on this result.",
     caveats: ["Very small and non-randomised.", "Lapatinib-based regimens have been superseded."],
     links: [{ label: "Lancet Oncol 2016", url: "https://doi.org/10.1016/S1470-2045(16)00150-9" }, { label: "PubMed", url: "https://pubmed.ncbi.nlm.nih.gov/27108243/" }],
-    cancers: ["her2-amplified-colorectal"], drugs: ["lapatinib", "trastuzumab"], journals: ["lancet-oncology"] }),
+    cancers: ["her2-amplified-colorectal"], trials: ["heracles"], drugs: ["lapatinib", "trastuzumab"], journals: ["lancet-oncology"] }),
 
   p({ id: "paper-destiny-crc01-lancet-oncol-2021", name: "DESTINY-CRC01: trastuzumab deruxtecan in HER2-expressing metastatic colorectal cancer",
     tldr: "Trastuzumab deruxtecan shrank tumours in about 45 percent of patients with HER2-high colorectal cancer, including those who had already received other HER2 drugs, but did nothing for tumours with low HER2 expression and carried a risk of lung inflammation.",
@@ -1070,7 +1070,7 @@ export const papersSubtypesWave: PaperInput[] = [
     whatItMeans: "Women with low-risk early cervical cancer can be offered simple hysterectomy, sparing them the bladder and sexual morbidity of parametrectomy, provided strict eligibility criteria are applied.",
     caveats: ["Strict imaging and pathology criteria define low risk; misapplication to larger tumours would be unsafe.", "Longer follow-up is pending."],
     links: [{ label: "N Engl J Med 2024", url: "https://doi.org/10.1056/NEJMoa2308900" }, { label: "PubMed", url: "https://pubmed.ncbi.nlm.nih.gov/38416430/" }],
-    cancers: ["early-cervical-cancer"], journals: ["nejm"] }),
+    cancers: ["early-cervical-cancer"], trials: ["shape"], journals: ["nejm"] }),
 
   p({ id: "paper-promise-talhouk-cancer-2017", name: "Confirmation of ProMisE: a genomics-based clinical classifier for endometrial cancer",
     tldr: "The ProMisE classifier uses three tests, mismatch repair and p53 immunohistochemistry plus POLE sequencing, to sort endometrial cancers into four molecular groups that reproduce the Cancer Genome Atlas subtypes and predict outcome.",
@@ -1092,7 +1092,7 @@ export const papersSubtypesWave: PaperInput[] = [
     whatItMeans: "Vaginal brachytherapy is the standard adjuvant treatment for high-intermediate-risk endometrial cancer, with pelvic radiotherapy reserved for higher-risk features such as substantial lymphovascular invasion or p53 abnormality.",
     caveats: ["Pelvic recurrences were slightly more frequent after brachytherapy alone.", "Molecular classification was not available; later analysis shows p53-abnormal tumours do poorly with either."],
     links: [{ label: "Lancet 2010", url: "https://doi.org/10.1016/S0140-6736(09)62163-2" }, { label: "PubMed", url: "https://pubmed.ncbi.nlm.nih.gov/20206777/" }],
-    cancers: ["endometrial-nsmp"], journals: ["lancet"] }),
+    cancers: ["endometrial-nsmp"], trials: ["portec-2"], journals: ["lancet"] }),
 
   p({ id: "paper-esgo-estro-esp-endometrial-concin-ijgc-2021", name: "ESGO/ESTRO/ESP guidelines for the management of endometrial carcinoma (2021)",
     tldr: "The European gynaecological oncology, radiotherapy and pathology societies' joint guideline integrates molecular classification into risk groups for endometrial cancer and sets adjuvant treatment for each, including no adjuvant therapy for early POLE-mutated tumours.",
@@ -1157,7 +1157,7 @@ export const papersSubtypesWave: PaperInput[] = [
     whatItMeans: "Dostarlimab was approved for previously treated mismatch repair-deficient endometrial cancer on these data, before moving into first-line combination in RUBY.",
     caveats: ["Single-arm, interim data.", "Response in mismatch repair-proficient disease was much lower (about 13 percent) in a parallel cohort."],
     links: [{ label: "JAMA Oncol 2020", url: "https://doi.org/10.1001/jamaoncol.2020.4515" }, { label: "PubMed", url: "https://pubmed.ncbi.nlm.nih.gov/33001143/" }],
-    cancers: ["endometrial-mmr-deficient"], drugs: ["dostarlimab"], journals: ["jama-oncology"] }),
+    cancers: ["endometrial-mmr-deficient"], trials: ["garnet"], drugs: ["dostarlimab"], journals: ["jama-oncology"] }),
 
   p({ id: "paper-portec-3-molecular-leon-castillo-jco-2020", name: "Molecular classification of the PORTEC-3 trial: prognosis and benefit from adjuvant chemotherapy by molecular group",
     tldr: "Re-analysing the PORTEC-3 trial by molecular class showed that p53-abnormal endometrial cancers gained substantially from adding chemotherapy to radiotherapy, POLE-mutated tumours did well regardless, and the other groups gained little.",
@@ -1508,7 +1508,7 @@ export const papersSubtypesWave: PaperInput[] = [
     whatItMeans: "TPEx is a less toxic, more convenient chemotherapy backbone for patients who need cetuximab-based first-line therapy, for instance when immunotherapy is unsuitable.",
     caveats: ["Did not meet its superiority endpoint.", "Both arms performed better than historical EXTREME data, reflecting later-line immunotherapy."],
     links: [{ label: "Lancet Oncol 2021", url: "https://doi.org/10.1016/S1470-2045(20)30755-5" }, { label: "PubMed", url: "https://pubmed.ncbi.nlm.nih.gov/33684370/" }],
-    cancers: ["recurrent-metastatic-hnscc"], drugs: ["cetuximab", "cisplatin", "docetaxel"], journals: ["lancet-oncology"] }),
+    cancers: ["recurrent-metastatic-hnscc"], trials: ["tpextreme"], drugs: ["cetuximab", "cisplatin", "docetaxel"], journals: ["lancet-oncology"] }),
 
   p({ id: "paper-takahashi-trastuzumab-docetaxel-salivary-duct-jco-2019", name: "Phase 2 trial of trastuzumab and docetaxel in HER2-positive salivary duct carcinoma",
     tldr: "In HER2-positive salivary duct carcinoma, an aggressive salivary cancer resembling breast cancer, trastuzumab plus docetaxel shrank tumours in 70 percent of patients, establishing HER2 testing and targeting in the disease.",
@@ -1628,7 +1628,7 @@ export const papersSubtypesWave: PaperInput[] = [
     whatItMeans: "Cabozantinib is the preferred first-line targeted therapy for metastatic papillary renal cell carcinoma; immunotherapy combinations are being tested on top of it.",
     caveats: ["Small phase 2 with unselected MET status.", "Savolitinib may still have a role in MET-driven tumours."],
     links: [{ label: "Lancet 2021", url: "https://doi.org/10.1016/S0140-6736(21)00152-5" }, { label: "PubMed", url: "https://pubmed.ncbi.nlm.nih.gov/33592176/" }],
-    cancers: ["papillary-rcc"], drugs: ["cabozantinib", "crizotinib", "savolitinib", "sunitinib"], journals: ["lancet"] }),
+    cancers: ["papillary-rcc"], trials: ["papmet"], drugs: ["cabozantinib", "crizotinib", "savolitinib", "sunitinib"], journals: ["lancet"] }),
 
   p({ id: "paper-tcga-papillary-rcc-nejm-2016", name: "Comprehensive molecular characterisation of papillary renal cell carcinoma (The Cancer Genome Atlas)",
     tldr: "Genomic analysis of 161 papillary kidney cancers showed that type 1 tumours are driven by MET alterations while type 2 tumours are a mixture of distinct diseases including CDKN2A-silenced, SETD2-mutated, fumarate hydratase-deficient and a CpG island methylator phenotype with very poor survival.",
@@ -1683,7 +1683,7 @@ export const papersSubtypesWave: PaperInput[] = [
     whatItMeans: "HER2 mutations, present in about 3 percent of lung adenocarcinomas, became actionable; trastuzumab deruxtecan received the first approval for a HER2-mutant lung cancer, at the lower 5.4 mg/kg dose validated in DESTINY-Lung02.",
     caveats: ["High rate of interstitial lung disease at 6.4 mg/kg.", "Single-arm study."],
     links: [{ label: "N Engl J Med 2022", url: "https://doi.org/10.1056/NEJMoa2112431" }, { label: "PubMed", url: "https://pubmed.ncbi.nlm.nih.gov/34534430/" }],
-    cancers: ["her2-mutant-nsclc"], drugs: ["trastuzumab", "trastuzumab-deruxtecan"], journals: ["nejm"] }),
+    cancers: ["her2-mutant-nsclc"], trials: ["destiny-lung01"], drugs: ["trastuzumab", "trastuzumab-deruxtecan"], journals: ["nejm"] }),
 
   p({ id: "paper-destiny-lung02-goto-jco-2023", name: "DESTINY-Lung02: two doses of trastuzumab deruxtecan in HER2-mutant metastatic non-small-cell lung cancer",
     tldr: "Comparing two doses of trastuzumab deruxtecan in HER2-mutant lung cancer showed that the lower 5.4 mg/kg dose gave the same response rate of about half with far less lung toxicity, fixing the approved dose.",
@@ -2141,7 +2141,7 @@ export const papersSubtypesWave: PaperInput[] = [
     whatItMeans: "Carboplatin radiosensitisation is used for high-risk group 3 medulloblastoma, an example of subgroup-directed therapy.",
     caveats: ["Subgroup analysis; overall effect of carboplatin was not significant."],
     links: [{ label: "JAMA Oncol 2021", url: "https://doi.org/10.1001/jamaoncol.2021.2224" }, { label: "PubMed", url: "https://pubmed.ncbi.nlm.nih.gov/34292305/" }],
-    cancers: ["medulloblastoma-group-3-4"], drugs: ["carboplatin"], journals: ["jama-oncology"] }),
+    cancers: ["medulloblastoma-group-3-4"], trials: ["acns0332"], drugs: ["carboplatin"], journals: ["jama-oncology"] }),
 
   p({ id: "paper-aall0232-larsen-jco-2016", name: "AALL0232: dexamethasone and high-dose methotrexate improve outcome in high-risk B-cell acute lymphoblastic leukaemia in children and young adults",
     tldr: "In high-risk childhood B-cell acute lymphoblastic leukaemia, high-dose methotrexate beat escalating-dose methotrexate, and dexamethasone beat prednisone in children under 10, defining the backbone still used in Children's Oncology Group trials.",
@@ -2163,7 +2163,7 @@ export const papersSubtypesWave: PaperInput[] = [
     whatItMeans: "Nelarabine is part of standard therapy for intermediate- and high-risk childhood T-ALL, and Capizzi methotrexate is preferred in T-ALL.",
     caveats: ["Neurotoxicity of nelarabine requires monitoring.", "Cranial irradiation was still used for many patients; its omission was tested later."],
     links: [{ label: "J Clin Oncol 2020", url: "https://doi.org/10.1200/JCO.20.00256" }, { label: "PubMed", url: "https://pubmed.ncbi.nlm.nih.gov/32813610/" }],
-    cancers: ["all-paediatric-high-risk"], drugs: ["nelarabine"], journals: ["jco"] }),
+    cancers: ["all-paediatric-high-risk"], trials: ["aall0434"], drugs: ["nelarabine"], journals: ["jco"] }),
 
   p({ id: "paper-hunger-mullighan-all-children-nejm-2015", name: "Acute lymphoblastic leukaemia in children (review)",
     tldr: "This review summarises how childhood acute lymphoblastic leukaemia became curable in nine of ten children through risk-adapted chemotherapy, and how genomic subtypes such as Ph-like and infant leukaemia are shaping the next generation of targeted treatment.",
@@ -2635,7 +2635,7 @@ export const papersSubtypesWave: PaperInput[] = [
     whatItMeans: "Enzalutamide is one of three androgen receptor inhibitors standard for high-risk non-metastatic castration-resistant prostate cancer.",
     caveats: ["Fatigue and cognitive effects are more prominent than with darolutamide.", "Conventional imaging defined non-metastatic status."],
     links: [{ label: "N Engl J Med 2018", url: "https://doi.org/10.1056/NEJMoa1800536" }, { label: "PubMed", url: "https://pubmed.ncbi.nlm.nih.gov/29949494/" }],
-    cancers: ["prostate-nmcrpc"], drugs: ["enzalutamide"], journals: ["nejm"] }),
+    cancers: ["prostate-nmcrpc"], trials: ["prosper"], drugs: ["enzalutamide"], journals: ["nejm"] }),
 
   p({ id: "paper-aramis-nejm-2019", name: "ARAMIS: darolutamide in non-metastatic castration-resistant prostate cancer",
     tldr: "Darolutamide, an androgen receptor inhibitor that barely enters the brain, delayed metastases by nearly two years in men with non-metastatic castration-resistant prostate cancer with side effects close to placebo, and later showed a survival benefit.",
@@ -2646,7 +2646,7 @@ export const papersSubtypesWave: PaperInput[] = [
     whatItMeans: "Darolutamide is often preferred in older men or those with fall or cognitive concerns because of its favourable tolerability among the three approved agents.",
     caveats: ["No head-to-head comparison with enzalutamide or apalutamide.", "Non-metastatic by conventional imaging."],
     links: [{ label: "N Engl J Med 2019", url: "https://doi.org/10.1056/NEJMoa1815671" }, { label: "PubMed", url: "https://pubmed.ncbi.nlm.nih.gov/30763142/" }],
-    cancers: ["prostate-nmcrpc"], drugs: ["darolutamide"], journals: ["nejm"] }),
+    cancers: ["prostate-nmcrpc"], trials: ["aramis"], drugs: ["darolutamide"], journals: ["nejm"] }),
 
   p({ id: "paper-atezolizumab-alveolar-soft-part-sarcoma-chen-nejm-2023", name: "Atezolizumab for advanced alveolar soft part sarcoma",
     tldr: "The PD-L1 antibody atezolizumab shrank tumours in about a quarter of patients with advanced alveolar soft part sarcoma, with responses lasting years in a disease resistant to chemotherapy, and became the first approved treatment for this sarcoma.",
@@ -2895,7 +2895,7 @@ export const papersSubtypesWave: PaperInput[] = [
     whatItMeans: "PD-1 blockade is an off-label or trial option specifically for undifferentiated pleomorphic sarcoma and dedifferentiated liposarcoma, not for sarcoma in general.",
     caveats: ["Small cohorts of about 10 patients per histology; expansion cohorts confirmed lower rates (about 23 percent) in undifferentiated pleomorphic sarcoma."],
     links: [{ label: "Lancet Oncol 2017", url: "https://doi.org/10.1016/S1470-2045(17)30624-1" }, { label: "PubMed", url: "https://pubmed.ncbi.nlm.nih.gov/28988646/" }],
-    cancers: ["undifferentiated-pleomorphic-sarcoma"], drugs: ["pembrolizumab"], journals: ["lancet-oncology"] }),
+    cancers: ["undifferentiated-pleomorphic-sarcoma"], trials: ["sarc028"], drugs: ["pembrolizumab"], journals: ["lancet-oncology"] }),
 
   p({ id: "paper-mavoric-mogamulizumab-lancet-oncol-2018", name: "MAVORIC: mogamulizumab versus vorinostat in previously treated cutaneous T-cell lymphoma",
     tldr: "The anti-CCR4 antibody mogamulizumab doubled the time to progression compared with vorinostat in previously treated mycosis fungoides and Sezary syndrome, with particularly strong activity in the blood, and became the first antibody approved for these lymphomas.",
@@ -2917,7 +2917,7 @@ export const papersSubtypesWave: PaperInput[] = [
     whatItMeans: "Brentuximab vedotin is a standard for CD30-positive cutaneous T-cell lymphoma requiring systemic therapy, including large cell transformation.",
     caveats: ["Peripheral neuropathy in 67 percent, mostly reversible.", "CD30 expression threshold for benefit is low and variable."],
     links: [{ label: "Lancet 2017", url: "https://doi.org/10.1016/S0140-6736(17)31266-7" }, { label: "PubMed", url: "https://pubmed.ncbi.nlm.nih.gov/28600132/" }],
-    cancers: ["cutaneous-t-cell-lymphoma"], drugs: ["brentuximab-vedotin"], journals: ["lancet"] }),
+    cancers: ["cutaneous-t-cell-lymphoma"], trials: ["alcanza"], drugs: ["brentuximab-vedotin"], journals: ["lancet"] }),
 
   p({ id: "paper-olsen-mycosis-fungoides-staging-blood-2007", name: "Revisions to the staging and classification of mycosis fungoides and Sezary syndrome (ISCL/EORTC)",
     tldr: "The 2007 international revision of the TNMB staging system for mycosis fungoides and Sezary syndrome defined skin, node, visceral and blood classes that remain the basis for staging, treatment choice and trial eligibility.",
@@ -3003,7 +3003,7 @@ export const papersSubtypesWave: PaperInput[] = [
     whatItMeans: "Lenalidomide-rituximab is approved for relapsed follicular and marginal zone lymphoma and is a standard chemotherapy-free choice, though marginal zone-specific evidence is thinner.",
     caveats: ["Only 63 patients had marginal zone lymphoma, with no clear progression-free survival benefit in that subgroup."],
     links: [{ label: "J Clin Oncol 2019", url: "https://doi.org/10.1200/JCO.19.00010" }, { label: "PubMed", url: "https://pubmed.ncbi.nlm.nih.gov/30897038/" }],
-    cancers: ["marginal-zone-lymphoma"], drugs: ["lenalidomide", "rituximab"], journals: ["jco"] }),
+    cancers: ["marginal-zone-lymphoma"], trials: ["augment"], drugs: ["lenalidomide", "rituximab"], journals: ["jco"] }),
 
   p({ id: "paper-clark-syt-ssx-synovial-sarcoma-nat-genet-1994", name: "Identification of SYT and SSX, the genes fused by the t(X;18) translocation in synovial sarcoma",
     tldr: "This study cloned the SYT-SSX (SS18-SSX) gene fusion produced by the chromosome translocation found in essentially every synovial sarcoma, giving the tumour a defining molecular marker and the basis for later targeted and immune therapies.",
@@ -3366,7 +3366,7 @@ export const papersSubtypesWave: PaperInput[] = [
     whatItMeans: "FLOT is the reference perioperative regimen for gastric and junctional adenocarcinoma, and the backbone onto which durvalumab was added in MATTERHORN.",
     caveats: ["Only about half of patients completed postoperative chemotherapy.", "Not compared with CROSS chemoradiotherapy for oesophageal adenocarcinoma until ESOPEC."],
     links: [{ label: "Lancet 2019", url: "https://doi.org/10.1016/S0140-6736(18)32557-1" }, { label: "PubMed", url: "https://pubmed.ncbi.nlm.nih.gov/30982686/" }],
-    cancers: ["oesophageal-adenocarcinoma", "gastric-pdl1-high", "gastric-her2-positive"], drugs: ["capecitabine", "cisplatin", "docetaxel", "epirubicin", "oxaliplatin"], journals: ["lancet"] }),
+    cancers: ["oesophageal-adenocarcinoma", "gastric-pdl1-high", "gastric-her2-positive"], trials: ["flot4"], drugs: ["capecitabine", "cisplatin", "docetaxel", "epirubicin", "oxaliplatin"], journals: ["lancet"] }),
 
   p({ id: "paper-cross-nejm-2012", name: "CROSS: preoperative chemoradiotherapy for oesophageal or junctional cancer",
     tldr: "Five weeks of carboplatin-paclitaxel with radiotherapy before oesophagectomy lengthened median survival from 24 to 49 months in oesophageal cancer compared with surgery alone, with a complete pathological response in almost half of squamous cancers.",
@@ -3528,7 +3528,7 @@ export const papersSubtypesWave: PaperInput[] = [
     whatItMeans: "Cabozantinib is an option for progressive medullary thyroid cancer, now mainly for RET-negative disease or after selpercatinib.",
     caveats: ["No overall survival benefit overall, though RET M918T carriers may have benefited.", "High dose with frequent reductions."],
     links: [{ label: "J Clin Oncol 2013", url: "https://doi.org/10.1200/JCO.2012.48.4659" }, { label: "PubMed", url: "https://pubmed.ncbi.nlm.nih.gov/24002501/" }],
-    cancers: ["medullary-thyroid-cancer"], drugs: ["cabozantinib"], journals: ["jco"] }),
+    cancers: ["medullary-thyroid-cancer"], trials: ["exam"], drugs: ["cabozantinib"], journals: ["jco"] }),
 
   p({ id: "paper-zeta-vandetanib-mtc-wells-jco-2012", name: "ZETA: vandetanib in locally advanced or metastatic medullary thyroid cancer",
     tldr: "Vandetanib was the first drug shown to delay progression in medullary thyroid cancer, roughly doubling progression-free survival compared with placebo, and became the first approved therapy for the disease.",
@@ -3757,7 +3757,7 @@ export const papersSubtypesWave: PaperInput[] = [
     whatItMeans: "Pembrolizumab with trastuzumab and chemotherapy is the first-line standard for HER2-positive gastric cancer with a PD-L1 combined positive score of 1 or more.",
     caveats: ["No benefit in PD-L1-negative tumours (about 15 percent), leading to a label restriction."],
     links: [{ label: "Lancet 2023", url: "https://doi.org/10.1016/S0140-6736(23)02033-0" }, { label: "PubMed", url: "https://pubmed.ncbi.nlm.nih.gov/37871604/" }],
-    cancers: ["gastric-her2-positive"], drugs: ["pembrolizumab", "trastuzumab"], journals: ["lancet"] }),
+    cancers: ["gastric-her2-positive"], trials: ["keynote-811"], drugs: ["pembrolizumab", "trastuzumab"], journals: ["lancet"] }),
 
   p({ id: "paper-destiny-gastric01-nejm-2020", name: "DESTINY-Gastric01: trastuzumab deruxtecan in previously treated HER2-positive gastric cancer",
     tldr: "Trastuzumab deruxtecan shrank tumours in half of patients with HER2-positive gastric cancer that had progressed after trastuzumab, compared with 14 percent on chemotherapy, and lengthened survival by over four months.",
@@ -3768,7 +3768,7 @@ export const papersSubtypesWave: PaperInput[] = [
     whatItMeans: "Trastuzumab deruxtecan is the standard second- or third-line treatment for HER2-positive gastric cancer, later confirmed against ramucirumab-paclitaxel in DESTINY-Gastric04.",
     caveats: ["Asian population; the Western DESTINY-Gastric02 study showed a lower response rate.", "Interstitial lung disease requires monitoring."],
     links: [{ label: "N Engl J Med 2020", url: "https://doi.org/10.1056/NEJMoa2004413" }, { label: "PubMed", url: "https://pubmed.ncbi.nlm.nih.gov/32469182/" }],
-    cancers: ["gastric-her2-positive"], drugs: ["trastuzumab", "trastuzumab-deruxtecan"], journals: ["nejm"] }),
+    cancers: ["gastric-her2-positive"], trials: ["destiny-gastric01", "destiny-gastric02"], drugs: ["trastuzumab", "trastuzumab-deruxtecan"], journals: ["nejm"] }),
 
   p({ id: "paper-demetri-sunitinib-gist-lancet-2006", name: "Sunitinib in advanced gastrointestinal stromal tumour after failure of imatinib",
     tldr: "Sunitinib more than quadrupled the time to progression compared with placebo in gastrointestinal stromal tumours that had become resistant to or intolerant of imatinib, establishing the standard second-line treatment.",
@@ -3790,7 +3790,7 @@ export const papersSubtypesWave: PaperInput[] = [
     whatItMeans: "Regorafenib is the standard third-line treatment for GIST after imatinib and sunitinib.",
     caveats: ["No overall survival benefit because of crossover.", "Dose reductions needed in most patients."],
     links: [{ label: "Lancet 2013", url: "https://doi.org/10.1016/S0140-6736(12)61857-1" }, { label: "PubMed", url: "https://pubmed.ncbi.nlm.nih.gov/23177515/" }],
-    cancers: ["gist-imatinib-resistant"], drugs: ["imatinib", "regorafenib", "sunitinib"], journals: ["lancet"] }),
+    cancers: ["gist-imatinib-resistant"], trials: ["grid"], drugs: ["imatinib", "regorafenib", "sunitinib"], journals: ["lancet"] }),
 
   p({ id: "paper-invictus-ripretinib-lancet-oncol-2020", name: "INVICTUS: ripretinib in advanced gastrointestinal stromal tumours after three or more prior kinase inhibitors",
     tldr: "The switch-control KIT inhibitor ripretinib lengthened progression-free survival from one to six months and improved survival compared with placebo in gastrointestinal stromal tumours that had failed imatinib, sunitinib and regorafenib.",
@@ -3900,7 +3900,7 @@ export const papersSubtypesWave: PaperInput[] = [
     whatItMeans: "Single-agent pembrolizumab is an option for microsatellite-unstable gastric cancer first line, whereas for the broader PD-L1-positive population chemo-immunotherapy from CheckMate 649 and KEYNOTE-859 became standard.",
     caveats: ["Microsatellite-unstable subgroup was small and exploratory.", "Early progression was more frequent with pembrolizumab alone."],
     links: [{ label: "JAMA Oncol 2020", url: "https://doi.org/10.1001/jamaoncol.2020.3370" }, { label: "PubMed", url: "https://pubmed.ncbi.nlm.nih.gov/32880601/" }],
-    cancers: ["gastric-msi-high"], drugs: ["pembrolizumab"], journals: ["jama-oncology"] }),
+    cancers: ["gastric-msi-high"], trials: ["keynote-062"], drugs: ["pembrolizumab"], journals: ["jama-oncology"] }),
 
   p({ id: "paper-pietrantonio-msi-gastric-meta-analysis-jco-2019", name: "Individual patient data meta-analysis of microsatellite instability as a biomarker in gastric cancer (MAGIC, CLASSIC, ARTIST, ITACA-S)",
     tldr: "Pooling four trials showed that microsatellite-unstable gastric cancers have a much better prognosis after surgery and gain nothing from perioperative or adjuvant chemotherapy, which may even harm them.",
@@ -3966,7 +3966,7 @@ export const papersSubtypesWave: PaperInput[] = [
     whatItMeans: "Avapritinib 300 mg is the standard first-line treatment for advanced PDGFRA D842V GIST, and mutation testing before starting imatinib is essential to identify these patients.",
     caveats: ["Single-arm; cognitive side effects need monitoring and dose adjustment.", "In non-D842V GIST avapritinib was not superior to regorafenib (VOYAGER)."],
     links: [{ label: "Lancet Oncol 2020", url: "https://doi.org/10.1016/S1470-2045(20)30269-2" }, { label: "PubMed", url: "https://pubmed.ncbi.nlm.nih.gov/32615108/" }],
-    cancers: ["gist-pdgfra-d842v"], drugs: ["avapritinib"], journals: ["lancet-oncology"] }),
+    cancers: ["gist-pdgfra-d842v"], trials: ["navigator"], drugs: ["avapritinib"], journals: ["lancet-oncology"] }),
 
   p({ id: "paper-heinrich-pdgfra-gist-science-2003", name: "PDGFRA activating mutations in gastrointestinal stromal tumours",
     tldr: "This study found that most gastrointestinal stromal tumours without KIT mutations instead carry activating mutations in the related receptor PDGFRA, including the D842V mutation that resists imatinib, completing the genetic definition of the disease.",

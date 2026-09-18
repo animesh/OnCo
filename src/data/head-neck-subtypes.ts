@@ -11,7 +11,7 @@ const W = (s: string) => `https://en.wikipedia.org/wiki/${s}`;
 const tags = ["subtype-page"];
 
 export const headNeckSubtypes: CancerInput[] = [
-  { id: "oropharyngeal-cancer", kind: "cancer", name: "Oropharyngeal cancer (tonsil and base of tongue)", group: "head and neck", parent: "head-and-neck", asOf, tags, wikipedia: W("Oropharyngeal_cancer"),
+  { id: "oropharyngeal-cancer", kind: "cancer", trials: ["de-escalate", "orator"], name: "Oropharyngeal cancer (tonsil and base of tongue)", group: "head and neck", parent: "head-and-neck", asOf, tags, wikipedia: W("Oropharyngeal_cancer"),
     keyPapers: ["paper-keynote-048-lancet-2019", "paper-ang-hpv-oropharyngeal-nejm-2010", "paper-rtog-1016-lancet-2019", "paper-checkmate-141-ferris-nejm-2016"],
     aka: ["Oropharynx cancer", "Tonsil cancer", "Base of tongue cancer", "HPV-positive head and neck cancer"],
     burden: "The fastest-rising head and neck cancer in high-income countries, now driven mainly by human papillomavirus in men in their fifties and sixties; HPV-positive disease is cured in most cases, HPV-negative disease in far fewer.",
